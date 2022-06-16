@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('include/head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        <!--header-->
+        @@include('include/header.html')
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--visual-->
+            <div class="visual type01">
+                <div class="inner">
+                    <h2 class="titPage">국유재산안내</h2>
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈으로"><span class="hidden">홈으로</span></a>
+                            </li>
+                            <li>
+                                <a href="#" title="국유재산안내">국유재산안내</a>
+                            </li>
+                            <li>
+                                <a href="#" title="사용 및 매각가능 토지검색">사용 및 매각가능 토지검색</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                </div>
+            </div>
+            <!--//visual-->
+            <!--lnb-->
+            <div id="lnb">
+                <select>
+                    <option value="사용안내" selected>사용안내</option>
+                    <option value="사용안내">매각안내</option>
+                    <option value="사용안내">개별안내</option>
+                    <option value="사용안내">사용 및 매각가능 토지검색</option>
+                </select>
+                <ul>
+                    <li>
+                        <a href="#" title="사용안내">사용안내</a>
+                    </li>
+                    <li>
+                        <a href="#" title="매각안내">매각안내</a>
+                    </li>
+                    <li>
+                        <a href="#" title="개별안내">개별안내</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" title="사용 및 매각가능 토지검색">사용 및 매각가능 토지검색</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <h3 class="titCont">토지검색</h3>
+
+                    <!-- section -->
+                    <section class="section default">
+                        <!-- cardArea -->
+                        <div class="cardArea">
+                            <!--card-->
+                            <div class="card f1">
+                                <div class="imgArea">
+                                    <img src="../images/card/01/ico-card-43.svg" alt="검색  아이콘">
+                                </div>
+                                <div class="txtArea">
+                                    <p>
+                                        검색 후 해당 토지를 클릭하시면<span class="bk">'담당자 연락처와 재산정보'</span>를 알 수 있습니다.<br>
+                                        문의 시 담당자의 검토가 우선되며, 검토결과에 따라 사용 및 매각이 불가할 수도 있으니 양해바랍니다.<br>
+                                        재산소재지로 검색할 경우 법정동 최하위명으로 검색이 가능합니다.
+                                        <span class="blue">예)"대전광역시 동구 신안동" → "신안동"</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--//card-->
+                        </div>
+                        <!-- //cardArea -->
+
+                        <!-- searchArea -->
+                        <div class="searchArea web">
+                            <div class="inner">
+                                <div class="row">
+                                    <select>
+                                        <option>지역본부 전체</option>
+                                    </select>
+                                    <input type="text" placeholder="노선명칭을 입력해주세요">
+                                    <select>
+                                        <option>용도구분 전체</option>
+                                    </select>
+                                    <input type="text" placeholder="주소를 입력해주세요">
+                                    <div class="btnArea">
+                                        <button type="button" class="btn green btnSearch lg">
+                                            <span>검색하기</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //searchArea -->
+
+                        <!-- searchArea -->
+                        <div class="searchArea mobile">
+                            <div class="inner">
+                                <div class="row">
+                                    <!-- inputBox -->
+                                    <div class="inputBox">
+                                        <select>
+                                            <option>지역본부 전체</option>
+                                        </select>
+                                        <select>
+                                            <option>용도구분 전체</option>
+                                        </select>
+                                    </div>
+                                    <!-- //inputBox -->
+
+                                    <!-- inputBox -->
+                                    <div class="inputBox">
+                                        <input type="text" placeholder="노선명칭을 입력해주세요">
+                                        <input type="text" placeholder="주소를 입력해주세요">
+                                    </div>
+                                    <!-- //inputBox -->
+                                </div>
+                                <div class="row">
+                                    <div class="btnArea">
+                                        <button type="button" class="btn green btnSearch">
+                                            <span>검색하기</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //searchArea -->
+                    </section>
+                    <!-- //section -->
+
+
+                    <!--section-->
+                    <section class="section default">
+                        <!-- resultArea -->
+                        <div class="resultArea">
+                            <div class="flex">
+                                <span>전체<em>171</em>건</span>
+                            </div>
+                        </div>
+                        <!-- //resultArea -->
+                        <!--contArea-->
+                        <div class="contArea">
+                            <!-- resultListArea -->
+                            <div class="resultListArea web">
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag deepBlue">매각</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag deepBlue">매각</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                            </div>
+                            <!-- //resultListArea -->
+
+                            <!-- resultListArea -->
+                            <div class="resultListArea mobile">
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag">사용</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag deepBlue">매각</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+
+                                <!-- cardBox -->
+                                <div class="cardBox">
+                                    <!-- innerCard -->
+                                    <div class="innerCard">
+                                        <div class="tagGroup">
+                                            <span class="tag deepBlue">매각</span>
+                                        </div>
+                                        <strong class="tit">수도권(일반)경의선</strong>
+                                        <div class="desc">
+                                            <span>수도권본부</span>
+                                            <p>경기도 파주시 월롱면 영태리 572 - 6
+                                                (P109~P110)</p>
+                                            <span>150㎡</span>
+                                        </div>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn gray">
+                                                <span>상세보기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- //innerCard -->
+                                </div>
+                                <!-- //cardBox -->
+                            </div>
+                            <!-- //resultListArea -->
+
+                            <!-- pagination -->
+                            <div class="pagination">
+                                <a href="#" class="prev"></a>
+                                <ul class="flex">
+                                    <li class="active">
+                                        <a href="#" title="1">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="2">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="3">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="4">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="5">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="6">6</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="7">7</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="8">8</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="9">9</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="10">10</a>
+                                    </li>
+                                </ul>
+                                <a href="#" class="next"></a>
+                            </div>
+                            <!-- //pagiantion -->
+
+
+                            <!-- moreArea -->
+                            <div class="moreArea">
+                                <button type="button" class="btnMore">더보기</button>
+                            </div>
+                            <!-- //moreArea -->
+                        </div>
+                        <!--//contArea-->
+                    </section>
+                    <!--//section-->
+
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span class="hidden">맨위로</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

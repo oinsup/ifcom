@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KR철도</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a href="메인.html">
+                <!-- <img src="/images/ico/ico_logo.png" alt="철도재산포털"> -->
+            </a>
+        </h1>
+        <div class="rightArea">
+            <!--gnb-->
+            <div id="gnb" class="clearFix">
+                <ul>
+                    <li class="depth">
+                        <a href="">국유재산안내</a>
+                        <ul class="menu">
+                            <li><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">개발사업대상지</a>
+                        <ul class="menu">
+                            <li><a href="개발사업대상지-수도권.html">수도권</a></li>
+                            <li><a href="개발사업대상지-영남권.html">영남권</a></li>
+                            <li><a href="개발사업대상지-호남권.html">호남권</a></li>
+                            <li><a href="개발사업대상지-강원권.html">강원권</a></li>
+                            <li><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth dep03">
+                        <a href="">유휴부지 및 폐터널</a>
+                        <ul class="menu">
+                            <li><a href="철도유휴부지-유휴부지위치도.html">철도유휴부지</a></li>
+                            <li><a href="철도유휴부지-폐터널현황.html">폐터널현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보마당</a>
+                        <ul class="menu">
+                            <li><a href="정보마당-법령및자료실.html">법령 및 자료실</a></li>
+                            <li style="margin-right: 0px;"><a href="정보마당-담당자안내.html">담당자안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--//gnb-->
+            <!--util-->
+            <div class="util">
+                <ul class="clearFix">
+                    <li class="gis"><a href="#"><span class="hidden">GIS</span></a></li>
+                </ul>
+            </div>
+            <!--//util-->
+        </div>
+        <!--mobile-->
+        <div class="mobile">
+            <button type="button" class="btnMenu"><span class="hidden">메뉴</span></button>
+        </div>
+        <!--//mobile-->
+        <!--moGnb-->
+        <div class="moGnb">
+            <div class="head">
+                <h1><img src="../images/ico/ico_logo.png" alt="모바일 로고"></h1>
+                <button type="button" class="btnClose"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="cont">
+                <ul class="dep1">
+                    <li class="active">
+                        <p><a href="#">국유재산안내</a></p>
+                        <ul class="dep2" style="display: block;">
+                            <li class="active"><p><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><p><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><p><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <p><a href="#">개발사업대상지</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="">수도권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-수도권.html">월곶역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="">영남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-영남권.html">김천구미역</a></li>
+                                    <li><a href="#">舊경주역</a></li>
+                                    <li><a href="#">舊포항역</a></li>
+                                    <li><a href="#">舊안동역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">호남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-호남권.html">익산역 광역환승센터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">강원권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-강원권.html">舊원주역</a></li>
+                                    <li><a href="#">춘천역세권</a></li>
+                                    <li><a href="#">장호정차장</a></li>
+                                    <li><a href="#">초곡정차장</a></li>
+                                    <li><a href="#">임호정차장</a></li>
+                                    <li><a href="#">인구정차장</a></li>
+                                    <li><a href="#">대포정차장</a></li>
+                                    <li><a href="#">양양정차장</a></li>
+                                    <li><a href="#">사천정차장</a></li>
+                                    <li><a href="#">낙산사정차장</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">유휴부지 및 폐터널</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="#">철도유휴부지</a></p>
+                                <ul class="dep3">
+                                    <li><a href="철도유휴부지-유휴부지위치도.html">철도 유휴부지 위치도</a></li>
+                                    <li><a href="#">철도유휴부지 선별 현황</a></li>
+                                    <li><a href="#">철도유휴부지 관리</a></li>
+                                    <li><a href="#">(지자체) 철도 유휴부지 활용사업</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="철도유휴부지-폐터널현황.html">폐터널 현황</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">정보마당</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active"><p><a href="정보마당-법령및자료실.html">법령 및 자료실</a></p></li>
+                            <li><p><a href="정보마당-담당자안내.html">담당자 안내</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--//moGnb-->
+    </div>
+</header>
+
+    <div id="container" class="nonPop">
+        <!--contents-->
+        <div id="contents">
+            <!--lnb-->
+            <div id="lnb">
+                <h2 class="hidden">주요메뉴</h2>
+                <!--menuName-->
+                <div class="menuName">
+                    <div class="name">
+                        <span>03</span>
+                        <p>유휴부지 및 폐터널</p>
+                    </div>
+                    <p class="eng">KOREA NATIONAL RAILWAY</p>
+                </div>
+                <!--//menuName-->
+                <!--dep1-->
+                <ul class="dep1">
+                    <li class="active toggle">
+                        <p><a href="#">철도유휴부지</a></p>
+                        <ul class="dep2">
+                            <li><a href="철도유휴부지-유휴부지위치도.html">철도유휴부지 위치도</a></li>
+                            <li><a href="철도유휴부지-철도유휴부지선별현황.html">철도유휴부지 선별현황</a></li>
+                            <!-- <li><a href="#">철도유휴부지 관리</a></li> -->
+                            <li class="active"><a href="철도유휴부지-철도유휴부지활용사업.html">철도유휴부지 활용사업</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="철도유휴부지-폐터널현황.html">폐터널 현황</a></p>
+                    </li>
+                </ul>
+                <!--//dep1-->
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">본문시작</h2>
+                <h3 class="titPage">철도유휴부지</h3>
+                <!--breadCrumb-->
+                <div class="breadCrumb">
+                    <ul>
+                        <li class="home"><a href="#"><img src="../images/ico/ico_home.png" alt="홈으로"></a></li>
+                        <li><a href="#">유휴부지 및 폐터널</a></li>
+                        <li><a href="#">철도유휴부지</a></li>
+                        <li class="current"><a href="#">철도유휴부지 활용사업</a></li>
+                    </ul>
+                </div>
+                <!--//breadCrumb-->
+                <!-- mobileLnb -->
+                <div class="mobileLnb">
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">유휴부지 및 폐터널</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">국유재산안내</a></li>
+                                <li><a href="javascript:;">개발사업대상지</a></li>
+                                <li><a href="javascript:;">정보마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">철도유휴부지</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">폐터널 현황</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropDowndep02">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">(지자체)철도유휴부지 활용사업</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">철도유휴부지 위치도</a></li>
+                                <li><a href="javascript:;">철도유휴부지 선별현황</a></li>
+                                <!-- <li><a href="javascript:;">철도유휴부지 관리</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ..mobileLnb -->
+                <section>
+                    <h3 class="sectionTitle">(지자체) 철도 유휴부지 활용사업</h3>
+                    <!-- article -->
+                    <article>
+                        <ul>
+                            <li>
+                                <p class="firstText">지방자치단체는 주민친화적 공간조성 또는 지역경쟁력 강화를 위하여 관할 행정구역내에 위치한 철도 유휴부지에 대한 활용사업을 제안할 수 있습니다.</p>
+                            </li>
+                        </ul>
+                        <!--titArea-->
+                        <div class="titArea mt-30">
+                            <div class="flex jc al">
+                                <button type="button" class="search wd140 winPop">검색하기</button>
+                                <div>
+                                    <button type="button" class="btnDown">철도유휴부지 활용심의위원회 운영지침</button>
+                                    <button type="button" class="btnDown">철도유휴부지 활용지침</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//titArea-->
+                        <!--table-->
+                        <div class="table type05">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">경전선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>171.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="경전선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="경전선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="경전선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>051-664-5000(영남) 062-602-5200(호남)</span></div>
+                                            <div class="txt">비고 : <span>순천~삼랑진</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">경춘선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>82.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="경춘선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="경춘선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="경춘선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>02-788-5000(수도권)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">장항선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>66.1</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="장항선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="장항선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="장항선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>042-607-5000(충청)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">전라선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>63.9</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="전라선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="전라선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="전라선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>062-602-5200(호남)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">중앙선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>123.7</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="중앙선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="중앙선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="중앙선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>02-788-5000(수도권) 033-810-5000(강원) 051-664-5000(영남)</span></div>
+                                            <div class="txt" style="margin: 0;">비고 : <span>청량리~유교(원주) 유교(원주)~화산(영천) 화산(영천)~경주</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">영동선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>39.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="영동선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="영동선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="영동선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>033-810-5000(강원)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">수인선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>2.5</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="수인선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="수인선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="수인선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>02-788-5000(수도권)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">호남선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>32.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="호남선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="호남선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="호남선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>062-602-5200(호남)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">동해남부선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>29.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="동해남부선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="동해남부선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="동해남부선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>051-664-5000(영남)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">태백선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>폐선부지</span></div>
+                                            <div class="txt">연장(km) : <span>36.4</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="태백선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="태백선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="태백선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>033-810-5000(강원)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">동해<br/>중부선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>기타부지</span></div>
+                                            <div class="txt">연장(km) : <span>143.5</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType">
+                                                    <a href="#" class="pdf" title="동해중부선 노선도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="동해중부선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="동해중부선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>033-810-5000(강원) 051-664-5000(영남)</span></div>
+                                            <div class="txt">비고 : <span>삼척~울진 포항~영덕</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">동해<br/>북부선</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span>기타부지</span></div>
+                                            <div class="txt">연장(km) : <span>102.1</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType"></div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="hwp" title="동해북부선 유형별분류도 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="동해북부선 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>033-810-5000(강원)</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">散在부지</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt">구분 : <span>기타부지</span></div>
+                                            <div class="txt">연장(km) : <span></span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType"></div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="散在부지 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>전부서</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">교량하부<br/>(58개소)</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span></span></div>
+                                            <div class="txt">연장(km) : <span>66.8</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType"></div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="散在부지 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>전부서</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">선로상부<br/>(11개소)</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt wd95">구분 : <span></span></div>
+                                            <div class="txt">연장(km) : <span>11.1</span></div>
+                                            <div class="txt">노선도 :
+                                                <div class="fileType"></div>
+                                            </div>
+                                            <div class="txt">분류표/세목 :
+                                                <div class="fileType">
+                                                    <a href="#" class="xls" title="散在부지 세목조서 다운로드"><span class="hidden">다운로드</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="txt">담당자 전화번호 : <span>전부서</span></div>
+                                            <div class="txt">비고 : </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bgBlue">합계</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="txt">연장(km) : <span>971.1</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                        <ul style="margin: 0;">
+                            <li>
+                                <p class="firstText" style="margin: 0;">(교량하부·선로상부) - 활용도가 높은 대규모 부지(기 사용부지 제외)</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //article -->
+                </section>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner clearFix">
+        <!--helpMenu-->
+        <ul class="helpMenu">
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">웹접근성정책</a></li>
+            <li><a href="#">뷰어다운로드</a></li>
+        </ul>
+        <!--//helpMenu-->
+        <!--corpInfo-->
+        <div class="corpInfo">
+            <p>우)34618 대전광역시 동구 중앙로 242 국가철도공단  TEL: 1588-7270(통화료 사용자 부담) FAX: 042-607-4429</p>
+            <p>COPYRIGHTⓒ 2020 BY KOREA NATIONAL RAILWAY. ALL RIGHTS RESERVED</p>
+        </div>
+        <!--//corpInfo-->
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '시·군·구도시계획위원회 정보 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 구성 관리</li>
+          <li>시·군·구도시계획위원회 정보 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>시·군·구도시계획위원회 정보 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>위원회 구성 위원의 위촉 상태 변경(제척, 해촉 등)에 의하여 구성 위원의 변동 사항이 발생한 경우 수정해 주세요. </li>
+            <li>운영 중인 경우 임의적으로 위원을 변경하거나 삭제하는 것은 불가능합니다.</li>
+            <li>위촉 정보를 등록한 경우에만 도시계획위원회 구성원으로 추가 가능합니다. </li>
+          </ul>
+        </div>
+
+        <section> 
+          <h3 class="cont-hedding1">도시계획위원회 개요</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>위촉 정보</caption>
+              <colgroup>
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="2">위원회 구분  <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate1" checked><label for="mbmcate1"><span></span> 시·군·구도시계획위원회</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 110조(지방도시계획위원회의 업무) ②항
+                          <p>
+                            시·군·구도시계획위원회는 법 제113조제2항제4호에 따라 다음 각 호의 업무를 할 수 있다.
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>해당 시·군·구와 관련한 도시·군계획조례의 제정·개정과 관련하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                            <li>제55조제3항제3호의2에 따른 개발행위허가에 대한 심의(대도시에 두는 도시계획위원회에 한정한다)</li>
+                            <li>개발행위허가와 관련하여 시장 또는 군수(특별시장·광역시장의 개발행위허가 권한이 법 제139조제2항에 따라 조례로 군수 또는 구청장에게 위임된 경우에는 그 군수 또는 구청장을 포함한다)가 자문하는 사항에 대한 조언</li>
+                            <li>제128조제1항에 따른 시범도시사업계획의 수립에 관하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">위원회명  <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-counter-wrap">
+                      <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" title="위원회명" value="위원회명">
+                    </div>
+                  </td>
+                  <th scope="row">운영 상태</th>
+                  <td><span class="pcolor-red">운영 대기</span></td>
+                </tr>
+                <!-- 1215 :: 수정 -->
+                <tr>
+                  <th scope="row">운영 기관  <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-gride">
+                      <select class="cs-input _disabled cs-gride-col6" title="지역선택">
+                        <option>경기도</option>
+                      </select>
+                      <select class="cs-input ml5 _disabled cs-gride-col6" title="시군구 선택">
+                        <option>하남시</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th scope="row">운영 기간  <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-datepicker-set width100p">
+                      <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택" value="2020-01-02">
+                      <div>~</div>
+                      <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택" value="2020-01-03">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>심의 매뉴얼</th>
+                  <td colspan="3">
+                    <div class="cs-file-wrap _type2">
+                      <input type="file" class="cs-file" id="guidefile3" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+                      <span class="js__filename"></span>
+                      <div class="cs-file-btns">
+                        <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                        <label for="guidefile3" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">운영 담당자 <i class="icon-required">필수 입력</i></th>
+                  <td class="_p0" colspan="3">
+                    <div class="board-view-tb _tac">
+                      <table>
+                        <caption>운영 담당자</caption>
+                        <colgroup>
+                          <col class="width60">
+                          <col class="width210">
+                          <col>
+                          <col>
+                          <col class="width110">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">부서</th>
+                            <!-- 1217 :: 텍스트변경 -->
+                            <th scope="col">부서 연락처</th>
+                            <th scope="col">관리</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- 1217 :: input제거 -->
+                          <tr>
+                            <td>1</td>
+                            <td>김운영</td>
+                            <td>도시계획과</td>
+                            <td>02-2222-3333(내선123)</td>
+                            <!-- 1222 :: 버튼클래스변경 -->
+                            <td><button class="cs-btn2-gray-line cs-btn-default width100p">담당자 삭제</button></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>김운영</td>
+                            <td>도시계획과</td>
+                            <td>02-2222-3333(내선123)</td>
+                            <td><span class="pcolor-red">본인</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="extratype-btn">
+            <!-- 1217 :: 버튼명 변경 -->
+            <a href="#js__userfinder" jq-action="modal" class="cs-btn2-gray cs-btn-default mt10" style="width:88px;">담당자 선택</a>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>운영 담당자는 최대 10명까지만 선택 가능합니다. 선택하신 운영 담당자만 심의회의 안건 관리, 자료 등록, 의견 관리, 보고서 관리 등이 가능합니다. </li>
+          </ul>
+        </section>
+
+        <!-- 1217 :: 구성 위원 input 제거 -->
+        <section>
+          <h3 class="cont-hedding1">구성 위원</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb">
+            <table>
+              <colgroup>
+                <col class="width120">
+                <col class="width60">
+                <col class="width190">
+                <col class="width190">
+                <col>
+                <col class="width190">
+                <col class="width110">
+              </colgroup>
+              <caption>구성 위원</caption>
+              <tbody>
+                <tr>
+                  <th scope="col">역할 구분</th>
+                  <th scope="col">No</th>
+                  <th scope="col">위원 구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">관리</th>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2" class="tal">위원장 <i class="icon-required">필수 입력</i></th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>홍길동</td>
+                  <td>경기대학교</td>
+                  <td>전임교수</td>
+                  <td><a href="#js__memberSelect" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">위원 변경</a></td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="tal">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ②항
+                          <p>
+                            시·군·구도시계획위원회는 위원장 및 부위원장 각 1인을 포함한 15인 이상 25인 이하의 위원으로 구성한다. <br>
+                            다만, 2 이상의 시·군 또는 구에 공동으로 시·군·구도시계획위원회를 설치하는 경우에는 그 위원의 수를 30인까지로 할 수 있다.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2" class="tal">부위원장 <i class="icon-required">필수 입력</i></th>
+                  <td>2</td>
+                  <td>전문가</td>
+                  <td>홍길동</td>
+                  <td>경기대학교</td>
+                  <td>전임교수</td>
+                  <td><a href="#js__memberSelect" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">위원 변경</a></td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="tal">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ②항
+                          <p>
+                            시·군·구도시계획위원회의 위원장은 위원 중에서 해당 시장·군수 또는 구청장이 임명 또는 위촉하며, 부위원장은 위원중에서 호선한다. 
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="5" class="tal">위원 <i class="icon-required">필수 입력</i></th>
+                  <td>3</td>
+                  <td>공무원(내부)</td>
+                  <td>OOO</td>
+                  <td class="tal">경기도 하남시</td>
+                  <td>부시장</td>
+                  <!-- 1222 :: 버튼클래스변경 -->
+                  <td><a href="#js__memberDelete" jq-action="modal" class="cs-btn2-gray-line cs-btn-default width100p">위원 삭제</a></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>공무원(내부)</td>
+                  <td>OOO</td>
+                  <td class="tal">경기도 하남시</td>
+                  <td>부시장</td>
+                  <td><a href="#js__memberDelete" jq-action="modal" class="cs-btn2-gray-line cs-btn-default width100p">위원 삭제</a></td>
+                </tr>
+                
+                <!-- 1217 :: 클래스 추가 해촉, 제촉일경우 tr에 bgcolor-blue 클래스추가 -->
+                <tr class="bgcolor-blue">
+                  <td>5</td>
+                  <td>공무원(내부)</td>
+                  <td>OOO</td>
+                  <td class="tal">경기도 하남시</td>
+                  <td>부시장</td>
+                  <td><span class="pcolor-red">해촉</span></td>
+                </tr>
+                <tr class="bgcolor-blue">
+                  <td>6</td>
+                  <td>공무원(내부)</td>
+                  <td>OOO</td>
+                  <td class="tal">경기도 하남시</td>
+                  <td>부시장</td>
+                  <td><span class="pcolor-red">제척</span></td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="tal">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ①항
+                          <p>
+                            시·군·구도시계획위원회는 위원장 및 부위원장 각 1인을 포함한 15인 이상 25인 이하의 위원으로 구성한다. 다만, 2 이상의 시·군 또는 구에 공동으로 시·군·구도시계획위원회를 설치하는 경우에는 그 위원의 수를 30인까지로 할 수 있다.
+                          </p>
+                        </li>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ③항
+                          <p>
+                            시·군·구도시계획위원회의 위원은 다음 각호의 자중에서 시장·군수 또는 구청장이 임명 또는 위촉한다. <br>
+                            이 경우 제3호에 해당하는 위원의 수는 위원 총수의 50퍼센트 이상이어야 한다.
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>당해 시·군·구 지방의회의 의원</li>
+                            <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원</li>
+                            <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="extratype-btn">
+            <!-- 1217 :: 버튼명 변경 -->
+            <a href="#js__memberSelect2" jq-action="modal" class="cs-btn2-gray cs-btn-default mt10">위원 일괄 선택</a>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>제척 또는 해촉 위원이 발생한 경우 해당 위원은 구성원에서 자동 제외됩니다. 다른 위원을 추가로 등록할 수 있습니다.</li>
+          </ul>
+        </section>
+
+
+        <section class="cs-btn-set">
+          <a href="CouncilWorkers03.html" class="cs-btn-line">취소</a>
+          <a href="#js_memberModify" jq-action="modal" class="cs-btn">수정</a>
+          <a href="#js_memberModify2" jq-action="modal">수정 (Case1-5)</a>
+        </section>
+
+        <div id="js_memberModify" class="laymodal width700">
+          <div class="laymodal-header">
+            <h2>시·군·구도시계획위원회 정보 수정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="modal-sec-title">
+                해당 위원회의 정보 수정 내용을 입력해 주세요.
+              </div>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>정보 수정</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">수정 정보 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" class="cs-radio" name="modifydata" id="modifyData1"><label for="modifyData1"><span></span> 도시계획위원회 개요</label>
+                        <input type="radio" class="cs-radio" name="modifydata" id="modifyData2"><label for="modifyData2"><span></span> 구성 위원</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정 내용 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="변경 사유" placeholder="변경하신 내용을 입력해 주세요.&#13;&#10;(예. 위원회명, 운영 기간, 위원 추가, 위원 변경 등)"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">수정 정보 구분을 선택해 주세요. </div>
+              <div class="cs-alert">수정하신 내용을 입력해 주세요. </div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_memberModify');lay_pop_open('#js_memberModifyComplete')">수정</button>
+          </div>
+        </div>
+
+        <div id="js_memberModifyComplete" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>시·군·구도시계획위원회 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            시·군·구도시계획위원회 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <div id="js__memberDelete" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>위원 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            위원회 운영 중에는 임의로 위원을 삭제할 수 없습니다.<br>
+            제척 또는 해촉된 경우 위원의 위촉 정보를 수정해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="councilWorkers03.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <div id="js_memberModify2" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>시·군·구도시계획위원회 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <section>
+              시·군·구도시계획위원회 구성인원수가 초과 되었습니다. <br>
+              30명 이하로 선택해 주세요. 
+            </section>
+
+            <section>
+              (위원장 및 부위원장 각 1인을 포함한 15인 이상 25인 이하위원으로 구성, 
+              2이상의 시·군·구에 공동으로 운영하는 경우 최대 30명)
+            </section>
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn" jq-action="closeModal">확인</button>  
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 41})
+        @@include('../include/modals.html',{'items': 42})
+        @@include('../include/modals.html',{'items': 4})
+
+      </div>
+      <!--// content :: 내용 -->
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

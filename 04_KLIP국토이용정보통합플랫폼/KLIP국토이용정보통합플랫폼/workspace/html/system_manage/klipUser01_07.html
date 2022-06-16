@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>기관 관리자 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>사용자 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="klipUser01.html" class="active">기관 사용자</a>
+        <a href="klipManager01.html">기관 관리자</a>
+        <a href="molitManager01.html">국토교통부 관리자</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        @@include('../include/cont_klipuser01_01.html')
+
+        <div class="board-list-wrap">
+          @@include('../include/cont_klipUser01_01_nav.html',{'tab': 7})
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">탈퇴일<i class="sort-desc"></i></a>
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width200">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width240">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">탈퇴일</th>
+                  <th scope="col">소속 기관 </th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <!-- 201201 :: 링크수정 -->
+                  <td class="tal"><a href="klipUser03.html">dfdfdf1234</a></td>
+                  <td> 031-790-6114(12)</td>
+                  <td>탈퇴</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">
+                    탈퇴된 사용자가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            아이디를 클릭하시면 해당 사용자의 정보 확인 및 상태 확인이 가능합니다.
+          </li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

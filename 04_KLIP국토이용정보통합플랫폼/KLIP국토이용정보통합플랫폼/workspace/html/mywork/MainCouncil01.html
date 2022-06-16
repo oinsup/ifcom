@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">나의 업무 현황</a></li>
+          <li>도시계획위원회 심의</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시계획위원회 심의</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>소속된 위원회별 심의 내역을 확인하실 수 있습니다.</li>
+            <li>온라인 전자심의인 경우 자료 검토 기간 내에 ‘심의 자료 검토’ 후 심의 기간 내에 ‘심의 의견’을 제출해 주세요.</li>
+            <li>오프라인 심의인 경우 자료 검토 기간 내에 ‘심의 자료 검토’ 후 심의회에 참석해 주세요.</li>
+          </ul>
+        </div>
+
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              <div>
+                <strong class="__tit">소속 기관</strong>
+                <div class="__col-full">
+                  <select name="" class="cs-input" title="소속 기관">
+                    <option>경기도</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <strong class="__tit">위원회명</strong>
+                <div class="__col-full">
+                  <select name="" id="" class="cs-input" title="위원회명">
+                    <option value="">2021년 경기도 하남시 도시계획위원회</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">운영 기간</label>
+                <div class="__col-full">
+                  2021-01-01~2023-12-31
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </form>
+
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">온라인 전자심의</a></li>
+              <li><a href="#">오프라인 심의</a></li>
+            </ul>
+            <div>
+              <a href="#" class="cs-btn2-gray cs-btn-default">심의 매뉴얼 다운로드</a>
+            </div>
+          </nav>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 전자심의</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width200">
+                <col class="width200">
+                <col class="width100">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">개최 구분</th>
+                  <th scope="col">심의 회차</th>
+                  <th scope="col">심의회명</th>
+                  <th scope="col">자료 검토 기간</th>
+                  <th scope="col">심의 기간</th>
+                  <th scope="col">안건 수</th>
+                  <th scope="col">출석 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>정기</td>
+                  <td>2020년도 2회</td>
+                  <td class="tal"><a href="MainCouncil03.html">하남시 OOO 심의를 위한 비정기 심의회</a></td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>5</td>
+                  <td><span class="cs-text-box">궐석</span></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>비정기</td>
+                  <td>2020년도 2회</td>
+                  <td class="tal"><a href="MainCouncil03.html">하남시 OOO 심의를 위한 비정기 심의회</a></td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>5</td>
+                  <td><span class="cs-text-box2">출석</span></td>
+                </tr>
+                <tr>
+                  <td colspan="8">도시계획위원회 구성 위원으로 등록된 내역이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">등록된 온라인 전자심의 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">온라인 전자심의</a></li>
+              <li class="active"><a href="#">오프라인 심의</a></li>
+            </ul>
+          </nav>
+
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 심의</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width200">
+                <col class="width200">
+                <col class="width100">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">개최 구분</th>
+                  <th scope="col">심의 회차</th>
+                  <th scope="col">심의회명</th>
+                  <th scope="col">자료 검토 기간</th>
+                  <th scope="col">심의 기간</th>
+                  <th scope="col">안건 수</th>
+                  <th scope="col">출석 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>정기</td>
+                  <td>2020년도 2회</td>
+                  <td class="tal"><a href="MainCouncil02.html">하남시 OOO 심의를 위한 비정기 심의회</a></td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>5</td>
+                  <td><span class="cs-text-box">궐석</span></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>정기</td>
+                  <td>2020년도 2회</td>
+                  <td class="tal"><a href="MainCouncil02.html">하남시 OOO 심의를 위한 비정기 심의회</a></td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>2020-XX-XX~2020-XX-XX</td>
+                  <td>5</td>
+                  <td><span class="cs-text-box2">출석</span></td>
+                </tr>
+                <tr>
+                  <td colspan="8">도시계획위원회 구성 위원으로 등록된 내역이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">등록된 오프라인 심의 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

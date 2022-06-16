@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+<div class="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--content-->
+        <div id="contentWrap">
+            <h2 class="hidden">본문 시작</h2>
+            <!--lnb-->
+            <div id="lnb">
+                <div class="menuName">
+                    <p class="tit">사용자권한관리</p>
+                </div>
+                <ul class="dep1">
+                    <li class="active">
+                        <p class="user"><a href="#">사용자권한관리</a></p>
+                        <ul class="dep2" style="display: block">
+                            <li class="li01 active"><a href="#">권한관리</a></li>
+                            <li class="li02"><a href="#">기관정보관리</a></li>
+                            <li class="li03"><a href="#">사용자관리</a></li>
+                            <li class="li04"><a href="#">로그인정책관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="menu"><a href="#">메뉴관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01 active"><a href="#">프로그램관리</a></li>
+                            <li class="li02"><a href="#">메뉴관리(tree)</a></li>
+                            <li class="li03"><a href="#">메뉴관리(list)</a></li>
+                            <li class="li04"><a href="#">메뉴생성관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="code"><a href="#">코드관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01 active"><a href="#">공통분류코드관리</a></li>
+                            <li class="li02"><a href="#">공통코드관리</a></li>
+                            <li class="li03"><a href="#">공통상세코드관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="log"><a href="#">로그관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01 active"><a href="#">로그관리</a></li>
+                            <li class="li02"><a href="#">웹로그관리</a></li>
+                            <li class="li03"><a href="#">접속로그관리</a></li>
+                            <li class="li04"><a href="#">개인정보조회로그관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <div class="guideArea">
+                    <!-- tableArea -->
+                    <div class="tableArea">
+                        <!-- table -->
+                        <h3 class="subTitle">Table-01</h3>
+                        <div class="table type02">
+                            <table>
+                                <caption class="hidden">테이블 명</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">질문제목<span class="essential"></span></th>
+                                        <td>테스트</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">조회수<span class="essential"></span></th>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">질문내용</th>
+                                        <td>자주묻는 질문</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">답변내용</th>
+                                        <td>답변입니다</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">등록일</th>
+                                        <td>2021-11-30</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첨부파일</th>
+                                        <td><p class="cRed">FILE_00000000000031</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+                        <br /><br />
+                        <h3 class="subTitle">Table-02</h3>
+                        <!-- table -->
+                        <div class="table type04">
+                            <table>
+                                <caption class="hidden">테이블 명</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="i01">input</label><span class="essential"></span></th>
+                                        <td>
+                                            <div class="textArea"><input type="text" id="i01" class="gray wd300"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="s01">select</label>
+                                        </th>
+                                        <td>
+                                            <div class="textArea">
+                                                <div class="select wd300">
+                                                    <select name="" id="s01">
+                                                        <option value="">선택하세요</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="t01">textarea</label>
+                                        </th>
+                                        <td>
+                                            <div class="textContainer">
+                                                <textarea id="t01" style="width: 100%; height: 234px;" placeholder="textarea TEXTAREA 텍스트아레아"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+                        <br /><br />
+                        <h3 class="subTitle">Table-03</h3>
+                        <!-- table -->
+                        <div class="table type05">
+                            <table>
+                                <caption class="hidden">테이블 명</caption>
+                                <colgroup>
+                                    <col style="width: 20%">
+                                    <col style="width: 30%">
+                                    <col style="width: 20%">
+                                    <col style="width: 30%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><label for="i01">input</label><span class="essential"></span></th>
+                                        <td>
+                                            <div class="textArea"><input type="text" id="i01" class="gray" style="width: 100%;"></div>
+                                        </td>
+                                        <th scope="row">
+                                            <label for="s01">select</label>
+                                        </th>
+                                        <td>
+                                            <div class="textArea">
+                                                <div class="select" style="width: 100%;">
+                                                    <select name="" id="s01">
+                                                        <option value="">선택하세요</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="t01">textarea</label>
+                                        </th>
+                                        <td colspan="3">
+                                            <div class="textContainer">
+                                                <textarea id="t01" style="width: 100%; height: 234px;" placeholder="textarea TEXTAREA 텍스트아레아"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+                    </div>
+                    <!-- //tableArea -->
+                </div>
+                <!-- //guideArea -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//content-->
+    </div>
+
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '권한 승인 안내'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 6})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        권한 승인 안내
+      </h2>
+
+      <div class="content join-approval">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>국토이용정보통합플랫폼(Korea Land use Information Platform)은 사용 권한을 신청한 후 승인 받은 사용자만 이용 가능합니다.</li>
+            <li>권한 신청 시 실시간으로 관리자에게 알림이 전송되지 않으므로, 빠른 승인이 필요한 경우 하기 담당자에게 직접 승인 요청을 해주세요.</li>
+            <li>비밀번호 5회 연속 오류로 아이디 로그인이 제한된 경우에도 하기 담당자에게 직접 해제 요청 해주세요.</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-headings1 tac">권한 신청 및 권한별 승인 담당자 안내</h3>
+          <div class="cs-table-allbox tac">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">권한 구분</th>
+                  <th scope="col">기관 관리자</th>
+                  <th scope="col">기관 사용자</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">설명</th>
+                  <td>
+                    소속 행정기관의 사용자를 관리하는 권한<br>
+                    (전체 메뉴 이용, 사용자별 메뉴 권한 부여)
+                  </td>
+                  <td>
+                    행정기관에서 도시계획 업무를 수행하는 일반 사용자 권한<br>
+                    (사용 메뉴 제한)
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">신규 신청 프로세스</th>
+                  <td>
+                    <ul class="cs-list-arrdown">
+                      <li>
+                        <div>
+                          <i class="approval_icon1"></i>
+                        </div>
+                        신청 체크
+                      </li>
+                      <li>개인정보 수집 동의</li>
+                      <li>소속 기관 및 신청 권한(기관 관리자) 선택 / 개인정보 입력</li>
+                      <li>신청 완료</li>
+                      <li>
+                        <i class="approval_icon3"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="cs-list-arrdown">
+                      <li>
+                        <div>
+                          <i class="approval_icon2"></i>
+                        </div>
+                        신청 체크
+                      </li>
+                      <li>개인정보 수집 동의</li>
+                      <li>소속 기관 및 신청 권한(기관 사용자) 선택 / 개인정보 입력</li>
+                      <li>신청 완료</li>
+                      <li>
+                        <i class="approval_icon4"></i>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">승인 담당자</th>
+                  <td>국토교통부 관리자</td>
+                  <td>기관 관리자</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cs-table-simple">
+                      <table>
+                        <caption>소식 기관 관리자</caption>
+                        <colgroup>
+                          <col class="width120">
+                          <col>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th>담당부서</th>
+                            <td>: OO부서</td>
+                          </tr>
+                          <tr>
+                            <th>담당자명 / 직위</th>
+                            <td>: 홍길동  /  주무관</td>
+                          </tr>
+                          <tr>
+                            <th>연락처</th>
+                            <td>: 010-8989-0987</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </td>
+                  <td>
+                    소속 기관 관리자에게 문의<br>
+                    <button type="button" class="cs-btn2-gray mt10" jq-action="modal" jq-target="#js__managerFinder">기관별 관리자 연락처</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        
+        <!-- 기관변 관리자 연락처 -->
+        @@include('./include/modals.html',{'items': 8})
+
+        
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

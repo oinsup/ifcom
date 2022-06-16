@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '사용자 정보 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="#">사용자 관리</a></li>
+          <li>기관 관리자 정보 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>기관 관리자 정보 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+        <section>
+          <div class="cs-box _alert-icon">
+            <ul class="cs-list-dot">
+              <li>아이디 변경은 기관 관리자가 사용 권한 신청 시 <span class="pcolor-red">오입력한 것을 수정하는 것 이외에는 변경을 금합니다.</span> </li>
+              <li><span class="underline">아이디 변경</span>과 <span class="underline">일회용 비밀번호 전송</span> 기능을 제외한 기타 정보 수정 시 페이지 하단의 ‘정보 수정’ 버튼을 클릭해야 수정이 완료됩니다.</li>
+              <li>사용자의 모든 상태 관리는 ‘상태 변경’ 클릭 후 출력되는 팝업에서 처리<span class="pcolor-red">(사용 승인, 접속 불가 해제 , 휴면 상태 관리 등)</span>  가능합니다. </li>
+              <li>권한 승계는 기관 관리자의 요청이 있는 경우에만 진행해 주세요.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">계정정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>계정정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">아이디</th>
+                  <td>
+                    <div class="frm-insert-t6">
+                      test1234
+                      <a href="#js__changeID3" jq-action="modal" class="cs-btn2-gray cs-btn-default flr">아이디 변경</a>
+                    </div>
+                  </td>
+                  <th scope="row"><label for="cupassword">비밀번호</label></th>
+                  <td>
+                    <div class="frm-insert-t6">
+                      ＊＊＊＊＊＊＊＊＊
+                      <a href="#js__sendPassword" jq-action="modal" class="cs-btn2-gray cs-btn-default flr">일회용 비밀번호 전송</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">사용 권한 신청일</th>
+                  <td>2020-12-01 13:00</td>
+                  <th scope="row">현재 상태/변경일</th>
+                  <td class='pcolor-red'>승인 대기</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>
+              아이디 변경은 해당 기관 관리자가 권한 신청 시 ‘공직자통합메일’과 다르게 아이디를 오입력하고 신청한 경우에만 수정해 주세요. <br>
+              (아이디 변경 시 페이지가 새로고침 되오니, 아이디 변경과 함께 다른 정보도 수정이 필요한 경우 아이디를 먼저 변경하고 다른 정보를 수정해 주세요.) 
+            </li>
+            <li>아이디를 변경하신 경우 반드시 ‘일회용 비밀번호 발송’버튼을 클릭해서 기관 관리자에게 변경된 아이디와 일회용 비밀번호를 발송해 주세요.</li>
+            <li>‘일회용 비밀번호 발송’ 버튼 클릭 시, 비밀번호 랜덤생성 후 기관 관리자 휴대전화로 문자메시지가 발송됩니다. <span class="pcolor-red">(휴대전화 번호가 변경되지 않았는지 확인 후 처리 필수!)</span></li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">개인정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>개인정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row"><label for="userName">이름 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <input type="text" class="cs-input width100p" id="userName">
+                  </td>
+                  <th scope="row"><label for="tel">휴대전화 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <input type="text" class="cs-input width100p" id="tel" value="010-1234-1234">
+                      <span class="cs-btn2-gray-line cs-btn-default">확인 완료</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">공직자통합메일 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-input-email width100p _disabled">
+                      <input type="text" title="공직자통합메일 ID" value="asdfsdf" readonly>
+                      <span>@korea.kr</span>
+                    </div>
+                  </td>
+                  <th scope="row">부서 연락처 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-input-tel">
+                      <select class="cs-input" title="지역번호 선택">
+                        <option>지역번호 선택</option>
+                        <option>02</option>
+                        <option>032</option>
+                      </select>
+                      <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                      <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                      <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="onnaraID">온-나라시스템 ID</label></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <input type="text" id="onnaraID" class="cs-input" placeholder="아이디 입력" vlaue="dfdsfas657457">
+                      <span class="cs-btn2-gray-line cs-btn-default">확인 완료</span>
+                      <!-- <button type="button" class="cs-btn2-gray cs-btn-default">중복 확인</button> -->
+                    </div>
+                  </td>
+                  <th scope="row"><label for="swID">새올행정시스템 ID</label></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <input type="text" id="swID" class="cs-input">
+                      <button type="button" class="cs-btn2-gray cs-btn-default">중복 확인</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>‘계정정보’의 아이디가 공직자통합메일의 아이디와 동일하므로 메일의 아이디만 변경이 불가합니다.</li>
+            <li>온-나라 문서ID는 전자결재 요청 시 필요하며, 결재 업무를 진행하지 않는 사용자는 입력하실 필요가 없습니다.</li>
+          </ul>
+        </section>
+
+
+
+        <section>
+          <h3 class="cont-hedding1">소속정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>소속정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">소속 기관 <i class="icon-required">필수 입력</i></th>
+                  <td>경기도 하남시</td>
+                  <th scope="row"><label for="insideGourp">소속 부서 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <div>
+                        <input type="text" class="cs-input width100p _disabled" id="insideGourp" value="도시계획과" readonly>
+                      </div>
+                      <a href="#" class="cs-btn2-gray cs-btn-default __col_btn">부서 변경</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="ipoffice">직위</label></th>
+                  <td><input type="text" id="ipoffice" value="주무관" class="cs-input width100p"></td>
+                  <th scope="row"><label for="ipwork">담당 업무</label></th>
+                  <td><input type="text" id="ipwork" value="용도구역·지구 관리" class="cs-input width100p"></td>
+                </tr>
+                <tr>
+                  <th scope="row">권한 유형 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">기관 관리자</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>소속 기관 변경은 불가합니다. ‘승인 대기’ 상태인 경우 삭제 후 재가입하도록 해주세요.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="klipManager11.html" class="cs-btn-line">목록</a>
+          <a href="#js_userDelete" jq-action="modal" class="cs-btn">삭제</a>
+          <a href="#js_authority" jq-action="modal" class="cs-btn">권한 승계</a>
+          <a href="#js_userModify" jq-action="modal" class="cs-btn-line">정보 수정</a>
+          <a href="#js_stateChange" jq-action="modal" class="cs-btn">상태 변경</a>
+
+          <button type="button" jq-action="modal" jq-target="#js_stateChangeCase2">상태 변경 : 정상일때</button>
+          <button type="button" jq-action="modal" jq-target="#js_stateChangeCase3">상태 변경 : 접속 불가</button>
+        </section>
+
+        
+
+        <section class="board-list">
+          <nav class="board-tab-nav js__tabNav" data-tabnav="testNav">
+            <ul>
+              <li class="active"><button data-idx="1">상태 변경 내역</button></li>
+              <li><button data-idx="2">정보 수정 내역</button></li>
+            </ul>
+          </nav>
+          <div class="js__tabNav_testNav1">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>상태 변경 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">관리자명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">관리자 메모</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>접속 불가</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>정상</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>관리자 메모는 ‘기관 사용자’에게 노출되지 않습니다.</li>
+            </ul>
+            @@include('../include/paging.html')
+          </div>
+
+          <div class="js__tabNav_testNav2">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>상태 변경 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width180">
+                  <col>
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">정보 수정일</th>
+                    <th scope="col">관리자명</th>
+                    <th scope="col">수정 정보</th>
+                    <th scope="col">수정 내용</th>
+                    <th scope="col">메모 관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>권한 승계</td>
+                    <td class="tal">권한 승계 처리되었습니다. (박경민/test1235 → 홍길동/kjte335i3)</td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>일회용 비밀번호</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>수정 내용은 ‘기관 관리자’에게 노출되지 않습니다. 시스템에서 자동 생성한 내역은 국토교통부 관리자가 삭제할 수 없습니다. </li>
+            </ul>
+            @@include('../include/paging.html')
+
+
+            <div id="js__delete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>관리자 메모 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                삭제된 내용은 복구할 수 없습니다.<br>
+                삭제하시겠습니까?
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onClick="lay_pop_close('#js__delete');lay_pop_open('#js__deleteComplete')">삭제</button>
+              </div>
+            </div>
+
+            <div id="js__deleteComplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>관리자 메모 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                관리자 메모가 삭제되었습니다.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="klipManager11.html" class="cs-btn-line">목록</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용자 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            사용자 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="index.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+
+
+
+        <!-- 아이디 변경 -->
+        <div id="js__changeID3" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>아이디 변경</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="modal-sec-title">
+                국토이용정보통합플랫폼의 사용자 아이디는 공직자통합메일의 아이디를 사용합니다.<br>
+                기관 관리자가 ‘사용 권한 신청’ 시 오기입한 경우에만 변경해 주세요. 
+              </div>
+              <div class="tar"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>아이디 정보</caption>
+                  <colgroup>
+                    <col class="width150">
+                    <col class="width150">
+                    <col >
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>이름</th>
+                      <th>현재 아이디</th>
+                      <th>변경 아이디 <i class="icon-required">필수 입력</i></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>박경민</td>
+                      <td>test1234</td>
+                      <td class="tal">
+                        <div class="frm-insert-t1">
+                          <div>
+                            <input type="text" class="cs-input width100p _h35" title="변경 아이디" placeholder="공직자통합메일 ID 입력">
+                          </div>
+                          <button class="__col_btn cs-btn2-gray cs-btn-default _h35">중복 확인</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">변경할 아이디를 입력해 주세요.</div>
+            </section>
+  
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onClick="lay_pop_close();lay_pop_open('#js__changeIDComplete3')">변경</button>
+          </div>
+        </div>
+
+        <div id="js__changeIDComplete3" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>아이디 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            아이디 변경이 완료되었습니다.<br>
+            기관 관리자가 변경된 아이디로 접속할 수 있도록<br>
+            ‘일회용 비밀번호 전송’을 해주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 일회용 비밀번호 전송 -->
+        <div id="js__sendPassword" class="laymodal width550" tabindex="0">
+          <div class="laymodal-header">
+            <h2>일회용 비밀번호 전송</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div class="modal-sec-title">
+              기관 관리자가 요청한 경우에만 ‘일회용 비밀번호’를 전송해주세요. <br>
+              아래 기관 관리자에게 초기화된 ‘일회용 비밀번호’를 전송하시겠습니까?
+            </div>
+
+            <div class="board-view-tb _noround">
+              <table>
+                <caption>아이디 정보</caption>
+                <thead>
+                  <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>휴대전화</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>test1234</td>
+                    <td>박경민</td>
+                    <td>010-2222-3333</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__sendPassword');lay_pop_open('#js__sendPasswordComplete')">전송</button>
+          </div>
+        </div>
+
+        <div id="js__sendPasswordComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>일회용 비밀번호 전송</h2>
+          </div>
+          <div class="laymodal-content tac">
+            ‘일회용 비밀번호 전송’이 완료 되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <!-- 사용자 삭제 -->
+        <div id="js_userDelete" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 삭제</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div class="modal-sec-title">
+              <p>
+                인가할 수 없는 정보로 가입된 기관 관리자는 삭제하실 수 있습니다.<br>
+                하기 기관 관리자를 삭제하시겠습니까?
+              </p>
+            </div>
+
+            <div class="board-view-tb _noround">
+              <table>
+                <caption>아이디 정보</caption>
+                <colgroup>
+                  <col class="width160">
+                  <col class="width80">
+                  <col>
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>아이디</th>
+                    <th>이름</th>
+                    <th>소속 기관</th>
+                    <th>소속 부서</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>aaaaaaaaa4</td>
+                    <td>박경민</td>
+                    <td>경기도 하남시</td>
+                    <td>도시계획과</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_userDelete');lay_pop_open('#js_userDeleteComplete')">삭제</button>
+          </div>
+        </div>
+
+        <div id="js_userDeleteComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            기관 관리자가 삭제되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 사용자 상태 변경 :: 승인대기상태 -->
+        <div id="js_stateChange" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 상태 변경</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              신청한 기관 관리자의 이름과 아이디가 공직자통합메일 계정과 동일한지 확인 후 상태를 변경해 주세요.
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 계정
+              </div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>아이디 정보</caption>
+                  <colgroup> 
+                    <col class="width160">
+                    <col class="width80">
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>아이디</th>
+                      <th>이름</th>
+                      <th>소속 기관</th>
+                      <th>소속 부서</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>aaaaaaaaa4</td>
+                      <td>박경민</td>
+                      <td>경기도 하남시</td>
+                      <td>도시계획과</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 처리
+              </div>
+              
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>상태 변경 처리</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>현재 상태</th>
+                      <td class="pcolor-red">승인 대기</td>
+                    </tr>
+                    <tr>
+                      <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" class="cs-radio" id="stateGReen">
+                        <label for="stateGReen"><span></span> 정상(사용 승인)</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>관리자 메모</th>  
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="관리자 메모" placeholder="메모가 필요하신 경우 입력해 주세요."></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>관리자 메모는 ‘기관 관리자’에게 노출되지 않습니다. (국토교통부 관리자만 확인 가능)</li>
+              </ul>
+              <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_stateChange');lay_pop_open('#js_stateChangeComlplete')">변경</button>
+          </div>
+        </div>
+
+
+        
+        <!-- 사용자 상태 변경 :: 정상 -->
+        <div id="js_stateChangeCase2" class="laymodal modal-alert width550" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 상태 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              ‘<b class="pcolor-red">정상</b>’ 상태의 기관 관리자 계정은 <br>
+              다른 상태(권한 철회, 탈퇴 처리)로 상태 변경이 불가합니다. 
+            </p>
+
+            <p>
+              ‘권한 승계’ 처리 시 전임자는 기관 사용자로 변경되고 <br>
+              권한을 승계 받은 ‘기관 관리자’가 <br>
+              해당 사용자(이전 기관 관리자)의 권한 철회 및 탈퇴 처리를 할 수 있습니다. 
+            </p>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        
+        <!-- 사용자 상태 변경 :: 접속 불가 -->
+        <div id="js_stateChangeCase3" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 상태 변경</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              정상(접속 불가 해제)로 상태를 변경하면 자동으로 일회용 비밀번호가 발급되고<br>
+              기관 관리자에게 ‘접속 불가 해제’ 안내 메시지가 발송됩니다. 
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 계정
+              </div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>아이디 정보</caption>
+                  <colgroup> 
+                    <col class="width160">
+                    <col class="width130">
+                    <col>
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>아이디</th>
+                      <th>이름</th>
+                      <th>소속 기관</th>
+                      <th>소속 부서</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>etst123</td>
+                      <td>박경민</td>
+                      <td>경기도 하남시</td>
+                      <td>도시계획과</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 처리
+              </div>
+              
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>상태 변경 처리</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>현재 상태</th>
+                      <td class="pcolor-red">접속 불가(비밀번호 5회 연속 오류)</td>
+                    </tr>
+                    <tr>
+                      <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" class="cs-radio" id="stateGReen">
+                        <label for="stateGReen"><span></span> 정상(접속 불가 해제)</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>관리자 메모</th>  
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="관리자 메모" placeholder="메모가 필요하신 경우 입력해 주세요."></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>관리자 메모는 ‘기관 관리자’에게 노출되지 않습니다. (국토교통부 관리자만 확인 가능)</li>
+              </ul>
+              <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_stateChangeCase3');lay_pop_open('#js_stateChangeComlplete2')">변경</button>
+          </div>
+        </div>
+        
+        <!-- 사용자 상태 변경 :: 완료 -->
+        <div id="js_stateChangeComlplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 상태 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            기관 관리자의 상태가 ‘<b class="pcolor-red">정상</b>’으로 변경되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 사용자 상태 변경 :: 접속불가에서 변경 완료 -->
+        <div id="js_stateChangeComlplete2" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 상태 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            기관 관리자의 상태가 ‘<b class="pcolor-red">정상</b>’으로 변경되고,<br>
+            ‘접속 불가 해제’ 안내 메시지가 발송되었습니다.  
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <!-- 정보 수정 -->
+        <div id="js_userModify" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 정보 수정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="modal-sec-title">
+                해당 기관 관리자의 정보 수정 내용을 입력해 주세요.
+              </div>
+              
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>사용자 정보 수정</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>수정 정보  <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" class="cs-radio" name="usermodify" id="usermodify1" checked>
+                        <label for="usermodify1"><span></span> 개인정보</label>
+                        <input type="radio" class="cs-radio" name="usermodify" id="usermodify2">
+                        <label for="usermodify2"><span></span> 소속정보</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>수정 내용 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="변경하신 내용을 입력해 주세요.&#13;&#10;(예. 휴대전화번호 변경, 메뉴 권한 그룹 변경)" title="수정 내용"></textarea>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>관리자 메모는 ‘기관 관리자’에게 노출되지 않습니다. (국토교통부 관리자만 확인 가능)</li>
+              </ul>
+              <div class="cs-alert">수정 정보 구분을 선택해 주세요.</div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_userModify');lay_pop_open('#js_userModifyComplete')">수정</button>
+          </div>
+        </div>
+
+        <div id="js_userModifyComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            기관 관리자 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 사용자 권한 승계 -->
+        <div id="js_authority" class="laymodal width1000" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 권한 승계</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              보직 변경, 소속 기관 변경, 퇴사 등의 사유로 <span class="pcolor-red">기관 관리자 권한</span>을 후임자에게 승계 처리를 할 수 있습니다.<br>
+              권한을 승계하면 기존 기관 관리자는 ‘기관 사용자'로 권한 유형이 변경됩니다.<br>
+              승계 완료 시 후임자에게 권한 승계 안내 메시지가 발송됩니다.
+
+            </section>
+            <section>
+              <div class="modal-sec-title">선임자 정보</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>선임자 정보</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col class="width120">
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>아이디</th>
+                      <th>이름</th>
+                      <th>소속 기관</th>
+                      <th>소속 부서</th>
+                      <th>상태</th>
+                    </tr>
+                    <tr>
+                      <td>sflskfjj1234</td>
+                      <td>박경민</td>
+                      <td>OOOO과</td>
+                      <td>도시·군관리계획 입안</td>
+                      <td>정상</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">후임자 선택(승인 대기, 권한 철회, 탈퇴 사용자 선택 불가)</div>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>후임자 선택</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>부서 선택 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <select class="cs-input width100p" title="부서 선택">
+                          <option>부서 선택</option>
+                          <option>도시계획과</option>
+                        </select>
+                      </td>
+                      <th>사용자 선택 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="frm-insert-t1">
+                          <div>
+                            <select class="cs-input width100p" title="사용자 선택">
+                              <option>이름 선택</option>
+                              <option>도시계획과</option>
+                            </select>
+                          </div>
+                          <button class="cs-btn2-gray cs-btn-default __col_btn">상태 조회</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">부서를 선택해 주세요.</div>
+              <div class="cs-alert">사용자를 선택해 주세요.</div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">후임자 정보</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>선임자 정보</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col class="width120">
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th>아이디</th>
+                      <th>이름</th>
+                      <th>소속 부서</th>
+                      <th>메뉴 권한 그룹</th>
+                      <th>상태</th>
+                    </tr>
+                    <tr>
+                      <td>sflskfjj1234</td>
+                      <td>박경민</td>
+                      <td>OOOO과</td>
+                      <td>도시·군관리계획 입안</td>
+                      <td>정상</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">후임자를 선택해 주세요</div>
+              <div class="cs-alert">후임자의 상태를 조회해 주세요. </div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_authority');lay_pop_open('#js_authorityComplete')">승계</button>
+          </div>
+        </div>
+
+        <div id="js_authorityComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>기관 관리자 권한 승계</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              기관 관리자 권한이 승계되고,<br>
+              후임자에게 권한 승계 완료 안내 메시지가 발송되었습니다.
+            </p>
+
+            <p>
+              기관 관리자 리스트 페이지에서<br>
+              승계 받은 기관 관리자가 정상적으로 조회되는지 확인해 주세요.
+            </p>
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+
+        <!-- 그룹선택 -->
+        @@include('../include/modals.html',{'items': 7})
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

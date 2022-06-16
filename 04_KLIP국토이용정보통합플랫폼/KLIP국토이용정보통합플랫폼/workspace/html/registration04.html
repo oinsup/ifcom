@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '입안 제안'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 0})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        입안 제안
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li><span>1</span> <b>사전협의 확인</b></li>
+              <li class="active"><span>2</span> <b>개인정보 수집 동의</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>3. 제안서 등록</li>
+              <li>4. 제안 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="./registration05.html">
+            <div class="join-cont join-cont-step2">
+              <div class="agg-header">
+                <strong class="join-title">개인정보 수집 및 이용에 대한 동의(필수)</strong>
+                <input type="checkbox" id="agreement" class="cs-checkbox"><label for="agreement"><span></span> 동의</label>
+              </div>
+  
+              <div class="lo-box">
+                1. 수집하는 개인정보의 항목<br>
+                KLIP에서는 정보주체의 동의에 의해서만 개인정보를 수집·보유합니다. <br>
+                  •필수 항목 : 이름, 기관정보, 부서정보, 부서 연락처, 이메일<br><br>
+                　
+                2. 개인정보의 수집 및 이용 목적<br>
+                KLIP에서는 다음의 목적을 위해 개인정보를 수집 및 이용합니다. <br>
+                수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집 목적이 변경될 경우 <br>
+                사전에 알리고 동의를 받을 예정입니다.<br>
+                　•수집 목적 : 입안 제안 시 제안자 정보 확인을 위해 수집<br>
+                  •이용 목적 : 입안 제안서 검토 후 결과 통보<br>
+                　
+                3. 개인정보의 파기<br>
+                KLIP은 원칙적으로 개인정보 보존기관이 경과하거나, 처리목적이 달성된 경우에는 지체 없이 <br>
+                해당 개인정보를 파기합니다.<br>
+                다만, 다른 법령에 따라 보존하여야 하는 경우에는 그러하지 않을 수 있습니다.<br>
+                  •수집근거 : 정보제공 주체의 동의<br>
+                  •보존기간 : ?????????<br>
+
+                4. 개인정보 수집 동의 거부의 권리<br>
+                이용자는 KLIP에서 수집하는 개인정보에 대해 동의를 거부할 권리가 있으며, <br>
+                동의 거부 시에는 입안 제안이 제한됩니다.<br>
+
+              </div>
+  
+              <div class="__btn-set cs-btn-set">
+                <a href="@@htmlRoot/registration01.html" class="cs-btn-line">취소</a>
+                <button type="submit" class="cs-btn">다음</button>
+              </div>
+  
+            </div>
+          </form>
+          <!--// join-cont -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

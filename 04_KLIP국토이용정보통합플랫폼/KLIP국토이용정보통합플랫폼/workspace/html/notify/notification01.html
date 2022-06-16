@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li>고시</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>고시</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- <div class="cont-snb">
+        <a href="notification01.html" class="active">도시·군관리계획</a>
+        <a href="notification11.html">도시·군기본계획</a>
+        <a href="notification21.html">광역도시계획</a>
+        <a href="notification31.html">의제</a>
+      </div> -->
+      <!-- 22.01.14 수정 -->
+      <div class="cont-snb">
+        <a href="notification01.html" class="active">국토계획법</a>
+        <a href="notification31.html">다른 법률</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <!-- 22.01.14 삭제 -->
+        <!-- <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>
+              도시·군관리계획 계획을 조회하실 수 있습니다.</li>
+              <li>
+                본 페이지에서 제공되는 고시는 <span class="underline">입안 관리 &gt; 도시·군관리계획 입안 관리</span>에서 입안된 내역과 UPIS 표준시스템에서 고시된 내역만 조회 됩니다. 
+              </li>
+            
+          </ul>
+        </div> -->
+
+        <section style="display: none;">
+          <h3 class="cont-hedding1">
+            2020년 고시 현황
+            <div class="__hedding-btns">
+              <button type="button" class="btn-arr-left"></button><button type="button" class="btn-arr-right"></button>
+            </div>
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _colorblue _thead-h30">
+            <table>
+              <caption>2020년 고시 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="6">광역시</th>
+                  <th scope="col" colspan="8">도</th>
+                  <th scope="col" colspan="2">특별자치시·도</th>
+                  <th scope="col" rowspan="2">합계</th>
+                </tr>
+                <tr>
+                  <th scope="col">광주</th>
+                  <th scope="col">대구</th>
+                  <th scope="col">대전</th>
+                  <th scope="col">부산</th>
+                  <th scope="col">울산</th>
+                  <th scope="col">인천</th>
+                  <th scope="col">경기</th>
+                  <th scope="col">강원</th>
+                  <th scope="col">경남</th>
+                  <th scope="col">경북</th>
+                  <th scope="col">전남</th>
+                  <th scope="col">전북</th>
+                  <th scope="col">충남</th>
+                  <th scope="col">충북</th>
+                  <th scope="col">세종</th>
+                  <th scope="col">제주</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>30</td>
+                  <td>-</td>
+                  <td>63</td>
+                  <td>65</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>55</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>183</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">고시 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option>광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                    <option>시·군·구 선택</option>
+                    <option>시,군구구구구구구</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">고시일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="고시 번호, 고시 제목 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>고시 번호 검색 시 ‘연도-일련번호’만 입력해 주세요. (‘제’와 ‘호‘ 제외, 예. 2020-100)</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">결정</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">실시</a></li>
+              <li><a href="#">결정+승인</a></li>
+              <li><a href="#">결정+실시</a></li>
+              <li><a href="#">결정+승인+실시</a></li>
+              <li><a href="#">승인+실시</a></li>
+              <li><a href="#">실효</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">고시일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">고시 번호</a>
+            <a href="#">고시 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>도시·군기본계획 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col class="width130">
+                <col class="width90">
+                <col>
+                <col class="width95">
+                <col class="width95">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">고시일</th>
+                  <th scope="col">고시 기관</th>
+                  <th scope="col">고시 번호</th>
+                  <th scope="col">고시 유형</th>
+                  <th scope="col">고시 제목</th>
+                  <th scope="col">고시문</th>
+                  <th scope="col">도면</th>
+                  <th scope="col">시행지침</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>31</td>
+                  <td>2020-10-15</td>
+                  <td>경기도</td>
+                  <td>제2020-1872호</td>
+                  <td>결정</td>
+                  <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                  <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>2020-10-15</td>
+                  <td>경기도</td>
+                  <td>제2020-1872호</td>
+                  <td>결정</td>
+                  <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                  <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                  <!-- 1229 :: 버튼명 변경 미리보기 > 지침 보기 -->
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">지침 보기</a></td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    <!-- 1229 :: 텍스트수정 -->
+                    등록된 도시·군관리계획 고시가 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>고시 제목을 클릭하시면 등록된 고시의 상세 정보 확인이 가능합니다.</li>
+          <li>‘시행지침’은 지구단위계획 고시 중 지침 파일이 등록된 경우에만 노출됩니다.</li>
+        </ul>
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

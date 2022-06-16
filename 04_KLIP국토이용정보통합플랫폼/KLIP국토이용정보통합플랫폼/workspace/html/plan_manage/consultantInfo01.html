@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 구성 관리 </li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시계획위원회 구성 관리 </h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="councilWorkers01.html">시·군·구도시계획위원회</a>
+        <a href="councilWorkers11.html">시·도도시계획위원회</a>
+        <a href="consultantInfo01.html" class="active">위원 위촉 정보</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>‘국토계획법 제113조(지방도시계획위원회)’에 의거하여 위원을 위촉한 경우 지방도시계획위원회 위원의 위촉 정보를 등록해 주세요.</li>
+            <li>‘국토계획법 제113조의3(위원의 제척·회피)’에 의거하여 위원의 위촉 상태 변경이 필요한 경우에 변경해 주세요.</li>
+            <li>위촉 정보를 등록한 경우에만 도시계획위원회 구성원으로 추가 가능하고, 해당 위원이  온라인 자료 확인 및 온라인 전자심의가 가능합니다.</li>
+          </ul>
+
+          <a href="consultantInfo02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">
+            <span class="pcolor-red">경기도 하남시</span> 도시계획위원회 위원 현황
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _colorblue _layoutauto _thead-h30">
+            <table>
+              <caption>박경민님의 입안 계획 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col">지방의회 의원</th>
+                  <th scope="col">공무원(내부)</th>
+                  <th scope="col">공무원(외부)</th>
+                  <th scope="col">전문가</th>
+                  <th scope="col">전체</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>20</td>
+                  </tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+              <li>위 현황 표의 위촉 위원수는 현재 제척, 해촉되지 않은 정상 상태의 위원수를 표기합니다. (위촉기간이 종료된 해촉 위원은 현황에 포함되지 않습니다.)</li>
+              <li>공무원(외부)은 &lt;국토이용정보통합플랫폼&gt; 비 사용 공무원을 의미하며, 해당 위원은 토지e음 대민사이트에서 &lt;온라인 전자 심의&gt;가 가능합니다. </li>
+          </ul>
+        </section>
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">소속 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option>광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                    <option>시·군·구 선택</option>
+                    <option>시,군구구구구구구</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">위촉일</strong>
+                <div class="cs-datepicker-set">
+                  <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                  <div>~</div>
+                  <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="이름, 토지e음 아이디 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">위촉일</a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+            <a href="#">상태</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">위촉일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo03.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>위촉(정상)</td>
+                </tr>
+                <tr>
+                  <td colspan="10">귀 기관에 위촉된 위원이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="10">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해당 위원의 상세 정보 확인 및 상태 관리가 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 위촉(미동의) -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">위촉일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">위촉일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo03.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>위촉(미동의)</td>
+                </tr>
+                <tr>
+                  <td colspan="10">온라인 심의 자료 확인, 온라인 전자심의 동의 여부에 미동의한 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해당 위원의 상세 정보 확인 및 상태 관리가 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+
+        <!-- 위촉(정상) -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li class="active"><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">위촉일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">위촉일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo03.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>위촉(정상)</td>
+                </tr>
+                <tr>
+                  <td colspan="10">귀 기관에 위촉된 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해당 위원의 상세 정보 확인 및 상태 변경(제척, 해촉) 처리가 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 위촉(접속 불가) -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li class="active"><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">접속 불가일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">접속 불가일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo03.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>위촉(접속 불가)</td>
+                </tr>
+                <tr>
+                  <td colspan="10">접속 불가(로그인 시 비밀번호 5회 연속 오류) 상태의 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해당 위원의 상세 정보 확인 및 상태 변경(토지e음 대민사이트 접속 불가 해제, 제척, 해촉) 처리가 가능합니다. 단, 공무원(내부)은</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 위촉(휴면) -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li class="active"><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">최종 접속일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">최종 접속일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo03.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>위촉(휴면)</td>
+                </tr>
+                <tr>
+                  <td colspan="10">휴면(6개월 이상 미접속) 상태의 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해당 위원의 상세 정보 확인 및 상태 변경(토지e음 대민사이트 휴면 해제, 제척, 해촉) 처리가 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 제척 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li class="active"><a href="#">제척</a></li>
+              <li><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">제척일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">제척일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo04.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>제척</td>
+                </tr>
+                <tr>
+                  <td colspan="10">제척된 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 제척 위원의 상세 정보 확인이 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 해촉 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">위촉(미동의)</a></li>
+              <li><a href="#">위촉(정상)</a></li>
+              <li><a href="#">위촉(접속 불가)</a></li>
+              <li><a href="#">위촉(휴면)</a></li>
+              <li><a href="#">제척</a></li>
+              <li class="active"><a href="#">해촉</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">해촉일 <i class="sort-desc"></i></a>
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>위원 위촉 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col class="width150">
+                <col>
+                <col class="width90">
+                <col class="width130">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">해촉일</th>
+                  <th scope="col">구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">토지e음 아이디</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-12-15</td>
+                  <td>2021-01-01</td>
+                  <td>공무원</td>
+                  <td><a href="consultantInfo04.html">홍길동</a></td>
+                  <td>-</td>
+                  <td>경기도 하남시</td>
+                  <td>주무관</td>
+                  <td>010-1111-2222</td>
+                  <td>해촉</td>
+                </tr>
+                <tr>
+                  <td colspan="10">해촉된 위원이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>이름을 클릭하시면 해촉 위원의 상세 정보 확인이 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+        
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

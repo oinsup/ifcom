@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" viewBox="0 0 39 48">
+    <defs>
+        <style>
+            .cls-2{fill:#000b3d}
+        </style>
+    </defs>
+    <g id="그룹_5329" data-name="그룹 5329" transform="translate(-25 -16)">
+        <text id="Q" transform="translate(25 53)" style="font-size:44px;font-family:NanumSquare_acEB,NanumSquare_ac;fill:#000b3d"><tspan x="0" y="0">Q</tspan></text>
+        <g id="그룹_3470" data-name="그룹 3470" transform="translate(52 19)">
+            <g id="그룹_3465" data-name="그룹 3465" transform="translate(5)">
+                <path id="사각형_2856" data-name="사각형 2856" class="cls-2" d="M0 0h2v4H0z"/>
+            </g>
+            <g id="그룹_3466" data-name="그룹 3466" transform="translate(5 8)">
+                <path id="사각형_2857" data-name="사각형 2857" class="cls-2" d="M0 0h2v4H0z"/>
+            </g>
+            <g id="그룹_3467" data-name="그룹 3467" transform="translate(0 5)">
+                <path id="사각형_2858" data-name="사각형 2858" class="cls-2" d="M0 0h4v2H0z"/>
+            </g>
+            <g id="그룹_3468" data-name="그룹 3468" transform="translate(8 5)">
+                <path id="사각형_2859" data-name="사각형 2859" class="cls-2" d="M0 0h4v2H0z"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import './include/vars';
+
+html,body{margin:0;padding:0;height: 100%;overflow: hidden;}
+
+body {margin:0;padding:0;}
+
+body
+{
+  font:16px/1.5 NanumSquare, sans-serif;font-weight: 400;color: #2a2a2a;
+
+  @media(max-width: $mediaMobile)
+  {
+    font-size:14px;
+  }
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+table{border-collapse:collapse; vertical-align:top;}
+img{border:0;}
+
+// input, select, button{font-family:'Noto Sans KR', NanumGothic, "나눔고딕", Dotum, "돋움", sans-serif;font-weight: 400;}
+
+input,select, button{font-size: 16px;}
+
+// a, button, submit{transition: .3s ease-out}
+button{font-size:inherit;}
+
+a
+{
+  text-decoration:none;color:#000;border:none;margin:0;padding:0;
+  &:hover{font-weight: bold;}
+}
+
+fieldset{border:none;margin:0; padding:0;}
+button{cursor:pointer}
+
+// td *, div *, span *, p * {  vertical-align: top;}
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+// ::selection {
+//   background: #e4780b;
+//   color: red;
+//   text-shadow: none;
+// }
+
+
+@media(max-width: $mediaMobile)
+{
+  body{letter-spacing: -.03em;}
+  button{outline:none;-ms-outline:none;}
+}
+
+[tabindex='-1']{outline:none;}
+
+.pop-header
+{
+    position: fixed;top: 0;left: 0;width: 100%;
+    padding:20px 30px;height:70px;box-sizing: border-box;
+    background: #0c76c0;
+    border-bottom:2px solid #0b5f9a;
+    h2{margin: 0;padding: 0;color:#fff;font-weight:100;font-size: 20px;}
+}
+.laypop_close
+{
+    width: 34px;height:34px;background:none;font-size:0;position: absolute;top:16px;right:25px;margin: 0;padding: 0;cursor: pointer;
+    border:0;
+    &::after, &::before{content:'';position: absolute;background:#fff;width:100%;top:50%;height:1px;left:50%;margin-left: -50%;transition:all .3s;}
+    &::after{transform: rotate(-45deg)}
+    &::before{transform: rotate(45deg)}
+
+    &:hover
+    {
+        &::after{transform: rotate(-135deg);}
+        &::before{transform: rotate(-45deg);}
+    }
+}
+
+iframe{width: 100%;height: calc(100% - 70px);}
+.pop-iframe{padding-top: 70px;height:100%;}

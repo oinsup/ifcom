@@ -1,0 +1,15 @@
+.js__conttoggle
+{
+  display: block;
+  &.active{font-weight: bold;}
+}
+.js__conttoggle-target
+{
+  display: none;opacity:0;transition:all .5s;
+}
+.js__conttoggle-target.active{display:table-cell;opacity:1;animation:fadein 1s;}
+
+@keyframes fadein{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}

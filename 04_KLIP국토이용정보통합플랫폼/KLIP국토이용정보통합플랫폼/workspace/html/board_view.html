@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html')
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html')
+
+    <div class="container">
+      <div class="board-view">
+        <!-- 게시판내용 -->
+        <div class="board-list-text _fixed _allBox">
+          <table>
+            <colgroup>
+              <col class="width130">
+              <col>
+              <col class="width130">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">등록 기관</th>
+                <td>경기도 하남시청</td>
+                <th scope="row">소속 부서</th>
+                <td>도시정책과</td>
+              </tr>
+              <tr>
+                <th rowspan="2" scope="row">공개 구분 <i class="icon-required">필수입력</i></th>
+                <td colspan="3">
+                  <input type="radio" name="public" class="cs-radio" id="publicAll">
+                  <label for="publicAll"><span></span> 전체 공개 (KLIP의 모든 사용자에게 공개)</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="radio" name="public" class="cs-radio" id="publicSelect">
+                  <label for="publicSelect"><span></span> 지정 공개 (1명 또는 나의 소속 그룹에게 공개)</label>
+                </td>
+                <th scope="row">지정 공개 대상</th>
+                <td class="frm-opt-list">
+                  <input type="radio" name="publicselect" class="cs-radio" id="selectGroup">
+                  <label for="selectGroup"><span></span> 소속 그룹</label>
+
+                  <input type="radio" name="publicselect" class="cs-radio" id="selectPersonal">
+                  <label for="selectPersonal"><span></span> 개별 사용자 ()</label>
+
+                  <button jq-action="modal" jq-target="#modal__alert">사용자찾기</button>
+
+                  <script>
+                    // lay_pop_open('#modal__alert');
+                  </script>
+
+                  <div id="modal__alert" class="laymodal width800" tabindex="0">
+                    <div class="laymodal-header">
+                      <h2>사용자찾기</h2>
+                      <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+                    </div>
+                    <div class="laymodal-content">
+                      <!-- 검색 -->
+                      <div>
+                        <!-- 초성선택 -->
+                        초성선택
+                        <button>ㄱ</button>
+                        <button>ㄴ</button>
+                        <button>ㄷ</button>
+                        <button>ㄹ</button>
+                        <button>ㅁ</button>
+                        <button>ㅂ</button>
+                        <button>ㅅ</button>
+                        <button>ㅇ</button>
+                        <button>ㅈ</button>
+                        <button>ㅊ</button>
+                        <button>ㅋ</button>
+                        <button>ㅌ</button>
+                        <button>ㅍ</button>
+                        <button>ㅎ</button>
+  
+                        <!-- 이름 검색 -->
+                        <input type="text" class="cs-input" placeholder="2글자 이상 입력 (공백없이)"> <button>검색</button> <button>초기화</button>
+                      </div>
+
+                      <!-- 검색 결과 리스트 -->
+                      <div class="board-list-text _fixed" style="height:300px;overflow-y:auto;">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th scope="col">선택</th>
+                              <th scope="col">이름</th>
+                              <th scope="col">기관명</th>
+                              <th scope="col">부서명</th>
+                              <th scope="col">담당 업무</th>
+                              <th scope="col">부서 전화</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @@for(var i = 0; i < 20; i++){
+                            <tr>
+                              <td>
+                                <input type="radio" class="cs-radio" name="users" id="userSelect${ i }">
+                                <label for="userSelect${ i }"><span></span></label>
+                              </td>
+                              <td>김길동</td>
+                              <td>경기도 하남시</td>
+                              <td>부서명</td>
+                              <td>담당업무</td>
+                              <td>031-790-6114</td>
+                            </tr>
+                            }
+                          </tbody>
+                        </table>
+                      </div>
+
+                      <div>
+                        자료를 공유할 사용자를 선택해 주세요. 
+                      </div>
+
+                      <div>
+                        <button class="cs-btn">취소</button>
+                        <button class="cs-btn" jq-action="closeModal">확인</button>
+                      </div>
+
+
+
+                    </div> <!-- //laymodal-content -->
+
+                    <!-- <div class="laymodal-footer">
+                      <button type="button" jq-action="closeModal">확인</button>
+                    </div> -->
+                  </div>
+
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">자료 제목 <i class="icon-required">필수입력</i></th>
+                <td colspan="3">
+                  <input type="text" class="cs-input width100p js__textCounter" data-maxbyte="50">
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">내용 입력 <i class="icon-required">필수입력</i></th>
+                <td colspan="3">
+                  <textarea type="text" class="cs-input width100p js__textCounter" data-maxbyte="2000"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">노출 여부</th>
+                <td class="frm-opt-list">
+                  <input type="radio" name="private" id="privateY" class="cs-radio"><label id="privateY"><span></span> 노출</label>
+                  <input type="radio" name="private" id="privateN" class="cs-radio"><label id="privateN"><span></span> 비노출</label>
+                </td>
+                <th scope="row">노출 기간</th>
+                <td>
+                  <div class="cs-datepicker-set" data-mindate="" data-maxdate="">
+                    <div class="cs-datepicker">
+                      <input type="text" class="cs-input js__datepicker js__date-from" value="2020-08-02" title="시작날짜 (입력예시 : 2020-01-01)">
+                      <button type="button" class="modal-calendar" tabindex="-1">달력열기</button>
+                    </div>
+                    <div>~</div>
+                    <div class="cs-datepicker">
+                      <input type="text" class="cs-input js__datepicker js__date-to" value="2099-12-31" title="시작날짜 (입력예시 : 2020-01-01)">
+                      <button type="button" class="modal-calendar" tabindex="-1">달력열기</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  썸네일 이미지<br>
+                  ???px * ???px<br>
+                  jpg만 가능
+                </th>
+                <td colspan="3">
+                  <ul>
+                    <li>
+                      이거 삭제기능이 없네용!<br>
+                      <img src="@@imageRoot/sample/a4.jpg" alt="" style="width:100px;">
+                    </li>
+                  </ul>
+                  <button class="cs-btn">파일선택</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  자료 파일 <i class="icon-required">필수입력</i><br>
+                  (최대 10개)
+                </th>
+                <td colspan="3">
+                  <ul>
+                    @@for(var i = 0; i < 10; i++){
+                    <li>
+                      등록된 파일명.pdf 
+                      <button class="cs-btn">파일 삭제</button>
+                      <button class="cs-btn">다운로드</button>
+                    </li>
+                    }
+                  </ul>
+                  <button class="cs-btn">파일선택</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--// 게시판내용 -->
+
+        <!--  -->
+        <div class="board-btns">
+          <a href="#">목록</a>
+          <a href="#">삭제</a>
+          <a href="#">수정</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg id="ico-dt-09" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="45" viewBox="0 0 41 45">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_589" data-name="사각형 589" width="41" height="45" fill="none" stroke="#1740c2" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_1025" data-name="그룹 1025" clip-path="url(#clip-path)">
+    <path id="패스_918" data-name="패스 918" d="M3,33h7V14" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_919" data-name="패스 919" d="M19,12H1V44H40V19" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_920" data-name="패스 920" d="M31,26c2.261-7.53,9-9.092,9-16a9.272,9.272,0,0,0-9-9,9.272,9.272,0,0,0-9,9c0,6.908,6.738,8.47,9,16" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_921" data-name="패스 921" d="M31.012,7A2.988,2.988,0,1,1,28,9.988,3,3,0,0,1,31.012,7Z" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_922" data-name="패스 922" d="M15,14V27h7.994L27,31H38" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_923" data-name="패스 923" d="M27,42V37H25l-4-4H15v9" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_924" data-name="패스 924" d="M38,37H33v5" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_925" data-name="패스 925" d="M10,42V38H3" fill="none" stroke="#1740c2" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

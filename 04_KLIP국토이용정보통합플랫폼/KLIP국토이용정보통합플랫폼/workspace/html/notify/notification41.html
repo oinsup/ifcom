@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '공고', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li>공고</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>공고</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="#">국토계획법 도시·군관리계획</a>
+        <a href="#">국토계획법 도시·군기본계획</a>
+        <a href="#">국토계획법 광역도시계획</a>
+        <a href="notification41.html" class="active">다른 법률</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        
+        <form action="">
+
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts type02">
+
+              <div class="__row_date">
+                <strong class="__tit">공고일</strong>
+                <div class="cs-input-tel">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="공고 기관, 공고 번호, 공고 제목 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>- 공고 번호 검색 시 ‘연도-일련번호’만 입력해 주세요. (‘제’와 ‘호‘ 제외, 예. 2020-100)</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <!-- <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">결정</a></li>
+              <li><a href="#">변경</a></li>
+            </ul>
+          </nav> -->
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">공고일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">공고 번호</a>
+            <a href="#">공고 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>도시·군기본계획 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col class="width130">
+                <col class="width595">
+                <col class="width100">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">공고일</th>
+                  <th scope="col">공고 기관</th>
+                  <th scope="col">공고 번호</th>
+                  <th scope="col">공고 제목</th>
+                  <th scope="col">열람 종료일</th>
+                  <th scope="col">공고문</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시</td>
+                  <td>제2020-XXXX호</td>
+                  <td class="tal" ><a href="notification42.html" class="txtEp" style="display:block;">경기도 하남시 농업진흥지역을 지정에 따른 의견 청취 공고 경기도 하남시 농업진흥지역을 지정에 따른 의견 청취 공고</a></td>
+                  <td>2020-11-14</td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="7">
+                    등록된 공고가 없습니다.                   
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="7">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            공고 제목을 클릭하시면 등록된 공고의 상세 정보 확인이 가능합니다. 
+          </li>
+        </ul>
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

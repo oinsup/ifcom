@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30.08" viewBox="0 0 30 30.08">
+  <g id="close_icon" transform="translate(-1580 -458)">
+    <rect id="area" width="30" height="30" transform="translate(1580 458)" fill="none"/>
+    <path id="close-line" d="M25.145,23,37.58,10.567a1.5,1.5,0,0,0-2.115-2.115L23.03,20.887,10.595,8.437a1.506,1.506,0,0,0-2.13,2.13L20.915,23,8.465,35.437a1.5,1.5,0,1,0,2.115,2.115L23.03,25.117,35.465,37.552a1.5,1.5,0,0,0,2.115-2.115Z" transform="translate(1572.06 450.004)"/>
+  </g>
+</svg>

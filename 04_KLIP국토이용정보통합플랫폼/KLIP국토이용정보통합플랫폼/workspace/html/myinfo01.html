@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html',{'webTitle': '사용자 정보 수정', 'webPath': '.'})
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html',{'webPath': '.'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li>사용자 정보 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>사용자 정보 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+        <section>
+          <div class="cs-box _alert-icon">
+            <ul class="cs-list-dot">
+              <li>정보 수정 시 본인 확인을 위해 현재 비밀번호는 꼭 입력해 주세요.</li>
+              <li class="pcolor-red">안전한 개인정보 보호를 위해 3개월에 1번 비밀번호를 변경해 주세요.</li>
+              <li>소속 기관/부서/메뉴 권한 그룹의 변경 및 보직 변경 등으로 인한 권한 승계는 직접 처리가 불가능하오니, 담당 관리자에게 요청해 주세요.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">소속정보</h3>
+          <div class="board-view-tb _noround _tal">
+            <table>
+              <caption>소속정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">권한 유형</th>
+                  <td>기관 사용자</td>
+                  <th scope="row">메뉴 권한 그룹</th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <div>
+                        그룹명이 보입니다. 
+                      </div>
+                      <a href="#js__groupCheck" jq-action="modal" class="cs-btn2-gray cs-btn-default __col_btn">권한 확인</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">소속 기관</th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">소속 부서</th>
+                  <td> 도시계획과</td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="position">직위</label></th>
+                  <td><input type="text" class="cs-input width100p" id="position" placeholder="직위 입력"></td>
+                  <th scope="row"><label for="work">담당 업무</label></th>
+                  <td><input type="text" class="cs-input width100p" id="work" placeholder="담당 업무 입력"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">계정정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _noround _tal">
+            <table>
+              <caption>계정정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">아이디</th>
+                  <td>test1234</td>
+                  <th scope="row"><label for="cupassword">현재 비밀번호 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <input type="password" class="cs-input width100p" id="cupassword" placeholder="＊＊＊＊＊＊＊＊＊">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="newpassword">신규 비밀번호 <i class="icon-required">필수 입력</i></label></th>
+                  <td><input type="password" class="cs-input width100p" id="newpassword" placeholder="영문소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                  <th scope="row"><label for="newpassword2">신규 비밀번호 확인 <i class="icon-required">필수 입력</i></label></th>
+                  <td><input type="password" class="cs-input width100p" id="newpassword2" placeholder="영문소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>
+              신규 비밀번호와 신규 비밀번호 확인은 비밀번호를 변경하시는 경우에만 입력하시면 됩니다. 
+              (비밀번호에 사용하실 수 있는 특수기호는 ! @ # $ % ^ * + = - 만 가능합니다.)
+            </li>
+          </ul>
+
+        </section>
+
+
+        <section>
+          <h3 class="cont-hedding1">개인정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _noround _tal">
+            <table>
+              <caption>개인정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름</th>
+                  <td>홍길동</td>
+                  <th scope="row"><label for="tel">휴대전화 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <!-- 휴대전화 인증 -->
+                    <div class="cs-gride sms-confirm">
+                        <input type="text" id="uerHp" class="cs-input cs-gride-col8">
+                        <button type="button" class="cs-btn2-gray cs-gride-col4 cs-btn-default" jq-action="modal" jq-target="#js__smssend">인증번호 발송</button>
+                        <!-- <span class="cs-btn2-gray-line cs-btn-default cs-gride-col4 __col_btn">확인완료</span> -->
+
+                      <div style="display: block;">
+                        <!-- 인증번호 발송 누른다음  -->
+                        <input type="text" id="uerHp" readonly="" class="cs-input cs-gride-col8 _disabled" value="010-1234-1234">
+                        <button type="button" class="cs-btn2-gray cs-gride-col4">재발송</button>
+  
+                        <div class="cs-gride-col8">
+                          <div class="cs-input-sms width100p block">
+                            <input type="text" title="인증번호">
+                            <div>남은 시간 <span>02:00</span> </div>
+                          </div>
+                        </div>
+                        <button class="cs-btn2-gray cs-gride-col4">확인</button>
+                      </div>
+
+                    </div>
+                    <!--// 휴대전화 인증 -->
+                    
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">공직자통합메일</th>
+                  <td>test1234@korea.kr</td>
+                  <th scope="row">부서 연락처 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-input-tel">
+                      <select class="cs-input" title="지역번호 선택">
+                        <option>지역번호 선택</option>
+                        <option>02</option>
+                        <option>032</option>
+                      </select>
+                      <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                      <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                      <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="onnaraID">온-나라시스템 ID</label></th>
+                  <td colspan="3">
+                    <div class="frm-insert-t5 width50p">
+                      <input type="text" id="onnaraID" class="cs-input" placeholder="아이디 입력">
+                      <!--
+                        0112 :: 삭제
+                         <button type="button" class="cs-btn2-gray-line cs-btn-default">확인 방법</button> -->
+                      <button type="button" class="cs-btn2-gray cs-btn-default">중복 확인</button>
+                    </div>
+                  </td>
+                  <!--
+                    0112 :: 삭제
+                     <th scope="row"><label for="swID">새올행정시스템 ID</label></th>
+                  <td>
+                    <div class="frm-insert-t5">
+                      <input type="text" id="swID" class="cs-input">
+                      <button type="button" class="cs-btn2-gray-line cs-btn-default">확인 방법</button>
+                      <button type="button" class="cs-btn2-gray cs-btn-default">중복 확인</button>
+                    </div>
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <!-- 0112 :: 텍스트축라 -->
+            <li>휴대전화 번호가 변경된 경우 변경된 번호를 입력하신 후 인증해 주세요.</li>
+            <li>온-나라 문서ID는 전자결재 요청 시 필요하며, 결재 업무를 진행하지 않는 사용자는 입력하실 필요가 없습니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="index.html" class="cs-btn-line">취소</a>
+          <a href="myinfo02.html" class="cs-btn">탈퇴</a>
+          <!-- 201203 :: 버튼추가 -->
+          <a href="#js__onnara" jq-action="modal" class="cs-btn-line">권한 변경/승계 요청</a>
+          <a href="#js__onnara" jq-action="modal" class="cs-btn">권한 승계 요청</a>
+          <a href="#js__alert" jq-action="modal" class="cs-btn">수정</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용자 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            사용자 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="index.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('./include/modals.html',{'items': 9})
+
+        <div id="js__smssend" class="laymodal modal-alert" tabindex="0">
+          <div class="laymodal-header">
+            <h2>인증번호 발송</h2>
+          </div>
+          <div class="laymodal-content tac">
+            인증번호가 재발송되었습니다. <br>
+            2분 이내 입력해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        @@include('./include/modals.html',{'items': 17})
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

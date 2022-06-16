@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="커뮤니티">커뮤니티</a>
+                            </li>
+                            <li>
+                                <a href="#" title="News">News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">NEWS</span></h1>
+                    </div>
+                    <!--//titArea-->
+                    <!--boardArea-->
+                    <div class="boardArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="board">
+                            <div class="head">
+                                <strong class="tit"><span class="category">본사이전</span>EGIS 본사 이전 안내</strong>
+                                <span class="date">2022-02-20</span>
+                            </div>
+                            <div class="desc">
+                                <p>본문 내용이 노출됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//boardArea-->
+                    <div class="flex sb ac mt60">
+                        <a href="#" title="이전글" class="btnBoard prev">이전글</a>
+                        <a href="#" title="목록" class="btnBoardList"><span>목록</span></a>
+                        <a href="#" title="다음글" class="btnBoard next">다음글</a>
+                    </div>
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>업무 참조 자료 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>업무 참조 자료 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <section>
+          <!-- <h3 class="cont-hedding1">도시계획위원회 개요</h3> -->
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>업무 참조 자료 등록</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록 기관 <i class="icon-required">필수 입력</i></th>
+                  <td>경기도 하남시청</td>
+                  <th scope="row">소속 부서</th>
+                  <td>도시정책과</td>
+                </tr>
+                <tr>
+                  <th scope="row">공개 구분 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-gride">
+                      <div class="cs-gride-col6">
+                        <input type="radio" class="cs-radio" name="public" id="public1"><label for="public1"><span></span> 전체 공개(국토이용정보통합플랫폼 전체 사용자)</label>
+                      </div>
+                      <div class="cs-gride-col6">
+                        <input type="radio" class="cs-radio" name="public" id="public2"><label for="public2"><span></span> 지정 공개(1명 또는 소속 기관의 본인이 속한 메뉴 권한 그룹 사용자)</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">대상 선택 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                  <div class="cs-gride">
+                    <div class="cs-gride-col6 frm-insert-t1">
+                        <div>
+                          <input type="radio" class="cs-radio" name="targetselect" id="targetselect1"><label for="targetselect1"><span></span> 지정 사용자(경기도/무슨무슨과 박경민)</label>
+                        </div>
+                        <a href="#js__userfinder" jq-action="modal" class="cs-btn2-gray cs-btn-default">사용자 찾기</a>
+                    </div>
+                    <div class="cs-gride-col6 frm-insert-t1">
+                      <div>
+                        <input type="radio" class="cs-radio" name="targetselect" id="targetselect2"><label for="targetselect2"><span></span> 메뉴 권한 그룹(그룸명 : <b class="pcolor-red">도시·군관리계획 입안 그룹</b>)</label>
+                      </div>
+                      <a href="#js__groupView" class="cs-btn2-gray cs-btn-default" jq-action="modal">사용자 확인</a>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <input type="text" class="cs-input width100p" placeholder="자료를 설명하는 제목 입력" title="자료 제목">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">내용 입력 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <textarea name="" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="2000" placeholder="자료를 설명하는 내용 입력" title="내용 입력"></textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 파일 <i class="icon-required">필수 입력</i><br>(최대 10개)</th>
+                  <td colspan="3" class="_p0">
+                      <div class="cs-list-file-sum">
+                        <ul class="cs-list-file _type2">
+                          <li>
+                            <strong>제안자가 올린 파일명.pdf</strong>
+                            <div class="cs-list-file__btns">
+                              <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                            </div>
+                          </li>
+                          <li>
+                            <strong>제안자가 올린 파일명.pdf</strong>
+                            <div class="cs-list-file__btns">
+                              <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                            </div>
+                          </li>
+                          <li>
+                            <strong>제안자가 올린 파일명.pdf</strong>
+                            <div class="cs-list-file__btns">
+                              <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                            </div>
+                          </li>
+                          <li>
+                            <strong>제안자가 올린 파일명.pdf</strong>
+                            <div class="cs-list-file__btns">
+                              <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="cs-list-file-sum__btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                        </div>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>파일은 개당 최대 XXMB까지 등록 가능합니다.</li>
+            <li>
+              메뉴 권한 그룹으로 공개하는 경우 자료 등록 후 해당 그룹의 사용자가 추가되면 추가된 사용자에게도 공개 됩니다.  
+              <br>단, 타 그룹으로 변경된 사용자는 참조되었던 자료를 볼 수 없습니다.
+            </li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing01.html" class="cs-btn-line">취소</a>
+          <a href="#js__alert" jq-action="modal" class="cs-btn">등록</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>업무 참조 자료 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <span class="pcolor-red">지정 공개(지정 사용자)</span>로<br>
+            업무 참조 자료가 등록되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="fileSharing01.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 16})
+        @@include('../include/modals.html',{'items': 4})
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

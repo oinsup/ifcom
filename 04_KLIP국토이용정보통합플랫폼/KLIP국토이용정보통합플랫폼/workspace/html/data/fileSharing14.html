@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>상위 계획 자료 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>상위 계획 자료 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <section>
+          <!-- <h3 class="cont-hedding1">도시계획위원회 개요</h3> -->
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>상위 계획 자료 수정</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <td>2020-12-01</td>
+                  <th scope="row">등록자</th>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 구분 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-opt-list" colspan="3">
+                    <input type="radio" name="datacate" id="datacate1" class="cs-radio" checked><label for="datacate1"><span></span> 광역도시계획</label>
+                    <input type="radio" name="datacate" id="datacate2" class="cs-radio"><label for="datacate2"><span></span> 도시·군기본계획</label>
+                    <input type="radio" name="datacate" id="datacate3" class="cs-radio"><label for="datacate3"><span></span> 기타</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="자료를 설명하는 제목 입력" title="자료 제목">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">내용 입력 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <textarea name="" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="2000" placeholder="자료를 설명하는 내용 입력" title="내용 입력"></textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 파일 <i class="icon-required">필수 입력</i><br>(최대 10개)</th>
+                  <td class="_p0" colspan="3">
+                    <div class="cs-list-file-sum">
+                      <ul class="cs-list-file _type2">
+                        <li>
+                          <strong>제안자가 올린 파일명.zip</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.zip</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div class="cs-list-file-sum__btn">
+                        <button type="button" class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>파일은 개당 최대 XXMB까지 등록 가능합니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing13.html" class="cs-btn-line">취소</a>
+          <a href="#js__delete" jq-action="modal" class="cs-btn">삭제</a>
+          <a href="#js__sumbit" jq-action="modal" class="cs-btn">등록</a>
+        </section>
+
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__delete',
+          'title': '상위 계획 자료 삭제',
+          'cont': '삭제된 내용은 복구할 수 없습니다.<br>삭제하시겠습니까?',
+          'btns': '<button type="button" jq-action="closeModal" class="cs-btn-line">취소</button><button type="button" class="cs-btn" onclick="lay_pop_close(\'#js__delete\');lay_pop_open(\'#js__deleteComplete\')">삭제</button>'
+        })
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__deleteComplete',
+          'title': '상위 계획 자료 삭제',
+          'cont': '상위 계획 자료가 삭제되었습니다.',
+          'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+        })
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__sumbit',
+          'title': '상위 계획 자료 수정',
+          'cont': '<span class="pcolor-red">광역도시계획</span><br>상위 계획 자료가 수정되었습니다.',
+          'btns': '<a href="fileSharing13.html" class="cs-btn">확인</a>'
+        })
+        
+        @@include('../include/modals.html',{'items': 1})
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html')
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html')
+
+    <div class="container">
+      <div class="board-list">
+        <nav class="board-tab-nav">
+          <ul>
+            <li><a href="#">업무 참조 자료</a></li>
+            <li><a href="#">상위 계획 자료</a></li>
+            <li><a href="#">비정형 자료</a></li>
+          </ul>
+        </nav>
+
+        <div class="cs-box cs-box__blue" style="position: relative;padding-left: 100px;">
+          <div style="position: absolute;left: 20px;top: 20px;width: 50px;">!!! 여기 아이콘 들어갈껄?</div>
+          <div class="mb30">
+            「국토의 계획 및 이용에 관한 법률」에 의한 전 국토의 용도지역·지구·구역, 도시군계획시설 등에 대한 현황을 파악하여
+            도시행정, 도시정책, 도시연구, 도시개발, 도시계획 분야에 필요한 기초자료로 제공합니다. 
+          </div>
+          
+          <ul class="cs-list-dot">
+            <li>종류 : 국가승인통계  |  승인번호 : 315002 | 승인일자 : 2007-07-23</li>
+            <li>작성기간 : 1988년 ~ 현재(2005년까지는 자체생산통계, 2006년 이후부터는 승인통계) | 작성주기 : 1년</li>
+            <li>작성체계 : 시·군·구(도시과) → 시·도(도시과) → 한국토지주택공사(공간정보처)</li>
+          </ul>
+        </div>
+
+        <div class="board-list-gallery">
+          <ul>
+            @@for(var i = 0; i < 20; i++){
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 구고종합계획</strong>
+                <span>(2020 ~ 2040년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="@@imageRoot/sample/a4.jpg" alt="">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 등록</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn">바로보기</a>
+                <a href="#" class="cs-btn">다운로드</a>
+              </div>
+            </li>
+            }
+          </ul>
+
+          <!-- 데이터가 없을경우 -->
+          <div class="board-list-nodata">
+            등록된 정책 정보가 없습니다.
+          </div>
+        </div>
+
+        
+
+        <div class="board-list-info">
+          ※ 상기 등록일은 KLIP 시스템에 등록된 날짜를 의미합니다. 
+        </div>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

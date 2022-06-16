@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '활용 서비스 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="infoManage05.html">정보연계 관리</a></li>
+          <li><a href="infoManage07.html">제공 정보 확인</a></li>
+          <li>활용 서비스 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>활용 서비스 수정</h2>
+      </div>
+    </div>
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="">
+        <div class="content board-view">
+          <section>
+            <h3 class="cont-hedding1">활용 서비스 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>활용 서비스 정보</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      등롱일/등록자
+                    </th>
+                    <td>
+                      2021-12-31/등록자명 출력
+                    </td>
+                    <th scope="row">활용 상태 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list"> 
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-1" checked><label for="datecate01-1"><span></span> 대기</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-2"><label for="datecate01-2"><span></span> 활용 중</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-3"><label for="datecate01-3"><span></span> 활용 중지</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-4"><label for="datecate01-4"><span></span> 활용 종료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i01">신청일 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i01"class="cs-input-date js__datepicker js__date-from " title="신청날짜 (입력예시 : 2020-01-01)" value="@@today">
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="i02">활용 기간 <i class="icon-required">필수 입력</i></label>
+                    </th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i02"class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" value="@@today">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" value="2099-12-31">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i03">서비스명 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i03" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="서비스명 입력" title="서비스명">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i04">서비스 URL </label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i04" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="서비스 URL 입력" title="서비스 URL">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">기관 구분 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list"> 
+                      <input type="radio" name="datecate02" class="cs-radio" id="datecate02-1" checked><label for="datecate02-1"><span></span> 국가기관</label>
+                      <input type="radio" name="datecate02" class="cs-radio" id="datecate02-2"><label for="datecate02-2"><span></span> 민간기관</label>
+                    </td>
+                    <th scope="row">
+                      <label for="i05">활용 기관 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i05" class="cs-input" placeholder="‘기관 찾기’시 자동 입력" title="활용 기관" style="width: calc(100% - 92px); padding-right: 7px;">
+                        <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">기관 찾기</button>
+                        
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i06">부서명 </label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i06" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="부서명 입력" title="부서명">
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="i07">담당자명 </label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i07" class="cs-input js__textCounter width100p" data-maxbyte="20" placeholder="담당자 이름 입력" title="담당자명">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="s01">문의처 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-input-tel">
+                        <select id="s01" class="cs-input" title="지역번호 선택" style="width:123px;">
+                          <option>지역번호 선택</option>
+                          <option>02</option>
+                          <option>032</option>
+                        </select>
+                        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                        <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                      </div>
+                    </td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">활용 신청서 <i class="icon-required">필수 입력</i><br />(.pdf) </th>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap _type2">
+                        <input type="file" class="cs-file" id="file1" placeholder="KLIP서비스활용신청서(제공정보명)_활용서비스명_2021.12.12pdf">
+                        
+                        <span class="js__filename">KLIP서비스활용신청서(제공정보명)_활용서비스명_2021.12.12pdf</span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">
+                            파일 변경
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i08">비고 </label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i08" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="활용 상태를 중지 또는 종료로 변경하는 경우 사유 입력하거나 기타 유의 사항 등 입력" title="서비스명">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>상태를 ‘활용 중지’ 또는 ‘활용 종료’로 변경하는 경우 비고란에 사유를 입력해 주시고, ‘활용 종료’로 변경하는 경우에는 활용 기간 종료일도 변경해 주세요.</li>
+              <li>민간기관을 검색할 수 없는 없는 경우 ‘시스템 운영 관리 > 메뉴 및 공통 기능 관리’에서 등록 후 선택해 주세요.</li>
+              <li>파일은 최대 5MB까지 등록 가능합니다.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="cont-hedding1">API 오퍼레이션 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>API 오퍼레이션 정보</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <label for="i08">인증키 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i08" class="cs-input width50p" placeholder="XXXXXXXX-XXXXXXXX-XXXXXXXX" title="인증키">
+                        <span class="tcolor-gray2" style="vertical-align: middle; margin-left: 5px;">주의. 인증키는 생성 후 변경 불가 (8자리-8자리-8자리)</span>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>인증키는 생성 후 복사하여 활용 서비스 담당자에게 안내해 주세요.</li>
+            </ul>
+          </section>
+
+          <section class="cs-btn-set">
+            <a href="infoManage07.html" class="cs-btn-line">취소</a>
+            <button jq-action="modal" jq-target="#js__delete" class="cs-btn">삭제</button>
+            <button jq-action="modal" jq-target="#js__complete" class="cs-btn">수정</button>
+          </section>
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+
+
+      <!-- modal : 등록완료 -->
+      <div id="js__complete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>활용 서비스 수정</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <span class="pcolor-red"></span> 활용 서비스 정보가 수정되었습니다. <br>
+          정상적으로 수정되었는지 노출된 페이지를 확인하시겠습니까?
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <a href="infoManage07.html" class="cs-btn-line">취소</a>
+          <a href="#" class="cs-btn">확인</a>
+        </div>
+      </div>
+
+      <div id="js__delete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>활용 서비스 삭제</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <p>
+            삭제된 내용은 복구할 수 없습니다.<br>
+            삭제하시겠습니까?
+          </p>
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button jq-action="closeModal" class="cs-btn-line">취소</button>
+          <button type="button" onclick="lay_pop_close();lay_pop_open('#js__deleteComplete')" class="cs-btn">확인</button>
+        </div>
+      </div>
+
+      <div id="js__deleteComplete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>활용 서비스 삭제</h2>
+        </div>
+        <div class="laymodal-content tac">
+          활용 서비스 정보가 삭제되었습니다. 
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <a href="infoManage07.html" class="cs-btn">확인</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>용역 성과 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>용역 성과 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+        <div class="content board-view">
+  
+          <div class="process-header">
+            <ul class="process-step">
+              <!-- 
+                진행된 탭 일경 우 class = "active"
+                현재 진행중인 탭 class = "active locked"
+               -->
+              <li class="active"><span>1</span> 용역사업, 기본 정보 등록</li>
+              <li class="active"><span>2</span> 계획도서, 계획설명서 등록</li>
+              <li class="active locked"><span>3</span> 조서, 도면 확인</li>
+              <li><span>4</span> 입안 진행 결과 등록</li>
+              <!-- 0106-2 :: 텍스트수정 -->
+              <li><span>5</span> 고시 등록</li>
+            </ul>
+          </div>
+         
+          <section>
+            <h3 class="cont-hedding1">도시·군관리계획 기본 정보</h3>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>도시·군관리계획 기본 정보</caption>
+                <colgroup>
+                  <col class="width180">
+                  <col>
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">계획명</th>
+                    <td>입력한 계획명이 출력됩니다. </td>
+                    <th scope="row">계획 유형</th>
+                    <td>용도지역·용도지구</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h3 class="cont-hedding1">조서, 도면</h3>
+            <div class="board-required-info _type2">
+              <!-- 0127 :: 버튼변경 -->
+              <a href="#js__fileDownAlert" class="btn-down-excel _h35" jq-action="modal">조서 다운로드</a>
+              <a href="#js__fileLoadAlert" class="cs-btn2-gray _h35" jq-action="modal">최종 자료 불러오기</a>
+            </div>
+  
+            <!-- 0111 :: 삭제 data-cell-height="60" -->
+            <!-- 0127 :: 테이블변경 -->
+            <div class="board-view-tb  js__floatingHead _floating _tac" data-minitem="10">
+              <table>
+                <caption>조서, 도면</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col>
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">조서 유형</th>
+                    <th scope="col">대분류</th>
+                    <th scope="col">중분류</th>
+                    <th scope="col">소분류</th>
+                    <th scope="col">기정 면적</th>
+                    <th scope="col">증감 면적</th>
+                    <th scope="col">변경후 면적</th>
+                    <th scope="col">조서</th>
+                    <th scope="col">도면</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 0; i < 11; i++){
+                  <tr>
+                    <td>1</td>
+                    <td>용도지구</td>
+                    <td>신설</td>
+                    <td>상업지역</td>
+                    <td>사업지역기타</td>
+                    <td>-</td>
+                    <td>26,000</td>
+                    <td>2,000</td>
+                    <td>28,000</td>
+                    <td><a href="#js__reportview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">조서 보기</a></td>
+                    <td><a href="#js__preview2" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">도면 보기</a></td>
+                  </tr>
+                  }
+                  <tr>
+                    <td colspan="11">용도지역·용도지구 프로그램에서 도면 및 조서 생성 후 ‘생성 자료 불러오기’를 해주세요.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>‘용도지역·용도지구 프로그램’에서 입안 자료(조서, 도면)를 생성하고 완료 처리한 경우에만 생성된 자료를 불러오기 할 수 있습니다.</li>
+              <!-- 1230 :: 텍스트 수정 -->
+              <li>전체 조서의 확인이 필요한 경우 엑셀 다운로드 후 확인이 가능합니다. </li>
+            </ul>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="#js__cancel" jq-action="modal" class="cs-btn-line">취소</a>
+            <a href="#js__prev" jq-action="modal" class="cs-btn-line">이전</a>
+            <!-- 다음 경고 있을 경우 -->
+            <a href="#js__nextAlert" jq-action="modal" class="cs-btn">다음</a>
+            <!-- 다음 -->
+            <a href="#js__next" jq-action="modal" class="cs-btn">다음</a>
+          </section>
+        </div>
+
+      <!-- 취소 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancel',
+        'title': '용역 성과 등록 취소',
+        'cont': '용역 성과 등록이 취소되었습니다. <br>추후 용역 성과 등록을 계속해서 진행하실 수 있습니다.',
+        'btns': '<a href="ServiceResult01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 이전 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__prev',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>이전 단계로 이동합니다.',
+        'btns': '<a href="ServiceResult03.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 다음 alert -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__nextAlert',
+        'title': '용역 성과 등록',
+        'cont': '조서가 등록되지 않은 도면이 있습니다. <br>용도지역·용도지구 프로그램에서 조서 등록 후<br>다시 시도해 주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</butotn>'
+      })
+
+      <!-- 다음 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__next',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>다음 단계로 이동합니다.',
+        'btns': '<a href="ServiceResult06.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 조서다운로드 레이어팝업 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__fileDownAlert',
+        'title': '조서 다운로드',
+        'cont': '생성된 조서 정보가 없습니다.<br>용도지역·용도지구 프로그램에서<br>조서 등록 후 시도해 주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 생성 자료 불러오기 레이어팝업 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__fileLoadAlert',
+        'title': '생성 자료 불러오기',
+        'cont': '생성된 입안 자료가 없습니다.<br>용도지역·용도지구 프로그램에서 <br>입안 자료(조서, 도면) 생성 후 시도해 주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      @@include('../include/modals.html',{'items': 1})
+      @@include('../include/modals.html',{'items': 2})
+      @@include('../include/modals.html',{'items': 18})
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+<div class="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--content-->
+        <div id="contentWrap">
+            <h2 class="hidden">본문 시작</h2>
+            <!--lnb-->
+            <div id="lnb">
+                <div class="menuName">
+                    <p class="tit">사용자권한관리</p>
+                </div>
+                <ul class="dep1">
+                    <li class="active">
+                        <p class="user"><a href="#">사용자권한관리</a></p>
+                        <ul class="dep2" style="display: block">
+                            <li class="li01 active"><a href="#">권한관리</a></li>
+                            <li class="li02"><a href="#">기관정보관리</a></li>
+                            <li class="li03"><a href="#">사용자관리</a></li>
+                            <li class="li04"><a href="#">로그인정책관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="menu"><a href="#">메뉴관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">프로그램관리</a></li>
+                            <li class="li02"><a href="#">메뉴관리(tree)</a></li>
+                            <li class="li03"><a href="#">메뉴관리(list)</a></li>
+                            <li class="li04"><a href="#">메뉴생성관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="code"><a href="#">코드관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">공통분류코드관리</a></li>
+                            <li class="li02"><a href="#">공통코드관리</a></li>
+                            <li class="li03"><a href="#">공통상세코드관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="log"><a href="#">로그관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">로그관리</a></li>
+                            <li class="li02"><a href="#">웹로그관리</a></li>
+                            <li class="li03"><a href="#">접속로그관리</a></li>
+                            <li class="li04"><a href="#">개인정보조회로그관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">사용자 관리 페이지 본문 시작</h2>
+                <!-- inner -->
+                <div class="inner type02">
+                    <!-- TitleArea -->
+                    <div class="titleArea">
+                        <h3 class="pageTitle">권한관리</h3>
+                    </div>
+                    <!-- //TitleArea -->
+                    <!-- tableArea -->
+                    <div class="tableArea">
+                        <div class="tableHead">
+                            <p class="eaTitle">전체<span class="ea">3</span>건</p>
+                            <!-- formArea -->
+                            <div class="formArea">
+                                <label for="i01">권한명</label>
+                                <!-- tableSearch -->
+                                <div class="tableSearch">
+                                    <label>
+                                        <input type="text" id="i01">
+                                    </label>
+                                    <button type="button" class="btn gray">검색</button>
+                                </div>
+                                <!-- //tableSearch -->
+                            </div>
+                            <!-- //formArea -->
+                        </div>
+                        <!-- table -->
+                        <div class="table list01">
+                            <!-- jqgridtable -->
+                            <table id="list01" class="type01">
+                            </table> 
+                            <!-- //jqgridtable -->
+                        </div>
+                        <!-- table -->
+                        <!-- pagination lx에서 사용하는 전자정부 프레임 pn으로 교체--->
+                        <!-- <div class="pagination">
+                            <button type="button" class="first">
+                                <span class="hidden">맨앞으로</span>
+                            </button>
+                            <button type="button" class="prev">
+                                <span class="hidden">이전페이지</span>
+                            </button>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <button type="button" class="next">
+                                <span class="hidden">다음페이지</span>
+                            </button>
+                            <button type="button" class="last">
+                                <span class="hidden">맨뒤로</span>
+                            </button>
+                        </div> -->
+                        <!-- //pagination -->
+
+                        <!-- pagination -->
+                        <div class="pagination" id="pagingArea">
+                            <a href="#" onclick="linkPage(1);return false;" class="first">
+                                <i class="fa fa-backward" aria-hidden="true"></i>
+                                <span style="vertical-align: middle;">처음 페이지</span>
+                            </a>
+                            <a class="prev" href="#" "="" onclick="linkPage(1);return false; ">
+                                <i class="fa fa-caret-left" aria-hidden-"true"=""></i>
+                                <span style="vertical-align: middle;">이전 페이지</span>
+                            </a>
+                            <strong>1</strong>
+                            <a onclick="linkPage(2);return false; ">2</a>
+                            <a onclick="linkPage(3);return false; ">3</a>
+                            <a onclick="linkPage(4);return false; ">4</a>
+                            <a onclick="linkPage(5);return false; ">5</a>
+                            <a onclick="linkPage(6);return false; ">6</a>
+                            <a onclick="linkPage(7);return false; ">7</a>
+                            <a onclick="linkPage(8);return false; ">8</a>
+                            <a onclick="linkPage(9);return false; ">9</a>
+                            <a onclick="linkPage(10);return false; ">10</a>
+                            <a class="next" href="#" "="" onclick="linkPage(11);return false; ">
+                                <i class="fa fa-caret-right" aria-hidden-"true"=""></i>
+                                <span style="vertical-align: middle;">다음 페이지</span>
+                            </a>
+                            <a href="#" onclick="linkPage(187);return false;" class="last">
+                                <i class="fa fa-forward" aria-hidden="true"></i>
+                                <span style="vertical-align: middle;">마지막 페이지</span>
+                            </a>
+                        </div>
+                        <!-- //pagination -->
+
+
+                        <!-- btnArea -->
+                        <div class="btnArea" style="margin-top: 30px;">
+                            <button type="button" class="btn type01 white">삭제</button>
+                            <button type="button" class="btn type01 red">등록</button>
+                        </div>
+                        <!-- //btnArea -->
+                    </div>
+                    <!-- //tableArea -->
+                </div>
+                <!-- //inner -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//content-->
+    </div>
+
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

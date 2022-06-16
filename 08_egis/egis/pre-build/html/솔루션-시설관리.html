@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+        AOS.init({
+            duration: 1000,
+            // once: true,
+            mirror: true,
+            disable: function() {
+                var maxWidth = 768;
+                return window.innerWidth < maxWidth; 
+            }
+        });
+
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content" style="padding: 0;width: auto; height: 100%;">
+                <!--section-->
+                <section class="section sec01">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="솔루션">솔루션</a>
+                            </li>
+                            <li>
+                                <a href="#" title="시설관리">시설관리</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea type02" data-aos="fade" data-aos-duration="2200">
+                        <h1 class="titPage"><span class="colorType blue">SOLUTION</span></h1>
+                        <h2 class="subTitle">시설관리</h2>
+                    </div>
+                    <!--//titArea-->
+                </section>
+                <!--//section-->
+                <!--section-->
+                <section class="section sec02 full">
+                    <div class="tabContWrap type03" >
+                        <!--tabNav-->
+                        <div class="tabNav" data-aos="fade" data-aos-duration="2200" data-aos-delay="200">
+                            <ul class="tabList">
+                                <li class="active" id="tab1">XDFMS</li>
+                                <li id="tab2">XDUnderFMS</li>
+                                <li id="tab3">XDHeritage</li>
+                                <li id="tab4">XDConstruction</li>
+                                <li id="tab5">XDRoadMap</li>
+                            </ul>
+                        </div>
+                        <!--//tabNav--> 
+                        <!--tabCont-->
+                        <div class="tabCont full active">
+                            <!--introDesc-->
+                            <div class="introDesc">
+                                <!--leftArea-->
+                                <div class="leftArea">
+                                    <!--txtArea-->
+                                    <div class="txtArea type02">
+                                        <strong class="tit" data-aos="fade-up" data-aos-delay="500">XDFMS<span class="strongSub">(지상)시설물통합관리</span></strong>
+                                        <p class="desc">
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="700">체계적이고 효율적인 시설, 자산관리를 위해 기초가 되는 공간정보를 2차원 / 3차원</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="900">지리정보와 결합하여 입체적인 시설물 관리 및 공간비용채산제 등 관련업무의 의사결정을</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="1100">지원하며, 시설의 수명과 자산 가치의 향상과 능동적인 시설물을 관리하는 시스템</span>
+                                        </p>
+                                        <div class="tagArea">
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="500">#지상구조물</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="650">#시설물관리</span>
+                                        </div>
+                                    </div>
+                                    <!--//txtArea-->
+                                </div>
+                                <!--//leftArea-->
+                                <div class="rightArea">
+                                    <div class="partzArea">
+                                        <img class="bg" src="../images/img/img-xdfacility.png" alt="XDfacility">
+                                        <p class="partTitle">Facility<br />
+                                            Management
+                                            <img class="partz" src="../images/img/img-partz01.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//introDesc-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont full">
+                            <!--introDesc-->
+                            <div class="introDesc">
+                                <!--leftArea-->
+                                <div class="leftArea">
+                                    <!--txtArea-->
+                                    <div class="txtArea type02">
+                                        <strong class="tit" data-aos="fade-up" data-aos-delay="500">XDUnderFMS<span class="strongSub">(지하)시설물통합관리</span></strong>
+                                        <p class="desc">
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="700">정수센터시설물 및 취수장의 3D 모델링을 통한 과학적인 상수도 시설물의 관리와</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="900">상시 모니터링을 통해 시설물의 가시화 및 관리 분석지원, 의사결정 지원시스템</span>
+                                        </p>
+                                        <div class="tagArea">
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="500">#지하구조물</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="650">#상수도시설물</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="800">#정수센터</span>
+                                        </div>
+                                    </div>
+                                    <!--//txtArea-->
+                                </div>
+                                <!--//leftArea-->
+                                <div class="rightArea">
+                                    <div class="partzArea">
+                                        <img class="bg" src="../images/img/img-xdfacility.png" alt="XDfacility">
+                                        <p class="partTitle">Facility<br />
+                                            Management
+                                            <img class="partz" src="../images/img/img-partz01.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//introDesc-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont full">
+                            <!--introDesc-->
+                            <div class="introDesc">
+                                <!--leftArea-->
+                                <div class="leftArea">
+                                    <!--txtArea-->
+                                    <div class="txtArea type02">
+                                        <strong class="tit" data-aos="fade-up" data-aos-delay="500">XDHeritage<span class="strongSub">문화재 시설물통합관리 </span></strong>
+                                        <p class="desc">
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="700">3차원 공간정보 기반으로 문화재 정보를 관리하며, CCTV, IoT 센서 관제 및 3차원</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="900">시각화(유지관리, 포인트 클라우드)를 통해 문화재를 입체적으로 관리, 보존이 가능한</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="1100">클라우드 기반의 3차원 문화재 관리시스템</span>
+                                        </p>
+                                         
+ 
+ 
+                                        <div class="tagArea">
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="500">#문화재구조물</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="800">#CCTV</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="950">#IoT</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="1100">#관제</span>
+                                        </div>
+                                    </div>
+                                    <!--//txtArea-->
+                                </div>
+                                <!--//leftArea-->
+                                <div class="rightArea">
+                                    <div class="partzArea">
+                                        <img class="bg" src="../images/img/img-xdfacility.png" alt="XDfacility">
+                                        <p class="partTitle">Facility<br />
+                                            Management
+                                            <img class="partz" src="../images/img/img-partz01.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//introDesc-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont full">
+                            <!--introDesc-->
+                            <div class="introDesc">
+                                <!--leftArea-->
+                                <div class="leftArea">
+                                    <!--txtArea-->
+                                    <div class="txtArea type02">
+                                        <strong class="tit" data-aos="fade-up" data-aos-delay="500">XDConstruction<span class="strongSub">건설현장관리</span></strong>
+                                        <p class="desc">
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="700">건설 현장의 시점별 진척 상황 파악, 시스템을 통한 현장, 본사간 의사소통 지원,</span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="900">시물레이션을 통한 공사기간 예측 등을 지원하는 시스템</span>
+                                        </p>
+                                        <div class="tagArea">
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="500">#공정관리</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="800">#드론</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="950">#건설현장관리</span>
+                                        </div>
+                                    </div>
+                                    <!--//txtArea-->
+                                </div>
+                                <!--//leftArea-->
+                                <div class="rightArea">
+                                    <div class="partzArea">
+                                        <img class="bg" src="../images/img/img-xdfacility.png" alt="XDfacility">
+                                        <p class="partTitle">Facility<br />
+                                            Management
+                                            <img class="partz" src="../images/img/img-partz01.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//introDesc-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont full">
+                            <!--introDesc-->
+                            <div class="introDesc">
+                                <!--leftArea-->
+                                <div class="leftArea">
+                                    <!--txtArea-->
+                                    <div class="txtArea type02">
+                                        <strong class="tit" data-aos="fade-up" data-aos-delay="500">XDRoadMap<span class="strongSub">정밀도로지도</span></strong>
+                                        <p class="desc">
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="700">고정밀 점군데이터, 3D 공간데이터를 활용한 정밀도로지도 활용체계 구축, </span>
+                                            <span class="aosIb" data-aos="fade-right" data-aos-delay="900">도로시설물에 대한 자산관리, 설치 적정성 분석, 도로의 기하구조 분석하는 시스템</span>
+                                        </p>
+                                        <div class="tagArea">
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="500">#도로시설물</span>
+                                            <span class="tag" data-aos="fade-in" data-aos-delay="800">#정밀도로지도</span>
+                                        </div>
+                                    </div>
+                                    <!--//txtArea-->
+                                </div>
+                                <!--//leftArea-->
+                                <div class="rightArea">
+                                    <div class="partzArea">
+                                        <img class="bg" src="../images/img/img-xdfacility.png" alt="XDfacility">
+                                        <p class="partTitle">Facility
+                                            <br />
+                                            Management
+                                            <img class="partz" src="../images/img/img-partz01.png" alt="">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//introDesc-->
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                </section>
+                <!--//section-->
+                <!--section-->
+                <section class="section sec03 full">
+                    <div class="secContArea">
+                        <div class="secCont active">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type02">주요기능</p>
+                                <!--boxList-->
+                                <ul class="boxList type02" data-aos="fade-up">
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution fms01"><span class="hidden">사용현황 조회 기능, 3차원 모델링 실내에서 책상, 의자 등 3차원 기자재 배치 시뮬레이션</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    사용현황 조회 기능, 3차원 모델링 실내<br />
+                                                    에서 책상, 의자 등 3차원 기자재 배치<br />
+                                                    시뮬레이션
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution fms02"><span class="hidden">공간 분할, 합병, 배정, 회수, 공간별 자산조회 및 자산배치 기능</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    공간 분할, 합병, 배정, 회수, 공간별<br />
+                                                    자산조회 및 자산배치 기능
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution fms03"><span class="hidden">자산 공간정보 수정 및 제어, RFID를 이용한 자산 조회</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    자산 공간정보 수정 및 제어,<br />
+                                                    RFID를 이용한 자산 조회
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution fms04"><span class="hidden">층별 3차원 설비 정보조회 및 도면 연계와 지하시설물
+                                                3D 조회 및 측정기능</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    층별 3차원 설비 정보조회 및<br />
+                                                    도면 연계와 지하시설물<br />
+                                                    3D 조회 및 측정기능<br />
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!--//boxList-->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type02">주요기능</p>
+                                <!--boxList-->
+                                <ul class="boxList type02" data-aos="fade-up">
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution under01"><span class="hidden">정수센터 및 취수장 등에 대한 검색 및 정보제공</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    정수센터 및 취수장 등에 대한<br />
+                                                    검색 및 정보제공
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution under02"><span class="hidden">시설물내 기전시설물 정보관리 및 검색</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시설물내 기전시설물 정보관리<br />
+                                                    및 검색
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution under03"><span class="hidden">시설물 안전점검 내역 관리</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시설물 안전점검 내역 관리
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution under04"><span class="hidden">시설물 유지보수 내역 관리</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시설물 유지보수 내역 관리
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <!--//boxList-->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type02">주요기능</p>
+                                <!--boxList-->
+                                <ul class="boxList type02" data-aos="fade-up">
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution heri01"><span class="hidden">클라우드 도구
+                                                (문화재 등록/가공/변환/배포)</span>
+                                            </div>
+                                            <div class="txt">
+                                                <p>
+                                                    클라우드 도구<br />
+                                                    (문화재 등록/가공/변환/배포)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution heri02"><span class="hidden">3차원 유지관리</span>
+                                            </div>
+                                            <div class="txt">
+                                                <p>
+                                                    3차원 유지관리
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution heri03"><span class="hidden">분석기능(X-Ray, Isometric)</span>
+                                            </div>
+                                            <div class="txt">
+                                                <p>
+                                                    분석기능(X-Ray, Isometric)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                                <!--//boxList-->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type02">주요기능</p>
+                                <!--boxList-->
+                                <ul class="boxList type02" data-aos="fade-up">
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution const01"><span class="hidden">주기적 드론 촬영을 통해 건설 현장 진행관리
+                                                </span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    주기적 드론 촬영을 통해<br />
+                                                    건설 현장 진행관리
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution const02"><span class="hidden">시계열 분석을 통한 건설 진행 상황 비교 </span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시계열 분석을 통한<br />
+                                                    건설 진행 상황 비교
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution const03"><span class="hidden">현장에 가지 않고도 시스템을 통한 작업 지시, 의사소통 가능
+                                                </span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    현장에 가지 않고도 시스템을 통한<br />
+                                                    작업 지시, 의사소통 가능
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <!--//boxList-->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type02">주요기능</p>
+                                <!--boxList-->
+                                <ul class="boxList type02" data-aos="fade-up">
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution roadmap01"><span class="hidden">점군 데이터 가시화,
+                                                다양한 분석 서비스 제공</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    점군 데이터 가시화,<br />
+                                                    다양한 분석 서비스 제공
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution roadmap02"><span class="hidden">시설물 정보 매핑을 통한 실감형 로드뷰 제공</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시설물 정보 매핑을 통한<br />
+                                                    실감형 로드뷰 제공
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution roadmap03"><span class="hidden">도로 시설물의 설치 간격 분석</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    도로 시설물의 설치 간격 분석
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution roadmap04"><span class="hidden">운전자 시야 확보를 위한 시거 분석</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    운전자 시야 확보를 위한 시거 분석
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="box">
+                                            <div class="icon solution roadmap05"><span class="hidden">시설물의 정확한 현황 관리를 위한 자산관리</span></div>
+                                            <div class="txt">
+                                                <p>
+                                                    시설물의 정확한 현황 관리를<br />
+                                                    위한 자산관리
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <!--//boxList-->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+                    </div>
+                </section>
+                <!--//section-->
+
+                <!--section-->
+                <section class="section sec04 full pattern">
+                    <div class="secContArea inner">
+                        <div class="secCont active">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type03" data-aos="fade-in">App Service View</p>
+                                <!-- swiperArea -->
+                                <div class="swiperArea">
+                                    <div class="swPc" data-aos="fade-right">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasic swiper4-01">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy16.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy16-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="btnControl">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swMobile" data-aos="fade-left" data-aos-delay="500">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasicSub swiper4Sub-01">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy16-device.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy16-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4_01 = new Swiper('.swiper4-01', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".swiper-button-next",
+                                                prevEl: ".swiper-button-prev",
+                                            },
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4Sub_01 = new Swiper('.swiper4Sub-01', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            touchRatio:0,
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        swiper4_01.controller.control = swiper4Sub_01;
+                                        swiper4Sub_01.controller.control = swiper4_01;
+
+                                    </script>
+
+                                </div>
+                                <!-- //swiperArea -->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type03" data-aos="fade-in">App Service View</p>
+                                <!-- swiperArea -->
+                                <div class="swiperArea">
+                                    <div class="swPc" data-aos="fade-right">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasic swiper4-02">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy17.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy17-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="btnControl">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swMobile" data-aos="fade-left" data-aos-delay="500">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasicSub swiper4Sub-02">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy17-device.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy17-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4_02 = new Swiper('.swiper4-02', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".swiper-button-next",
+                                                prevEl: ".swiper-button-prev",
+                                            },
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4Sub_02 = new Swiper('.swiper4Sub-02', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            touchRatio:0,
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        swiper4_02.controller.control = swiper4Sub_02;
+                                        swiper4Sub_02.controller.control = swiper4_02;
+
+                                    </script>
+
+                                </div>
+                                <!-- //swiperArea -->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type03" data-aos="fade-in">App Service View</p>
+                                <!-- swiperArea -->
+                                <div class="swiperArea">
+                                    <div class="swPc" data-aos="fade-right">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasic swiper4-03">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy18.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy18-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="btnControl">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swMobile" data-aos="fade-left" data-aos-delay="500">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasicSub swiper4Sub-03">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy18-device.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy18-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4_03 = new Swiper('.swiper4-03', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".swiper-button-next",
+                                                prevEl: ".swiper-button-prev",
+                                            },
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4Sub_03 = new Swiper('.swiper4Sub-03', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            touchRatio:0,
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        swiper4_03.controller.control = swiper4Sub_03;
+                                        swiper4Sub_03.controller.control = swiper4_03;
+
+                                    </script>
+
+                                </div>
+                                <!-- //swiperArea -->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type03" data-aos="fade-in">App Service View</p>
+                                <!-- swiperArea -->
+                                <div class="swiperArea">
+                                    <div class="swPc" data-aos="fade-right">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasic swiper4-04">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy19.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy19-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="btnControl">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swMobile" data-aos="fade-left" data-aos-delay="500">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasicSub swiper4Sub-04">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy19-device.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy19-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4_04 = new Swiper('.swiper4-04', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".swiper-button-next",
+                                                prevEl: ".swiper-button-prev",
+                                            },
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4Sub_04 = new Swiper('.swiper4Sub-04', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            touchRatio:0,
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        swiper4_04.controller.control = swiper4Sub_04;
+                                        swiper4Sub_04.controller.control = swiper4_04;
+
+                                    </script>
+
+                                </div>
+                                <!-- //swiperArea -->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        <div class="secCont">
+                            <!--conBox-->
+                            <div class="conBox flex">
+                                <p class="tit type03" data-aos="fade-in">App Service View</p>
+                                <!-- swiperArea -->
+                                <div class="swiperArea">
+                                    <div class="swPc" data-aos="fade-right">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasic swiper4-05">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy20.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy20-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="btnControl">
+                                                <div class="swiper-button-prev"></div>
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-pagination"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swMobile" data-aos="fade-left" data-aos-delay="500">
+                                        <!-- class numbering 순서에 맞게 변경 필요 -->
+                                        <div class="swiperBasicSub swiper4Sub-05">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy20-device.png" alt="더미이미지">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="../images/dummy/img-dummy20-2.png" alt="더미이미지">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4_05 = new Swiper('.swiper4-05', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                                type: "fraction",
+                                            },
+                                            navigation: {
+                                                nextEl: ".swiper-button-next",
+                                                prevEl: ".swiper-button-prev",
+                                            },
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        var swiper4Sub_05 = new Swiper('.swiper4Sub-05', {
+                                            slidesPerView: 1,
+                                            loop: true,
+                                            observer: true,
+                                            observeParents: true,
+                                            touchRatio:0,
+                                        })
+
+                                        // class numbering 순서에 맞게 변경 필요
+                                        swiper4_05.controller.control = swiper4Sub_05;
+                                        swiper4Sub_05.controller.control = swiper4_05;
+
+                                    </script>
+
+                                </div>
+                                <!-- //swiperArea -->
+                            </div>
+                            <!--//conBox-->
+                        </div>
+
+                        
+                    </div>
+                    <!--banner-->
+                    <div class="banner">
+                        <!--conBox-->
+                        <div class="conBox">
+                            <h3>당신이 찾는 <span class="colorType neon">디지털 세계</span>를<br /> 지금 만나보세요!</h3>
+                            <button type="button" class="btnLink" onclick="window.open('https://www.dtwincloud.com/member/login.do')"><span>EGIS Market Place</span></button>
+                            <!--click-->
+                            <div class="click">
+                                <a href="#">SUPPORT <button class="arrow"><span class="hidden">바로가기</span></button></a>
+                                <a href="지원.html" target="_blank">Contact<br />Us <button class="arrow"><span
+                                            class="hidden">바로가기</span></button></a>
+                            </div>
+                            <!--//click-->
+                        </div>
+                        <!--//conBox-->
+                    </div>
+                    <!--//banner-->
+                </section>
+                <!--//section-->
+
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<svg id="바로가기" xmlns="http://www.w3.org/2000/svg" width="16.8" height="16.8" viewBox="0 0 16.8 16.8">
+    <defs>
+        <style>
+            .cls-1{fill:rgba(255,255,255,.7)}
+        </style>
+    </defs>
+    <g id="그룹_5472" data-name="그룹 5472" transform="translate(-1508.564 -1867.372)">
+        <g id="그룹_2036" data-name="그룹 2036" transform="translate(1508.564 1867.372)">
+            <path id="패스_6728" data-name="패스 6728" class="cls-1" d="M1524.659 1884.172h-15.39a.7.7 0 0 1-.7-.7v-15.39a.7.7 0 0 1 .7-.7h7.637a.7.7 0 0 1 0 1.41h-6.932v13.98h13.98v-6.933a.7.7 0 0 1 1.41 0v7.638a.7.7 0 0 1-.7.7z" transform="translate(-1508.564 -1867.372)"/>
+        </g>
+        <g id="그룹_2039" data-name="그룹 2039" transform="translate(1515.333 1867.375)">
+            <g id="그룹_2037" data-name="그룹 2037" transform="translate(3.048)">
+                <path id="패스_6729" data-name="패스 6729" class="cls-1" d="M1521.893 1870.835h5.219a.88.88 0 0 1 .881.881v5.22a.881.881 0 0 1-.881.881.882.882 0 0 1-.881-.881v-4.339h-4.338a.881.881 0 0 1 0-1.762z" transform="translate(-1521.012 -1870.835)"/>
+            </g>
+            <g id="그룹_2038" data-name="그룹 2038" transform="translate(0 .713)">
+                <path id="패스_6730" data-name="패스 6730" class="cls-1" d="M1530.259 1867.376a.881.881 0 0 1 .623 1.5l-7.557 7.557a.881.881 0 0 1-1.246-1.246l7.557-7.557a.879.879 0 0 1 .623-.258z" transform="translate(-1521.821 -1867.376)"/>
+            </g>
+        </g>
+    </g>
+</svg>

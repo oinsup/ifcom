@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li>자료 게시판</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>자료 게시판</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <div class="cont-snb">
+        <a href="fileSharing01.html" class="active">업무 참조 자료</a>
+        <a href="fileSharing11.html">상위 계획 자료</a>
+        <a href="fileSharing21.html">비정형 자료</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>도시계획 업무를 수행함에 있어 필요한 자료들을 타 사용자와 공유할 수 있습니다.</li>
+            <li>전체 사용자에게 공개하여 등록할 수 있고, 공유할 사용자를 지정하여 공유할 수도 있습니다.</li>
+          </ul>
+          <a href="fileSharing02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">등록 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option>광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                    <option>시·군·구 선택</option>
+                    <option>시,군구구구구구구</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">등록일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="자료 제목, 등록자명 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>고시 번호 검색 시 ‘연도-일련번호’만 입력해 주세요. (‘제’와 ‘호‘ 제외, 예. 2020-100)</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체 공개</a></li>
+              <li><a href="#">지정 공개</a></li>
+              <li><a href="#">MY 등록 자료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">자료 제목</a>
+            <a href="#">조회수</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col>
+                <col class="width70">
+                <col class="width130">
+                <col class="width80">
+                <col class="width70">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">공개 구분</th>
+                  <th scope="col">자료 제목</th>
+                  <th scope="col">파일 수</th>
+                  <th scope="col">등록 기관</th>
+                  <th scope="col">등록자명</th>
+                  <th scope="col">조회수</th>
+                  <th scope="col">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>전체</td>
+                  <td class="tal"><a href="fileSharing03.html">등록한 자료 제목이 보입니다.</a></td>
+                  <td>1</td>
+                  <td>경기도 하남시청</td>
+                  <td>홍길동</td>
+                  <td>150</td>
+                  <td>2020-01-01</td>
+                </tr>
+                <tr>
+                  <td colspan="8">전체 공개로 등록된 업무 참조 자료가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>자료 제목을 클릭하시면 등록된 내용 및 파일을 확인하실 수 있습니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 지정 공개 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체 공개</a></li>
+              <li class="active"><a href="#">지정 공개</a></li>
+              <li><a href="#">MY 등록 자료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">자료 제목</a>
+            <a href="#">조회수</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width70">
+                <col class="width130">
+                <col class="width80">
+                <col class="width70">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">공개 구분</th>
+                  <th scope="col">공개 대상</th>
+                  <th scope="col">자료 제목</th>
+                  <th scope="col">파일 수</th>
+                  <th scope="col">등록 기관</th>
+                  <th scope="col">등록자명</th>
+                  <th scope="col">조회수</th>
+                  <th scope="col">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>지정 공개</td>
+                  <td>메뉴 권한 그룹</td>
+                  <td class="tal"><a href="fileSharing03.html">등록한 자료 제목이 보입니다.</a></td>
+                  <td>1</td>
+                  <td>경기도 하남시청</td>
+                  <td>홍길동</td>
+                  <td>150</td>
+                  <td>2020-01-01</td>
+                </tr>
+                <tr>
+                  <td colspan="8">전체 공개로 등록된 업무 참조 자료가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>자료 제목을 클릭하시면 등록된 내용 및 파일을 확인하실 수 있습니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- MY 등록 자료 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체 공개</a></li>
+              <li><a href="#">지정 공개</a></li>
+              <li class="active"><a href="#">MY 등록 자료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">자료 제목</a>
+            <a href="#">조회수</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width70">
+                <col class="width130">
+                <col class="width80">
+                <col class="width70">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">공개 구분</th>
+                  <th scope="col">공개 대상</th>
+                  <th scope="col">자료 제목</th>
+                  <th scope="col">파일 수</th>
+                  <th scope="col">등록 기관</th>
+                  <th scope="col">등록자명</th>
+                  <th scope="col">조회수</th>
+                  <th scope="col">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>지정 공개</td>
+                  <td>메뉴 권한 그룹</td>
+                  <td class="tal"><a href="fileSharing04.html">등록한 자료 제목이 보입니다.</a></td>
+                  <td>1</td>
+                  <td>경기도 하남시청</td>
+                  <td>홍길동</td>
+                  <td>150</td>
+                  <td>2020-01-01</td>
+                </tr>
+                <tr>
+                  <td colspan="8">전체 공개로 등록된 업무 참조 자료가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>자료 제목을 클릭하시면 등록된 내용 및 파일을 확인하실 수 있습니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

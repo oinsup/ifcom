@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>입안 제안 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="proposal01.html">온라인 제안 접수 내역</a>
+        <!-- 201130 :: 텍스트수정-->
+        <a href="priorConsultation01.html" class="active">주민 사전협의 내역</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        
+        <div class="cs-box _alert-icon">
+          <!-- 201130 :: 텍스트수정-->
+          <ul class="cs-list-dot">
+            <li>주민(이해관계자 포함) 소속 기관에서 방문하여 &lt;도시·군관리계획&gt; 입안 제안 후 사전협의가 완료된 경우 사전협의 정보를 등록해 주세요. </li>
+            <li>사전협의 정보 등록 시 발급된 ‘등록번호’를 발급받은 주민만 토지e음 대민사이트에서 온라인 제안이 가능합니다.</li>
+          </ul>
+          <!-- 201130 :: 링크수정-->
+          <a href="priorConsultation02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">등록 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option value="#">광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-input" title="지역선택2">
+                    <option value="#">시군구선택</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">방문일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="제안 제목, 제안자명 입력">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- 201130 :: 추가
+          아래쪽 전채적으로 변경됨
+        -->
+
+        <!-- 전체 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">온라인 제안 대기</a></li>
+              <li><a href="#">온라인 제안 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width70">
+                <col class="width100">
+                <col class="width100">
+                <col class="width100">
+                <col>
+                <col class="width140">
+                <col class="width140">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안자명</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1033</th>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="priorConsultation03.html">하남시 용도지구 제안</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>제안 대기</td>
+                </tr>
+                <tr>
+                  <th>9</th>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="priorConsultation03.html">하남시 용도지구 제안</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>담당자 검토 중</td>
+                </tr>
+                @@for(var i = 0 ; i < 8; i++){
+                <tr>
+                  <th>${8 - i}</th>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="priorConsultation03.html">하남시 용도지구 제안</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>입안 반영</td>
+                </tr>
+                }
+                <!-- 201130 :: 텍스트추가-->
+                <tr>
+                  <td colspan="9">
+                    등록된 주민 사전협의 내역이 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <!-- 201130 :: 텍스트수정-->
+          <li>제안 제목을 클릭하시면 등록된 사전협의 정보 확인이 가능합니다. (기관 관리자 및 등록 담당자만 확인 가능)</li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+        <!-- // 전체 -->
+
+        <!-- 온라인 제안 대기 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">온라인 제안 대기</a></li>
+              <li><a href="#">온라인 제안 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width70">
+                <col class="width100">
+                <col class="width100">
+                <col class="width100">
+                <col>
+                <col class="width140">
+                <col class="width140">
+                <col class="width80">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안자명</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1033</th>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="priorConsultation03.html">하남시 용도지구 제안</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>제안 대기</td>
+                </tr>
+                <tr>
+                  <th>1033</th>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="#js__alert" jq-action="modal">확인 불가 안내 팝업 출력</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>제안 대기</td>
+                </tr>
+                  <td colspan="9">
+                    등록된 주민 사전협의 내역이 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>제안 제목을 클릭하시면 등록된 사전협의 정보 확인이 가능합니다. (기관 관리자 및 등록 담당자만 확인 가능)</li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+        <!-- // 온라인 제안 대기 -->
+
+        <!-- 온라인 제안 완료 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">온라인 제안 대기</a></li>
+              <li class="active"><a href="#">온라인 제안 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">온라인 제안일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>오프라인 사전협의 내역</caption>
+              <colgroup>
+                <col class="width70">
+                <col class="width100">
+                <col class="width110">
+                <col class="width100">
+                <col class="width100">
+                <col>
+                <col class="width140">
+                <col class="width140">
+                <col class="width80">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">온라인 제안일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안자명</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1033</th>
+                  <td>2020-10-10</td>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="priorConsultation04.html">하남시 용도지구 제안</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>제안 완료</td>
+                </tr>
+                <tr>
+                  <th>1033</th>
+                  <td>2020-10-10</td>
+                  <td>2020-10-10</td>
+                  <td>주민</td>
+                  <td>고길동</td>
+                  <td class="tal"><a href="#js__alert" jq-action="modal">확인 불가 안내 팝업 출력</a></td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>홍길동</td>
+                  <td>제안 완료</td>
+                </tr>
+                <tr>
+                  <td colspan="10">
+                    사전협의 후 온라인 제안 완료 내역이 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>제안 제목을 클릭하시면 등록된 사전협의 정보 확인이 가능합니다. (기관 관리자 및 등록 담당자만 확인 가능)</li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+        <!-- //온라인 제안 완료 -->
+
+        <!-- 확인불가 안내 팝업 -->
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>주민 사전협의 정보 확인</h2>
+          </div>
+          <div class="laymodal-content tac">
+            기관 관리자이거나<br>
+            ‘주민 사전협의 정보 등록’한 담당자 본인만<br>
+            상세 내용 확인이 가능합니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

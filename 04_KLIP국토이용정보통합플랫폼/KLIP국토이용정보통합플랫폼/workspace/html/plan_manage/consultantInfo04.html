@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '위원 위촉 정보 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 구성 관리</li>
+          <li>위원 위촉 정보 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>위원 위촉 정보 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>위촉된 위원의 정보에 변경 사항이 발생된 경우 변경 후 이력을 남겨 주세요.</li>
+            <li class="pcolor-red">휴대전화로 각종 알림 메시지가 발송되므로 휴대전화 번호가 변경된 경우 꼭 현행화 해주세요!</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">위촉 정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>위촉 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th rowspan="2">위원 구분 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="frm-opt-list inline">
+                      <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate1"><label for="mbmcate1"><span></span> 지방의회 의원</label>
+                      <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate2"><label for="mbmcate2"><span></span> 전문가</label>
+                      <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate3"><label for="mbmcate3"><span></span> 공무원(외부)</label>
+                      <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate4"><label for="mbmcate4"><span></span> 공무원(내부)</label>
+                    </div>
+                    <span class="flr fz-small tcolor-gray2">참고) 공무원 중 국토이용정보통합플랫폼 비 사용자는  외부로 선택</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <!-- 1215 :: 텍스트수정 -->
+                        <li>
+                          국토계획법 시행령 제111조(시·도도시계획위원회의 구성 및 운영) ③항
+                          <p>
+                            시·도도시계획위원회의 위원은 다음 각 호의 어느 하나에 해당하는 자 중에서 시·도지사가 임명 또는 위촉한다. <br>
+                            이 경우 제3호에 해당하는 위원의 수는 전체 위원의 3분의 2 이상이어야 하고, 법 제8조제7항에 따라 농업진흥지역의 해제 또는 보전산지의 지정해제를 할 때에 도시·군관리계획의 변경이 필요하여 시·도도시계획위원회의 심의를 거쳐야 하는 시·도의 경우에는 농림 분야 공무원 및 농림 분야 전문가가 각각 2명 이상이어야 한다
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>당해 시·도 지방의회의 의원</li>
+                            <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원 </li>
+                            <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                          </ul>
+                        </li>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ③항
+                          <p>
+                            시·군·구도시계획위원회의 위원은 다음 각호의 자중에서 시장·군수 또는 구청장이 임명 또는 위촉한다. 
+                            이 경우 제3호에 해당하는 위원의 수는 위원 총수의 50퍼센트 이상이어야 한다. 
+                          </p>
+                          <ul class="cs-list-number cs-list-number">
+                            <li>당해 시·군·구 지방의회의 의원</li>
+                            <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원</li>
+                            <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">전문 분야 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <select class="cs-input width50p" title="전문 분야">
+                      <option value="">토지이용</option>
+                    </select>
+                    <span class="flr fz-small tcolor-gray2">참고) 국토계획법 시행령에 없는 분야는 기타 중에서 선택</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제111조(시·도도시계획위원회의 구성 및 운영) ③항 3호
+                          <p>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</p>
+                        </li>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ③항 3호
+                          <p>
+                            토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th rowspan="2">위촉 기간 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-datepicker-set inlineblock">
+                      <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                      <div>~</div>
+                      <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                    </div>                    
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제111조(시·도도시계획위원회의 구성 및 운영) ④항 
+                          <p>
+                            제3항제3호에 해당하는 위원의 임기는 2년으로 하되, 연임할 수 있다. 
+                            다만, 보궐위원의 임기는 전임자의 임기중 남은 기간으로 한다.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>도시계획위원회 위원의 경우 여러 기관에서 겸임할 수 있으므로 타 기관이 운영중인 위원회 정보가 출력될 수 있습니다. (단, 타 기관이 운영중인 위원회의 세부 정보는 확인할 수 없음)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">개인 정보</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <!-- 1215 :: dimmedobject 수정가능할경우 dimmedobject 제거-->
+          <div class="board-view-tb _tal dimmedobject">
+            <table>
+              <caption>개인 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <!-- 1214 :: title추가 -->
+                    <input type="text" class="cs-input width100p" placeholder="이름을 입력하세요" title="이름">
+                  </td>
+                  <th scope="row">소속 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <!-- 1214 :: title추가 -->
+                    <select class="cs-input width100p" title="소속">
+                      <option value="">소속을 선택하세요</option>
+                      <option value="" checked>경기대학교</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">부서</th>
+                  <td>
+                    <!-- 1214 :: title추가 -->
+                    <select class="cs-input width100p" title="부서">
+                      <option value="">부서를 선택하세요</option>
+                      <option value="" checked>OOOO학과</option>
+                    </select>
+                  </td>
+                  <th scope="row">직위 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <!-- 1214 :: title추가 -->
+                    <input type="text" class="cs-input width100p" placeholder="직위를 입력하세요" vlaue="전임교수" title="직위">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="tel">직장전화</label></th>
+                  <td>
+                    <div class="cs-input-tel">
+                      <select class="cs-input" title="지역번호 선택">
+                        <option>지역번호 선택</option>
+                        <option>02</option>
+                        <option>032</option>
+                      </select>
+                      <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                      <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                      <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                    </div>
+                  </td>
+                  <th scope="row" rowspan="2"><label for="tel">이메일 <i class="icon-required">필수 입력</i></label></th>
+                  <td rowspan="2">
+                    <div class="cs-input-email3">
+                      <input type="text" class="cs-input" title="이메일 아이디">
+                      <div>@</div>
+                      <input type="text" class="cs-input" title="이메일 뒤 주소">
+                      <span class="cs-btn2-gray-line cs-btn-default">확인완료</span>
+                      <!-- 1214 :: title추가 -->
+                      <select name="" id="" class="cs-input" title="이메일 뒤 주소">
+                        <option value="">도메인 선택</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="tel">휴대전화 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <input type="text" class="cs-input width100p" id="tel" value="010-1234-1234">
+                      <span class="cs-btn2-gray-line cs-btn-default">확인완료</span>
+                    </div>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>공무원(내부)인 위원의 개인 정보는 변경 처리가 불가능합니다. 본인에게 개인 정보 현행화 요청을 해주세요.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="consultantInfo03.html" class="cs-btn-line">취소</a>
+          <!-- 1215 :: 수정 -->
+          <a href="#js__statecharge" jq-action="modal" class="cs-btn">수정</a>
+        </section>
+
+        <!-- 1215 :: 삭제
+          
+          <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>위원 위촉 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            위원의 이름을 입력해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div> -->
+
+        <!-- 1215 :: 추가 -->
+
+        <div id="js__statecharge" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>위원 위촉 정보 수정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              위원의 정보 수정 내용을 입력해 주세요.
+            </section>
+
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>담당자 지정 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">수정 정보 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" class="cs-radio" name="chargeState" id="chargeState1"><label for="chargeState1"><span></span> 개인 정보</label>
+                        <input type="radio" class="cs-radio" name="chargeState" id="chargeState2"><label for="chargeState2"><span></span> 위촉 정보</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수정 내용 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="변경하신 내용을 입력해 주세요. &#13;&#10;(예. 휴대전화 번호 변경, 위촉 구분, 위촉 분야, 위촉 기간 등)" title="전달사항"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+        
+            <div class="cs-alert">수정 정보 구분을 선택해 주세요. </div>
+            <div class="cs-alert">변경하신 내용을 입력해 주세요. </div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn _wauto" onclick="lay_pop_close('#js__statecharge');lay_pop_open('#js__statechargeComplete')">수정</button>
+          </div>
+        </div>
+
+        <div id="js__statechargeComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>위원 위촉 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            도시계획위원회 위원의 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="consultantInfo03.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

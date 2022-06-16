@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '입안 제안'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 0})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        입안 제안
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li><span>1</span> <b>사전협의 확인</b></li>
+              <li><span>2</span> <b>개인정보 수집 동의</b></li>
+              <li class="active"><span>3</span> <b>제안서 등록</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>4. 제안 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="@@htmlRoot/registration06.html">
+            <div class="join-cont join-cont-step3">
+              <section>
+                <strong class="join-title">제안 기관정보(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">소속 기관</strong>
+                    <div class="frm-cont">
+                      경기도 고양시
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">소속 부서</strong>
+                    <div class="frm-cont">
+                      ㅇㅇㅇ과
+                    </div>
+                  </div>
+                </div>
+                <ul class="cs-list-dot">
+                  <li>사전협의 결과로 자동 입력됩니다</li>
+                </ul>
+              </section>
+
+              <section>
+                <strong class="join-title">제안자 개인정보(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <label for="name" class="frm-title">이름</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="name" class="cs-input cs-gride-col12">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="name" class="frm-title">부서 연락처(자리)</label>
+                    <div class="frm-cont">
+                      <div class="cs-input-tel">
+                        <select class="cs-input" title="지역번호 선택">
+                          <option>지역번호 선택</option>
+                          <option>02</option>
+                          <option>032</option>
+                        </select>
+                        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                        <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="userMail" class="frm-title">공직자통합메일</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <div class="cs-input-email cs-gride-col12">
+                          <input type="text" id="userMail" title="공직자통합메일 ID 입력" value="공직자통합메일 ID 입력">
+                          <span>@korea.kr</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <strong class="join-title">제안서 정보(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <label for="reqGroup" class="frm-title">제안 분야</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <select name="" id="reqGroup" class="cs-input cs-gride-col12">
+                          <option>분야 선택</option> 
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="reqTitle" class="frm-title">제안 제목</label>
+                    <div class="frm-cont">
+                      <input type="text" id="reqTitle" class="cs-input width100p block js__textCounter" data-maxbyte="100" placeholder="제목 입력">
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="reqText" class="frm-title">제안 내용</label>
+                    <div class="frm-cont">
+                      <textarea type="text" id="reqText" class="cs-input width100p js__textCounter block" rows="5" data-maxbyte="1000" placeholder="제안 내용 입력"></textarea>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">도시·군관리계획도서</strong>
+                    <div class="frm-cont">
+                      <input type="file" class="cs-file" id="file1" placeholder="pdf 파일로만 등록 가능합니다.">
+                      <label for="file1" class="cs-gride">
+                        <span class="cs-input cs-gride-col9 _disabled js__filename">pdf 파일로만 등록 가능합니다.</span>
+                        <span class="cs-btn2-gray cs-gride-col3">파일 선택</span>
+                      </label>
+                      <div class="lo-frm-alert">(법률  제25조) 도시·군관리계획도서는 계획도와 계획조서를 말한다. </div>
+                    </div>
+                  </div>
+
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">계획설명서</strong>
+                    <div class="frm-cont">
+                      <input type="file" class="cs-file" id="file2" placeholder="pdf 파일로만 등록 가능합니다.">
+                      <label for="file2" class="cs-gride">
+                        <span class="cs-input cs-gride-col9 _disabled js__filename">pdf 파일로만 등록 가능합니다.</span>
+                        <span class="cs-btn2-gray cs-gride-col3">파일 선택</span>
+                      </label>
+                      <div class="lo-frm-alert">(법률  제25조) 계획설명서는 기초조사결과·재원조달방안 및 경관계획 등을 포함한다.</div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+              <div class="__btn-set cs-btn-set">
+                <a href="@@htmlRoot/registration01.html" class="cs-btn-line">취소</a>
+                <button type="submit" class="cs-btn">다음</button>
+              </div>
+            </div>
+          </form>
+          <!--// join-cont -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

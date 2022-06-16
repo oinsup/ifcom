@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '재해취약성 분석 결과', 'webPath': '..'})
+  <!--css -->
+  <link rel="stylesheet" href="../common/css/main.css">
+  <script src="../common/js/main.js"></script>
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body type02">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li>재해취약성 분석 결과</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>재해취약성 분석 결과</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>
+              국토의 계획 및 이용에 관한 법률 제20조 ②항에 따른 도시·군기본계획 수립 및 제27조 ③항에 따른 도시·군관리계획 입안 시 재해분석 결과를 포함하여야 합니다.
+            </li>
+            <li>
+              국토이용정보통합플랫폼에서 제공하는 재해취약성 분석 결과는 시·군·구 단위로만 조회가 가능하며, 각 기관별로 구축하신 데이터를 기반으로 제공하므로 데이터의<br />
+              유무에 따라 조회 결과가 없을 수 있습니다. 
+            </li>
+          </ul>
+        </div>
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts type03">
+              <div>
+                <strong class="__tit">
+                  <label for="s01">
+                  조회 기관</strong></label>
+                <div class="__col-harf">
+                  <select name="" id="s01" class="cs-input width50p" title="조회 기관 선택">
+                    <option>부산광역시</option>
+                  </select>
+                  <select name="" id="" class="cs-input width50p" title="조회 기관 선택">
+                    <option>강서구</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <strong class="__tit">
+                  
+                  조회 기준</strong>
+                <div class="frm-opt-list">
+                  <input type="radio" name="datecate" class="cs-radio" id="i01" checked><label for="i01"><span></span> 집계구</label>
+                  <input type="radio" name="datecate" class="cs-radio" id="i02"><label for="i02"><span></span> 지번</label>
+                  <input type="radio" name="datecate" class="cs-radio" id="i03"><label for="i03"><span></span> 도로명</label>
+                </div>
+              </div>
+
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="집계구명, 지번 주소, 도로명 주소 입력">
+                </div>
+              </div>
+            </div>
+            
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <!--// content :: 내용 -->
+    </div>
+
+
+
+    <div class="map-container">
+      
+
+
+      <div class="main-map">
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $("#toc .board-list-text .show").on('click', function(){
+              $(this).closest("#toc").addClass("show");
+            });//
+            $("#toc .board-list-text .hide").on('click', function(){
+              $(this).closest("#toc").removeClass("show");
+            });//
+
+            $(".mapPopupArea .info .infoHead .btn").on('click', function(){
+              $(this).closest(".info").removeClass("active");
+            })
+          })
+        </script>
+
+        <div id="toc" class="">
+          <div class="board-list-text _fixed">
+            <!-- //table -->
+            <div class="table type01">
+              <h3 class="tableTiTle"><span class="cRed">집계구</span> 조회 결과 : <span class="fLight">1,000개</span></h3>
+              <table>
+                <caption>집계구 조회 결과 리스트</caption>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: 145px;">
+                  <col style="width: auto;">
+                  <col style="width: 72px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">집계구 코드</th>
+                    <th scope="col">집계구명</th>
+                    <th scope="col">위치</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01 OO동 01 OO동 01 OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>11010720100001</td>
+                    <td class="tal">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>11010720100001</td>
+                    <td class="tal txtEp">OO동 01 OO동 01 OO동 01 OO동 01 OO동 01</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>
+                  집계구명을 클릭하면, 하단에 인접 필지 목록이 출력됩니다.
+                </li>
+                <li>
+                  집계구 위치 확인 후 출력되는 팝업에서 분석 확인서 조회가 가능합니다.
+                </li>
+              </ul>
+
+              <div class="board-paging">
+                <a href="#" class="paging-first">처음</a>
+                <a href="#" class="paging-prev">이전</a>
+                <strong>1</strong>
+                <a href="#">2</a>
+                <a href="#" class="paging-next">다음</a>
+                <a href="#" class="paging-last">마지막</a>
+              </div>
+            </div>
+            <!-- //table -->
+
+            <!-- //table -->
+            <div class="table type02">
+              <h3 class="tableTiTle"><span class="cRed">OO동01</span> 인접 필지 조회 결과 : <span class="fLight">25개</span></h3>
+              <table>
+                <caption>인접 필지 조회 결과 리스트</caption>
+                <colgroup>
+                  <col style="width: 50px;">
+                  <col style="width: auto;">
+                  <col style="width: 111px">
+                  <col style="width: 72px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">지번 주소</th>
+                    <th scope="col">지목</th>
+                    <th scope="col">위치</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td class="tal  txtEp">강서구 대저1동 780-71 강서구 대저1동 780-71</td>
+                    <td>전</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="tal  txtEp">강서구 대저1동 780-71</td>
+                    <td>전</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="tal  txtEp">강서구 대저1동 780-71</td>
+                    <td>전</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="tal  txtEp">강서구 대저1동 780-71</td>
+                    <td>전</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal  txtEp">강서구 대저1동 780-71</td>
+                    <td>전</td>
+                    <td>
+                      <a href="#" class="cs-btn2-gray2 cs-btn-default">확인</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <div class="board-paging">
+                <a href="#" class="paging-first">처음</a>
+                <a href="#" class="paging-prev">이전</a>
+                <strong>1</strong>
+                <a href="#">2</a>
+                <a href="#" class="paging-next">다음</a>
+                <a href="#" class="paging-last">마지막</a>
+              </div>
+            </div>
+            <!-- //table -->
+            <!-- tocControl -->
+            <!-- <div class="tocControl"> -->
+              <button type="button" class="btn show">
+                <span>Toc 열기</span>
+              </button>
+              <button type="button" class="btn hide">
+                <span>Toc 닫기</span>
+              </button>
+            <!-- </div> -->
+            <!-- //tocControl -->
+          </div>
+        </div>
+        <!-- //toc -->
+
+        <!-- toolbar -->
+        <div class="toolbar">
+          <ul>
+            <li>
+              <button type="button" class="btnTool tool01 js__mapsetting">
+                <span>레이어</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btnTool tool02">
+                <span>영역</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btnTool tool03">
+                <span>확대</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btnTool tool04">
+                <span>축소</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="btnTool tool05">
+                <span>초기화</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- //toolbar -->
+        
+
+        
+
+        <!-- 지도설정 -->
+        <div class="map-setting">
+          <div class="map-setting__header">
+            재해취약성 레이어 설정 <button>x</button>
+          </div>
+          <div class="map-setting__cont">
+            <p>조회하신 시·군·구에 재해취약성 분석 <br />
+              결과가 있는 경우에만 선택 가능합니다.</p>
+          </div>
+          <div class="map-setting__lsit">
+            <ul class="map-setting__lsit-list">
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting1"> 
+                <label for="mapsetting1"><span></span></label>
+                <strong>폭우</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting2"> 
+                <label for="mapsetting2"><span></span></label>
+                <strong>폭염</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting3"> 
+                <label for="mapsetting3"><span></span></label>
+                <strong>폭설</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting4"> 
+                <label for="mapsetting4"><span></span></label>
+                <strong>가뭄</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting5"> 
+                <label for="mapsetting5"><span></span></label>
+                <strong>강풍</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting6"> 
+                <label for="mapsetting6"><span></span></label>
+                <strong>해수면 상승</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <ul>
+                      <li><img src="../common/images/uqtRed.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtYellow.png" alt=""> 1등급</li>
+                      <li><img src="../common/images/uqtMellon.png" alt=""> 3등급</li>
+                      <li><img src="../common/images/uqtGreen.png" alt=""> 4등급</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btn">적용</button>
+        </div>
+
+        <!-- mapPopup -->
+        <div class="mapPopupArea">
+          <!-- info -->
+          <div class="info type01 active" style="left: 55%; top:51%;">
+            <!-- infoHead -->
+            <div class="infoHead">
+              <h3 class="infoTitle">집계구 정보</h3>
+              <button type="button" class="btn"><span>닫기</span></button>
+            </div>
+            <!-- //infoHead -->
+            <div class="infoBody">
+              <ul>
+                <li>
+                    <p class="col01">집계구명</p>
+                    <p class="col02">홍도동01</p>
+                </li>
+                <li>
+                  <p class="col01">면적</p>
+                  <p class="col02">1,924,443 ㎢</p>
+                </li>
+              </ul>
+              <button type="button" class="btn">분석 확인서 조회</button>
+            </div>
+          </div>
+          <!-- //info -->
+
+          <!-- info -->
+          <div class="info type02 active" style="left: 71%; top: 44%;">
+            <!-- infoHead -->
+            <div class="infoHead">
+              <h3 class="infoTitle">필지 정보</h3>
+              <button type="button" class="btn"><span>닫기</span></button>
+            </div>
+            <!-- //infoHead -->
+            <div class="infoBody">
+              <ul>
+                <li>
+                  <p class="col01">소재지</p>
+                  <p class="col02">강서구 대저1동 780-71 강서구 대저1동 780-71</p>
+                </li>
+                <li>
+                  <p class="col01">지목</p>
+                  <p class="col02">전</p>
+                </li>
+                <li>
+                  <p class="col01">면적</p>
+                  <p class="col02">23 ㎢</p>
+                </li>
+              </ul>
+              <button type="button" class="btn">인접 집계구 조회</button>
+            </div>
+          </div>
+          <!-- //info -->
+
+          <!-- info -->
+          <div class="info type03 active" style="left: 41%; top: 24%;">
+            <!-- infoHead -->
+            <div class="infoHead">
+              <h3 class="infoTitle">영역 정보</h3>
+              <button type="button" class="btn"><span>닫기</span></button>
+            </div>
+            <!-- //infoHead -->
+            <div class="infoBody">
+              <ul>
+                <li>
+                  <p class="col01">총면적</p>
+                  <!-- <p class="col02">강서구 대저1동 780-71 강서구 대저1동 780-71</p> -->
+                </li>
+                <li>
+                  <p class="col01">47.5㎢</p>
+                </li>
+              </ul>
+              <button type="button" class="btn">인접 집계구 확인</button>
+            </div>
+          </div>
+          <!-- //info -->
+        </div>
+        <!-- mapPopup -->
+
+        <!-- comment -->
+        <div class="comment">
+          <p>
+            조회하신 지역에 재해취약성 분석 데이터가 없는 경우 재해취약성 레이어가 표출되지 않습니다. (6개 항목 중 일부만 데이터가 있는 경우는 일부만 제공)  
+          </p>
+        </div>
+        <!-- comment -->
+        <!-- 지도 -->
+        <div class="main-map-cont" style="background-image:url('../common/images/sample/img_disastermap.jpg');background-position:center;background-repeat:no-repeat;transition:all .3s;z-index:900;position: relative; width:100%; height:100%"></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

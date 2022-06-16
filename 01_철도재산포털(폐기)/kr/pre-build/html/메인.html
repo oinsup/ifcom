@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap" class="mainPage">
+    @@include('include/header.html')
+    <div id="container">
+        <div class="mainVisual">
+            <!--swiper-wrapper-->
+            <div class="swiper-wrapper">
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider01.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01">국민을 잇는 철도</p>
+                            <p class="txt02">세계를 여는 철도</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider02.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01">국가 철도사업을 이끄는</p>
+                            <p class="txt02">NO.1 Leader</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider03.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01 wd310">빠르고 안전하고 쾌적한 철도로</p>
+                            <p class="txt02">국민과 함께</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+            </div>
+            <!--//swiper-wrapper-->
+            <!--btnScroll-->
+            <div class="btnScroll">
+                <button class="swiper-next"><span class="hidden">다음</span></button>
+                <button class="swiper-prev"><span class="hidden">이전</span></button>
+            </div>
+            <!--//btnScroll-->
+            <!--roll-controll-->
+            <div class="roll-controll">
+                <ul class="slideList">
+                    <li>
+                        <a href="#" class="circle circle01">
+                            <span>국유재산<br/>사용안내</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="circle circle02">
+                            <span>개발사업<br/>대상지</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="circle circle03">
+                            <span>폐터널<br/>현황</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="main-roll-pause"></button>
+            </div>
+            <!--//roll-controll-->
+        </div>
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

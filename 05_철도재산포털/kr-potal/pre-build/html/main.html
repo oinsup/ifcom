@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+    <div id="wrap" class="main">
+        <!--header-->
+        @@include('include/header.html')
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <div class="swiper">
+               <div class="swiper-wrapper">
+                   <div class="swiper-slide slide01">
+                       <div class="txtBox">
+                           <span class="smTxt">KOREA NATIONAL RAILWAY</span>
+                           <p>국가 철도사업을 이끄는 NO.1 Leader</p>
+                           <strong>국가철도공단</strong>
+                           <div class="swiperNavi flex ac center">
+                               <button class="swiper-button-prev"></button>
+                               <button class="swiper-button-next"></button>
+                               <div class="flex ac">
+                                   <span class="thisNum">1</span>
+                                   /
+                                   <span class="totalNum">2</span>
+                               </div>
+                               <button type="button" class="swiperPause"><span class="hidden">일시정지</span></button>
+                               <button type="button" class="swiperPlay"><span class="hidden">재생</span></button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="swiper-slide slide02">
+                       <div class="txtBox">
+                           <span class="smTxt">KOREA NATIONAL RAILWAY</span>
+                           <p>국민을 잇는 철도 · 세계를 여는 철도</p>
+                           <strong>국가철도공단</strong>
+                           <div class="swiperNavi flex ac center">
+                               <button class="swiper-button-prev"></button>
+                               <button class="swiper-button-next"></button>
+                               <div class="flex ac">
+                                   <span class="thisNum">1</span>
+                                   /
+                                   <span class="totalNum">2</span>
+                               </div>
+                               <button type="button" class="swiperPause"><span class="hidden">일시정지</span></button>
+                               <button type="button" class="swiperPlay"><span class="hidden">재생</span></button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="swiper-slide slide03">
+                       <div class="txtBox">
+                           <span class="smTxt">KOREA NATIONAL RAILWAY</span>
+                           <p>빠르고 안전하고 쾌적한 철도로<br class="mobile"/> 국민과 함께</p>
+                           <strong>국가철도공단</strong>
+                           <div class="swiperNavi flex ac center">
+                               <button class="swiper-button-prev"></button>
+                               <button class="swiper-button-next"></button>
+                               <div class="flex ac">
+                                   <span class="thisNum">1</span>
+                                   /
+                                   <span class="totalNum"></span>
+                               </div>
+                               <button type="button" class="swiperPause"><span class="hidden">일시정지</span></button>
+                               <button type="button" class="swiperPlay"><span class="hidden">재생</span></button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                <div class="swiper-pagination"></div>
+                <div class="quickLink">
+                    <ul>
+                        <li>
+                            <div class="hovBox">
+                                <span>01</span>
+                                <p>국유재산 사용안내</p>
+                            </div>
+                            <a href="01국유재산안내_사용안내.html" title="국유재산 사용안내" class="type01">
+                                <span>01</span>
+                                <p>국유재산 사용안내</p>
+                                <i>Read More</i>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="hovBox">
+                                <span>02</span>
+                                <p>개발사업 대상지</p>
+                            </div>
+                            <a href="02개발사업대상지_수도권.html" title="개발사업 대상지" class="type02">
+                                <span>02</span>
+                                <p>개발사업 대상지</p>
+                                <i>Read More</i>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="hovBox">
+                                <span>03</span>
+                                <p>폐터널 현황</p>
+                            </div>
+                            <a href="03유휴부지및폐터널_폐터널현황.html" title="폐터널 현황" class="type03">
+                                <span>03</span>
+                                <p>폐터널 현황</p>
+                                <i>Read More</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                var swiper = new Swiper('.swiper',{
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    loop:true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    autoplay:{
+                        delay:5000,
+                    },
+                    on:{
+                        activeIndexChange:function (){
+                            $('.thisNum').text(this.realIndex+1);
+                        }
+                    }
+                })
+                var length = $('.swiper-pagination-bullet').length;
+                $('.totalNum').text(length);
+                $('.swiperPause').on({
+                    "click":function (){
+                        swiper.autoplay.stop();
+                        $('.swiperPause').hide();
+                        $('.swiperPlay').show();
+                    }
+                });
+                $('.swiperPlay').on({
+                    "click":function (){
+                        swiper.autoplay.start();
+                        $('.swiperPlay').hide();
+                        $('.swiperPause').show();
+                    }
+                })
+            </script>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+</html>

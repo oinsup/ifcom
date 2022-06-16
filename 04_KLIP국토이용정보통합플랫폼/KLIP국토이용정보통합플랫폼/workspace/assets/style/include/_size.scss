@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+.width100p {width: 100% !important;}
+.width50p {width:50%;}
+.maxWidth100p{max-width: 100%;}
+
+.ml0{margin-left: 0 !important;}
+.margin0{margin:0 !important}
+
+@for $i from 1 to 250{
+  .width#{$i*5}{width:$i * 5px;}
+}
+
+@for $i from 1 to 100{
+  .mt#{$i*5}{margin-top:$i *5px;}
+}
+
+@for $i from 1 to 100{
+  .mt-#{$i*5}{margin-top:-($i * 5px);}
+}
+
+@for $i from 1 to 100{
+  .mb#{$i*5}{margin-bottom:$i *5px;}
+}
+
+@for $i from 1 to 100{
+  .ml#{$i*5}{margin-left:$i *5px;}
+}
+
+@for $i from 1 to 100{
+  .mr#{$i*5}{margin-right:$i *5px;}
+}
+
+@for $i from 1 to 50{
+  .fz#{$i}{font-size:#{$i}px}
+}
+
+@for $i from 1 to 100{
+  .lh#{$i}{line-height:#{$i}px}
+}

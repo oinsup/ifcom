@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '로그인'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 1})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        로그인
+      </h2>
+      <div class="content">
+        
+        <div class="loginfrm">
+          <div class="login-bg">
+            <div><img src="@@imageRoot/login_text.png" alt="국토의 지속 가능한 발전을 지원하는 국토이용정보플랫폼 KLIP"></div>
+          </div>
+          <div class="loginfrm-cont">
+            <section>
+              <h3>아이디 로그인</h3>
+              <form action="@@htmlRoot/index.html">
+                <div class="login-input-group">
+                  <div>
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" placeholder="아이디 입력(공직자통합메일 ID와 동일) ">
+                  </div>
+                  <div>
+                    <label for="userPw">비밀번호</label>
+                    <input type="text" id="userPw" placeholder="비밀번호 입력">
+                  </div>
+                </div>
+                <div class="loginfrm-guide">비밀번호 5회 연속 오류 시, 아이디 로그인이 제한됩니다.</div>
+                <div class="loginfrm-btns-findidpw"><a href="@@htmlRoot/login_findidpw.html">아이디/비밀번호 찾기</a></div>
+                <div class="loginfrm-btns">
+                  <button class="cs-btn">확인</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="loginfrm-gpki">
+              <h3>GPKI 로그인</h3>
+              <div class="loginfrm-gpki-text">PC에 저장된 인증서를 최초 1회 등록 후 이용 가능합니다.</div>
+              <div class="loginfrm-btns">
+                <button class="cs-btn-line">확인</button>
+              </div>
+            </section>
+
+          </div>
+        </div>
+        <!-- //loginfrm -->
+
+        <div class="cs-box-alert mt50">
+          <strong>유의사항</strong>
+          <div>
+            <ul class="cs-list-dot _gray tcolor-gray fz14">
+              <li>국토이용정보통합플랫폼(Korea Land use Information Platform)은 사용 권한 신청 후 승인 받은 사용자만 이용 가능합니다. </li>
+              <li>사용 권한 신청을 하지 않은 사용자는 상단의 ‘사용 권한 신청’ 페이지에서 권한 신청을 해주세요. (UPIS표준시스템과는 별도로 신청하셔야 합니다.) </li>
+              <li>로그인 시도 시 ‘승인 대기‘ 상태인 경우 상단의  ‘권한 승인 안내‘ 페이지를 참고하여 승인 요청해 주세요.</li>
+            </ul>
+          </div>
+        </div>
+
+        <button jq-action="modal" jq-target="#js__alert">경고창</button>
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>로그인</h2>
+          </div>
+          <div class="laymodal-content tac">
+            아이디를 입력해 주세요.<br>
+            (공직자통합메일 ID와 동일하게 입력) 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <button jq-action="modal" jq-target="#js__alert2">비번틀림</button>
+        <div id="js__alert2" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>로그인</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              사용 권한 신청이 되지 않은 아이디이거나,<br>
+              아이디 또는 비밀번호를 잘못 입력하셨습니다.<br>
+              비밀번호 입력 연속 5회 실패 시 서비스 이용이 불가합니다. 
+            </p>
+            <p>
+              (<b class="pcolor-red">1</b>/5회) 
+            </p>
+            <p>
+              아이디/비밀번호 찾기 페이지로 이동하시겠습니까?
+            </p>
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn cs-btn-line" jq-action="closeModal">다시 입력</button>
+            <a href="@@htmlRoot/login_findidpw.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <button jq-action="modal" jq-target="#js__alert3">접속불가</button>
+        <div id="js__alert3" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>로그인</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              비밀번호 입력 <b class="pcolor-red">연속 5회 실패</b>로<br>
+              ‘<b class="pcolor-red">접속 불가</b>’ 상태로 변경되었습니다.  
+            </p>
+
+            <p>
+              소속 기관 관리자에게 ‘<b class="pcolor-red">접속 불가</b>’ 해제 요청을 해주세요.<br>
+              소속 기관 관리자 연락처 확인 페이지로 이동하시겠습니까?
+            </p>
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn cs-btn-line" jq-action="closeModal">취소</button>
+            <a href="@@htmlRoot/join6.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <button jq-action="modal" jq-target="#js__paswordChange">비밀번호 변경</button>
+
+        <div id="js__paswordChange" class="laymodal width700 modal-password" tabindex="0">
+          <div class="laymodal-header">
+            <h2>비밀번호 변경</h2>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <i class="icon-lock"></i>
+              <p>
+                <b class="pcolor-red">주기적인 비밀번호 변경으로 소중한 개인정보를 지켜주세요. </b><br>
+                안전한 개인정보 보호를 위해 3개월마다 한 번씩 변경해 주세요.
+              </p>
+            </section>
+
+            <section>
+              아이디와 비슷한 설정, 연속적인 숫자를 비밀번호로 사용하는 것은 불가하며, <br>
+              특수기호는 !@ # $ % ^ * + = - 만 사용 가능합니다.
+            </section>
+
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>비밀번호 변경</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><label for="pwchanger1">현재 비밀번호</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger1" placeholder="현재 비밀번호 입력"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="pwchanger2">신규 비밀번호</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger2" placeholder="영문 소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="pwchanger3">신규 비밀번호 확인</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger3" placeholder="영문 소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">현재 비밀번호를 입력해 주세요</div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="@@htmlRoot/index.html" class="cs-btn-line">다음에 변경</a>
+            <button class="cs-btn" onclick="lay_pop_close('#js__paswordChange');lay_pop_open('#js__passwordComplete')">확인</button>
+          </div>
+        </div>
+
+        <div id="js__passwordComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>비밀번호 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            비밀번호가 정상적으로 변경되었습니다.<br>
+            변경된 비밀번호로 다시 로그인 해주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+
+        <!-- 일회용 비밀번호 변경 -->
+        <button jq-action="modal" jq-target="#js__paswordChange2">일회용 비밀번호 변경</button>
+
+        <div id="js__paswordChange2" class="laymodal width700 modal-password" tabindex="0">
+          <div class="laymodal-header">
+            <h2>일회용 비밀번호 변경</h2>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <i class="icon-lock"></i>
+              <p>
+                <b class="pcolor-red">일회용 비밀번호 변경 후 서비스를 이용하실 수 있습니다. </b>
+              </p>
+            </section>
+
+            <section>
+              아이디와 비슷한 설정, 연속적인 숫자를 비밀번호로 사용하는 것은 불가하며, <br>
+              특수기호는 !@ # $ % ^ * + = - 만 사용 가능합니다.
+            </section>
+
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>비밀번호 변경</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><label for="pwchanger1">일회용 비밀번호</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger1" placeholder="안내 받은 9자리 문자 입력"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="pwchanger2">신규 비밀번호</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger2" placeholder="영문 소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="pwchanger3">신규 비밀번호 확인</label></th>
+                    <td><input type="text" class="cs-input _h35 width100p" id="pwchanger3" placeholder="영문 소문자, 숫자, 특수기호 조합 9~12자리"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">일회용 비밀번호를 입력해 주세요.</div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button class="cs-btn" onclick="lay_pop_close('#js__paswordChange2');lay_pop_open('#js__passwordComplete2')">변경</button>
+          </div>
+        </div>
+
+        <div id="js__passwordComplete2" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>일회용 비밀번호 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            비밀번호가 정상적으로 변경되었습니다.<br>
+            변경된 비밀번호로 다시 로그인 해주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

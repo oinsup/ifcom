@@ -1,0 +1,75 @@
+@charset 'utf-8';
+
+.ui-datepicker-header{background: #657583;height:70px;}
+.ui-datepicker{background: #fff;border: 1px solid #657583;box-sizing: border-box;width: 330px;border-radius:4px;display: none;}
+.ui-datepicker-calendar
+{
+  width: 100%;text-align: center;border-spacing:0;
+  thead th{background: #657583;color: #fff;height:40px;font-weight: normal;}
+  
+  .ui-state-default{display: block;height:45px;line-height: 45px;}
+  .ui-state-active{background: #bd3500;color: #fff;}
+  .ui-datepicker-week-end a{color: #d61a1a;}
+  .ui-datepicker-week-end .ui-state-active{color: #fff;}
+
+  .ui-state-disabled:not(.ui-datepicker-other-month) {background: #dadada;color:#b3b3b3}
+
+  tbody td
+  {
+    border:1px solid #efefef;
+    font-weight:500;
+    a{font-weight: 500;}
+  }
+  tbody tr td:first-child{border-left: 0;}
+  tbody tr td:last-child{border-right: 0;}
+  tbody tr:last-child td{border-bottom: 0;}
+  tbody tr:first-child td{border-top: 0;}
+
+}
+
+.ui-datepicker-title{padding:20px;}
+// .ui-datepicker-year
+// {
+//   border: 1px solid #dadde0;border-radius: 3px;width: 140px;height: 45px;box-sizing: border-box;padding-left: 25px;
+
+//   background:url('#{$image}/select_arr2.png') #fff no-repeat;
+//   background-position: right 9px top 50%;padding-right: 25px;
+//   -webkit-appearance: none;-moz-appearance: none;appearance: none;-ms-appearance: none;
+//   &::-ms-expand {display:none}
+// }
+
+.ui-datepicker-year
+{
+  $inputsBorderRadius: 3px;
+  $inputHeight: 40px;
+
+  border: 1px solid #dadde0;border-radius: $inputsBorderRadius;width:90px;
+  height: $inputHeight;line-height:($inputHeight - 2);padding:0 12px;box-sizing: border-box;
+  display: inline-block;vertical-align: middle;
+  background:url('#{$image}/select_arr.png') #fff no-repeat;
+  background-position: right 9px top 50%;padding-right: 25px;
+  -webkit-appearance: none;-moz-appearance: none;appearance: none;-ms-appearance: none;
+  &::-ms-expand {display:none}
+}
+
+
+.ui-datepicker-month{font-size: 16px;color: #fff;width:50px;text-align: center;position: absolute;right:64px;top:29px;}
+
+.ui-datepicker-prev,
+.ui-datepicker-next
+{
+  position: absolute;font-size: 0;width: 30px;height: 30px;cursor: pointer;top:26px;
+
+  &::after{content: '';width: 35%;height: 35%;border: 2px solid #fff;border-top: 0;border-left: 0;position: absolute;top: calc(25% - 1px);}
+}
+.ui-datepicker-prev
+{
+  right:130px;
+  &::after{transform: rotate(135deg);left: calc(25% + 3px);}
+}
+
+.ui-datepicker-next
+{
+  right:20px;
+  &::after{transform: rotate(-45deg);right: calc(25% + 3px);}
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <radialGradient id="radial-gradient" cx=".5" cy=".5" r=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ffce48"/>
+            <stop offset="1" stop-color="#f5cc5d"/>
+        </radialGradient>
+        <filter id="타원_122">
+            <feOffset dy="-1"/>
+            <feGaussianBlur stdDeviation=".5" result="blur"/>
+            <feFlood flood-opacity=".2" result="color"/>
+            <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+            <feComposite operator="in" in="color"/>
+            <feComposite operator="in" in2="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-4{fill:none;stroke:#141414;stroke-linecap:round;stroke-width:1.8px}
+        </style>
+    </defs>
+    <g id="ico2" transform="translate(-1393 -615)">
+        <path id="사각형_4127" data-name="사각형 4127" transform="translate(1393 615)" style="fill:none" d="M0 0h16v16H0z"/>
+        <g data-type="innerShadowGroup">
+            <circle id="타원_122-2" data-name="타원 122" cx="8" cy="8" r="8" transform="translate(1393 615)" style="fill:url(#radial-gradient)"/>
+            <g transform="translate(1393 615)" style="filter:url(#타원_122)">
+                <circle id="타원_122-3" data-name="타원 122" cx="8" cy="8" r="8" style="fill:#fff"/>
+            </g>
+        </g>
+        <path id="선_160" data-name="선 160" class="cls-4" transform="translate(1397.5 620.5)" d="M0 0v.5"/>
+        <path id="선_161" data-name="선 161" class="cls-4" transform="translate(1404.5 620.5)" d="M0 0v.5"/>
+        <path id="패스_8855" data-name="패스 8855" d="M6.151 2.487a4.169 4.169 0 0 0-5.674 0" transform="translate(1397.686 624.435)" style="stroke-miterlimit:10;stroke-width:1.2px;stroke:#141414;fill:none"/>
+    </g>
+</svg>

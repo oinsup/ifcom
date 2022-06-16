@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '위원 위촉 정보 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 입안 관리</li>
+          <li>위원 위촉 정보 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>위원 위촉 정보 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>
+              국토계획법 제113조(지방도시계획위원회)’에 의거하여 위원을 위촉한 경우 위원의 위촉 정보를 등록할 수 있습니다.
+              <ul>
+                <li>국토이용정보통합플랫폼 사용자인 공무원인 경우 ‘공무원(내부)추가’ 버튼 클릭 후 추가해 주세요.</li>
+                <li>국토이용정보통합플랫폼 비 사용자인 공무원, 지방의회 의원, 전문가는 직접  정보 입력 후 추가해 주세요.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">도시계획위원회 위원 정보 입력</h3>
+          <div class="board-required-info _type2"><i class="icon-required">필수 입력</i>필수 입력 <a href="#js__userfinder" class="cs-btn2-gray _h35" jq-action="modal">공무원(내부)추가</a></div>
+          <div class="board-view-tb">
+            <table>
+              <caption>도시계획위원회 위원 정보 입력</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width140">
+                <col class="width140">
+                <col class="width110">
+                <col>
+                <col class="width150">
+                <col class="width150">
+                <col class="width150">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">위원 구분 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">전문 분야</th>
+                  <th scope="col">이름 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">소속</th>
+                  <th scope="col">휴대전화 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">위촉 시작일 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">위촉 종료일 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">내역 관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bgcolor-blue">
+                  <td></td>
+                  <td>
+                    <select class="cs-input width100p" title="위원 구분">
+                      <option value="">구분 선택</option>
+                      <option value="">구분 선택</option>
+                      <option value="">구분 선택</option>
+                      <option value="">구분 선택</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select class="cs-input width100p" title="전문 분야">
+                      <option value="">구분 선택</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="cs-input width100p" placeholder="이름 입력" title="이름"></td>
+                  <td><input type="text" class="cs-input width100p" placeholder="소속 입력" title="소속"></td>
+                  <td><input type="text" class="cs-input width100p" placeholder="번호 입력(-제외)" title="휴대전화"></td>
+                  <td><input type="text" class="cs-input-date js__datepicker width100p" placeholder="시작일 선택" title="시작날짜 (입력예시 : 2020-01-01)"></td>
+                  <td><input type="text" class="cs-input-date js__datepicker width100p" placeholder="종료일 선택" title="종료날짜 (입력예시 : 2020-01-01)"></td>
+                  <td><button onclick="lay_pop_open('#js__add')" class="cs-btn2-gray">추가</button></td>
+                </tr>
+                <tr>
+                  <td colspan="9" class="tal">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제111조(시·도도시계획위원회의 구성 및 운영) ③항
+                          <p>
+                            시·도도시계획위원회의 위원은 다음 각 호의 어느 하나에 해당하는 자 중에서 시·도지사가 임명 또는 위촉한다. <br>
+                            이 경우 제3호에 해당하는 위원의 수는 전체 위원의 3분의 2 이상이어야 하고, 법 제8조제7항에 따라 농업진흥지역의 해제 또는 보전산지의 지정해제를 할 때에 도시·군관리계획의 변경이 필요하여 시·도도시계획위원회의 심의를 거쳐야 하는 시·도의 경우에는 농림 분야 공무원 및 농림 분야 전문가가 각각 2명 이상이어야 한다
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>당해 시·도 지방의회의 의원</li>
+                            <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원 </li>
+                            <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                          </ul>
+                        </li>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ③항
+                          <p>
+                            시·군·구도시계획위원회의 위원은 다음 각호의 자중에서 시장·군수 또는 구청장이 임명 또는 위촉한다. 
+                            이 경우 제3호에 해당하는 위원의 수는 위원 총수의 50퍼센트 이상이어야 한다. 
+                          </p>
+                          <ul class="cs-list-number cs-list-number">
+                            <li>당해 시·군·구 지방의회의 의원</li>
+                            <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원</li>
+                            <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>지방의회 의원, 전문가, 공무원(외부)인 위원의 모든 값을 선택하고 등록 버튼을 클릭해 주세요.</li>
+          </ul>
+
+          <div class="board-view-tb js__table-scroll mt20">
+            <table>
+              <caption>도시계획위원회 위원 정보</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width140">
+                <col class="width140">
+                <col class="width110">
+                <col>
+                <col class="width150">
+                <col class="width150">
+                <col class="width150">
+                <col class="width95">
+              </colgroup>
+              <thead class="displaynone">
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">위원 구분</th>
+                  <th scope="col">전문 분야</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">휴대전화 </th>
+                  <th scope="col">위촉 시작일</th>
+                  <th scope="col">위촉 종료일</th>
+                  <th scope="col">내역 관리</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0;i < 12;i++){
+                <tr>
+                  <td>1</td>
+                  <td>지방의회 의원</td>
+                  <td>-</td>
+                  <td>이위원</td>
+                  <td>경기도 하남시</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>2021-12-31</td>
+                  <td><button onclick="lay_pop_open('#js__delete')" class="cs-btn2-gray">삭제</button></td>
+                </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>잘못된 정보를 입력하고 추가한 경우 삭제 후 다시 추가해 주세요. <span class="pcolor-red">(최대 30명까지만 등록 가능합니다.)</span></li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="consultantInfo01.html" class="cs-btn-line">취소</a>
+          <button class="cs-btn">등록</button>
+        </section>
+
+        <!-- 삭제 -->
+        <div id="js__delete" class="laymodal modal-alert">
+          <div class="laymodal-header">
+            <h2>위원 위촉 정보 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            삭제된 내용은 복구할 수 없습니다.<br>
+            입력하신 위촉 정보를 삭제하시겠습니까?            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" jq-action="closeModal">삭제</button>
+          </div>
+        </div>
+
+        <!-- 추가 -->
+        <div id="js__add" class="laymodal modal-alert">
+          <div class="laymodal-header">
+            <h2>위원 정보 입력</h2>
+          </div>
+          <div class="laymodal-content tac">
+            홍길동(010-XXXX-XXXX) 위원은<br>
+            이미 해당 기간으로 위촉 정보가 등록되어 있습니다. <br>
+            (위촉 기간 : 2020-01-01~2021-12-31)
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 부서찾기 -->
+        <div id="js__userfinder" class="laymodal modal-userfinder">
+          <div class="laymodal-header">
+            <h2>공무원(내부) 추가</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="modal-sec-title">공무원 선택</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>공무원 검색</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col class="width430">
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">초성 선택</th>
+                      <td class="word-initial">
+                        <button class="active">ㄱ</button>
+                        <button disabled>ㄴ</button>
+                        <button>ㄷ</button>
+                        <button>ㄹ</button>
+                        <button>ㅁ</button>
+                        <button>ㅂ</button>
+                        <button>ㅅ</button>
+                        <button>ㅇ</button>
+                        <button>ㅈ</button>
+                        <button>ㅊ</button>
+                        <button>ㅋ</button>
+                        <button>ㅍ</button>
+                        <button>ㅌ</button>
+                        <button>ㅎ</button>
+                      </td>
+                      <th scope="row">이름 검색</th>
+                      <td class="frm-insert-t4">
+                        <div>
+                          <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)" title="이름">
+                        </div>
+                        <div class="__col_btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+  
+            <section>
+              <div class="board-view-tb _floating _noround js__floatingHead">
+                <table>
+                  <caption>부서 찾기 검색결과</caption>
+                  <colgroup>
+                    <col class="width70">
+                    <col class="width110">
+                    <col class="width200">
+                    <col class="width200">
+                    <col class="width200">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">선택</th>
+                      <th scope="col">이름</th>
+                      <th scope="col">기관명</th>
+                      <th scope="col">부서명</th>
+                      <th scope="col">담당 업무</th>
+                      <th scope="col">휴대전화</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for(var i = 0; i < 20; i++){
+                    <tr>
+                      <td>
+                        <input type="radio" name="modalFindGroup" class="cs-radio" id="modalFindGroup${i}" title="건설과"><label for="modalFindGroup${i}"><span></span></label>
+                      </td>
+                      <td>홍길동</td>
+                      <td class="tal">충천북도 음성군청</td>
+                      <td class="tal">건설과</td>
+                      <td class="tal">담당업무</td>
+                      <td class="tal">031-790-6114</td>
+                    </tr>
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">위촉기간 선택</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>위촉기간 선택</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">위촉 기간</th>
+                      <td>
+                        <div class="cs-datepicker-set inlineblock">
+                          <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                          <div>~</div>
+                          <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <div class="cs-alert">이름을 입력해 주세요.</div>
+            <div class="cs-alert">위원을 선택해 주세요.</div>
+            <div class="cs-alert">위촉 시작일을 선택해 주세요.  </div>
+            <div class="cs-alert">위촉 종료일을 선택해 주세요. 위촉 종료일이 시작일 이전일 수 없습니다. </div>
+            <div class="cs-alert">선택하신 사용자는 이미 해당 기간에 위촉 정보가 등록되어 있습니다. (위촉 기간 : 2020-01-01~2021-12-31)</div>
+
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

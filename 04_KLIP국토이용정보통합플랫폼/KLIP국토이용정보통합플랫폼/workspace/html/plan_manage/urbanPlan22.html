@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">도시·군관리계획 입안 관리</a></li>
+          <li>의제 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>의제 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="">
+        <div class="content board-view">
+          <section>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>광역도시계획 등록</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col>
+                  <col class="width130">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><label for="selectArea">고시 기관 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <select class="cs-input width100p" id="selectArea">
+                        <option>기관 선택</option>
+                      </select>
+                    </td>
+                    <th scope="row"><label for="resGroup">담당 부서 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="frm-insert-t1">
+                        <div>
+                          <input type="text" id="resGroup" class="cs-input width100p" disabled placeholder="'부서 찾기'시 자동 입력">
+                        </div>
+                        <a href="#js__findgroup" jq-action="modal" class="cs-btn2-gray cs-btn-default __col_btn">부서 찾기</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">고시 번호 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="frm-insert-t1">
+                        <div class="frm-insert-t3">
+                          <div>제</div>
+                          <input type="text" class="cs-input width100p tac" placeholder="연도 입력" title="연도 입력">
+                          <div>-</div>
+                          <input type="text" class="cs-input width100p tac" placeholder="일련번호 입력" title="일련번호 입력">
+                          <div>호</div>
+                        </div>
+                        <button jq-action="modal" jq-target="#js__check2" class="cs-btn2-gray cs-btn-default __col_btn">중복 확인</button>
+                      </div>
+                    </td>
+                    <th scope="row">고시일/유형 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-insert-t2">
+                      <input type="text" class="cs-input-date js__datepicker" placeholder="고시일 선택" title="고시일 선택">
+                      <span>/</span>
+                      <input type="radio" name="datetype" class="cs-radio" id="datetype1"><label for="datetype1"><span></span> 결정</label>
+                      <input type="radio" name="datetype" class="cs-radio" id="datetype2"><label for="datetype2" class="ml10"><span></span> 변경</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="notititle">고시 제목 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" id="notititle" placeholder="고시 제목 입력">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="notetext">고시 내용 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea name="" class="cs-input js__textCounter width100p" data-maxbyte="3000" id="notetext" rows="5" placeholder="고시 내용 입력"></textarea>
+                      </div>
+                    </td> 
+                  </tr>
+                  <tr>
+                    <th scope="row">고시문 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="pdf 파일로만 등록 가능합니다.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">
+                            파일 선택
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                    <th scope="row">도면 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file2" placeholder="pdf 파일로만 등록 가능합니다.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">
+                            파일 선택
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">기타 자료</th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file3" placeholder="파일 타입 관계없이 등록 가능합니다. (의제 고시 기관에서 수신한 공문 등 참조 자료를 등록해 주세요.)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file3" class="cs-btn2-gray cs-btn-default">
+                            파일 선택
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>의제 유형 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <select class="cs-input width450">
+                        <option>의제 유형 선택</option>
+                      </select>
+
+                      <div class="cs-box-tip">
+                        <strong>법률 TIP</strong>
+                        <ul>
+                          <li>
+                            국토계획법 제42조(다른 법률에 따라 지정된 지역의 용도지역 지정 등의 의제) ①항<br>
+                            <p>
+                              다음 각 호의 어느 하나의 구역 등으로 지정·고시된 지역은 이 법에 따른 도시지역으로 결정·고시된 것으로 본다.
+                            </p>
+                            <ul class="cs-list-number">
+                              <li>「항만법」 제2조제4호에 따른 항만구역으로서 도시지역에 연접한 공유수면</li>
+                              <li>「어촌·어항법」 제17조제1항에 따른 어항구역으로서 도시지역에 연접한 공유수면</li>
+                              <li>「산업입지 및 개발에 관한 법률」 제2조제8호가목부터 다목까지의 규정에 따른 국가산업단지, 일반산업단지 및 도시첨단산업단지</li>
+                              <li>「택지개발촉진법」 제3조에 따른 택지개발지구</li>
+                              <li>「전원개발촉진법」 제5조 및 같은 법 제11조에 따른 전원개발사업구역 및 예정구역(수력발전소 또는 송·변전설비만을 설치하기 위한 전원개발사업구역 및 예정구역은 제외한다. 이하 이 조에서 같다</li>
+                            </ul>
+                          </li>
+                          <li>
+                            제25조(도시ㆍ군관리계획의 입안) ②항
+                            <p>관리지역에서 「농지법」에 따른 농업진흥지역으로 지정·고시된 지역은 이 법에 따른 농림지역으로, 관리지역의 산림 중 「산지관리법」에 따라 보전산지로 지정·고시된 지역은 그 고시에서 구분하는 바에 따라 이 법에 따른 농림지역 또는 자연환경보전지역으로 결정·고시된 것으로 본다.</p>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="urbanPlan21.html" class="cs-btn-line">취소</a>
+            <button jq-action="modal" jq-target="#js__complete" class="cs-btn">등록</button>
+          </section>
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+
+      <!-- modal : 부서찾기 -->
+      @@include('../include/modals.html',{'items': 3})
+
+      <!-- modal : 중복확인 -->
+      @@include('../include/modals.html',{'items': 6})
+      
+
+      <!-- modal : 등록완료 -->
+      <div id="js__complete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>도시·군기본계획 등록</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <strong class="pcolor-red">경기도 제0000-000호</strong><br>
+          도시·군기본계획이 등록되었습니다.
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <a href="urbanPlan21.html" class="cs-btn">확인</a>
+        </div>
+      </div>
+
+      <!-- 중복확인 -->
+      <div id="js__check" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>고시 번호 중복 확인</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <strong class="pcolor-red">경기도 2020-XXX</strong><br>
+          등록 가능한 고시 번호입니다.<br>
+          해당 번호로 등록하시겠습니까?
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+        </div>
+      </div>
+
+      <!-- modal : 내용누락 -->
+      <div id="js__alert" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>도시·군기본계획 등록</h2>
+        </div>
+        <div class="laymodal-content tac">
+          고시 내용을 입력해 주세요.
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

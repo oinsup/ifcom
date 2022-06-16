@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g data-name="사각형 1366" style="stroke:#cecece;fill:none">
+        <rect width="30" height="30" rx="3" style="stroke:none"/>
+        <rect x=".5" y=".5" width="29" height="29" rx="2.5" style="fill:none"/>
+    </g>
+    <path data-name="패스 6661" d="m0 0 6.154 6.079 6-6.079" transform="rotate(-90 16.737 4.54)" style="stroke:#6b6b6b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.4px;fill:none"/>
+</svg>

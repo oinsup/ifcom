@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안 관리', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>입안 제안 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="proposal01.html" class="active">온라인 제안 접수 내역</a>
+        <!-- 201130 :: 텍스트수정-->
+        <a href="priorConsultation01.html">주민 사전협의 내역</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <!-- 201203 :: 텍스트수정 -->
+            <li>오프라인 사전협의 완료 후 &lt;토지e음&gt; 대민 홈페이지에서 주민들이  &lt;도시·군관리계획&gt; 온라인 입안 제안한 내역을 확인하실 수 있습니다.</li>
+            <li>각 기관 관리자는 제안 정보 확인 후 담당자를 지정하고, 지정된 담당자는 제안서 검토 후 입안반영 여부를 결정해 주세요.</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">
+            <span class="pcolor-red">하남시</span> 제안 접수 현황(2020년) 
+            <div class="__hedding-btns">
+              <button type="button" class="btn-arr-left"></button><button type="button" class="btn-arr-right"></button>
+            </div>
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _thead-h30 _colorblue">
+            <table>
+              <caption>2020년 고시 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col">기반시설</th>
+                  <th scope="col" colspan="2">지구단위계획</th>
+                  <th scope="col" colspan="2">용도지구 지정 및 변경</th>
+                  <th scope="col" rowspan="2">합계</th>
+                </tr>
+                <tr>
+                  <th scope="col">설치·정비 또는 개량</th>
+                  <th scope="col">구역 지정 및 변경</th>
+                  <th scope="col">계획 수립 및 변경</th>
+                  <th scope="col">개발진흥지구</th>
+                  <th scope="col">지구단위계획으로 대체</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>15</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">담당기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option value="#">광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-input" title="지역선택2">
+                    <option value="#">시군구선택</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">제안일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="제안 제목, 제안자명 입력">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- 201203 :: 텍스트수정 및 추가-->
+        <!-- 전체 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">담당자 지정 대기</a></li>
+              <li><a href="#">담당자 검토</a></li>
+              <li><a href="#">도시계획위원회 자문</a></li>
+              <li><a href="#">입안 반영</a></li>
+              <li><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">제안일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안자명</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0 ; i < 2; i++){
+                <tr>
+                  <th scope="row">${8 - i}</th>
+                  <td>2020-10-15</td>
+                  <td>주민(사업자)</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>담당자 지정 대기</td>
+                </tr>
+                <tr>
+                  <th scope="row">${7 - i}</th>
+                  <td>2020-10-15</td>
+                  <td>주민(사업자)</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>담당자 검토</td>
+                </tr>
+                <tr>
+                  <th scope="row">${6 - i}</th>
+                  <td>2020-10-15</td>
+                  <td>주민(사업자)</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>입안반영</td>
+                </tr>
+                <tr>
+                  <th scope="row">${6 - i}</th>
+                  <td>2020-10-15</td>
+                  <td>주민(사업자)</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>입안반영</td>
+                </tr>
+                <tr>
+                  <th scope="row">${6 - i}</th>
+                  <td>2020-10-15</td>
+                  <td>주민(사업자)</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>입안반영</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            제안 제목을 클릭하시면 입안 제안서 검토 페이지로 이동합니다.
+          </li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+        <!-- 담당자 지정 대기 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">담당자 지정 대기</a></li>
+              <li><a href="#">담당자 검토</a></li>
+              <li><a href="#">도시계획위원회 자문</a></li>
+              <li><a href="#">입안 반영</a></li>
+              <li><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">제안일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col class="width80">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안자명</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">부서명</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="proposal02.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>담당자 지정 대기</td>
+                </tr>
+                <tr>
+                  <td colspan="9">온라인 입안 제안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            제안 제목을 클릭하시면 입안 제안서 검토 페이지로 이동합니다.
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+
+
+        <!-- 담당자 검토 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">담당자 지정 대기</a></li>
+              <li class="active"><a href="#">담당자 검토</a></li>
+              <li><a href="#">도시계획위원회 자문</a></li>
+              <li><a href="#">입안 반영</a></li>
+              <li><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#">제안일</a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#" class="active">담당지정일 <i class="sort-desc"></i></a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">담당지정일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal03.html">하남시 OO용도지구 길면 - 제안서 검토 중일 때</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>담당자 검토 대기</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal04.html">하남시 OO용도지구 길면 - 제안서 검토 후 일 때</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td><span class="pcolor-red">제안서 수정 접수</span></td>
+                </tr>
+                <tr>
+                  <td colspan="9">담당자 검토 중인 제안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            제안 제목을 클릭하시면 입안 제안서 검토 페이지로 이동합니다.
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+
+
+        <!-- 도시계획위원회 자문 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">담당자 지정 대기</a></li>
+              <li><a href="#">담당자 검토</a></li>
+              <li class="active"><a href="#">도시계획위원회 자문</a></li>
+              <li><a href="#">입안 반영</a></li>
+              <li><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#">제안일</a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#" class="active">자문요청일 <i class="sort-desc"></i></a>
+            <a href="#">제안자명</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">자문요청일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>-</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal05.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>위원회 자문 대기</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal05.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>자문 요청 전</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal05.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>심의 중</td>
+                </tr>
+                <tr>
+                  <td colspan="9">도시계획위원회 자문 대기 중인 제안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            제안 제목을 클릭하시면 입안 제안서 검토 페이지로 이동합니다.
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 입안 반영 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">담당자 지정 대기</a></li>
+              <li><a href="#">담당자 검토</a></li>
+              <li><a href="#">도시계획위원회 자문</a></li>
+              <li class="active"><a href="#">입안 반영</a></li>
+              <li><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+             <a href="#">제안일</a>
+            <a href="#" class="active">입안 결정일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">입안 결정일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal06.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>입안 결정 대기</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal06.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>입안반영</td>
+                </tr>
+                <tr>
+                  <td colspan="9">입안 반영 결정 대기 중인 제안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>제안 제목을 클릭하시면 입안 제안서 확인 페이지로 이동합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 입안 반려 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">담당자 지정 대기</a></li>
+              <li><a href="#">담당자 검토</a></li>
+              <li><a href="#">도시계획위원회 자문</a></li>
+              <li><a href="#">입안 반영</a></li>
+              <li class="active"><a href="#">입안 반려</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+              -->
+            <a href="#">제안일</a>
+            <a href="#" class="active">입안 반려일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>온라인 제안 접수 내역</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col class="width190">
+                <col class="width80">
+                <col class="width140">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">제안일</th>
+                  <th scope="col">입안 반려일</th>
+                  <th scope="col">제안 대상</th>
+                  <th scope="col">제안 제목</th>
+                  <th scope="col">담당 기관</th>
+                  <th scope="col">담당 부서</th>
+                  <th scope="col">담당자명</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>주민</td>
+                  <td class="tal"><a href="proposal06.html">하남시 OO용도지구 길면</a></td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO팀</td>
+                  <td>박경민</td>
+                  <td>입안반려</td>
+                </tr>
+                <tr>
+                  <td colspan="9">입안 반려된 제안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            제안 제목을 클릭하시면 입안 제안서 확인 페이지로 이동합니다.
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

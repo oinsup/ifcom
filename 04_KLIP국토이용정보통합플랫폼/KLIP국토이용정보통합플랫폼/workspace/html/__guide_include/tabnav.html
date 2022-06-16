@@ -1,0 +1,38 @@
+<section>
+      <h2 class="build-h2">TABNAV</h2>
+      <div>
+        tabnav 순서대로 1번 <br>
+        메뉴에 .js__tabNav 추가<br>
+        data-tabnav="컨텐츠 클래스 이름"<br>
+        js__tabNav_<b>컨텐츠 클레스 이름</b>1  :  숫자는 1부터 시작해서 순차적으로<br>
+        기능만 구현 디자인은 차후 디자인 나오는거 봐서 defalt 디자인을 할 예정<br>
+        사용처 : 로그인탭메뉴
+      </div>
+      <div>
+        
+        <div class="tab-nav js__tabNav" data-tabnav="testNav">
+          <button class="active">1번</button>
+          <button>2번</button>
+          <button>3번</button>
+          <button>4번</button>
+        </div>
+        
+        <div class="js__tabNav_testNav1" style="height:100px;">
+          1번 내용
+        </div>
+        <div class="js__tabNav_testNav2" style="height:100px;">
+          2번 내용
+        </div>
+        <div class="js__tabNav_testNav3" style="height:100px;">
+          3번 내용
+        </div>
+        <div class="js__tabNav_testNav4" style="height:100px;">
+          4번 내용
+        </div>
+
+        <style>
+          .tab-nav .active{background: gray;}
+        </style>
+      </div>
+      
+    </section>

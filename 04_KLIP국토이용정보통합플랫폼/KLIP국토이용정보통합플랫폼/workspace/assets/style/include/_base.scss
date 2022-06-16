@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import 'vars';
+
+html,body{margin: 0;padding: 0;min-height:100%;position: relative;height: 100%;}
+
+body {margin:0;padding:0;}
+
+body
+{
+  // font:16px/1.3 'Noto Sans KR LOCAL', '맑은 고딕', 맑은고딕, sans-serif;color: #000;letter-spacing:-.04em;
+  font:16px/1.3 'Noto Sans KR LOCAL', '맑은 고딕', 맑은고딕, sans-serif;color: #000;letter-spacing:-.04em;
+  // font:16px/1.3 '맑은 고딕', 맑은고딕, sans-serif;color: #000;letter-spacing:-.04em;font-size: 14px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+table{border-collapse:collapse; vertical-align:top;}
+img{border:0;}
+
+// input, select, button{font-family:'Noto Sans KR', NanumGothic, "나눔고딕", Dotum, "돋움", sans-serif;font-weight: 400;}
+
+input, select, button, textarea{font-size: inherit;font-family:inherit;letter-spacing:inherit;}
+
+// a, button, submit{transition: .3s ease-out}
+button{font-size:inherit;font-family: inherit;}
+
+a
+{
+  text-decoration:none;color:#000;border:none;margin:0;padding:0;
+  // &:hover{font-weight: bold;}
+}
+
+fieldset{border:none;margin:0; padding:0;}
+button{cursor:pointer}
+
+// td *, div *, span *, p * {  vertical-align: top;}
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { font-size: 140%; }
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+// ::selection {
+//   background: #e4780b;
+//   color: red;
+//   text-shadow: none;
+// }
+
+
+@media(max-width: $mediaMobile)
+{
+  body{letter-spacing: -.03em;}
+  button{outline:none;-ms-outline:none;}
+}
+
+[tabindex='-1']{outline:none;}
+
+input[type=text]::-ms-clear {
+  display:none;
+}

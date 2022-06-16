@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">FAQ 등록 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>FAQ 등록</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 지원 관리</a></li>
+                                <li><a href="#">FAQ 등록</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: 1030px;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><label for="">분류<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="calGroup">
+                                        <select name="" id="" class="grayType wd400">
+                                            <option value="">분류 선택</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="">질문<span class="redDot">•</span></label>
+                                </th>
+                                <td>
+                                    <div class="textarea">
+                                        <input type="text" class="grayType wd900" placeholder="질문 입력" maxlength="100">
+                                        <p class="textCount"><span>0</span>/100자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">답변<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea"> 
+                                        <textarea name="" id="" class="wd900" cols="30" rows="10" placeholder="답변 입력" maxlength="1000"></textarea>
+                                        <p class="textCount"><span>0</span>/1,000자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="line-height: 18px;"><label for="">이미지<br /><span style="font-size: 14px;">(최대 3MB)</span><span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="fileArea" style="padding-bottom: 8px;">
+                                        <input type="file" id="fileSelect01" class="hidden">
+                                        <p class="fileName">이미지를 등록해 주세요</p>
+                                        <label for="fileSelect01">파일 선택</label>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn bdGray">파일 삭제</button>
+                                            <button type="button" class="btn gray">파일 변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="fileAreaInfo">
+                                        <p>이미지는 가로 1,000px 이하, 세로 1,000px 이하로 제작해 주세요.</p>
+                                        <p>이미지 파일 이름은 특수기호(? ! , . & ^ ~ )를 사용할 수 없으며, 첨부 가능 확장자는 JPG, JPEG, PNG입니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--btnArea-->
+                        <div class="btnArea01 center">
+                            <button type="button" class="btn white middle">등록 취소</button>
+                            <button type="button" class="btn dkBlue middle">등록</button>
+                        </div>
+                        <!--//btnArea-->
+                    </div>
+                    <!--//table-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>기관 관리자 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>사용자 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="klipUser01.html">기관 사용자</a>
+        <a href="klipManager01.html" class="active">기관 관리자</a>
+        <a href="molitManager01.html">국토교통부 관리자</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <!-- 기관 관리자 접속 화면 -->
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>‘승인 대기’탭에서 사용 승인 처리, ‘정상’탭에서 일회용 비밀번호 전송 처리, ‘접속 불가’ 탭에서 접속 불가 해제 처리가 가능합니다. </li>
+            <li>‘휴면’상태의 경우 6개월 이상 접속 이력이 없는 기관 관리자입니다. 보직 변경 또는 퇴직 여부 확인 후 상태를 변경해 주세요.</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">
+            기관 관리자 현황
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _colorblue _thead-h30">
+            <table>
+              <caption>2020년 고시 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="6">광역시</th>
+                  <th scope="col" colspan="8">도</th>
+                  <th scope="col" colspan="2">특별자치시·도</th>
+                  <th scope="col" rowspan="2">합계</th>
+                </tr>
+                <tr>
+                  <th scope="col">광주</th>
+                  <th scope="col">대구</th>
+                  <th scope="col">대전</th>
+                  <th scope="col">부산</th>
+                  <th scope="col">울산</th>
+                  <th scope="col">인천</th>
+                  <th scope="col">경기</th>
+                  <th scope="col">강원</th>
+                  <th scope="col">경남</th>
+                  <th scope="col">경북</th>
+                  <th scope="col">전남</th>
+                  <th scope="col">전북</th>
+                  <th scope="col">충남</th>
+                  <th scope="col">충북</th>
+                  <th scope="col">세종</th>
+                  <th scope="col">제주</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>30</td>
+                  <td>-</td>
+                  <td>63</td>
+                  <td>65</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>55</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>183</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">소속 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="지역선택">
+                    <option>광역시·도 선택</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                    <option>시·군·구 선택</option>
+                    <option>시,군구구구구구구</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">권한 신청일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="이름, 아이디 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+        
+        
+        <!-- 전체 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">승인 대기</a></li>
+              <li><a href="#">정상</a></li>
+              <li><a href="#">접속 불가</a></li>
+              <li><a href="#">휴면</a></li>
+            </ul>
+          </nav>
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">권한 신청일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+            <a href="#">상태</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width140">
+                <col class="width100">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태 변경일</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i ++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시 </td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipManager12.html">dfdfdf1234</a></td>
+                  <td>031-790-6114(12)</td>
+                  <td>-</td>
+                  <td>접속 불가</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">
+                    사용 권한을 신청한 기관 관리자가 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>아이디를 클릭하시면 해당 기관 관리자의 상세 정보 확인 및 상태 관리가 가능합니다.</li>
+        </ul>
+        
+        @@include('../include/paging.html')
+        <!-- //전체 -->
+
+        <!-- 승인 대기 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">승인 대기</a></li>
+              <li><a href="#">정상</a></li>
+              <li><a href="#">접속 불가</a></li>
+              <li><a href="#">휴면</a></li>
+            </ul>
+          </nav>
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">권한 신청일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width140">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시 </td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipManager12.html">dfdfdf1234</a></td>
+                  <td>031-790-6114(12)</td>
+                  <td>승인 대기</td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    사용 권한을 신청한 기관 관리자가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>아이디를 클릭하시면 해당 기관 관리자의 상세 정보 확인 및 상태 변경(사용 승인) 처리가 가능합니다.</li>
+        </ul>
+        
+        @@include('../include/paging.html')
+        <!-- //승인 대기 -->
+
+
+        <!-- 정상 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">승인 대기</a></li>
+              <li class="active"><a href="#">정상</a></li>
+              <li><a href="#">접속 불가</a></li>
+              <li><a href="#">휴면</a></li>
+            </ul>
+          </nav>
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">사용 승인일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width140">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">사용 승인일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30</td>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시 </td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipManager12.html">dfdfdf1234</a></td>
+                  <td>031-790-6114(12)</td>
+                  <td>정상</td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    사용 권한 신청 후 승인된 기관 관리자가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>아이디를 클릭하시면 해당 기관 관리자의 상세 정보 확인이 가능합니다.</li>
+        </ul>
+        
+        @@include('../include/paging.html')
+        <!-- //정상 -->
+
+        <!-- 접속 불가 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">승인 대기</a></li>
+              <li><a href="#">정상</a></li>
+              <li class="active"><a href="#">접속 불가</a></li>
+              <li><a href="#">휴면</a></li>
+            </ul>
+          </nav>
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">접속 불가일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width140">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">접속 불가일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30</td>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시 </td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipManager12.html">dfdfdf1234</a></td>
+                  <td>031-790-6114(12)</td>
+                  <td>접속 불가</td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    접속 불가(비밀번호 5회 연속 오류) 상태의 기관 관리자가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>아이디를 클릭하시면 해당 기관 관리자의 상세 정보 확인 및 상태 변경(접속 불가 해제) 처리가 가능합니다.</li>
+        </ul>
+        
+        @@include('../include/paging.html')
+        <!-- //접속 불가 -->
+
+
+        <!-- 휴면 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">승인 대기</a></li>
+              <li><a href="#">정상</a></li>
+              <li><a href="#">접속 불가</a></li>
+              <li class="active"><a href="#">휴면</a></li>
+            </ul>
+          </nav>
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">최종 접속일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름</a>
+            <a href="#">아이디</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width120">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width140">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">최종 접속일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>30</td>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시 </td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipManager12.html">dfdfdf1234</a></td>
+                  <td>031-790-6114(12)</td>
+                  <td>휴면</td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    휴면(6개월 이상 미접속) 상태의 기관 관리자가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>아이디를 클릭하시면 해당 기관 관리자의 상세 정보 확인 및 상태 변경(휴면 해제) 처리가 가능합니다.</li>
+        </ul>
+        
+        @@include('../include/paging.html')
+        <!-- //휴면 -->
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+@charset 'utf-8';
+
+@import './include/contentCommon';
+@import './include/contModal';
+@import './include/styleAdd';
+@import './include/cont_personalAgg';
+@import './include/cont_mywork';
+@import './include/cont_error';
+@import './include/cont_sitemap';
+
+section > .board-paging{margin-top: 35px;}
+
+.extratype-btn
+{
+  text-align: right;
+  width: calc(100% - 11px);
+  position: absolute;
+  // * {position: absolute;right:11px;top: -5px;}
+  * + * {margin-left: 5px;}
+}
+
+.process-header
+{
+  height:70px;background: #657583;box-sizing: border-box;
+  padding-top: 24px;
+  padding-left: 25px;
+  padding-right: 25px;
+  @include listRest('ul');
+}
+
+ul.process-step
+{
+  font-size: 16px;color: #cacfd3;
+  text-align: right;
+
+  li
+  {
+    &:first-child{margin-left: 0;}
+    margin-left: 35px;display: inline-block;
+  }
+
+  span
+  {
+    display: inline-block;width:23px;height:23px;box-sizing: border-box;line-height: 21px;vertical-align: middle;
+    border:1px solid #cacfd3;border-radius:15px;text-align: center;
+  }
+
+  .active
+  {
+    float: left;color: #fff;font-size: 0;margin-top: -6px;opacity:.4;
+
+    em{display: none;}
+
+    span
+    {
+      display: inline-block;width: 30px;height: 30px;background: #fff;font-size: 22px;vertical-align: top;
+      line-height: 30px;border:0;
+      position: relative;top: 7px;
+      color: #575757;text-align: center;border-radius: 50%;
+      font-weight: bold;margin-top: -5px;
+    }
+  }
+
+  .active + .active{margin-left: 5px;}
+
+  .locked{font-size: 26px;opacity:1;}
+}
+
+
+//입안 프로세서, 제안서 처리 프로세스
+section.proposal-process-cont
+{
+  margin-top: 10px;
+  // border:1px dotted red;
+}

@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('include/head.html') 
+</head>
+
+<body style="overflow: hidden;">
+
+    <div id="wrap" style="height: 100%;">
+        <!--header-->
+        <header id="header">
+            @@include('include/header.html')
+        </header>
+        <!--header-->
+
+        <!--container-->
+        <main id="container" style="height: 100%;">
+            <!-- contents -->
+            <div id="contents" style="height: 100%;">
+                @@include('include/lnb.html')
+                <!-- content -->
+                <div id="content" style="height: 100%;">
+                    <h2 class="hidden">본문 영역</h2>
+                    <!-- headerArea -->
+                    <article class="headerArea">
+                        <!-- titleArea -->
+                        <div class="titleArea">
+                            <!-- btnArea -->
+                            <div class="btnArea">
+                                <button type="button" class="btn drawer">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <!-- //btnArea -->
+                            <h3 class="title type02">통합 물류 시스템 대시보드</h3>
+                        </div>
+                        <!-- //titleArea -->
+                        
+                        <!-- utilArea -->
+                        <div class="utilArea">
+                            <div class="btnArea">
+                                <button type="button" class="btn user">
+                                    <span>
+                                        UserID1234
+                                    </span>
+                                </button>
+                                <button type="button" class="btn logout">
+                                    <span>
+                                        Logout
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- //utilArea -->
+                    </article>
+                    <!-- //headerArea -->
+
+                    <!-- dashboardAraa -->
+                    <article class="dashboardArea">
+                        <!-- grid-stack -->
+                        <div class="grid-stack"></div>
+                        <!-- //grid-stack -->
+                    </article>
+                    <!-- //dashboardAraa -->
+
+                    <script type="text/javascript">
+                        
+                        var items = [
+                            {
+                                w:1,
+                                h:1,
+                                noMove: true, 
+                                noResize: true, 
+                                locked: true, 
+                                content:
+                                '<div class="gridBody type02">' +
+                                    '<div class="order">' +
+                                        '<a href="#" class="search" title="주문조회">' +
+                                            '<span class="circle"></span>' +
+                                            '<span class="ico"></span>' +
+                                            '<span class="txt">주문조회</span>' +
+                                        '</a>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:1,
+                                h:1,
+                                noMove: true, 
+                                noResize: true,
+                                locked: true, 
+                                content:
+                                '<div class="gridBody type02">' +
+                                    '<div class="order">' +
+                                        '<a href="#" class="car" title="자동배차">' +
+                                            '<span class="circle"></span>' +
+                                            '<span class="ico"></span>' +
+                                            '<span class="txt">자동배차</span>' +
+                                        '</a>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:1,
+                                h:1,
+                                noMove: true, 
+                                noResize: true,
+                                locked: true, 
+                                content:
+                                '<div class="gridBody type02">' +
+                                    '<div class="order">' +
+                                        '<a href="#" class="slide" title="배차조정">' +
+                                            '<span class="circle"></span>' +
+                                            '<span class="ico"></span>' +
+                                            '<span class="txt">배차조정</span>' +
+                                        '</a>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:5,
+                                h:3,
+                                noResize: true, 
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">차량상태' +
+                                        '<span class="sub">당일 기준 2022-04-28</span>' +
+                                    '</h3>' +
+                                    '<div class="selectArea">' +
+                                        '<select name="" id="">' +
+                                            '<option value="">수송사</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">실행사</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">유종</option>' +
+                                        '</select>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="info">' +
+                                        '<ul>' +
+                                            '<li class="wait">' +
+                                                '<p class="situation">대기</p>' +
+                                                '<div>' +
+                                                    '<strong class="">100</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="moving">' +
+                                                '<p class="situation">수송중</p>' +
+                                                '<div>' +
+                                                    '<strong class="">59</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="down">' +
+                                                '<p class="situation">하화</p>' +
+                                                '<div>' +
+                                                    '<strong class="">150</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="return">' +
+                                                '<p class="situation">회차</p>' +
+                                                '<div>' +
+                                                    '<strong class="">20</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="empty">' +
+                                                '<p class="situation">공차</p>' +
+                                                '<div>' +
+                                                    '<strong class="">85</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="relax">' +
+                                                '<p class="situation">휴차</p>' +
+                                                '<div>' +
+                                                    '<strong class="">0</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                        '</ul>' +
+                                    '</div>' +
+                                '</div>' 
+                                ,
+                            },
+                            {
+                                w:4,
+                                h:2,
+                                noResize: true,
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">사고현황' +
+                                        '<span class="sub">당월 누계 2022-04</span>' +
+                                    '</h3>' +
+                                    '<div class="selectArea">' +
+                                        '<select name="" id="">' +
+                                            '<option value="">당월</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">수송사</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">실행사</option>' +
+                                        '</select>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="info type02">' +
+                                        '<ul>' +
+                                            '<li class="mix">' +
+                                                '<p class="situation">혼유</p>' +
+                                                '<div class="noData">' +
+                                                    '<strong class="">-</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="out">' +
+                                                '<p class="situation">유출</p>' +
+                                                '<div class="noData">' +
+                                                    '<strong class="">-</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="crash">' +
+                                                '<p class="situation">추돌</p>' +
+                                                '<div>' +
+                                                    '<strong class="">1</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                            '<li class="etc">' +
+                                                '<p class="situation">기타</p>' +
+                                                '<div class="noData">' +
+                                                    '<strong class="">-</strong>' +
+                                                    '<span>대</span>' +
+                                                '</div>' +
+                                            '</li>' +
+                                        '</ul>' +
+                                    '</div>' +
+                                '</div>' 
+                                ,
+                            },
+                            {
+                                w:3,
+                                h:2,
+                                noResize: true,
+                                noMove: true,
+                                locked: true, 
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">공지사항' +
+                                    '</h3>' +
+                                    '<a href=# title="더보기" class="more"></a>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="notice">' +
+                                        '<ul>' +
+                                            '<li>' +
+                                                '<a href="#" class="txtElipse">공지사항 제목이 노출됩니다. 공지사항 제목이 노출됩니다. 공지사항 제목이 노출됩니다.</a>' +
+                                                '<span class="date">2022.05.01</span>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<a href="#" class="txtElipse">공지사항 제목이 노출됩니다.</a>' +
+                                                '<span class="date">2022.05.01</span>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<a href="#" class="txtElipse">공지사항 제목이 노출됩니다.</a>' +
+                                                '<span class="date">2022.05.01</span>' +
+                                            '</li>' +
+                                            '<li>' +
+                                                '<a href="#" class="txtElipse">공지사항 제목이 노출됩니다.</a>' +
+                                                '<span class="date">2022.05.01</span>' +
+                                            '</li>' +
+                                        '</ul>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            // {
+                            //     w:4,
+                            //     h:4,
+                            //     minW:3,
+                            //     minH:3,
+                            //     content:
+                            //     '<div class="gridHead">' +
+                            //         '<h3 class="title type02">유종별 수송량' +
+                            //         '</h3>' +
+                            //         '<div class="selectArea type03">' +
+                            //             '<select name="" id="">' +
+                            //                 '<option value="">당월</option>' +
+                            //             '</select>' +
+                            //         '</div>' +
+                            //     '</div>' +
+                            //     '<div class="gridBody">' +
+                            //         '<div class="graph">' +
+                            //             '<div id="ib-containerOil01"></div>' +
+                            //             '<div id="ib-containerOil02"></div>' +
+                            //         '</div>' +
+                            //     '</div>'
+                            //     ,
+                            // },
+                            {
+                                w:4,
+                                h:7,
+                                noResize: true,                                
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">영업지사별 주문현황' +
+                                    '</h3>' +
+                                '</div>' +
+                                '<div class="gridBody type04">' +
+                                    '<div class="map">' +
+                                        '<div class="btnArea type02"> '+
+                                            '<button type="button" class="btn white kkbuk">경기북부지사</button> '+
+                                            '<button type="button" class="btn white incheon">인천지사</button> '+
+                                            '<button type="button" class="btn white seoul">서울지사</button> '+
+                                            '<button type="button" class="btn white kknam">경기남부지사</button> '+
+                                            '<button type="button" class="btn white kangwon">강원지사</button> '+
+                                            '<button type="button" class="btn white choongbuk">충북지사</button> '+
+                                            '<button type="button" class="btn white choongnam">충남지사</button> '+
+                                            '<button type="button" class="btn white daejeon">대전지사</button> '+
+                                            '<button type="button" class="btn white daekyung">대구/경북지사</button> '+
+                                            '<button type="button" class="btn white jeonbuk">전북지사</button> '+
+                                            '<button type="button" class="btn white kwangjeon">광주/전남지사</button> '+
+                                            '<button type="button" class="btn white kyungnam">경남지사</button> '+
+                                            '<button type="button" class="btn white busan">부산지사</button> '+
+                                            '<button type="button" class="btn white jeju">제주영업소</button> '+
+                                        '</div> '+
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridFoot">' +
+                                    '<div class="btnArea column">' +
+                                        '<button type="button" class="btn grayLine">법인영역</button>' +
+                                        '<button type="button" class="btn grayLine">법인개발</button>' +
+                                        '<button type="button" class="btn grayLine">소매전략</button>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:4,
+                                h:3,
+                                minW:3,
+                                minH:3,
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">제품별 재고현황(kl)' +
+                                        '<span class="sub">당일 기준 2022-04-28</span>' +
+                                    '</h3>' +
+                                    '<a href="#" class="more" title="더보기"></a>' +
+                                '</div>' +
+                                '<div class="gridBody type03">' +
+                                    '<div class="graph">' +
+                                        '<div id="ib-containerWare01"></div>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:4,
+                                h:4,
+                                minW:3,
+                                minH:3,
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">차량 매출현황' +
+                                    '</h3>' +
+                                    '<div class="selectArea">' +
+                                        '<select name="" id="">' +
+                                            '<option value="">전월</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">수송사</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">유종</option>' +
+                                        '</select>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="graph">' +
+                                        '<div id="ib-containerCar01"></div>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                            {
+                                w:4,
+                                h:4,
+                                minW:3,
+                                minH:3,
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">수송량, 수송단가' +
+                                    '</h3>' +
+                                    '<div class="selectArea">' +
+                                        '<select name="" id="">' +
+                                            '<option value="">전월</option>' +
+                                        '</select>' +
+                                        '<select name="" id="">' +
+                                            '<option value="">수송사</option>' +
+                                        '</select>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="graph">' +
+                                        '<div id="ib-containerCompany01"></div>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
+                        ];
+
+                        var grid = GridStack.init({});
+
+                        grid.load(items);
+
+                        grid.on('resizestop', function(event,el) {
+                            let width = parseInt(el.getAttribute('gs-w')) || 0;
+                            // or all values...
+                            let node = GridStackNode = el.gridstackNode; // {x, y, width, height, id, ....}
+                            console.log(node)
+                            if(node.w < 2){
+                                el.classList.add('small')
+                            }else{
+                                el.classList.remove('small')
+                            }
+                            console.log()
+                        });
+
+                        //유종별 수송량 일반유
+                        var ibOil01 = {
+                            initialize: function() {
+                                var initData = {
+                                    "chart": {
+                                        "plotBackgroundColor": null,
+                                        "plotBorderWidth": 0,
+                                        "plotShadow": false
+                                    },
+                                    "colors": ["#017DD1", "#F8B250", "#00AC6C",  "#6947DF",],
+                                    "title": {
+                                        "text": '일반유',
+                                        "align": 'center',
+                                        "verticalAlign": 'middle',
+                                        "y": 85
+                                    },
+                                    "tooltip": {
+                                        "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    "plotOptions": {
+                                        "pie": {
+                                            "dataLabels": {
+                                                "enabled": true,
+                                                "distance": -50,
+                                                "style": {
+                                                    "fontWeight": 'bold',
+                                                    "color": 'white',
+                                                }
+                                            },
+                                            "startAngle": -90,
+                                            "endAngle": 90,
+                                            "center": ['50%', '75%']
+                                        }
+                                    },
+                                    "series": this.data
+                                };
+
+                                createIBChart("ib-containerOil01", "myChartOil01", {
+                                    width: "100%",
+                                    height: "50%"
+                                });
+
+                                myChartOil01.setOptions(initData);
+
+                                this.doAction();
+                            },
+                            data: [{
+                                "type": "pie",
+                                "name": "일반유 수송량",
+                                "innerSize": "50%",
+                                "data": [
+                                    ["현대글로비스", 84],
+                                    ["롯데글로벌로지스(주)", 6],
+                                    ["대한통운", 6],
+                                    ["농협물류(주)", 4],
+
+                                ]
+                            }],
+                            doAction: function() {
+                                myChartOil01.draw();
+                            }
+                        };
+                        ibOil01.initialize();
+
+                        //유종별 수송량 LPG
+                        var ibOil02 = {
+                            initialize: function() {
+                                var initData = {
+                                    "chart": {
+                                        "plotBackgroundColor": null,
+                                        "plotBorderWidth": 0,
+                                        "plotShadow": false
+                                    },
+                                    "colors": ["#017DD1", "#F8B250"],
+                                    "title": {
+                                        "text": 'LPG',
+                                        "align": 'center',
+                                        "verticalAlign": 'middle',
+                                        "y": 85
+                                    },
+                                    "tooltip": {
+                                        "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                    },
+                                    "plotOptions": {
+                                        "pie": {
+                                            "dataLabels": {
+                                                "enabled": true,
+                                                "distance": -50,
+                                                "style": {
+                                                    "fontWeight": 'bold',
+                                                    "color": 'white',
+                                                }
+                                            },
+                                            "startAngle": -90,
+                                            "endAngle": 90,
+                                            "center": ['50%', '75%']
+                                        }
+                                    },
+                                    "series": this.data
+                                };
+
+                                createIBChart("ib-containerOil02", "myChartOil02", {
+                                    width: "100%",
+                                    height: "50%"
+                                });
+
+                                myChartOil02.setOptions(initData);
+
+                                this.doAction();
+                            },
+                            data: [{
+                                "type": "pie",
+                                "name": "LPG 수송량",
+                                "innerSize": "50%",
+                                "data": [
+                                    ["(주)성준로지스", 58],
+                                    ["세일로지스", 42],
+
+                                ]
+                            }],
+                            doAction: function() {
+                                myChartOil02.draw();
+                            }
+                        };
+                        ibOil02.initialize();
+
+                        //차량 매출현황
+                        var ibCar01 = {
+                            initialize: function() {
+                                var initData = {
+                                    "chart": {
+                                        "type": ["line", "column"]
+                                    },
+                                    "colors": ["#017DD1", "#F8B250", "#9099A7"],
+                                    "xAxis": {
+                                        "categories": this.data.categories,
+                                        "crosshair": true
+                                    },
+                                    "yAxis": [
+                                        {
+                                        "title": {
+                                            "text": '',
+                                        },
+                                        "labels": {
+                                            "format": '{value}',
+                                        },
+                                        "opposite": true
+                                    },
+                                    {
+                                        "labels": {
+                                            "format": '{value}',
+                                        },
+                                        "title": {
+                                            "text": '',
+                                        }
+                                    }],
+                                    "series": [{
+                                        "name": "매출액",
+                                        "type": "column",
+                                        "data": this.data.rainfall,
+                                        "yAxis": 1,
+
+                                    }, {
+                                        "name": "수송사평균",
+                                        "type": "line",
+                                        "data": this.data.temperAvg,
+                                    },
+                                    {
+                                        "name": "전체평균",
+                                        "type": "line",
+                                        "data": this.data.temperAvg02,
+
+                                    }],
+                                    "tooltip": {
+                                        "headerFormat": "",
+                                        "shared": true
+                                    }
+                                };
+
+                                createIBChart("ib-containerCar01", "myChartCar01", {
+                                    width: "100%",
+                                    height: "100%"
+                                });
+
+                                myChartCar01.setOptions(initData);
+
+                                this.doAction();
+                            },
+                            data: {
+                                "categories": ["현대글로비스", "대한통운", "롯데글로벌로지스", "농협물류"],
+                                "rainfall": [2309, 171, 156, 144],
+                                "temperAvg": [8.0, 5.7, 6.5, 11.1],
+                                "temperAvg02": [7.8, 7.8, 7.8, 7.8]
+                            },
+                            doAction: function() {
+                                myChartCar01.draw();
+                            }
+                        };
+                        ibCar01.initialize();
+
+                        //수송량, 수송단가
+                        var ibCompany01 = {
+                            initialize: function() {
+                                var initData = {
+                                    "chart": {
+                                        "type": ["line", "column"]
+                                    },
+                                    "colors": ["#017DD1", "#F8B250"],
+                                    "xAxis": {
+                                        "categories": this.data.categories,
+                                        "crosshair": true
+                                    },
+                                    "yAxis": [{
+                                        "title": {
+                                            "text": '',
+                                        },
+                                        "labels": {
+                                            "format": '{value}',
+                                        },
+                                        "opposite": true
+                                    },
+                                    {
+                                        "labels": {
+                                            "format": '{value}',
+                                        },
+                                        "title": {
+                                            "text": '',
+                                        }
+                                    }],
+                                    "series": [{
+                                        "name": "수송량",
+                                        "type": "column",
+                                        "data": this.data.rainfall,
+                                        "yAxis": 1,
+                                    }, {
+                                        "name": "수송단가",
+                                        "type": "line",
+                                        "data": this.data.temperAvg,
+                                    }],
+                                    "tooltip": {
+                                        "headerFormat": "",
+                                        "shared": true
+                                    }
+                                };
+
+                                createIBChart("ib-containerCompany01", "myChartCompany01", {
+                                    width: "100%",
+                                    height: "100%"
+                                });
+
+                                myChartCompany01.setOptions(initData);
+
+                                this.doAction();
+                            },
+                            data: {
+                                "categories": ["현대글로비스", "대한통운", "롯데글로벌로지스", "농협물류"],
+                                "rainfall": [328220, 26482, 20927, 16429],
+                                "temperAvg": [7034, 6449, 7436, 8779]
+                            },
+                            doAction: function() {
+                                myChartCompany01.draw();
+                            }
+                        };
+                        ibCompany01.initialize();
+
+                        //제품별 재고현황
+                        var ibWare01 = {
+                            initialize: function() {
+                                var initData = {
+                                    "chart": {
+                                        "type": "column"
+                                    },
+                                    "colors": ["#F8B250","#017DD1"],
+                                    "yAxis": {
+                                            "labels": {
+                                            "format": '{value}%',
+                                        },
+                                        "title": {
+                                            "text": ""
+                                        }
+                                    },
+                                    "plotOptions": {
+                                        "column": {
+                                            "stacking": "percent",
+                                            "dataLabels": {
+                                                "enabled": true,
+                                                "distance": -50,
+                                                "style": {
+                                                    "fontWeight": 'bold',
+                                                    "color": 'white',
+                                                    "textShadow": '0px 1px 2px black'
+                                                }
+                                            },
+                                            
+                                        }
+                                    }
+                                };
+
+                                createIBChart("ib-containerWare01", "myChartWare01", {
+                                    width: "100%",
+                                    height: "100%"
+                                });
+
+                                myChartWare01.setOptions(initData);
+
+                                this.doAction();
+                            },
+                            data: {
+                                "ibchart": {
+                                    "data": [{
+                                        "axisLabel": "P/G",
+                                        "series": [{
+                                            "seriesName": "Capa 잔여",
+                                            "value": 200
+                                        },
+                                        {
+                                            "seriesName": "현 재고량",
+                                            "value": 1800
+                                        }]
+                                    }, {
+                                        "axisLabel": "U/G",
+                                        "series": [{
+                                            "seriesName": "Capa 잔여",
+                                            "value": 45388
+                                        },
+                                        {
+                                            "seriesName": "현 재고량",
+                                            "value": 15612
+                                        }]
+                                    }, {
+                                        "axisLabel": "K/O",
+                                        "series": [{
+                                            "seriesName": "Capa 잔여",
+                                            "value": 40922
+                                        },
+                                        {
+                                            "seriesName": "현 재고량",
+                                            "value": 19078
+                                        }]
+                                    }, {
+                                        "axisLabel": "ULSD",
+                                        "series": [{
+                                            "seriesName": "Capa 잔여",
+                                            "value": 118362
+                                        },
+                                        {
+                                            "seriesName": "현 재고량",
+                                            "value": 51638
+                                        }]
+                                    }]
+                                }
+                            },
+                            doAction: function() {
+                                myChartWare01.loadSearchData(this.data, {
+                                    append: true
+                                });
+                            }
+                        };
+                        ibWare01.initialize();
+
+                    </script>
+
+                    <!-- controlArea -->
+                    <article class="controlArea">
+                        <div class="btnArea column type02">
+                            <button type="button" class="btn refresh">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29.892" height="29.748" viewBox="0 0 29.892 29.748">
+                                    <path id="rotate-left" d="M2.5,2V8h6M2.66,15.57a10,10,0,1,0,.57-8.38" transform="translate(31.424 10.317) rotate(120)" fill="none" stroke="#c7ccd3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                            </button>
+                            <button type="button" class="btn ckd">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21.414" height="20" viewBox="0 0 21.414 20">
+                                    <g id="check-square" transform="translate(-2 -2)">
+                                        <path id="패스_1168" data-name="패스 1168" d="M9,11l3,3L22,4" fill="none" stroke="#9099a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                        <path id="패스_1169" data-name="패스 1169" d="M21,12v7a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H16" fill="none" stroke="#9099a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                    <!-- //controlArea -->
+
+                    <!-- popupArea -->
+                    <article class="popupArea">
+                        <!-- popup -->
+                        <div class="popup oil01">
+                            <!-- popHead -->
+                            <div class="popHead">
+                                <h3 class="title type03">일반유 수송량</h3>
+                                <div class="btnArea">
+                                    <button type="button" class="btn close" title="닫기"></button>
+                                </div>
+                            </div>
+                            <!-- //popHead -->
+                            <div class="popBody">
+                                <!-- selectArea -->
+                                <div class="selectArea type02">
+                                    <select name="" id="">
+                                        <option value="">현대글로비스</option>
+                                    </select>
+                                </div>
+                                <!-- //selectArea -->
+                                <!-- graph -->
+                                <div class="graph">
+                                    <h3 class="title type04">실행사별 수송량</h3>
+                                    <div id='ib-containerOilpop01'></div>
+                                </div>
+                                <!-- //graph -->
+
+                                <script>
+                                    var ibOilpop01 = {
+                                        initialize: function() {
+                                            var initData = {
+                                                "chart": {
+                                                    "plotBackgroundColor": null,
+                                                    "plotBorderWidth": 0,
+                                                    "plotShadow": false
+                                                },
+                                                "colors": ["#017DD1", "#F8B250", "#00AC6C", "#6947DF", "#019FD1", "#9099A7", "#adab6e"],
+                                                "title": {
+                                                    "text": '현대글로비스',
+                                                    "align": 'center',
+                                                    "verticalAlign": 'middle',
+                                                    "y": 140
+                                                },
+                                                "tooltip": {
+                                                    "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                },
+                                                "plotOptions": {
+                                                    "pie": {
+                                                        "dataLabels": {
+                                                            "enabled": true,
+                                                            "distance": -80,
+                                                            "style": {
+                                                                "fontWeight": 'bold',
+                                                                "color": 'white',
+                                                                "textShadow": '0px 1px 2px black'
+                                                            }
+                                                        },
+                                                        "startAngle": -90,
+                                                        "endAngle": 90,
+                                                        "center": ['50%', '75%']
+                                                    }
+                                                },
+                                                "series": this.data
+                                            };
+
+                                            createIBChart("ib-containerOilpop01", "myChartOilpop01", {
+                                                width: "100%",
+                                                height: "100%"
+                                            });
+
+                                            myChartOilpop01.setOptions(initData);
+
+                                            this.doAction();
+                                        },
+                                        data: [{
+                                            "type": "pie",
+                                            "name": "수송량",
+                                            "innerSize": "50%",
+                                            "data": [
+                                                ["도명특송", 25],
+                                                ["성준로지스", 22],
+                                                ["하나에너지", 19],
+                                                ["에이앤로지스", 14],
+                                                ["엘에스특수", 6],
+                                                ["태산이엔엘", 8],
+                                                ["강원물류", 5]
+                                            ]
+                                        }],
+                                        doAction: function() {
+                                            myChartOilpop01.draw();
+                                        }
+                                    };
+                                    ibOilpop01.initialize();
+
+                                </script>
+                            </div>
+                        </div>
+                        <!-- //popup -->
+
+                        <!-- popup -->
+                        <div class="popup location">
+                            <!-- popHead -->
+                            <div class="popHead">
+                                <h3 class="title type03">서울지사 현황</h3>
+                                <div class="btnArea">
+                                    <button type="button" class="btn close" title="닫기"></button>
+                                </div>
+                            </div>
+                            <!-- //popHead -->
+                            <div class="popBody">
+                                <!-- selectArea -->
+                                <div class="selectArea type03">
+                                    <select name="" id="">
+                                        <option value="">전일</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">직영포함</option>
+                                    </select>
+                                </div>
+                                <!-- //selectArea -->
+                                <!-- graph -->
+                                <div class="graph type02">
+                                    <h3 class="title type04">주문, 배차, 출하</h3>
+                                    <div id='ib-containerLoca01'></div>
+                                </div>
+                                <div class="graph type03">
+                                    <h3 class="title type04">소량주문</h3>
+                                    <div id='ib-containerLoca02'></div>
+                                </div>
+                                <!-- //graph -->
+                                <script>
+
+                                var ibLoca01 = {
+                                    initialize: function() {
+                                        var initData = {
+                                            "chart": {
+                                                "type": "column"
+                                            },
+                                            "colors": ["#017DD1", "#F8B250", "#9099A7"],
+                                            "yAxis": {
+                                                "title": {
+                                                    "text": ""
+                                                }
+                                            }
+                                        };
+
+                                        createIBChart("ib-containerLoca01", "myChartLoca01", {
+                                            width: "100%",
+                                            height: "255px",
+                                        });
+                                        myChartLoca01.setOptions(initData);
+
+                                        this.doAction();
+                                    },
+                                    data: {
+                                        "ibchart": {
+                                            "data": [{
+                                                "axisLabel": "G",
+                                                "series": [{
+                                                    "seriesName": "주문",
+                                                    "value": 843.509
+                                                }, {
+                                                    "seriesName": "배차",
+                                                    "value": 801.33355
+                                                }, {
+                                                    "seriesName": "출하",
+                                                    "value": 761.2668725
+                                                }]
+                                            }, {
+                                                "axisLabel": "K",
+                                                "series": [{
+                                                    "seriesName": "주문",
+                                                    "value": 24.162
+                                                }, {
+                                                    "seriesName": "배차",
+                                                    "value": 22.9539
+                                                }, {
+                                                    "seriesName": "출하",
+                                                    "value": 21.806205
+                                                }]
+                                            }, {
+                                                "axisLabel": "D",
+                                                "series": [{
+                                                    "seriesName": "주문",
+                                                    "value": 504.88
+                                                }, {
+                                                    "seriesName": "배차",
+                                                    "value": 479.636
+                                                }, {
+                                                    "seriesName": "출하",
+                                                    "value": 455.6542
+                                                }]
+                                            }]
+                                        }
+                                    },
+                                    doAction: function() {
+                                        myChartLoca01.loadSearchData(this.data, {
+                                            append: true
+                                        });
+                                    }
+                                };
+                                ibLoca01.initialize();
+
+                                var ibLoca02 = {
+                                    initialize: function() {
+                                        var initData = {
+                                            "chart": {
+                                                "type": ["line", "column"]
+                                            },
+                                            "colors": ["#017DD1", "#F8B250", "#9099A7"],
+                                            "xAxis": {
+                                                "categories": this.data.categories,
+                                                "crosshair": true
+                                            },
+                                            "yAxis": [{
+                                                "title": {
+                                                    "text": '',
+                                                },
+                                                "labels": {
+                                                    "format": '{value}',
+                                                },
+                                                "opposite": true
+                                            },
+                                            {
+                                                "labels": {
+                                                    "format": '{value}',
+                                                },
+                                                "title": {
+                                                    "text": '',
+                                                }
+                                            }],
+                                            "series": [{
+                                                "name": "출하건수",
+                                                "type": "column",
+                                                "data": this.data.rainfall,
+                                                "yAxis": 1,
+                                            },
+                                            {
+                                                "name": "소량건수",
+                                                "type": "column",
+                                                "data": this.data.rainfall02,
+                                                "yAxis": 1,
+                                            },
+                                            {
+                                                "name": "소량비율",
+                                                "type": "line",
+                                                "data": this.data.temperAvg,
+                                                "tooltip": {
+                                                    "valueSuffix": ' %'
+                                                }
+                                            }],
+                                            "tooltip": {
+                                                "headerFormat": "",
+                                                "shared": true
+                                            }
+                                        };
+
+                                        createIBChart("ib-containerLoca02", "myChartLoca02", {
+                                            width: "100%",
+                                            height: "255px",
+                                        });
+
+                                        myChartLoca02.setOptions(initData);
+
+                                        this.doAction();
+                                    },
+                                    data: {
+                                        "categories": ["G", "K", "D"],
+                                        "rainfall": [36, 5, 21],
+                                        "rainfall02": [5, 1, 4],
+                                        "temperAvg": [13.9, 20.0, 19.0]
+                                    },
+                                    doAction: function() {
+                                        myChartLoca02.draw();
+                                    }
+                                };
+                                ibLoca02.initialize();
+
+                                </script>
+                            </div>
+                        </div>
+                        <!-- //popup -->
+
+                        <!-- popup -->
+                        <div class="popup car01">
+                            <!-- popHead -->
+                            <div class="popHead">
+                                <h3 class="title type03">실행사별 차량매출</h3>
+                                <div class="btnArea">
+                                    <button type="button" class="btn close" title="닫기"></button>
+                                </div>
+                            </div>
+                            <!-- //popHead -->
+                            <div class="popBody">
+                                <!-- selectArea -->
+                                <div class="selectArea type03">
+                                    <select name="" id="">
+                                        <option value="">기간별</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">실행사</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">유종</option>
+                                    </select>
+                                </div>
+                                <!-- //selectArea -->
+                                <!-- graph -->
+                                <div class="graph">
+                                    <h3 class="title type04">현대글로비스</h3>
+                                    <div id='ib-containerCarpop01'></div>
+                                </div>
+                                <!-- //graph -->
+                                <script>
+                                    //차량 매출현황
+                                    var ibCarpop01 = {
+                                        initialize: function() {
+                                            var initData = {
+                                                "chart": {
+                                                    "type": ["line", "column"]
+                                                },
+                                                "colors": ["#017DD1", "#F8B250", "#9099A7"],
+                                                "xAxis": {
+                                                    "categories": this.data.categories,
+                                                    "crosshair": true
+                                                },
+                                                "yAxis": [
+                                                    {
+                                                    "title": {
+                                                        "text": '',
+                                                    },
+                                                    "labels": {
+                                                        "format": '{value}',
+                                                    },
+                                                    "opposite": true
+                                                },
+                                                {
+                                                    "labels": {
+                                                        "format": '{value}',
+                                                    },
+                                                    "title": {
+                                                        "text": '',
+                                                    }
+                                                }],
+                                                "series": [{
+                                                    "name": "매출액",
+                                                    "type": "column",
+                                                    "data": this.data.rainfall,
+                                                    "yAxis": 1,
+
+                                                }, {
+                                                    "name": "수송단가",
+                                                    "type": "line",
+                                                    "data": this.data.temperAvg,
+                                                },
+                                                {
+                                                    "name": "수송사평균",
+                                                    "type": "line",
+                                                    "data": this.data.temperAvg02,
+
+                                                }],
+                                                "tooltip": {
+                                                    "headerFormat": "",
+                                                    "shared": true
+                                                }
+                                            };
+
+                                            createIBChart("ib-containerCarpop01", "myChartCarpop01", {
+                                                width: "100%",
+                                                height: "599px"
+                                            });
+
+                                            myChartCarpop01.setOptions(initData);
+
+                                            this.doAction();
+                                        },
+                                        data: {
+                                            "categories": ["도명특송", "성준로지스", "하나에너지", "에이앤로지스","엘에스특수","태산이엔엘","강원물류"],
+                                            "rainfall": [586011261, 504287067, 441690428, 329220034, 148927138, 175990031, 122596220],
+                                            "temperAvg": [7710674, 9005126, 9601965, 7482273, 6205297, 6768847, 7662263],
+                                            "temperAvg02": [8016396,8016396,8016396,8016396,8016396,8016396,8016396]
+                                        },
+                                        doAction: function() {
+                                            myChartCarpop01.draw();
+                                        }
+                                    };
+                                    ibCarpop01.initialize();
+                                </script>
+                            </div>
+                        </div>
+                        <!-- //popup -->
+
+                        <!-- popup -->
+                        <div class="popup company01">
+                            <!-- popHead -->
+                            <div class="popHead">
+                                <h3 class="title type03">실행사 현황</h3>
+                                <div class="btnArea">
+                                    <button type="button" class="btn close" title="닫기"></button>
+                                </div>
+                            </div>
+                            <!-- //popHead -->
+                            <div class="popBody">
+                                <!-- selectArea -->
+                                <div class="selectArea type03">
+                                    <select name="" id="">
+                                        <option value="">전월</option>
+                                    </select>
+                                </div>
+                                <!-- //selectArea -->
+                                <!-- graph -->
+                                <div class="graph">
+                                    <h3 class="title type04">실행사별 수송량, 수송단가</h3>
+                                    <div id='ib-containerCompanypop01'></div>
+                                </div>
+                                <!-- //graph -->
+
+                                <script>
+                                    var ibCompanypop01 = {
+                                        initialize: function() {
+                                            var initData = {
+                                                "chart": {
+                                                    "type": ["line", "column"]
+                                                },
+                                                "colors": ["#017DD1", "#F8B250"],
+                                                "xAxis": {
+                                                    "categories": this.data.categories,
+                                                    "crosshair": true
+                                                },
+                                                "yAxis": [{
+                                                    "title": {
+                                                        "text": '',
+                                                    },
+                                                    "labels": {
+                                                        "format": '{value}',
+                                                    },
+                                                    "opposite": true
+                                                },
+                                                {
+                                                    "labels": {
+                                                        "format": '{value}',
+                                                    },
+                                                    "title": {
+                                                        "text": '',
+                                                    }
+                                                }],
+                                                "series": [{
+                                                    "name": "수송량",
+                                                    "type": "column",
+                                                    "data": this.data.rainfall,
+                                                    "yAxis": 1,
+                                                }, {
+                                                    "name": "수송단가",
+                                                    "type": "line",
+                                                    "data": this.data.temperAvg,
+                                                }],
+                                                "tooltip": {
+                                                    "headerFormat": "",
+                                                    "shared": true
+                                                }
+                                            };
+
+                                            createIBChart("ib-containerCompanypop01", "myChartCompanypop01", {
+                                                width: "100%",
+                                                height: "599px"
+                                            });
+
+                                            myChartCompanypop01.setOptions(initData);
+
+                                            this.doAction();
+                                        },
+                                        data: {
+                                            "categories": ["도명특송", "성준로지스", "하나에너지", "에이앤로지스","엘에스특수","태산이엔엘","강원물류"],
+                                            "rainfall": [96308, 72482, 59018, 43779, 23179, 21181, 12271],
+                                            "temperAvg": [6.087, 6.957, 7.483, 7.520, 6.424, 8.308, 9.990]
+                                        },
+                                        doAction: function() {
+                                            myChartCompanypop01.draw();
+                                        }
+                                    };
+                                    ibCompanypop01.initialize();
+
+                                </script>
+                            </div>
+                        </div>
+                        <!-- //popup -->
+                    </article>
+                    <!-- //popupArea -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //contents -->
+        </main>
+        <!--//container-->
+
+        <!--footer-->
+        <footer id="footer">
+            @@include('include/footer.html')
+        </footer>
+        <!--//footer-->
+    </div>
+</body>
+</html>

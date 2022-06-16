@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '사용 권한 신청'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 2})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        사용 권한 신청
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li><span>1</span> <b>신청 체크</b></li>
+              <li><span>2</span> <b>개인정보 수집 동의</b></li>
+              <li class="active"><span>3</span> <b>개인정보 입력</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>4. 신청 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="@@htmlRoot/join04.html">
+            <div class="join-cont join-cont-step3">
+              <section>
+                <strong class="join-title">소속, 권한 유형(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">소속 기관</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <select name="" class="cs-gride-col6 cs-input" title="시, 광역시/도 선택">
+                          <option>광역시·도 선택</option>
+                          <option>서울특별시</option>
+                        </select>
+                        <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                          <option>시·군·구 선택</option>
+                          <option>시,군구구구구구구</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">소속 부서</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" class="cs-input _disabled cs-gride-col9" placeholder="‘부서 찾기’ 클릭 후 선택 시 자동 입력" disabled title="‘부서 찾기’ 클릭 후 선택 시 자동 입력">
+                        <button class="cs-btn2-gray cs-gride-col3" jq-action="modal" jq-target="#js__findgroup" type="button">부서 찾기</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">권한 유형</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="authority" id="authority1" class="cs-radio"><label for="authority1"><span></span> 기관 사용자</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="authority" id="authority2" class="cs-radio _disabled" disabled><label for="authority2"><span></span> 기관 관리자 (<b class="pcolor-red">1</b>명/기관당)</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">메뉴 그룹</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" class="cs-input _disabled cs-gride-col9" readonly placeholder="‘그룹 선택’ 시 자동 입력" title="메뉴 그룹">
+                        <button class="cs-btn2-gray cs-gride-col3" jq-action="modal" jq-target="#js__groupSelect" type="button">그룹 선택</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <ul class="cs-list-dot">
+                  <li>‘기관 관리자’가 등록된 기관만 ‘기관 사용자’ 신청이 가능합니다. </li>
+                </ul>
+              </section>
+
+              <section>
+                <strong class="join-title">계정정보(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <label for="uerID" class="frm-title">아이디</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="uerID" class="cs-input cs-gride-col9" placeholder="공직자통합메일 ID 입력" title="공직자통합메일 ID 입력">
+                        <button class="cs-btn2-gray cs-gride-col3" type="button">중복 확인</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="userPassword" class="frm-title">비밀번호</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="password" id="userPassword" class="cs-input width100p cs-gride-col12" placeholder="영문소문자, 숫자, 특수기호 조합 9~12자리" title="영문소문자, 숫자, 특수기호 조합 9~12자리">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="userPasswordCheck" class="frm-title">비밀번호 확인</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="password" id="userPasswordCheck" class="cs-input cs-gride-col12" placeholder="영문소문자, 숫자, 특수기호 조합 9~12자리" title="영문소문자, 숫자, 특수기호 조합 9~12자리">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="cs-list-dot">
+                  <li>아이디는 공직자통합메일 ID를 입력해 주세요.</li>
+                  <li>비밀번호에 사용하실 수 있는 특수기호는 ! @ # $ % ^ * + = - 만 가능합니다.</li>
+                </ul>
+              </section>
+
+              <section>
+                <strong class="join-title">개인정보(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <label for="uerName" class="frm-title">이름</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="uerName" class="cs-input _disabled cs-gride-col12" disabled value="홍은자">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="lo-frm-row">
+                    <label for="uerHp" class="frm-title">휴대전화</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="uerHp" class="cs-input _disabled cs-gride-col12" disabled value="010-1234-1234">
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="lo-frm-row">
+                    <label for="uerHp" class="frm-title">휴대전화</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <!-- 
+                          버튼부부분만바뀌며
+                          전화번호 input은 readonly 및 class="_disabled" 추가됨(회색처리)
+                         -->
+
+                        <!-- 초기 -->
+                        <input type="text" id="uerHp" class="cs-input cs-gride-col9">
+                        <button type="button" class="cs-btn2-gray cs-gride-col3" jq-action="modal" jq-target="#js__smssend">인증번호 발송</button>
+
+                        <!-- 인증번호 발송 누른다음  -->
+                        <input type="text" id="uerHp" readonly class="cs-input cs-gride-col9 _disabled" value="010-1234-1234">
+                        <button type="button" class="cs-btn2-gray cs-gride-col3">재발송</button>
+
+                        <!-- 인증번호 인증 완료후 -->
+                        <input type="text" id="uerHp" readonly class="cs-input cs-gride-col9 _disabled" value="010-1234-1234">
+                        <span class="cs-btn2-gray-line cs-gride-col3">확인 완료</span>
+
+                        <div class="cs-gride-col9">
+                          <div class="cs-input-sms width100p block">
+                            <input type="text" title="인증번호">
+                            <div>남은 시간 <span>02:00</span> </div>
+                          </div>
+                        </div>
+                        <button class="cs-btn2-gray cs-gride-col3">확인</button>
+                      </div>
+
+                      <!-- 
+                        인증번호 발송 팝업
+                        작업, 확인 편의상 현재의 위치에 퍼블리싱하며,
+                        개발시 적당한 위치로 변경하시면됩니다. 여기에 그대로 출력해도 상관은 없음
+                      -->
+
+                      <div id="js__smssend" class="laymodal modal-alert width500" tabindex="0">
+                        <div class="laymodal-header">
+                          <h2>인증번호 발송</h2>
+                        </div>
+                        <div class="laymodal-content tac">
+                          인증번호가 재발송되었습니다. <br>
+                          2분 이내 입력해 주세요.
+                        </div>
+                        <div class="laymodal-footer cs-btn-set">
+                          <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="uerMail" class="frm-title">공직자통합메일</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <div class="cs-input-email _disabled cs-gride-col12">
+                          <input type="text" id="uerMail" title="공직자통합메일 ID" value="공직자통합메일 ID" disabled>
+                          <span>@korea.kr</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <strong for="uerHp" class="frm-title">부서 연락처<span>(자리)</span></strong>
+                    <div class="frm-cont">
+                      <div class="cs-input-tel">
+                        <select class="cs-input" title="지역번호 선택">
+                          <option>지역번호 선택</option>
+                          <option>02</option>
+                          <option>032</option>
+                        </select>
+                        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                        <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="cs-list-dot">
+                  <li>‘계정정보’에서 아이디를 입력하면 ‘개인정보’의 메일 아이디가 자동으로 입력됩니다. </li>
+                  <li>부서 연락처는 국토이용정보통합플랫폼의 다른 사용자에게 공개되는 연락처입니다.</li>
+                </ul>
+              </section>
+
+              <section>
+                <strong class="join-title">개인정보(선택)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">직위/담당 업무</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" class="cs-input cs-gride-col6" placeholder="직위 입력" title="직위 입력">
+                        <input type="text" class="cs-input cs-gride-col6" placeholder="담당 업무 입력" title="담당 업무 입력">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="onnaraID" class="frm-title">온-나라시스템 ID </label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="onnaraID" class="cs-input cs-gride-col6" placeholder="아이디 입력">
+                        <button type="button" class="cs-btn2-gray2 cs-gride-col3">확인 방법</button>
+                        <button type="button" class="cs-btn2-gray cs-gride-col3">중복 확인</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 0111 :: 삭제
+                    <div class="lo-frm-row">
+                    <label for="saeulID" class="frm-title">새올행정시스템 ID</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="saeulID" class="cs-input cs-gride-col6" placeholder="아이디 입력">
+                        <button type="button" class="cs-btn2-gray2 cs-gride-col3">확인 방법</button>
+                        <button type="button" class="cs-btn2-gray cs-gride-col3">중복 확인</button>
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+                <ul class="cs-list-dot">
+                  <li>온-나라 문서ID는 국토이용정보통합플랫폼에서 전자결재 요청 시 필요하며, 결재 업무를 진행하지 않는 사용자는 입력하실<br> 필요가 없습니다.</li>
+                </ul>
+              </section>
+  
+              <div class="__btn-set cs-btn-set">
+                <button class="cs-btn-line" jq-action="modal" jq-target="#js__reqCancel">신청 취소</button>
+                <button type="submit" class="cs-btn">다음</button>
+              </div>
+
+              <div id="js__reqCancel" class="laymodal modal-alert width500" tabindex="0">
+                <div class="laymodal-header">
+                  <h2>사용 권한 신청 취소</h2>
+                </div>
+                <div class="laymodal-content tac">
+                  <p>
+                    취소 시 입력하신 개인정보는 모두 삭제되며,
+                    별도 저장되지 않습니다. 
+                  </p>
+
+                  <p>
+                    사용 권한 신청을 취소하시겠습니까?
+                  </p>
+                </div>
+                <div class="laymodal-footer cs-btn-set">
+                  <button type="button" class="cs-btn cs-btn-line" jq-action="closeModal">계속 신청</button>
+                  <button type="button" class="cs-btn" onclick="lay_pop_close();lay_pop_open('#js__reqCancelComplete')">신청 취소</button>
+                </div>
+              </div>
+
+              <div id="js__reqCancelComplete" class="laymodal modal-alert width500" tabindex="0">
+                <div class="laymodal-header">
+                  <h2>사용 권한 신청 취소</h2>
+                </div>
+                <div class="laymodal-content tac">
+                  사용 권한 신청이 취소되었습니다.
+                </div>
+                <div class="laymodal-footer cs-btn-set">
+                  <a href="@@webRoot/login.html" class="cs-btn">확인</a>
+                </div>
+              </div>
+  
+            </div>
+          </form>
+          <!--// join-cont -->
+
+        </div>
+
+        <!-- 부서찾기 -->
+        @@include('./include/modals.html',{'items': 3})
+
+        <!-- 그룹선택 -->
+        @@include('./include/modals.html',{'items': 7})
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

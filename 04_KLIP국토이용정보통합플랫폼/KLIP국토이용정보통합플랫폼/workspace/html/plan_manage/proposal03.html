@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>입안 제안서 검토</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안서 검토</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        @@include('../include/cont_proposal02.html',{'context':1})
+        
+        <!-- 201203 :: 내용추가, button추가 :: start -->
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+          <a href="proposal08.html" class="cs-btn">제안서 수정</a>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">제안서 처리 프로세스</h3>
+          <ul class="board-state">
+            <!-- 201203 :: 텍스트수정 -->
+            <!-- 1222 :: 현재깜박이던거 제거 -->
+            <li class="active"><a href="proposal02.html">담당자 지정 대기</a></li>
+            <li class="active locked"><a href="proposal03.html">담당자 검토</a></li>
+            <li>도시계획위원회 자문</li>
+            <li>입안 반영/반려</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <!-- 201203 :: 테이블 td 추가 및 텍스트수정, 데이터 샘플추가 -->
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width200">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">검토의견</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>담당자 검토 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>제안서 접수 반려</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">도시·군관리계획도서 8페이지의 내용에 오류가 있으니 수정하여 다시 등록해주세요.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>제안서 수정 접수 <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">대민사이트에서 제안서를 수정하여 제출되었습니다. </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <!-- 제안서 접수 완료후 -->
+          <section>
+            <h2 class="cont-hedding2">입안 자료 생성</h2>
+            <div class="data-extra-btn">
+              <!-- 0127 :: 버튼변경 -->
+              <a href="#js__alertDown" jq-action="modal" class="btn-down-excel">조서 다운로드</a>
+              <a href="#" class="cs-btn2-gray">최종 자료 불러오기</a>
+            </div>
+  
+            <!-- 팝업 :: 조서 다운로드 정보가 없을경우 -->
+            <div id="js__alertDown" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>조서 다운로드</h2>
+              </div>
+              <div class="laymodal-content tac">
+                생성된 조서 정보가 없습니다.<br>
+                용도지역·용도지구 프로그램에서 <br>
+                입안 자료(조서, 도면) 생성 후 시도해 주세요.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+  
+            <!-- 0127 :: 테이블변경 -->
+            @@include('../include/reportTable.html')
+          </section>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+          <!-- 201203 :: 텍스트 수정 -->
+          <a href="#js__charge2" jq-action="modal" class="cs-btn">제안서 검토 결과 처리</a>
+          <a href="#js__chargeConfirm" jq-action="modal">제안서 검토 결과 처리 (제안서 수정 접수 시)</a>
+
+          <!-- 제안서 접수 완료후 -->
+          <a href="#js__charge4" jq-action="modal" class="cs-btn">담당자 검토 결과 처리</a>
+        </section>
+
+        <!-- 제안서 검토 결과 처리 -->
+        <!-- 201203 :: 텍스트 html 수정 -->
+        <div id="js__charge2" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>제안서 검토 결과 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              제안서 검토 후 접수 완료 여부를 선택해 주세요.<br>
+              제안서 내용에 오류가 있는 경우 ‘제안서 접수 반려’ 처리 시 제안자가 수정하여 제출할 수 있습니다.  
+            </section>
+            <section>
+              <div class="tar mb10"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>제안서 검토 결과 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-gride">
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState1">
+                            <label for="chargeState1"><span></span> 제안서 접수 완료</label>
+                          </div>
+            
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState2">
+                            <label for="chargeState2"><span></span> 제안서 접수 반려</label>
+                          </div>
+
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState3">
+                            <label for="chargeState3"><span></span> 입안 반려</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="제안자에게 제안서 검토 결과에 대한 의견을 입력해 주세요.&#13;&#10;(제안서 접수 반려 시 수정 요청하실 내용)" title="검토의견"></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 문자메시지로 전송되며, <b class="underline">토지e음</b> 대민사이트에서도 확인 가능합니다.</li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn _wauto" onclick="chargeComplete2()">변경</button>
+          </div>
+        </div>
+
+        <div id="js__charge3" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>제안서 검토 결과 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              수정된 제안서 검토 후 접수 완료 여부를 선택해 주세요.<br>
+              제안서 내용에 오류가 있는 경우 ‘제안서 접수 반려’ 처리 시 제안자가 수정하여 제출할 수 있습니다.  
+            </section>
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>제안서 검토 결과 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-gride">
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState1">
+                            <label for="chargeState1"><span></span> 제안서 접수 완료</label>
+                          </div>
+            
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState2">
+                            <label for="chargeState2"><span></span> 제안서 접수 반려</label>
+                          </div>
+
+                          <div class="cs-gride-col4">
+                            <input type="radio" name="chargeState" class="cs-radio" id="chargeState3">
+                            <label for="chargeState3"><span></span> 입안 반려</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="제안자에게 제안서 검토 결과에 대한 의견 및 요청하실&#13;&#10;내용을 입력해 주세요." title="검토의견"></textarea>
+                            <!-- 제안자에게 제안서 검토 결과에 대한 의견을 입력해 주세요.&#13;&#10;(제안서 접수 반려 시 수정 요청하실 내용) -->
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 문자메시지로 전송되며, <b class="underline">토지e음</b> 대민사이트에서도 확인 가능합니다.</li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn _wauto" onclick="chargeComplete2()">변경</button>
+          </div>
+        </div>
+        
+        <div id="js__chargeComplete2" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>제안서 검토 결과 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">제안서 접수 완료</b> 처리되었습니다.<br>
+            용도지역·용도지구 프로그램에서<br>
+            입안자료를 생성하실 수 있습니다.  
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn _wauto" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+        
+        <script>
+          function chargeComplete2(){
+            lay_pop_close('#js__charge2');
+            lay_pop_open('#js__chargeComplete2');
+          }
+        </script>
+
+        <div id="js__chargeConfirm" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>제안서 검토 결과 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">제안서 접수 완료</b> 처리되었습니다.<br>
+            용도지역·용도지구 프로그램에서<br>
+            입안자료를 생성하실 수 있습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__chargeConfirm');lay_pop_open('#js__charge3')">확인</button>
+          </div>
+        </div>
+
+        <div id="js__charge4" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>담당자 검토 결과 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              입안 자료(조서, 도면) 작성이 완료되었습니까?<br>
+              입안 자료를 검수 완료 하신 경우에만 상태 변경을 해주세요.
+            </section>
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>담당자 검토 결과 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" name="chargeState" class="cs-radio" id="chargeState41">
+                        <label for="chargeState41"><span></span> 담당자 검토 완료(입안 자료 작성 완료)</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="메모할 내용이 있으시면 입력해 주세요." title="검토의견"></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 전송되지 않으며,  <b class="underline">토지e음</b> 대민사이트에도 노출되지 않습니다. (담당자만 확인 가능) </li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__charge4');lay_pop_open('#js__charge4Complete');">변경</button>
+          </div>
+        </div>
+
+        <div id="js__charge4Complete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>담당자 검토 결과 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">담당자 검토 완료</b> 처리되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <!-- 파일보기 -->
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+        @@include('../include/modals.html',{'items': 18})
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 계획삭제 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__planDelete',
+        'title': '도시·군관리계획 삭제',
+        'cont': '삭제된 내용은 복구할 수 없습니다.<br>도시·군관리계획을 삭제하시겠습니까?',
+        'btns': '<button class="cs-btn-line" jq-action="closeModal">취소</button> <button class="cs-btn" onclick="lay_pop_close(\'#js__planDelete\');lay_pop_open(\'#js__planDeleteComplete\')">삭제</button>'
+      })
+
+      <!-- 계획삭제 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__planDeleteComplete',
+        'title': '도시·군관리계획 삭제',
+        'cont': '도시·군관리계획이 삭제되었습니다.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 조서다운로드 레이어팝업 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__fileDownAlert',
+        'title': '조서 다운로드',
+        'cont': '생성된 조서 정보가 없습니다.<br>용도지역·용도지구 프로그램에서<br>조서 등록 후 시도해 주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 생성 자료 불러오기 레이어팝업 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__fileLoadAlert',
+        'title': '생성 자료 불러오기',
+        'cont': '생성된 입안 자료가 없습니다.<br>용도지역·용도지구 프로그램에서 <br>입안 자료(조서, 도면) 생성 후 시도해 주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      @@include('../include/modals.html',{'items': 1})
+      @@include('../include/modals.html',{'items': 2})
+      @@include('../include/modals.html', {'items': 18})

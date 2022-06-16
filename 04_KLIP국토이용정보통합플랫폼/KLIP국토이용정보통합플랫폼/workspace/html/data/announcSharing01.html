@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '공고', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">게시판</a></li>
+          <li>공고 게시판</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>공고 게시판</h2>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>
+              국토계획법에 따른 도시·군관리계획 외 다른 법률에 따른 계획 입안 및 기타 업무로 공고가 필요한 경우 공고문을 등록하고<br />토지e음으로 전송하실 수 있습니다.
+            </li>
+            <li>
+              본 페이지에서는 본인이 등록한 공고만 조회되며, 모든 공고를 확인하고자 하시는 경우 <span class="underline">정보 조회 > 공고</span> 메뉴를 이용해 주세요
+            </li>
+          </ul>
+          <a href="announcSharing02.html" class="cs-btn-blue board-write-btn _wauto">공고 등록</a>
+        </div>
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">등록 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="등록 기관 선택">
+                    <option>경기도</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="지역구 선택">
+                    <option>하남시</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">공고일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="공고 기관, 공고 번호, 공고 제목 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>공고 번호 검색 시 ‘연도-일련번호’만 입력해 주세요. (‘제’와 ‘호‘ 제외, 예. 2020-100)</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <!-- <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">결정</a></li>
+              <li><a href="#">변경</a></li>
+            </ul>
+          </nav> -->
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">공고일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">공고 번호</a>
+            <a href="#">공고 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>공고 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width150">
+                <col class="width130">
+                <col class="width545">
+                <col class="width95">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">공고일</th>
+                  <th scope="col">공고 기관</th>
+                  <th scope="col">공고 번호</th>
+                  <th scope="col">공고 제목</th>
+                  <th scope="col">공고문</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>부산광역시 김해시</td>
+                  <td>제2020-XXXX호</td>
+                  <td class="tal" ><a href="announcSharing03.html" class="txtEp" style="display:block;">경기도 하남시 농업진흥지역을 지정에 따른 의견 청취 공고 경기도 하남시 농업진흥지역을 지정에 따른 의견 청취 공고 경기도 하남시 농업진흥지역을 지정에 따른 의견 청취 공고</a></td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                  <td>공고 전송 대기</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="7">
+                    등록된 공고가 없습니다.                   
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="7">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            공고 제목을 클릭하시면 등록된 공고의 상세 정보 확인이 가능합니다.
+          </li>
+        </ul>
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

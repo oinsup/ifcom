@@ -1,0 +1,53 @@
+<div class="board-view-tb  js__floatingHead _floating _tac" data-minitem="10">
+              <table>
+                <caption>조서, 도면</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col>
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width110">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">조서 유형</th>
+                    <th scope="col">대분류</th>
+                    <th scope="col">중분류</th>
+                    <th scope="col">소분류</th>
+                    <th scope="col">기정 면적</th>
+                    <th scope="col">증감 면적</th>
+                    <th scope="col">변경후 면적</th>
+                    <th scope="col">조서</th>
+                    <th scope="col">도면</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @@for(var i = 0; i < 11; i++){
+                  <tr>
+                    <td>1</td>
+                    <td>용도지구</td>
+                    <td>신설</td>
+                    <td>상업지역</td>
+                    <td>사업지역기타</td>
+                    <td>-</td>
+                    <td>26,000</td>
+                    <td>2,000</td>
+                    <td>28,000</td>
+                    <td><a href="#js__reportview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">조서 보기</a></td>
+                    <td><a href="#js__preview2" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">도면 보기</a></td>
+                  </tr>
+                  }
+                  <tr>
+                    <td colspan="11">용도지역·용도지구 프로그램에서 도면 및 조서 생성 후 ‘생성 자료 불러오기’를 해주세요.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>

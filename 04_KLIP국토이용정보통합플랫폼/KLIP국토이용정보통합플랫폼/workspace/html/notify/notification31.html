@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li>고시</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>고시</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- 22.01.14 수정 -->
+      <!-- <div class="cont-snb">
+        <a href="notification01.html">도시·군관리계획</a>
+        <a href="notification11.html">도시·군기본계획</a>
+        <a href="notification21.html">광역도시계획</a>
+        <a href="notification31.html" class="active">의제</a>
+      </div> -->
+      <div class="cont-snb">
+        <a href="notification01.html">국토계획법</a>
+        <a href="notification31.html" class="active">다른 법률</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <!-- 22.01.14 삭제 -->
+        <!-- <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>국토계획법 제42조(다른 법률에 따라 지정된 지역의 용도지역 지정 등의 의제)에 의하면 타 법에 의해 어느 하나의 구역 등으로 지정·고시된 지역은 도시지역으로 결정·고시된 것으로 봅니다.</li>
+            <li>도시·군관리계획 수립 또는 변경 시 필요한 의제 내역을 조회하실 수 있습니다. </li>
+            <li>본 페이지에서 고시는 <span class="underline">입안 관리 &gt; 도시·군관리계획 입안 관리 &gt; 의제</span>에서 등록된 내역만 조회 됩니다. 찾으시는 고시가 없으신 경우 등록해 주세요.</li>
+          </ul>
+        </div> -->
+
+        <!-- 22.01.14 삭제 -->
+        <!-- <section>
+          <h3 class="cont-hedding1">
+            <span class="pcolor-red">경기도 하남시</span> 의제 등록 현황
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _colorblue _thead-h30 _layoutauto">
+            <table>
+              <caption>2020년 고시 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col">항만구역</th>
+                  <th scope="col">어항구역</th>
+                  <th scope="col">산업단지</th>
+                  <th scope="col">택지개발지구</th>
+                  <th scope="col">전원개발사업구역</th>
+                  <th scope="col">농업진흥지역 또는 보전산지</th>
+                  <th scope="col" rowspan="2">전체</th>
+                  
+                </tr>
+                <tr>
+                  <th scope="col">항만법 제2조 </th>
+                  <th scope="col">어촌·어항법 제17조 </th>
+                  <th scope="col">산업입지 및 개발에 관한 법률 제2조 </th>
+                  <th scope="col">택지개발촉진법 제3조 </th>
+                  <th scope="col">전원개발촉진법 제5조, 제11조</th>
+                  <th scope="col">농지법, 산지관리법</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>4</td>
+                  <td>1</td>
+                  <td>3</td>
+                  <td>132</td>
+                  <td>15</td>
+                  <td>100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section> -->
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">법령 구분</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" title="법령 구분 선택">
+                    <option>법령 구분 선택</option>
+                  </select>
+                  <select name="" class="cs-gride-col6 cs-input" title="다른 법률 분야 선택">
+                    <option>다른 법률 분야</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">고시일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="고시 기관, 고시 번호, 고시 제목 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>고시 번호 검색 시 ‘연도-일련번호’만 입력해 주세요. (‘제’와 ‘호‘ 제외, 예. 2020-100)</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">결정</a></li>
+              <li><a href="#">변경</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">고시일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">고시 번호</a>
+            <a href="#">고시 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>도시·군기본계획 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width200">
+                <col class="width120">
+                <col class="width525">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">법률 분야</th>
+                  <th scope="col">고시일</th>
+                  <th scope="col">고시 기관</th>
+                  <th scope="col">고시 번호</th>
+                  <th scope="col">고시 제목</th>
+                  <th scope="col">고시문</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>교육문화</td>
+                  <td>2020-10-15</td>
+                  <td>제주특별자치도 서귀포시</td>
+                  <td>제2020-1872호</td>
+                  <td class="tal" ><a href="notification32.html" class="txtEp" style="display:block;">[변경] 안산 팔곡일반산업단지 산업단지계획 변경(4차) 승인 및 지형도면 고시 [변경] 안산 팔곡일반산업단지 산업단지계획 변경(4차) 승인 및 지형도면 고시</a></td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">
+                    등록된 고시가 없습니다.                   
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            법률 분야는 다른 법률에 따른 고시 등록 시 선택한 (대표)법령 구분입니다.
+          </li>
+          <li>
+            제목을 클릭하시면 등록된 고시의 상세 정보 확인이 가능합니다.
+          </li>
+        </ul>
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

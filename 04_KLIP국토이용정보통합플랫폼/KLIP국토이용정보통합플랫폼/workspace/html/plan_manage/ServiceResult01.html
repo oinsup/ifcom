@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="urbanPlan01.html">입안 진행</a>
+        <a href="ServiceResult01.html" class="active">용역 성과</a>
+        <a href="UrbanPlan11.html">고시</a>
+        <a href="urbanPlan21.html">의제</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>기관별 &lt;도시·군관리계획&gt; 용역 성과를 등록하고 관리하실 수 있습니다. 본인이 등록한 내역만 확인 가능합니다.</li>
+          </ul>
+          <a href="ServiceResult02.html" class="cs-btn-blue board-write-btn _wauto">성과 등록</a>
+        </div>
+
+        <div class="board-searchbox">
+          <div class="board-searchbox-opts">
+            
+            <div>
+              <strong class="__tit">발주 기관</strong>
+              <div class="__col-harf">
+                <select name="" class="cs-input" title="지역선택">
+                  <option value="#">경기도</option>
+                </select>
+                <select name="" class="cs-input" title="지역선택2">
+                  <option value="#">하남시</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="__row_date">
+              <strong class="__tit">계약기간</strong>
+              <div class="cs-datepicker-set">
+                <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                <div>~</div>
+                <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+              </div>
+            </div>
+            <div>
+              <label for="searchText" class="__tit">검색 조건</label>
+              <div class="__col-full">
+                <input type="text" class="cs-input" id="searchText" placeholder="계획명, 계약업체명 입력">
+              </div>
+            </div>
+          </div>
+
+          <div class="board-searchbox-btns cs-btn-set">
+            <button type="button" class="cs-btn-line">초기화</button>
+            <button type="submit" class="cs-btn">조회</button>
+          </div>
+
+        </div>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">임시저장</a></li>
+              <li><a href="#">등록 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">계획명</a>
+            <a href="#">계약기간</a>
+            <a href="#">상태</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>용역성과 목록</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col>
+                <col class="width170">
+                <col class="width200">
+                <col class="width170">
+                <col class="width80">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">계획명</th>
+                  <th scope="col">계획 유형</th>
+                  <th scope="col">계약기간</th>
+                  <th scope="col">계약업체명</th>
+                  <th scope="col">담당자</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>-</td>
+                  <td class="tal"><a href="ServiceResult02.html">경기도 하남시 OOO 결정 고시</a></td>
+                  <td>용도지역·용도지구</td>
+                  <td>2020-12-01~2020-12-12</td>
+                  <td>OOOO개발주식회사</td>
+                  <td>김개똥</td>
+                  <td>임시저장</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2020-07-15</td>
+                  <td class="tal"><a href="ServiceResult07.html">경기도 하남시 OOO 결정 고시</a></td>
+                  <td>용도지역·용도지구</td>
+                  <td>2020-12-01~2020-12-12</td>
+                  <td>OOOO개발주식회사</td>
+                  <td>김개똥</td>
+                  <td>등록 완료</td>
+                </tr>
+                <tr>
+                  <td colspan="8">등록된 용역 성과 내역이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="8">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>계획명을 클릭하시면 등록된 용역 성과 내역의 상세 정보 확인이 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 임시저장 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">임시저장</a></li>
+              <li><a href="#">등록 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">임시저장일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">계획명</a>
+            <a href="#">계약기간</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>용역성과 임시저장 목록</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col>
+                <col class="width170">
+                <col class="width200">
+                <col class="width170">
+                <col class="width80">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">임시저장일</th>
+                  <th scope="col">계획명</th>
+                  <th scope="col">계획 유형</th>
+                  <th scope="col">계약기간</th>
+                  <th scope="col">계약업체명</th>
+                  <th scope="col">담당자</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-01-01</td>
+                  <td class="tal"><a href="ServiceResult02.html">경기도 하남시 OOO 결정 고시</a></td>
+                  <td>용도지역·용도지구</td>
+                  <td>2020-12-01~2020-12-12</td>
+                  <td>OOOO개발주식회사</td>
+                  <td>김개똥</td>
+                  <td>임시저장</td>
+                </tr>
+                <tr>
+                  <td colspan="8">임시저장 중인 용역 성과 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>계획명을 클릭하시면 ‘용역 성과 등록’페이지로 이동하여 등록을 완료하실 수 있습니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+
+        <!-- 등록 완료 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">임시저장</a></li>
+              <li class="active"><a href="#">등록 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">계획명</a>
+            <a href="#">계약기간</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>용역성과 등록완료 목록</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col>
+                <col class="width170">
+                <col class="width200">
+                <col class="width170">
+                <col class="width80">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">계획명</th>
+                  <th scope="col">계획 유형</th>
+                  <th scope="col">계약기간</th>
+                  <th scope="col">계약업체명</th>
+                  <th scope="col">담당자</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2020-01-01</td>
+                  <td class="tal"><a href="ServiceResult07.html">경기도 하남시 OOO 결정 고시</a></td>
+                  <td>용도지역·용도지구</td>
+                  <td>2020-12-01~2020-12-12</td>
+                  <td>OOOO개발주식회사</td>
+                  <td>김개똥</td>
+                  <td>등록 완료</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2020-01-01</td>
+                  <td class="tal"><a href="ServiceResult07.html">경기도 하남시 OOO 결정 고시</a></td>
+                  <td>용도지역·용도지구</td>
+                  <td>2020-12-01~2020-12-12</td>
+                  <td>OOOO개발주식회사</td>
+                  <td>김개똥</td>
+                  <td>승인 완료</td>
+                </tr>
+                <tr>
+                  <td colspan="8">등록 완료된 용역 성과 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>계획명을 클릭하시면 ‘용역 성과 확인’페이지로 이동하여 용역 성과 정보 확인 및 상태 관리가 가능합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

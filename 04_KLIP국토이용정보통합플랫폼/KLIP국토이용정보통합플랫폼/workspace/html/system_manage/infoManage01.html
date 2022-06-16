@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '정보연계 관리', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>정보연계 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>정보연계 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="infoManage05.html">정보 제공 내역</a>
+        <a href="infoManage01.html" class="active">정보 활용 내역</a>
+        <a href="infoManage11.html">연계 이력</a>
+        <a href="infoManage13.html">연계 통계</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>
+              국토이용정보통합플랫폼에서 타 시스템의 정보를 활용하는 경우 해당 내역을 등록하고 관리할 수 있습니다.
+            </li>
+          </ul>
+          <a href="infoManage02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              <div>
+                <strong class="__tit">
+                  <label for="s01">
+                  제공 기관</strong></label>
+                <div class="__col-harf">
+                  <select name="" id="s01" class="cs-input width100p" title="제공 기관 선택">
+                    <option>제공 기관 선택</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">
+                  <label for="i01">활용 기간</label></strong>
+                <div class="cs-datepicker-set">
+                  <input type="text" id="i01" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                  <div>~</div>
+                  <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="활용 정보명, 제공 서비스명 입력">
+                </div>
+              </div>
+            </div>
+
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">대기</a></li>
+              <li><a href="#">활용 중</a></li>
+              <li><a href="#">활용 중지</a></li>
+              <li><a href="#">활용 종료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">활용 시작일<i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">제공 서비스명</a>
+            <a href="#">활용 정보명</a>
+            <a href="#">등록일</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>활용 정보 내역 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col>
+                <col class="width130">
+                <col>
+                <col class="width100">
+                <col class="width100">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">활용 시작일</th>
+                  <th scope="col">활용 정보명</th>
+                  <th scope="col">제공 기관</th>
+                  <th scope="col">제공 서비스명</th>
+                  <th scope="col">데이터 갱신</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">활용 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">일반지도(국문)</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>API</td>
+                  <td>2021-12-07</td>
+                  <td>대기</td>
+                </tr>
+                
+                <tr>
+                  <td>2</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">일반지도(국문)</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>API</td>
+                  <td>2021-12-07</td>
+                  <td>대기</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">수치지형도</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>API</td>
+                  <td>2021-12-07</td>
+                  <td>대기</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">활용 정보명이 출력됩니다.</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>운영</td>
+                  <td>2021-12-07</td>
+                  <td>활용 중</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">활용 정보명이 출력됩니다.</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>API</td>
+                  <td>2021-12-07</td>
+                  <td class="pcolor-red">활용 중지</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>2021-12-07</td>
+                  <td class="tal"><a href="infoManage03.html">활용 정보명이 출력됩니다.</a></td>
+                  <td class="tal">국토지리정보원</td>
+                  <td class="tal">국토정보맵</td>
+                  <td>API</td>
+                  <td>2021-12-07</td>
+                  <td class="pcolor-red">활용 종료</td>
+                </tr>
+                
+                
+                <tr>
+                  <td colspan="8">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    정보 활용 내역이 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>‘활용 정보명’을 클릭하여 ‘활용 정보 확인’ 페이지로 이동한 뒤 세부 내용 확인이 가능합니다. </li>
+        </ul>
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

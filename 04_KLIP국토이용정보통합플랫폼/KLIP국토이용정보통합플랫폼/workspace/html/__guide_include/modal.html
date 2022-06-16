@@ -1,0 +1,184 @@
+<section>
+      <h2 class="build-h2">MODAL</h2>
+
+      <h3 class="build-h3">Use</h3>
+      <div class="build-code">
+        <b>lay_pop_open(</b>모달창아이디[text], 복귀할BTN[text], 배경클릭닫기[boolean]<b>);</b><br>
+        <p>
+          모달창 열기
+          별도의 클릭없이 띄울때<br>
+        </p>
+      </div>
+      <div class="build-table">
+        <table>
+          <tbody>
+            <tr>
+              <th>배경클릭닫기[boolean]</th>
+              <td>
+                true: 모달 뜨고 검정색 배경눌러도 닫히지 않음
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="build-code">
+        <b>lay_pop_close()</b><br>
+        <p>
+          모달창 닫기
+        </p>
+      </div>
+
+      <div class="build-code">
+        <b>lay_pop_width(ID, WIDTH)</b><br>
+        <p>
+          모달창 크기조정
+        </p>
+      </div>
+
+      <div class="build-table">
+        <table>
+          <tbody>
+            <tr>
+              <th>ID[text]</th>
+              <td>모달 아이디</td>
+            </tr>
+            <tr>
+              <th>WIDTH[nubmer]</th>
+              <td>가로사이즈</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="build-h3">sample</h3>
+      <div>
+        <button jq-action="modal" jq-target="#modal__alert" class="cs-btn">button 열기</button>
+        <button jq-action="modal" jq-target="#js__samplepreview2" class="cs-btn">전체화면 button 열기</button>
+        <a href="#modal__alert" jq-action="modal">열기</a>
+
+        <div id="modal__alert" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>Header</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            컨텐츠영역
+            <div class="tac">
+              <button onclick="lay_pop_width('#modal__alert',1000)">가로1000</button>
+              <button onclick="lay_pop_width('#modal__alert',700)">가로700</button>
+              <button onclick="lay_pop_width('#modal__alert',500)">가로500</button>
+            </div>
+          </div>
+          <div class="laymodal-footer">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        <div id="modal__alerta2" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>작업중페이지</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">작업중인페이지입니다.(붙이지마세요)</div>
+          <div class="laymodal-footer">
+            <button type="button" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div id="js__samplepreview2" class="laymodal">
+        <div class="laymodal-header">
+          <h2>도면 보기</h2>
+          <span>(파일명 : 실제 파일명 출력.pdf)</span>
+          <!-- 0111 :: 버튼추가 -->
+          <div class="laymodal-header-btns">
+            <a href="#" class="laymodal-down">도면 다운로드</a>
+            <button type="button" class="laymodal-reduce" onclick="modalFull(this)">전체 화면보기</button>
+            <button type="button" class="laymodal-close" onclick="modalFullClose(this)">닫기</button>
+          </div>
+        </div>
+        <div class="laymodal-content">
+          전체화면용<br>
+          laymodal-footer 는 선택적 사용가능
+        </div>
+        <div class="laymodal-footer">
+          <button type="button" jq-action="closeModal" class="cs-btn">확인</button>
+        </div>
+      </div>
+
+
+
+      <h3 class="build-h3">code</h3>
+
+      <div class="build-tabsection">
+        <div class="js__tab">
+          <button data-section="1">html</button>
+          <button data-section="2">script</button>
+        </div>
+
+        <div class="tab-section" data-section="1">
+          <textarea class="ui_codeChage" data-tabsize="12" value='
+            <button jq-action="modal" jq-target="#modal__alert" class="cs-btn">button 열기</button>
+            <a href="#modal__alert" jq-action="modal" id="asdf">열기</a>
+
+            <div id="modal__alert" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>Header</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                컨텐츠영역
+              </div>
+              <div class="laymodal-footer">
+                <button type="button" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          '></textarea>
+        </div>
+        <div class="tab-section" data-section="2">
+          <textarea class="ui_codeChage" data-tabsize="12" value='
+            //버튼클릭없이 열때
+            lay_pop_open(element,clickBtn,bgclose);
+          '></textarea>
+        </div>
+      </div>
+
+      <h3 class="build-h3">sourse</h3>
+      <textarea class="ui_codeChage" data-tabsize="" value="
+        lay_pop_open(element,clickBtn,bgclose);
+      ">
+      </textarea>
+
+      <script>
+        // lay_pop_open('#modal__mut1');
+      </script>
+
+      <div id="modal__mut1" class="laymodal width500" tabindex="0">
+        <div class="laymodal-header">
+          <h2>step1</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <button onclick="lay_pop_close('#modal__mut1');lay_pop_open('#modal__mut2')">다음 modal 나와주세요!!</button>
+        </div>
+        <div class="laymodal-footer">
+          <button type="button" jq-action="closeModal">확인</button>
+        </div>
+      </div>
+
+      <div id="modal__mut2" class="laymodal width500" tabindex="0">
+        <div class="laymodal-header">
+          <h2>step2</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          컨텐츠영역
+        </div>
+        <div class="laymodal-footer">
+          <button type="button" jq-action="closeModal">확인</button>
+        </div>
+      </div>
+    </section>

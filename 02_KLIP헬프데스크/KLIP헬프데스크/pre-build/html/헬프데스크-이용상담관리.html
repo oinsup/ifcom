@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">이용 상담 관리 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>이용 상담 관리</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 상담 관리</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--searchArea-->
+                    <div class="searchArea">
+                        <div class="table">
+                            <table>
+                                <caption>검색 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 90px;">
+                                    <col style="width: 340px ;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 370px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="row"><label for="">문의 기관</label></th>
+                                    <td>
+                                        <select name="" id="" class="grayType wd156">
+                                            <option value="">광역시·도 선택</option>
+                                        </select>
+                                        <select name="" id="" class="grayType wd156">
+                                            <option value="">시·군·구 선택</option>
+                                        </select>
+                                    </td>
+                                    <th scope="row"><label for="">문의일</label></th>
+                                    <td>
+                                        <select name="" id="" class="grayType">
+                                            <option value="">2020</option>
+                                        </select>
+                                        <select name="" id="" class="grayType">
+                                            <option value="">12</option>
+                                        </select>
+                                        <span class="hyphen">~</span>
+                                        <select name="" id="" class="grayType">
+                                            <option value="">2020</option>
+                                        </select>
+                                        <select name="" id="" class="grayType">
+                                            <option value="">12</option>
+                                        </select>
+                                    </td>
+                                    <th scope="row"><label for="num03">검색 조건</label></th>
+                                    <td style="padding-right: 20px;">
+                                        <input type="text" id="num03" class="grayType" placeholder="문의자명, 문의 제목 입력" title="문의자명, 문의 제목 입력">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--//searchArea-->
+                    <!--btnArea-->
+                    <div class="btnArea center">
+                        <button type="button" class="btn white middle">초기화</button>
+                        <button type="button" class="btn dkBlue middle">검색</button>
+                    </div>
+                    <!--//btnArea-->
+                    <!--tabContWrap-->
+                    <div class="tabContWrap type01">
+                        <!--tabNav-->
+                        <div class="tabNav">
+                            <ul class="tabList">
+                                <li class="active">전체(50)</li>
+                                <li>답변 대기(2)</li>
+                                <li>답변 완료(48)</li>
+                            </ul>
+                        </div>
+                        <!--//tabNav-->
+                        <!--tabCont-->
+                        <div class="tabCont active">
+                            <!--table-->
+                            <div class="table type09">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:170px">
+                                        <col style="width:100px">
+                                        <col style="width:120px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:90px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">문의일</th>
+                                            <th scope="col">문의 기관</th>
+                                            <th scope="col">문의자</th>
+                                            <th scope="col">문의 유형</th>
+                                            <th scope="col">문의 제목</th>
+                                            <th scope="col">답변일</th>
+                                            <th scope="col">답변자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>9999</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑다섯</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type09">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:170px">
+                                        <col style="width:100px">
+                                        <col style="width:120px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:90px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">문의일</th>
+                                            <th scope="col">문의 기관</th>
+                                            <th scope="col">문의자</th>
+                                            <th scope="col">문의 유형</th>
+                                            <th scope="col">문의 제목</th>
+                                            <th scope="col">답변일</th>
+                                            <th scope="col">답변자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-2</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑다섯</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type09">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:170px">
+                                        <col style="width:100px">
+                                        <col style="width:120px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:90px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">문의일</th>
+                                            <th scope="col">문의 기관</th>
+                                            <th scope="col">문의자</th>
+                                            <th scope="col">문의 유형</th>
+                                            <th scope="col">문의 제목</th>
+                                            <th scope="col">답변일</th>
+                                            <th scope="col">답변자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-3</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑다섯</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td>
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td class="txt-left">세종특별자치시 000구</td>
+                                        <td>김사랑</td>
+                                        <td class="txt-left">기능 이용 관련</td>
+                                        <td><a href="#" class="title">입력한 제목이 보입니다. 가나다라마바사</a></td>
+                                        <td>2021-09-30</td>
+                                        <td>관리자명</td> 
+                                        <td>답변 대기</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

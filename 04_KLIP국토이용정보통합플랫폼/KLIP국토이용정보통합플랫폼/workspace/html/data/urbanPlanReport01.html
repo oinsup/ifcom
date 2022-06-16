@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '정책정보', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li>도시계획현황</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시계획현황</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+
+        <div class="cs-box _alert-icon mb10">
+          <div class="mb10">
+            <ul class="cs-list-dot">
+              <li>
+                「국토의 계획 및 이용에 관한 법률」에 의한 전 국토의 용도지역·지구·구역, 도시군계획시설 등에 대한 현황을 파악하여
+                도시행정, 도시정책, 도시연구, 도시개발, 도시계획 분야에 필요한 기초자료로 제공합니다. 
+              </li>
+            </ul>
+          </div>
+
+          <div class="indent1">
+            <ul class="cs-list-normal">
+              <li>- 종류 : 국가승인통계  |  승인번호 : 315002 | 승인일자 : 2007-07-23</li>
+              <li>- 작성기간 : 1988년 ~ 현재(2005년까지는 자체생산통계, 2006년 이후부터는 승인통계) | 작성주기 : 1년 </li>
+              <li>- 작성체계 : 시·군·구(도시과) → 시·도(도시과) → 한국토지주택공사(공간정보처)</li>
+            </ul>
+          </div>
+        </div>
+        <form action="">
+
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts type02">
+
+              <div class="__row_date">
+                <strong class="__tit">통계 발표일</strong>
+                <div class="cs-input-tel">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="제목, 제공 부서명 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-gallery">
+          <ul>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획 실천계획</strong>
+                <span>(2021-2025년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_1.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획</strong>
+                <span>(2020~2040년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_2.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획 공청회 자료 </strong>
+                <span>(4차, 영남권)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_3.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획 공청회 자료</strong>
+                <span>(3차, 수도권, 강원권)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_4.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획 공청회 자료 </strong>
+                <span>(2차, 호남제주권)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_5.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제5차 국토종합계획 공청회 자료</strong>
+                <span>(1차, 충청권)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_6.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제4차 국토종합계획 수정계획</strong>
+                <span>(2011~2020년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_7.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제4차 국토종합계획 수정계획</strong>
+                <span>(2006~2020년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_8.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제4차 국토종합계획</strong>
+                <span>(2000~2020년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_9.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제3차 국토종합계획</strong>
+                <span>(1992~2001년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_10.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제2차 국토종합계획</strong>
+                <span>(1982~1991년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_11.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+            <li class="__item">
+              <div class="__list-header">
+                <strong>제1차 국토종합계획</strong>
+                <span>(1972~1981년)</span>
+              </div>
+              <div class="__list-thumbnail">
+                <img src="../common/images/sample/a4_12.jpg" alt="제5차 구고종합계획">
+              </div>
+              <div class="__list-author">
+                <strong>국토교통부 국토정책과</strong>
+                <span>2020-10-01 발표</span>
+              </div>
+              <div class="__list-btns">
+                <a href="#" class="cs-btn2-gray2">자료 다운로드</a>
+                <a href="#" class="cs-btn2-gray">책자 다운로드</a>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+
+        <div class="board-list-gallery">
+          <div class="board-list-nodata">
+            <i class="icon-nodata"></i>
+            <strong>등록된 도시계획현황이 없습니다.</strong>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+        
+
+        @@include('../include/modals.html',{'items': 1})
+
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

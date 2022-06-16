@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <!--header-->
+        @@include('include/header.html')
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--visual-->
+            <div class="visual type02">
+                <div class="inner">
+                    <h2 class="titPage">개발사업대상지</h2>
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈으로"><span class="hidden">홈으로</span></a>
+                            </li>
+                            <li>
+                                <a href="#" title="개발사업대상지">개발사업대상지</a>
+                            </li>
+                            <li>
+                                <a href="#" title="자산개발사업 안내">자산개발사업 안내</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                </div>
+            </div>
+            <!--//visual-->
+            <!--lnb-->
+            <div id="lnb">
+                <select>
+                    <option value="수도권">수도권</option>
+                    <option value="수도권">영남권</option>
+                    <option value="수도권">강원권</option>
+                    <option value="수도권" selected>자산개발사업 안내</option>
+                    <option value="수도권">개발사업 절차 및 방법</option>
+                </select>
+                <ul>
+                    <li>
+                        <a href="#" title="수도권">수도권</a>
+                    </li>
+                    <li>
+                        <a href="#" title="영남권">영남권</a>
+                    </li>
+                    <li>
+                        <a href="#" title="강원권">강원권</a>
+                    </li>
+                    <li class="active">
+                        <a href="#" title="자산개발사업 안내">자산개발사업 안내</a>
+                    </li>
+                    <li>
+                        <a href="#" title="개발사업 절차 및 방법">개발사업 절차 및 방법</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <h3 class="titCont m80 type02">자산개발사업 안내
+                        <button type="button" class="btn outlineBlue btnRight momt30"><span>리플렛 다운로드</span></button>
+                    </h3>
+                    <!--section-->
+                    <section class="section mb40">
+                        <!--contArea-->
+                        <div class="contArea">
+                            <div class="tempArea web">
+                                <div class="imgArea mb40">
+                                    <img src="../images/visual/img-temp01.png" alt="자산개발사업 안내 사진">
+                                </div>
+                                <div class="imgArea web">
+                                    <img src="../images/visual/img-temp02.png" alt="자산개발사업 안내 사진">
+                                </div>
+                            </div>
+                            <!-- swiperVisual -->
+                            <div class="swiper tempVisual mobile">
+                                <!-- swiper-wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../images/visual/img-temp-info01.png" alt="자산개발사업 안내 사진">
+                                    </div>
+                                    <!-- //swiper-slide -->
+                                    <!-- swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../images/visual/img-temp-info01.png" alt="자산개발사업 안내 사진">
+                                    </div>
+                                    <!-- //swiper-slide -->
+                                    <!-- swiper-slide -->
+                                    <div class="swiper-slide">
+                                        <img src="../images/visual/img-temp-info01.png" alt="자산개발사업 안내 사진">
+                                    </div>
+                                    <!-- //swiper-slide -->
+                                </div>
+                                <!-- //swiper-wrapper -->
+                                <!-- btnScrol -->
+                                <div class="btnScroll">
+                                    <button type="button" class="swiper-prev"><span class="hidden">이전</span></button>
+                                    <button type="button" class="swiper-next"><span class="hidden">다음</span></button>
+                                </div>
+                                <!-- //btnScrol -->
+                            </div>
+                            <!-- //tempVisual -->
+                        </div>
+                        <!--//contArea-->
+                    </section>
+                    <!--//section-->
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span class="hidden">맨위로</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+</html>

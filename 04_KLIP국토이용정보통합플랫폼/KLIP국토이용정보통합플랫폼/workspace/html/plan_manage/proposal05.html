@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>입안 제안서 검토</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안서 검토</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        @@include('../include/cont_proposal02.html',{'context':1})
+
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">제안서 처리 프로세스</h3>
+          <!-- 201203 :: 텍스트수정 -->
+          <!-- 1222 :: 현재깜박이던거 제거 -->
+          <ul class="board-state">
+            <li class="active"><a href="proposal02.html">담당자 지정 대기</a></li>
+            <li class="active"><a href="proposal03.html">담당자 검토</a></li>
+            <li class="active locked"><a href="proposal05.html">도시계획위원회 자문</a></li>
+            <li>입안 반영/반려</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width200">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">요청 사항</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>담당자 검토 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">등록된 요청 사항이 없습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>위원회 자문 대기 <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-18</td>
+                    <td>박경민</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 검토의견이 없습니다.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">위원회 자문 요청 계획</h2>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>위원회 자문 요청 계획</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col>
+                  <col class="width130">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="col">위원회명</th>
+                    <td>선택한 위원회명 출력</td>
+                    <th scope="col">심의 구분/기간</th>
+                    <td>오프라인 심의/2020-10-30~2020-10-30(<span class="pcolor-red">1Day</span>)</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">안건명</th>
+                    <td colspan="3">입력한 안건명 출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">안건 내용</th>
+                    <td colspan="3">입력한 안건 내용 출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="col">심의 자료</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>등록한 파일명 출력.zip</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">승인 결재</th>
+                    <td colspan="3">담당자 확인 (2020-10-18 13:00)</td>
+                  </tr>
+                  <tr>
+                    <th scope="col" class="vertical-top">
+                      승인 결재<br>
+                    </th>
+                    <td colspan="3" class="_p0">
+                      <div class="board-view-tb">
+                        <table>
+                          <caption>승인 결재</caption>
+                          <colgroup>
+                            <col>
+                            <col class="width150">
+                            <col class="width150">
+                            <col class="width150">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th class="tac">소속 기관/부서</th>
+                              <th class="tac">결재자</th>
+                              <th class="tac">결재 상태</th>
+                              <th class="tac">결재일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>XXXXXXXXXXXXXX/XXXX</td>
+                              <td class="tac">홍길동 주무관</td>
+                              <td class="tac">상신</td>
+                              <td class="tac">2020-02-02</td>
+                            </tr>
+                            <tr>
+                              <td>XXXXXXXXXXXXXX/XXXX</td>
+                              <td class="tac">홍길동 주무관</td>
+                              <td class="tac">상신</td>
+                              <td class="tac">2020-02-02</td>
+                            </tr>
+                            <tr>
+                              <td>XXXXXXXXXXXXXX/XXXX</td>
+                              <td class="tac">홍길동 주무관</td>
+                              <td class="tac">상신</td>
+                              <td class="tac">2020-02-02</td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" class="tac">
+                                ‘상태 조회’ 버튼 클릭 시 결재 상태 조회가 가능합니다.
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="4" class="tac">
+                                <!-- 201209 :: 수정 -->
+                                기안문이 상신되지 않았습니다.
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="extratype-btn">
+              <!-- 201209 :: 수정 -->
+              <button class="cs-btn2-gray cs-btn-default mt10">상태 조회</button>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>
+                결재자 정보는 온-나라시스템의 결과 값으로 제공됩니다. 기안문의 재전송 또는 재기안은 <b class="underline">입안 관리 > 전자결재 내역 관리</b> 메뉴에서 가능합니다.
+              </li>
+            </ul>
+  
+          </section>
+  
+  
+          <section>
+            <h2 class="cont-hedding2">위원회 자문 결과</h2>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>위원회 자문 결과</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col>
+                  <col class="width130">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">결과 등록일</th>
+                    <td><span class="tcolor-gray2">결과 등록전입니다.</span></td>
+                    <th rowspan="2">심의 결과서</th>
+                    <td><span class="tcolor-gray2">결과 등록전입니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td> 2020-10-30 16:00</td>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>OOO위원회_안건명_심의결과서_2020.10.30.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+          <a href="#js__advice" jq-action="modal" class="cs-btn">자문 대상 여부 처리</a>
+          <a href="#js_adviceRequest" jq-action="modal" class="cs-btn">자문 요청 처리</a>
+          <a href="#js_adviceEnd" jq-action="modal" class="cs-btn">자문 완료 처리</a>
+        </section>
+
+        <!-- 자문비대상 -->
+        <div id="js__advice" class="laymodal width700">
+          <div class="laymodal-header">
+            <h2>자문 대상 여부 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              본 제안건을 도시계획위원회에 자문 받을 것인지 지정해 주세요.<br>
+              자문 받을 경우 자문 요청할 내용과 자료를 입력해 주세요. 
+            </section>
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>자문 대상 여부 처리</caption>
+                  <colgroup>
+                    <col class="width40">
+                    <col class="width110">
+                    <col>
+                    <col class="width80">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colspan="2">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list" colspan="3">
+                        <input type="radio" class="cs-radio" name="adviceIpt" id="adviceIpt1" checked onclick="toggleElm('advice','','none');lay_pop_width('#js__advice',700)"><label for="adviceIpt1"><span></span> 자문 비대상</label>
+                        <input type="radio" class="cs-radio" name="adviceIpt" id="adviceIpt2" onclick="toggleElm('advice','1','table-row');lay_pop_width('#js__advice', 1000)"><label for="adviceIpt2"><span></span> 자문 대상</label>
+                        <script>
+                              // toggleElm('advice','1','table-row');
+                        </script>
+                      </td>
+                    </tr>
+                    <tr data-group="advice" data-idx="1" style="display: none;">
+                      <th rowspan="5" scope="row">심의정보</th>
+                      <th scope="row">위원회명 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <select title="위원회명" class="cs-input width50p">
+                          <option>위원회 선택</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr data-group="advice" data-idx="1" style="display: none;">
+                      <th scope="row">구분 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" class="cs-radio" id="adviceCate1" name="adviceCate"><label for="adviceCate1"><span></span> 오프라인 심의</label>
+                        <input type="radio" class="cs-radio" id="adviceCate2" name="adviceCate"><label for="adviceCate2"><span></span> 온라인 전자 심의</label>
+                      </td>
+                      <th scope="row">기간 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-datepicker-set">
+                          <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                          <div>~</div>
+                          <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr data-group="advice" data-idx="1" style="display: none;">
+                      <th scope="row">안건 제목 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <input type="text" class="cs-input width100p" placeholder="안건 제목을 입력해 주세요." title="안건 제목">
+                      </td>
+                    </tr>
+                    <tr data-group="advice" data-idx="1" style="display: none;">
+                      <th scope="row">안건 내용 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <div class="cs-counter-wrap">
+                          <textarea name="" id="" rows="4" class="cs-input js__textCounter width100p" data-maxbyte="1000" placeholder="안건 내용을 입력해 주세요." title="안건 내용"></textarea>
+                        </div>                        
+                      </td>
+                    </tr>
+                    <tr data-group="advice" data-idx="1" style="display: none;">
+                      <th scope="row">심의 자료 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <div class="cs-file-wrap">
+                          <input type="file" class="cs-file" id="file3" placeholder=" 심의 자료를 등록해 주세요. (파일이 여러 개인 경우 압축 후 1개로 등록)">
+                          <span class="js__filename"></span>
+                          <div class="cs-file-btns">
+                            <label for="file3" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                          </div>
+                        </div>                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">검토의견</th>
+                      <td colspan="3">
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="자문 대상, 비대상 결정 사유를 입력해 주세요." title="검토의견"></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">승인 결재 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list" colspan="3">
+                        <input type="radio" class="cs-radio" id="chargeState1"><label for="chargeState1"><span></span> 담당자 확인(비결재)</label>
+                        <input type="radio" class="cs-radio" id="chargeState2"><label for="chargeState2"><span></span> 온-나라 전자결재</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 전송되지 않으며, <b class="underline">토지e음</b> 대민사이트에도 노출되지 않습니다. (담당자만 확인 가능)</li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            <div class="cs-alert">결재 구분을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn _wauto" onclick="lay_pop_close('#js__advice');lay_pop_open('#js__adviceComplete');">변경</button>
+          </div>
+        </div>
+
+        <div id="js__adviceComplete" class="laymodal width500">
+          <div class="laymodal-header">
+            <h2>자문 대상 여부 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">자문 비대상</b>으로 처리되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <!-- 자문 요청 처리 -->
+        <div id="js_adviceRequest" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>자문 요청 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              도시계획위원회에 자문 계획에 대한 승인 결재가 완료된 경우 요청 여부를 선택해 주세요.
+            </section>
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>자문 요청 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" name="advicereq" class="cs-radio" id="adviceReq1"><label for="adviceReq1"><span></span> 자문 요청</label>
+                        <input type="radio" name="advicereq" class="cs-radio" id="adviceReq2"><label for="adviceReq2"><span></span> 자문 취소</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견</th>
+                      <td>
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="자문 요청 계획서의 검토 결과를 입력해 주세요." title="검토의견"></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 전송되지 않으며,  <b class="underline">토지e음</b> 대민사이트에도 노출되지 않습니다. (담당자만 확인 가능) </li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_adviceRequest');lay_pop_open('#js_adviceRequestComplete');">변경</button>
+          </div>
+        </div>
+
+        <div id="js_adviceRequestComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>자문 요청 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">자문 요청</b> 처리되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <!-- 자문 완료 처리 -->
+        <div id="js_adviceEnd" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>자문 완료 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              자문이 완료되고 심의 결과서가 등록되었으면 ‘자문 완료’ 처리해 주세요.
+            </section>
+            <section>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>자문 완료 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" name="chargeState" class="cs-radio" id="chargeState41">
+                        <label for="chargeState41"><span></span> 자문 완료</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견</th>
+                      <td>
+                        <div>
+                          <div class="cs-counter-wrap">
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="자문 완료 결과를 입력해 주세요." title="검토의견"></textarea>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 전송되지 않으며,  <b class="underline">토지e음</b> 대민사이트에도 노출되지 않습니다. (담당자만 확인 가능) </li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_adviceEnd');lay_pop_open('#js_adviceEndComplete');">변경</button>
+          </div>
+        </div>
+
+        <div id="js_adviceEndComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>자문 완료 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">자문 완료</b> 처리되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        
+
+        <!-- 파일보기 -->
+        @@include('../include/modals.html',{'items': 1})
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

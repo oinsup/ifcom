@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KR철도</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a href="메인.html">
+                <!-- <img src="/images/ico/ico_logo.png" alt="철도재산포털"> -->
+            </a>
+        </h1>
+        <div class="rightArea">
+            <!--gnb-->
+            <div id="gnb" class="clearFix">
+                <ul>
+                    <li class="depth">
+                        <a href="">국유재산안내</a>
+                        <ul class="menu">
+                            <li><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">개발사업대상지</a>
+                        <ul class="menu">
+                            <li><a href="개발사업대상지-수도권.html">수도권</a></li>
+                            <li><a href="개발사업대상지-영남권.html">영남권</a></li>
+                            <li><a href="개발사업대상지-호남권.html">호남권</a></li>
+                            <li><a href="개발사업대상지-강원권.html">강원권</a></li>
+                            <li><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth dep03">
+                        <a href="">유휴부지 및 폐터널</a>
+                        <ul class="menu">
+                            <li><a href="철도유휴부지-유휴부지위치도.html">철도유휴부지</a></li>
+                            <li><a href="철도유휴부지-폐터널현황.html">폐터널현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보마당</a>
+                        <ul class="menu">
+                            <li><a href="정보마당-법령및자료실.html">법령 및 자료실</a></li>
+                            <li style="margin-right: 0px;"><a href="정보마당-담당자안내.html">담당자안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--//gnb-->
+            <!--util-->
+            <div class="util">
+                <ul class="clearFix">
+                    <li class="gis"><a href="#"><span class="hidden">GIS</span></a></li>
+                </ul>
+            </div>
+            <!--//util-->
+        </div>
+        <!--mobile-->
+        <div class="mobile">
+            <button type="button" class="btnMenu"><span class="hidden">메뉴</span></button>
+        </div>
+        <!--//mobile-->
+        <!--moGnb-->
+        <div class="moGnb">
+            <div class="head">
+                <h1><img src="../images/ico/ico_logo.png" alt="모바일 로고"></h1>
+                <button type="button" class="btnClose"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="cont">
+                <ul class="dep1">
+                    <li class="active">
+                        <p><a href="#">국유재산안내</a></p>
+                        <ul class="dep2" style="display: block;">
+                            <li class="active"><p><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><p><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><p><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <p><a href="#">개발사업대상지</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="">수도권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-수도권.html">월곶역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="">영남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-영남권.html">김천구미역</a></li>
+                                    <li><a href="#">舊경주역</a></li>
+                                    <li><a href="#">舊포항역</a></li>
+                                    <li><a href="#">舊안동역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">호남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-호남권.html">익산역 광역환승센터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">강원권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-강원권.html">舊원주역</a></li>
+                                    <li><a href="#">춘천역세권</a></li>
+                                    <li><a href="#">장호정차장</a></li>
+                                    <li><a href="#">초곡정차장</a></li>
+                                    <li><a href="#">임호정차장</a></li>
+                                    <li><a href="#">인구정차장</a></li>
+                                    <li><a href="#">대포정차장</a></li>
+                                    <li><a href="#">양양정차장</a></li>
+                                    <li><a href="#">사천정차장</a></li>
+                                    <li><a href="#">낙산사정차장</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">유휴부지 및 폐터널</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="#">철도유휴부지</a></p>
+                                <ul class="dep3">
+                                    <li><a href="철도유휴부지-유휴부지위치도.html">철도 유휴부지 위치도</a></li>
+                                    <li><a href="#">철도유휴부지 선별 현황</a></li>
+                                    <li><a href="#">철도유휴부지 관리</a></li>
+                                    <li><a href="#">(지자체) 철도 유휴부지 활용사업</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="철도유휴부지-폐터널현황.html">폐터널 현황</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">정보마당</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active"><p><a href="정보마당-법령및자료실.html">법령 및 자료실</a></p></li>
+                            <li><p><a href="정보마당-담당자안내.html">담당자 안내</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--//moGnb-->
+    </div>
+</header>
+
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--lnb-->
+            <div id="lnb">
+                <h2 class="hidden">주요메뉴</h2>
+                <!--menuName-->
+                <div class="menuName">
+                    <div class="name">
+                        <span>01</span>
+                        <p>국유재산안내</p>
+                    </div>
+                    <p class="eng">KOREA NATIONAL RAILWAY</p>
+                </div>
+                <!--//menuName-->
+                <!--dep1-->
+                <ul class="dep1">
+                    <li>
+                        <p><a href="국유재산안내-사용안내.html">사용안내</a></p>
+                    </li>
+                    <li>
+                        <p><a href="국유재산안내-매각안내.html">매각안내</a></p>
+                    </li>
+                    <li class="active">
+                        <p><a href="국유재산안내-개발안내.html">개발안내</a></p>
+                    </li>
+                    <li>
+                        <p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></p>
+                    </li>
+                </ul>
+                <!--//dep1-->
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">본문시작</h2>
+                <h3 class="titPage">개발안내</h3>
+                <!--breadCrumb-->
+                <div class="breadCrumb">
+                    <ul>
+                        <li class="home"><a href="#"><img src="../images/ico/ico_home.png" alt="홈으로"></a></li>
+                        <li><a href="#">국유재산안내</a></li>
+                        <li class="current"><a href="#">개발안내</a></li>
+                    </ul>
+                </div>
+                <!--//breadCrumb-->
+                <!-- mobileLnb -->
+                <div class="mobileLnb">
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">국유재산안내</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">개발사업대상지</a></li>
+                                <li><a href="javascript:;">유휴부지 및 폐터널</a></li>
+                                <li><a href="javascript:;">정보마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">개발안내</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">사용안내</a></li>
+                                <li><a href="javascript:;">매각안내</a></li>
+                                <li><a href="javascript:;">사용 및 매각가능 토지검색</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ..mobileLnb -->
+                <section>
+                    <h3 class="sectionTitle">철도자산 개발안내</h3>
+                    <!--  -->
+                    <article>
+                        <h3 class="articleTitle">점용허가를 통한 철도자산개발(철도의 건설 및 철도시설 유지관리에 관한 법률 제23조의2)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">국가가 소유·관리하는 철도시설, 폐선로 및 폐역사(부지를 포함한다), 유휴지 등 철도 관련 국유재산(「철도산업발전기본법」 제22조제1항제1호의 운영자산은 제외한다)에 건물이나 그 밖의 시설물을 설치하려는 자에게「국유재산법」제18조(영구시설물 축조 금지)에도 불구하고 점용허가를 통해 영구시설물 축조 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가 받은 자가 설치한 시설물 전대 금지조항 없음(임대사업 가능)</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가기간은 건물 종류와 구조에 따라 최대 30년 이내 가능</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle mb-20">자산개발 추진절차</h3>
+                        <img src="../images/common/img_procedure03.svg" alt="자산개발 추진절차 안내" class="procedurePc">
+                        <img src="../images/common/img_procedure03-mo.svg" alt="사용 수익허가 처리절차 안내" class="procedureMobile">
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">개발사업 민간제안(공단 철도자산개발 및 운영규정 제23조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">자산개발사업은 국유철도자산(철도부지) 역세권 및 철도부근 지역을 대상으로 민간의 자율적인 제안에 의해 추진</p>
+                            </li>
+                            <li>
+                                <p class="firstText">민간제안서 내용</p>
+                            </li>
+                            <li>
+                                <p class="secondText">사업계획내용</p>
+                            </li>
+                            <li>
+                                <p class="secondText">총사업비의 내역 및 자금조달계획</p>
+                            </li>
+                            <li>
+                                <p class="secondText">시설의 관리운영계획</p>
+                            </li>
+                            <li>
+                                <p class="secondText">수입 및 지출계획 등</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">제안서 평가 및 채택(공단 철도자산개발 및 운영규정 제25조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">공단 자산개발위원회의의 제안서 심의를 거쳐 평가점수(70점) 이상이고 심의위원 3분의 2이상 찬성으로 채택</p>
+                            </li>
+                            <li>
+                                <p class="firstText">자산개발담당부서에서 심의결과를 제안자에게 서면으로 통지</p>
+                            </li>
+                            <li>
+                                <p class="firstText">채택된 민간제안사업의 제안자가 사업주관자 공모에 참여할 경우 총평가점수의 3% 범위 내에서 가점 부여</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">사업주관자 공모(공단 철도자산개발 및 운영규정 제10조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">사업주관자 모집은 일간신문 및 공단 홈페이지에 공고</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업신청자는 개발사업을 수행할 능력이 있는 단독법인 또는 컨소시엄</p>
+                            </li>
+                            <li>
+                                <p class="firstText">모집공고 명시사항 및 사업계획서 작성내용은 ‘법령 및 자료집’의 공모지침서(표준안) 참조
+                                </p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업계획서 작성 및 사업신청 등에 소요되는 제반비용은 사업신청자의 부담</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업신청자는 사업계획서상 총사업비의 100분의 2에 해당하는 “신청보증금” 납부</p>
+                            </li>
+                            <li>
+                                <p class="firstText">신청보증금은 현금 또는 보증서로 납부, 보증기간은 사업협약이행보증금 납부예정일 이후로 함</p>
+                            </li>
+                            <li>
+                                <p class="firstText">신청보증금의 공단 귀속 및 반환은「공단 철도자산개발 및 운영규정」제14조 참조</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">사업계획서 평가(공단 철도자산개발 및 운영규정 제16조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">사업계획서 평가는 공모지침서상의 평가지침에 따라 객관적이고 공정하게 시행</p>
+                            </li>
+                            <li>
+                                <p class="firstText">평가분야 및 배점은 ‘법령 및 자료집’의 공모지침서(표준안) 참조</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">사업추진협약 체결(공단 철도자산개발 및 운영규정 제19조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">사업주관자 후보자로 선정된 자는 선정결과를 통보 받은 날로부터 30일 이내 공단과 협약 체결</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업주관자로 선정된 자는 사업추진협약체결일까지 총사업비의 100분의 5이상에 상당하는 협약이행보증금을 현금 또는 보증서로 납부, 보증기간은 시설물의 준공일로부터 3년 이후로 함</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">출자회사(SPC) 설립(공단 철도자산개발 및 운영규정 제27조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">사업주관자는 출자자의 출자 지분 배분, 정관의 작성 및 설립등기 등 출자회사의 설립에 대한 공단과 협의하여 추진</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">종합개발계획수립(철도자산 개발 및 운영규정 제29조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">출자회사는 사업주관자가 작성 제출한 사업계획을 기본으로 사업을 시행하되, 사업계획 변경 시 종합개발계획을 수립하여 공단 동의를 받아야 함</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">설계 및 인·허가(철도자산 개발 및 운영규정 제30~31조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">출자회사는 사업계획서에 따라 아래 사항을 고려하여 설계하고 공단의 서면 동의를 받아야 함</p>
+                            </li>
+                            <li>
+                                <p class="secondText">개발부지의 위치 및 범위</p>
+                            </li>
+                            <li>
+                                <p class="secondText">여객 및 이용의 동선</p>
+                            </li>
+                            <li>
+                                <p class="secondText">개발시설의 종류별 규모와 배치계획</p>
+                            </li>
+                            <li>
+                                <p class="secondText">주변공단 배치계획</p>
+                            </li>
+                            <li>
+                                <p class="secondText">기타 개발에 필요한 사항</p>
+                            </li>
+                            <li>
+                                <p class="firstText">출자회사는 개발사업에 필요한 모든 인·허가를 취득하여야 함</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">건 설(철도자산 개발 및 운영규정 제6조, 제32~37조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">출자회사는 철도시설부지내 공사 시행을 위하여 공단과 공사시행협약 체결</p>
+                            </li>
+                            <li>
+                                <p class="firstText">공사시행에 따른 지장물의 철거나 이설에 소요되는 비용은 출자회사가 부담</p>
+                            </li>
+                            <li>
+                                <p class="firstText">출자회사는 철도시설의 공사 중 점용허가를 받은 후 공사를 착수하여야 하며 공사기간 중 점용허가재산에 대한 점용료를 납부하여야 함</p>
+                            </li>
+                            <li>
+                                <p class="firstText">출자회사는 국가귀속시설이 없는 경우, 총공사비의 5%(부가세 별도)의 철도시설기여금을 납부하여야 함</p>
+                            </li>
+                            <li>
+                                <p class="firstText">출자회사는 공사가 완료되면 국가귀속시설과 영업시설을 구분하여 시설물 내역과 준공금액 등을 포함한 준공조서 및 준공도를 공단에 제출·확인 받아야 함</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">운 영(철도시설 점용허가 업무처리 규정 제5조, 제16조)</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">출자회사는 철도시설의 점용허가를 받아 점용허가기간(30년 이내) 동안 소유·운영하고 운영(준공일 익일부터) 중 점용료를 납부하여야 함</p>
+                            </li>
+                            <li>
+                                <p class="firstText">출자회사는 시설물을 건설 및 운영하는 동안 점용료를 납부하지 않을 경우 사업주관자가 납부 보증하여야 함</p>
+                            </li>
+                        </ul>
+                        <h3 class="referenceMark">점용허가와 사용허가 비교</h3>
+                        <!--table-->
+                        <div class="table type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 200px;">
+                                    <col style="width: 400px;">
+                                    <col style="width: 400px;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">점용허가</th>
+                                    <th scope="col">사용허가</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">법률근거</th>
+                                    <td class="txt-left">
+                                        <p>-철도사업법</p>
+                                        <p>-철도의 건설 및 철도시설 유지관리에 관한 법률</p>
+                                    </td>
+                                    <td class="txt-left"><p>-국유재산법</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">허가받는자</th>
+                                    <td class="txt-left">
+                                        <p>-철도사업자 및 철도사업자가 출자한 법인</p>
+                                        <p>-공단 및 공단이 출자한 법인</p>
+                                    </td>
+                                    <td class="txt-left"><p>-국가 외의 자</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">허가자</th>
+                                    <td class="txt-left">
+                                        <p>-국토부장관</p>
+                                        <p>-공단에 업무위임</p>
+                                    </td>
+                                    <td class="txt-left">
+                                        <p>-국토부장관</p>
+                                        <p>-공단에 업무위임</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">영구시설물 축조</th>
+                                    <td class="txt-left">
+                                        <p>-가능</p>
+                                    </td>
+                                    <td class="txt-left"><p>-불가</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">허가받은자 전대(재임대)</th>
+                                    <td class="txt-left">
+                                        <p>-가능</p>
+                                    </td>
+                                    <td class="txt-left"><p>-불가</p></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사용료징수</th>
+                                    <td class="txt-left">
+                                        <p>-점용료 징수</p>
+                                        <p>-재산가액은 2개 이상 감정푱가액을 산술평균하여 적용</p>
+                                        <p>-요율 0.3%~5%이상</p>
+                                    </td>
+                                    <td class="txt-left">
+                                        <p>-사용료 징수</p>
+                                        <p>-재산가액은 개별공시지가 적용</p>
+                                        <p>-요율 1~5%이상</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">허가기간</th>
+                                    <td class="txt-left">
+                                        <p>-30년 이내</p>
+                                    </td>
+                                    <td class="txt-left">
+                                        <p>-5년 이내</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                    </article>
+                    <!-- // -->
+                    <!--  -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">유의사항</h3>
+                        <ul>
+                            <li>
+                                <p class="firstText">자세한 사업대상지의 범위 및 토지목록은 일부 변경될 수 있으니 자산개발담당부서로 문의하여 확인하시기 바라며, 개발사업 제안 및 절차는 ‘법령 및 자료집’의 법령과 제규정을 참조하시기 바랍니다.</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                </section>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner clearFix">
+        <!--helpMenu-->
+        <ul class="helpMenu">
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">웹접근성정책</a></li>
+            <li><a href="#">뷰어다운로드</a></li>
+        </ul>
+        <!--//helpMenu-->
+        <!--corpInfo-->
+        <div class="corpInfo">
+            <p>우)34618 대전광역시 동구 중앙로 242 국가철도공단  TEL: 1588-7270(통화료 사용자 부담) FAX: 042-607-4429</p>
+            <p>COPYRIGHTⓒ 2020 BY KOREA NATIONAL RAILWAY. ALL RIGHTS RESERVED</p>
+        </div>
+        <!--//corpInfo-->
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

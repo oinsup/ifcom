@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '사용자 정보 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="#">사용자 관리</a></li>
+          <li>국토교통부 관리자 정보 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>국토교통부 관리자 정보 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+        <section>
+          <div class="cs-box _alert-icon">
+            <ul class="cs-list-dot">
+              <li>권한 철회 및 탈퇴된 국토교통부 관리자 정보를 확인하실 수 있습니다.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">계정정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>계정정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">아이디</th>
+                  <td>test1234</td>
+                  <th scope="row">등록일</th>
+                  <td>2020-12-01 13:00</td>
+                </tr>
+                <tr>
+                  <th scope="row">현재 상태</th>
+                  <td class="pcolor-red">권한 철회(보직 변경)</td>
+                  <th scope="row">상태 변경일</th>
+                  <td class="pcolor-red">2020-12-31 14:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">개인정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>개인정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름</th>
+                  <td>홍*동</td>
+                  <th scope="row">휴대전화</th>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">공직자통합메일</th>
+                  <td>-</td>
+                  <th scope="row">부서 연락처</th>
+                  <td>031-1234-4567(내선12)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">소속정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>소속정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">소속 기관</th>
+                  <td>국토교통부</td>
+                  <th scope="row">소속 부서</th>
+                  <td> 도시계획과</td>
+                </tr>
+                <tr>
+                  <th scope="row">직위</th>
+                  <td>주무관</td>
+                  <th scope="row">담당 업무</th>
+                  <td>국토이용정보통합플랫폼 관리</td>
+                </tr>
+                <tr>
+                  <th scope="row">권한 유형</th>
+                  <td colspan="3">국토교통부 사용자</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="molitManager01.html" class="cs-btn-line">목록</a>
+        </section>
+
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

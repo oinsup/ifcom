@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html',{'webTitle': '개인정보 처리방침', 'webPath': '.'})
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li>사이트맵</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>사이트맵</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>메뉴명 우측 아이콘을 선택하시면 메인 페이지의 Quick Menu로 설정되어 해당 메뉴로 빠르게 이동이 가능합니다. <br>
+              (최대 4개 선택 가능) 
+            </li>
+          </ul>
+        </div>
+
+        <section class="cont-sitemap">
+          <!-- 1depth -->
+          <div class="cont-sitemap-1depth">
+            <header>고시 조회</header>
+            <div class="cont-sitemap-cont">
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" checked id="starMenu1">
+                  <label for="starMenu1">
+                    <span></span>
+                    <strong>고시 조회</strong>
+                  </label>
+                </div>
+                <ul>
+                  <li><a href="#">도시·군관리계획</a>
+                  <li><a href="#">도시·군기본계획</a>
+                  <li><a href="#">광역도시계획</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--// 1depth -->
+
+          <div class="cont-sitemap-1depth">
+            <header>입안 관리</header>
+            <div class="cont-sitemap-cont">
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu21" onclick="lay_pop_open('#js__settingAlert2');return false;">
+                  <label for="starMenu21"><span></span><strong>입안 제안 관리(ex: 권한없음 alert)</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">온라인 제안 접수 내역</a></li>
+                  <li><a href="#">주민 사전협의 내역</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu22">
+                  <label for="starMenu22"><span></span><strong>도시·군관리계획 관리</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">입안 진행</a></li>
+                  <li><a href="#">용역 성과</a></li>
+                  <li><a href="#">고시</a></li>
+                  <li><a href="#">의제</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" checked id="starMenu23">
+                  <label for="starMenu23"><span></span><strong>광역도시/도시·군기본계획 관리</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">광역도시계획</a></li>
+                  <li><a href="#">도시·군기본계획</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" checked id="starMenu24">
+                  <label for="starMenu24"><span></span><strong>도시계획위원회 심의 관리</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">심의회</a></li>
+                  <li><a href="#">오프라인 심의회 안건별 결과</a></li>
+                  <li><a href="#">온라인 전자심의 안건별 결과</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" checked id="starMenu25">
+                  <label for="starMenu25"><span></span><strong>도시계획위원회 구성 관리</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">시·군·구도시계획위원회</a></li>
+                  <li><a href="#">시·도도시계획위원회</a></li>
+                  <li><a href="#">위원 위촉 정보</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu26">
+                  <label for="starMenu26"><span></span><strong>전자결재 내역 관리</strong></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cont-sitemap-1depth">
+            <header>지구단위계획 관리</header>
+            <div class="cont-sitemap-cont">
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu31">
+                  <label for="starMenu31"><span></span><strong>계획 정보</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu32">
+                  <label for="starMenu32"><span></span><strong>획지/규제 조회</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu33">
+                  <label for="starMenu33"><span></span><strong>획지/규제 관리</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="cont-sitemap-1depth">
+            <header>통계 조회</header>
+            <div class="cont-sitemap-cont">
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu41">
+                  <label for="starMenu41"><span></span><strong>용도지역·지구 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu42">
+                  <label for="starMenu42"><span></span><strong>지구단위계획 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu43">
+                  <label for="starMenu43"><span></span><strong>도시·군계획시설 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu44">
+                  <label for="starMenu44"><span></span><strong>재해취약성 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu45">
+                  <label for="starMenu45"><span></span><strong>입안 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu46">
+                  <label for="starMenu46"><span></span><strong>고시 통계</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu47">
+                  <label for="starMenu47"><span></span><strong>사용자 이용 통계</strong></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cont-sitemap-1depth">
+            <header>자료실</header>
+            <div class="cont-sitemap-cont">
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu51">
+                  <label for="starMenu51"><span></span><strong>정책 정보</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">국토종합계획</a></li>
+                  <li><a href="#">국토종합계획 실천계획</a></li>
+                  <li><a href="#">국토의 계획 및 …연차보고서</a></li>
+                  <li><a href="#">도시업무편람 외</a></li>
+                </ul>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check"id="starMenu52">
+                  <label for="starMenu52"><span></span><strong>도시계획현황 통계 책자</strong></label>
+                </div>
+              </div>
+
+              <div class="cont-sitempa-item">
+                <div>
+                  <input type="checkbox" class="star-check" id="starMenu53">
+                  <label for="starMenu53"><span></span><strong>자료 게시판</strong></label>
+                </div>
+                <ul>
+                  <li><a href="#">업무 참조 자료 </a></li>
+                  <li><a href="#">상위 계획 자료</a></li>
+                  <li><a href="#">비정형 자료</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="#js__settingAlert" jq-action="modal" class="cs-btn-line">Quick Menu 설정</a>
+        </section>
+
+        <div id="js__settingAlert" class="laymodal">
+          <div class="laymodal-header">
+            <h2>Quick Menu 설정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content tac">
+            Quick Menu는 4개까지만 설정 가능합니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" jq-action="closeModal" class="cs-btn">확인</button>
+          </div>
+        </div>
+
+        <div id="js__settingAlert2" class="laymodal">
+          <div class="laymodal-header">
+            <h2>Quick Menu 설정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content tac">
+            해당 메뉴에 대한 사용 권한이 없어,<br>
+            Quick Menu로 설정 불가능합니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" jq-action="closeModal" class="cs-btn">확인</button>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

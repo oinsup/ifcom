@@ -1,0 +1,119 @@
+@charset "utf-8";
+$fontUrl : '../fonts';
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Thin.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Noto Sans KR Light'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Light.woff) format('woff');
+}
+
+// @font-face {
+  // font-family: 'Noto Sans KR LOCAL';
+  // font-style: normal;
+  // font-weight: 400;
+  // font-display: swap;
+  // src: local('Noto Sans KR Regular'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Regular.woff) format('woff');
+// }
+
+// @font-face {
+//   font-family: 'Noto Sans KR LOCAL';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v12/PbykFmXiEBPT4ITbgNA5Cgm20xz64px_1hVWr0wuPNGmlQNMEfD4.0.woff2) format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Noto Sans KR LOCAL';
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: local('Noto Sans KR Regular'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Regular.woff) format('woff');
+// }
+
+// @font-face {
+//   font-family: 'Noto Sans KR LOCAL';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-display: swap;
+//   src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'), url(#{$fontUrl}/NotoSansKR-Medium.woff2) format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Noto Sans KR LOCAL';
+//   font-style: normal;
+//   font-weight: 700;
+//   font-display: swap;
+//   src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(#{$fontUrl}/NotoSansKR-Bold.woff2) format('woff2');
+// }
+
+// @font-face {
+//   font-family: 'Noto Sans KR LOCAL';
+//   font-style: normal;
+//   font-weight: 900;
+//   font-display: swap;
+//   src: local('Noto Sans KR Black'), local('NotoSansKR-Black'), url(#{$fontUrl}/NotoSansKR-Black.woff2) format('woff2');
+// }
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  // src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Thin.woff2) format('woff2');
+  src:local('Noto Sans KR Thin'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Thin.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(#{$fontUrl}/NotoSansKR-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  // src: local('Noto Sans KR Light'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Light.woff2) format('woff2');
+  src: local('Noto Sans KR Light'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  // src: local('Noto Sans KR Medium'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Medium.woff2) format('woff2');
+  src: local('Noto Sans KR Medium'), local('NotoSansKR-Thin'),url(#{$fontUrl}/NotoSansKR-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  // src: local('Noto Sans KR Bold'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Bold.woff2) format('woff2');
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR LOCAL';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  // src: local('Noto Sans KR Black'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Black.woff) format('woff2');
+  src: local('Noto Sans KR Black'), local('NotoSansKR-Thin'), url(#{$fontUrl}/NotoSansKR-Black.woff) format('woff2');
+}
+

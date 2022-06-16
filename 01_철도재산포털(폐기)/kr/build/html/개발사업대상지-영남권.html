@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KR철도</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap" class="tabPage">
+    <header id="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a href="메인.html">
+                <!-- <img src="/images/ico/ico_logo.png" alt="철도재산포털"> -->
+            </a>
+        </h1>
+        <div class="rightArea">
+            <!--gnb-->
+            <div id="gnb" class="clearFix">
+                <ul>
+                    <li class="depth">
+                        <a href="">국유재산안내</a>
+                        <ul class="menu">
+                            <li><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">개발사업대상지</a>
+                        <ul class="menu">
+                            <li><a href="개발사업대상지-수도권.html">수도권</a></li>
+                            <li><a href="개발사업대상지-영남권.html">영남권</a></li>
+                            <li><a href="개발사업대상지-호남권.html">호남권</a></li>
+                            <li><a href="개발사업대상지-강원권.html">강원권</a></li>
+                            <li><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth dep03">
+                        <a href="">유휴부지 및 폐터널</a>
+                        <ul class="menu">
+                            <li><a href="철도유휴부지-유휴부지위치도.html">철도유휴부지</a></li>
+                            <li><a href="철도유휴부지-폐터널현황.html">폐터널현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보마당</a>
+                        <ul class="menu">
+                            <li><a href="정보마당-법령및자료실.html">법령 및 자료실</a></li>
+                            <li style="margin-right: 0px;"><a href="정보마당-담당자안내.html">담당자안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--//gnb-->
+            <!--util-->
+            <div class="util">
+                <ul class="clearFix">
+                    <li class="gis"><a href="#"><span class="hidden">GIS</span></a></li>
+                </ul>
+            </div>
+            <!--//util-->
+        </div>
+        <!--mobile-->
+        <div class="mobile">
+            <button type="button" class="btnMenu"><span class="hidden">메뉴</span></button>
+        </div>
+        <!--//mobile-->
+        <!--moGnb-->
+        <div class="moGnb">
+            <div class="head">
+                <h1><img src="../images/ico/ico_logo.png" alt="모바일 로고"></h1>
+                <button type="button" class="btnClose"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="cont">
+                <ul class="dep1">
+                    <li class="active">
+                        <p><a href="#">국유재산안내</a></p>
+                        <ul class="dep2" style="display: block;">
+                            <li class="active"><p><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><p><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><p><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <p><a href="#">개발사업대상지</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="">수도권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-수도권.html">월곶역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="">영남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-영남권.html">김천구미역</a></li>
+                                    <li><a href="#">舊경주역</a></li>
+                                    <li><a href="#">舊포항역</a></li>
+                                    <li><a href="#">舊안동역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">호남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-호남권.html">익산역 광역환승센터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">강원권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-강원권.html">舊원주역</a></li>
+                                    <li><a href="#">춘천역세권</a></li>
+                                    <li><a href="#">장호정차장</a></li>
+                                    <li><a href="#">초곡정차장</a></li>
+                                    <li><a href="#">임호정차장</a></li>
+                                    <li><a href="#">인구정차장</a></li>
+                                    <li><a href="#">대포정차장</a></li>
+                                    <li><a href="#">양양정차장</a></li>
+                                    <li><a href="#">사천정차장</a></li>
+                                    <li><a href="#">낙산사정차장</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">유휴부지 및 폐터널</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="#">철도유휴부지</a></p>
+                                <ul class="dep3">
+                                    <li><a href="철도유휴부지-유휴부지위치도.html">철도 유휴부지 위치도</a></li>
+                                    <li><a href="#">철도유휴부지 선별 현황</a></li>
+                                    <li><a href="#">철도유휴부지 관리</a></li>
+                                    <li><a href="#">(지자체) 철도 유휴부지 활용사업</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="철도유휴부지-폐터널현황.html">폐터널 현황</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">정보마당</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active"><p><a href="정보마당-법령및자료실.html">법령 및 자료실</a></p></li>
+                            <li><p><a href="정보마당-담당자안내.html">담당자 안내</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--//moGnb-->
+    </div>
+</header>
+
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--lnb-->
+            <div id="lnb">
+                <h2 class="hidden">주요메뉴</h2>
+                <!--menuName-->
+                <div class="menuName">
+                    <div class="name">
+                        <span>02</span>
+                        <p>개발사업대상지</p>
+                    </div>
+                    <p class="eng">KOREA NATIONAL RAILWAY</p>
+                </div>
+                <!--//menuName-->
+                <!--dep1-->
+                <ul class="dep1">
+                    <li>
+                        <p><a href="개발사업대상지-수도권.html">수도권</a></p>
+                    </li>
+                    <li class="active">
+                        <p><a href="개발사업대상지-영남권.html">영남권</a></p>
+                    </li>
+                    <li>
+                        <p><a href="개발사업대상지-호남권.html">호남권</a></p>
+                    </li>
+                    <li>
+                        <p><a href="개발사업대상지-강원권.html">강원권</a></p>
+                    </li>
+                    <li>
+                        <p><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></p>
+                    </li>
+                </ul>
+                <!--//dep1-->
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">본문시작</h2>
+                <h3 class="titPage">영남권</h3>
+                <!--breadCrumb-->
+                <div class="breadCrumb">
+                    <ul>
+                        <li class="home"><a href="#"><img src="../images/ico/ico_home.png" alt="홈으로"></a></li>
+                        <li><a href="#">개발사업대상지</a></li>
+                        <li class="current"><a href="#">영남권</a></li>
+                    </ul>
+                </div>
+                <!--//breadCrumb-->
+                <!-- mobileLnb -->
+                <div class="mobileLnb">
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">개발사업대상지</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">국유재산안내</a></li>
+                                <li><a href="javascript:;">유휴부지 및 폐터널</a></li>
+                                <li><a href="javascript:;">정보마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">영남권</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">수도권</a></li>
+                                <li><a href="javascript:;">호남권</a></li>
+                                <li><a href="javascript:;">강원권</a></li>
+                                <li><a href="javascript:;">개발사업 절차 및 방법</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ..mobileLnb -->
+                <div class="tabMenu">
+                    <ul class="tabs">
+                        <li class="active"><a href="#" title="김천구미역 바로가기">김천구미역</a></li>
+                        <li><a href="#" title="舊경주역 바로가기">舊경주역</a></li>
+                        <li><a href="#" title="舊포항역 바로가기">舊포항역</a></li>
+                        <li><a href="#" title="舊안동역 바로가기">舊안동역</a></li>
+                    </ul>
+                </div>
+                <section class="active">
+                    <h3 class="sectionTitle mt-40">김천구미역 유휴부지 개발사업</h3>
+                    <!-- article -->
+                    <article>
+                        <h3 class="articleTitle">일반현황</h3>
+                        <div class="table type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 210px;">
+                                    <col style="width: 790px;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">현황</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">위치</th>
+                                    <td class="txt-left">
+                                        - 대상지1: 경북 김천시 남면 옥산리 790일대<br/>
+                                        - 대상지2: 경북 김천시 남면 옥산리 769-2일대
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">면적</th>
+                                    <td class="txt-left">14,120m²</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">현재용도</th>
+                                    <td class="txt-left">나대지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">용도지역</th>
+                                    <td class="txt-left">자연녹지지역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입지현황</th>
+                                    <td class="txt-left">
+                                        - 대상지1: 면적 1,120m²의 장방형 부지로서 김천구미역(5m 이격) 되어있어 접근성 용이<br/>
+                                        - 대상지2: 면적 13,000m²의 장방형 부지로 김천구미역(20m 이격) 되어있어 접근성이 양호하고 부지의 대각선 방향으로 개거(開渠;개수로)가 있음
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">접근성</th>
+                                    <td class="txt-left">김천구미역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">지자체 활용계획 또는 협의사항</th>
+                                    <td class="txt-left">해당부지 매수 당시 지목(전,답)으로 되어있어 김천시와 개발행위 등 관련해서 협의 필요</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- //article -->
+                    <!-- article -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">부지현황</h3>
+                        <!--table-->
+                        <div class="table type04">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">위치도</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="../images/img/img-영남권-김천구미역-01.jpg" alt="영남권 김천구미역 부지현황" style="width: 100%; max-width: 600px;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                        <ul>
+                            <li>
+                                <p class="firstText">국가가 소유·관리하는 철도시설(부지 포함)에 건물이나 그 밖의 시설물을 설치하려는 자에게「국유재산법」18조(영구시설물 축조 금지)에도 불구하고 점용허가를 통해 영구시설물 축조 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가 받은 자가 설치한 시설물 전대 금지조항 없음(임대사업 가능)</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가기간은 건물 종류와 구조에 따라 최대 30년 이내 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업대상지의 현황(개발시점, 대상지 범위 등)은 일부 변경될 수 있으니 개발사업 제안 희망자는 자산개발 담당부서로 문의하여 확인하시기 바라며, 개발사업 제안 및 절차는 법령 및 자료집의 법령과 제규정을 참조하시기 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">개발사업 담당자 연락처(TEL 042-607-4246, FAX 042-607-3829)</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //article -->
+                </section>
+                <section class="">
+                    <h3 class="sectionTitle mt-40">舊)경주역 철도시설 개발사업</h3>
+                    <!-- article -->
+                    <article>
+                        <h3 class="articleTitle">일반현황</h3>
+                        <div class="table type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 210px;">
+                                    <col style="width: 790px;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">현황</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">위치</th>
+                                    <td class="txt-left">
+                                        - 경주시 성동동 100-2번지, 구정동 459-12번지 일원<br/>
+                                        - 동해남부선 부조역∼모화역(경주시 폐선)<br/>
+                                        - 중앙선 아화역∼서경주역(경주시 폐선)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">면적</th>
+                                    <td class="txt-left">
+                                        - 동해남부선(연장:53.2km, 면적:930천m²)<br/>
+                                        - 중앙선(연장:27.1km, 면적:732천m²)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">현재용도</th>
+                                    <td class="txt-left">폐선예정부지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">용도지역</th>
+                                    <td class="txt-left">자연녹지지역, 일반상업지역 등</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입지현황</th>
+                                    <td class="txt-left">경주 주요 관광지(불국사 등) 및 도심지 위치</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">접근성</th>
+                                    <td class="txt-left">신경주KTX역 근접</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">지자체 활용계획 또는 협의사항</th>
+                                    <td class="txt-left">폐선 예정부지 도시관리계획 수립용역 시행 중</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- //article -->
+                    <!-- article -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">부지현황</h3>
+                        <!--table-->
+                        <div class="table type04">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">위치도</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="../images/img/img-영남권-경주역.jpg" alt="영남권 경주역 부지현황" style="width: 100%; max-width: 600px;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                        <ul>
+                            <li>
+                                <p class="firstText">국가가 소유·관리하는 철도시설(부지 포함)에 건물이나 그 밖의 시설물을 설치하려는 자에게「국유재산법」18조(영구시설물 축조 금지)에도 불구하고 점용허가를 통해 영구시설물 축조 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가 받은 자가 설치한 시설물 전대 금지조항 없음(임대사업 가능)</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가기간은 건물 종류와 구조에 따라 최대 30년 이내 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업대상지의 현황(개발시점, 대상지 범위 등)은 일부 변경될 수 있으니 개발사업 제안 희망자는 자산개발 담당부서로 문의하여 확인하시기 바라며, 개발사업 제안 및 절차는 법령 및 자료집의 법령과 제규정을 참조하시기 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">개발사업 담당자 연락처(TEL 042-607-4246, FAX 042-607-3829)</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //article -->
+                </section>
+                <section class="">
+                    <h3 class="sectionTitle mt-40">포항역 복합개발사업</h3>
+                    <!-- article -->
+                    <article>
+                        <h3 class="articleTitle">일반현황</h3>
+                        <div class="table type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 210px;">
+                                    <col style="width: 790px;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">현황</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">위치</th>
+                                    <td class="txt-left">경상북도 포항시 북구 용흥동 72-2번지 일원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">면적</th>
+                                    <td class="txt-left">34,933.60m²</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">현재용도</th>
+                                    <td class="txt-left">폐선예정부지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">용도지역</th>
+                                    <td class="txt-left">도시지역, 자연녹지지역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입지현황</th>
+                                    <td class="txt-left">원도심에 인접한 舊포항역 부지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">접근성</th>
+                                    <td class="txt-left">6km 내 KTX 포항역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">지자체 활용계획 또는 협의사항</th>
+                                    <td class="txt-left">포항시와 용도지역 변경 가능여부 등 협의 필요</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- //article -->
+                    <!-- article -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">부지현황</h3>
+                        <!--table-->
+                        <div class="table type04">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">위치도</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="../images/img/img-영남권-포항역.jpg" alt="영남권 포항역 부지현황" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                        <ul>
+                            <li>
+                                <p class="firstText">국가가 소유·관리하는 철도시설(부지 포함)에 건물이나 그 밖의 시설물을 설치하려는 자에게「국유재산법」18조(영구시설물 축조 금지)에도 불구하고 점용허가를 통해 영구시설물 축조 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가 받은 자가 설치한 시설물 전대 금지조항 없음(임대사업 가능)</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가기간은 건물 종류와 구조에 따라 최대 30년 이내 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업대상지의 현황(개발시점, 대상지 범위 등)은 일부 변경될 수 있으니 개발사업 제안 희망자는 자산개발 담당부서로 문의하여 확인하시기 바라며, 개발사업 제안 및 절차는 법령 및 자료집의 법령과 제규정을 참조하시기 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">개발사업 담당자 연락처(TEL 042-607-4246, FAX 042-607-3829)</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //article -->
+                </section>
+                <section class="">
+                    <h3 class="sectionTitle mt-40">舊)안동역 복합시설 개발사업</h3>
+                    <!-- article -->
+                    <article>
+                        <h3 class="articleTitle">일반현황</h3>
+                        <div class="table type03">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 210px;">
+                                    <col style="width: 790px;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">현황</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">위치</th>
+                                    <td class="txt-left">경상북도 안동시 법흥동 234-3번지 일원</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">면적</th>
+                                    <td class="txt-left">174,522m²</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">현재용도</th>
+                                    <td class="txt-left">폐선예정부지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">용도지역</th>
+                                    <td class="txt-left">자연녹지지역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">입지현황</th>
+                                    <td class="txt-left">중앙선 안동정거장 부지로, 구도심 중앙에 위치</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">접근성</th>
+                                    <td class="txt-left">안동역</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">지자체 활용계획 또는 협의사항</th>
+                                    <td class="txt-left">안동시 공원화사업과 연계한 공동주택(44,500m²), 근생시설(2,500m²) 부지 조성 후 분양<br/>
+                                        ※ 안동시와 협의하여 용도지역 변경 가능</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                    <!-- //article -->
+                    <!-- article -->
+                    <article class="mt-30">
+                        <h3 class="articleTitle">부지현황</h3>
+                        <!--table-->
+                        <div class="table type04">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th scope="col">위치도</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="../images/img/img-영남권-안동역.jpg" alt="영남권 안동역 부지현황" style="width: 100%;">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--//table-->
+                        <ul>
+                            <li>
+                                <p class="firstText">국가가 소유·관리하는 철도시설(부지 포함)에 건물이나 그 밖의 시설물을 설치하려는 자에게「국유재산법」18조(영구시설물 축조 금지)에도 불구하고 점용허가를 통해 영구시설물 축조 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가 받은 자가 설치한 시설물 전대 금지조항 없음(임대사업 가능)</p>
+                            </li>
+                            <li>
+                                <p class="firstText">점용허가기간은 건물 종류와 구조에 따라 최대 30년 이내 가능</p>
+                            </li>
+                            <li>
+                                <p class="firstText">사업대상지의 현황(개발시점, 대상지 범위 등)은 일부 변경될 수 있으니 개발사업 제안 희망자는 자산개발 담당부서로 문의하여 확인하시기 바라며, 개발사업 제안 및 절차는 법령 및 자료집의 법령과 제규정을 참조하시기 바랍니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">개발사업 담당자 연락처(TEL 042-607-4246, FAX 042-607-3829)</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- //article -->
+                </section>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner clearFix">
+        <!--helpMenu-->
+        <ul class="helpMenu">
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">웹접근성정책</a></li>
+            <li><a href="#">뷰어다운로드</a></li>
+        </ul>
+        <!--//helpMenu-->
+        <!--corpInfo-->
+        <div class="corpInfo">
+            <p>우)34618 대전광역시 동구 중앙로 242 국가철도공단  TEL: 1588-7270(통화료 사용자 부담) FAX: 042-607-4429</p>
+            <p>COPYRIGHTⓒ 2020 BY KOREA NATIONAL RAILWAY. ALL RIGHTS RESERVED</p>
+        </div>
+        <!--//corpInfo-->
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

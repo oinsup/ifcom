@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KLIP헬프데스크</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+    <div class="headerUtil">
+        <ul>
+            <li><p>홍길동/국토교통부</p></li>
+            <li><a href="#" title="상담내역 바로가기">상담내역</a></li>
+            <li><a href="#" title="남은시간" class="timeMark">남은 시간(29:00)</a>
+                <div class="remainTime">
+                    <ul>
+                        <li class="remain01">
+                            <p>세션 남은 시간 29:00</p>
+                            <a href="#" title="연장하기">연장</a>
+                        </li>
+                        <li class="remain02">
+                            <p>페이지 로딩 후 30분 동안 미사용 시<br />시스템 보안을 위해 자동 로그아웃 됩니다<br />
+                                <span>(페이지 이동 및 기능 이용 시 자동 연장)</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" title="로그아웃">로그아웃</a></li>
+            <li><a href="#" title="국토이용정보통합플랫폼 바로가기" class="openMark">국토이용정보통합플랫폼</a></li>
+        </ul>
+    </div>
+    <!-- gnbWrap -->
+    <div class="gnbWrap">
+        <div class="inner">
+            <div class="logo">
+                <a href="main.html" title="KLIP헬프데스크">
+                    <img src="../images/common/logo.png" alt="KLIP헬프데스크">
+                </a>
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li>
+                        <a href="#" title="">이용 지원</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용지원-매뉴얼프로그램양식.html" title="메뉴얼&프로그램&양식">메뉴얼&프로그램&양식</a></li>
+                            <li><a href="이용지원-faq.html" title="FAQ">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">이용 상담</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용상담-문의하기.html" title="문의하기">문의하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">새 소식</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="새소식-업무캘린더.html" title="문의하기" >업무 캘린더</a></li>
+                            <li><a href="새소식-공지사항.html" title="문의하기">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">헬프데스크 관리</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="헬프데스크-이용상담관리.html" title="문의하기">이용 상담 관리</a></li>
+                            <li><a href="헬프데스크-이용지원관리.html" title="문의하기">이용 지원 관리</a></li>
+                            <li><a href="헬프데스크-새소식관리-업무캘린더목록.html" title="문의하기">새 소식 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- inner -->
+    </div>
+    <!-- gnbWrap -->
+</header>
+
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">이용 지원 관리 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>이용 지원 관리</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 지원 관리</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--tabContWrap-->
+                    <div class="tabContWrap type02">
+                        <!--menuName-->
+                        <ul class="menuName">
+                            <li class="active"><a href="#">매뉴얼&프로그램&양식</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                        <!--//menuName-->
+                        <div class="tabCont active">
+                            <section>
+                                <!--tabContWrap-->
+                                <div class="tabContWrap type03">
+                                    <!--tabCont-->
+                                    <div class="tabCont active">
+                                        <!--tabNav-->
+                                        <div class="tabNav">
+                                            <h2 class="tabTitle">노출 관리</h2>
+                                            <ul class="tabList">
+                                                <li class="active">사용자 매뉴얼</li>
+                                                <li>프로그램</li>
+                                                <li>양식</li>
+                                            </ul>
+                                        </div>
+                                        <!--//tabNav-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont active mt-7">
+                                            <!--table-->
+                                            <div class="table type06">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">노출 순서</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">노출 상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td class="txt-left">기관 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td class="txt-left">기관 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td class="txt-left">도시계획위원회 위원 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td class="txt-left">용도지역·용도지구 프로그램 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="refrenceMark">노출 순서는 변경하실 행을 선택하신 후 드래그하여 변경 가능합니다.</p>
+                                            </div>
+                                            <!--//table-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont mt-7">
+                                            <!--table-->
+                                            <div class="table type06">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">노출 순서</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">노출 상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td class="txt-left">기관 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22</td>
+                                                        <td class="txt-left">기관 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td class="txt-left">도시계획위원회 위원 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td class="txt-left">용도지역·용도지구 프로그램 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="refrenceMark">노출 순서는 변경하실 행을 선택하신 후 드래그하여 변경 가능합니다.</p>
+                                            </div>
+                                            <!--//table-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont mt-7">
+                                            <!--table-->
+                                            <div class="table type06">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">노출 순서</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">노출 상태</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td class="txt-left">기관 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td class="txt-left">기관 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>33</td>
+                                                        <td class="txt-left">도시계획위원회 위원 관리자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td class="txt-left">용도지역·용도지구 프로그램 사용자용 매뉴얼</td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="refrenceMark">노출 순서는 변경하실 행을 선택하신 후 드래그하여 변경 가능합니다.</p>
+                                            </div>
+                                            <!--//table-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                    </div>
+                                    <!--//tabCont-->
+                                </div>
+                                <!--//tabContWrap-->
+                            </section>
+                            <section>
+                                <!--tabContWrap-->
+                                <div class="tabContWrap type03">
+                                    <!--tabCont-->
+                                    <div class="tabCont active">
+                                        <!--tabNav-->
+                                        <div class="tabNav">
+                                            <h2 class="tabTitle">전체 리스트</h2>
+                                            <ul class="tabList">
+                                                <li class="active">사용자 매뉴얼</li>
+                                                <li>프로그램</li>
+                                                <li>양식</li>
+                                            </ul>
+                                            <button type="button" class="btn gray">신규 등록</button>
+                                        </div>
+                                        <!--//tabNav-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont active mt-7">
+                                            <!--table-->
+                                            <div class="table type08">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 130px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">NO</th>
+                                                            <th scope="col">파일 분류</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">다운로드 수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>n</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>3333</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>3333</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                도시계획위원회 위원 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>3333</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                용도지역·용도지구 프로그램 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>3333</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--//table-->
+                                            <!--pagination-->
+                                            <div class="pagination">
+                                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                                <a href="#" class="active">1</a>
+                                                <a href="#">2</a>
+                                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                                            </div>
+                                            <!--//pagination-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont mt-7">
+                                            <!--table-->
+                                            <div class="table type08">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 130px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">NO</th>
+                                                            <th scope="col">파일 분류</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">다운로드 수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>n-1</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>2222</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>2222</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                도시계획위원회 위원 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>2222</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                용도지역·용도지구 프로그램 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>2222</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--//table-->
+                                            <!--pagination-->
+                                            <div class="pagination">
+                                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                                <a href="#" class="active">1</a>
+                                                <a href="#">2</a>
+                                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                                            </div>
+                                            <!--//pagination-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                        <!--tabContinner-->
+                                        <div class="tabCont mt-7">
+                                            <!--table-->
+                                            <div class="table type08">
+                                                <table>
+                                                    <caption class="hidden">테이블</caption>
+                                                    <colgroup>
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 130px;">
+                                                        <col style="width: auto;">
+                                                        <col style="width: 80px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 100px;">
+                                                        <col style="width: 140px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">NO</th>
+                                                            <th scope="col">파일 분류</th>
+                                                            <th scope="col">제목</th>
+                                                            <th scope="col">버전</th>
+                                                            <th scope="col">배포일</th>
+                                                            <th scope="col">등록자</th>
+                                                            <th scope="col">등록일</th>
+                                                            <th scope="col">다운로드 수</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>n-3</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>1111</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                기관 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>1111</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                도시계획위원회 위원 관리자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>1111</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>사용자 메뉴얼</td>
+                                                        <td class="txt-left">
+                                                            <a href="#">
+                                                                용도지역·용도지구 프로그램 사용자용 매뉴얼
+                                                            </a>
+                                                        </td>
+                                                        <td>2.0</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>관리자명</td>
+                                                        <td>2021-09-30</td>
+                                                        <td>1111</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!--//table-->
+                                            <!--pagination-->
+                                            <div class="pagination">
+                                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                                <a href="#" class="active">1</a>
+                                                <a href="#">2</a>
+                                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                                            </div>
+                                            <!--//pagination-->
+                                        </div>
+                                        <!--//tabContinner-->
+                                    </div>
+                                    <!--//tabCont-->
+                                </div>
+                                <!--//tabContWrap-->
+                            </section>
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                    <!--//tabContWrap-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner">
+        <div class="footerLogo">
+            <a href="#" title="국토교통부 바로가기">
+                <img src="../images/common/logo-footer.png" alt="국토교통부">
+            </a>
+        </div>
+        <div class="footerInfo">
+
+            <ul>
+                <li>
+                    <address>
+                        (우)30103  세종특별자치시 도움6로 11
+                    </address>
+                </li>
+                <li>
+                    <p>
+                        Tel. (주간)1599-0001 (야간)044-201-4672
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Fax. (주간)044-860-9500 (야간)044-201-5700
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <li class="secu">
+                    <a href="#" title="개인정보 처리방침 바로가기">개인정보 처리방침</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 MOLIT. All Rights Reserved. 
+            </p>
+        </div>
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

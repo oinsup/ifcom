@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">매뉴얼&프로그램&양식 등록 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>매뉴얼&프로그램&양식 등록</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 지원 관리</a></li>
+                                <li><a href="#">매뉴얼&프로그램&양식 등록</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: 430px;">
+                                <col style="width: 160px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">사용자 매뉴얼</th>
+                                <td>
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad02" id="rad04" checked>
+                                            <label for="rad04"><span>사용자 매뉴얼</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad02" id="rad05">
+                                            <label for="rad05"><span>프로그램</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad02" id="rad06">
+                                            <label for="rad06"><span>양식</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="">파일 제목<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea">
+                                        <input type="text" class="grayType wd350" title="내용 입력" placeholder="제목 입력(예, 기관 사용자용 매뉴얼)" maxlength="25">
+                                        <p class="textCount"><span>0</span>/25자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">파일 버전<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea">
+                                        <p>V</p>
+                                        <input type="text" class="grayType wd370" placeholder="버전 입력(예. 1.0)">
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="">배포일<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="calGroup">
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="line-height: 18px;"><label for="">파일<span class="redDot">•</span><br/><span style="font-size: 14px;">(최대 5MB)</span></label></th>
+                                <td colspan="3">
+                                    <div class="fileArea">
+                                        <input type="file" id="fileSelect01" class="hidden">
+                                        <p class="fileName">파일을 선택해 주세요.</p>
+                                        <label for="fileSelect01">파일 선택</label>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn bdGray">파일 삭제</button>
+                                            <button type="button" class="btn gray">파일 변경</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">노출 상태<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad03" id="rad07" checked>
+                                            <label for="rad07"><span>비노출</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad03" id="rad08">
+                                            <label for="rad08"><span>노출</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <div class="btnArea01 center">
+                        <button type="button" class="btn white middle">등록 취소</button>
+                        <button type="button" class="btn dkBlue middle">등록</button>
+                    </div>
+                    <!--//btnArea-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

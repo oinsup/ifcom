@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="커뮤니티">커뮤니티</a>
+                            </li>
+                            <li>
+                                <a href="#" title="공지사항">공지사항</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">NOTICE</span></h1>
+                    </div>
+                    <!--//titArea-->
+                    <!--searchArea-->
+                    <div class="searchArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <select title="검색조건">
+                            <option value="전체" selected>전체</option>
+                        </select>
+                        <div class="pos-r">
+                            <input type="text" title="검색어 입력필드" placeholder="검색어를 입력해 주세요." />
+                            <button type="button"><span class="hidden">검색</span></button>
+                        </div>
+                    </div>
+                    <!--//searchArea-->
+                    <!--boardArea-->
+                    <div class="boardArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <!--item-->
+                        <div class="item">
+                            <span class="date">2022-04-12</span>
+                            <a href="커뮤니티-공지사항_상세.html" title="EGIS 홈페이지 리뉴얼" class="tit"><span class="category">[EGIS]</span>홈페이지 리뉴얼 안내</a>
+                            <a href="커뮤니티-공지사항_상세.html" title="EGIS 홈페이지 리뉴얼" class="arrow"></a>
+                        </div>
+                        <!--//item-->
+                        
+                    </div>
+                    <!--//boardArea-->
+                    <!--pagination-->
+                    <div class="pagination">
+                        <!-- <a href="#" title="이전" class="prev"></a> -->
+                        <div>
+                            <a href="#" title="1" class="active">1</a>
+                            <!-- <a href="#" title="2">2</a>
+                            <a href="#" title="3">3</a>
+                            <a href="#" title="4">4</a>
+                            <a href="#" title="5">5</a>
+                            <a href="#" title="6">6</a>
+                            <a href="#" title="7">7</a>
+                            <a href="#" title="8">8</a>
+                            <a href="#" title="9">9</a>
+                            <a href="#" title="10">10</a> -->
+                        </div>
+                        <!-- <a href="#" title="다음" class="next"></a> -->
+                    </div>
+                    <!--//pagination-->
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>비정형 자료 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>비정형 자료 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <section>
+          <!-- <h3 class="cont-hedding1">도시계획위원회 개요</h3> -->
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>비정형 자료 등록</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">자료 구분 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-opt-list">
+                    <input type="radio" name="datacate" id="datacate1" class="cs-radio"><label for="datacate1"><span></span> 법령</label>
+                    <input type="radio" name="datacate" id="datacate2" class="cs-radio"><label for="datacate2"><span></span> 학술</label>
+                    <input type="radio" name="datacate" id="datacate3" class="cs-radio"><label for="datacate3"><span></span> 도면</label>
+                    <input type="radio" name="datacate" id="datacate4" class="cs-radio"><label for="datacate4"><span></span> CAD</label>
+                    <input type="radio" name="datacate" id="datacate5" class="cs-radio"><label for="datacate5"><span></span> SHAPE</label>
+                    <input type="radio" name="datacate" id="datacate6" class="cs-radio"><label for="datacate6"><span></span> 이미지</label>
+                    <input type="radio" name="datacate" id="datacate7" class="cs-radio"><label for="datacate7"><span></span> 기타</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-counter-wrap">
+                      <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="자료를 설명하는 제목 입력" title="자료 제목">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 입력 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-counter-wrap">
+                      <textarea name="" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="2000" placeholder="자료를 설명하는 내용 입력" title="자료 입력"></textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 파일 <i class="icon-required">필수 입력</i><br>(최대 10개)</th>
+                  <td class="_p0">
+                    <div class="cs-list-file-sum">
+                      <ul class="cs-list-file _type2">
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <button type="button" class="cs-btn2-gray cs-btn-default">파일 삭제</button>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div class="cs-list-file-sum__btn">
+                        <button type="button" class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>파일은 개당 최대 XXMB까지 등록 가능합니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing21.html" class="cs-btn-line">취소</a>
+          <a href="#js__alert" jq-action="modal" class="cs-btn">등록</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>상위 계획 자료 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <span class="pcolor-red">법령</span><br>
+            상위 계획 자료가 등록되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="fileSharing21.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 16})
+        @@include('../include/modals.html',{'items': 4})
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

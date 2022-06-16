@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '아이디/비밀번호 찾기'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 7})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        아이디/비밀번호 찾기
+      </h2>
+      <div class="content">
+        
+        <div class="loginfrm _loginfrm-findidpw">
+          <div class="login-bg cs-allcenter">
+            <div><img src="@@imageRoot/login_idpw_text.png" alt="국토의 지속 가능한 발전을 지원하는 국토이용정보플랫폼 KLIP"></div>
+          </div>
+          <!-- 아이디찾기 -->
+          <div class="findidpw-section">
+            <h3>아이디찾기</h3>
+            <div class="cs-allcenter tac findidpw-id">
+              <div>
+                KLIP의 아이디는 <br>
+                <b class="pcolor-red">공직자통합메일 아이디</b>@korea.kr입니다. 
+              </div>
+            </div>
+          </div>
+
+          <!-- 비밀번호 찾기 -->
+          <div class="findidpw-section">
+            <h3>비밀번호 찾기</h3>
+            <div>
+              <form action="./">
+                <div class="login-input-group">
+                  <div>
+                    <label for="userId">아이디</label>
+                    <input type="text" id="userId" placeholder="아이디 입력">
+                  </div>
+                  <div>
+                    <label for="userName">이름</label>
+                    <input type="text" id="userName" placeholder="이름 입력 (공백 없이)">
+                  </div>
+                  <div>
+                    <label for="userTel">휴대전화</label>
+                    <input type="text" id="userTel" placeholder="번호 입력 (-없이)">
+                  </div>
+                </div>
+                <div class="loginfrm-btns">
+                  <button class="cs-btn" jq-action="modal" jq-target="#js__passwordSms">확인</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          
+        </div>
+        <!-- //loginfrm -->
+
+        <div class="cs-box-alert mt50">
+          <strong>유의사항</strong>
+          <div>
+            <ul class="cs-list-dot _gray tcolor-gray fz14">
+              <li>국토이용정보통합플랫폼(Korea Land use Information Platform)은 사용 권한 신청 후 승인 받은 사용자만 이용 가능합니다.</li>
+              <li>비밀번호를 잊으신 경우 ‘비밀번호 찾기’를 통해 재설정 가능합니다.</li>
+            </ul>
+          </div>
+        </div>
+
+        <button jq-action="modal" jq-target="#js__alert">경고창</button>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>비밀번호 찾기</h2>
+          </div>
+          <div class="laymodal-content tac">
+            아이디(공직자통합메일 아이디)를 입력해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+        <!-- 비밀번호 찾기 -->
+        <div id="js__passwordSms" class="laymodal width500 modal-passwordsms" tabindex="0">
+          <div class="laymodal-header">
+            <h2>비밀번호 찾기</h2>
+          </div>
+          <div class="laymodal-content">
+
+            <section>
+              개인정보 보호를 위해 본인 확인 후 일회용 비밀번호가 발급됩니다.
+            </section>
+
+            <section>
+              <p></p>
+              <div class="modal-sec-title">휴대전화로 발송된 인증번호를 입력해 주세요. </div>
+              <div class="cs-input-sms-set">
+                <div class="cs-input-sms _h35">
+                  <input type="text" title="인증번호">
+                  <div>남은 시간 <span>02:00</span> </div>
+                </div>
+                <button type="button" class="cs-btn2-gray cs-btn-default _h35">재발송</button>
+              </div>
+            </section>
+
+            <div class="cs-alert">인증번호는 최대 5번까지 발송가능합니다.<br>
+              본인 인증이 불가한 경우 소속 기관 관리자에게 일회용 비밀번호를 요청해주세요.
+            </div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button class="cs-btn" onclick="lay_pop_close('#js__passwordSms');lay_pop_open('#js__passwordSmsComplete')">확인</button>
+          </div>
+        </div>
+
+        <!-- 비밀번호 찾기 완료 -->
+        <div id="js__passwordSmsComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>비밀번호 찾기</h2>
+          </div>
+          <div class="laymodal-content tac">
+            인증받으신 휴대전화로 일회용 비밀번호가 전송되었습니다.<br>
+            해당 일회용 비밀번호로 로그인 후 비밀번호를 변경해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="@@htmlRoot/login.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

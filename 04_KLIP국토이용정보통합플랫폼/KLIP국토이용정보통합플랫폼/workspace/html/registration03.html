@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '입안 제안'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 0})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        입안 제안
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li class="active"><span>1</span> <b>사전협의 확인</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>2. 개인정보 수집 동의</li>
+              <li>3. 제안서 등록</li>
+              <li>4. 제안 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="@@htmlRoot/registration04.html">
+            <div class="join-cont join-cont-step3">
+              <section>
+                <strong class="join-title">사전협의 번호 입력(필수)</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <label for="reqNumber" class="frm-title">사전협의 번호</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride lo-girde-t1">
+                        <input type="text" id="reqNumber" class="cs-input cs-gride-col9" placeholder="숫자10자리 입력(사전협의 담당자에게 받은 번호)">
+                        <button class="cs-btn2-gray cs-gride-col3">중복 확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="cs-list-dot">
+                  <li>‘사전협의 번호’를 입력하고 ‘중복 확인’버튼 클릭 후 하단의 사전협의 정보를 확인해 주세요.</li>
+                  <li>
+                    ‘사전협의 번호’ 입력 결과 정확하지 않은 번호로 조회될 경우 협의하신 담당자에게 재문의 하시거나,<br>
+                    ‘사전협의 번호 확인’을 통해 확인 후 다시 시도해 주세요.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <strong class="join-title">사전협의 정보 확인</strong>
+                <div class="lo-box lo-frm-set">
+                  <div class="lo-frm-row">
+                    <strong class="frm-title">협의 기관</strong>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" class="cs-input cs-gride-col6" placeholder="‘중복 확인’ 시 확인 가능" disabled title="협의기관 시, 광역시/도">
+                        <input type="text" class="cs-input cs-gride-col6" placeholder="‘중복 확인’ 시 확인 가능" disabled title="협의기관 시군구">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="consGroup" class="frm-title">협의 부서</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="consGroup" class="cs-input cs-gride-col12" placeholder="사전협의 번호 ‘중복 확인’ 시 확인 가능" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="userName" class="frm-title">담당자명</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="userName" class="cs-input cs-gride-col12" placeholder="사전협의 번호 ‘중복 확인’ 시 확인 가능" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="reqTitle" class="frm-title">제안 제목</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="reqTitle" class="cs-input cs-gride-col12" placeholder="사전협의 번호 ‘중복 확인’ 시 확인 가능" disabled>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lo-frm-row">
+                    <label for="reqDate" class="frm-title">최초 제안일</label>
+                    <div class="frm-cont">
+                      <div class="cs-gride">
+                        <input type="text" id="reqDate" class="cs-input cs-gride-col12" placeholder="사전협의 번호 ‘중복 확인’ 시 확인 가능" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ul class="cs-list-dot">
+                  <li>제안 제목은 사전협의 담당자가 사전협의 결과 입력 시 입력한 값으로 실제 제안하실 제목과 차이가 있을 수 있습니다.</li>
+                  <li>사전협의한 담당자와 협의하신 정보가 맞으면 ‘다음’을 클릭해 주세요 </li>
+                </ul>
+              </section>
+
+              <div class="__btn-set cs-btn-set">
+                <a href="@@htmlRoot/registration01.html" class="cs-btn-line">취소</a>
+                <button class="cs-btn">다음</button>
+              </div>
+              
+            </div>
+          </form>
+          <!--// join-cont -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

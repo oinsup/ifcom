@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">문의하기 답변 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>문의하기 답변</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 상담 관리</a></li>
+                                <li><a href="#">문의하기 답변</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <h2 class="tableTitle">문의 정보</h2>
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 150px;">
+                                <col style="width: 450px;">
+                                <col style="width: 150px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">문의일</th>
+                                <td>2021-09-13 11:12</td>
+                                <th scope="row">문의 기관/부서</th>
+                                <td>경기도 하남시/도시계획과</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">문의 유형</label></th>
+                                <td>
+                                    <div class="calGroup">
+                                        <select name="" id="" class="grayType">
+                                            <option value="">선택된 유형이 보입니다.</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">문의자</th>
+                                <td>박서준</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">문의 제목</th>
+                                <td colspan="3">
+                                    문의자가 입력한 문의 제목이 보입니다
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">문의 내용</th>
+                                <td colspan="3">
+                                    문의자가 입력한 문의 내용이 보입니다. <br />
+                                    문의자가 입력한 문의 내용이 보입니다. <br />
+                                    문의자가 입력한 문의 내용이 보입니다. <br />
+                                    문의자가 입력한 문의 내용이 보입니다. <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">첨부파일</label></th>
+                                <td colspan="3">
+                                    <div class="fileArea">
+                                        <p class="fileName">등록된 파일이 없습니다.</p>
+                                    </div>
+                                    <div class="fileArea">
+                                        <input type="file" id="" class="hidden">
+                                        <p class="fileName blackType">업로드된 파일이 있는 경우에만 파일명 출력.jpg</p>
+                                        <button type="button" class="btn bdGray flRight">파일 열기</button>
+                                    </div>
+                                    <div class="fileArea">
+                                        <input type="file" id="" class="hidden">
+                                        <p class="fileName blackType">업로드된 파일이 있는 경우에만 파일명 출력.jpg</p>
+                                        <button type="button" class="btn bdGray flRight">파일 열기</button>
+                                    </div>
+                                    <div class="fileArea">
+                                        <input type="file" id="" class="hidden">
+                                        <p class="fileName blackType">업로드된 파일이 있는 경우에만 파일명 출력.jpg</p>
+                                        <button type="button" class="btn bdGray flRight">파일 열기</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--table-->
+                    <div class="table type02 mt-50">
+                        <div class="tableHeader">
+                            <h2 class="tableTitle">답변 등록</h2>
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 150px;">
+                                <col style="width: 1050px;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">현재 상태</th>
+                                <td>답변 대기</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">답변 내용<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea"> 
+                                        <textarea name="" id="" class="wd900" title="내용 입력" cols="30" rows="10" placeholder="내용 입력"></textarea>
+                                        <p class="textCount"><span>0</span>/1,000자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">첨부파일<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="fileArea">
+                                        <input type="file" id="fileSelect01" class="hidden">
+                                        <p class="fileName">파일을 선택해 주세요.</p>
+                                        <label for="fileSelect01">파일 선택</label>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn bdGray">파일 삭제</button>
+                                            <button type="button" class="btn gray">파일 변경</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--btnArea-->
+                    <div class="btnArea01 center">
+                        <button type="button" class="btn white middle01">답변 취소</button>
+                        <button type="button" class="btn dkBlue middle01">문의 내역 삭제</button>
+                        <button type="button" class="btn dkBlue middle01">답변 등록</button>
+                    </div>
+                    <!--//btnArea-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

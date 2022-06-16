@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '정보연계 관리', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>정보연계 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>정보연계 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="infoManage05.html">정보 제공 내역</a>
+        <a href="infoManage01.html">정보 활용 내역</a>
+        <a href="infoManage11.html">연계 이력</a>
+        <a href="infoManage13.html" class="active">연계 통계</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts type02">
+              <div>
+                <strong class="__tit">
+                  
+                  데이터 단위</strong>
+                <div class="frm-opt-list">
+                  <input type="radio" name="datecate" class="cs-radio" id="i01" checked><label for="i01"><span></span> 일간</label>
+                  <input type="radio" name="datecate" class="cs-radio" id="i02"><label for="i02"><span></span> 월간</label>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">
+                  <label for="s01">연계 기간</label></strong>
+                  <div class="cs-input-tel">
+                    <select id="s01" class="cs-input" title="연계 연도 선택">
+                      <option>2020</option>
+                    </select>
+                    <select id="s02" class="cs-input" title="연계 월 선택">
+                      <option>01</option>
+                    </select>
+                    <div>~</div>
+                    <select id="s03" class="cs-input" title="연계 연도 선택">
+                      <option>2021</option>
+                    </select>
+                    <select id="s04" class="cs-input" title="연계 월 선택">
+                      <option>12</option>
+                    </select>
+                  </div>
+              </div>
+              
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>데이터 단위를 일간으로 조회 시 연계 기간은 1개월 단위로 조회 가능하며, 데이터 단위를 월간으로 조회 시 연계 기간은 최대 1년까지만 조회 가능합니다.
+              </li>
+            </ul>
+
+
+            <div class="board-searchbox-btns cs-btn-set type02">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+        <!-- graphArea -->
+        <div class="graphArea">
+          <!-- graphbox -->
+          <div class="graphBox left">
+            <!-- graphTitle -->
+            <div class="graphTitle">
+              <h3 class="cont-hedding1">연계 정보 수</h3>
+              <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">차트 저장</button>
+            </div>
+            <!-- //graphTitle -->
+            <div class="graphWrap">
+              <!-- graphHead -->
+              <div class="graphHead">
+                <p class="date">기간 : 2021-09-01~2021-09-07</p>
+                <p class="ea">(단위 : 개)</p>
+              </div>
+              <!-- //graphHead -->
+              <!-- graphBody -->
+              <div class="graphBody">
+                <!-- info -->
+                <div class="info">
+                  <table>
+                    <caption>총 정보 수</caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>총 정보 수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>16개</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //info -->
+                <div class="graph">
+                  그래프영역
+                </div>
+              </div>
+              <!-- //graphBody -->
+              <!-- graphFoot -->
+              <div class="graphFoot">
+                <ul>
+                  <li class="offer">
+                    <p>제공</p>
+                  </li>
+                  <li class="uses">
+                    <p>활용</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- //graphFoot -->
+            </div>
+          </div>
+          <!-- //graphbox -->
+          <div class="graphBox right">
+            <!-- graphTitle -->
+            <div class="graphTitle">
+              <h3 class="cont-hedding1">연계 건수</h3>
+              <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">차트 저장</button>
+            </div>
+            <!-- //graphTitle -->
+            <div class="graphWrap">
+              <!-- graphHead -->
+              <div class="graphHead">
+                <p class="date">기간 : 2021-09-01~2021-09-07</p>
+                <p class="ea">(단위 : 건)</p>
+              </div>
+              <!-- //graphHead -->
+              <!-- graphBody -->
+              <div class="graphBody">
+                <!-- info -->
+                <div class="info">
+                  <table>
+                    <caption>총 연계 건수</caption>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>총 연계 건수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>175건</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //info -->
+                <div class="graph">
+                  그래프영역
+                </div>
+              </div>
+              <!-- //graphBody -->
+              <!-- graphFoot -->
+              <div class="graphFoot">
+                <ul>
+                  <li class="offer">
+                    <p>성공</p>
+                  </li>
+                  <li class="uses">
+                    <p>실패</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- //graphFoot -->
+            </div>
+          </div>
+          <!-- //graphbox -->
+        </div>
+        <!-- //graphArea -->
+
+        <!-- graphArea -->
+        <div class="graphArea type02">
+          <!-- graphbox -->
+          <div class="graphBox">
+            <!-- graphTitle -->
+            <div class="graphTitle">
+              <h3 class="cont-hedding1">기간 내 연계 추이(성공 건수)</h3>
+              <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">차트 저장</button>
+            </div>
+            <!-- //graphTitle -->
+            <div class="graphWrap">
+              <!-- graphHead -->
+              <div class="graphHead">
+                <p class="date">기간 : 2021-09-01~2021-09-07</p>
+                <p class="ea">(단위 : 건)</p>
+              </div>
+              <!-- //graphHead -->
+              <!-- graphBody -->
+              <div class="graphBody">
+                <div class="graph">
+                  그래프영역
+                </div>
+              </div>
+              <!-- //graphBody -->
+              <!-- graphFoot -->
+              <div class="graphFoot">
+                <ul>
+                  <li class="offer">
+                    <p>제공</p>
+                  </li>
+                  <li class="uses">
+                    <p>활용</p>
+                  </li>
+                </ul>
+              </div>
+              <!-- //graphFoot -->
+            </div>
+          </div>
+          <!-- //graphbox -->
+        </div>
+        <!-- //graphArea -->
+        <!-- tableArea -->
+        <div class="tableArea">
+          <!-- infoTable -->
+          <div class="infoTable">
+            <!-- infoTop -->
+            <div class="infoTop">
+              <div class="board-list-wrap">
+                <div class="tableTitle">
+                  <h3 class="cont-hedding1">정보 제공 연계 건수 Top5</h3>
+                  <a href="#" class="btn-down-excel">다운로드</a>
+                </div>
+
+                <div class="board-list-text _fixed">
+                  <table>
+                    <caption>정보 제공 연계 건수 리스트</caption>
+                    <colgroup>
+                      <col class="width60">
+                      <col>
+                      <col class="width120">
+                      <col class="width80">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순위</th>
+                        <th scope="col">제공 정보명</th>
+                        <th scope="col">활용 서비스 수</th>
+                        <th scope="col">성공 건수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td class="tal">고시 전송</td>
+                        <td>1</td>
+                        <td>1,433</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="tal">공고 전송</td>
+                        <td>3</td>
+                        <td>1,433</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td class="tal">보전산지 용도지역지구</td>
+                        <td>4</td>
+                        <td>1,433</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td class="tal">농업진흥지역 용도지역지구</td>
+                        <td>5</td>
+                        <td>1,433</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td class="tal">개발제한구역 용도지역지구</td>
+                        <td>6</td>
+                        <td>1,433</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- //infoTop -->
+            <!-- infobottom -->
+            <div class="infobottom">
+              <div class="board-list-wrap">
+                <div class="tableTitle">
+                  <h3 class="cont-hedding1">정보 활용 연계 건수 Top5</h3>
+                  <a href="#" class="btn-down-excel">다운로드</a>
+                </div>
+
+                <div class="board-list-text _fixed">
+                  <table>
+                    <caption>정보 활용 연계 건수 리스트</caption>
+                    <colgroup>
+                      <col class="width60">
+                      <col>
+                      <col class="width160">
+                      <col class="width80">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">순위</th>
+                        <th scope="col">활용 정보명</th>
+                        <th scope="col">제공 기관명</th>
+                        <th scope="col">성공 건수</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td class="tal">일반 지도 조회</td>
+                        <td class="tal">국토정보플랫폼</td>
+                        <td>1,433</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="tal">영상 지도 조회</td>
+                        <td class="tal">국토정보플랫폼</td>
+                        <td>2,555</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td class="tal">백지도 조회</td>
+                        <td class="tal">국토정보플랫폼</td>
+                        <td>2,111</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td class="tal">연계 정보명 출력</td>
+                        <td class="tal">기관명 출력</td>
+                        <td>3,444</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td class="tal">연계 정보명 출력</td>
+                        <td class="tal">기관명 출력</td>
+                        <td>3,444</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- //infobottom -->
+          </div>
+          <!-- //infoTable -->
+          <!-- dataTable -->
+          <div class="dataTable">
+            <div class="board-list-wrap">
+              <div class="tableTitle">
+                <h3 class="cont-hedding1">데이터 보드</h3>
+                <a href="#" class="btn-down-excel">다운로드</a>
+              </div>
+
+              <div class="board-list-text _fixed">
+                <table>
+                  <caption>데이터 보드</caption>
+                  <colgroup>
+                    <col>
+                    <col class="width70">
+                    <col style="width: 85px;">
+                    <col class="width70">
+                    <col style="width: 85px;">
+                    <col class="width70">
+                    <col style="width: 85px;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" rowspan="2">연계 기간</th>
+                      <th scope="col" colspan="2">제공</th>
+                      <th scope="col" colspan="2">활용</th>
+                      <th scope="col" colspan="2">합계</th>
+                    </tr>
+                    <tr>
+                      <th scope="col">정보 수</th>
+                      <th scope="col">성공 건수</th>
+                      <th scope="col">정보 수</th>
+                      <th scope="col">성공 건수</th>
+                      <th scope="col">정보 수</th>
+                      <th scope="col">성공 건수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>32</td>
+                      <td>32</td>
+                      <td>32</td>
+                      <td>32</td>
+                      <td>32</td>
+                      <td>2,555</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>41</td>
+                      <td>41</td>
+                      <td>41</td>
+                      <td>41</td>
+                      <td>41</td>
+                      <td>2,111</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>56</td>
+                      <td>56</td>
+                      <td>56</td>
+                      <td>56</td>
+                      <td>56</td>
+                      <td>3,444</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>68</td>
+                      <td>68</td>
+                      <td>68</td>
+                      <td>68</td>
+                      <td>68</td>
+                      <td>3,123</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                    <tr>
+                      <td>2021-09-01</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>1,433</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>기간 합계</td>
+                      <td>999</td>
+                      <td>999</td>
+                      <td>999</td>
+                      <td>999</td>
+                      <td>999</td>
+                      <td>99,999</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- //dataTable -->
+        </div>
+        <!-- //tableArea -->
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

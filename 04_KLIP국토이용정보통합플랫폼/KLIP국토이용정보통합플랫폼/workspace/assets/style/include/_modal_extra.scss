@@ -1,0 +1,27 @@
+.laymodal{}
+
+.laymodal-down,
+.laymodal-full,
+.laymodal-reduce
+{
+  font-size: 0;width: 34px;height: 34px;background: none;border:0;
+  vertical-align: middle;position: relative;display: inline-block;
+  &::after
+  {
+    content: '';display: block;width:18px;height:18px;background:url('#{$image}/modal_icon.png');position: absolute;
+    left: 8px;top: 8px;
+    transition: filter .3s;
+  }
+}
+
+.laymodal-down::after{background-position:-20px 0;}
+.laymodal-reduce::after{background-position:-40px 0;}
+.laymodal-full::after{}
+
+.laymodal-header{}
+
+.laymodal-header-btns
+{
+  position: absolute;top:13px;right:20px;line-height: 1em;
+  .laymodal-close{position:relative;top: auto;right:auto;display: inline-block;vertical-align: middle;}
+}

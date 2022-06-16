@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>입안 제안서 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안서 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="./">
+        <div class="content">
+          <section>
+            <h3 class="cont-hedding1">제안자 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>제안서 정보</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">대상 구분 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" name="targetCate" id="targetCate1" class="cs-radio"><label for="targetCate1"><span></span> 주민(개인)</label>
+                      <input type="radio" name="targetCate" id="targetCate2" class="cs-radio"><label for="targetCate2"><span></span> 주민(사업자)</label>
+                      <input type="radio" name="targetCate" id="targetCate3" class="cs-radio"><label for="targetCate3"><span></span> 기관</label>
+                    </td>
+                    <th scope="row">제안자명 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" title="제안자명">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">소속/상호 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" title="소속/상호">
+                    </td>
+                    <th scope="row">직위</th>
+                    <td>
+                      <input type="text" class="cs-input width100p" title="직위">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">휴대전화 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width160" title="휴대전화">
+                      <span class="tcolor-gray2">(-없이 입력)</span>
+                    </td>
+                    <th scope="row">이메일 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-input-email2">
+                        <input type="text" class="cs-input" title="이메일 아이디">
+                        <div>@</div>
+                        <input type="text" class="cs-input" title="이메일 뒤 주소">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">소속 부서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" title="소속 부서">
+                    </td>
+                    <th scope="row">부서 연락처</th>
+                    <td>
+                      <div class="cs-input-tel">
+                        <select class="cs-input" title="지역번호 선택">
+                          <option>지역번호 선택</option>
+                          <option>02</option>
+                          <option>032</option>
+                        </select>
+                        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                        <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>제안자의 휴대전화로 입안 제안에 대한 결과 문자가 발송되므로 정확한 번호를 입력해 주세요.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h3 class="cont-hedding1">제안서 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>제안서 정보</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">제안 제목</th>
+                    <td><input type="text" class="cs-input width100p" value="제안 제목입니다." placeholder="제안 제목을 입력해주세요" title="제안 제목"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제안 분야</th>
+                    <td>
+                      <select class="cs-input width100p" title="제안 분야">
+                        <option>용도지구 지정 및 변경(개발진흥지구)</option>
+                      </select>
+                      <div class="cs-box-tip">
+                        <strong>법률 TIP</strong>
+                        <ul>
+                          <li>
+                            국토계획법 제26조(도시·군관리계획 입안의 제안) ①항 
+                            <p>
+                              주민(이해관계자를 포함한다. 이하 같다)은 다음 각 호의 사항에 대하여 제24조에 따라 도시·군관리계획을 입안할 수 있는 자에게 도시·군관리계획의 입안을 제안할 수 있다. 이 경우 <b class="underline">제안서에는 도시·군관리계획도서와 계획설명서를 첨부하여야 한다.</b>
+                            </p>
+                            <ul class="cs-list-number">
+                              <li>기반시설의 설치·정비 또는 개량에 관한 사항</li>
+                              <li>지구단위계획구역의 지정 및 변경과 지구단위계획의 수립 및 변경에 관한 사항</li>
+                              <li>다음 각 목의 어느 하나에 해당하는 용도지구의 지정 및 변경에 관한 사항
+                                <ul>
+                                  <li><span class="__text">가.</span>개발진흥지구 중 공업기능 또는 유통물류기능 등을 집중적으로 개발·정비하기 위한 개발진흥지구로서 대통령령으로 정하는 개발진흥지구</li>
+                                  <li><span class="__text">나.</span>제37조에 따라 지정된 용도지구 중 해당 용도지구에 따른 건축물이나 그 밖의 시설의 용도·종류 및 규모 등의 제한을 지구단위계획으로 대체하기 위한 용도지구
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제안 내용</th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <textarea cols="30" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="1000" placeholder="제안 내용을 입력해주세요" title="제안 내용">입력내용</textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="2">제안서</th>
+                    <td class="_p0">
+                      <div class="board-view-tb">
+                        <table>
+                          <colgroup>
+                            <col class="width180">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <td>도시·군관리계획도서 <i class="icon-required">필수 입력</i></td>
+                              <td>
+                                <div class="cs-file-wrap _type2">
+                                  <input type="file" class="cs-file" id="guidefile1" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                                    <label for="guidefile1" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>계획설명서</td>
+                              <td>
+                                <div class="cs-file-wrap _type2">
+                                  <input type="file" class="cs-file" id="guidefile2" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                                    <label for="guidefile2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>기타 첨부 자료</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="guidefile3" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="guidefile3" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+  
+                      <div class="cs-box-tip margin0">
+                        <strong>법률 TIP</strong>
+                        <ul>
+                          <li>
+                            국토계획법 제26조(도시·군관리계획 입안의 제안) ①항 
+                            <p>
+                              주민(이해관계자를 포함한다. 이하 같다)은 다음 각 호의 사항에 대하여 제24조에 따라 도시·군관리계획을 입안할 수 있는 자에게 도시·군관리계획의 입안을 제안할 수 있다. 이 경우 <b class="underline">제안서에는 도시·군관리계획도서와 계획설명서를 첨부하여야 한다.</b>
+                            </p>
+                            <ul class="cs-list-number">
+                              <li>기반시설의 설치·정비 또는 개량에 관한 사항</li>
+                              <li>지구단위계획구역의 지정 및 변경과 지구단위계획의 수립 및 변경에 관한 사항</li>
+                              <li>다음 각 목의 어느 하나에 해당하는 용도지구의 지정 및 변경에 관한 사항
+                                <ul>
+                                  <li><span class="__text">가.</span>개발진흥지구 중 공업기능 또는 유통물류기능 등을 집중적으로 개발·정비하기 위한 개발진흥지구로서 대통령령으로 정하는 개발진흥지구</li>
+                                  <li><span class="__text">나.</span>제37조에 따라 지정된 용도지구 중 해당 용도지구에 따른 건축물이나 그 밖의 시설의 용도·종류 및 규모 등의 제한을 지구단위계획으로 대체하기 위한 용도지구
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            국토계획법 제25조(도시·군관리계획의 입안) ②항
+                            <p>국토교통부장관(제40조에 따른 수산자원보호구역의 경우 해양수산부장관을 말한다. 이하 이 조에서 같다), 시·도지사, 시장 또는 군수는 도시·군관리계획을 입안할 때에는 대통령령으로 정하는 바에 따라 <b>도시·군관리계획도서(계획도와 계획조서를 말한다.</b> 이하 같다)와 이를 보조하는 <b>계획설명서</b>(<b>기초조사결과·재원조달방안 및 경관계획 등을 포함한다.</b> 이하 같다)를 작성하여야 한다.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="proposal03.html" class="cs-btn-line">취소</a>
+            <button type="button" class="cs-btn" onclick="lay_pop_open('#js__alert')">수정</button>
+            <!-- type submit 테스트용 butotn -->
+          </section>
+
+          <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+            <div class="laymodal-header">
+              <h2>입안 제안서 수정</h2>
+            </div>
+            <div class="laymodal-content tac">
+              <span class="pcolor-red">입안 제안서가 수정되었습니다. </span>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <a href="proposal03.html" class="cs-btn">확인</a>
+            </div>
+          </div>
+          
+
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

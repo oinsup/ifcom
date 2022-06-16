@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KLIP헬프데스크</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+    <div class="headerUtil">
+        <ul>
+            <li><p>홍길동/국토교통부</p></li>
+            <li><a href="#" title="상담내역 바로가기">상담내역</a></li>
+            <li><a href="#" title="남은시간" class="timeMark">남은 시간(29:00)</a>
+                <div class="remainTime">
+                    <ul>
+                        <li class="remain01">
+                            <p>세션 남은 시간 29:00</p>
+                            <a href="#" title="연장하기">연장</a>
+                        </li>
+                        <li class="remain02">
+                            <p>페이지 로딩 후 30분 동안 미사용 시<br />시스템 보안을 위해 자동 로그아웃 됩니다<br />
+                                <span>(페이지 이동 및 기능 이용 시 자동 연장)</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" title="로그아웃">로그아웃</a></li>
+            <li><a href="#" title="국토이용정보통합플랫폼 바로가기" class="openMark">국토이용정보통합플랫폼</a></li>
+        </ul>
+    </div>
+    <!-- gnbWrap -->
+    <div class="gnbWrap">
+        <div class="inner">
+            <div class="logo">
+                <a href="main.html" title="KLIP헬프데스크">
+                    <img src="../images/common/logo.png" alt="KLIP헬프데스크">
+                </a>
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li>
+                        <a href="#" title="">이용 지원</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용지원-매뉴얼프로그램양식.html" title="메뉴얼&프로그램&양식">메뉴얼&프로그램&양식</a></li>
+                            <li><a href="이용지원-faq.html" title="FAQ">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">이용 상담</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용상담-문의하기.html" title="문의하기">문의하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">새 소식</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="새소식-업무캘린더.html" title="문의하기" >업무 캘린더</a></li>
+                            <li><a href="새소식-공지사항.html" title="문의하기">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">헬프데스크 관리</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="헬프데스크-이용상담관리.html" title="문의하기">이용 상담 관리</a></li>
+                            <li><a href="헬프데스크-이용지원관리.html" title="문의하기">이용 지원 관리</a></li>
+                            <li><a href="헬프데스크-새소식관리-업무캘린더목록.html" title="문의하기">새 소식 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- inner -->
+    </div>
+    <!-- gnbWrap -->
+</header>
+
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">업무캘린더 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>업무 캘린더</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">새 소식</a></li>
+                                <li><a href="#">업무 캘린더</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--tabContWrap-->
+                    <div class="tabContWrap type04">
+                        <!--tabNav-->
+                        <div class="tabNav">
+                            <button type="button" class="prev" title="이전"></button>
+                            <ul class="tabList">
+                                <li>2021년 8월</li>
+                                <li class="monthNow">2021년 9월</li>
+                                <li>2021년 10월</li>
+                            </ul>
+                            <button type="button" class="next" title="다음"></button>
+                        </div>
+                        <!--//tabNav-->
+                        <!--tabCont-->
+                        <div class="tabCont active">
+                            <div class="calendar type01">
+                                <table class="calendarCont">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="calendarWeekStart">
+                                                <span title="sunday">일</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span title="monday">월</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span title="thesday">화</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span title="wednesday">수</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span title="thursday">목</span>
+                                            </th>
+                                            <th scope="col">
+                                                <span title="friday">금</span>
+                                            </th>
+                                            <th scope="col" class="calendarWeekEnd">
+                                                <span title="saturday">토</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="calendarWeekStart">
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td>
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td>
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td>
+                                                <p>1</p>
+                                            </td>
+                                            <td>
+                                                <p>2</p>
+                                            </td>
+                                            <td>
+                                                <p>3</p>
+                                            </td>
+                                            <td class="calendarWeekEnd">
+                                                <p>4</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="calendarWeekStart">
+                                                <p>5</p>
+                                            </td>
+                                            <td>
+                                                <p>6</p>
+                                                <p class="util blueStart blue">정기점검 3건</p>
+                                            </td>
+                                            <td>
+                                                <p>7</p>
+                                                <p class="util blue"></p>
+                                            </td>
+                                            <td>
+                                                <p>8</p>
+                                            </td>
+                                            <td>
+                                                <p>9</p>
+                                                <p class="util purpleStart purple">기타 3건</p>
+                                            </td>
+                                            <td>
+                                                <p>10</p>
+                                                <p class="util purple"></p>
+                                            </td>
+                                            <td class="calendarWeekEnd">
+                                                <p>11</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="calendarWeekStart">
+                                                <p>12</p>
+                                            </td>
+                                            <td>
+                                                <p>13</p>
+                                                <p class="util tomatoStart tomato">DB 3건</p>
+                                            </td>
+                                            <td>
+                                                <p>14</p>
+                                                <p class="util tomato"></p>
+                                            </td>
+                                            <td class="calendarToday">
+                                                <p>15</p>
+                                            </td>
+                                            <td>
+                                                <p>16</p>
+                                            </td>
+                                            <td>
+                                                <p>17</p>
+                                            </td>
+                                            <td class="calendarWeekEnd">
+                                                <p>18</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="calendarWeekStart">
+                                                <p>19</p>
+                                            </td>
+                                            <td>
+                                                <p>20</p>
+                                            </td>
+                                            <td>
+                                                <p>21</p>
+                                            </td>
+                                            <td>
+                                                <p>22</p>
+                                            </td>
+                                            <td>
+                                                <p>23</p>
+                                            </td>
+                                            <td>
+                                                <p>24</p>
+                                            </td>
+                                            <td  class="calendarWeekEnd">
+                                                <p>25</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="calendarWeekStart">
+                                                <p>26</p>
+                                            </td>
+                                            <td>
+                                                <p>27</p>
+                                                <p class="util yellowStart yellow">기능 1건</p>
+                                            </td>
+                                            <td>
+                                                <p>28</p>
+                                                <p class="util yellow"></p>
+                                            </td>
+                                            <td>
+                                                <p>29</p>
+                                                <p class="util yellow"></p>
+                                            </td>
+                                            <td>
+                                                <p>30</p>
+                                                <p class="util greenStart green">회의 1건</p>
+                                            </td>
+                                            <td>
+                                                <p>&nbsp;</p>
+                                            </td>
+                                            <td class="calendarWeekEnd">
+                                                <p>&nbsp;</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //calendar -->
+                            <div class="detailView">
+                                <!--table-->
+                                <div class="table type05">
+                                    <table>
+                                        <caption class="hidden">테이블</caption>
+                                        <colgroup>
+                                            <col style="width: 100px;">
+                                            <col style="width: 100px;">
+                                            <col style="width: 200px;">
+                                            <col style="width: 100px;">
+                                            <col style="width: 500px;">
+                                            <col style="width: 100px;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">시작일</th>
+                                                <th scope="row">종료일</th>
+                                                <th scope="row">대상</th>
+                                                <th scope="row">업무구분</th>
+                                                <th scope="row">내용</th>
+                                                <th scope="row">현재 상태</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="open">
+                                            <td>9/13</td>
+                                            <td>9/14</td>
+                                            <td>부산광역시 해운대구</td>
+                                            <td class="txtColor ">
+                                                <p class="tdTomato">DB</p>
+                                            </td>
+                                            <td class="txt-left tdOver">
+                                                <p class="title01 txtOverflow">[DB 구축] 부산광역시 OOO DB 구축
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates odit cupiditate earum iste alias, corporis accusantium odio veritatis animi aperiam quas id laudantium sit esse voluptatibus provident explicabo sed et?
+                                                </p>
+                                            </td>
+                                            <td>진행 중</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9/27</td>
+                                            <td>9/28</td>
+                                            <td class="">세종특별자치시 OOO구</td>
+                                            <td class="txtColor">
+                                                <p class="tdYellow">기능</p>
+                                            </td>
+                                            <td class="txt-left txtRed txtMiddleLine tdOver">
+                                                <p class="title01">[오류 개선] KLOP OOO기능 OOO하게 개선</p>
+                                            </td>
+                                            <td class="txtRed">변경</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9/30</td>
+                                            <td>9/30</td>
+                                            <td class="">전국</td>
+                                            <td class="txtColor">
+                                                <p class="tdGreen">회의</p>
+                                            </td>
+                                            <td class="txt-left tdOver"><p class="title01">[9월 월간회의] 2차 사업 대상 49개 지자체 OOO회의</p></td>
+                                            <td>예정</td>
+                                        </tr>
+                                        <tr class="dontWork">
+                                            <td colspan="6">
+                                                <p>금월에 등록된 업무내역이 없습니다.</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--//table-->
+                            </div>
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                    <!--//tabContWrap-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner">
+        <div class="footerLogo">
+            <a href="#" title="국토교통부 바로가기">
+                <img src="../images/common/logo-footer.png" alt="국토교통부">
+            </a>
+        </div>
+        <div class="footerInfo">
+
+            <ul>
+                <li>
+                    <address>
+                        (우)30103  세종특별자치시 도움6로 11
+                    </address>
+                </li>
+                <li>
+                    <p>
+                        Tel. (주간)1599-0001 (야간)044-201-4672
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Fax. (주간)044-860-9500 (야간)044-201-5700
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <li class="secu">
+                    <a href="#" title="개인정보 처리방침 바로가기">개인정보 처리방침</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 MOLIT. All Rights Reserved. 
+            </p>
+        </div>
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>입안 제안서 검토</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안서 검토</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        @@include('../include/cont_proposal02.html')
+
+        <!-- 링크 확인용 개발시 삭제 -->
+        <section style="border:2px dotted red;padding:10px;">
+          링크확인용<br>
+          <a href="proposal02.html">담당자 지정 대기</a> /
+          <a href="proposal03.html">담당자 검토</a> /
+          <a href="proposal05.html">도시계획위원회 자문</a> /
+          <a href="proposal06.html">입안 반영/반려</a>
+        </section>
+        <!-- 링크 확인요 개발시 삭제 -->
+
+        <section>
+          <h3 class="cont-hedding1">제안서 처리 프로세스</h3>
+          <!-- 201203 :: 텍스트수정 -->
+          <!-- 1222 :: 현재깜박이던거 제거 -->
+          <!-- 
+              화면 표시 방법 변경에 의한 class 사용법 변경
+              
+              현재 진행된 부분까지 class acitve 추가
+              현재 보고있는 화면에는 clas locked 추가
+           -->
+          <ul class="board-state">
+            <li class="active locked"><a href="proposal02.html">담당자 지정 대기</a></li>
+            <li>담당자 검토</li>
+            <li>도시계획위원회 자문</li>
+            <li>입안 반영/반려</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <div class="board-view-tb">
+              <table>
+                <caption>제안서 검토 프로세스</caption>
+                <thead>
+                  <tr>
+                    <th>사전협의 내역 등록일</th>
+                    <th>사전협의 번호</th>
+                    <th>제안자명</th>
+                    <th>사전협의 기관</th>
+                    <th>사전협의 부서</th>
+                    <th>담당자명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2020-10-15</td>
+                    <td>6891452234</td>
+                    <td>홍길동</td>
+                    <td>경기도 하남시</td>
+                    <td>OOO과</td>
+                    <td>박경민</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>
+                오프라인 사전 협의 내역 등록 정보입니다. 담당자 지정처리 버튼 클릭 후 해당 담당자로 지정하거나 필요시 다른 담당자로 지정하실 수 있습니다. 
+              </li>
+            </ul>
+          </section>
+  
+          <!--
+            버튼위치
+          <section class="cs-btn-set">
+            <a href="proposal01.html" class="cs-btn-line">목록</a>
+            <a href="#js__delete" jq-action="modal" class="cs-btn">삭제</a>
+            <a href="#js__charge" jq-action="modal" class="cs-btn">담당자 지정 처리</a>
+          </section> -->
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+          <a href="#js__delete" jq-action="modal" class="cs-btn">삭제</a>
+          <a href="#js__charge" jq-action="modal" class="cs-btn">담당자 지정 처리</a>
+        </section>
+
+        <!-- 201203 :: 전체적으로 변경됨 -->
+        <div id="js__charge" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>담당자 지정 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- laymodal-content -->
+            <section>
+              &lt;도시·군관리계획&gt; 입안 제안서를 검토할 담당자를 지정해 주세요. <br>
+              사전협의 담당자가 아닌 다른 담당자로 지정할 경우 ‘입안 제안 관리’ 메뉴에 대한 권한을 보유한
+              사용자만 지정 가능합니다. <br>
+              찾으시는 사용자가 조회되지 않는 경우 해당 사용자의 <span class="underline">메뉴 권한 그룹</span>을 수정한 후 시도해 주세요.
+            </section>
+            <section>
+              <div class="tar mb5"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>담당자 지정 처리</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col class="width200">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="2">
+                        <input type="radio" class="cs-radio" id="chargeState">
+                        <label for="chargeState"><span></span> 담당자 지정 완료</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="3">담당자 선택 <i class="icon-required">필수 입력</i></th>
+                      <th><input type="radio" class="cs-radio" name="charg" id="charg1" checked><label for="charg1"><span></span> 사전협의 담당자</label></th>
+                      <th><input type="radio" class="cs-radio" name="charg" id="charg2"><label for="charg2"><span></span> 다른 담당자(입안 제안 관리 권한 보유자)</label></th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="cs-gride-fixed">
+                          <span class="cs-gride-fixed-50 lh35">부서</span>
+                          <div class="cs-gride-col lh35">: ㅇㅇㅇㅇ과</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cs-gride-fixed">
+                          <label class="cs-gride-fixed-50 lh35">부서</label>
+                          <select name="" class="cs-input _h35 cs-gride-col" title="부서 선택">
+                            <option value="">부서 선택</option>
+                            <option value="">과리과</option>
+                            <option value="">기계실</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="cs-gride-fixed">
+                          <span class="cs-gride-fixed-50 lh35">담당자</span>
+                          <div class="cs-gride-col lh35">: 박경민</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cs-gride-fixed">
+                          <label class="cs-gride-fixed-50 lh35">담당자</label>
+                          <select name="" class="cs-input _h35 cs-gride-col" title="사용자 선택">
+                            <option value="">사용자 선택</option>
+                            <option value="">홍길동</option>
+                            <option value="">이순신</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">전달사항</th>
+                      <td colspan="2">
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="지정하실 담당자에게 전달사항이 있는 경우 내용을 입력해 주세요." title="전달사항"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <!-- 201203 :: 텍스트수정 -->
+                <li>
+                  입력하신 전달사항은 지정된 담당자만 확인 가능합니다.
+                </li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            <!-- <div class="cs-alert">다른 담당자로 변경할 경우 부서와 사용자를 선택해 주세요.</div> -->
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+            <!-- 201203 :: 텍스트수정 -->
+            <button type="button" class="cs-btn _wauto" onclick="chargeComplete()">변경</button>
+          </div>
+        </div>
+
+        <!-- 201203 :: 레이어팝업 추가됨 -->
+        <div id="js__delete" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>온라인 입안 제안 내역 삭제</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <p>
+                &lt;도시·군관리계획&gt; 온라인 입안 제안 내용과 무관한 내용이 등록된 경우 온라인 입안 제안 내역을 삭제하실 수 있습니다. 
+              </p>
+
+              <p>
+                삭제 후 데이터 복구가 불구하오니 신중하게 검토하고 삭제해 주세요. <br>
+                제안 내역 삭제 시 제안자에게 삭제 안내 메시지가 전송됩니다. 
+              </p>
+            </section>
+
+            <!-- laymodal-content -->
+            <sectoin>
+              <div class="tar mb5"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>검토의견</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row" rowspan="3">제안자 정보</th>
+                      <th scope="row">대상 구분</th>
+                      <td>주민(개인)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">이름</th>
+                      <td>박경민</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">휴대전화</th>
+                      <td>010-1111-2222</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="2">
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="검토의견"></textarea>
+                        </div>                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <!-- 201203 :: 텍스트수정 -->
+                <li>
+                  입력하신 검토의견은 제안자에게 문자메시지로 전송됩니다.
+                </li>
+              </ul>
+            </sectoin>
+        
+            <div class="cs-alert">제안서 검토의견을 입력해 주세요. </div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+            <!-- 201203 :: 텍스트수정 -->
+            <button type="button" class="cs-btn _wauto" onclick="lay_pop_close('#js__delete');lay_pop_open('#js__deleteComplete')">삭제</button>
+          </div>
+        </div>
+
+        <!-- 삭제완료 -->
+        <div id="js__deleteComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>온라인 입안 제안 내역 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            온라인 입안 제안 내역이 삭제되고,<br>
+            제안자에게 안내 메시지가 발송되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn _wauto" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+        
+        <!-- 완료메세지 -->
+        <div id="js__chargeComplete" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>담당자 지정 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            온라인 입안 제안서를 검토할<br>
+            담당자 지정이 완료되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn _wauto" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+        
+        <script>
+          function chargeComplete(){
+            lay_pop_close('#js__charge');
+            lay_pop_open('#js__chargeComplete');
+          }
+        </script>
+
+        <!-- 파일보기 -->
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

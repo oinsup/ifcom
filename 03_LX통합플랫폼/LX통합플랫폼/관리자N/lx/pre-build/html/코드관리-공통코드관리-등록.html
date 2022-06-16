@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+<div class="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--content-->
+        <div id="contentWrap">
+            <h2 class="hidden">본문 시작</h2>
+            <!--lnb-->
+            <div id="lnb">
+                <div class="menuName">
+                    <p class="tit">코드관리</p>
+                </div>
+                <ul class="dep1">
+                    <li class="">
+                        <p class="user"><a href="#">사용자권한관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">권한관리</a></li>
+                            <li class="li02"><a href="#">기관정보관리</a></li>
+                            <li class="li03"><a href="#">사용자관리</a></li>
+                            <li class="li04"><a href="#">로그인정책관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="menu"><a href="#">메뉴관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">프로그램관리</a></li>
+                            <li class="li02"><a href="#">메뉴관리(tree)</a></li>
+                            <li class="li03"><a href="#">메뉴관리(list)</a></li>
+                            <li class="li04"><a href="#">메뉴생성관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li class="active">
+                        <p class="code"><a href="#">코드관리</a></p>
+                        <ul class="dep2"  style="display: block">
+                            <li class="li01"><a href="#">공통분류코드관리</a></li>
+                            <li class="li02 active"><a href="#">공통코드관리</a></li>
+                            <li class="li03"><a href="#">공통상세코드관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                    <li>
+                        <p class="log"><a href="#">로그관리</a></p>
+                        <ul class="dep2">
+                            <li class="li01"><a href="#">로그관리</a></li>
+                            <li class="li02"><a href="#">웹로그관리</a></li>
+                            <li class="li03"><a href="#">접속로그관리</a></li>
+                            <li class="li04"><a href="#">개인정보조회로그관리</a></li>
+                        </ul>
+                        <div class="line"><span class="hidden">라인</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">공통코드등록 페이지 본문 시작</h2>
+                <!-- inner -->
+                <div class="inner type02">
+                    <!-- TitleArea -->
+                    <div class="titleArea">
+                        <h3 class="pageTitle">공통코드등록</h3>
+                    </div>
+                    <!-- //TitleArea -->
+                    <!-- tableArea -->
+                    <div class="tableArea">
+                        <!-- table -->
+                        <div class="table type03">
+                            <!-- jqgridtable -->
+                            <table id="list11" class="type02">
+                            </table> 
+                            <!-- //jqgridtable -->
+                        </div>
+                        <!-- //table -->
+                        <!-- btnArea -->
+                        <div class="btnArea">
+                            <button type="button" class="btn type01 white">목록</button>
+                            <button type="button" class="btn type01 red">저장</button>
+                        </div>
+                        <!-- //btnArea -->
+                    </div>
+                    <!-- //tableArea -->
+                </div>
+                <!-- //inner -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//content-->
+    </div>
+
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '연계 이력 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="infoManage11.html">정보연계 관리</a></li>
+          <li>연계 이력 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>연계 이력 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+
+        <section>
+          <h3 class="cont-hedding1">활용 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>활용 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">연계 구분</th>
+                  <td>활용</td>
+                  <th scope="row">상태</th>
+                  <td>활용 중</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 정보명</th>
+                  <td>일반지도(국문)</td>
+                  <th scope="row">활용 기간</th>
+                  <td>2021-04-01~2099-12-31</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 정보 설명</th>
+                  <td colspan="3">국토이용정보통합플랫폼에서의 필지 정보 조회, 위치 조회 시 배경지도로 사용되는 일반지도를 연계합니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 방식</th>
+                  <td>WMTS(Web Map Tile Service)</td>
+                  <th scope="row">데이터 포맷</th>
+                  <td>JSON+XML</td>
+                </tr>
+                <tr>
+                  <th scope="row">데이터 갱신</th>
+                  <td>정기(Batch Processing)</td>
+                  <th scope="row">비고</th>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">제공 서비스 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>제공 서비스 정보</caption>
+              <colgroup>
+                <col class="width50p">
+                <col class="width50p">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="col" class="tac">제공 서비스명</th>
+                  <th scope="col" class="tac">제공 기관</th>
+                </tr>
+                <tr>
+                  <td class="tac">일반지도(국문)</td>
+                  <td class="tac">국토지리정보원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <div class="board-list-wrap">
+            <h3 class="cont-hedding1">연계 이력</h3>
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>연계 이력 리스트</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width180">
+                  <col class="width200">
+                  <col>
+                  <col class="width60">
+                  <col class="width100">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">작업일시</th>
+                    <th scope="col">작업자</th>
+                    <th scope="col">작업명</th>
+                    <th scope="col">결과</th>
+                    <th scope="col">응답 코드</th>
+                    <th scope="col">응답 결과</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2021-12-14 05:00:00</td>
+                    <td>국토이용정보통합플랫폼</td>
+                    <td class="tal">수치지형도 조회</td>
+                    <td>실패</td>
+                    <td>E2000</td>
+                    <td class="tal">INVALID SERVICE KEY ERROR</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2021-12-14 05:00:00</td>
+                    <td>국토이용정보통합플랫폼</td>
+                    <td class="tal">수치지형도 조회</td>
+                    <td>성공</td>
+                    <td>E2000</td>
+                    <td class="tal">INVALID SERVICE KEY ERROR</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2021-12-14 05:00:00</td>
+                    <td>국토이용정보통합플랫폼</td>
+                    <td class="tal">수치지형도 조회</td>
+                    <td>성공</td>
+                    <td>S0000</td>
+                    <td class="tal">SUCCESS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="board-paging">
+            <a href="#" class="paging-first">처음</a>
+            <a href="#" class="paging-prev">이전</a>
+            <a href="#">1</a>
+            <strong>2</strong>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="paging-next">다음</a>
+            <a href="#" class="paging-last">마지막</a>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="infoManage11.html" class="cs-btn-line">목록</a>
+        </section>
+
+      @@include('../include/modals.html',{'items': 1})
+      <!--// content :: 내용 -->
+
+      </div>
+    </div>
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

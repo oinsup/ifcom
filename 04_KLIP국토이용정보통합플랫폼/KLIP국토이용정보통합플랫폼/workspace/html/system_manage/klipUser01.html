@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>기관 관리자 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>사용자 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="klipUser01.html" class="active">기관 사용자</a>
+        <a href="klipManager01.html">기관 관리자</a>
+        <a href="molitManager01.html">국토교통부 관리자</a> <!-- 국토교통부 관리자 접속시에만 노출-->
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <!-- 기관 관리자 접속 화면 -->
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>소속 기관의 사용자를 관리하실 수 있습니다.</li>
+            <li>‘승인 대기’탭에서 사용 승인 처리, ‘정상‘탭에서 일회용 비밀번호 전송 처리, ‘접속 불가’ 탭에서 접속 불가 해제 처리가 가능합니다. </li>
+            <li>휴면 사용자의 경우 6개월 이상 접속 이력이 없는 사용자입니다. 보직 변경 또는 퇴직 여부 확인 후 상태를 변경해 주세요.</li>
+            <li>기관 관리자는 기관 사용자의 ‘사용 권한’ 부여 및 관리가 적절한지 <span class="pcolor-red">연 2회</span> 점검해 주세요. </li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">
+            <span class="pcolor-red">경기도 하남시</span> 사용자 현황
+            <div class="__hedding-right">2021년 02월 17일 09:07 기준</div>
+          </h3>
+
+          <div class="board-view-tb _colorblue _thead-h30 _layoutauto">
+            <table>
+              <caption>경기도 하남시 사용자 현황</caption>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="5">사용 대기/가능 상태</th>
+                  <th scope="col" colspan="3">사용 불가 상태</th>
+                  <th scope="col" rowspan="2">전체</th>
+                </tr>
+                <tr>
+                  <th scope="col">승인 대기</th>
+                  <th scope="col">정상</th>
+                  <th scope="col">접속 불가</th>
+                  <th scope="col">휴면</th>
+                  <th scope="col">소계</th>
+                  <th scope="col">권한 철회</th>
+                  <th scope="col">탈퇴</th>
+                  <th scope="col">소계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b class="pcolor-red">13</b></td>
+                  <td>36</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>52</td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>54</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">소속 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input" disabled title="지역선택">
+                    <option>경기도</option>
+                  </select>
+                  <select name="" class="cs-input" disabled title="시군구 선택">
+                    <option>하남시</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">권한 신청일</strong>
+                <div class="__col-date">
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                  <div>~</div>
+                  <select class="cs-input" title="년도선택">
+                    <option value="#">2020</option>
+                  </select>
+                  <select class="cs-input" title="월선택">
+                    <option value="#">12</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="이름, 아이디 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          @@include('../include/cont_klipUser01_01_nav.html',{'tab': 1})
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">권한 신청일 <i class="sort-desc"></i></a>
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">이름 </a>
+            <a href="#">아이디</a>
+            <a href="#">상태</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>기관 사용자 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width200">
+                <col>
+                <col class="width80">
+                <col class="width160">
+                <col class="width160">
+                <col class="width100">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">권한 신청일</th>
+                  <th scope="col">소속 기관</th>
+                  <th scope="col">소속 부서</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">아이디</th>
+                  <th scope="col">부서 연락처</th>
+                  <th scope="col">상태 변경일</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>31</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipUser02.html">dfdfdf1234</a></td>
+                  <td> 031-790-6114(12)</td>
+                  <td>-</td>
+                  <td>승인 대기</td>
+                </tr>
+                @@for(var i = 0; i < 9; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>경기도 하남시</td>
+                  <td>OOOO</td>
+                  <td>홍길동</td>
+                  <td class="tal"><a href="klipUser02.html">dfdfdf1234</a></td>
+                  <td> 031-790-6114(12)</td>
+                  <td>2020-08-15</td>
+                  <td>승인 대기</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">
+                    사용 권한을 신청한 사용자가 없습니다.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            아이디를 클릭하시면 해당 사용자의 상세 정보 확인 및 상태 관리가 가능합니다.
+          </li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

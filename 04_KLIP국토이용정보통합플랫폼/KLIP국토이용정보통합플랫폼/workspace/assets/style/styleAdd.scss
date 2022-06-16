@@ -1,0 +1,124 @@
+.board-searchbox-opts .__tit.v2{
+	width: 110px;
+	+div{
+		width: calc(100% - 110px);
+	}
+}
+input.w140,
+select.w140{
+	width: 140px !important;
+}
+input.w150,
+select.w150{
+	width: 150px !important;
+}
+input.w160,
+select.w160{
+	width: 160px !important;
+}
+
+.__col-multi .cs-input{width: calc(33% - 10px);font-size: 12px;}
+.cs-btn-set{position: relative;
+	a.-download{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+.frm-insert-t3.v2 > *:nth-child(2){
+	width: calc(50% - 55px);
+}
+.rlf{
+	overflow: hidden;
+	
+	.l,
+	.r{
+		display: inline-block;
+	}
+	.l{
+		float: left;
+		line-height: 40px;
+		height: 40px;
+	}
+	.r{
+		float: right;
+	}
+}
+
+.board-top-button{
+	text-align: right;
+    height: 0;
+    position: relative;
+    top: -50px;
+}
+#js__facility{width: 1000px;}
+#js__history{width: 1000px;}
+
+.color_red{color:#ff0000;}
+.js__filename.v2{
+	    width: calc(100% - 170px);
+}
+.pos_r{
+	position: relative;
+}
+.notic_txt{
+	position: absolute;
+	right: 30px;
+	top: 0;
+	margin: 0;
+	color: #bd3500;
+}
+
+.headding-select{
+	font-size: 16px;
+	margin-left: 10px;
+}
+.dirspan{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 20px;
+	border-radius:3px;
+}
+
+.board-searchbox-opts.__half{
+	>div{
+		width: 50%;
+	}
+}
+.board-searchbox{
+	.board-searchbox-opts{
+		.__col-search{
+			select.cs-input{
+				width: 100px;
+			}
+			input[type="text"].cs-input{
+				width: 370px;
+			}
+		}
+	}
+}
+.cs-datepicker-set{
+	.cs-input-date.width230{
+		width: 230px;
+	}
+}
+
+
+.board-searchbox-opts.col__strange{
+	>div{
+		&:nth-child(1){
+			width: 30%;
+		}
+		&:nth-child(2){
+			width: 40%;
+		}
+		&:nth-child(3){
+			width: 30%;
+		}
+		.js__datepicker{
+			width: 174px;
+		}
+	}
+}

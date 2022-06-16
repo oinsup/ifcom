@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>도시·군관리계획 입안</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 입안</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+        @@include('../include/cont_urbanPlan05.html')
+        
+        <section>
+          <h3 class="cont-hedding1">입안 프로세스</h3>
+          <!-- 
+              현재 진행된 부분까지 class acitve 추가
+              현재 보고있는 화면에는 clas locked 추가
+           -->
+           <ul class="board-state _fullwidth">
+            <li class="active"><a href="urbanPlan05.html">주민 의견 청취</a></li>
+            <li class="active locked"><a href="urbanPlan06.html">관련 부서 협의</a></li>
+            <li>지방의회 의견 청취</li>
+            <li>시·군·구 위원회 심의</li>
+            <li>도 승인</li>
+            <li>결정</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width250">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">담당자 의견</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">부서 협의 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">부서 협의 미진행</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">부서 협의 진행(1차) <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">관련 부서 협의 계획</h2>
+            <div class="data-extra-btn">
+              <a href="#js__consultationPlanModify" class="cs-btn2-gray cs-btn-default" jq-action="modal">협의 계획 수정</a>
+            </div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>관련 부서 협의 계획</caption>
+                <colgroup>
+                  <col class="width50">
+                  <col class="width120">
+                  <col>
+                  <col class="width120">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="3" class="tac">1차</th>
+                    <th scope="row">기관/부서</th>
+                    <td>기관명 출력/부서명 출력</td>
+                    <th scope="row">협의 기간</th>
+                    <td>2020-01-01~2020-01-12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">승인 결재</th>
+                    <td colspan="3">담당자 확인 (2020-10-18 13:00)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="3" class="tac">2차</th>
+                    <th scope="row">기관/부서</th>
+                    <td>기관명 출력/부서명 출력</td>
+                    <th scope="row">협의 기간</th>
+                    <td>2020-01-01~2020-01-12</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">승인 결재</th>
+                    <td colspan="3" class="_p0">
+                      <div class="board-view-tb _tac">
+                        <table>
+                          <caption>승인 결재</caption>
+                          <colgroup>
+                            <col>
+                            <col class="width200">
+                            <col class="width200">
+                            <col style="width:174px">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">소속 기관/부서</th>
+                              <th scope="col">결재자</th>
+                              <th scope="col">결재 상태</th>
+                              <th scope="col">결재일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>XXXXXXXXXXXXXX/XXXX</td>
+                              <td>홍길동 주무관</td>
+                              <td>상신</td>
+                              <td>XXXX-XX-XX</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>  
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>결재자 정보는 온-나라시스템의 결과 값으로 제공됩니다. 기안문의 재전송 또는 재기안은 <span class="underline">입안 관리 &gt; 전자결재 내역 관리</span> 메뉴에서 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">관련 부서 협의 결과</h2>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>관련 부서 협의 결과</caption>
+                <colgroup>
+                  <col class="width50">
+                  <col class="width120">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="2" class="tac">1차</th>
+                    <th scope="row">협의 결과</th>
+                    <td>
+                      <span class="tcolor-gray2">결과 처리 전 입니다.</span>
+                      결과 입력된 경우 입력된 결과가 출력됩니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 결과서</th>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="2" class="tac">2차</th>
+                    <th scope="row">협의 결과</th>
+                    <td>
+                      <span class="tcolor-gray2">결과 처리 전 입니다.</span>
+                      결과 입력된 경우 입력된 결과가 출력됩니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 결과서</th>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong class="tcolor-gray2">등록된 파일이 없습니다. 협의 결과서를 등록해 주세요.</strong>
+                          <!-- <strong>등록된 계획안 파일명이 보입니다.pdf</strong> -->
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="urbanPlan01.html" class="cs-btn-line">목록</a>
+          <a href="#js__consultation" jq-action="modal" class="cs-btn">협의 여부 처리</a>
+          <a href="#js__consultation2st" jq-action="modal" class="cs-btn">2차 협의 처리</a>
+          <a href="#js__consultationEnd" jq-action="modal" class="cs-btn">협의 완료 처리</a>
+          <a href="#js__consultationModify" jq-action="modal" class="cs-btn">협의 결과서 수정</a>
+        </section>
+      </div>
+
+      <!-- content 팝업들 -->
+      @@include('../include/cont_urbanPlan05_modals.html')
+      <!--// content 팝업들 -->
+
+      <!-- 입안 프로세스 팝업들 -->
+      <!-- 관련 부서/부처 협의 여부 처리 -->
+      <div id="js__consultation" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>관련 부서/부처 협의 여부 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              본 계획을 관련 부서/부처 협의를 진행할 것인지 지정해 주세요.<br>
+              협의를 진행하실 경우 협의할 내용과 자료를 입력해 주세요. 
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>관련 부서/부처 협의 여부 처리</caption>
+                <colgroup>
+                  <col class="width40">
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" colspan="2">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState11" onclick="toggleElm('consult','','none');lay_pop_width('#js__consultation',700)"><label for="opinionState11"><span></span> 관련 부서/부처 협의 미진행</label>
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState12" onclick="toggleElm('consult','1','table-row');lay_pop_width('#js__consultation',1200)"><label for="opinionState12"><span></span> 관련 부서/부처 협의 진행</label>
+                    </td>
+                  </tr>
+                  <!-- 협의 진행 -->
+                  <tr data-group="consult" data-idx="1" style="display:none">
+                    <th rowspan="3" class="tac" scope="row">협의<br><br> 계획</th>
+                    <th scope="row">협의 기관 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 기관명 입력" title="협의 기관">
+                    </td>
+                    <th scope="row">협의 부서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 부서명 입력" title="협의 부서">
+                    </td>
+                  </tr>
+                  <tr data-group="consult" data-idx="1" style="display:none">
+                    <th scope="row">협의 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-group="consult" data-idx="1" style="display:none">
+                    <th scope="row">도시관리 계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder=" 계획 내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //협의 진행 -->
+                  <tr>
+                    <th scope="row" colspan="2">담당자 의견</th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="협의 진행, 미진행으로 선택한 사유를 입력해 주세요." title="담당자 의견"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState1"><label for="approvalState1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState2"><label for="approvalState2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__consultation');lay_pop_open('#js__consultationComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 관련 부서/부처 협의 여부 처리 완료-->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__consultationComplete',
+        'title': '관련 부서/부처 협의 여부 처리',
+        'cont': '<span class="pcolor-red">관련 부서/부처 협의 진행</span> 상태로 변경되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 0105 :: 협의 계획 수정 레이어 펍업 추가 -->
+      <!-- 협의 계획 수정 -->
+      <div id="js__consultationPlanModify" class="laymodal width1200">
+        <div class="laymodal-header">
+          <h2>관련 부서/부처 협의 계획 수정</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              관련 부서/부처 협의 계획을 수정할 수 있습니다.<br>
+              재기안은 <b class="underline">입안 관리 &gt; 전자결재 내역 관리</b> 메뉴에서 가능합니다.
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>관련 부서/부처 협의 여부 처리</caption>
+                <colgroup>
+                  <col class="width50">
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <!-- 1차 -->
+                  <tr>
+                    <th rowspan="3" class="tac" scope="row">1차</th>
+                    <th scope="row">협의 기관 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 기관명 입력" title="협의 기관">
+                    </td>
+                    <th scope="row">협의 부서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 부서명 입력" title="협의 부서">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="modifyfile1" placeholder=" 계획 내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="modifyfile1" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- // 1차 -->
+                  <tr>
+                    <th rowspan="3" class="tac" scope="row">2차</th>
+                    <th scope="row">협의 기관 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 기관명 입력" title="협의 기관">
+                    </td>
+                    <th scope="row">협의 부서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 부서명 입력" title="협의 부서">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="modifyfile2" placeholder=" 계획 내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="modifyfile2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">n차 협의 기관명을 입력해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__consultationPlanModify');lay_pop_open('#js__consultationPlanModifyComplete')">수정</button>
+        </div>
+      </div>
+
+      @@include('../include/modal_alert.html',{
+        'id': 'js__consultationPlanModifyComplete',
+        'title': '관련 부서/부처 협의 계획 수정',
+        'cont': '관련 부서/부처 협의 계획이 수정되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!--
+         관련 부서/부처 협의 처리(2차)
+         3차동일  2차 -> 3차로만 변경됨
+       -->
+      <div id="js__consultation2st" class="laymodal width1200">
+        <div class="laymodal-header">
+          <h2>관련 부서/부처 협의 처리(2차)</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              <!-- 3차일 경우 3차 협의를 진행하실..... -->
+              2차 협의를 진행하실 경우 협의 기관, 기간 정보와 자료를 입력해 주세요. 
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>관련 부서/부처 협의 여부 처리</caption>
+                <colgroup>
+                  <col class="width40">
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" colspan="2">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="opinionstate2st" id="opinionState1"><label for="opinionState1"><span></span> 부서/부처 협의 진행(2차)</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th rowspan="3" class="tac" scope="row">협의<br><br> 계획</th>
+                    <th scope="row">협의 기관 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 기관명 입력" title="협의 기관">
+                    </td>
+                    <th scope="row">협의 부서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="text" class="cs-input width100p" placeholder="협의 부서명 입력" title="협의 부서">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리 계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file2" placeholder=" 계획 내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2">담당자 의견</th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <!-- 3차일 경우 3차 협의 사유를.... -->
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="2차 협의 사유를 입력해 주세요." title="담당자 의견"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState11"><label for="approvalState11"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState12"><label for="approvalState12"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__consultation2st');lay_pop_open('#js__consultation2stComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 관련 부서/부처 협의 처리(2차) 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__consultation2stComplete',
+        'title': '관련 부서/부처 협의 처리(2차)',
+        'cont': '<span class="pcolor-red">부서/부처 협의 진행(2차)</span> 상태로 변경되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 협의 완료 처리 -->
+      <div id="js__consultationEnd" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>관련 부서/부처 협의 완료 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              관련 부서/부처 협의가 완료된 경우 협의 결과와 결과서를 등록해 주세요. 
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>관련 부서/부처 협의 결과 처리</caption>
+                <colgroup>
+                  <col class="width120">
+                  <col class="width50">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="2">
+                      <input type="radio" class="cs-radio" name="consultend" id="consultend"><label for="consultend"><span></span> 부서/부처 협의 완료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 결과 <i class="icon-required">필수 입력</i></th>
+                    <td>1차</td>
+                    <td>
+                      <div class="cs-counter-wrap">
+                      	<textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="협의 결과 내용을 입력해 주세요." title="협의 결과"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">협의 결과서</th>
+                    <td>1차</td>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="filer1" placeholder="결과서를 선택해 주세요(.pdf만 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="filer1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="2" class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="consultendstate" id="consultendstate1"><label for="consultendstate1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="consultendstate" id="consultendstate2"><label for="consultendstate2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            <div class="cs-alert">협의 결과를 선택해 주세요.</div>
+            <div class="cs-alert">결재 구분을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__consultationEnd');lay_pop_open('#js__consultationEndComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 협의 완료 처리 확인-->
+
+      @@include('../include/modal_alert.html',{
+        'id': 'js__consultationEndComplete',
+        'title': '관련 부서/부처 협의 완료 처리',
+        'cont': '<span class="pcolor-red">관련 부서/부처 협의 완료</span> 상태로 변경되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 협의  결과서 수정 -->
+      <div id="js__consultationModify" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>관련 부서/부처 협의 결과서 수정</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              등록하신 협의 결과서를 수정할 수 있습니다.
+            </div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>관련 부서/부처 협의 결과 처리</caption>
+                <colgroup>
+                  <col class="width120">
+                  <col class="width50">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" rowspan="3">협의 결과서</th>
+                    <td class="tac">1차</td>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file11" placeholder="결과서 파일명 출력.pdf">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                          <label for="file11" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">2차</td>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file12" placeholder="결과서 파일명 출력.pdf">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                          <label for="file12" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tac">3차</td>
+                    <td>
+                      <span class="tcolor-gray2">등록된 파일이 없습니다.</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__consultationModify');lay_pop_open('#js__consultationModifyComplete')">수정</button>
+        </div>
+      </div>
+
+      @@include('../include/modal_alert.html',{
+        'id': 'js__consultationModifyComplete',
+        'title': '관련 부서/부처 협의 결과서 수정 ',
+        'cont': '협의 결과서가 수정되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      
+      <!--// 입안 프로세스 팝업들 -->
+
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

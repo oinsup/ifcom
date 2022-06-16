@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/aos/aos.css">
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+    <script type="text/javascript" src="../lib/aos/aos.js"></script>
+    <script src="../js/ui.js"></script>
+
+    <title>EGIS</title>
+</head>
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            <!--logo-->
+<h1 class="logo">
+    <a href="../html/main.html" title="EGIS"></a>
+</h1>
+<!--//logo-->
+<!--gnb-->
+<div id="gnb">
+    <ul class="dep1">
+        <li>
+            <a href="#" title="플랫폼">플랫폼</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a>
+                </li>
+                <li>
+                    <a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="솔루션">솔루션</a>
+            <ul class="dep2 type02">
+                <li>
+                    <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="제품군">제품군</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                </li>
+                <li>
+                    <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                </li>
+                <li>
+                    <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="교육">교육</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                </li>
+                <li>
+                    <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="../html/지원.html" title="지원">지원</a>
+        </li>
+        <li>
+            <a href="#" title="커뮤니티">커뮤니티</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-News.html" title="News">News</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="회사소개">회사소개</a>
+            <ul class="dep2 type03">
+                <li>
+                    <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                </li>
+            </ul>
+        </li>
+        <li class="arrow">
+            <a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a>
+        </li>
+    </ul>
+    <div class="mobile">
+        <ul class="dep1">
+            <li>
+                <a href="#" title="플랫폼">플랫폼</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a>
+                    </li>
+                    <li>
+                        <a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="솔루션">솔루션</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="제품군">제품군</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                    </li>
+                    <li>
+                        <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                    </li>
+                    <li>
+                        <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="교육">교육</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                    </li>
+                    <li>
+                        <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="noDepth">
+                <a href="../html/지원.html" title="지원">지원</a>
+            </li>
+            <li>
+                <a href="#" title="커뮤니티">커뮤니티</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-News.html" title="News">News</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="회사소개">회사소개</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="noDepth arrow">
+                <a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--//gnb-->
+<!--lang-->
+<div class="lang">
+    <ul>
+        <li>
+            <a href="#" class="active" title="KR">KR</a>
+        </li>
+        <li>
+            <a href="#" title="EN">EN</a>
+        </li>
+        <li>
+            <a href="#" title="Admin">Admin</a>
+        </li>
+    </ul>
+</div>
+<!--//lang-->
+<button type="button" class="btnSitemap">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="hidden">사이트맵</span>
+</button>
+<!--sitemap-->
+<div class="sitemap web">
+    <!--inner-->
+    <div class="inner">
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/플랫폼-디지털트윈.html" title="PLATFORM">PLATFORM</a></div>
+                    <ul>
+                        <li><a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a></li>
+                        <li><a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/지원.html" title="CONTACT US">CONTACT US</a></div>
+                    <ul>
+                        <li><a href="../html/지원.html" title="지원">지원</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/솔루션-재난안전.html" title="SOLUTION">SOLUTION</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/커뮤니티-공지사항.html" title="COMMUNITY">COMMUNITY</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-News.html" title="News">News</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/제품군-xdpro.html" title="PRODUCT LINE">PRODUCT LINE</a></div>
+                    <ul class="dep2">
+                        <li>
+                            <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                        </li>
+                        <li>
+                            <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                        </li>
+                        <li>
+                            <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/회사소개-회사소개및비전.html" title="COMPANY">COMPANY</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/교육-개발자지원사이트.html" title="EDUCATION">EDUCATION</a></div>
+                    <ul class="dep2">
+                        <li>
+                            <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                        </li>
+                        <li>
+                            <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="#" title="MARKET PLACE">MARKET PLACE</a></div>
+                    <ul>
+                        <li><a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+    </div>
+    <!--//inner-->
+
+</div>
+<!--//sitemap-->
+<span class="bg"></span>
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="회사소개">회사소개</a>
+                            </li>
+                            <li>
+                                <a href="#" title="CI">CI</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea flex ac sb">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200">EGIS <span class="colorType blue">CI</span></h1>
+                        <div class="btnArea">
+                            <button class="btnDown"><span>원본(ai) 다운로드</span></button>
+                            <button class="btnDown"><span>사본(png) 다운로드</span></button>
+                        </div>
+                    </div>
+                    <!--//titArea-->
+                    <!--ciArea-->
+                    <div class="ciArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="lineBox">
+                            <img src="../images/common/logo-ci-large.svg" alt="EGIS" />
+                        </div>
+                        <div class="flex sb">
+                            <div class="box blueBox">
+                                <img src="../images/common/logo-ci-medium.svg" alt="EGIS" />
+                            </div>
+                            <div class="box greyBox">
+                                <img src="../images/common/logo-ci-medium.svg" alt="EGIS" />
+                            </div>
+                            <div class="box blackBox">
+                                <img src="../images/common/logo-ci-medium.svg" alt="EGIS" />
+                            </div>
+                        </div>
+                        <div class="bgBox">
+                            <div class="motionBox" data-aos="fade" data-aos-delay="0">
+                                <div class="item">
+                                    <img class="motion motion01" src="../images/img/img-ci-01.png" alt="identity" />
+                                    <div class="flex">
+                                        <img class="motion motion02" src="../images/img/img-ci-02.png" alt="identity">
+                                        <img class="motion motion03" src="../images/img/img-ci-03.png" alt="identity">
+                                    </div>
+                                    <div class="motion line"></div>
+                                </div>
+                                <div class="item">
+                                    <img class="motion motion04" src="../images/img/img-ci-04.png" alt="motive">
+                                </div>
+                            </div>
+                            <img class="middle" src="../images/common/img-identity-motion.png" alt="IDENTITY, MOTIVE" />
+                        </div>
+                    </div>
+                    <!--//ciArea-->
+
+                    <!--abilityArea-->
+                    <div class="abilityArea">
+                        <div class="group">
+                            <strong class="tit" data-aos="fade" data-aos-duration="1000">Concept</strong>
+                            <div class="flex" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                                <p class="ci">'가상과 현실세계를 연결하는 고리'를 형상화한 로고이다.<br />
+                                    가상공간과 현실공간을 큐브로 표현하고, 두 공간을 하나로 연결하는 '고리'의 느낌을 주어 완전한 디지털트윈 시장을 선도하는 EGIS의 의지와 철학을
+                                    표현하였다. 로고는 가독성 높은 고딕체에 곡선으로 유연한 느낌을 주어 완전한 기술을 추구하는 플랫폼기업 EGIS의 이미지를 상징성을 담아 형상화하였다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <strong class="tit" data-aos="fade" data-aos-duration="1000">CI Color</strong>
+                            <div class="flex column" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                                <p class="ci">안전과 신뢰의 색상인 블루계열을 사용하여, 고객과 고객의 만족을 먼저 생각하는 회사의 마인드를 부각시켰다.</p>
+                                <div class="ciColor">
+                                    <div>
+                                        <img src="../images/common/ico-ci-skyblue.svg" alt="하늘색" />
+                                        <div class="colorCode">
+                                            <strong class="hex">#209FC7</strong>
+                                            <p><strong>RGB</strong><span>32</span><span>159</span><span>199</span></p>
+                                            <p><strong>CMYK</strong><span>75</span><span>25</span><span>18</span><span>0</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../images/common/ico-ci-blue.svg" alt="파란색" />
+                                        <div class="colorCode">
+                                            <strong class="hex">#2371B0</strong>
+                                            <p><strong>RGB</strong><span>35</span><span>113</span><span>176</span></p>
+                                            <p><strong>CMYK</strong><span>84</span><span>53</span><span>14</span><span>0</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../images/common/ico-ci-black.svg" alt="짙은회색" />
+                                        <div class="colorCode">
+                                            <strong class="hex">#404042</strong>
+                                            <p><strong>RGB</strong><span>64</span><span>64</span><span>66</span></p>
+                                            <p><strong>CMYK</strong><span>77</span><span>71</span><span>67</span><span>33</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--abilityArea-->
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        <footer id="footer" class="black">
+    <!-- inner -->
+    <div class="inner">
+        <p class="logoArea">
+            <img src="../images/common/footer-logo.png" alt="EGIS">
+        </p>
+        <p class="nameArea">EGIS</p>
+        <!-- infoContainer -->
+        <div class="infoContainer">
+            <!-- infoBox -->
+            <div class="infoBox">
+                <div class="row">
+                    <p>사업자등록번호</p>
+                    <span>503-81-49156</span>
+                </div>
+                <div class="row">
+                    <p>대표이사</p>
+                    <span>김성호</span>
+                </div>
+                <div class="row">
+                    <p>이메일</p>
+                    <a href="mailto:egis@egiskorea.com">egis@egiskorea.com</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+
+            <!-- infoBox -->
+            <div class="infoBox">
+                <span class="infoTit">대구</span>
+                <div class="tel">
+                    <address>대구광역시 수성구 알파시티1로 31길 2, 4층</address>
+                    <a href="tel:053.476.2395">Tell 053.476.2395</a>
+                    <a href="tel:053.474.2396">Fax 053.474.2396</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+            <!-- infoBox -->
+            <div class="infoBox">
+                <span class="infoTit">연구소</span>
+                <div class="tel">
+                    <address>서울특별시 구로구 디지털로26길 111 (구로동, 제이앤케이디지털타워) 1501호</address>
+                    <a href="tel:02.576.2395">Tell 02.576.2395</a>
+                    <a href="tel:02.576.2396">Fax 02.576.2396</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+
+        </div>
+        <!-- //infoContainer -->
+        <p class="copy">Copyright 2022 EGIS Inc. All Rights Reserved</p>
+    </div>
+    <!-- //inner -->
+</footer>
+        <!--//footer-->
+    </div>
+    <script>
+        $(window).resize(function () {
+            if (window.innerWidth > 768) {
+                $('html,body').on({
+                    "scroll": function () {
+                        var ciAreaffset = $('.ciArea').offset();
+                        if ($(window).scrollTop() > ciAreaffset.top - 300) {
+                            $(this).find('.motionBox').addClass('active');
+                        } else {
+                            $(this).find('.motionBox').removeClass('active');
+                        }
+                    }
+                })
+            } else {
+                setTimeout(function () {
+                    $('.motionBox').addClass('active');
+                }, 100);
+            }
+        }).resize();
+    </script>
+</body>
+
+</html>

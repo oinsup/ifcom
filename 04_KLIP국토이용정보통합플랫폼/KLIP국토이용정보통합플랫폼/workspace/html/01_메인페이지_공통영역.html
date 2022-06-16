@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>KLIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="@@webRoot/common/css/common.css">
+  <script src="@@webRoot/common/libjs/jquery-1.12.4.min.js"></script>
+
+  <style>
+    body{font-size: 14px;min-width:1200px;padding:20px;}
+    tbody th, 
+    tbody td{color:#888888}
+
+    .cs-table{font-size: 13px;}
+    
+    .cs-table th, .cs-table td{padding:10px 5px;height:auto;vertical-align: middle;}
+    .cs-table th{text-align: center;}
+    .cs-table tbody tr:hover{box-shadow: 0px 2px 5px rgba(0,0,0,.4);transition:all .3s;}
+    .cs-table tbody tr:hover th,
+    .cs-table tbody tr:hover td{transition:background .3s;}
+    .cs-table tbody tr:hover th{background:#0031d1;color: #fff;border-bottom:2px solid #0031d1;}
+    .cs-table tbody tr:hover td{background:#f7f7f7;border-bottom:2px solid #0031d1;}
+
+    .cs-table tbody th{text-align: left;}
+
+
+    .cs-table tbody tr td:nth-child(5){font-weight: bold;color: #000;}
+
+    table a{color:#000;font-weight: bold;text-decoration: none;display: inline-block;}
+
+    .code{border:1px solid #cececd;padding:10px;display: block;width: 100%;box-sizing: border-box;}
+
+    .body{max-width:1400px;margin:0 auto;}
+
+    .fileName{display: block;margin-top: 5px;font-size:13px;font-style:italic;padding-left: 5px;}
+
+
+    .working{color: red;}
+    .working a{color: red;}
+
+    a del{color:#888888}
+  </style>
+
+  <script>
+    jQuery(function($){
+      var links = $('.cs-table a');
+      links.each(function(){
+        var link = $(this);
+        var fileName = link.attr('href').split('/');
+        console.log(fileName);
+        fileName = fileName[fileName.length - 1];
+
+        fileName = link.attr('href');
+
+        var elm = '<div class="fileName">'+ fileName +'</div>';
+        link.after(elm);
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="body">
+    @@include('./include/mapNav.html',{'tab': 1})
+    
+    <h1>메인 페이지/공통 영역</h1>
+    <div class="cs-table">
+      <table style="width:100%;table-layout: fixed;">
+        <colgroup>
+          <col style="width:170px;">
+          <col style="width:270px;">
+          <col>
+          <col>
+          <col style="width:200px;">
+          <col style="width:100px;">
+          <col style="width:100px;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1depth</th>
+            <th>2depth</th>
+            <th>3depth</th>
+            <th>4depth</th>
+            <th>PAGE ID</th>
+            <th>완료일</th>
+            <th>수정일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Top 메뉴구성</th>
+            <td><a href="@@webRoot/myinfo01.html">사용자 정보 수정</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_Myinfo01</td>
+            <td>20-11-26</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@webRoot/myinfo02.html">국토이용정보통합플랫폼 탈퇴</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_Myinfo02</td>
+            <td>20-11-26</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

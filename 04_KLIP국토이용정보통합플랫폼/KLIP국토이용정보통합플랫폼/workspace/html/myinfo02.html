@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html',{'webTitle': '사용자 정보 수정', 'webPath': '.'})
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html',{'webPath': '.'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li>국토이용정보통합플랫폼 탈퇴</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>국토이용정보통합플랫폼 탈퇴</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+        <section>
+          <h3 class="cont-hedding1">동일 계정으로 재가입 불가</h3>
+          <div class="cs-box">
+            <ul class="cs-list-dot">
+              <li>탈퇴할 경우 사용하고 계신 아이디(<b class="pcolor-red">erjwoijrlijij0</b>)로 재가입이 불가능합니다.</li>
+              <li>단, 타 기관으로 발령받은 경우 사용자가 직접 탈퇴 시 동일한 계정으로 재가입이 불가하므로, ‘기관 관리자’에게 소속 기관 변경 요청을 해주세요.  </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">탈퇴 가능 시점</h3>
+          <div class="board-view-tb _noround">
+            <table>
+              <caption>탈퇴 가능 시점</caption>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    입안 제안 검토, 입안 , 실시계획작성<br>
+                    진행 중인 내역 없는 경우
+                  </th>
+                  <th scope="col">
+                    입안 제안 검토, 입안, 실시계획작성<br>
+                    진행 중인 내역 있는 경우
+                  </th>
+                  <th scope="col">그 외</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>즉시 탈퇴 가능</td>
+                  <td class="pcolor-red">탈퇴 불가(업무 승계 처리 필요)</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>진행중인 업무가 있는 경우 ‘기관 관리자’에게 요청하여 업무 승계 처리 후 탈퇴가 가능합니다. </li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">사용자 정보 및 개인 이용 기록 삭제</h3>
+          <p>
+            하기 정보는 탈퇴 시 모두 즉각 삭제되며 삭제된 데이터는 복구되지 않습니다.  
+          </p>
+          <div class="board-view-tb _noround">
+            <table>
+              <caption>계정정보</caption>
+              <thead>
+                <tr>
+                  <th scope="col">사용자 정보</th>
+                  <th scope="col">자료실 등록 게시물</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tal">
+                    <ul class="cs-list-dot">
+                      <li>사용자명 일부 (삭제 후 ‘홍*동’과 같이 성과 이름 끝자만 남겨짐)</li>
+                      <li>직위, 담당 업무, 소속 그룹 정보</li>
+                      <li>휴대전화, 이메일</li>
+                      <li>온-나라시스템 ID , 새올행정시스템 ID</li>
+                    </ul>
+                  </td>
+                  <td class="tal">
+                    <ul class="cs-list-dot">
+                      <li>자료실 &gt; 자료 게시판 &gt; 업무 참조 자료</li>
+                      <li>자료실 &gt; 자료 게시판 &gt; 상위 계획 자료</li>
+                      <li>자료실 &gt; 자료 게시판 &gt; 비정형 자료</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section>
+          
+          <div class="agg-header">
+            <h3 class="cont-hedding1">탈퇴 동의</h3>
+            <input type="checkbox" id="agreement" class="cs-checkbox"><label for="agreement"><span></span> 동의</label>
+          </div>
+          
+          <div class="cs-box">
+            <ul class="cs-list-dot">
+              <li>탈퇴 후에는 사용하던 아이디 (<b class="pcolor-red">erjwoijrlijij0</b>)로는 다시 가입할 수 없으며, 아이디와 삭제된 데이터는 복구할 수 없습니다. </li>
+            </ul>
+          </div>
+          <p>위 안내 사항을 모두 확인하였으며, 이에 동의합니다.</p>
+        </section>
+
+
+
+        <section class="cs-btn-set">
+          <a href="myinfo01.html" class="cs-btn-line">탈퇴 취소</a>
+          <a href="#js__drop" jq-action="modal" class="cs-btn">탈퇴</a>
+        </section>
+
+        <div id="js__drop" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>국토이용정보통합플랫폼 탈퇴</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              본인 확인을 위하여 비밀번호를 입력해 주세요.
+            </p>
+
+            <input type="text" class="cs-input width300 _h35" placeholder="비밀번호 입력" title="비밀번호 입력">
+
+            <div class="cs-alert">현재 비밀번호를 입력해 주세요.</div>
+            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn-line" jq-action="closeModal">취소</button>
+            <a href="#js__alert" onClick="lay_pop_close();lay_pop_open('#js__alert')" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>국토이용정보통합플랫폼 탈퇴</h2>
+          </div>
+          <div class="laymodal-content tac">
+            탈퇴 시 삭제된 내용은 복구할 수 없습니다.<br>
+            탈퇴하시겠습니까? 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn-line">취소</button>
+            <button onclick="lay_pop_close();lay_pop_open('#js__alert2')" class="cs-btn">확인</button>
+          </div>
+        </div>
+
+        <div id="js__alert2" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>국토이용정보통합플랫폼 탈퇴</h2>
+          </div>
+          <div class="laymodal-content tac">
+            국토이용정보통합플랫폼 탈퇴가 완료되었습니다.<br>
+            그 동안 이용해 주셔서 감사합니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="login.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg id="icon3" xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+  <rect id="사각형_33" data-name="사각형 33" width="74" height="74" fill="none"/>
+  <g id="그룹_1174" data-name="그룹 1174" transform="translate(-269 -285)">
+    <path id="패스_1303" data-name="패스 1303" d="M297.039,320h14.526l11.146,27.775h-37.4Z" transform="translate(1.75 5.263)" fill="#72bf44"/>
+    <g id="그룹_1173" data-name="그룹 1173" transform="translate(277 295)">
+      <path id="패스_1304" data-name="패스 1304" d="M310.3,323.587a.945.945,0,0,0,1.281-.38,14.5,14.5,0,1,0-25.5,0,.944.944,0,1,0,1.66-.9,12.612,12.612,0,1,1,22.184,0A.945.945,0,0,0,310.3,323.587Z" transform="translate(-269.807 -289.301)" fill="#fff"/>
+      <rect id="사각형_81" data-name="사각형 81" width="24" height="2.4" transform="translate(17 54)" fill="#fff"/>
+      <rect id="사각형_82" data-name="사각형 82" width="30.455" height="2.421" transform="translate(8.914 57.779) rotate(-67.091)" fill="#fff"/>
+      <rect id="사각형_83" data-name="사각형 83" width="2.421" height="30.455" transform="translate(35.105 30.668) rotate(-22.909)" fill="#fff"/>
+      <rect id="사각형_84" data-name="사각형 84" width="17" height="2.4" transform="translate(21 47)" fill="#fff"/>
+      <rect id="사각형_85" data-name="사각형 85" width="12" height="2.4" transform="translate(23 39)" fill="#fff"/>
+      <rect id="사각형_86" data-name="사각형 86" width="8" height="2.4" transform="translate(25 32)" fill="#fff"/>
+      <path id="패스_1305" data-name="패스 1305" d="M332.684,295H277v48.42h9.684V341h-7.263V297.421h53.262V341H325.42v2.421H335.1V295Z" transform="translate(-277 -295)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

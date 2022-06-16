@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">업무캘린더 목록 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>새 소식 관리</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">새 소식 관리</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!-- menuName -->
+                    <ul class="menuName">
+                        <li class="active"><a href="#">업무 캘린더</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                    <!-- //menuName -->
+                    <!--searchArea-->
+                    <div class="searchArea mt-30">
+                        <div class="table">
+                            <table>
+                                <caption>검색 테이블</caption>
+                                <colgroup>
+                                    <col style="width: 90px;">
+                                    <col style="width: 340px ;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 370px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th scope="row"><label for="num01">문의 기관</label></th>
+                                    <td>
+                                        <select name="" id="num01" class="grayType wd156">
+                                            <option value="">광역시·도 선택</option>
+                                        </select>
+                                        <select name="" id="" class="grayType wd156">
+                                            <option value="">시·군·구 선택</option>
+                                        </select>
+                                    </td>
+                                    <th scope="row"><label for="">업무 기간</label></th>
+                                    <td>
+                                        <div class="calGroup">
+                                            <input type="text" class="cal grayType wd160" id="" placeholder="2021-07-02">
+                                            <span class="hyphen">~</span>
+                                            <input type="text" class="cal grayType wd160" id="" placeholder="2021-07-02">
+                                        </div>
+                                    </td>
+                                    <th scope="row"><label for="num03">검색 조건</label></th>
+                                    <td style="padding-right: 20px;">
+                                        <input type="text" id="num03" class="grayType" placeholder="업무 내용 입력">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--//searchArea-->
+                    <!--btnArea-->
+                    <div class="btnArea center">
+                        <button type="button" class="btn white middle">초기화</button>
+                        <button type="button" class="btn dkBlue middle">검색</button>
+                    </div>
+                    <!--//btnArea-->
+                    <!--tabContWrap-->
+                    <div class="tabContWrap type01">
+                        <!--tabNav-->
+                        <div class="tabNav type01">
+                            <ul class="tabList">
+                                <li class="active">전체(50)</li>
+                                <li>예정(1)</li>
+                                <li>진행 중(17)</li>
+                                <li>변경(1)</li>
+                                <li>취소(1)</li>
+                                <li>완료(48)</li>
+                            </ul>
+                            <button type="button" class="btn gray">신규 등록</button>
+                        </div>
+                        <!--//tabNav-->
+                        <!--tabCont-->
+                        <div class="tabCont active">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>9999</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                        <!--tabCont-->
+                        <div class="tabCont">
+                            <!--table-->
+                            <div class="table type11">
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width:60px">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:auto">
+                                        <col style="width:100px">
+                                        <col style="width:100px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">시작일</th>
+                                            <th scope="col">종료일</th>
+                                            <th scope="col">기관 구분</th>
+                                            <th scope="col">업무 구분</th>
+                                            <th scope="col">업무 내용</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>10-6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>전국</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>예정</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td>진행 중</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>DB</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">변경</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기능</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cRed">취소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>회의</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>정기점검</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2021-09-30</td>
+                                        <td>2021-12-30</td>
+                                        <td>충청북도 음성군</td>
+                                        <td>기타</td>
+                                        <td><a href="#" class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</a></td>
+                                        <td>2021-12-30</td>
+                                        <td>관리자명</td>
+                                        <td class="cBlue">완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">검색하신 결과가 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">등록된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">진행 중인 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">변경된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">취소된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">완료된 업무 내역이 없습니다.</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                    
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

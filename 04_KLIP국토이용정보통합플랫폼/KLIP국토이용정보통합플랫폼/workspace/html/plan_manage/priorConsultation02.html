@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>주민 사전협의 정보 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>주민 사전협의 정보 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <section>
+          <h3 class="cont-hedding1">담당자 정보</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>담당자 정보</caption>
+              <thead>
+                <tr>
+                  <th scope="col">기관</th>
+                  <th scope="col">부서</th>
+                  <th scope="col">담당자명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>경기도 하남시</td>
+                  <td>OOO과</td>
+                  <td>박경민</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section>
+          <h3 class="cont-hedding1">사전협의 정보 입력</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>사전협의 정보 입력</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>최조 제안일 <i class="icon-required">필수 입력</i></th>
+                  <td scope="row" colspan="3">
+                    <input type="text" class="cs-input-date js__datepicker" placeholder="최초 제안일 선택" title="최초 제안일">
+                    <div class="cs-box-tip">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제20조(제안서의 처리절차)①항
+                          <p>
+                            법 제26조제1항에 따라 도시·군관리계획입안의 제안을 받은 국토교통부장관, 시·도지사, 시장 또는 군수는 제안일부터 45일 이내에 도시·군관리계획입안에의 반영여부를 제안자에게 통보하여야 한다.<br>
+                            다만, 부득이한 사정이 있는 경우에는 1회에 한하여 30일을 연장할 수 있다. 
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">제안 대상 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <input type="radio" class="cs-radio" id="iptopt" class="checked" checked><label for="iptopt"><span></span> 주민</label>
+                  </td>
+                  <th scope="row"><label for="iptopt2">제안자명 <i class="icon-required">필수 입력</i></label></th>
+                  <td>
+                    <input type="text" class="cs-input width100p" id="iptopt2" placeholder="이름 입력">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="iptopt3">제안 제목 <i class="icon-required">필수 입력</i></label></th>
+                  <td colspan="3">
+                    <input type="text" class="cs-input width100p" id="iptopt3" placeholder="제안 제목 입력">
+                  </tdc>
+                </tr>
+                <tr>
+                  <th scope="row">휴대전화 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <input type="text" class="cs-input width100p" placeholder="휴대전화 번호 입력(-없이)">
+                  </td>
+                  <th scope="row">등록번호 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-insert-t1">
+                    <input type="text" class="cs-input _disabled" id="iptopt4" title="등록번호" placeholder="‘생성’ 버튼 클릭 시 자동 입력" readonly>
+                    <button class="cs-btn2-gray ml5">생성</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li><b class="underline">토지e음</b> 온라인 입안 제안 시 ‘등록번호’가 있는 주민만 제안 가능합니다.  사전협의 정보 등록완료 시 제안자에게 ‘등록번호‘ 안내 문자메시지가 발송됩니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="priorConsultation01.html" class="cs-btn-line">취소</a>
+          <button jq-action="modal" jq-target="#js__alert" class="cs-btn">등록</button>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>주민 사전협의 정보 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            주민 사전협의 정보가 등록되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="priorConsultation01.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

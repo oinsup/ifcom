@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KLIP헬프데스크</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+    <div class="headerUtil">
+        <ul>
+            <li><p>홍길동/국토교통부</p></li>
+            <li><a href="#" title="상담내역 바로가기">상담내역</a></li>
+            <li><a href="#" title="남은시간" class="timeMark">남은 시간(29:00)</a>
+                <div class="remainTime">
+                    <ul>
+                        <li class="remain01">
+                            <p>세션 남은 시간 29:00</p>
+                            <a href="#" title="연장하기">연장</a>
+                        </li>
+                        <li class="remain02">
+                            <p>페이지 로딩 후 30분 동안 미사용 시<br />시스템 보안을 위해 자동 로그아웃 됩니다<br />
+                                <span>(페이지 이동 및 기능 이용 시 자동 연장)</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#" title="로그아웃">로그아웃</a></li>
+            <li><a href="#" title="국토이용정보통합플랫폼 바로가기" class="openMark">국토이용정보통합플랫폼</a></li>
+        </ul>
+    </div>
+    <!-- gnbWrap -->
+    <div class="gnbWrap">
+        <div class="inner">
+            <div class="logo">
+                <a href="main.html" title="KLIP헬프데스크">
+                    <img src="../images/common/logo.png" alt="KLIP헬프데스크">
+                </a>
+            </div>
+            <div id="gnb">
+                <ul>
+                    <li>
+                        <a href="#" title="">이용 지원</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용지원-매뉴얼프로그램양식.html" title="메뉴얼&프로그램&양식">메뉴얼&프로그램&양식</a></li>
+                            <li><a href="이용지원-faq.html" title="FAQ">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">이용 상담</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="이용상담-문의하기.html" title="문의하기">문의하기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">새 소식</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="새소식-업무캘린더.html" title="문의하기" >업무 캘린더</a></li>
+                            <li><a href="새소식-공지사항.html" title="문의하기">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="">헬프데스크 관리</a>
+                        <ul class="gnbDepth02">
+                            <li><a href="헬프데스크-이용상담관리.html" title="문의하기">이용 상담 관리</a></li>
+                            <li><a href="헬프데스크-이용지원관리.html" title="문의하기">이용 지원 관리</a></li>
+                            <li><a href="헬프데스크-새소식관리-업무캘린더목록.html" title="문의하기">새 소식 관리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- inner -->
+    </div>
+    <!-- gnbWrap -->
+</header>
+
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">업무 수정 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>업무 수정</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">새 소식 관리</a></li>
+                                <li><a href="#">업무 수정</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: auto">
+                                <col style="width: 170px;">
+                                <col style="width: 500px">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">등록일/등록자</th>
+                                <td>2021-07-26 15:00/관리자명</td>
+                                <th scope="row"><label for="">상태<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio type02">
+                                            <input type="radio" name="rad08" id="rad21" checked>
+                                            <label for="rad21"><span>예정</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio type02">
+                                            <input type="radio" name="rad08" id="rad22">
+                                            <label for="rad22"><span>진행 중</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <div class="radio type02">
+                                            <input type="radio" name="rad08" id="rad23">
+                                            <label for="rad23"><span>변경</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--//radio-->
+                                        <div class="radio type02">
+                                            <input type="radio" name="rad08" id="rad24">
+                                            <label for="rad24"><span>취소</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--//radio-->
+                                        <div class="radio type02">
+                                            <input type="radio" name="rad08" id="rad25">
+                                            <label for="rad25"><span>완료</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">기관 구분<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad09" id="rad26" checked>
+                                            <label for="rad26"><span>전국</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad09" id="rad27">
+                                            <label for="rad27"><span>기관별</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!-- select -->
+                                        <select name="" id="num01" class="grayType wd180 ml-22">
+                                            <option value="">광역시·도 선택</option>
+                                        </select>
+                                        <!-- //select -->
+                                        <!-- select -->
+                                        <select name="" id="" class="grayType wd180">
+                                            <option value="">시·군·구 선택</option>
+                                        </select>
+                                        <!-- //select -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 기간<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="calGroup">
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                        <span class="hyphen">~</span>
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 구분<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad10" id="rad28" checked>
+                                            <label for="rad28"><span>기능</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad10" id="rad29">
+                                            <label for="rad29"><span>DB</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad10" id="rad30">
+                                            <label for="rad30"><span>회의</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad10" id="rad31">
+                                            <label for="rad31"><span>정기점검</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad10" id="rad32">
+                                            <label for="rad32"><span>기타</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 내용<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="textarea">
+                                        <textarea name="" id="" class="blackType wd900" cols="30" rows="10" maxlength="500" placeholder="업무 내용 입력(예. [DB개선] OO광역시 DD 관련 OOO작업을 진행합니다"></textarea>
+                                        <p class="textCount"><span>0</span>/500자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--btnArea-->
+                    <div class="btnArea01 center">
+                        <button type="button" class="btn white middle">목록</button>
+                        <button type="button" class="btn dkBlue middle">삭제</button>
+                        <button type="button" class="btn dkBlue middle">수정</button>
+                    </div>
+                    <!--//btnArea-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner">
+        <div class="footerLogo">
+            <a href="#" title="국토교통부 바로가기">
+                <img src="../images/common/logo-footer.png" alt="국토교통부">
+            </a>
+        </div>
+        <div class="footerInfo">
+
+            <ul>
+                <li>
+                    <address>
+                        (우)30103  세종특별자치시 도움6로 11
+                    </address>
+                </li>
+                <li>
+                    <p>
+                        Tel. (주간)1599-0001 (야간)044-201-4672
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Fax. (주간)044-860-9500 (야간)044-201-5700
+                    </p>
+                </li>
+            </ul>
+            <ul>
+                <li class="secu">
+                    <a href="#" title="개인정보 처리방침 바로가기">개인정보 처리방침</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Copyright © 2020 MOLIT. All Rights Reserved. 
+            </p>
+        </div>
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

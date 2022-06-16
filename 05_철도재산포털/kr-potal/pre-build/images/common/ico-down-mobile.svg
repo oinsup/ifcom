@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+  <g id="Icon" transform="translate(0.5 0.5)">
+    <path id="패스_1" data-name="패스 1" d="M14.5,22.5v2.222a1.111,1.111,0,0,1-1.111,1.111H5.611A1.111,1.111,0,0,1,4.5,24.722V22.5" transform="translate(-4.5 -15.833)" fill="none" stroke="#0c196f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_2" data-name="패스 2" d="M10.5,15l2.778,2.778L16.056,15" transform="translate(-8.278 -11.111)" fill="none" stroke="#0c196f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_3" data-name="패스 3" d="M18,11.167V4.5" transform="translate(-13 -4.5)" fill="none" stroke="#0c196f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>GUIDE+++++++ - KLIP</title>
+  <link rel="stylesheet" href="@@webRoot/common/guide/guide.css">
+  
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/vs2015.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
+  <script src="@@webRoot/common/libjs/jquery-1.12.4.min.js"></script>
+  <script src="@@webRoot/common/guide/guide.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  <link rel="stylesheet" href="@@webRoot/common/css/font.css">
+  <link rel="stylesheet" href="@@webRoot/common/css/common.css">
+  <link rel="stylesheet" href="@@webRoot/common/css/layout.css">
+  <link rel="stylesheet" href="@@webRoot/common/css/content.css">
+  <link rel="stylesheet" href="@@webRoot/common/css/board.css">
+
+  <script src="@@webRoot/common/libjs/jquery-1.12.4.min.js"></script>
+  <script src="@@webRoot/common/libjs/jquery-ui.min.js"></script>
+  <script src="@@webRoot/common/libjs/jquery.cookie.js"></script>
+  <script src="@@webRoot/common/js/common.js"></script>
+
+  <script src="@@webRoot/common/libjs/jquery.mCustomScrollbar.concat.min.js"></script>
+  <link rel="stylesheet" href="@@webRoot/common/libjs/jquery.mCustomScrollbar.min.css">
+
+  <script src="@@webRoot/common/js/test.js"></script>
+
+  <script>
+    jQuery(function($){
+      tableThOutput();
+
+      var pageIndex = function(){
+        var index = $('.build-nav > ul');
+        var nav = '';
+        $('.build-body > section').each(function(idx){
+          var depth1 = $(this).find('.build-h2');
+          var depth2 = $(this).find('.build-h3');
+          $(this).attr('id','ct'+idx);
+          nav += `<li><a href="#ct${idx}">${depth1.html()}`;
+            if(depth2.length > 0){
+              nav += '<ul>';
+              depth2.each(function(idx2){
+                $(this).attr('id','ctdep'+ idx +'_'+ idx2);
+                nav += `<li><a href="#ctdep${idx}_${idx2}">${$(this).html()}`;
+              });
+              nav += '</ul>';
+            }
+          nav += `</li>`;
+          
+          
+        });
+        index.html(nav);
+      }
+
+      pageIndex();
+
+    });
+  </script>
+
+  <style>
+    code{height:150px;}
+  </style>
+</head>
+<body>
+  <nav class="build-nav">
+    <ul>
+      <li><a href="#">MODAL</a></li>
+    </ul>
+  </nav>
+
+  <!-- <div style="position: fixed;left: 50%;top: 0;">
+    <button id="testClear">클리어</button>
+    <button id="testOpen">열기</button>
+  </div> -->
+
+  <script>
+    var openPage = function(){
+      pageLoader();
+      $.ajax({
+        url : '__ajaxtest.html',
+      }).done(function(data){
+        // console.log(data);
+        // html = $.parseHTML(data);
+        // html = $.html(data);
+        // console.log( html[49] );
+        // modal();
+
+        // testhtml = '<div><div id="asdf"></div><div class="id=asdf2"></div></div>';
+        // testhtmlObj = $.parseHTML(testhtml);
+        $('.build-body').html(data);
+        pageLoaderComplete();
+        // modal();
+        // initpuball();
+      });
+    }
+
+
+    $('#testClear').click(function(){
+      $('.build-body').html('');
+    });
+
+    $('#testOpen').click(function(){
+      openPage();
+    });
+    
+  </script>
+
+  <div class="build-body">
+    <h1 class="build-h1"><b>KLIP</b> UI GUIDE</h1>
+    <section>
+      <h2 class="build-h2">퍼블리싱 개발환경</h2>
+
+      <h3 class="build-h3">Commands</h3>
+      <div>
+        gulp<br>
+        gulp clear
+      </div>
+
+      <h3 class="build-h3">Features</h3>
+      <div>
+        scss<br>
+        javascript<br>
+        file-include<br>
+        gulp
+      </div>
+    </section>
+
+    <section>
+      <h2 class="build-h2">퍼블리싱 개발환경</h2>
+
+      <h3 class="build-h3">Commands</h3>
+      <div>
+        gulp<br>
+        gulp clear
+      </div>
+
+      <h3 class="build-h3">모달창 mixin</h3>
+      <textarea name="" id="" cols="30" rows="10" class="ui_codeChage" data-tabsize="5" value="
+        &#64;&#64;include('../include/modal_alert.html',{
+          'id': 'js__delete',
+          'title': '업무 참조 자료 수정',
+          'cont': '공유할 사용자를 선택해 주세요.',
+          'btns': '버튼 tag'
+        })">
+      </textarea>
+    </section>
+
+    <section>
+      <h2 class="build-h2">CLASS</h2>
+
+      <h3 class="build-h3">Commands</h3>
+      <div>
+        <span>dimmedobject</span> dim처리
+      </div>
+
+      <h3 class="build-h3">Features</h3>
+      <div>
+        scss<br>
+        javascript<br>
+        file-include<br>
+        gulp
+      </div>
+    </section>
+
+    <section>
+      <h2 class="build-h2">FONT</h2>
+      <div>
+        <div>폰트테스트</div>
+        <div>폰트테스트 100</div>
+        <div>폰트테스트 300</div>
+        <div>폰트테스트 400</div>
+        <div>폰트테스트 500</div>
+        <div>폰트테스트 700</div>
+        <div>폰트테스트 900</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="build-h2">페이지로더</h2>
+      <h3 class="build-h3" id="ctdep4_0">Use</h3>
+      <div class="build-code">
+        <b>pageLoader();</b><br>
+        <p>페이지로더 실행</p>
+      </div>
+      <div class="build-code">
+        <b>pageLoaderComplete();</b><br>
+        <p>페이지로더 제거</p>
+      </div>
+      <h3 class="build-h3" id="ctdep4_0">sample</h3>
+      <button type="button" onclick="pageLoaderPlay()">페이지로더 실행</button>
+      <script>
+        function pageLoaderPlay(){
+          pageLoader();
+          setTimeout(function(){pageLoaderComplete()},1000);
+        }
+      </script>
+    </section>
+
+    @@include('./__guide_include/modal.html')
+
+    <section>
+      <h2 class="build-h2">MODAL DRAG</h2>
+
+      <div class="build-table">
+        <table>
+          <thead>
+            <tr>
+              <th>param</th>
+              <th>default</th>
+              <th>description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>width</th>
+              <td>700</td>
+              <td>가로</td>
+            </tr>
+            <tr>
+              <th>height</th>
+              <td>400</td>
+              <td>높이</td>
+            </tr>
+            <tr>
+              <th>left</th>
+              <td>0</td>
+              <td>클릭한 버튼에서의 left 10px; , 버튼 좌 상단의 좌표기준</td>
+            </tr>
+            <tr>
+              <th>top</th>
+              <td>클릭한 버튼 높이에 + 10px</td>
+              <td>클릭한 버튼에서의 top 10px;</td>
+            </tr>
+            <tr>
+              <th>center</th>
+              <td>false</td>
+              <td>true 일때 가운데로 맞춤</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <h3 class="build-h3">SAMPLE</h3>
+      <div>
+        <button onclick="lay_pop_open_darge('#js__moveModal','',this)">움직이는 팝업</button>
+        <button onclick="lay_pop_open_darge('#js__moveModal2','',this)">움직이는 팝업</button>
+        <button onclick="lay_pop_open_darge('#js__moveModal2',{center:true},this)">움직이는 팝업(센터정렬 내가 보는 화면 기준)</button>
+
+        <div id="js__moveModal" class="laymodal">
+          <div class="laymodal-header">
+            <h2>원문보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="lay_pop_close_darge('#js__moveModal')">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div>
+              글씨 테스트 입니다.
+            </div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="lay_pop_close_darge('#js__moveModal')">닫기</button>
+          </div>
+        </div>
+
+        <div id="js__moveModal2" class="laymodal">
+          <div class="laymodal-header">
+            <h2>원문보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="lay_pop_close_darge('#js__moveModal2')">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div>
+              <div style="background:red;height:3000px;"></div>
+            </div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="lay_pop_close_darge('#js__moveModal2')">닫기</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2 class="build-h2">MODAL CONTENT</h2>
+
+      <div>
+        <script>
+          // lay_pop_open('#js__preview3');
+        </script>
+        <div id="js__preview3" class="laymodal modal-preview2" tabindex="0">
+          <div class="laymodal-header">
+            <h2>도면 보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>부서 찾기 검색 결과</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col class="width100">
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">총 도면 수</th>
+                      <td>23</td>
+                      <th scope="row">도면</th>
+                      <td class="frm-insert-t4">
+                        <div>
+                          <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)">
+                        </div>
+                        <div class="__col_btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">도면명을 입력해 주세요.</div>
+            </section>
+            <section class="blueprint-preview">
+              <div class="blueprint-view">
+                <div class="__viewer">
+                  <div style="background:url('@@webRoot/common/images/sample/blueprint.jpg');height:100px;"></div>
+                </div>
+                <div class="__controller">
+                  <strong>도면명 전체가 출력됩니다.</strong>
+                  <div>
+                    <button class="viewer-ctrl-zoomin">확대</button>
+                    <button class="viewer-ctrl-zoomout">축소</button>
+                    <button class="viewer-ctrl-reset">초기화</button>
+                  </div>
+                </div>
+              </div>
+              <div class="blueprint-list">
+                <button class="active">
+                  <div>
+                    <img src="@@webRoot/common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>도면 제목이 출력됩니다. 
+                    길면 n줄 처리</strong>
+                </button>
+                @@for(var i = 0; i < 10; i++){
+                <button>
+                  <div>
+                    <img src="@@webRoot/common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>도면 제목이 출력됩니다. 
+                    길면 n줄 처리</strong>
+                </button>
+                }
+              </div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">닫기</button>
+            <button type="button" class="cs-btn-line">전체 화면보기</button>
+            <button type="button" class="cs-btn">전체 화면보기</button>
+          </div>
+        </div>
+
+
+        <script>
+          jQuery(function(){
+            $('.modalcontent .laymodal').css({
+              'display':'block'
+            });
+
+            var modalWrap = $('.modalcontent');
+            modalWrap.css({
+              // top : modalWrap.outerHeight()*0.3/2*-1
+            });
+            // console.log(modalWrap.outerHeight();
+          });
+        </script>
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+        <script>
+          jQuery(function(){
+            $('#laypopmasonry').masonry({
+              itemSelector: '.laymodal',
+              gutter: 10,
+              columnWidth: 350,
+              horizontalOrder: false
+            });
+          });
+        </script>
+
+        
+        <style>
+          .modalcontent .laymodal{margin-bottom:10px;}
+          .modalcontent::after{content: '';display: block;clear: both;}
+        </style>
+
+        <div style="overflow: hidden;" class="modal">
+          <div class="modalcontent" style="width:130%;border: 1px solid #000;left: -15%;position: relative;">
+          <div style="transform: scale(.7,.7)">
+            <div  id="laypopmasonry">
+
+              <!-- <div class="laymodal" style="width:200px;height:300px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:300px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:200px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:100px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:300px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:200px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:100px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:300px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:200px;background:cecece"></div>
+              <div class="laymodal" style="width:200px;height:300px;background:cecece"></div> -->
+              @@include('./include/modals.html',{'items': 1})
+              
+              <!--
+              <textarea class="ui_codeChage" data-tabsize="10" value='
+              @include('./include/modals.html',{'items': 1})
+              '></textarea>
+              -->
+    
+              @@include('./include/modals.html',{'items': 2})
+              <!-- <textarea class="ui_codeChage" data-tabsize="10" value='
+              @include('./include/modals.html',{'items': 2})
+              '></textarea> -->
+              @@include('./include/modals.html',{'items': 3})
+              <!-- <textarea class="ui_codeChage" data-tabsize="10" value='
+              @include('./include/modals.html',{'items': 3})
+              '></textarea> -->
+              @@include('./include/modals.html',{'items': 4})
+              <!-- <textarea class="ui_codeChage" data-tabsize="10" value='
+              @include('./include/modals.html',{'items': 4})
+              '></textarea> -->
+              @@include('./include/modals.html',{'items': 5})
+              <!-- <textarea class="ui_codeChage" data-tabsize="10" value='
+              @include('./include/modals.html',{'items': 5})
+              '></textarea> -->
+              @@include('./include/modals.html',{'items': 6})
+              <!-- <textarea class="ui_codeChage" data-tabsize="0" value='
+              @include('./include/modals.html',{'items': 6})
+              '></textarea> -->
+    
+              @@include('./include/modals.html',{'items': 7})
+              @@include('./include/modals.html',{'items': 8})
+              @@include('./include/modals.html',{'items': 9})
+              @@include('./include/modals.html',{'items': 10})
+              @@include('./include/modals.html',{'items': 11})
+              @@include('./include/modals.html',{'items': 12})
+              @@include('./include/modals.html',{'items': 13})
+              @@include('./include/modals.html',{'items': 14})
+              @@include('./include/modals.html',{'items': 15})
+    
+    
+              <div id="js__alert" class="laymodal modal-alert">
+                <div class="laymodal-header">
+                  <h2>사용 권한 신청</h2>
+                </div>
+                <div class="laymodal-content tac">
+                  개인정보 수집 및 이용에 대한 동의 후<br>
+                  사용 권한 신청을 하실 수 있습니다. 
+                </div>
+                <div class="laymodal-footer cs-btn-set">
+                  <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+                </div>
+              </div>
+    
+              <!--
+              <textarea class="ui_codeChage" data-tabsize="0" value='
+              <div id="js__alert" class="laymodal modal-alert>
+                <div class="laymodal-header">
+                  <h2>사용 권한 신청</h2>
+                </div>
+                <div class="laymodal-content tac">
+                  개인정보 수집 및 이용에 대한 동의 후<br>
+                  사용 권한 신청을 하실 수 있습니다. 
+                </div>
+                <div class="laymodal-footer cs-btn-set">
+                  <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+                </div>
+              </div>
+              '></textarea>
+              -->
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    
+
+    <!-- inputs -->
+    @@include('./__guide_include/inputs.html')
+
+    <section>
+      <h2 class="build-h2">COLUMNS</h2>
+      <div>
+
+        <div class="frm-insert-t1">
+          <div>
+            <input type="text" class="cs-input width100p" disabled placeholder="부서 선택 시 자동 입력">
+          </div>
+          <a href="#" class="cs-btn2-gray cs-btn-default __col_btn">부서 찾기</a>
+        </div>
+
+        <div class="frm-insert-t4">
+          <div>
+            <input type="text" class="cs-input width100p" disabled placeholder="부서 선택 시 자동 입력">
+          </div>
+          <div class="__col_btn">
+            <a href="#" class="cs-btn2-gray cs-btn-default">검색</a>
+            <a href="#" class="cs-btn2-gray-line cs-btn-default">초기화</a>
+          </div>
+        </div>
+
+        // 음.??? 앙??
+        <!-- <div class="frm-insert-btns">
+          <div class="frm-insert-btns_cont">
+            <input type="text" class="cs-input width100p" disabled placeholder="부서 선택 시 자동 입력">
+          </div>
+          <div class="frm-insert-btns_btns">
+            <a href="#" class="cs-btn2-gray cs-btn-default __col_btn">부서 찾기</a>
+          </div>
+        </div> -->
+
+        <div class="frm-insert-t3">
+          <div>제</div>
+          <input type="text" class="cs-input width100p" placeholder="연도 입력" title="연도 입력">
+          <div>-</div>
+          <input type="text" class="cs-input width100p" placeholder="일련번호 입력" title="일련번호 입력">
+          <div>호</div>
+        </div>
+
+        <div class="frm-insert-t1">
+          <div class="frm-insert-t3">
+            <div>제</div>
+            <input type="text" class="cs-input width100p" placeholder="연도 입력" title="연도 입력">
+            <div>-</div>
+            <input type="text" class="cs-input width100p" placeholder="일련번호 입력" title="일련번호 입력">
+            <div>호</div>
+          </div>
+          <button class="cs-btn2-gray cs-btn-default __col_btn">중복 확인</button>
+        </div>
+
+        <div class="frm-insert-t2">
+          <input type="text" class="cs-input-date js__datepicker" placeholder="고시일 선택" title="고시일 선택">
+          <span>/</span>
+          <input type="radio" name="datetype" class="cs-radio" id="datetype1"><label for="datetype1"><span></span> 결정</label>
+          <input type="radio" name="datetype" class="cs-radio" id="datetype2"><label for="datetype2" class="ml10"><span></span> 변경</label>
+        </div>
+
+        <div class="frm-insert-t5">
+          <input type="text" id="onnaraID" class="cs-input" placeholder="아이디 입력">
+          <button type="button" class="cs-btn2-gray-line cs-btn-default">확인 방법</button>
+          <button type="button" class="cs-btn2-gray cs-btn-default">중복 확인</button>
+        </div>
+
+        //line-heihgt만 button하고 맞춤
+        <div class="frm-insert-t6">
+          test1234
+          <button class="cs-btn2-gray cs-btn-default flr">아이디 변경</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- table -->
+    @@include('./__guide_include/table.html')
+
+    <section>
+      <h2 class="build-h2">list</h2>
+      <ul class="build-list">
+        <li>
+          <span class="class">.board-tab-nav._tiny</span> 탭메뉴 얇게처리
+        </li>
+      </ul>
+
+      <div class="board-list-wrap">
+        <nav class="board-tab-nav">
+          <ul>
+            <li class="active"><a href="#">전체</a></li>
+            <li><a href="#">결정</a></li>
+            <li><a href="#">승인</a></li>
+            <li><a href="#">실시</a></li>
+            <li><a href="#">결정+승인</a></li>
+            <li><a href="#">결정+실시</a></li>
+            <li><a href="#">결정+승인+실시</a></li>
+            <li><a href="#">승인+실시</a></li>
+          </ul>
+        </nav>
+
+        <div class="board-list-sort">
+          <!-- 
+            sort-desc : 내림차순
+            sort-asc : 올림차순
+           -->
+          <a href="#" class="btn-down-excel">다운로드</a>
+          <a href="#" class="active">고시일 <i class="sort-desc"></i></a>  
+          <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+          <a href="#">고시 번호</a>
+          <a href="#">고시 제목</a>
+        </div>
+
+        <div class="board-list-text _fixed">
+          <table>
+            <caption>도시·군기본계획 리스트</caption>
+            <colgroup>
+              <col class="width60">
+              <col class="width100">
+              <col class="width120">
+              <col class="width130">
+              <col class="width90">
+              <col>
+              <col class="width95">
+              <col class="width95">
+              <col class="width100">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">고시일</th>
+                <th scope="col">고시 기관</th>
+                <th scope="col">고시 번호</th>
+                <th scope="col">고시 유형</th>
+                <th scope="col">고시 제목</th>
+                <th scope="col">고시문</th>
+                <th scope="col">도면</th>
+                <th scope="col">등록일</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr>
+                <td>30</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>29</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>28</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>27</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>26</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>25</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>24</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>23</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>22</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td>21</td>
+                <td>2020-10-15</td>
+                <td>경기도</td>
+                <td>제2020-1872호</td>
+                <td>결정</td>
+                <td class="tal"><a href="notification02.html">경기도 OO광역도시계획</a></td>
+                <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                <td>2020-01-01</td>
+              </tr>
+              
+              <tr>
+                <td colspan="9">
+                  등록된 도시·군기본계획이 없습니다.
+                </td>
+              </tr>
+              <tr>
+                <td colspan="9">
+                  검색하신 결과가 없습니다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section>
+      <h2 class="build-h2">TABLE WIDTH</h2>
+      <div class="board-list-text _fixed">
+        <table>
+          <caption>참조된 하위 계획 정보</caption>
+          <colgroup>
+            <col class="width60">
+            <col class="width130">
+            <col class="width120">
+            <col class="width130">
+            <col>
+            <col class="width100">
+            <col class="width95">
+            <col class="width95">
+            <col class="width100">
+          </colgroup>
+          <thead>
+            <tr>
+              <td>width60</td>
+              <td>width130</td>
+              <td>width120</td>
+              <td>width130</td>
+              <td></td>
+              <td>width100</td>
+              <td>width95</td>
+              <td>width95</td>
+              <td>width100</td>
+            </tr>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">계획 유형</th>
+              <th scope="col">고시 기관</th>
+              <th scope="col">고시 번호</th>
+              <th scope="col">고시 제목</th>
+              <th scope="col">고시일</th>
+              <th scope="col">원문</th>
+              <th scope="col">도면</th>
+              <th scope="col">참조일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>99999</td>
+              <td>도시·군관리계획</td>
+              <td>제주특별자치도</td>
+              <td>제2020–5200호</td>
+              <td class="tal"><a href="notification02.html" target="_blank">입력된 고시 제목 출력</a></td>
+              <td>2020-12-15</td>
+              <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">원문 보기</a></td>
+              <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">도면 보기</a></td>
+              <td>2020-10-15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="board-list-text _fixed">
+        <table>
+          <caption>참조된 하위 계획 정보</caption>
+          <colgroup>
+            <col class="width90">
+            <col class="width80">
+            <col class="width130">
+            <col class="width120">
+            <col class="width150">
+            <col class="width140">
+            <col class="width90">
+            <col class="width160">
+            <col class="width130">
+            <col class="width130">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>width90</td>
+              <td>width80</td>
+              <td>width130</td>
+              <td>width130</td>
+              <td>width150</td>
+              <td>width140</td>
+              <td>width90</td>
+              <td>width160</td>
+              <td>width130</td>
+              <td>width130</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="col">고시유형</th>
+              <th scope="col">등록자</th>
+              <th scope="col">계획 유형</th>
+              <th scope="col">의제 유형</th>
+              <th scope="col">자료구분</th>
+              <th scope="col">부서 연락처</th>
+              <th scope="col">상태</th>
+              <th scope="col">아이디</th>
+              <th scope="col">전화번호</th>
+              <th scope="col">소속</th>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+        <table>
+          <caption>참조된 하위 계획 정보</caption>
+          <colgroup>
+            <col class="width130">
+            <col class="width150">
+            <col class="width200">
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">휴대전화</th>
+              <th scope="col">소속</th>
+              <th>운영기간</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="col">휴대전화</th>
+              <th scope="col">소속</th>
+              <td>2021-01-01~2022-12-31</td>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      
+      
+    </section>
+
+
+    <section>
+      <h2 class="build-h2">TEXT COUNTER</h2>
+
+      <div class="build-code">
+        <b>.js__textCounter</b><br>
+        <p>
+          input, textarea에다가 추가 할 경우 스크립트에서 실행함
+        </p>
+      </div>
+
+      <div class="build-code">
+        <b>data-maxbyte</b><br>
+        <p>
+          최대 작성가능한 글자수(바이트) 미입력시 20byte<br>
+          기본값: 20byte
+        </p>
+      </div>
+
+      <h3 class="build-h3">TYPE1</h3>
+
+      <div>
+        <div class="cs-gride">
+          <div class="cs-gride-col4">
+            <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="20">
+          </div>
+          <div class="cs-gride-col4">
+            <textarea name="" id="" cols="30" rows="10" class="cs-input js__textCounter width100p"></textarea>
+          </div>
+        </div>
+      </div>
+
+      
+      <textarea class="ui_codeChage" data-tabsize="8" id="textCounterTest" value='
+        <!-- input -->
+        <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="20">
+
+        <!-- textarea -->
+        <textarea rows="10" class="cs-input js__textCounter width100p"></textarea>
+      '>
+      </textarea>
+
+
+      <h3 class="build-h3">TYPE 2</h3>
+      <div>
+        <div class="cs-gride">
+          <div class="cs-counter-wrap cs-gride-col4">
+            <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200">
+          </div>
+          <div class="cs-counter-wrap cs-gride-col4">
+            <textarea name="" id="" cols="30" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <textarea class="ui_codeChage" data-tabsize="8" id="textCounterTest" value='
+        <!-- input -->
+        <div class="cs-counter-wrap">
+          <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200">
+        </div>
+
+        <!-- textarea -->
+        <div class="cs-counter-wrap">
+          <textarea name="" id="" cols="30" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>
+        </div>
+      '>
+      </textarea>
+
+      
+
+      
+
+    </section>
+    
+    <section>
+      <h2 class="build-h2">FONT</h2>
+      <div>
+        infomation 설명글 들어가는 부분이 있어야하는데.....
+      </div>
+      <div style="font-family: sans-serif;">
+        한글테스트
+      </div>
+      <div style="font-family:'Malgun Gothic', '맑은고딕', '맑은 고딕';letter-spacing: -.025em;">
+        <spna style="font-size:11px">11px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:12px">12px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:13px">13px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:14px">14px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:15px">15px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:16px">16px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:17px">17px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:18px">18px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:19px">19px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:20px">20px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:21px">21px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:22px">22px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:23px">23px : 한글테스트 <strong>한글테스트</strong></spna><br>
+        <spna style="font-size:24px">24px : 한글테스트 <strong>한글테스트</strong></spna><br>
+      </div>
+    </section>
+
+    <!-- tabnav 텝메뉴 -->
+    @@include('./__guide_include/tabnav.html')
+
+    <section>
+      <h2 class="build-h2">toggle Content</h2>
+      
+
+      <div class="build-code">
+        <b>toggleElm(group,text,display);]</b>
+        <p>
+          data-group="group"<br>
+          data-idx="1"<br>
+          의 값을 display에 들어가 있는 설정으로 바꿈
+        </p>
+      </div>
+
+      <div class="build-table">
+        <table>
+          <colgroup>
+            <col class="width100">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>group</th>
+              <td>토글할 그룹 data-group="그룹명" 으로 설정</td>
+            </tr>
+            <tr>
+              <th>text</th>
+              <td>그룹 번호 data-idx="1" 으로 설정 값이 빈값일 경우 해당그룹명으로 된것들 모두 display에 설정된값으로 변경</td>
+            </tr>
+            <tr>
+              <th>display</th>
+              <td>block, table-cell, 등 display 속성으로 변경</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="build-h3">샘플</h3>
+
+      <div>
+        <button class="cs-btn" onclick="toggleElm('togglegroup','','none');toggleElm('togglegroup','1','block')">1번</button>
+        <button class="cs-btn" onclick="toggleElm('togglegroup','','none');toggleElm('togglegroup','2','block')">2번</button>
+        <button class="cs-btn" onclick="toggleElm('togglegroup','','none');toggleElm('togglegroup','3','block')">3번</button>
+  
+        <div class="mt20">
+          <div data-group="togglegroup" data-idx="1">1번</div>
+          <div data-group="togglegroup" data-idx="2">2번</div>
+          <div data-group="togglegroup" data-idx="3">3번</div>
+        </div>
+      </div>
+
+    
+      
+    </section>
+    
+    <section>
+      <h2 class="build-h2">contentToggle</h2>
+      
+
+      <div class="build-code">
+        <b>onclick="contentToggle(this,'conttoggle1')"</b>
+        <p>
+          click한 버튼에 active 클래스 토글<br>
+          data-toggle="conttoggle1" 에 active 클래스 토글<br>
+          별도의 스타일은 없음<br>
+          
+          단순히 클래스만 토글해줌
+        </p>
+        <p>
+          <b class="pcolor-red">아코디언 효과를 낼 수 있는것을 넣을까 고민중...</b>
+        </p>
+      </div>
+
+      <div class="build-table">
+        <table>
+          <colgroup>
+            <col class="width100">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>this</th>
+              <td>this</td>
+            </tr>
+            <tr>
+              <th>conttoggle1</th>
+              <td>data-toggle에 해당 값이 있는것을 토글한다</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="build-h3">샘플</h3>
+
+      <div>
+        <button class="cs-btn toggleContentBtn" onclick="contentToggle(this,'conttoggle1')">1번</button>
+        <button class="cs-btn toggleContentBtn" onclick="contentToggle(this,'conttoggle2')">2번</button>
+        <button class="cs-btn toggleContentBtn" onclick="contentToggle(this,'conttoggle3')">3번</button>
+  
+        <div class="mt20">
+          <div class="toggleContent-test" data-toggle="conttoggle1">1번</div>
+          <div class="toggleContent-test" data-toggle="conttoggle2">2번</div>
+          <div class="toggleContent-test" data-toggle="conttoggle3">3번</div>
+        </div>
+      </div>
+
+      <style>
+        .toggleContent-test{display:none;}
+        .toggleContent-test.active{display: block;}
+
+        .toggleContentBtn.active::after{content: '선택됨';}
+      </style>
+
+    
+      
+    </section>
+
+    <!-- box 박스 -->
+    @@include('./__guide_include/box.html')
+
+    <!-- btn -->
+    @@include('./__guide_include/btn.html')
+    
+
+    <section>
+      <h2 class="build-h2">LIST STYLE</h2>
+      <ul class="cs-list-dot">
+        <li>안녕하세요</li>
+        <li>안녕하세요</li>
+        <li>안녕하세요</li>
+      </ul>
+
+      <ul class="cs-list-arrdown tac">
+        <li>안녕하세요</li>
+        <li>안녕하세요</li>
+        <li>안녕하세요</li>
+      </ul>
+
+      <ul class="cs-list-normal">
+        <li>노오말</li>
+        <li>노오말</li>
+        <li>노오말</li>
+      </ul>
+
+      <div class="cs-box-tip">
+        <strong>법률 TIP</strong>
+        <ul>
+          <li>팁입니다.
+            <p>sadl;fjslkdfj</p>
+            <ul>
+              <li>
+                asdlkfjsdf
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cs-box-tip _single">
+        <strong>법률 TIP</strong>
+        <ul>
+          <li>팁입니다.
+            <p>sadl;fjslkdfj</p>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="cs-list-number">
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+      </ul>
+
+      <ul class="cs-list-text">
+        <li><span class="__text">가.</span> 숫자타입</li>
+        <li><span class="__text">나.</span> 숫자타입</li>
+        <li><span class="__text">다.</span> 숫자타입</li>
+        <li><span class="__text">라.</span> 숫자타입</li>
+        <li><span class="__text">마.</span> 숫자타입</li>
+      </ul>
+
+      <ul class="cs-list-number">
+        <li>
+          숫자타입
+          <ul class="cs-list-text">
+            <li><span class="__text">가.</span> 숫자타입</li>
+            <li><span class="__text">나.</span> 숫자타입</li>
+            <li><span class="__text">다.</span> 숫자타입</li>
+            <li><span class="__text">라.</span> 숫자타입</li>
+            <li><span class="__text">마.</span> 숫자타입</li>
+          </ul>
+        </li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+        <li>숫자타입</li>
+      </ul>
+
+
+    </section>
+
+
+    <section>
+      <h2 class="build-h2">toggle</h2>
+      <button onclick="toggleElm('advice','','none');toggleElm('advice','','block);">1번보기</button>
+    </section>
+
+    
+    <section class="gridetest">
+      <style>
+        .gridetest *[class*=cs-gride-col]{background: red;height: 50px;}
+      </style>
+      <h2 class="build-h2">GRIDE</h2>
+      <div class="cs-gride">
+        <div class="cs-gride-col1"></div>
+        <div class="cs-gride-col1"></div>
+        <div class="cs-gride-col3"></div>
+        <div class="cs-gride-col4"></div>
+        <div class="cs-gride-col5"></div>
+        <div class="cs-gride-col6">
+          <div class="cs-gride-col4">asdf</div>
+          <div class="cs-gride-col8">asdf</div>
+        </div>
+        <div class="cs-gride-col6">
+          <div class="cs-gride-col4">asdf</div>
+          <div class="cs-gride-col8">asdf</div>
+        </div>
+        <div class="cs-gride-col6">
+          <div class="cs-gride-col4">asdf</div>
+          <div class="cs-gride-col8">asdf</div>
+        </div>
+        <div class="cs-gride-col6">
+          <div class="cs-gride-col4">asdf</div>
+          <div class="cs-gride-col8">asdf</div>
+        </div>
+        <div class="cs-gride-col12">
+
+        </div>
+      </div>
+
+      <style>
+        .cs-gride-fixed [class*=cs-gride-fixed]{background:rgb(218, 218, 218);height:50px;}
+      </style>
+      <h2 class="build-h2">GRIDE2</h2>
+      <div>
+        .cs-gride-fixed-5 ~ 500 까지 지정가능 좌측가로길이를 고정하고 우측은 좌측 width에 따라서 사이즈 정렬
+      </div>
+      <div class="cs-gride-fixed">
+        <div class="cs-gride-fixed-100">width100px</div>
+        <div class="cs-gride-col">width:cacl(100% - 100px)</div>
+      </div>
+      <div class="cs-gride-fixed">
+        <div class="cs-gride-fixed-200">width200px</div>
+        <div class="cs-gride-col">width:cacl(100% - 100px)</div>
+      </div>
+    </section>
+
+    <section>
+      <section>
+        <div class="modal-sec-title">위촉 상태 변경 위원</div>
+        <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+        <div class="board-required-info _type2"><i class="icon-required">필수 입력</i>필수 입력 <a href="#js__userfinder" class="cs-btn2-gray _h35" jq-action="modal">공무원(내부)추가</a></div>
+        <div class="tar mb5"><i class="icon-required">필수 입력</i>필수 입력</div>
+        <div class="board-view-tb _noround _tal">
+          <table>
+            <caption>담당자 지정 처리</caption>
+            <colgroup>
+              <col class="width130">
+              <col class="width200">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                <td colspan="2">
+                  <input type="radio" class="cs-radio" id="chargeState">
+                  <label for="chargeState"><span></span> 담당자 지정 완료</label>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" rowspan="3">담당자 선택 <i class="icon-required">필수 입력</i></th>
+                <th><input type="radio" class="cs-radio" name="charg" id="charg1" checked><label for="charg1"><span></span> 사전협의 담당자</label></th>
+                <th><input type="radio" class="cs-radio" name="charg" id="charg2"><label for="charg2"><span></span> 다른 담당자(입안 제안 관리 권한 보유자)</label></th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cs-gride-fixed">
+                    <span class="cs-gride-fixed-50 lh35">부서</span>
+                    <div class="cs-gride-col lh35">: ㅇㅇㅇㅇ과</div>
+                  </div>
+                </td>
+                <td>
+                  <div class="cs-gride-fixed">
+                    <label class="cs-gride-fixed-50 lh35">부서</label>
+                    <select name="" class="cs-input _h35 cs-gride-col" title="부서 선택">
+                      <option value="">부서 선택</option>
+                      <option value="">과리과</option>
+                      <option value="">기계실</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="cs-gride-fixed">
+                    <span class="cs-gride-fixed-50 lh35">담당자</span>
+                    <div class="cs-gride-col lh35">: 박경민</div>
+                  </div>
+                </td>
+                <td>
+                  <div class="cs-gride-fixed">
+                    <label class="cs-gride-fixed-50 lh35">담당자</label>
+                    <select name="" class="cs-input _h35 cs-gride-col" title="사용자 선택">
+                      <option value="">사용자 선택</option>
+                      <option value="">홍길동</option>
+                      <option value="">이순신</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">전달사항</th>
+                <td colspan="2">
+                  <div class="cs-counter-wrap">
+                    <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="지정하실 담당자에게 전달사항이 있는 경우 내용을 입력해 주세요." title="전달사항"></textarea>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <!-- 201203 :: 텍스트수정 -->
+          <li>
+            입력하신 전달사항은 지정된 담당자만 확인 가능합니다.
+          </li>
+        </ul>
+      </section>
+    </section>
+    
+    <section>
+      <div class="board-view-tb _tal">
+        <table>
+          <caption>위촉 정보</caption>
+          <colgroup>
+            <col class="width140">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="2">위원회 구분  <i class="icon-required">필수 입력</i></th>
+              <td>
+                <input type="radio" class="cs-radio" name="mbmcate" id="mbmcate1" checked><label for="mbmcate1"><span></span> 시·군·구도시계획위원회</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cs-box-tip _type2">
+                  <strong>법률 TIP</strong>
+                  <ul>
+                    <li>
+                      국토계획법 시행령 110조(지방도시계획위원회의 업무) ②항
+                      <p>
+                        시·군·구도시계획위원회는 법 제113조제2항제4호에 따라 다음 각 호의 업무를 할 수 있다.
+                      </p>
+                      <ul class="cs-list-number">
+                        <li>해당 시·군·구와 관련한 도시·군계획조례의 제정·개정과 관련하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                        <li>제55조제3항제3호의2에 따른 개발행위허가에 대한 심의(대도시에 두는 도시계획위원회에 한정한다)</li>
+                        <li>개발행위허가와 관련하여 시장 또는 군수(특별시장·광역시장의 개발행위허가 권한이 법 제139조제2항에 따라 조례로 군수 또는 구청장에게 위임된 경우에는 그 군수 또는 구청장을 포함한다)가 자문하는 사항에 대한 조언</li>
+                        <li>제128조제1항에 따른 시범도시사업계획의 수립에 관하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">위원회명  <i class="icon-required">필수 입력</i></th>
+              <td>
+                <div class="cs-counter-wrap">
+                  <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">운영 기간  <i class="icon-required">필수 입력</i></th>
+              <td>
+                <div class="cs-datepicker-set inlineblock">
+                  <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                  <div>~</div>
+                  <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">운영 기관  <i class="icon-required">필수 입력</i></th>
+              <td>
+                <select class="cs-input width200 _disabled" title="지역선택">
+                  <option>경기도</option>
+                </select>
+                <select class="cs-input ml5 width200 _disabled" title="시군구 선택">
+                  <option>하남시</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">운영 담당자 <i class="icon-required">필수 입력</i></th>
+              <td class="_p0">
+                <div class="board-view-tb _tac">
+                  <table>
+                    <colgroup>
+                      <col class="width60">
+                      <col>
+                      <col>
+                      <col>
+                      <col class="width110">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">메뉴 권한 그룹</th>
+                        <th scope="col">관리</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력예시" value="홍길동"></td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력" value="부서명"></td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력" value="관리자"></td>
+                        <td><button class="cs-btn2-gray cs-btn-default width100p">담당자 삭제</button></td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력예시"></td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력"></td>
+                        <td><input type="text" class="cs-input width100p" readonly placeholder="‘사용자 찾기’시 자동 입력"></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div id="js_stateChange" class="laymodal width1000" style="display: block;">
+        <div class="laymodal-header">
+          <h2>도시계획위원회 상태 변경</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            시·군·구도시계획위원회 운영이 종료되었으면 ‘운영 종료’ 처리 해주세요.<br>
+            운영 종료 처리 시 심의 결과 등록 등의 업무 수행이 불가능하며, <br>
+            입안 담당자들이 <span class="underline">입안 제안서 자문</span>, <span class="underline">입안 심의</span> 요청 대상 위원회로 선택할 수 없습니다. 
+          </section>
+
+          <section>
+            <div class="modal-sec-title">
+              대상 위원회 정보
+            </div>
+            <div class="board-view-tb _noround">
+              <table>
+                <caption>대상 위원회 정보</caption>
+                <colgroup>
+                  <col class="width200">
+                  <col>
+                  <col class="width200">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>구분</th>
+                    <th>위원회명</th>
+                    <th>운영 기간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>시·군·구도시계획위원회</td>
+                    <td>경기도 하남시 2020년 도시계획위원회</td>
+                    <td>2021-01-01~2022-12-31</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </section>
+
+          <section>
+            <div class="modal-sec-title">
+              상태 변경 처리
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>상태 변경 처리</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>현재 상태</th>
+                    <td class="pcolor-red">운영 중</td>
+                  </tr>
+                  <tr>
+                    <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <input type="radio" class="cs-radio" id="stateGReen">
+                      <label for="stateGReen"><span></span> 운영 종료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>변경 사유</th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="변경 사유" placeholder="종료 사유를 입력해 주세요."></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+            <div class="cs-alert">운영 기간 만료일 전입니다. 조기 운영 종료하시는 경우 먼저 운영 기간을 수정하고 상태를 변경해 주세요.</div>
+          </section>
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js_stateChange');lay_pop_open('#js_stateChangeComlplete')">변경</button>
+        </div>
+      </div>
+
+      <div id="js_stateChangeComlplete" class="laymodal modal-alert width500" style="display: block;">
+        <div class="laymodal-header">
+          <h2>도시계획위원회 상태 변경</h2>
+        </div>
+        <div class="laymodal-content tac">
+          위원회의 상태가 ‘<b class="pcolor-red">운영 종료</b>’로 변경되었습니다. 
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <div class="board-view-tb _tal">
+        <table>
+          <caption>업무 참조 자료 등록</caption>
+          <colgroup>
+            <col class="width140">
+            <col>
+            <col class="width140">
+            <col>
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">등록일</th>
+              <td>2020-12-XX</td>
+              <th scope="row">조회수</th>
+              <td>333</td>
+            </tr>
+            <tr>
+              <th scope="row">등록 기관 </th>
+              <td> 경기도 하남시청 </td>
+              <th scope="row">소속 부서/등록자</th>
+              <td> 도시정책과/홍길동</td>
+            </tr>
+            <tr>
+              <th scope="row">공개 구분 </th>
+              <td> 지정 공개</td>
+              <th scope="row">공개 대상</th>
+              <td> 메뉴 권한 그룹(그룸명 : <span class="pcolor-red">도시·군관리계획 입안 그룹</span>)</td>
+            </tr>
+            <tr>
+              <th scope="row">자료 제목</th>
+              <td colspan="3"> 작성된 제목이 출력됩니다.</td>
+            </tr>
+            <tr>
+              <th scope="row">내용 입력</th>
+              <td colspan="3">
+                작성된 내용이 출력됩니다.<br>
+                작성된 내용이 출력됩니다<br>
+                작성된 내용이 출력됩니다<br>
+                작성된 내용이 출력됩니다
+              </td>
+            </tr>
+            
+            <tr>
+              <th>자료 파일 <i class="icon-required">필수 입력</i><br>(최대 10개)</th>
+              <td colspan="3" class="_p0">
+                <div class="cs-list-file-sum">
+                  <ul class="cs-list-file _type2">
+                    <li>
+                      <strong>제안자가 올린 파일명.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                    <li>
+                      <strong>제안자가 올린 파일명.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                    <li>
+                      <strong>제안자가 올린 파일명.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                    <li>
+                      <strong>제안자가 올린 파일명.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="cs-list-file-sum__btn">
+                    <button type="button" class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

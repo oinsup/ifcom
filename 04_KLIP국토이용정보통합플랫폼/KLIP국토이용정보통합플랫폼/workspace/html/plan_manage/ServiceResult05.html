@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>용역 성과 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>용역 성과 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <form action="ServiceResult06.html">
+        <div class="content board-view">
+  
+          <div class="process-header">
+            <ul class="process-step">
+              <!-- 
+                진행된 탭 일경 우 class = "active"
+                현재 진행중인 탭 class = "active locked"
+               -->
+              <li class="active"><span>1</span> 용역사업, 기본 정보 등록</li>
+              <li class="active"><span>2</span> 계획도서, 계획설명서 등록</li>
+              <li class="active"><span>3</span> 조서, 도면 확인</li>
+              <li class="active locked"><span>4</span> 입안 진행 결과 등록</li>
+              <!-- 0106-2 :: 텍스트수정 -->
+              <li><span>5</span> 고시 등록</li>
+            </ul>
+          </div>
+         
+          <section>
+            <h3 class="cont-hedding1">도시·군관리계획 기본 정보</h3>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>도시·군관리계획 기본 정보</caption>
+                <colgroup>
+                  <col class="width180">
+                  <col>
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="col">계획명</th>
+                    <td>입력한 계획명이 출력됩니다. </td>
+                    <th scope="col">계획 유형</th>
+                    <td>용도지역·용도지구</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h3 class="cont-hedding1">입안 진행 단계별 결과</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb  _noround">
+              <table>
+                <caption>입안 진행 단계별 결과</caption>
+                <colgroup>
+                  <col class="width250">
+                  <col class="width200">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">입안 프로세스 구분</th>
+                    <th scope="col">진행 여부 <i class="icon-required">필수 입력</i></th>
+                    <th scope="col">결과 파일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="tal">관련 부서/행정부처 협의</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate1" id="iptstate1_1" class="cs-radio"><label for="iptstate1_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate1" id="iptstate1_2" class="cs-radio"><label for="iptstate1_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile1" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                    <th scope="row" class="tal">주민 의견 청취</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate2" id="iptstate2_1" class="cs-radio"><label for="iptstate2_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate2" id="iptstate2_2" class="cs-radio"><label for="iptstate2_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile2" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile2" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="tal">의회의견 청취</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate3" id="iptstate3_1" class="cs-radio"><label for="iptstate3_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate3" id="iptstate3_2" class="cs-radio"><label for="iptstate3_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile3" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile3" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="tal">시·군·구 도시계획위원회 심의</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate4" id="iptstate4_1" class="cs-radio"><label for="iptstate4_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate4" id="iptstate4_2" class="cs-radio"><label for="iptstate4_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile5" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile5" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="tal">도 승인</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate5" id="iptstate5_1" class="cs-radio"><label for="iptstate5_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate5" id="iptstate5_2" class="cs-radio"><label for="iptstate5_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile6" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile6" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="tal">도 관련 부서 협의</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate6" id="iptstate6_1" class="cs-radio"><label for="iptstate6_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate6" id="iptstate6_2" class="cs-radio"><label for="iptstate6_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile7" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile7" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="tal">시·도 도시계획위원회 심의</th>
+                    <td>
+                      <div class="cs-gride">
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate7" id="iptstate7_1" class="cs-radio"><label for="iptstate7_1"><span></span> 진행</label>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <input type="radio" name="iptstate7" id="iptstate7_2" class="cs-radio"><label for="iptstate7_2"><span></span> 미진행</label>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="tal">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="iptStepfile8" placeholder="진행하신 경우 결과 파일을 선택해 주세요.">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="iptStepfile8" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>입안 진행 단계를 수행하신 경우 결과 파일을 선택해 주세요.</li>
+            </ul>
+  
+            <!-- 조서다운로드 레이어팝업 -->
+            @@include('../include/modal_alert.html',{
+              'id': 'js__fileDownAlert',
+              'title': '조서 다운로드',
+              'cont': '생성된 조서 정보가 없습니다.<br>용도지역·용도지구 프로그램에서<br>조서 등록 후 시도해 주세요.',
+              'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+            })
+  
+            <!-- 생성 자료 불러오기 레이어팝업 -->
+            @@include('../include/modal_alert.html',{
+              'id': 'js__fileLoadAlert',
+              'title': '생성 자료 불러오기',
+              'cont': '생성된 입안 자료가 없습니다.<br>용도지역·용도지구 프로그램에서 <br>입안 자료(조서, 도면) 생성 후 시도해 주세요.',
+              'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+            })
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="#js__cancel" jq-action="modal" class="cs-btn-line">취소</a>
+            <a href="#js__tempSave" jq-action="modal" class="cs-btn">임시저장</a>
+            <a href="#js__prev" jq-action="modal" class="cs-btn-line">이전</a>
+            <a href="#js__nextAlert" jq-action="modal" class="cs-btn">다음</a>
+            <a href="#js__next" jq-action="modal" class="cs-btn">다음</a>
+          </section>
+
+        </div>
+      </form>
+
+      <!-- 취소 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancel',
+        'title': '용역 성과 등록 취소',
+        'cont': '용역 성과 등록이 취소되었습니다. <br>추후 용역 성과 등록을 계속해서 진행하실 수 있습니다.',
+        'btns': '<a href="ServiceResult01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 임시서장 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__tempSave',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용이 임시저장 되었습니다.',
+        'btns': '<button class="cs-btn" type="button" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 이전 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__prev',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>이전 단계로 이동합니다.',
+        'btns': '<a href="ServiceResult04.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 다음 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__next',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>다음 단계로 이동합니다.',
+        'btns': '<a href="ServiceResult06.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 다음 alert -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__nextAlert',
+        'title': '용역 성과 등록',
+        'cont': '<!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견--><span class="pcolor-red">주민 의견 청취</span><br>진행 여부를 선택해 주세요.',
+        'btns': '<button href="ServiceResult06.html" class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      @@include('../include/modals.html',{'items': 3})
+      @@include('../include/modals.html',{'items': 5})
+      
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

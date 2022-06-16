@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>상위 계획 자료 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>상위 계획 자료 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <section>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>상위 계획 자료 확인</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <td>2020-12-01</td>
+                  <th scope="row">등록자</th>
+                  <td>홍길동</td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 구분</th>
+                  <td colspan="3" class="frm-opt-list">
+                    <input type="radio" name="datacate" id="datacate1" class="cs-radio" checked><label for="datacate1"><span></span> 광역도시계획</label>
+                    <input type="radio" name="datacate" id="datacate2" class="cs-radio"><label for="datacate2"><span></span> 도시·군기본계획</label>
+                    <input type="radio" name="datacate" id="datacate3" class="cs-radio"><label for="datacate3"><span></span> 기타</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목</th>
+                  <td colspan="3">입력한 자료 제목이 출력됩니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">내용 입력</th>
+                  <td colspan="3">
+                    입력한 자료 내용이 출력됩니다.<br>
+                    입력한 자료 내용이 출력됩니다.<br>
+                    입력한 자료 내용이 출력됩니다.<br>
+                    입력한 자료 내용이 출력됩니다. 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 파일 <br>(최대 10개)</th>
+                  <td class="_p0" colspan="3">
+                    <div class="cs-list-file-sum">
+                      <ul class="cs-list-file _type2">
+                        <li>
+                          <strong> 등록된 파일명.zip </strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong> 등록된 파일명.zip </strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>파일은 개당 최대 XXMB까지 등록 가능합니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing11.html" class="cs-btn-line">목록</a>
+          <a href="fileSharing14.html" class="cs-btn">수정</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>상위 계획 자료 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <span class="pcolor-red">광역도시계획</span><br>
+            상위 계획 자료가 등록되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="fileSharing11.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 1})
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

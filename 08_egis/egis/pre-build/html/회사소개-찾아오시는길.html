@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="회사소개">회사소개</a>
+                            </li>
+                            <li>
+                                <a href="#" title="찾아오시는 길">찾아오시는 길</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">LOCATION</span></h1>
+                    </div>
+                    <!--//titArea-->
+                    <!--abilityArea-->
+                    <div class="abilityArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="group">
+                            <strong class="tit">대구</strong>
+                            <div class="flex">
+                                <p class="loca">대구광역시 수성구 알파시티1로 31길 2, 4층 &nbsp;&nbsp;<br class="mobile" /><span>Tel
+                                        053.476.2395</span><span>Fax 053.474.2396</span></p>
+                            </div>
+                            <div class="mapArea">
+                                <img src="../images/common/img-mapdaegu.png" alt="대구 지도">
+                            </div>
+                        </div>
+                        <div class="group">
+                            <strong class="tit">연구소</strong>
+                            <div class="flex">
+                                <p class="loca">서울특별시 구로구 디지털로26길 111 (구로동, 제이앤케이디지털타워) 1501호　<span>Tel
+                                        02.576.2395</span><span>Fax 02.576.2396</span></p>
+                            </div>
+                            <div class="mapArea">
+                                <img src="../images/common/img-maplab.png" alt="서울 연구소 지도">
+                            </div>
+                        </div>
+                        <!-- <div class="group">
+                            <strong class="tit">서울</strong>
+                            <div class="flex">
+                                <p class="loca">서울특별시 강남구 선릉로 427, 효제빌딩 12층</p>
+                            </div>
+                            <div class="mapArea"></div>
+                        </div> -->
+                    </div>
+                    <!--abilityArea-->
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+    <script type="text/javascript" src="../lib/counterUp/jquery.counterup.min.js"></script>
+    <script>
+        $('.num').counterUp({
+            delay: 10,
+            time: 500
+        });
+    </script>
+</body>
+
+</html>

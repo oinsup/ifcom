@@ -1,0 +1,109 @@
+
+
+
+<div id="js__charge3" class="laymodal width700" tabindex="0">
+  <div class="laymodal-header">
+    <h2>담당자 지정 처리</h2>
+  </div>
+  <div class="laymodal-content">
+    <!-- laymodal-content -->
+    <div class="tar mb5"><i class="icon-required">필수 입력</i>필수 입력</div>
+    <div class="board-view-tb _noround _tal">
+      <table>
+        <caption>담당자 지정 처리</caption>
+        <colgroup>
+          <col class="width130">
+          <col>
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+            <td colspan="3">
+              <div class="cs-gride">
+                <div class="cs-gride-col6">
+                  <input type="radio" name="chargeState" class="cs-radio" id="chargeState12">
+                  <label for="chargeState12"><span></span> 전자심의 진행</label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">결정권자 <i class="icon-required">필수 입력</i></th>
+            <td class="frm-opt-list" colspan="3">
+              <input type="radio" name="decision" class="cs-radio" id="decision1"><label for="decision1"><span></span> 담당자</label>
+              <input type="radio" name="decision" class="cs-radio" id="decision2"><label for="decision2"><span></span> 내부결재(KLIP)</label>
+              <input type="radio" name="decision" class="cs-radio" id="decision3"><label for="decision3"><span></span> 전자결재(온-나라시스템)</label>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="3">결정권자 <i class="icon-required">필수 입력</i></th>
+            <th class="tac">1차 <i class="icon-required">필수 입력</i></th>
+            <th class="tac">2차</th>
+            <th class="tac">3차</th>
+          </tr>
+          <tr>
+            <td>
+              <select class="cs-input width100p" title="부서 선택">
+                <option>부서선택</option>
+              </select>
+            </td>
+            <td>
+              <select class="cs-input width100p" title="부서 선택">
+                <option>부서선택</option>
+              </select>
+            </td>
+            <td>
+              <select class="cs-input width100p" title="부서 선택">
+                <option>부서선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select class="cs-input width100p" title="사용자 선택">
+                <option>사용자 선택</option>
+              </select>
+            </td>
+            <td>
+              <select class="cs-input width100p" title="사용자 선택">
+                <option>사용자 선택</option>
+              </select>
+            </td>
+            <td>
+              <select class="cs-input width100p" title="사용자 선택">
+                <option>사용자 선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">요청 제목 <i class="icon-required">필수 입력</i></th>
+            <td colspan="3">
+              <input type="text" class="cs-input width100p" placeholder="요청 제목 입력" title="요청 제목">
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">요청 사항 <i class="icon-required">필수 입력</i></th>
+            <td colspan="3">
+              <textarea cols="30" rows="5" class="cs-input width100p" placeholder="요청 내용 입력" title="요청 사항"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">참조 자료</th>
+            <td colspan="3">
+              전자심의 요청 시 등록하신 자료가 자동 첨부 됩니다.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cs-alert">상태값을 선택해 주세요.</div>
+    
+    <!--// laymodal-content -->
+  </div>
+  <div class="laymodal-footer cs-btn-set">
+    <button type="button" class="cs-btn-line _wauto" jq-action="closeModal">취소</button>
+    <button type="button" class="cs-btn _wauto" jq-action="closeModal">확인</button>
+  </div>
+</div>
+

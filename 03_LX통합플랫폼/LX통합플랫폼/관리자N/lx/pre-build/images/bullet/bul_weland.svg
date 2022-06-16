@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="18" viewBox="0 0 121 18">
+  <g id="bul_weland" transform="translate(-1349 -381)">
+    <rect id="사각형_4121" data-name="사각형 4121" width="121" height="18" rx="5" transform="translate(1349 381)" fill="#333"/>
+    <text id="WeLand_바로가기" data-name="WeLand 바로가기" transform="translate(1354 395)" fill="#fff" font-size="12" font-family="S-CoreDream-4Regular, 'S-Core Dream \34 '"><tspan x="0" y="0">WeLand 바로가기</tspan></text>
+    <g id="그룹_48006" data-name="그룹 48006" transform="translate(0 1)">
+      <path id="사각형_23023" data-name="사각형 23023" d="M1.4,1.4V6.6H6.6V1.4H1.4M0,0H8V8H0Z" transform="translate(1454 386)" fill="#dee1e3"/>
+      <rect id="사각형_23024" data-name="사각형 23024" width="7" height="7" transform="translate(1457 384)" fill="#333"/>
+      <g id="그룹_48005" data-name="그룹 48005">
+        <path id="패스_30858" data-name="패스 30858" d="M1458,390.328a.7.7,0,0,1-.483-1.207l4.161-3.962a.7.7,0,0,1,.965,1.014l-4.161,3.962A.7.7,0,0,1,1458,390.328Z" transform="translate(0 0.372)" fill="#dee1e3"/>
+        <path id="패스_30859" data-name="패스 30859" d="M1462.484,389.934a.7.7,0,0,1-.7-.7v-3.009l-2.744-.025a.7.7,0,0,1,.006-1.4h.006l4.131.038v4.4A.7.7,0,0,1,1462.484,389.934Z" fill="#dee1e3"/>
+      </g>
+    </g>
+  </g>
+</svg>

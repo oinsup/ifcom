@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">매뉴얼&프로그램&양식 수정 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>매뉴얼&프로그램&양식 수정</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">이용 지원 관리</a></li>
+                                <li><a href="#">매뉴얼&프로그램&양식 수정</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: 430px;">
+                                <col style="width: 160px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">등록일/등록자</th>
+                                <td>2021-11-01 13:00/관리자명</td>
+                                <th scope="row">다운로드 수</th>
+                                <td>123</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">파일 분류<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad04" id="rad09" checked>
+                                            <label for="rad09"><span>사용자 매뉴얼</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad04" id="rad10">
+                                            <label for="rad10"><span>프로그램</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad04" id="rad11">
+                                            <label for="rad11"><span>양식</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="">파일 제목<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea">
+                                        <input type="text" class="grayType wd350" placeholder="등록된 파일 제목이 출력됩니다." maxlength="25">
+                                        <p class="textCount"><span>0</span>/25자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">파일 버전<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea">
+                                        <p>V</p>
+                                        <input type="text" class="grayType wd370" placeholder="1.0">
+                                    </div>
+                                </td>
+                                <th scope="row"><label for="">배포일<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="calGroup">
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="line-height: 18px;"><label for="">파일<span class="redDot">•</span><br/><span style="font-size: 14px;">(최대 5MB)</span></label></th>
+                                <td colspan="3">
+                                    <div class="fileArea">
+                                        <p class="fileName">등록된 파일이 없습니다.</p>
+                                    </div>
+                                    <div class="fileArea">
+                                        <input type="file" id="" class="hidden">
+                                        <p class="fileName blackType">업로드된 파일이 있는 경우에만 파일명 출력.jpg</p>
+                                        <button type="button" class="btn gray flRight">파일 변경</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">노출 상태<span class="redDot">•</span></label></th>
+                                <td colspan="3">
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad05" id="rad12" checked>
+                                            <label for="rad12"><span>비노출</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad05" id="rad13">
+                                            <label for="rad13"><span>노출</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--btnArea-->
+                    <div class="btnArea01 center">
+                        <button type="button" class="btn white middle">목록</button>
+                        <button type="button" class="btn dkBlue middle">삭제</button>
+                        <button type="button" class="btn dkBlue middle">수정</button>
+                    </div>
+                    <!--//btnArea-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

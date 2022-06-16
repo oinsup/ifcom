@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* reset */
+        html,
+        body,
+        div,
+        span,
+        object,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        a,
+        button,
+        abbr,
+        address,
+        img,
+        q,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        footer,
+        header,
+        section,
+        summary {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        button {
+            display: inline-block;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        input,
+        button,
+        a,
+        select,
+        option {
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        input[type="checkbox"] {
+            border: none !important;
+        }
+
+        /* for lte IE10 */
+        input[type="radio"] {
+            border: none !important;
+        }
+
+        /* for lte IE10 */
+        caption {
+            text-align: left;
+            margin-bottom: 7px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* common */
+        body,
+        html,
+        pre {
+            font-family: "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+            font-size: 14px;
+            color: #333;
+            letter-spacing: -0.045em !important;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clearFix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .hidden {
+            margin: 0;
+            padding: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .txt-center {
+            text-align: center;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #wrap {
+            padding-bottom: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px 0 10px;
+        }
+
+        table {
+            width: 98%;
+            margin: 20px auto 0;
+            border-top: 2px solid #787d81;
+        }
+
+        th {
+            background: #777f88;
+            color: #fff;
+        }
+
+        th,
+        td {
+            height: 30px;
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th:first-child,
+        td:first-child {
+            border-left: 0;
+        }
+        .textDeco {
+            text-decoration: line-through;
+            pointer-events: none;
+        }
+    </style>
+    <title>EGIS 코딩리스트</title>
+</head>
+
+<body>
+
+    <div id="wrap">
+        <h1>EGIS 코딩리스트</h1>
+        <table>
+            <caption>메인/로그인/공통</caption>
+            <colgroup>
+                <col style="width:5%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="width:15%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="*" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1depth</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">파일명</th>
+                    <th scope="col">업데이트일자</th>
+                    <th scope="col">작업자</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td title="1depth">메인</td>
+                    <td title="2depth"></td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="main.html" target="_blank">main.html</a></td>
+                    <td title="업데이트일자">2022-02-03</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">로그인</td>
+                    <td title="2depth"></td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="login.html" target="_blank">login.html</a></td>
+                    <td title="업데이트일자">2022-04-18</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>서브페이지</caption>
+            <colgroup>
+                <col style="width:5%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="width:15%" />
+                <col style="width:10%" />
+                <col style="width:10%" />
+                <col style="*" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">1depth</th>
+                    <th scope="col">2depth</th>
+                    <th scope="col">3depth</th>
+                    <th scope="col">파일명</th>
+                    <th scope="col">업데이트일자</th>
+                    <th scope="col">작업자</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td title="1depth">지원</td>
+                    <td title="2depth"></td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="지원.html" target="_blank">지원.html</a></td>
+                    <td title="업데이트일자">2022-02-03</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">공지사항</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="커뮤니티-공지사항.html" target="_blank">커뮤니티-공지사항.html</a></td>
+                    <td title="업데이트일자">2022-02-03</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">공지사항</td>
+                    <td title="3depth">상세</td>
+                    <td title="파일명"><a href="커뮤니티-공지사항_상세.html" target="_blank">커뮤니티-공지사항_상세.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">News</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="커뮤니티-News.html" target="_blank">커뮤니티-News.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">News</td>
+                    <td title="3depth">상세</td>
+                    <td title="파일명"><a class="textDeco" href="커뮤니티-News_상세.html" target="_blank">커뮤니티-News_상세.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">동영상</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="커뮤니티-동영상.html" target="_blank">커뮤니티-동영상.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">동영상</td>
+                    <td title="3depth">팝업</td>
+                    <td title="파일명"><a class="textDeco" href="커뮤니티-동영상_팝업.html" target="_blank">커뮤니티-동영상_팝업.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">Job Board</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="커뮤니티-jobboard.html" target="_blank">커뮤니티-jobboard.html</a></td>
+                    <td title="업데이트일자">2022-03-24</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">커뮤니티</td>
+                    <td title="2depth">Job Board</td>
+                    <td title="3depth">상세</td>
+                    <td title="파일명"><a href="커뮤니티-jobboard_상세.html" target="_blank">커뮤니티-jobboard_상세.html</a></td>
+                    <td title="업데이트일자">2022-03-24</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">회사소개 및 비전</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-회사소개및비전.html" target="_blank">회사소개-회사소개및비전.html</a></td>
+                    <td title="업데이트일자">2022-02-04</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">연혁</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-연혁.html" target="_blank">회사소개-연혁.html</a></td>
+                    <td title="업데이트일자">2022-02-07</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">연혁</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-역량.html" target="_blank">회사소개-역량.html</a></td>
+                    <td title="업데이트일자">2022-02-07</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">조직도</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-조직도.html" target="_blank">회사소개-조직도.html</a></td>
+                    <td title="업데이트일자">2022-02-08</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">CI</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-CI.html" target="_blank">회사소개-CI.html</a></td>
+                    <td title="업데이트일자">2022-02-08</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">회사소개</td>
+                    <td title="2depth">찾아오시는 길</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="회사소개-찾아오시는길.html" target="_blank">회사소개-찾아오시는길.html</a></td>
+                    <td title="업데이트일자">2022-02-08</td>
+                    <td title="작업자">오인섭</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">제품군</td>
+                    <td title="2depth">xdpro</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="제품군-xdpro.html" target="_blank">제품군-xdpro.html</a></td>
+                    <td title="업데이트일자">2022-02-21</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">제품군</td>
+                    <td title="2depth">xdbuild</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="제품군-xdbuild.html" target="_blank">제품군-xdbuild.html</a></td>
+                    <td title="업데이트일자">2022-02-28</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">제품군</td>
+                    <td title="2depth">xdcloud</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="제품군-xdcloud.html" target="_blank">제품군-xdcloud.html</a></td>
+                    <td title="업데이트일자">2022-02-28</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+
+                <tr>
+                    <td title="1depth">교육</td>
+                    <td title="2depth">개발자지원사이트</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="교육-개발자지원사이트.html" target="_blank">교육-개발자지원사이트.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">교육</td>
+                    <td title="2depth">교육센터</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="교육-교육센터.html" target="_blank">교육-교육센터.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">플랫폼</td>
+                    <td title="2depth">디지털트윈</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="플랫폼-디지털트윈.html" target="_blank">플랫폼-디지털트윈.html</a></td>
+                    <td title="업데이트일자">2022-03-03</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">플랫폼</td>
+                    <td title="2depth">메타버스</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="플랫폼-메타버스.html" target="_blank">플랫폼-메타버스.html</a></td>
+                    <td title="업데이트일자">2022-03-03</td>
+                    <td title="작업자">양선희</td>
+                    <td title="비고"></td>
+                </tr>
+
+                <tr>
+                    <td title="1depth">솔루션</td>
+                    <td title="2depth">재난안전</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="솔루션-재난안전.html" target="_blank">솔루션-재난안전.html</a></td>
+                    <td title="업데이트일자">2022-02-28</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">솔루션</td>
+                    <td title="2depth">시설관리</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="솔루션-시설관리.html" target="_blank">솔루션-시설관리.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">솔루션</td>
+                    <td title="2depth">통합관제</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="솔루션-통합관제.html" target="_blank">솔루션-통합관제.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">솔루션</td>
+                    <td title="2depth">빅데이터 인공지능</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="솔루션-빅데이터인공지능.html" target="_blank">솔루션-빅데이터인공지능.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+                <tr>
+                    <td title="1depth">솔루션</td>
+                    <td title="2depth">디지털트윈활용</td>
+                    <td title="3depth"></td>
+                    <td title="파일명"><a href="솔루션-디지털트윈활용.html" target="_blank">솔루션-디지털트윈활용.html</a></td>
+                    <td title="업데이트일자">2022-03-02</td>
+                    <td title="작업자">조상원</td>
+                    <td title="비고"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>

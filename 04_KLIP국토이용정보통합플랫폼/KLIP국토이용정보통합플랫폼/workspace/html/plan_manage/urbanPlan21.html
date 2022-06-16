@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <!-- 1229 :: 텍스트변경 -->
+          <li>도시·군관리계획 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <!-- 1229 :: 텍스트변경 -->
+        <h2>도시·군관리계획 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="urbanPlan01.html">입안 진행</a>
+        <a href="ServiceResult01.html">용역 성과</a>
+        <a href="UrbanPlan11.html">고시</a>
+        <a href="urbanPlan21.html" class="active">의제</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>국토계획법 제42조(다른 법률에 따라 지정된 지역의 용도지역 지정 등의 의제)에 의거하여 소속 기관과 관련된 의제 내역을 등록하고 관리하실 수 있습니다.</li>
+            <li>입안은 타 법과 관련된 기관에서 시행하되, 도면 및 속성정보 등재에 대해서는 관할 도시·군관리계획 담당 부서에서 현행화해주셔야 합니다.</li>
+            <li>의제에 의한 도면 변경 고시 등이 필요한 경우 ‘도시·군관리계획 입안’ 메뉴에서 업무를 수행해 주세요.</li>
+            <li>본 메뉴는 본인이 등록한 내역만 조회되며, 모든 고시를 확인하고자 하시는 경우 <span class="underline">고시 정보 조회</span> 메뉴를 이용해 주세요.</li>
+          </ul>
+          <a href="urbanPlan22.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">고시 기관</strong>
+                <div class="__col-full">
+                  <select name="" class="cs-input" title="고시 기관 선택">
+                    <option>전체</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <strong class="__tit">의제 유형</strong>
+                <!-- 201203 :: 수정 -->
+                <div class="__col-full">
+                  <select name="" class="cs-input" title="의제유형">
+                    <option>전체</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="고시 번호, 고시 제목 입력">
+                </div>
+              </div>
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">결정</a></li>
+              <li><a href="#">변경</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="btn-down-excel">다운로드</a>
+            <a href="#" class="active">고시일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">고시 번호</a>
+            <a href="#">고시 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>도시·군기본계획 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width120">
+                <col class="width130">
+                <col class="width90">
+                <col>
+                <col class="width120">
+                <col class="width95">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">고시일</th>
+                  <th scope="col">고시 기관</th>
+                  <th scope="col">고시 번호</th>
+                  <th scope="col">고시 유형</th>
+                  <th scope="col">고시 제목</th>
+                  <th scope="col">의제 유형</th>
+                  <th scope="col">고시문</th>
+                  <th scope="col">도면</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>2020-10-15</td>
+                  <td>해양수산부</td>
+                  <td>제2020-1872호</td>
+                  <td>변경</td>
+                  <td class="tal"><a href="urbanPlan23.html">OO지구 경지정리사업 환지 계획</a></td>
+                  <td>농업진흥지역, 보전산지</td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                  <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="8">
+                    등록된 의제 고시가 없습니다.                   
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    검색하신 결과가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>고시 제목을 클릭하시면 등록된 고시의 상세 정보 확인이 가능합니다.</li>
+        </ul>
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="540">
+    <defs>
+        <style>
+            .cls-3{stroke:#72bf44;stroke-width:3px;fill:#fff}.cls-4{font-size:34px}.cls-3{opacity:.6}.cls-4{fill:#333;font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR}.cls-5,.cls-7{fill:none}.cls-5{stroke:#b1b1b1;stroke-linecap:round;stroke-width:4px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="그룹_1235" data-name="그룹 1235" transform="translate(-649 -1172)">
+        <g id="그룹_2195" data-name="그룹 2195" transform="translate(236.917 400)">
+            <g id="사각형_285" data-name="사각형 285" style="stroke:#72bf44;stroke-width:3px;fill:#72bf44">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(702.083 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(702.083 1172)"/>
+            </g>
+            <text id="소유권_이전" data-name="소유권 이전" transform="translate(822.083 1256)" style="font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;font-size:34px;fill:#fff"><tspan x="-82.025" y="0">소유권 이전</tspan></text>
+        </g>
+        <g id="그룹_1233" data-name="그룹 1233" transform="translate(229 200)">
+            <g id="사각형_285-2" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(710 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(710 1172)"/>
+            </g>
+            <text id="매각_대금_및_계약방법_결정" data-name="매각 대금 및 계약방법 결정" class="cls-4" transform="translate(830 1234)"><tspan x="-85.816" y="0">매각 대금 및</tspan><tspan x="-97.648" y="44">계약방법 결정</tspan></text>
+        </g>
+        <g id="그룹_2196" data-name="그룹 2196" transform="translate(-61 200)">
+            <g id="사각형_285-3" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(710 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(710 1172)"/>
+            </g>
+            <text id="계약체결" class="cls-4" transform="translate(830 1256)"><tspan x="-62.56" y="0">계약체결</tspan></text>
+        </g>
+        <g id="그룹_2197" data-name="그룹 2197" transform="translate(-61 400)">
+            <g id="사각형_285-4" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(710 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(710 1172)"/>
+            </g>
+            <text id="매각_대금_납부" data-name="매각 대금 납부" class="cls-4" transform="translate(830 1256)"><tspan x="-101.456" y="0">매각 대금 납부</tspan></text>
+        </g>
+        <g id="그룹_1232" data-name="그룹 1232" transform="translate(501.083 200)">
+            <g id="사각형_285-5" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(727.917 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(727.917 1172)"/>
+            </g>
+            <text id="용도폐지" class="cls-4" transform="translate(847.917 1256)"><tspan x="-62.56" y="0">용도폐지</tspan></text>
+        </g>
+        <g id="그룹_1231" data-name="그룹 1231" transform="translate(509)">
+            <g id="사각형_285-6" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(720 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(720 1172)"/>
+            </g>
+            <text id="현장방문_사용계획조회" data-name="현장방문/ 사용계획조회" class="cls-4" transform="translate(840 1231)"><tspan x="-69.224" y="0">현장방문/</tspan><tspan x="-93.84" y="44">사용계획조회</tspan></text>
+        </g>
+        <g id="그룹_1230" data-name="그룹 1230" transform="translate(229)">
+            <g id="사각형_285-7" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(710 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(710 1172)"/>
+            </g>
+            <text id="접수_지역본부_" data-name="접수 (지역본부)" class="cls-4" transform="translate(830 1231)"><tspan x="-31.28" y="0">접수</tspan><tspan x="-74.052" y="44">(지역본부)</tspan></text>
+        </g>
+        <path id="패스_1595" data-name="패스 1595" class="cls-5" d="m5599 3836.667 12.181 18.171-12.181 16.435" transform="translate(-4691.181 -2611.44)"/>
+        <path id="패스_10244" data-name="패스 10244" class="cls-5" d="m5599 3836.667 12.181 18.171-12.181 16.435" transform="translate(-4691.181 -2209.5)"/>
+        <path id="패스_10239" data-name="패스 10239" class="cls-5" d="m5599 3836.667 12.181 18.171-12.181 16.435" transform="translate(-4401 -2611.44)"/>
+        <path id="패스_10240" data-name="패스 10240" class="cls-5" d="m5611.181 3836.667-12.181 18.17 12.181 16.436" transform="translate(-4401.181 -2411.97)"/>
+        <path id="패스_10242" data-name="패스 10242" class="cls-5" d="M12.181 34.606 0 16.436 12.181 0" transform="rotate(-90 1339.393 7.696)"/>
+        <path id="패스_10243" data-name="패스 10243" class="cls-5" d="M12.181 34.606 0 16.436 12.181 0" transform="rotate(-90 1149.394 397.696)"/>
+        <path id="패스_10241" data-name="패스 10241" class="cls-5" d="m5611.181 3836.667-12.181 18.17 12.181 16.436" transform="translate(-4691 -2411.97)"/>
+        <g id="그룹_1229" data-name="그룹 1229" transform="translate(-80)">
+            <g id="사각형_285-8" data-name="사각형 285" class="cls-3">
+                <path class="cls-6" d="M0 0h240v140H0z" transform="translate(729 1172)"/>
+                <path class="cls-7" d="M1.5 1.5h237v137H1.5z" transform="translate(729 1172)"/>
+            </g>
+            <text id="신청서_제출_방문_우편_" data-name="신청서 제출 (방문/우편)" class="cls-4" transform="translate(849 1231)"><tspan x="-82.008" y="0">신청서 제출</tspan><tspan x="-80.716" y="44">(방문/우편)</tspan></text>
+        </g>
+    </g>
+</svg>

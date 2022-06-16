@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 입안 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 입안 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="urbanPlan01.html">입안 진행</a>
+        <a href="ServiceResult01.html">용역 성과</a>
+        <a href="working1.html" class="active">고시</a>
+        <a href="urbanPlan21.html">의제</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <div class="js__working"></div>
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">업무 등록 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>업무 등록</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">새 소식 관리</a></li>
+                                <li><a href="#">업무 등록</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: 1030px;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><label for="">기관 구분<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad06" id="rad14" checked>
+                                            <label for="rad14"><span>전국</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad06" id="rad15">
+                                            <label for="rad15"><span>기관별</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!-- select -->
+                                        <select name="" id="" class="grayType wd180 ml-22">
+                                            <option value="">광역시·도 선택</option>
+                                        </select>
+                                        <!-- //select -->
+                                        <!-- select -->
+                                        <select name="" id="" class="grayType wd180">
+                                            <option value="">시·군·구 선택</option>
+                                        </select>
+                                        <!-- //select -->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 기간<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="calGroup">
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                        <span class="hyphen">~</span>
+                                        <input type="text" class="cal grayType wd180" id="" placeholder="2021-07-02">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 구분<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="radioGroup">
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad07" id="rad16" checked>
+                                            <label for="rad16"><span>기능</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad07" id="rad17">
+                                            <label for="rad17"><span>DB</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad07" id="rad18">
+                                            <label for="rad18"><span>회의</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad07" id="rad19">
+                                            <label for="rad19"><span>정기점검</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                        <!--radio-->
+                                        <div class="radio">
+                                            <input type="radio" name="rad07" id="rad20">
+                                            <label for="rad20"><span>기타</span></label>
+                                        </div>
+                                        <!--//radio-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">업무 내용<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea">
+                                        <textarea name="" id="" class="blackType wd900" cols="30" rows="10" maxlength="500" placeholder="업무 내용 입력(예. [DB개선] OO광역시 DD 관련 OOO작업을 진행합니다."></textarea>
+                                        <p class="textCount"><span>0</span>/500자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--btnArea-->
+                    <div class="btnArea01 center">
+                        <button type="button" class="btn white middle">등록 취소</button>
+                        <button type="button" class="btn dkBlue middle">등록</button>
+                    </div>
+                    <!--//btnArea-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

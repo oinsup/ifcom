@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '활용 정보 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="infoManage01.html">정보연계 관리</a></li>
+          <li>활용 정보 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>활용 정보 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+
+        <section>
+          <h3 class="cont-hedding1">활용 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>활용 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일/등록자</th>
+                  <td>2021-11-01 15:10/담당자명 출력</td>
+                  <th scope="row">상태</th>
+                  <td class="pcolor-red">대기</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 정보명</th>
+                  <td>일반지도(국문)</td>
+                  <th scope="row">활용 기간</th>
+                  <td>2021-01-01~2099-12-31</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 정보 설명</th>
+                  <td colspan="3">국토이용정보통합플랫폼에서의 필지 정보 조회, 위치 조회 시 배경지도로 사용되는 일반지도를 연계합니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">활용 방식</th>
+                  <td>WMTS(Web Map Tile Service)</td>
+                  <th scope="row">데이터 포맷</th>
+                  <td>JSON+XML</td>
+                </tr>
+                <tr>
+                  <th scope="row">데이터 갱신</th>
+                  <td>운영(운영자에 의한 업데이트)</td>
+                  <th scope="row">비고</th>
+                  <td>입력된 경우에만 출력</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">제공 기관 및 서비스 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>제공 기관 및 서비스 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">제공 기관</th>
+                  <td>국토지리정보원</td>
+                  <th scope="row">부서명</th>
+                  <td>입력한 경우에만 부서명 출력</td>
+                </tr>
+                <tr>
+                  <th scope="row">담당자명</th>
+                  <td>입력한 경우 출력</td>
+                  <th scope="row">문의처</th>
+                  <td>031-210-2700</td>
+                </tr>
+                <tr>
+                  <th scope="row">서비스명</th>
+                  <td>국토정보플랫폼 오픈API</td>
+                  <th scope="row">서비스 URL</th>
+                  <td>
+                    <a href="http://map.ngii.go.kr/mi/openKey/openKeyInfo.do" target="_blank" title="국토정보플랫폼 오픈API소개 (새창으로) 열기">http://map.ngii.go.kr/mi/openKey/openKeyInfo.do</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>협의 문서</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- 등록된 파일 없을 경우 -->
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">오퍼레이션 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>오퍼레이션 정보</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+
+
+                <tr>
+                  <th>연동 규격서</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- 등록된 파일 없을 경우 -->
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>등록된 연동 규격서가 없습니다<div class=""></div></strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="col" class="tac" colspan="2">API 정보(테스트)</th>
+                  <th scope="col" class="tac" colspan="2">API 정보(서비스)</th>
+                </tr>
+                <tr>
+                  <th>호출 URL</th>
+                  <td>선택값으로 입력한 경우에만 출력</td>
+                  <th>호출 URL</th>
+                  <td>http://map.ngii.go.kr/aaaaaaaaaaaaa</td>
+                </tr>
+                <tr>
+                  <th>인증키</th>
+                  <td>선택값으로 입력한 경우에만 출력</td>
+                  <th>인증키</th>
+                  <td>04trYP9_xwLAfALjwZ-B8g</td>
+                </tr>
+                <tr>
+                  <th>작업 주기</th>
+                  <td class="tcolor-gray2">테스트는 등록 불필요</td>
+                  <th>작업 주기</th>
+                  <td>매일/01:00:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="infoManage01.html" class="cs-btn-line">목록</a>
+          <button jq-action="modal" jq-target="#js__delete" class="cs-btn">삭제</button>
+          <a href="infoManage04.html" class="cs-btn">수정</a>
+        </section>
+
+        <div id="js__delete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+          <div class="laymodal-header">
+            <h2>활용 정보 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <p>
+              삭제된 내용은 복구할 수 없습니다.<br>
+              삭제하시겠습니까?
+            </p>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button jq-action="closeModal" class="cs-btn-line">취소</button>
+            <button type="button" onclick="lay_pop_close();lay_pop_open('#js__deleteComplete')" class="cs-btn">확인</button>
+          </div>
+        </div>
+
+        <div id="js__deleteComplete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+          <div class="laymodal-header">
+            <h2>활용 정보 삭제</h2>
+          </div>
+          <div class="laymodal-content tac">
+            활용 정보가 삭제되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="infoManage01.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+      </div>
+
+
+      @@include('../include/modals.html',{'items': 1})
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

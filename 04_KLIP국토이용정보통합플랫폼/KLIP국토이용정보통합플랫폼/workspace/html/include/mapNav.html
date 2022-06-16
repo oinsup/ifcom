@@ -1,0 +1,17 @@
+<style>
+  .mapnavs a{display: inline-block;font-size:14px;text-decoration: none;color: #000;line-height:35px;box-sizing: border-box;}
+  .mapnavs a + a{margin-left: 10px;}
+  .mapnavs a.active{font-weight: 900;border-bottom:2px solid #000;color: blue;border-color:blue;}
+  .mapnavs{position: fixed;top:0;background:#f0f0f0;left:0;width:100%;padding:0 20px;}
+
+  body{padding-top: 50px;}
+</style>
+<nav class="mapnavs">
+  <a href="@@webRoot/01_메인페이지_공통영역.html" @@if(tab===1){class="active"}>01_메인페이지_공통영역</a>
+  <a href="@@webRoot/02_로그인_사용권한신청_입안제안.html" @@if(tab===2){class="active"}>02_로그인</a>
+  <a href="@@webRoot/04_입안관리_.html" @@if(tab===4){class="active"}>04_입안관리</a>
+  <a href="@@webRoot/05_고시정보조회.html" @@if(tab===5){class="active"}>05_고시정보조회</a>
+  <a href="@@webRoot/06_정보조회.html" @@if(tab===6){class="active"}>06_정보조회</a>
+  <a href="@@webRoot/10_시스템_운영_관리.html" @@if(tab===10){class="active"}>10_시스템 운영 관리</a>
+  <a href="@@webRoot/11_자료실.html" @@if(tab===11){class="active"}>11_자료실</a>
+</nav>

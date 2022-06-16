@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안 관리', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>전자결재 내역 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>전자결재 내역 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>국토이용정보통합플랫폼에서 전자결재로 기안한 내역의 상태를 확인하실 수 있습니다. (본인이 기안한 내용만 확인 가능)</li>
+            <li>상신 중에는 기안 제목 클릭 후 ‘기안문 확인’ 페이지로 이동하여 결재자별 결재 결과 확인이 가능합니다.</li>
+          </ul>
+        </div>
+
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">업무 구분</strong>
+                <div class="__col-full">
+                  <select name="" class="cs-input" title="업무 구분">
+                    <option value="#">전체</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">기안일</strong>
+                <div class="cs-datepicker-set" data-mindate="2020-10-10" data-maxdate="2020-11-11">
+                  <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" value="2019-01-01">
+                  <div>~</div>
+                  <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" value="2020-01-01">
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="문서번호 (-제외), 기안 제목(공백없이)입력">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+        <!-- 전체 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">기안일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">기안일 <i class="sort-asc"></i></a> -->
+            <a href="#">기안 제목</a>
+            <a href="#">결재 상태</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara03.html"><span class="pcolor-red">[재기안]</span> 입력한 기안문의 제목이 출력</a></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>기안</td>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>상신</td>
+                </tr>
+                <tr>
+                  <td colspan="9">기안 내역이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="9">검색하신 결과가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            ‘기안 제목’을 클릭하시면 기안문 확인 페이지로 이동하며, 기안 내용 및 결재자별 결재 상태를 확인하실 수 있습니다.<br>
+            (리스트 화면에서 보여지는 결재 상태는 상세 페이지에 접속하여 조회한 결과를 의미하며, 기안문 확인 페이지에 접속하지 않은 경우에는 상태가 표시되지 않습니다.)
+          </li>
+          <li>
+            하나의 문서로 여러 명에게 상신한 경우 모든 결재자의 결과 값이 확인되기 전까지는 ‘상신’으로 상태가 표현됩니다. <br>
+            (모든 결재자의 결재가 완결되기 전까지는 ‘기안 제목‘ 클릭 후 기안문 확인 페이지에 접속하여 세부 결과를 확인해 주세요)
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 기안 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li class="active"><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#" class="active">기안일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력 <span class="pcolor-red">- 발송 실패</span></a></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>기안</td>
+                </tr>
+                <tr>
+                  <td colspan="8">기안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>온-나라 시스템의 ‘<span class="underline pcolor-red">나의 기안함</span>’에 접속하여 결재자를 지정하고 상신하신 경우 ‘기안 제목’을 클릭하신 후 결재 상태를 조회해 주세요. </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <!-- 상신 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li class="active"><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#">기안일</a>  
+            <a href="#" class="active">상신일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td colspan="9">상신된 기안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>
+            하나의 문서로 여러 명에게 상신한 경우 모든 결재자의 결과 값이 확인되기 전까지는 ‘상신’으로 상태가 표현됩니다. <br>
+            (모든 결재자의 결재가 완결되기 전까지는 ‘기안 제목‘ 클릭 후 기안문 확인 페이지에 접속하여 세부 결과를 확인해 주세요)
+          </li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 승인 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li class="active"><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#">기안일</a>  
+            <a href="#" class="active">상신일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>승인</td>
+                </tr>
+                <tr>
+                  <td colspan="9">승인된 기안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 반려 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li class="active"><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#">기안일</a>  
+            <a href="#" class="active">상신일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>반려</td>
+                </tr>
+                <tr>
+                  <td colspan="9">반려된 기안 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+
+        <!-- 미결 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li class="active"><a href="#">미결</a></li>
+              <li><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#">기안일</a>  
+            <a href="#" class="active">상신일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>미결</td>
+                </tr>
+                <tr>
+                  <td colspan="9">미결된 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+        <!-- 기안 취소 -->
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li><a href="#">전체</a></li>
+              <li><a href="#">기안</a></li>
+              <li><a href="#">상신</a></li>
+              <li><a href="#">승인</a></li>
+              <li><a href="#">반려</a></li>
+              <li><a href="#">미결</a></li>
+              <li class="active"><a href="#">기안 취소</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <a href="#">기안일</a>  
+            <a href="#" class="active">기안 취소일 <i class="sort-desc"></i></a>  
+            <a href="#">문서번호</a>
+            <a href="#">기안 제목</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>전자결재 내역 관리</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col class="width120">
+                <col>
+                <col class="width90">
+                <col class="width90">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">기안일</th>
+                  <th scope="col">상신일</th>
+                  <th scope="col">업무 구분</th>
+                  <th scope="col">문서번호</th>
+                  <th scope="col">기안 제목</th>
+                  <th scope="col">결재 요청</th>
+                  <th scope="col">결재 완료</th>
+                  <th scope="col">결재 상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>2020-10-15</td>
+                  <td>2020-10-15</td>
+                  <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                  <td>주민 의견 청취</td>
+                  <td>123456-1234</td>
+                  <td class="tal"><a href="on-Nara02.html">입력한 기안문의 제목이 출력</a></td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>미결</td>
+                </tr>
+                <tr>
+                  <td colspan="9">기안 취소(회수, 중단)된 내역이 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        @@include('../include/paging.html')
+
+        <script>
+          lay_pop_open('#js__alert','',false);
+        </script>
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>온-나라 시스템 ID 미입력 안내</h2>
+          </div>
+          <div class="laymodal-content tac">
+            본 페이지는 온-나라 시스템 ID가 입력된 경우에만 이용 가능합니다.<br>
+            사용자 정보 수정 페이지에서 온-나라시스템 ID를 입력해 주세요.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">다음에 입력</button>
+            <a href="../myinfo01.html" class="cs-btn">지금 입력</a>
+          </div>
+        </div>
+
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

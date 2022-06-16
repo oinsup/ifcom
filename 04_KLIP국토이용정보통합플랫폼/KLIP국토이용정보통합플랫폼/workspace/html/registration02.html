@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '사전협의 번호 확인/제안 결과 확인'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 5})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        사전협의 번호 확인/제안 결과 확인
+      </h2>
+
+      <div class="content">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>
+              입안 제안 전 ‘사전협의 번호’ 확인 및 입안 제안 후 ‘제안 결과’를 확인하실 수 있습니다. (최근 1년 이내 내역만 조회 가능)<br>
+              단, ‘입안 제안’을 완료 하신 건은 사전협의 번호를 조회하실 수 없습니다.
+            </li>
+          </ul>
+        </div>
+
+        <div class="cs-box-table join-registration">
+          <div class="__item">
+            <form action="">
+              <h3 class="cs-box-table-header">사전협의 번호 확인</h3>
+              <div class="cs-box-table-cont">
+                <section>
+                  <strong class="join-title">개인정보 수집 및 이용에 대한 동의(필수)</strong>
+
+                  <div class="lo-box lo-frm-set">
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">제안 기관</strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <select name="" class="cs-gride-col6 cs-input" title="시, 광역시/도 선택">
+                            <option>광역시·도 선택</option>
+                            <option>서울특별시</option>
+                          </select>
+                          <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                            <option>시·군·구 선택</option>
+                            <option>시,군구구구구구구</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">제안 부서</strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" class="cs-input _disabled cs-gride-col9" placeholder="‘부서 찾기’ 클릭 후 선택 시 자동 입력" disabled="" title="‘부서 찾기’ 클릭 후 선택 시 자동 입력">
+                          <button class="cs-btn2-gray cs-gride-col3" type="button">부서 찾기</button>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="lo-frm-row">
+                      <label for="reqName" class="frm-title">제안자명</label>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" id="reqName" class="cs-input cs-gride-col12" placeholder="이름 입력(공백없이)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <section>
+                  <strong class="join-title">협의 기관, 담당자 정보 입력(필수)</strong>
+
+                  <div class="lo-box lo-frm-set">
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">협의 기관 </strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <select name="" class="cs-gride-col6 cs-input" title="시, 광역시/도 선택">
+                            <option>광역시·도 선택</option>
+                            <option>서울특별시</option>
+                          </select>
+                          <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                            <option>시·군·구 선택</option>
+                            <option>시,군구구구구구구</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">협의 부서</strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" class="cs-input _disabled cs-gride-col9" placeholder="‘부서 찾기’ 클릭 후 선택 시 자동 입력" disabled="" title="‘부서 찾기’ 클릭 후 선택 시 자동 입력">
+                          <button class="cs-btn2-gray cs-gride-col3" type="button">부서 찾기</button>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="lo-frm-row">
+                      <label for="reqName2" class="frm-title">담당자명</label>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" class="cs-input _disabled cs-gride-col9" placeholder="‘사용자 찾기’시 자동 입력" disabled="" title="‘사용자 찾기’시 자동 입력">
+                          <button class="cs-btn2-gray cs-gride-col3" type="button">사용자 찾기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="cs-list-dot">
+                    <li>입력하신 개인정보는 정보 조회용으로만 사용되며, 별도 저장되지 않습니다.</li>
+                  </ul>
+                </section>
+              </div>
+              <div class="cs-box-table-btn">
+                <button class="cs-btn">확인</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- item -->
+          <div class="__item">
+            <h3 class="cs-box-table-header">제안 결과 확인</h3>
+            <form action="">
+              <div class="cs-box-table-cont">
+  
+                <section>
+                  <strong class="join-title">제안 기관, 담당자 정보 입력(필수)</strong>
+  
+                  <div class="lo-box lo-frm-set">
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">제안 기관</strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <select name="" class="cs-gride-col6 cs-input" title="시, 광역시/도 선택">
+                            <option>광역시·도 선택</option>
+                            <option>서울특별시</option>
+                          </select>
+                          <select name="" class="cs-gride-col6 cs-input" title="시군구 선택">
+                            <option>시·군·구 선택</option>
+                            <option>시,군구구구구구구</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="lo-frm-row">
+                      <strong class="frm-title">제안 부서</strong>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" class="cs-input _disabled cs-gride-col9" placeholder="‘부서 찾기’ 클릭 후 선택 시 자동 입력" disabled title="‘부서 찾기’ 클릭 후 선택 시 자동 입력">
+                          <button class="cs-btn2-gray cs-gride-col3" type="button">부서 찾기</button>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="lo-frm-row">
+                      <label for="resultName" class="frm-title">제안자명</label>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <input type="text" id="resultName" class="cs-input cs-gride-col12" placeholder="이름 입력(공백없이)">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="lo-frm-row">
+                      <label for="resultEmail" class="frm-title">이메일</label>
+                      <div class="frm-cont">
+                        <div class="cs-gride">
+                          <div class="cs-input-email cs-gride-col12">
+                            <input type="text" id="resultEmail" placeholder="공직자통합메일 ID 입력">
+                            <span>@korea.kr</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="cs-list-dot">
+                    <li>입력하신 개인정보는 정보 조회용으로만 사용되며, 별도 저장되지 않습니다.</li>
+                  </ul>
+                </section>
+  
+              </div>
+              <div class="cs-box-table-btn">
+                <button class="cs-btn">확인</button>
+              </div>
+            </form>
+          </div>
+          <!-- //item -->
+        </div>
+      </div>
+        
+    </div> <!-- //lay-container -->
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

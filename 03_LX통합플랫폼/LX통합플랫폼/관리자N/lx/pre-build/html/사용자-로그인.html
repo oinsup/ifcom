@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    @@include('include/head.html')
+</head>
+<body>
+<div class="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap" class="sub02">
+    @@include('include/headerlogin.html')
+    <div id="container" class="frontlogin">
+        <!--content-->
+        <div id="contentWrap" class="type02">
+            <h2 class="hidden">본문 시작</h2>
+            <!--content-->
+            <div id="content" style="background: transparent">
+                <h2 class="hidden">관리자 로그인 페이지 본문 시작</h2>
+                <!-- inner -->
+                <div class="inner type03">
+                    <div class="loginArea">
+                        <h3 class="loginTitle">로그인</h3>
+                        <div class="textArea">
+                            <label for="i01">
+                                <input type="text" id="i01" placeholder="아이디" autofocus>
+                            </label>
+                            <label for="i02">
+                                <input type="password" id="i02" placeholder="비밀번호">
+                            </label>
+                            <p class="checkbox">
+                                <input type="checkbox" id="ckd01" class="hidden">
+                                <label for="ckd01">아이디 저장</label>
+                            </p>
+                            <div class="btnArea center">
+                                <button type="button" class="btn type01 middle red">로그인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //inner -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//content-->
+    </div>
+
+    <!-- @@include('include/footer.html') -->
+</div>
+
+</body>
+</html>

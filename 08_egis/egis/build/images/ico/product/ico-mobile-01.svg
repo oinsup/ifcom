@@ -1,0 +1,10 @@
+<svg id="ico-mobile-01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="24" viewBox="0 0 32 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_325" data-name="사각형 325" width="32" height="24" fill="#1740c2"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_503" data-name="그룹 503" clip-path="url(#clip-path)">
+    <path id="패스_598" data-name="패스 598" d="M14.667,16V5.333h-8V8H12V9.333H9.333V12H12v1.333H5.333V16h9.333ZM20,16h2.667a4,4,0,0,0,4-4V9.333a4,4,0,0,0-4-4H17.333V16H20Zm0-8h2.667A1.335,1.335,0,0,1,24,9.333V12a1.335,1.335,0,0,1-1.333,1.333H20ZM0,0V21.328H9.333V24H22.667V21.328H32V0ZM29.333,18.667H2.667v-16H29.333Z" fill="#1740c2"/>
+  </g>
+</svg>

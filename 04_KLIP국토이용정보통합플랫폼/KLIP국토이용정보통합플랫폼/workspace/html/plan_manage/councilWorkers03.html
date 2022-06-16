@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '위원 위촉 정보 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 구성 관리</li>
+          <li>시·군·구도시계획위원회 정보 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>시·군·구도시계획위원회 정보 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon"> <!-- _board-write-btn -->
+          <ul class="cs-list-dot">
+            <li>위원회 구성 후 위원회 운영 기간 시작일이 도래하면 상태를 ‘운영 중’ 변경해 주세요. (운영 중인 경우 임의적으로 위원 수정이 불가능합니다.)</li>
+            <li>위원회 운영 중 구성 위원의 위촉 상태 변경(제척, 해촉 등)에 의하여 구성 위원의 변동 사항이 발생한 경우 수정해 주세요.</li>
+            <li>위원회 심의 결과 등록 업무 종료 및 위원회 운영 기간이 종료되었으면 위원회 상태를 ‘운영 종료’로 변경해 주세요.  </li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">도시계획위원회 개요</h3>
+          <!-- 1217 :: class : js__tableFold,  data-rows="4" 추가 -->
+          <div class="board-view-tb _tal js__tableFold" data-rows="4">
+            <table>
+              <caption>위촉 정보</caption>
+              <colgroup>
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="2">위원회 구분 </th>
+                  <td colspan="3">시·군·구도시계획위원회</td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 110조(지방도시계획위원회의 업무) ②항
+                          <p>
+                            시·군·구도시계획위원회는 법 제113조제2항제4호에 따라 다음 각 호의 업무를 할 수 있다.
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>해당 시·군·구와 관련한 도시·군계획조례의 제정·개정과 관련하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                            <li>제55조제3항제3호의2에 따른 개발행위허가에 대한 심의(대도시에 두는 도시계획위원회에 한정한다)</li>
+                            <li>개발행위허가와 관련하여 시장 또는 군수(특별시장·광역시장의 개발행위허가 권한이 법 제139조제2항에 따라 조례로 군수 또는 구청장에게 위임된 경우에는 그 군수 또는 구청장을 포함한다)가 자문하는 사항에 대한 조언</li>
+                            <li>제128조제1항에 따른 시범도시사업계획의 수립에 관하여 시장·군수·구청장이 자문하는 사항에 대한 조언</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">위원회명 </th>
+                  <td>경기도 하남시 2020년 도시계획위원회</td>
+                  <th scope="row">운영 상태</th>
+                  <td>운영 대기</td>
+                </tr>
+                <!-- 1215 :: 수정 -->
+                <tr>
+                  <th scope="row">운영 기관 </th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">운영 기간 </th>
+                  <td>2020-01-01~2020-12-31</td>
+                </tr>
+                <tr>
+                  <th>심의 매뉴얼</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">운영 담당자</th>
+                  <td class="_p0" colspan="3">
+                    <div class="board-view-tb _tac">
+                      <table>
+                        <caption>운영 담당자</caption>
+                        <colgroup>
+                          <col class="width60">
+                          <col class="width210">
+                          <col style="width: 328px;">
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">부서</th>
+                            <th scope="col">부서 연락처</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>김운영</td>
+                            <td>도시계획과</td>
+                            <td>031-1111-1111(내선123)</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>김운영</td>
+                            <td>도시계획과</td>
+                            <td>031-1111-1111(내선123)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">구성 위원</h3>
+          <div class="board-view-tb">
+            <table>
+              <colgroup>
+                <col class="width120">
+                <col class="width60">
+                <col class="width130">
+                <col class="width80">
+                <col>
+                <col class="width140">
+                <col class="width130">
+                <col class="width100">
+                <col class="width100">
+              </colgroup>
+              <caption>구성 위원</caption>
+              <tbody>
+                <tr>
+                  <th scope="col">역할 구분</th>
+                  <th scope="col">No</th>
+                  <th scope="col">위원 구분</th>
+                  <th scope="col">이름</th>
+                  <th scope="col">소속</th>
+                  <th scope="col">직위</th>
+                  <th scope="col">휴대전화</th>
+                  <th scope="col">위촉일</th>
+                  <th scope="col">위촉 상태</th>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>홍길동</td>
+                  <td> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-1234-1234</td>
+                  <td>2020-01-01</td>
+                  <td>위촉</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">부위원장</th>
+                  <td>2</td>
+                  <td>전문가</td>
+                  <td>홍길동</td>
+                  <td> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-1234-1234</td>
+                  <td>2020-01-01</td>
+                  <td>해촉</td>
+                </tr>
+                <!-- 1217 :: 클래스 추가 제척, 위촉일경우 tr에 bgcolor-blue 클래스추가 -->
+                <tr class="bgcolor-blue">
+                  <th scope="row" rowspan="2" class="tal">위원</th>
+                  <td>3</td>
+                  <td>전문가</td>
+                  <td>홍길동</td>
+                  <td>경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-1234-1234</td>
+                  <td>2020-01-01</td>
+                  <td><span class="pcolor-red">제척</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>지방의회 의원</td>
+                  <td>홍길동</td>
+                  <td>경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-1234-1234</td>
+                  <td>2020-01-01</td>
+                  <td>위촉</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>제척 또는 해촉 위원이 발생한 경우 해당 위원은 구성원에서 자동 제외됩니다. 다른 위원을 추가로 등록할 수 있습니다.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">구성 위원 비율</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>구성 위원 비율</caption>
+              <tr>
+                <th scope="col">지방의회 의원</th>
+                <th scope="col">공무원(내부)</th>
+                <th scope="col">공무원(외부)</th>
+                <th scope="col">전문가</th>
+                <th scope="col">합계</th>
+              </tr>
+              <tr>
+                <td>1명 - <strong class="pcolor-red">4%</strong></td>
+                <td>3명 - <strong class="pcolor-red">13%</strong></td>
+                <td>1명 - <strong class="pcolor-red">4%</strong></td>
+                <td>19명 - <strong class="pcolor-red">79%</strong></td>
+                <td>24명</td>
+              </tr>
+              <tr>
+                <td colspan="5" class="tal">
+                  <div class="cs-box-tip _type2">
+                    <strong>법률 TIP</strong>
+                    <ul>
+                      <li>
+                        국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ③항
+                        <p>
+                          시·군·구도시계획위원회의 위원은 다음 각호의 자중에서 시장·군수 또는 구청장이 임명 또는 위촉한다.<br>
+                          이 경우 <span class="underline">제3호에 해당하는 위원의 수는 위원 총수의 50퍼센트 이상</span>이어야 한다.
+                        </p>
+                        <ul class="cs-list-number">
+                          <li>당해 시·군·구 지방의회의 의원</li>
+                          <li>당해 시·군·구 및 도시·군계획과 관련있는 행정기관의 공무원</li>
+                          <li>토지이용·건축·주택·교통·환경·방재·문화·농림·정보통신 등 도시·군계획 관련 분야에 관하여 학식과 경험이 있는 자</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+
+        <section class="cs-btn-set">
+          <a href="councilWorkers01.html" class="cs-btn-line">목록</a>
+          <!-- 1222 :: 버튼명변경 -->
+          <a href="councilWorkers04.html" class="cs-btn">정보 수정</a>
+          <a href="#js_stateChange" jq-action="modal" class="cs-btn">상태 변경</a>
+        </section>
+
+        <section class="board-list">
+          <nav class="board-tab-nav js__tabNav" data-tabnav="testNav">
+            <ul>
+              <li class="active"><button data-idx="1">상태 변경 내역</button></li>
+              <li><button data-idx="2">정보 수정 내역</button></li>
+            </ul>
+          </nav>
+          <div class="js__tabNav_testNav1">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>상태 변경 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">담당자명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">변경 사유</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>김운영</td>
+                    <td>위원회 운영 종료</td>
+                    <td class="tal"> &lt;위원회명&gt; 시·군·구도시계획위원회가 운영 종료 처리되었습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>위원회 등록</td>
+                    <td class="tal"> &lt;위원회명&gt; 시·군·구도시계획위원회가 운영 종료 처리되었습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            @@include('../include/paging.html')
+          </div>
+
+          <div class="js__tabNav_testNav2">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>정보 수정 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width180">
+                  <col>
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">정보 수정일</th>
+                    <th scope="col">담당자명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">수정 내용</th>
+                    <th scope="col">내용 관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>김운영</td>
+                    <td>도시계획위원회 개요</td>
+                    <td class="tal">202X-XX-XX까지 위원회 운영기간이 연장되었습니다. </td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>구성 위원</td>
+                    <td class="tal">OOO위원의 해임으로 인해, 보궐위원 OOO으로 구성 위원 변경되었습니다. </td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            @@include('../include/paging.html')
+
+            <div id="js__delete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>수정 내용 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                삭제된 내용은 복구할 수 없습니다.<br>
+                삭제하시겠습니까?
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onClick="lay_pop_close('#js__delete');lay_pop_open('#js__deleteComplete')">삭제</button>
+              </div>
+            </div>
+
+            <div id="js__deleteComplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>수정 내용 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                수정 내용이 삭제되었습니다.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="councilWorkers01.html" class="cs-btn-line">목록</a>
+        </section>
+
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>시·군·구도시계획위원회 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            시·군·구도시계획위원회 정보가 등록되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="councilWorkers03.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <div id="js_stateChange" class="laymodal width1000">
+          <div class="laymodal-header">
+            <h2>도시계획위원회 상태 변경</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <!-- 1217 :: 텍스트수정 -->
+            <!-- 운영 대기 -->
+            <section>
+              시·군·구도시계획위원회 구성이 완료되었습니까?<br>
+              ‘운영 중‘으로 변경 후 심의회 등록이 가능하며, 제척 및 해촉에 의한 위원 추가 외 임의적인 위원 삭제와
+              변경은 불가능하게 됩니다.  
+            </section>
+
+            <!-- 운영중 -->
+            <section>
+              시·군·구도시계획위원회 운영이 종료되었으면 ‘운영 종료’ 처리 해주세요.<br>
+              운영 종료 처리 시 심의 결과 등록 등의 업무 수행이 불가능하며, 
+              입안 담당자들이 <span class="underline">도시·군관리계획 입안 제안 자문, 도시·군관리계획 입안 심의</span> 요청 대상 위원회로 선택할 수 없습니다. 
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                대상 위원회 정보
+              </div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>대상 위원회 정보</caption>
+                  <colgroup>
+                    <col class="width200">
+                    <col>
+                    <col class="width200">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">위원회명</th>
+                      <th scope="col">운영 기간</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>시·군·구도시계획위원회</td>
+                      <td>경기도 하남시 2020년 도시계획위원회</td>
+                      <td>2021-01-01~2022-12-31</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 처리
+              </div>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>상태 변경 처리</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">현재 상태</th>
+                      <td class="pcolor-red">운영 중</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" class="cs-radio" id="stateGReen">
+                        <label for="stateGReen"><span></span> 운영 종료</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">변경 사유</th>
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="변경 사유" placeholder="종료 사유를 입력해 주세요."></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+              <div class="cs-alert">운영 기간 만료일 전입니다. 조기 운영 종료하시는 경우 먼저 운영 기간을 수정하고 상태를 변경해 주세요.</div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js_stateChange');lay_pop_open('#js_stateChangeComlplete')">변경</button>
+          </div>
+        </div>
+
+        <div id="js_stateChangeComlplete" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>도시계획위원회 상태 변경</h2>
+          </div>
+          <div class="laymodal-content tac">
+            위원회의 상태가 ‘<b class="pcolor-red">운영 종료</b>’로 변경되었습니다. 
+
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 1});
+
+
+      </div>
+      <!--// content :: 내용 -->
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

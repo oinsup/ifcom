@@ -1,0 +1,60 @@
+<header class="lay-hedaer">
+        <div class="lay-wrap">
+          <h1 class="site-logo"><a href="@@htmlRoot/login.html">로고</a></h1>
+          
+          <nav class="login-nav">
+            @@if(headerType == 1){
+            <div class="__group">
+              <a href="@@htmlRoot/join01.html" class="login-nav-t2"><i class="loicon-usd"></i>사용 권한 신청 </a>
+              <a href="@@htmlRoot/join05.html" class="login-nav-t2"><i class="loicon-approval"></i>권한 승인 안내 </a>
+            </div>
+            <!-- 0111 삭제
+              <a href="@@htmlRoot/registration01.html" class="login-nav-t3"><i class="loicon-offer"></i>입안 제안</a> -->
+            }
+
+            @@if(headerType == 2){
+            <div class="__group">
+              <a href="@@htmlRoot/join01.html" class="login-nav-t2 active"><i class="loicon-usd"></i>사용 권한 신청 </a>
+              <a href="@@htmlRoot/join05.html" class="login-nav-t2"><i class="loicon-approval"></i>권한 승인 안내 </a>
+            </div>
+            }
+
+            @@if(headerType == 3){
+            <div class="__group">
+              <a href="@@htmlRoot/join01.html" class="login-nav-t2"><i class="loicon-usd"></i>사용 권한 신청 </a>
+              <a href="@@htmlRoot/join05.html" class="login-nav-t2 active"><i class="loicon-approval"></i>권한 승인 안내 </a>
+            </div>
+            <!-- 0111 삭제
+              <a href="@@htmlRoot/registration01.html" class="login-nav-t3"><i class="loicon-offer"></i>입안 제안</a> -->
+            }
+
+            @@if(headerType == 4){
+            <a href="@@htmlRoot/login.html" class="login-nav-t1"><i class="loicon-login"></i>로그인</a>
+            }
+
+            @@if(headerType == 5){
+            <a href="@@htmlRoot/login.html" class="login-nav-t1"><i class="loicon-login"></i>로그인</a>
+            <a href="@@htmlRoot/registration01.html" class="login-nav-t3"><i class="loicon-reg"></i>입안 제안</a>
+            }
+
+            @@if(headerType == 6){
+            <a href="@@htmlRoot/login.html" class="login-nav-t1"><i class="loicon-login"></i>로그인</a>
+            <div class="__group">
+              <a href="@@htmlRoot/join01.html" class="login-nav-t2"><i class="loicon-usd"></i>사용 권한 신청 </a>
+              <a href="@@htmlRoot/join05.html" class="login-nav-t2 active"><i class="loicon-approval"></i>권한 승인 안내 </a>
+            </div>
+            }
+
+            @@if(headerType == 7){
+            <a href="@@htmlRoot/login.html" class="login-nav-t1"><i class="loicon-login"></i>로그인</a>
+            <div class="__group">
+              <a href="@@htmlRoot/join01.html" class="login-nav-t2"><i class="loicon-usd"></i>사용 권한 신청 </a>
+              <a href="@@htmlRoot/join05.html" class="login-nav-t2"><i class="loicon-approval"></i>권한 승인 안내 </a>
+            </div>
+            }
+
+          </nav>
+
+          
+        </div>
+    </header>

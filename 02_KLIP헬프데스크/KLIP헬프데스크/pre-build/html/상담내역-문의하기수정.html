@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">문의하기 수정 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>문의하기 수정</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">상담내역</a></li>
+                                <li><a href="#">문의하기 수정</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--table-->
+                    <div class="table type02">
+                        <div class="tableHeader">
+                            <h2 class="tableTitle">문의 정보</h2>
+                            <p class="essential">필수 입력</p>
+                        </div>
+                        <table>
+                            <caption class="hidden">테이블</caption>
+                            <colgroup>
+                                <col style="width: 170px;">
+                                <col style="width: 1030px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">문의일</th>
+                                    <td>2021-11-16 10:00</td>
+                                </tr>
+                            <tr>
+                                <th scope="row">문의 유형<span class="redDot">•</span></th>
+                                <td>
+                                    <div class="btnArea type02">
+                                        <button type="button">광역시·도 선택</button>
+                                        <button type="button">DB/파일 관련</button>
+                                        <button type="button">사용자 매뉴얼</button>
+                                        <button type="button">용도지역·용도지구 프로그램</button>
+                                        <button type="button">가입/탈퇴/권한</button>
+                                        <button type="button">서비스 오류</button>
+                                        <button type="button">기타</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="">문의 제목<span class="redDot">•</span></label>
+                                </th>
+                                <td>
+                                    <div class="textarea">
+                                        <input type="text" class="grayType wd900" placeholder="입력했던 문의 제목이 출력됩니다." maxlength="50">
+                                        <p class="textCount"><span>0</span>/50자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="">문의 내용<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="textarea"> 
+                                        <textarea name="" id="" class="wd900" cols="30" rows="10" placeholder="입력했던 문의 내용이 출력됩니다." maxlength="1000"></textarea>
+                                        <p class="textCount"><span>0</span>/1,000자</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" style="line-height: 18px;"><label for="">첨부파일<span class="redDot">•</span></label></th>
+                                <td>
+                                    <div class="fileArea" style="padding-bottom: 8px;">
+                                        <input type="file" id="fileSelect01" class="hidden">
+                                        <p class="fileName">파일을 선택해 주세요.</p>
+                                        <label for="fileSelect01">파일 선택</label>
+                                        <div class="btnArea">
+                                            <button type="button" class="btn bdGray">파일 삭제</button>
+                                            <button type="button" class="btn gray">파일 변경</button>
+                                        </div>
+                                    </div>
+                                    <div class="fileAreaInfo">
+                                        <p>첨부파일은 3개까지 등록 가능하며, 전체 용량은 10MB 이하로 업로드 가능합니다.</p>
+                                        <p>첨부파일 이름은 특수기호(? ! , . & ^ ~ )를 사용할 수 없습니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--btnArea-->
+                        <div class="btnArea01 center">
+                            <button type="button" class="btn white middle">목록</button>
+                            <button type="button" class="btn dkBlue middle">삭제</button>
+                            <button type="button" class="btn dkBlue middle">수정</button>
+                        </div>
+                        <!--//btnArea-->
+                    </div>
+                    <!--//table-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

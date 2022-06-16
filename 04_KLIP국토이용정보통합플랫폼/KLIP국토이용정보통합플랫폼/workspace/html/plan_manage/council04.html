@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 심의 관리</li>
+          <li>심의회 정보 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>심의회 정보 수정</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>본인이 운영 담당자로 있는 도시계획위원회의 ‘심의회’만 수정할 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">심의회 개요</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>심의회 개요</caption>
+              <colgroup>
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">개최 기관</th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">위원회 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <select class="cs-input width100p" title="위원회">
+                      <option>경기도 하남시 2021년 도시계획위원회</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">개최 구분 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-opt-list">
+                    <input type="radio" class="cs-radio" name="selcate" id="selcate1"><label for="selcate1"><span></span> 정기</label>
+                    <input type="radio" class="cs-radio" name="selcate" id="selcate2"><label for="selcate2"><span></span> 비정기</label>
+                  </td>
+                  <th scope="row">심의회 회차 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <select class="cs-input mr10" title="년도 선택">
+                      <option>2020년</option>
+                    </select>
+                    도
+                    <input type="text" class="cs-input width50 ml10" title="회차">
+                    <span class="pcolor-red">(최종 회차 : 2020년도 3회)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">진행 방식 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-opt-list">
+                    <input type="radio" class="cs-radio" name="selcatea" id="selcateta1"><label for="selcateta1"><span></span> 오프라인</label>
+                    <input type="radio" class="cs-radio" name="selcatea" id="selcateta2"><label for="selcateta2"><span></span> 온라인 </label>
+                  </td>
+                  <th scope="row">개최일 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <input type="text" class="cs-input-date js__datepicker js__date-to" title="개최일 (입력예시 : 2020-01-01)" placeholder="개최일 선택">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="frm-opt-list">
+                    <input type="radio" class="cs-radio" name="selcateb" id="selcatetb1"><label for="selcatetb1"><span></span> 오프라인</label>
+                    <input type="radio" class="cs-radio" name="selcateb" id="selcatetb2"><label for="selcatetb2"><span></span> 온라인 </label>
+                  </td>
+                  <th scope="row">심의 기간 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-datepicker-set">
+                      <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                      <div>~</div>
+                      <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                    </div>
+
+                    <div class="cs-datepicker-set">
+                      <!-- 변경 불가능 할 경우 disabled 추가-->
+                      <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" disabled placeholder="시작일 선택">
+                      <div>~</div>
+                      <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">운영 담당자</th>
+                  <td class="_p0" colspan="3">
+                    <div class="board-view-tb _tac">
+                      <table>
+                        <caption>운영 담당자</caption>
+                        <colgroup>
+                          <col class="width60">
+                          <col class="width200">
+                          <col>
+                          <col style="width:479px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">부서</th>
+                            <th scope="col">부서 연락처</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>김운영</td>
+                            <td>김운영</td>
+                            <td>031-1111-1111(내선123)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>심의회 개최일 및 심의 기간 시작일이 지난 경우 심의회 개요를 수정할 수 없습니다. </li>
+            <li>심의회 운영 담당자가 추가되어야 하는 경우 <span class="underline">입안 관리 &gt; 도시계획위원회 구성 관리</span> 메뉴에서 운영 담당자를 추가해 주세요. </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">심의 안건</h3>
+          <div class="board-required-info">
+            <i class="icon-required">필수 입력</i>필수 입력
+          </div>
+          <div class="board-view-tb">
+            <table>
+              <caption>심의 안건</caption>
+              <colgroup>
+                <col class="width100">
+                <col class="width95">
+                <col class="width95">
+                <col class="width180">
+                <col class="width220">
+                <col>
+                <col class="width80">
+                <col class="width110">
+                <col class="width95">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">안건 번호</th>
+                  <th scope="col">상정 구분</th>
+                  <th scope="col">상정 회차</th>
+                  <th scope="col">안건 유형</th>
+                  <th scope="col">안건명 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">안건 내용</th>
+                  <th scope="col">요청자</th>
+                  <th scope="col">상정 요청일</th>
+                  <th scope="col">관리</th>
+                </tr>
+              </thead>
+              <tr>
+                <th scope="row" rowspan="2">제 1 호</th>
+                <td>신규</td>
+                <td>1</td>
+                <td>입안 제안</td>
+                <td> 하남시 OO용도지구 OOO 제안</td>
+                <td class="tal"><a href="javascript:;" onclick="contentToggle(this,'content${i}')" class="js__conttoggle alink">안건 내용이 보입니다. <i class="cs-btn-toggle flr"></i></a></td>
+                <td>박요청</td>
+                <td>2020-XX-XX</td>
+                <td><span class="pcolor-red">삭제 불가</span></td>
+              </tr>
+              <tr>
+                <td colspan="8" class="bgcolor-blue tal js__conttoggle-target" data-toggle="content${i}">내용확대</td>
+              </tr>
+              @@for(var i = 0; i < 9; i++){
+              <tr>
+                <th scope="row" rowspan="2">제 1 호</th>
+                <td>신규</td>
+                <td>1</td>
+                <td>입안 제안</td>
+                <td> 하남시 OO용도지구 OOO 제안</td>
+                <td class="tal"><a href="javascript:;" onclick="contentToggle(this,'content${i}')" class="js__conttoggle alink">안건 내용이 보입니다. <i class="cs-btn-toggle flr"></i></a></td>
+                <td>박요청</td>
+                <td>2020-XX-XX</td>
+                <td><button class="cs-btn2-gray-line width100p cs-btn-default">안건 삭제</button></td>
+              </tr>
+              <tr>
+                <td colspan="8" class="bgcolor-blue tal js__conttoggle-target" data-toggle="content${i}">내용확대</td>
+              </tr>
+              }
+              <tr>
+                <td colspan="8">등록된 안건이 없습니다.</td>
+              </tr>
+            </table>
+          </div>
+          <div class="extratype-btn">
+            <a href="#js__schemeAdd" class="cs-btn2-gray cs-btn-default mt10" jq-action="modal" style="width:74px;">안건 추가</a>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>심의회 개최일 및 심의 기간 시작일이 지난 경우 심의 안건을 삭제할 수 없으며, 추가만 가능합니다. </li>
+            <li>‘안건 추가’ 버튼을 클릭하고 안건을 추가해 주세요. 안건의 번호는 추가한 순서대로 부여됩니다. 우선 순위가 높은 안건부터 추가해 주세요. (최대 15개 가능)</li>
+          </ul>
+        </section>
+
+        
+        <section>
+          <h3 class="cont-hedding1">심의 자료</h3>
+          <div class="board-required-info">
+            <i class="icon-required">필수 입력</i>필수 입력
+          </div>
+          <div class="board-view-tb">
+            <table>
+              <caption>심의 자료</caption>
+              <colgroup>
+                <col class="width150">
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">안건 번호</th>
+                  <th scope="col">심의 자료 <i class="icon-required">필수 입력</i></th>
+                  <th scope="col">기타 심의 자료</th>
+                </tr>
+              </thead>
+              <tr>
+                <th scope="row">제 1 호</th>
+                <td class="tal">
+                  <div class="cs-file-wrap _type2">
+                    <input type="file" class="cs-file" id="guidefile1" placeholder=" OOO자료명이 출력됩니다.zip">
+                    <span class="js__filename"></span>
+                    <div class="cs-file-btns">
+                      <button type="button" class="cs-btn2-gray cs-btn-default">다운로드</button>
+                      <label for="guidefile1" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                    </div>
+                  </div>
+                </td>
+                <td class="tal">
+                  <div class="cs-file-wrap _type2">
+                    <input type="file" class="cs-file" id="guidefile2" placeholder=" OO심의 추가 자료.pdf">
+                    <span class="js__filename"></span>
+                    <div class="cs-file-btns">
+                      <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                      <label for="guidefile2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">제 1 호</th>
+                <td class="tal">
+                  <div class="cs-file-wrap _type2">
+                    <input type="file" class="cs-file" id="guidefile3" placeholder=" OOO자료명이 출력됩니다.zip">
+                    <span class="js__filename"></span>
+                    <div class="cs-file-btns">
+                      <button type="button" class="cs-btn2-gray cs-btn-default">다운로드</button>
+                      <label for="guidefile3" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                    </div>
+                  </div>
+                </td>
+                <td class="tal">
+                  <div class="cs-file-wrap _type2">
+                    <input type="file" class="cs-file" id="guidefile4" placeholder="등록된 기타 심의 자료가 없습니다.">
+                    <span class="js__filename"></span>
+                    <div class="cs-file-btns">
+                      <label for="guidefile4" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">등록된 안건이 없습니다.</td>
+              </tr>
+              <tr>
+                <th scope="col" class="bgcolor-blue">자료 검토 기간 <i class="icon-required">필수 입력</i></th>
+                <td colspan="2">
+                  <div class="frm-insert-t6">
+                    <div class="cs-datepicker-set fll">
+                      <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                      <div>~</div>
+                      <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                    </div>
+                    <div class="tcolor-gray2 flr">참고) 토지e음 대민사이트에서 자료를 열람할 수 있는 기간입니다.</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col" class="bgcolor-blue">검토 시 유의사항</th>
+                <td colspan="2">
+                  <div class="cs-counter-wrap">
+                    <textarea name="" id="" rows="5" class="cs-input js__textCounter width100p" data-maxbyte="1000" title="검토 시 유의사항" placeholder="위원에게 전달하실 사항이 있으시면 입력해 주세요."></textarea>
+                  </div>                    
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">심의 위원</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb">
+            <table>
+              <caption>심의 위원</caption>
+              <colgroup>
+                <col class="width120">
+                <col class="width60">
+                <col class="width130">
+                <col class="width80">
+                <col>
+                <col class="width140">
+                <col class="width130">
+                <col class="width100">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <th scope="col">역할 구분</th>
+                <th scope="col">no </th>
+                <th scope="col">위원 구분</th>
+                <th scope="col"> 이름</th>
+                <th scope="col">소속</th>
+                <th scope="col">직위</th>
+                <th scope="col">휴대전화</th>
+                <th scope="col">위촉일</th>
+                <th scope="col">출석 여부 <i class="icon-required">필수 입력</i></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>
+                    <select class="cs-input width100p" title="출석 여부">
+                      <option value="">선택</option>
+                      <option value="" selected>출석</option>
+                      <option value="">궐석</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">부위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>
+                    <select class="cs-input width100p" title="출석 여부">
+                      <option value="">선택</option>
+                      <option value="" selected>출석</option>
+                      <option value="">궐석</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="12" class="vertical-top tal">위원</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal">경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>
+                    <select class="cs-input width100p" title="출석 여부">
+                      <option value="">선택</option>
+                      <option value="" selected>출석</option>
+                      <option value="">궐석</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal">경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>
+                    <select class="cs-input width100p" title="출석 여부">
+                      <option value="">선택</option>
+                      <option value="" selected>출석</option>
+                      <option value="">궐석</option>
+                    </select>
+                  </td>
+                </tr>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal">경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>
+                    <select class="cs-input width100p" title="출석 여부">
+                      <option value="">선택</option>
+                      <option value="" selected>출석</option>
+                      <option value="">궐석</option>
+                    </select>
+                  </td>
+                </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>심의 위원에 제척, 해촉된 위원은 제외됩니다.</li>
+            <li>위원이 추가되어야 하는 경우 위촉 정보 등록 후‘<span class="underline">도시계획위원회 구성 관리 &gt; 시·도도시계획위원회</span> 또는 <span class="underline">시·군·구도시계획위원회</span>’ 메뉴에서 구성 위원으로 추가해 주세요.  </li>
+            <li>위원의 위촉 정보에 변동 사항이 발생한 경우 <span class="underline">‘도시계획위원회 구성 관리 &gt; 위원 위촉 정보’</span> 메뉴에서 해촉 또는 제척 처리해주세요. </li>
+            <li class="pcolor-red">온라인 전자심의의 경우 출석 여부를 변경하실 필요 없습니다. 심의 기간 내 심의결과를 제출하지 않는 위원은 자동으로 ‘궐석(미출석)’ 처리됩니다.</li>
+            <li class="pcolor-red">오프라인 심의의 경우 위원에게 출석 가능 여부 확인 후 궐석(미출석)하는 위원은 출석 여부를 변경해 주세요. (심의 완료 처리전까지 수정 가능합니다.)</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="council03.html" class="cs-btn-line">취소</a>
+          <a href="#js__alert" jq-action="modal" class="cs-btn">수정</a>
+        </section>
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__alert',
+          'title': '심의회 수정',
+          'cont': '<span class="pcolor-red">정기(오프라인)</span> 심의회 정보가 수정되었습니다.',
+          'btns': '<a href="council03.html" class="cs-btn">확인</a>'
+        })
+
+
+        <!-- 안건 추가 -->
+        <div id="js__schemeAdd" class="laymodal modal-userfinder" tabindex="0">
+          <div class="laymodal-header">
+            <h2>안건 추가</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>소속기관</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">위원회 명</th>
+                      <td>경기도 하남시 2021년 도시계획위원회</td>
+                      <th scope="row">상정 구분</th>
+                      <td class="frm-opt-list">
+                        <input type="radio" name="qcate" id="qcate1" class="cs-radio" onclick="toggleElm('schemect','','none');toggleElm('schemect','1','block')" checked><label for="qcate1"><span></span> 상정 요청</label>
+                        <input type="radio" name="qcate" id="qcate2" class="cs-radio" onclick="toggleElm('schemect','','none');toggleElm('schemect','2','block')"><label for="qcate2"><span></span> 재심의 대상</label>
+                        <input type="radio" name="qcate" id="qcate3" class="cs-radio" onclick="toggleElm('schemect','','none');toggleElm('schemect','3','block')"><label for="qcate3"><span></span> 직접 입력</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+  
+            <!-- 상정 요청 -->
+            <section data-group="schemect" data-idx="1">
+              <!-- 0111 ::  data-cell-height="41" 60 > 41 변경 -->
+              <div class="board-view-tb  _noround js__floatingHead _floating" data-minitem="5" data-cell-height="41">
+                <table>
+                  <caption>그룹 선택</caption>
+                  <colgroup>
+                    <col class="width70">
+                    <col class="width100">
+                    <col class="width100">
+                    <col class="width150">
+                    <col class="width150">
+                    <col>
+                    <col class="width100">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">선택</th>
+                      <th scope="col">상정 요청일</th>
+                      <th scope="col">상정 요청자</th>
+                      <th scope="col">안건 유형</th>
+                      <th scope="col">안건명</th>
+                      <th scope="col">안건 내용</th>
+                      <th scope="col">심의 자료</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for(var i = 0; i < 10; i++){
+                    <tr>
+                      <td rowspan="2"><input type="text" id="selectradio${i}" name="selectradio" class="cs-radio" title="박요청"><label for="selectradio${i}"><span></span></label></td>
+                      <td>2020-01-01</td>
+                      <td>박요청</td>
+                      <td>입안 제안</td>
+                      <td>입력된 안건명 출력</td>
+                      <td class="tal">
+                        <a href="javascript:;" onclick="contentToggle(this,'modalcontent${i}')" class="js__conttoggle alink">
+                          안건 내용이 보입니다. <i class="cs-btn-toggle flr"></i>
+                        </a>
+                      </td>
+                      <td><button class="cs-btn2-gray cs-btn-default">다운로드</button></td>
+                    </tr>
+                    <tr>
+                      <td colspan="6" class="bgcolor-blue tal js__conttoggle-target" data-toggle="modalcontent${i}">내용확대</td>
+                    </tr>
+                    }
+                    <tr>
+                      <td colspan="7">안건 상정 요청 내역이 없습니다. </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">안건을 선택해 주세요.  </div>
+            </section>
+            
+            <!-- 재심의 대상 -->
+            <section data-group="schemect" data-idx="2" style="display: none;">
+              <!-- 0111 ::  data-cell-height="41" 60 > 41 변경 -->
+              <div class="board-view-tb  _noround js__floatingHead _floating" data-minitem="5" data-cell-height="41">
+                <table>
+                  <caption>그룹 선택</caption>
+                  <colgroup>
+                    <col class="width70">
+                    <col class="width80">
+                    <col class="width100">
+                    <col class="width150">
+                    <col class="width170">
+                    <col>
+                    <col class="width100">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">선택</th>
+                      <th scope="col">이전 회차</th>
+                      <th scope="col">이전 심의일</th>
+                      <th scope="col">안건 유형</th>
+                      <th scope="col">안건명</th>
+                      <th scope="col">안건 내용</th>
+                      <th scope="col">심의 결과</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @@for(var i = 0; i < 10; i++){
+                    <tr>
+                      <td rowspan="2"><input type="text" id="selectradioa${i}" name="selectradioa" class="cs-radio" title="박요청"><label for="selectradioa${i}"><span></span></label></td>
+                      <td>1</td>
+                      <td>2020-01-01</td>
+                      <td>입안 제안</td>
+                      <td>입력된 안건명 출력</td>
+                      <td class="tal">
+                        <a href="javascript:;" onclick="contentToggle(this,'modalcontent${i}')" class="js__conttoggle alink">
+                          안건 내용이 보입니다. <i class="cs-btn-toggle flr"></i>
+                        </a>
+                      </td>
+                      <td>재심의</td>
+                    </tr>
+                    <tr>
+                      <td colspan="6" class="bgcolor-blue tal js__conttoggle-target" data-toggle="modalcontent${i}">내용확대</td>
+                    </tr>
+                    }
+                    <tr>
+                      <td colspan="7">재심의 대상 내역이 없습니다. </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">안건을 선택해 주세요.</div>
+            </section>
+
+            <!-- 직접입력 -->
+            <section data-group="schemect" data-idx="3" style="display: none;">
+              <div class="tar mb5"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb  _noround tal">
+                <table>
+                  <caption>직접 입력</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">안건 유형 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <select class="cs-input width100p" title="안건 유형">
+                          <option value="">유형 선택</option>
+                        </select>
+                      </td>
+                      <th scope="row">요청자 <i class="icon-required">필수 입력</i></th>
+                      <td class="tal">홍길동</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">안건 명 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <div class="cs-counter-wrap">
+                          <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="100" placeholder="안건명을 입력해 주세요." title="안건 명">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">안건 내용 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3">
+                        <div class="cs-counter-wrap">
+                          <textarea rows="3" class="cs-input js__textCounter width100p" data-maxbyte="1000" placeholder="안건 내용을 입력해 주세요." title="안건 내용"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">심의 자료 <i class="icon-required">필수 입력</i></th>
+                      <td colspan="3" class="tal">
+                        <div class="cs-file-wrap">
+                          <input type="file" class="cs-file" id="guidefile5" placeholder="파일선택">
+                          <span class="js__filename"></span>
+                          <div class="cs-file-btns">
+                            <label for="guidefile5" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">안건 유형을 선택해 주세요.</div>
+              <div class="cs-alert">안건명을 입력해 주세요.</div>
+              <div class="cs-alert">안건 내용을 입력해 주세요.</div>
+              <div class="cs-alert">심의 자료를 등록해 주세요  </div>
+            </section>
+          </div>
+
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

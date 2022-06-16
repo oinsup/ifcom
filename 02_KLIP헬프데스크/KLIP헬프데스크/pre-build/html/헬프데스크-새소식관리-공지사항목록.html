@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">공지사항 페이지 본문 시작</h2>
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>새 소식 관리</span></h3>
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li><a href="#" class="home">홈</a></li>
+                                <li><a href="#">헬프데스크 관리</a></li>
+                                <li><a href="#">새 소식 관리</a></li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                    </div>
+                    <!--//pageName-->
+                    <div class="tabContWrap type02">
+                        <ul class="menuName">
+                            <li><a href="#">이슈 캘린더</a></li>
+                            <li class="active"><a href="#">공지사항</a></li>
+                        </ul>
+                        <!--tabCont-->
+                        <div class="tabCont active">
+                            <!--table-->
+                            <div class="table type01">
+                                <div class="tableHeader">
+                                    <h2 class="tableTitle">메인 페이지 노출 관리(최대 5개)</h2>
+                                </div>
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width: 80px;">
+                                        <col style="width: auto">
+                                        <col style="width: 220px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 140px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">노출 순서</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">메인 노출 기간</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">노출 상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-left">제목이 보입니다</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-left">제목이 보입니다</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="refrenceMark">노출 순서는 변경하실 행을 선택하신 후 드래그하여 변경 가능합니다.</p>
+                            </div>
+                            <!--//table-->
+                            <!--table-->
+                            <div class="table type01">
+                                <div class="tableHeader">
+                                    <h2 class="tableTitle">공지사항 페이지 상단 고정 관리(최대 10개)
+                                    </h2>
+                                </div>
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width: 80px;">
+                                        <col style="width: auto">
+                                        <col style="width: 220px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 140px;">
+                                    </colgroup> 
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">노출 순서</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">공지 기간</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">고정 상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-left">제목이 보입니다</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-left">제목이 보입니다</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td><button type="button" class="btn bdGray">변경</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="refrenceMark">노출 순서는 변경하실 행을 선택하신 후 드래그하여 변경 가능합니다.</p>
+                            </div>
+                            <!--//table-->
+                            <!--table-->
+                            <div class="table type01">
+                                <div class="tableHeader">
+                                    <h2 class="tableTitle">공지사항 리스트</h2>
+                                    <button type="button" class="btn gray">신규등록</button>
+                                </div>
+                                <table>
+                                    <caption class="hidden">테이블</caption>
+                                    <colgroup>
+                                        <col style="width: 80px;">
+                                        <col style="width: auto">
+                                        <col style="width: 80px;">
+                                        <col style="width: 220px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 120px;">
+                                        <col style="width: 140px;">
+                                    </colgroup> 
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">노출 순서</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">사용여부</th>
+                                            <th scope="col">공지 기간</th>
+                                            <th scope="col">등록자</th>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">조회 수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="txt-left"><a href="#">제목이 보입니다</a></td>
+                                        <td>종료</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td>3333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="txt-left"><a href="#">제목이 보입니다</a></td>
+                                        <td>-</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td>3333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="txt-left"><a href="#">제목이 보입니다</a></td>
+                                        <td>-</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td>3333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="txt-left"><a href="#">제목이 보입니다</a></td>
+                                        <td>-</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td>3333</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="txt-left"><a href="#">제목이 보입니다</a></td>
+                                        <td>-</td>
+                                        <td>2021-09-30 ~ 2021-10-01</td>
+                                        <td>관리자명</td>
+                                        <td>2021-09-30</td>
+                                        <td>3333</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--//table-->
+                            <!--pagination-->
+                            <div class="pagination">
+                                <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                                <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                                <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                            </div>
+                            <!--//pagination-->
+                        </div>
+                        <!--//tabCont-->
+                    </div>
+                    <!--//tabContWrap-->
+                </div>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body> 
+</html>

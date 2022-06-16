@@ -1,0 +1,210 @@
+.laymodal .cs-btn-set
+{
+  [class^=cs-btn]{min-width:90px;}
+}
+
+.modal-preview
+{
+  width:1000px;
+  iframe{display: block;width:100%;height:100%;min-height:500px;}
+  .laymodal-content{padding:0;}
+  .laymodal-footer{padding-top: 30px;}
+}
+
+.modal-blueprint
+{
+ width: 1000px; 
+}
+
+.blueprint-preview
+{
+  @include clearBoth('&');
+  height:470px;transition:height .3s;
+
+  .blueprint-view
+  {
+    width:calc(100% - 180px - 15px);float: left;height:100%;position: relative;
+
+    .__viewer{height:100%;background:url('#{$image}/noimage2.png') no-repeat center;}
+    .__controller
+    {
+      @include clearBoth('&');
+      position: absolute;bottom: 0;background:rgba(0,0,0,.66);
+      left: 0;width: 100%;box-sizing: border-box;
+
+      > strong
+      {
+        color: #fff;float: left;height:50px;line-height: 50px;font-weight: normal;padding:0 30px;padding-right: 0;
+        box-sizing: border-box;
+        white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+        width:calc(100% - 280px);
+      }
+      > div{float: right;}
+    }
+
+    .__btn{position: absolute;top: 0;left: 0;width: 100%;top: 50%;margin-top: -25px;}
+  }
+
+  .blueprint-list
+  {
+    height:100%;overflow:hidden;
+    width: 180px;float: right;
+    .__item
+    {
+      display: block;background: none;padding:0;border:0;text-align: left;font-size: 14px;margin-top: 20px;position: relative;
+      margin-top: 20px;outline:none;-ms-outline:none;
+
+      
+      &:first-child{margin-top: 0;}
+      
+      > em
+      {
+        position: absolute;left: 0;top: 0;width: 33px;z-index:10;
+        height: 25px;text-align: center;color: #fff;font-style:normal;background: #313131;line-height: 25px;
+      }
+
+      > div
+      {
+        background: #000;position: relative;
+        &::after{content: '';left: 0;top: 0;width: 100%;height: 100%;border:1px solid #a6a6a6;position: absolute;box-sizing: border-box;opacity: 0;}
+        img{display: block;opacity: .5;}
+      }
+
+      &.active
+      {
+        em{background: #bd3500;}
+        > div::after{opacity: 1;}
+        > div img{opacity: 1;}
+      }
+    }
+  }
+}
+
+.viewer-ctrl-zoomin,
+.viewer-ctrl-zoomout,
+.viewer-ctrl-reset
+{
+  // float: left;
+  white-space: nowrap;
+  border:0;margin: 0;padding: 0;height:50px;display: block;
+  float: left;padding-left: 15px;padding-right: 10px;background:#000;
+  color: #dddddd;position: relative;transition:color .3s;
+  outline:none;
+  -ms-outline:none;
+  &::after
+  {
+    content: '';
+    width: 20px;height: 22px;display: inline-block;font-size: 0;vertical-align: middle;margin-top: -5px;margin-left: 10px;
+    background:url('#{$image}/blueprint_icon.png');border:0;padding:0;cursor: pointer;
+    transition: all .3s;
+  }
+
+  &::before
+  {
+    content: '';background: #404040;width:1px;height:25px;position: absolute;left:0;top:13px;
+  }
+
+  &:first-child::before{content: none;}
+
+  &:hover
+  {
+    color:#fff;
+    &::after
+    {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.viewer-ctrl-zoomin{}
+.viewer-ctrl-zoomout::after{background-position: -20px 0;}
+.viewer-ctrl-reset::after{background-position: -40px 0;}
+
+
+.viewer-bnt-prev,
+.viewer-bnt-next
+{
+  width: 50px;height: 50px;font-size: 0;background: rgba(0,0,0,.55);border:0;border-radius: 50%;overflow: hidden;
+  position: absolute;
+  &::after
+  {
+    content: '';width: 16px;height: 16px;opacity: .5;
+    border:3px solid #fff;border-left:0;border-top: 0;position: absolute;top: 15px;transition:opacity .3s;
+  }
+
+  &:hover, &:focus
+  {
+    &::after{opacity: 1;}
+  }
+}
+
+.viewer-bnt-prev{left: 10px;}
+.viewer-bnt-next{right: 10px;}
+.viewer-bnt-prev::after{transform: rotate(135deg);left: 20px;}
+.viewer-bnt-next::after{transform: rotate(-45deg);right: 20px;}
+
+.modal-container{width:700px;}
+
+.modal-section
+{
+  section
+  {
+    margin-top: 30px;
+    &:nth-of-type(1){margin-top: 0;}
+  }
+}
+.cs-alert{margin-top: 5px;}
+
+.modal-sec-title{margin-bottom: 10px;}
+
+.modal-alert
+{
+  .laymodal-content{padding-top: 40px;padding-bottom: 40px;}
+
+  section
+  {
+    margin-top: 30px;
+    &:nth-of-type(1){margin-top: 0;}
+  }
+}
+
+.modal-userfinder
+{
+  width:1000px;
+}
+
+.modal-userfinder
+{
+  section
+  {
+    margin-top: 10px;
+    &:nth-of-type(1){margin-top: 0;}
+  }
+}
+
+.modal-password
+{
+  section{text-align: center;}
+  b.pcolor-red{font-size: 24px;font-weight: normal;}
+  section + section{margin-top: 50px;}
+
+  .board-view-tb{margin-top: 10px;}
+}
+
+.modal-passwordsms
+{
+  section
+  {
+    margin:30px 0;
+    &:nth-of-type(1){margin-top: 0;}
+  } 
+}
+
+.laymodal
+{
+  section
+  {
+    margin-top:30px;
+    &:nth-of-type(1){margin-top: 0;}
+  } 
+}

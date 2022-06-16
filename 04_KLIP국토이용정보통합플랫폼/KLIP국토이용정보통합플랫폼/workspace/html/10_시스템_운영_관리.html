@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>KLIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="@@webRoot/common/css/common.css">
+  <script src="@@webRoot/common/libjs/jquery-1.12.4.min.js"></script>
+
+  <style>
+    body{font-size: 14px;min-width:1200px;padding:20px;}
+    tbody th, 
+    tbody td{color:#888888}
+
+    .cs-table{font-size: 13px;}
+    
+    .cs-table th, .cs-table td{padding:10px 5px;height:auto;vertical-align: middle;}
+    .cs-table th{text-align: center;}
+    .cs-table tbody tr:hover{box-shadow: 0px 2px 5px rgba(0,0,0,.4);transition:all .3s;}
+    .cs-table tbody tr:hover th,
+    .cs-table tbody tr:hover td{transition:background .3s;}
+    .cs-table tbody tr:hover th{background:#0031d1;color: #fff;border-bottom:2px solid #0031d1;}
+    .cs-table tbody tr:hover td{background:#f7f7f7;border-bottom:2px solid #0031d1;}
+
+    .cs-table tbody th{text-align: left;}
+
+
+    .cs-table tbody tr td:nth-child(5){font-weight: bold;color: #000;}
+
+    table a{color:#000;font-weight: bold;text-decoration: none;display: inline-block;}
+
+    .code{border:1px solid #cececd;padding:10px;display: block;width: 100%;box-sizing: border-box;}
+
+    .body{max-width:1400px;margin:0 auto;}
+
+    .fileName{display: block;margin-top: 5px;font-size:13px;font-style:italic;padding-left: 5px;}
+
+
+    .working{color: red;}
+    .working a{color: red;}
+
+    a del{color:#888888}
+  </style>
+
+  <script>
+    jQuery(function($){
+      var links = $('.cs-table a');
+      links.each(function(){
+        var link = $(this);
+        var fileName = link.attr('href').split('/');
+        console.log(fileName);
+        fileName = fileName[fileName.length - 1];
+
+        fileName = link.attr('href');
+
+        var elm = '<div class="fileName">'+ fileName +'</div>';
+        link.after(elm);
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="body">
+    @@include('./include/mapNav.html',{'tab': 10})
+    
+    <h1>Ⅹ. 시스템 운영 관리</h1>
+    <div class="cs-table">
+      <table style="width:100%;table-layout: fixed;">
+        <colgroup>
+          <col style="width:170px;">
+          <col style="width:270px;">
+          <col>
+          <col>
+          <col style="width:200px;">
+          <col style="width:100px;">
+          <col style="width:100px;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1depth</th>
+            <th>2depth</th>
+            <th>3depth</th>
+            <th>4depth</th>
+            <th>PAGE ID</th>
+            <th>완료일</th>
+            <th>수정일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>사용자 관리</th>
+            <td><a href="@@htmlRoot/system_manage/klipUser01.html">기관사용자 - 기관 관리자 접속 화면</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_01.html">기관사용자 -  국토교통부 관리자 접속 화면</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser11</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_01.html">전체</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_02.html">승인 대기</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_03.html">정상</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_04.html">접속 불가</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_05.html">휴면</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_06.html">권한 철회</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser01_07.html">탈퇴</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser01-2</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac">20-12-01</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="@@htmlRoot/system_manage/klipUser03.html">기관 사용자 정보 확인</a>
+            </td>
+            <td>KLIP(B/O)_KLIPUser03</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipUser02.html">기관 사용자 정보 관리</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPUser02</td>
+            <td class="tac">20-11-03</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/klipManager01.html">기관 관리자 - 기관 관리자 접속 화면</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPManager01</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/klipManager11.html">기관관리자 - 국토부 관리자 접속 화면</a> </td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPManager11</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/klipManager12.html">기관 사용자 정보 관리</a></td>
+            <td></td>
+            <td>KLIP(B/O)_KLIPManager12</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/molitManager01.html">국토교통부 관리자</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_MolitManager01</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/molitManager02.html">국토교통부 관리자 정보 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_MolitManager02</td>
+            <td class="tac">20-12-01</td>
+            <td class="tac"></td>
+          </tr>
+          <!-- // 기관관리자 -->
+          <tr>
+            <th>자료실 게시물 관리</th>
+            <td><a href="@@htmlRoot/system_manage/addFile01.html">정책 정보</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile01</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/addFile02.html">정책 정보 등록</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile02</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/addFile03.html">정책 정보 수정</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile03</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/addFile11.html">도시계획현황 통계 책자</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile11</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/addFile12.html">도시계획현황 통계 책자 등록</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile12</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/addFile13.html">도시계획현황 통계 책자 수정</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_AddFile13</td>
+            <td class="tac">20-11-25</td>
+            <td class="tac"></td>
+          </tr>
+
+          <tr>
+            <th>시스템 운영 관리</th>
+            <td><a href="@@htmlRoot/system_manage/infoManage01.html">정보연계 관리 - 정보 활용 내역</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-08</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage02.html">활용 정보 등록</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-08</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage03.html">활용 정보 확인</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-08</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage04.html">활용 정보 수정</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-08</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/infoManage05.html">정보연계 관리 - 정보 제공 내역</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage06.html">제공 정보 등록</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage07.html">제공 정보 확인</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage08.html">활용 서비스 등록</a></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage09.html">활용 서비스 수정</a></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage10.html">제공 정보 수정</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-13</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/infoManage11.html">정보연계 관리 - 연계 이력</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/system_manage/infoManage12.html">연계 이력 확인</a></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/system_manage/infoManage13.html">정보연계 관리 - 연계 통계</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="tac">21-12-14</td>
+            <td class="tac"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

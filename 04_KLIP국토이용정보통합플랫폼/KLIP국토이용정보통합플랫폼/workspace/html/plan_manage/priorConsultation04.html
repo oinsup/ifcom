@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>주민 사전협의 정보 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>주민 사전협의 정보 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <section>
+          <h3 class="cont-hedding1">담당자 정보</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>담당자 정보</caption>
+              <thead>
+                <tr>
+                  <th scope="col">기관</th>
+                  <th scope="col">부서</th>
+                  <th scope="col">담당자명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>경기도 하남시</td>
+                  <td>OOO과</td>
+                  <td>박경민</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="cs-gride cs-gride-50px">
+            <div class="cs-gride-col6">
+              <h3 class="cont-hedding1">사전협의 정보</h3>
+              <div class="board-view-tb _tal">
+                <table>
+                  <caption>사전협의 정보</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">최초 제안일</th>
+                      <td>2020-09-15</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안 대상</th>
+                      <td>주민</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안자명</th>
+                      <td>홍길동</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안 제목</th>
+                      <td>하남시 OO용도지구 제안</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">휴대전화</th>
+                      <td> 010-1111-2222</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">등록번호</th>
+                      <td>6891452234</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="cs-gride-col6">
+              <h3 class="cont-hedding1">온라인 제안 정보</h3>
+              <div class="board-view-tb _tal">
+                <table>
+                  <caption>사전협의 정보</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">제안일</th>
+                      <td>2020-10-15</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안 대상</th>
+                      <td>주민(개인)</td>
+                    </tr>
+                    <!-- 개인일경우? -->
+                    <tr>
+                      <th scope="row">소속</th>
+                      <td>OO대학교</td>
+                    </tr>
+                    <!-- 사업자일경우 -->
+                    <tr>
+                      <th scope="row">상호</th>
+                      <td>OOO주택개발</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">직위</th>
+                      <td>교수</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안자명</th>
+                      <td>고길동</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">제안 제목</th>
+                      <td>하남시 OO용도지구 제안 OOOOO</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">현재 상태</th>
+                      <td>입안반영(결정일 : 2021-01-31)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="priorConsultation01.html" class="cs-btn-line">목록</a>
+        </section>
+
+        
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

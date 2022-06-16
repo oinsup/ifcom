@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 계획 관리', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>입안 계획 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 계획 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="notification01.html" class="active">도시·군관리계획</a>
+        <a href="basicUrbanPlan01.html">도시·군기본계획</a>
+        <a href="metropolitanCityPlan01.html">광역도시계획</a>
+        <a href="#">의제</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <div class="js__working">워킹</div>
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

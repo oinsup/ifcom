@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 심의 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시계획위원회 심의 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="council01.html" class="active">심의회</a>
+        <a href="OFFSubmission01.html">오프라인 심의회 안건별 결과</a>
+        <a href="ONSubmission01.html">온라인 전자심의 안건별 결과</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>‘국토계획법 제113조(지방도시계획위원회)’ 및 ‘국토계획법 시행령 제110조 (지방도시계획위원회의 업무)’에 의거하여 진행되는 심의회 정보를 관리하실 수 <br>있습니다.</li>
+          </ul>
+
+          <a href="council02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        
+        <form action="">
+          <div class="board-searchbox">
+            <div class="board-searchbox-opts">
+              
+              <div>
+                <strong class="__tit">개최 기관</strong>
+                <div class="__col-harf">
+                  <select name="" class="cs-input _disabled" title="지역선택">
+                    <option>경기도</option>
+                  </select>
+                  <select name="" class="cs-input _disabled" title="시군구 선택">
+                    <option>하남시</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="__row_date">
+                <strong class="__tit">개최일</strong>
+                <div class="cs-datepicker-set">
+                  <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                  <div>~</div>
+                  <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                </div>
+              </div>
+              <div>
+                <label for="searchText" class="__tit">검색 조건</label>
+                <div class="__col-full">
+                  <input type="text" class="cs-input" id="searchText" placeholder="위원회명 입력">
+                </div>
+              </div>
+            </div>
+
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>‘온라인 전자심의’ 내역을 심의 기간별로 조회하고자 하시는 경우 개최일에 심의 기간을 입력하고 조회하시면 됩니다.</li>
+            </ul>
+
+            <div class="board-searchbox-btns cs-btn-set">
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            </div>
+
+          </div>
+        </form>
+
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">심의 대기</a></li>
+              <li><a href="#">심의 진행</a></li>
+              <li><a href="#">심의 완료</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">위원회명</a>
+            <a href="#">심의회 회차</a>
+            <a href="#">상태</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>심의회</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width130">
+                <col>
+                <col class="width90">
+                <col class="width110">
+                <col class="width60">
+                <col class="width60">
+                <col class="width100">
+                <col class="width100">
+                <col class="width100">
+                <col class="width90">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">개최 기관</th>
+                  <th scope="col">위원회명</th>
+                  <th scope="col">진행 방식</th>
+                  <th scope="col">회차</th>
+                  <th scope="col">안건</th>
+                  <th scope="col">출석 위원</th>
+                  <th scope="col">개최일</th>
+                  <th scope="col">운영 담당자</th>
+                  <th scope="col">등록일</th>
+                  <th scope="col">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>경기도 하남시</td>
+                  <td class="tal"><a href="council03.html">경기도 하남시 2021년 도시계획위원회</a></td>
+                  <td>온라인</td>
+                  <td>2020년도 4회</td>
+                  <td>15</td>
+                  <td>15</td>
+                  <td>2020-12-15</td>
+                  <td>김운영 외 5</td>
+                  <td>2020-12-15</td>
+                  <td>심의 대기</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>경기도 하남시</td>
+                  <td class="tal"><a href="#js__alert" jq-action="modal">담당자가 아닐때!! 경고창!</a></td>
+                  <td>온라인</td>
+                  <td>2020년도 4회</td>
+                  <td>15</td>
+                  <td>15</td>
+                  <td>2020-12-15</td>
+                  <td>박운영</td>
+                  <td>2020-12-15</td>
+                  <td>심의 완료</td>
+                </tr>
+                <tr>
+                  <td colspan="11">심의회 등록 내역이 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="11">검색하신 결과가 없습니다.</td>
+                </tr>
+                <tr>
+                  <td colspan="11">심의 대기 중인 내역이 없습니다. </td>
+                </tr>
+                <tr>
+                  <td colspan="11">심의 진행 중인 내역이 없습니다. </td>
+                </tr>
+                <tr>
+                  <td colspan="11">심의 완료 내역이 없습니다. </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>위원회명 클릭 시 심의회 상세 정보 확인 및 상태 관리가 가능합니다.</li>
+          <li>‘온라인 전자심의’ 내역의 개최일은 심의 기간 시작일을 의미합니다.</li>
+        </ul>
+
+        @@include('../include/paging.html')
+
+        <div id="js__alert" class="laymodal modal-alert">
+          <div class="laymodal-header">
+            <h2>심의회 정보 확인</h2>
+          </div>
+          <div class="laymodal-content tac">
+            해당 위원회의 운영 담당자만 이용 가능합니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+          </div>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

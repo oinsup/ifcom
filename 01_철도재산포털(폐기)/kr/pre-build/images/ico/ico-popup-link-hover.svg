@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.168" height="32.167">
+    <defs>
+        <radialGradient id="a" cx=".5" cy=".5" r=".45" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#12315b"/>
+            <stop offset=".389" stop-color="#13234f" stop-opacity=".302"/>
+            <stop offset="1" stop-color="#141b48" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <g data-name="그룹 2184" transform="translate(-631.511 -537.5)">
+        <ellipse data-name="타원 95" cx="10" cy="2" rx="10" ry="2" transform="translate(633.679 565.667)" style="fill:url(#a)"/>
+        <circle data-name="타원 94" cx="4.737" cy="4.737" r="4.737" transform="translate(638.872 545.109)" style="fill:none"/>
+        <path data-name="패스 10241" d="M654.724 544.88a12.084 12.084 0 0 0-23.213 4.7c0 2.329.956 5.045 2.854 8.073a40.914 40.914 0 0 0 5.5 6.819 29.67 29.67 0 0 0 2.348 2.139c1.036.827 1.294 1.22 1.379 1.22s.339-.394 1.414-1.252a30.937 30.937 0 0 0 2.444-2.224 39.947 39.947 0 0 0 5.431-6.74c1.859-2.984 2.8-5.687 2.795-8.034a12.054 12.054 0 0 0-.952-4.701zm-11.115 9.7a4.737 4.737 0 1 1 4.737-4.737 4.743 4.743 0 0 1-4.737 4.741z" style="fill:#2b7cec"/>
+    </g>
+</svg>

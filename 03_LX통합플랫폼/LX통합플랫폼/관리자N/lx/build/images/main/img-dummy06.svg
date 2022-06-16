@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="138" viewBox="0 0 268 138">
+  <g id="그룹_12703" data-name="그룹 12703" transform="translate(-1518 -575)">
+    <g id="그룹_11119" data-name="그룹 11119" transform="translate(1504 517)">
+      <rect id="사각형_10812" data-name="사각형 10812" width="267" height="138" transform="translate(14 58)" fill="#fff" opacity="0.2"/>
+      <rect id="사각형_10813" data-name="사각형 10813" width="47" height="138" transform="translate(14 58)" fill="#f6ca0f"/>
+      <rect id="사각형_10814" data-name="사각형 10814" width="47" height="138" transform="translate(61 58)" fill="#8d8d8d"/>
+      <rect id="사각형_10815" data-name="사각형 10815" width="47" height="73" transform="translate(108 58)" fill="#38426e"/>
+      <rect id="사각형_10826" data-name="사각형 10826" width="47" height="73" transform="translate(155 58)" fill="#38426e"/>
+      <rect id="사각형_10816" data-name="사각형 10816" width="47" height="73" transform="translate(155 58)" fill="#e98928"/>
+      <rect id="사각형_10833" data-name="사각형 10833" width="47" height="73" transform="translate(202 58)" fill="#e98928"/>
+      <rect id="사각형_10817" data-name="사각형 10817" width="40" height="138" transform="translate(202 58)" fill="#5dc0f3"/>
+      <rect id="사각형_10835" data-name="사각형 10835" width="40" height="138" transform="translate(242 58)" fill="#5dc0f3"/>
+      <rect id="사각형_10818" data-name="사각형 10818" width="39" height="138" transform="translate(242 58)" fill="#0cc7ba"/>
+      <rect id="사각형_10819" data-name="사각형 10819" width="47" height="57" transform="translate(14 139)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10820" data-name="사각형 10820" width="47" height="26" transform="translate(61 94)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10821" data-name="사각형 10821" width="47" height="76" transform="translate(61 120)" fill="#d8250e"/>
+      <rect id="사각형_10822" data-name="사각형 10822" width="47" height="34" transform="translate(61 162)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10823" data-name="사각형 10823" width="47" height="18" transform="translate(108 113)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10827" data-name="사각형 10827" width="47" height="27" transform="translate(155 104)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10832" data-name="사각형 10832" width="40" height="15" transform="translate(202 116)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10834" data-name="사각형 10834" width="40" height="30" transform="translate(242 101)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10824" data-name="사각형 10824" width="47" height="65" transform="translate(108 131)" fill="#5473e8"/>
+      <rect id="사각형_10828" data-name="사각형 10828" width="47" height="65" transform="translate(155 131)" fill="#08514c"/>
+      <rect id="사각형_10831" data-name="사각형 10831" width="40" height="65" transform="translate(202 131)" fill="#4f38f1"/>
+      <rect id="사각형_10836" data-name="사각형 10836" width="40" height="65" transform="translate(242 131)" fill="#ebbaff"/>
+      <rect id="사각형_10825" data-name="사각형 10825" width="47" height="15" transform="translate(108 181)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10829" data-name="사각형 10829" width="47" height="24" transform="translate(155 172)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10830" data-name="사각형 10830" width="40" height="19" transform="translate(202 177)" fill="#141414" opacity="0.2"/>
+      <rect id="사각형_10837" data-name="사각형 10837" width="40" height="27" transform="translate(242 169)" fill="#141414" opacity="0.2"/>
+      <text id="전북" transform="translate(65 136)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">전북</tspan></text>
+      <text id="지정" transform="translate(65 155)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="미지정" transform="translate(65 189)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-2" data-name="미지정" transform="translate(18 189)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="경기" transform="translate(18 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">경기</tspan></text>
+      <text id="지정-2" data-name="지정" transform="translate(18 132)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="광주전남" transform="translate(65 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">광주전남</tspan></text>
+      <text id="경남" transform="translate(113 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">경남</tspan></text>
+      <text id="대구경북" transform="translate(160 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">대구경북</tspan></text>
+      <text id="서울" transform="translate(205 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">서울</tspan></text>
+      <text id="충북" transform="translate(245 74)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">충북</tspan></text>
+      <text id="강원" transform="translate(113 146)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">강원</tspan></text>
+      <text id="부산울산" transform="translate(160 146)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">부산울산</tspan></text>
+      <text id="대전세종_충남" data-name="대전세종
+충남" transform="translate(205 146)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">대전세종</tspan><tspan y="0" font-family="SegoeUI, Segoe UI"></tspan><tspan x="0" y="12">충남</tspan></text>
+      <text id="인천" transform="translate(245 146)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">인천</tspan></text>
+      <text id="지정-3" data-name="지정" transform="translate(65 87)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-4" data-name="지정" transform="translate(113 106)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-5" data-name="지정" transform="translate(160 97)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-6" data-name="지정" transform="translate(205 106)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-7" data-name="지정" transform="translate(245 92)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-8" data-name="지정" transform="translate(113 174)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-9" data-name="지정" transform="translate(160 164)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-10" data-name="지정" transform="translate(205 173)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="지정-11" data-name="지정" transform="translate(245 165)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">지정</tspan></text>
+      <text id="미지정-3" data-name="미지정" transform="translate(65 114)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-4" data-name="미지정" transform="translate(113 127)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-5" data-name="미지정" transform="translate(160 127)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-6" data-name="미지정" transform="translate(205 127)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-7" data-name="미지정" transform="translate(245 127)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-8" data-name="미지정" transform="translate(113 193)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-9" data-name="미지정" transform="translate(160 193)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+      <text id="미지정-10" data-name="미지정" transform="translate(205 193)" fill="#fff" font-size="10" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="0" y="0">미지정</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/header.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--lnb-->
+            <div id="lnb">
+                <h2 class="hidden">주요메뉴</h2>
+                <!--menuName-->
+                <div class="menuName">
+                    <div class="name">
+                        <span>01</span>
+                        <p>국유재산안내</p>
+                    </div>
+                    <p class="eng">KOREA NATIONAL RAILWAY</p>
+                </div>
+                <!--//menuName-->
+                <!--dep1-->
+                <ul class="dep1">
+                    <li>
+                        <p><a href="국유재산안내-사용안내.html">사용안내</a></p>
+                    </li>
+                    <li>
+                        <p><a href="국유재산안내-매각안내.html">매각안내</a></p>
+                    </li>
+                    <li>
+                        <p><a href="국유재산안내-개발안내.html">개발안내</a></p>
+                    </li>
+                    <li class="active">
+                        <p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></p>
+                    </li>
+                </ul>
+                <!--//dep1-->
+            </div>
+            <!--//lnb-->
+            <!--content-->
+            <div id="content">
+                <h2 class="hidden">본문시작</h2>
+                <h3 class="titPage">사용 및 매각가능 토지검색</h3>
+                <!--breadCrumb-->
+                <div class="breadCrumb">
+                    <ul>
+                        <li class="home"><a href="#"><img src="../images/ico/ico_home.png" alt="홈으로"></a></li>
+                        <li><a href="#">국유재산안내</a></li>
+                        <li class="current"><a href="#">사용 및 매각가능 토지검색</a></li>
+                    </ul>
+                </div>
+                <!--//breadCrumb-->
+                <!-- mobileLnb -->
+                <div class="mobileLnb">
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">국유재산안내</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">개발사업대상지</a></li>
+                                <li><a href="javascript:;">유휴부지 및 폐터널</a></li>
+                                <li><a href="javascript:;">정보마당</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="dropDown">
+                        <li>
+                            <a href="javascript:;" title="목록 보이기/숨기기">사용 및 매각가능 토지검색</a>
+                            <ul class="2depth">
+                                <li><a href="javascript:;">사용안내</a></li>
+                                <li><a href="javascript:;">매각안내</a></li>
+                                <li><a href="javascript:;">개발안내</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ..mobileLnb -->
+                <section>
+                    <h3 class="sectionTitle">토지검색</h3>
+                    <!--  -->
+                    <article>
+                        <ul>
+                            <li>
+                                <p class="firstText">검색 후 <em class="cRed">해당 토지를 클릭하시면 '담당자 연락처와 재산정보'</em> 를 알 수 있습니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">문의 시 담당자의 검토가 우선되며, 검토결과에 따라 사용 및 매각이 불가할 수도 있으니 양해바랍니다.</p>
+                            </li>
+                            <li>
+                                <p class="firstText">재산소재지로 검색할 경우 법정동 최하위명으로 검색이 가능합니다. 예)"대전광역시 동구 신안동" → "신안동"</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <!-- // -->
+                    <!-- // -->
+                    <!--table-->
+                    <div class="table type01 mt-30">
+                        <table class="mobileBlock">
+                            <colgroup>
+                                <col style="width: 300px;">
+                                <col style="width: 700px;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><label for="num01">지역본부</label></th>
+                                <td>
+                                    <select name="" id="num01" title="지역본부 검색">
+                                        <option value="">전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="num02">노선명칭</label></th>
+                                <td><input type="text" id="num02" class="wd420" title="노선명칭 입력"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="num03">용도구분</label></th>
+                                <td>
+                                    <select name="" id="num03" title="용도구분 검색">
+                                        <option value="">전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="num04">주소</label></th>
+                                <td>
+                                    <input type="text" id="num04" class="wd420">
+                                    <button type="button" class="search" title="주소 입력">검색하기</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <div class="total">
+                            <p>전체 <span>171</span>건</p>
+                        </div>
+                    </div>
+                    <!--//titArea-->
+                    <!--table-->
+                    <div class="table type05">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="w120">731</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="txt">지역본부 : <span>수도권본부</span></div>
+                                        <div class="txt">노선명칭 : <span>수도권 (일반)경부선</span></div>
+                                        <div class="txt">재산소재지 : 
+                                            <a href="#" title="경기도 의왕시 월암동 17- 자세히 보기">
+                                                <span>경기도 의왕시 월암동 17-</span>
+                                            </a>
+                                        </div>
+                                        <div class="txt">용도구분 : <span>사용</span></div>
+                                        <div class="txt">면적(㎡) : <span>1578</span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--//table-->
+                    <!--pagination-->
+                    <div class="pagination">
+                        <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                        <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                        <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                    </div>
+                    <!--//pagination-->
+                </section>
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '사용자 정보 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="#">사용자 관리</a></li>
+          <li>기관 사용자 정보 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>기관 사용자 정보 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content">
+        <section>
+          <div class="cs-box _alert-icon">
+            <ul class="cs-list-dot">
+              <li>권한 철회 및 탈퇴된 사용자 정보를 확인하실 수 있습니다. 동일한 아이디로는 재가입이 불가능합니다.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">계정정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>계정정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">아이디</th>
+                  <td>
+                    <div class="frm-insert-t6">
+                      test1234
+                      <a href="#js__changeID2" jq-action="modal" class="cs-btn2-gray cs-btn-default flr">아이디 변경</a>
+                    </div>
+                  </td>
+                  <th scope="row"><label for="cupassword">비밀번호</label></th>
+                  <td>
+                    삭제 완료
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">사용 권한 신청일</th>
+                  <td>2020-12-01 13:00</td>
+                  <th scope="row">현재 상태/변경일</th>
+                  <td class='pcolor-red'>탈퇴(기관 변경)/2020-12-31 14:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>사용자가 직접 탈퇴한 후 경우 해당 아이디로 재가입을 할 수 없기 때문에 재가입이 불가능하다는 민원이 들어온 경우 탈퇴 아이디로 변경해 주세요.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">개인정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>개인정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">이름</th>
+                  <td>홍*동</td>
+                  <th scope="row">휴대전화</th>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">공직자통합메일</th>
+                  <td>-</td>
+                  <th scope="row">부서 연락처</th>
+                  <td>031-1234-4567(내선12)</td>
+                </tr>
+                <tr>
+                  <th scope="row"><label for="onnaraID">온-나라시스템 ID</label></th>
+                  <td>-</td>
+                  <th scope="row"><label for="swID">새올행정시스템 ID</label></th>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">소속정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>소속정보</caption>
+              <colgroup>
+                <col class="width160">
+                <col>
+                <col class="width160">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">소속 기관</th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">소속 부서</th>
+                  <td> 도시계획과</td>
+                </tr>
+                <tr>
+                  <th scope="row">직위</th>
+                  <td>주무관</td>
+                  <th scope="row">담당 업무</th>
+                  <td>용도구역·지구 관리</td>
+                </tr>
+                <tr>
+                  <th scope="row">권한 유형</th>
+                  <td>기관 사용자</td>
+                  <th scope="row">메뉴 권한 그룹</th>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="board-list">
+          <nav class="board-tab-nav js__tabNav" data-tabnav="testNav">
+            <ul>
+              <li class="active"><button data-idx="1">상태 변경 내역</button></li>
+              <li><button data-idx="2">정보 수정 내역</button></li>
+            </ul>
+          </nav>
+          <div class="js__tabNav_testNav1">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>상태 변경 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width180">
+                  <col>
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">관리자명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">관리자 메모</th>
+                    <th scope="col">증빙 서류</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>권한 철회(보직 변경)</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                    <td><a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default width100p">바로 보기</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>정상</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>관리자 메모는 ‘기관 사용자’에게 노출되지 않습니다.</li>
+            </ul>
+            @@include('../include/paging.html')
+          </div>
+
+          <div class="js__tabNav_testNav2">
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>상태 변경 내역</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col class="width180">
+                  <col>
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">정보 수정일</th>
+                    <th scope="col">관리자명</th>
+                    <th scope="col">수정 정보</th>
+                    <th scope="col">수정 내용</th>
+                    <th scope="col">메모 관리</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>권한 승계</td>
+                    <td class="tal">권한 승계 처리되었습니다. (박경민/test1235 → 홍길동/kjte335i3)</td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2020-10-17</td>
+                    <td>시스템</td>
+                    <td>일회용 비밀번호</td>
+                    <td class="tal">사용자가 사이트에 접속하여 ‘탈퇴’하였습니다.</td>
+                    <td><a href="#js__delete" jq-action="modal" class="cs-btn2-gray cs-btn-default width100p">삭제</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>수정 내용은 ‘기관 사용자’에게 노출되지 않습니다. 시스템에서 자동 생성한 내역은 관리자가 삭제할 수 없습니다.</li>
+            </ul>
+            @@include('../include/paging.html')
+
+
+            <div id="js__delete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>관리자 메모 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                삭제된 내용은 복구할 수 없습니다.<br>
+                삭제하시겠습니까?
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onClick="lay_pop_close('#js__delete');lay_pop_open('#js__deleteComplete')">확인</button>
+              </div>
+            </div>
+
+            <div id="js__deleteComplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>관리자 메모 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                관리자 메모가 삭제되었습니다.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+
+          </div>
+
+          
+
+          
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="klipUser01.html" class="cs-btn-line">목록</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용자 정보 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            사용자 정보가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="index.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        <!-- 미리보기 -->
+        @@include('../include/modals.html',{'items': 1})
+        <!-- 아이디 변경 -->
+        @@include('../include/modals.html',{'items': 102})
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_122" data-name="사각형 122" width="64.079" height="63.707" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_304" data-name="그룹 304" transform="translate(-1150 -935)">
+    <circle id="타원_8" data-name="타원 8" cx="47.5" cy="47.5" r="47.5" transform="translate(1150 935)" fill="#f2f2f2"/>
+    <g id="그룹_141" data-name="그룹 141" transform="translate(1165 951)">
+      <g id="그룹_140" data-name="그룹 140" clip-path="url(#clip-path)">
+        <path id="패스_291" data-name="패스 291" d="M48.579,20.113c-2.692,0-4.477-2.188-4.477-4.888V13.6c0-2.7,1.785-4.888,4.477-4.888S53.056,10.9,53.056,13.6v1.63c0,2.7-1.786,4.888-4.477,4.888" fill="#fff"/>
+        <path id="패스_292" data-name="패스 292" d="M21.079,39.707c4.409,0,5-5,5-5h-9l-4.1-5.744a3,3,0,0,0-2.441-1.256H8.079c-2.111,0-3.391,1.828-4,4,0,0-2.438,11.156-3,15s2,5,4,5h9L18.568,62.68l5.558.014L19.808,48.3a4,4,0,0,0-3.41-2.9l-6.319-.7,1.38-7.963,2.62,2.963Z" fill="#a3d4ff"/>
+        <path id="패스_293" data-name="패스 293" d="M59.079,35.707V29.119c0-2.651-4.1-4.208-7.675-4.817" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_294" data-name="패스 294" d="M50.508,19.7a4.741,4.741,0,0,0,2.571-4.434V13.707c0-2.73-1.795-5.028-4.5-5.028s-4.5,2.3-4.5,5.028v2" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_295" data-name="패스 295" d="M13.579,24.707A4.464,4.464,0,0,1,9.1,19.993V18.421a4.483,4.483,0,1,1,8.954,0v1.572a4.464,4.464,0,0,1-4.477,4.714" fill="#fff"/>
+        <path id="패스_296" data-name="패스 296" d="M13.579,24.707A4.464,4.464,0,0,1,9.1,19.993V18.421a4.483,4.483,0,1,1,8.954,0v1.572A4.464,4.464,0,0,1,13.579,24.707Z" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_297" data-name="패스 297" d="M18.568,62.681,14.079,51.708h-9c-2,0-4.563-1.157-4-5s3-15,3-15c.609-2.172,1.889-4,4-4h2.456a3,3,0,0,1,2.441,1.256l4.1,5.744h9s-.591,5-5,5h-7l-4.8-5.432" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_298" data-name="패스 298" d="M11.459,36.744l-1.38,7.963,6.319.7a4,4,0,0,1,3.409,2.9l4.318,14.39" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="선_234" data-name="선 234" x2="49" transform="translate(14.079 39.707)" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="패스_299" data-name="패스 299" d="M45.958,19.707h-21.5l6.25,15h21.25Z" fill="#fff"/>
+        <path id="패스_300" data-name="패스 300" d="M45.958,19.707h-21.5l6.25,15h21.25Z" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="선_235" data-name="선 235" y1="23" transform="translate(59.079 39.707)" fill="none" stroke="#2a5082" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="선_236" data-name="선 236" x1="2" y2="2" transform="translate(33.079 5.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="선_237" data-name="선 237" x1="2" y2="2" transform="translate(38.079 0.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="선_238" data-name="선 238" x2="2" y2="2" transform="translate(38.079 5.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="선_239" data-name="선 239" x2="2" y2="2" transform="translate(33.079 0.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="선_240" data-name="선 240" y2="6" transform="translate(26.079 8.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="선_241" data-name="선 241" x2="6" transform="translate(23.079 11.707)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

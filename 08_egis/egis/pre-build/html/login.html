@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko" style="height: 100%;">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1, maximum-scal=1">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/aos/aos.css">
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+    <script type="text/javascript" src="../lib/aos/aos.js"></script>
+    <script src="../js/ui.js"></script>
+
+    <title>EGIS</title>
+</head>
+
+<body style="height: 100%;">
+    <div id="wrap" class="login">
+        <!--header-->
+        <header id="header" class="black">
+            <!--logo-->
+            <h1 class="logo">
+                <a href="../html/main.html" title="EGIS"></a>
+            </h1>
+            <!--//logo-->
+            <!-- utilArea -->
+            <div class="utilArea">
+                <div class="btnArea">
+                    <button type="button" class="join" title="회원가입 팝업 열기">JOIN</button>
+                </div>
+            </div>
+            <!-- //utilArea -->
+        </header>
+        <!-- popup -->
+        <div class="popup type02">
+            <article>
+                <!-- header -->
+                <div class="header">
+                    <h3>회원가입</h3>
+                </div>
+                <!-- //header -->
+                <!-- cont -->
+                <div class="cont">
+                    <!-- tableArea -->
+                    <div class="tableArea">
+                        <table>
+                            <caption class="hidden">회원가입</caption>
+                            <colgroup>
+                                <col style=""><!-- width: 135px; -->
+                                <col style=""><!-- width: 485px; -->
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="t1">아이디</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="t1" placeholder="아이디를 입력해 주세요">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <label for="t2">이름</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="t2" placeholder="이름을 입력해 주세요">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <label for="t3">이메일</label>
+                                    </th>
+                                    <td>
+                                        <input type="email" id="t3" placeholder="이메일을 입력해 주세요">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <label for="t4">비밀번호</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="t4" placeholder="비밀번호를 입력해 주세요">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        <label for="t5">비밀번호 확인</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" id="t5" placeholder="비밀번호를 재입력해 주세요">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //tableArea -->
+                    <!-- checkboxArea -->
+                    <div class="checkboxArea">
+                        <div class="checkbox">
+                            <input type="checkbox" id="chk01">
+                            <label for="chk01">
+                                <p>
+                                    <a href="#" target="_blank" title="새창 열기">클라우드빌더 이용약관</a>
+                                    에 동의 합니다.
+                                </p>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="chk02">
+                            <label for="chk02">
+                                <p>
+                                    <a href="#" target="_blank" title="새창 열기">개인정보 수집 및 이용</a>
+                                    에 동의 합니다.
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- //checkboxArea -->
+                    <div class="btnArea">
+                        <button type="submit" class="btnBoardList" title="회원가입"><span>회원가입하기</span></button>
+                    </div>
+                </div>
+                <!-- //cont -->
+                
+                <button type="button" class="close" title="팝업 닫기"></button>
+            </article>
+        </div>
+        <!-- //popup -->
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <!-- inner -->
+                <div class="inner">
+                    <!-- loginVisual -->
+                    <article class="loginVisual">
+                        <!-- title -->
+                        <div class="titleArea">
+                            <p>3차원 공간정보 디지털트윈 전문기업, (주)이지스</p>
+                            <h1>DIGITAL TWIN CLOUD<br />
+                                with <span class="colorType neon">EGIS</span>
+                            </h1>
+                        </div>
+                        <!-- //title -->
+                        <!-- userArea -->
+                        <div class="userArea">
+                            <div class="user userId">
+                                <label for="user">ID</label>
+                                <input type="text" id="user" placeholder="USER ID">
+                            </div>
+                            <div class="user userPw">
+                                <label for="pw">Password</label>
+                                <input type="password" id="pw" placeholder="USER PASSWORD">
+                            </div>
+                        </div>
+                        <!-- //userArea -->
+                        <!-- checkboxArea -->
+                        <div class="checkboxArea">
+                            <div class="checkbox">
+                                <input type="checkbox" id="chk03">
+                                <label for="chk03" class="type02">Remember me</label>
+                            </div>
+                            <button type="button" class="findAll" tltle="아이디 패스워드 찾기 팝업 열기">Find ID / Password</button>
+                        </div>
+                        <!-- //checkboxArea -->
+
+                        <!-- popup -->
+                        <div class="popup type03" style="">
+                            <article>
+                                <!-- header -->
+                                <div class="header ">
+                                    <h3>아이디/비밀번호 찾기</h3>
+                                </div>
+                                <!-- //header -->
+                                <!-- cont -->
+                                <div class="cont">
+                                    <div class="tabContWrap type04">
+                                        <div class="tabNav">
+                                            <ul class="tabList">
+                                                <li class="active">아이디 찾기</li>
+                                                <li id="tab2">비밀번호 찾기</li>
+                                            </ul>
+                                        </div>
+                                        <!-- tableArea -->
+                                        <div class="tableArea findId active">
+                                            <table>
+                                                <caption class="hidden">아이디 찾기</caption>
+                                                <colgroup>
+                                                    <col style="">
+                                                    <col style="">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="t6">이메일</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="email" id="t6" placeholder="이메일을 입력해 주세요">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btnArea">
+                                                <button type="submit" class="btnBoardList" title="아이디 찾기"><span>아이디 찾기</span></button>
+                                            </div>
+                                        </div>
+                                        <!-- //tableArea -->
+
+                                        <!-- tableArea -->
+                                        <div class="tableArea findPw" style="">
+                                            <table>
+                                                <caption class="hidden">비밀번호 찾기</caption>
+                                                <colgroup>
+                                                    <col style="">
+                                                    <col style="">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="t7">아이디</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="text" id="t7" placeholder="아이디를 입력해 주세요">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="t8">이름</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="text" id="t8" placeholder="이름을 입력해 주세요">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <label for="t9">이메일</label>
+                                                        </th>
+                                                        <td>
+                                                            <input type="text" id="t9" placeholder="이메일을 입력해 주세요">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btnArea">
+                                                <button type="submit" class="btnBoardList" title="비밀번호 찾기"><span>비밀번호 찾기</span></button>
+                                            </div>
+                                        </div>
+                                        <!-- //tableArea -->
+                                    </div>
+                                </div>
+                                <!-- //cont -->
+                                
+                                <button type="button" class="close" title="팝업 닫기"></button>
+                            </article>
+                        </div>
+                        <!-- //popup -->
+
+                        <!-- btnArea -->
+                        <div class="btnArea">
+                            <button type="submit" class="btnLink"> <span>LOGIN</span></button>
+                            <div class="mobile">
+                                <p>Don't have an account?</p>
+                                <button type="button" class="btn join">Join us</button>
+                            </div>
+                        </div>
+                        <!-- //btnArea -->
+                    </article>
+                    <!-- //loginVisual -->
+                </div>
+                <!-- //inner -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//container-->
+        <!--footer-->
+        <footer id="footer" class="white login">
+            <p>Copyright 2022 EGIS Inc. All Rights Reserved</p>
+        </footer>
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>도시·군관리계획 수립</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 수립</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <form action="">
+        <div class="content board-view">
+          <div class="process-header">
+            <ul class="process-step">
+              <!-- 
+                진행된 탭 일경 우 class = "active"
+                현재 진행중인 탭 class = "active locked"
+               -->
+              <li class="active"><span>1</span>  기본 정보 등록</li>
+              <li class="active locked"><span>2</span> 계획도서, 계획설명서 등록</li>
+              <li><span>3</span> 조서, 도면 확인</li>
+            </ul>
+          </div>
+  
+          <section>
+            <h3 class="cont-hedding1">도시·군관리계획 기본 정보</h3>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>도시·군관리계획 기본 정보</caption>
+                <colgroup>
+                  <col class="width180">
+                  <col>
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">계획명</th>
+                    <td>입력한 계획명이 출력됩니다. </td>
+                    <th scope="row">계획 유형</th>
+                    <td>용도지역·용도지구</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="cont-hedding1">계획도서, 계획설명서</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>입안 제안 선택</caption>
+                <colgroup>
+                  <col class="width180">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <!-- 도시·군관리 계획도서 -->
+                  <tr>
+                    <th scope="row">도시·군관리계획도서 <i class="icon-required">필수 입력</i></th>
+                    <td class="_p0">
+                      <div class="board-view-tb">
+                        <table>
+                          <colgroup>
+                            <col class="width240">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <td>계획도</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileSecUp1" placeholder="도시·군관리계획도서를 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileSecUp1" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">
+                                <div class="cs-box-tip _type2">
+                                  <strong>법률 TIP</strong>
+                                  <ul>
+                                    <li>
+                                      국토계획법 제25조(도시·군관리계획의 입안) ②항
+                                      <p>
+                                        국토교통부장관(제40조에 따른 수산자원보호구역의 경우 해양수산부장관을 말한다. 이하 이 조에서 같다), 시·도지사, 시장 또는 군수는 도시·군관리계획을 입안할 때에는 대통령령으로 정하는 바에 따라 <span class="underline">도시·군관리계획도서(계획도와 계획조서를 말한다.</span> 이하 같다)와 이를 보조하는 <span class="underline">계획설명서(기초조사결과·재원조달방안 및 경관계획 등을 포함한다.</span> 이하 같다)를 작성하여야 한다.
+                                      </p>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- 계획설명서 -->
+                  <tr>
+                    <th scope="row">계획설명서</th>
+                    <td class="_p0">
+                      <div class="board-view-tb">
+                        <table>
+                          <colgroup>
+                            <col class="width120">
+                            <col class="width120">
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr>
+                              <td rowspan="4">기초조사결과</td>
+                              <td>기초조사</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo1" placeholder="기초조사 결과 파일을 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo1" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>환경성 검토</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo2" placeholder="환경성 검토 결과 파일을 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo2" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>토지적성평가</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo3" placeholder="토지적성평가 결과 파일을 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo3" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>재해취약성분석</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo4" placeholder="재해취약성분석 결과 파일을 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo4" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">재원조달방안 및 경관계획</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo5" placeholder="재원조달방안 및 경관계획 파일을 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo5" class="cs-btn2-gray cs-btn-default">
+                                      파일 선택
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2">기타</td>
+                              <td>
+                                <div class="cs-file-wrap">
+                                  <input type="file" class="cs-file" id="fileInfo6" placeholder="기타 파일이 있으신 경우 선택해 주세요.">
+                                  <span class="js__filename"></span>
+                                  <div class="cs-file-btns">
+                                    <label for="fileInfo6" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="3">
+                                <div class="cs-box-tip _type2">
+                                  <strong>법률 TIP</strong>
+                                  <ul>
+                                    <li>
+                                      국토계획법 제25조(도시·군관리계획의 입안) ②항
+                                      <p>
+                                        국토교통부장관(제40조에 따른 수산자원보호구역의 경우 해양수산부장관을 말한다. 이하 이 조에서 같다), 시·도지사, 시장 또는 군수는 도시·군관리계획을 입안할 때에는 대통령령으로 정하는 바에 따라 <span class="underline">도시·군관리계획도서(계획도와 계획조서를 말한다.</span> 이하 같다)와 이를 보조하는 <span class="underline">계획설명서(기초조사결과·재원조달방안 및 경관계획 등을 포함한다.</span> 이하 같다)를 작성하여야 한다.
+                                      </p>
+                                    </li>
+                                    <li>
+                                      제13조(광역도시계획의 수립을 위한 기초조사) ①항
+                                      <p>
+                                        인구, 경제, 사회, 문화, 토지 이용, 환경, 교통, 주택, 그 밖에 대통령령으로 정하는 사항 중 그 광역도시계획의 수립 또는 변경에 필요한 사항을 대통령령으로 정하는 바에 따라 조사하거나 측량(이하 "기초조사"라 한다)하여야 한다.
+                                      </p>
+                                    </li>
+  
+                                    <li>
+                                      제27조(도시·군관리계획의 입안을 위한 기초조사 등) ①항
+                                      <p>
+                                        도시·군관리계획을 입안하는 경우에는 제13조를 준용한다. 다만, 대통령령으로 정하는 경미한 사항을 입안하는 경우에는 그러하지 아니하다.
+                                      </p>
+                                    </li>
+  
+                                    <li>
+                                      제27조(도시·군관리계획의 입안을 위한 기초조사 등) ②항
+                                      <p>
+                                        기초조사의 내용에 도시·군관리계획이 환경에 미치는 영향 등에 대한 환경성 검토를 포함하여야 한다. 
+                                      </p>
+                                    </li>
+  
+                                    <li>
+                                      제27조(도시·군관리계획의 입안을 위한 기초조사 등) ③항
+                                      <p>
+                                        기초조사의 내용에 토지적성평가와 재해취약성분석을 포함하여야 한다.
+                                      </p>
+                                    </li>
+  
+                                    <li>
+                                      제27조(도시·군관리계획의 입안을 위한 기초조사 등) ④항
+                                      <p>
+                                        도시·군관리계획으로 입안하려는 지역이 도심지에 위치하거나 개발이 끝나 나대지가 없는 등 대통령령으로 정하는 요건에 해당하면 제1항부터 제3항까지의 규정에 따른 기초조사, 환경성 검토, 토지적성평가 또는 재해취약성분석을 하지 아니할 수 있다.
+                                      </p>
+                                    </li>
+  
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--// board-view-tb -->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>파일을 분리하여 등록할 수 없는 경우에는 ‘도시·군관리계획도서’로 등록해 주세요.</li>
+            </ul>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="#js__cancel" jq-action="modal" class="cs-btn-line">취소</a>
+            <a href="#js__tempSave" jq-action="modal" class="cs-btn">임시저장</a>
+            <a href="#js__prev" jq-action="modal" class="cs-btn-line">이전</a>
+            <a href="#js__next" jq-action="modal" class="cs-btn">다음</a>
+          </section>
+  
+        </div>
+      </form>
+
+      <!-- 취소 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancel',
+        'title': '도시·군관리계획 수립 취소',
+        'cont': '지금까지 입력하신 내용을 임시저장 하였습니다.<br>추후 도시·군관리계획을 계속해서 수립하실 수 있습니다.',
+        'btns': '<a href="urbanPlan01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 임시저장 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__tempSave',
+        'title': '도시·군관리계획 수립',
+        'cont': '현재까지 입력하신 내용이 임시저장 되었습니다.',
+        'btns': '<button class="cs-btn" type="button" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 이전 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__prev',
+        'title': '도시·군관리계획 수립',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>이전 단계로 이동합니다.',
+        'btns': '<a href="urbanPlan02.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 다음 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__next',
+        'title': '도시·군관리계획 수립',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>다음 단계로 이동합니다.',
+        'btns': '<a href="urbanPlan04.html" class="cs-btn">확인</a>'
+      })
+      
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

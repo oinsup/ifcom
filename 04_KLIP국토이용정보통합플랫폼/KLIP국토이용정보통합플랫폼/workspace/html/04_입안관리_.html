@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>KLIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="@@webRoot/common/css/common.css">
+  <script src="@@webRoot/common/libjs/jquery-1.12.4.min.js"></script>
+
+  <style>
+    body{font-size: 14px;min-width:1200px;padding:20px;}
+    tbody th, 
+    tbody td{color:#888888}
+
+    .cs-table{font-size: 13px;}
+    
+    .cs-table th, .cs-table td{padding:10px 5px;height:auto;vertical-align: middle;}
+    .cs-table th{text-align: center;word-break: break-all;white-space:normal;text-align: left;}
+    .cs-table tbody tr:hover{box-shadow: 0px 2px 5px rgba(0,0,0,.4);transition:all .3s;}
+    .cs-table tbody tr:hover th,
+    .cs-table tbody tr:hover td{transition:background .3s;}
+    .cs-table tbody tr:hover th{background:#0031d1;color: #fff;border-bottom:2px solid #0031d1;}
+    .cs-table tbody tr:hover td{background:#f7f7f7;border-bottom:2px solid #0031d1;}
+
+    .cs-table tbody tr td:nth-child(5){font-weight: bold;color: #000;}
+
+    table a{color:#000;font-weight: bold;text-decoration: none;display: inline-block;}
+
+    .code{border:1px solid #cececd;padding:10px;display: block;width: 100%;box-sizing: border-box;}
+
+    .body{max-width:1400px;margin:0 auto;}
+
+    .fileName{display: block;margin-top: 5px;font-size:13px;font-style:italic;padding-left: 5px;}
+
+
+    .working{color: red;}
+    .working a{color: red;}
+
+    a del{color:#888888}
+  </style>
+
+  <script>
+    jQuery(function($){
+      var links = $('.cs-table a');
+      links.each(function(){
+        var link = $(this);
+        var fileName = link.attr('href');
+        // fileName = fileName[fileName.length - 1];
+
+        var elm = '<div class="fileName">'+ fileName +'</div>';
+        link.after(elm);
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="body">
+    @@include('./include/mapNav.html',{'tab': 4})
+
+    <h1>Ⅵ. 입안 관리</h1>
+    <div class="cs-table">
+      <table style="width:100%;table-layout: fixed;">
+        <colgroup>
+          <col style="width:170px;">
+          <col style="width:270px;">
+          <col>
+          <col>
+          <col style="width:250px;">
+          <col style="width:100px;">
+          <col style="width:100px;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>1depth</th>
+            <th>2depth</th>
+            <th>3depth</th>
+            <th>4depth</th>
+            <th>PAGE ID</th>
+            <th>완료일</th>
+            <th>수정일</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1. 입안 제안 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/proposal01.html">1-1. 온라인 제안 내역</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal01</td>
+            <td>20-11-17</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>1-2. 입안 제안서 검토</td>
+            <td><a href="@@htmlRoot/plan_manage/proposal02.html">담당자 지정 대기</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal02</td>
+            <td>20-11-17</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/proposal03.html">담당자 검토</a></td>
+            <td></td>
+            <td>
+              KLIP(B/O)_Proposal03<br>
+              KLIP(B/O)_Proposal04
+            </td>
+            <td>20-11-17</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/proposal05.html">위원회 자문</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal05</td>
+            <td>20-11-17</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/proposal06.html">입안 반영/반려</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal06</td>
+            <td>20-11-17</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/priorConsultation01.html"><del>1-3. 오프라인 사전협의 내역</del><br> -&gt; 주민 사전협의 내역 (메뉴면 변경됨)</a> </td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_PriorConsultation01</td>
+            <td>20-11-17</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/proposal06.html">입안 제안서 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal07</td>
+            <td></td> 
+            <td>입안 제안서 검토 > 입안반영과 같음</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/proposal08.html">입안 제안서 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Proposal08</td>
+            <td></td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/priorConsultation02.html">주민 사전협의 정보 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_PriorConsultation02</td>
+            <td>20-11-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/priorConsultation03.html">주민 사전협의 정보 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_PriorConsultation03</td>
+            <td>20-11-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/priorConsultation04.html">주민 사전협의 정보 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_PriorConsultation04</td>
+            <td>20-11-30</td> 
+            <td></td>
+          </tr>
+
+
+          <tr>
+            <th>도시·군관리계획 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan01.html">입안 진행</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan01</td>
+            <td>20-12-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td>계획수립</td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan02.html">기본 정보 등록</a></td>
+            <td>KLIP(B/O)_UrbanPlan02</td>
+            <td>20-12-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan03.html">계획도서, 계획설명서 등록</a></td>
+            <td>KLIP(B/O)_UrbanPlan03</td>
+            <td>20-12-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan04.html">도면, 조서 확인</a></td>
+            <td>KLIP(B/O)_UrbanPlan04</td>
+            <td>20-12-30</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td>도시·군관리계획 입안</td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan05.html">관련 부서/부처 협의</a></td>
+            <td>KLIP(B/O)_UrbanPlan05</td>
+            <td>21-01-04</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan06.html">주민 의견 청취</a></td>
+            <td>KLIP(B/O)_UrbanPlan06</td>
+            <td>21-01-04</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan07.html">지방의회 의견 청취</a></td>
+            <td>KLIP(B/O)_UrbanPlan07</td>
+            <td>21-01-04</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan08.html">시·군·구 위원회 심의</a></td>
+            <td>KLIP(B/O)_UrbanPlan08</td>
+            <td>21-01-04</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan09.html">도 승인/부서 협의</a></td>
+            <td>KLIP(B/O)_UrbanPlan09</td>
+            <td>21-01-05</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan10.html">결정</a></td>
+            <td>KLIP(B/O)_UrbanPlan10</td>
+            <td>21-01-05</td> 
+            <td></td>
+          </tr>
+
+          
+          
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult01.html">용역 성과</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_ServiceResult01</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td>성과등록</td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult02.html">1 용역사업, 기본 정보 등록</a></td>
+            <td>KLIP(B/O)_ServiceResult02</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult03.html">2 계획도서, 계획설명서 등록</a></td>
+            <td>KLIP(B/O)_ServiceResult03</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult04.html">3 도면, 조서 확인</a></td>
+            <td>KLIP(B/O)_ServiceResult04</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult05.html">4 입안 진행 결과 등록</a></td>
+            <td>KLIP(B/O)_ServiceResult05</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult06.html">5 고시문 등록</a></td></td>
+            <td>KLIP(B/O)_ServiceResult06</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/ServiceResult07.html">용역 성과 확인</a></td></td>
+            <td>KLIP(B/O)_ServiceResult07</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/UrbanPlan11.html">고시</a></td>
+            <td></td>
+            <td></td></td>
+            <td>KLIP(B/O)_UrbanPlan11</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/UrbanPlan12.html">도시·군관리계획 고시 확인</a></td>
+            <td></td></td>
+            <td>KLIP(B/O)_UrbanPlan12</td>
+            <td>20-12-29</td> 
+            <td></td>
+          </tr>
+
+          
+
+
+
+
+
+
+
+
+          <!-- <tr>
+            <th>2. 도시·군관리계획 입안 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan01.html">도시군관리계획 입안</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan01</td>
+            <td class="tac">20-11-17</td>
+            <td class="tac">20-11-20</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan02.html">계획 수립</a></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan02</td>
+            <td class="tac">20-11-17</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>도시·군관리계획 고시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="tac"></td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan21.html">의제</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan21</td>
+            <td class="tac">20-11-20</td>
+            <td class="tac">20-11-24</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan23.html">의제 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan23</td>
+            <td class="tac">20-11-20</td>
+            <td class="tac">20-11-24</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan22.html">의제 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan22</td>
+            <td class="tac">20-11-20</td>
+            <td class="tac">20-11-24</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/urbanPlan24.html">의제 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_UrbanPlan24</td>
+            <td class="tac">20-11-20</td>
+            <td class="tac">20-11-24</td>
+          </tr> -->
+
+
+
+
+
+
+
+          <tr>
+            <th>광역도시/도시·군기본계획 관리</th>
+            <td><a href="@@htmlRoot/plan_manager/metropolitanCityPlan01.html">광역도시계획</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_MetropolitanCityPlan01</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-18</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/metropolitanCityPlan02.html">광역도시계획 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_MetropolitanCityPlan02</td>
+            <td class="tac">20-11-18</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/metropolitanCityPlan03.html">광역도시계획 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_MetropolitanCityPlan03</td>
+            <td class="tac">20-11-18</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/metropolitanCityPlan04.html">광역도시계획 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_MetropolitanCityPlan04</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-18</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/basicUrbanPlan01.html">도시·군기본계획</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_BasicUrbanPlan01</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-18</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/basicUrbanPlan02.html">도시·군기본계획 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_BasicUrbanPlan02</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-18</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/basicUrbanPlan03.html">도시·군기본계획 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_BasicUrbanPlan03</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-18</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/BasicUrbanPlan04.html">도시·군기본계획 수정</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_BasicUrbanPlan04</td>
+            <td class="tac">20-11-13</td>
+            <td class="tac">20-11-24</td>
+          </tr>
+
+          <!-- 심의관리 -->
+          <tr>
+            <th>도시계획위원회 심의 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/council01.html">심의회</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_Council01</td>
+            <td class="tac"></td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/council02.html">심의회 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Council02</td>
+            <td class="tac"></td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/council03.html">심의회 정보 확인</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Council03</td>
+            <td class="tac"></td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/council04.html">심의회 정보 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_Council04</td>
+            <td class="tac"></td>
+            <td class="tac"></td>
+          </tr>
+
+          <tr>
+            <th>도시계획위원회 구성 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers01.html">시·군·구도시계획위원회</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers01</td>
+            <td class="tac">20-12-11</td>
+            <td class="tac">20-12-14</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers02.html">시·군·구도시계획위원회 (등록)</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers02</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers03.html">시·군·구도시계획위원회 정보 관리 (뷰)</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers03</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers04.html">시·군·구도시계획위원회 정보 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers04</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers11.html">시·도도시계획위원회</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers11</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers12.html">시·도도시계획위원회 등록</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers12</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers13.html">시·도도시계획위원회 정보 관리</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers13</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/councilWorkers14.html">시·도도시계획위원회 정보 수정</a></td>
+            <td></td>
+            <td>KLIP(B/O)_CouncilWorkers14</td>
+            <td class="tac">20-12-14</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/consultantInfo01.html">위원 위촉 정보</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_ConsultantInfo01</td>
+            <td class="tac">20-12-11</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/consultantInfo03.html">위원 위촉 정보 확인 (뷰)</a></td>
+            <td></td>
+            <td>KLIP(B/O)_ConsultantInfo03</td>
+            <td class="tac">20-12-11</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+            <td><a href="@@htmlRoot/plan_manage/consultantInfo04.html">위원 위촉 정보 수정 (수정)</a></td>
+            <td></td>
+            <td>KLIP(B/O)_ConsultantInfo04</td>
+            <td class="tac">20-12-11</td>
+            <td class="tac"></td>
+          </tr>
+
+
+          <tr>
+            <th>전자결재 내역 관리</th>
+            <td><a href="@@htmlRoot/plan_manage/on-Nara01.html">전자결재 내역</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_On-Nara01</td>
+            <td class="tac">20-12-09</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/on-Nara02.html">기안문 확인</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_On-Nara02</td>
+            <td class="tac">20-12-09</td>
+            <td class="tac"></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><a href="@@htmlRoot/plan_manage/on-Nara03.html">재기안문 확인</a></td>
+            <td></td>
+            <td></td>
+            <td>KLIP(B/O)_On-Nara03</td>
+            <td class="tac">20-12-09</td>
+            <td class="tac"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

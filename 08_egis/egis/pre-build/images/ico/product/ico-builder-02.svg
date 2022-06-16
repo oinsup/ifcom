@@ -1,0 +1,10 @@
+<svg id="ico-builder-02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="21.333" viewBox="0 0 32 21.333">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_331" data-name="사각형 331" width="32" height="21.333" fill="#1740c2"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_525" data-name="그룹 525" clip-path="url(#clip-path)">
+    <path id="패스_609" data-name="패스 609" d="M20,8a4,4,0,0,1-8,0H0V21.333H32V8Zm9.333,5.333H26.667V16h2.667v2.667H2.667V16H5.333V13.333H2.667V10.667H9.88a6.682,6.682,0,0,0,12.24,0h7.213Zm-24-10.667H26.667V5.333h2.667V0H2.667V5.333H5.333Z" fill="#1740c2"/>
+  </g>
+</svg>

@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KLIP헬프데스크</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap">
+    <header id="header">
+
+    </header>
+    <div id="container">
+        <div id="content">
+            <h2 class="hidden">메인 페이지 본문 시작</h2>
+            <div class="inner">
+                <!--pageName-->
+                <div class="pageName">
+                    <h3><span>FAQ</span></h3>
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li><a href="#" class="home">홈</a></li>
+                            <li><a href="#">이용지원</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                </div>
+                <!--//pageName-->
+
+                <!--searchBar-->
+                <div class="searchBar">
+                    <label for="num01">
+                        <input type="text" id="num01" placeholder="검색어 입력" title="검색어 입력">
+                    </label>
+                    <button type="button" class="btnSearch"><span class="hidden">검색</span></button>
+                </div>
+                <!--//searchBar-->
+                <!--tabContWrap-->
+                <div class="tabContWrap type01">
+                    <!--tabNav-->
+                    <div class="tabNav">
+                        <ul class="tabList">
+                            <li class="active">전체</li>
+                            <li>KLIP가입/탈퇴</li>
+                            <li>KLIP가입/탈퇴</li>
+                            <li>KLIP가입/탈퇴</li>
+                        </ul>
+                    </div>
+                    <!--//tabNav-->
+                    <!--tabCont-->
+                    <div class="tabCont active">1</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">2</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">3</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">4</div>
+                    <!--//tabCont-->
+                </div>
+                <!--//tabContWrap-->
+                <br/><br/>
+                <!--tabContWrap-->
+                <div class="tabContWrap type02">
+                    <!--tabNav-->
+                    <div class="tabNav">
+                        <ul class="tabList">
+                            <li class="active">매뉴얼&프로그램&양식</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div>
+                    <!--//tabNav-->
+                    <!--tabCont-->
+                    <div class="tabCont active">1</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">2</div>
+                    <!--//tabCont-->
+                </div>
+                <!--//tabContWrap-->
+                <br/><br/>
+                <!--tabContWrap-->
+                <div class="tabContWrap type03">
+                    <!--tabNav-->
+                    <div class="tabNav">
+                        <ul class="tabList">
+                            <li class="active">사용자 매뉴얼</li>
+                            <li>프로그램</li>
+                            <li>양식</li>
+                        </ul>
+                    </div>
+                    <!--//tabNav-->
+                    <!--tabCont-->
+                    <div class="tabCont active">1</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">2</div>
+                    <!--//tabCont-->
+                    <!--tabCont-->
+                    <div class="tabCont">3</div>
+                    <!--//tabCont-->
+                </div>
+                <!--//tabContWrap-->
+                <br/><br/>
+                <!--pagination-->
+                <div class="pagination">
+                    <button type="button" class="first"><span class="hidden">맨앞으로</span></button>
+                    <button type="button" class="prev"><span class="hidden">이전페이지</span></button>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <button type="button" class="next"><span class="hidden">다음페이지</span></button>
+                    <button type="button" class="last"><span class="hidden">맨뒤로</span></button>
+                </div>
+                <!--//pagination-->
+                <br/><br/>
+                <!--searchArea-->
+                <div class="searchArea">
+                    <div class="table">
+                        <table>
+                            <caption>검색 테이블</caption>
+                            <colgroup>
+                                <col style="width: 90px;">
+                                <col style="width: 340px ;">
+                                <col style="width: 70px;">
+                                <col style="width: 370px;">
+                                <col style="width: 90px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row"><label for="num02">문의 기관</label></th>
+                                <td>
+                                    <select name="" id="num02" class="grayType wd156">
+                                        <option value="">광역시·도 선택</option>
+                                    </select>
+                                    <select name="" id="num02" class="grayType wd156">
+                                        <option value="">시·군·구 선택</option>
+                                    </select>
+                                </td>
+                                <th scope="row"><label for="num03">문의일</label></th>
+                                <td>
+                                    <select name="" id="num03" class="grayType">
+                                        <option value="">2020</option>
+                                    </select>
+                                    <select name="" id="num03" class="grayType">
+                                        <option value="">12</option>
+                                    </select>
+                                    <span class="hyphen">~</span>
+                                    <select name="" id="num03" class="grayType">
+                                        <option value="">2020</option>
+                                    </select>
+                                    <select name="" id="num03" class="grayType">
+                                        <option value="">12</option>
+                                    </select>
+                                </td>
+                                <th scope="row"><label for="num04">검색 조건</label></th>
+                                <td style="padding-right: 20px;">
+                                    <input type="text" id="num04" class="grayType" placeholder="문의자명, 문의 제목 입력" title="문의자명, 문의 제목 입력">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--//searchArea-->
+                <br/><br/>
+                <button type="button" class="btn bdGray">변경</button>
+                <button type="button" class="btn gray">신규 등록</button>
+                <!--btnArea-->
+                <div class="btnArea center">
+                    <button type="button" class="btn white middle">초기화</button>
+                    <button type="button" class="btn dkBlue middle">검색</button>
+                </div>
+                <!--//btnArea-->
+                <br/>
+                <!--btnArea-->
+                <div class="btnArea center">
+                    <button type="button" class="btn dkBlue middle">목록</button>
+                </div>
+                <!--//btnArea-->
+                <br/>
+                <!--btnArea-->
+                <div class="btnArea center">
+                    <button type="button" class="btn white middle">목록</button>
+                    <button type="button" class="btn dkBlue middle">삭제</button>
+                    <button type="button" class="btn dkBlue middle">수정</button>
+                </div>
+                <!--//btnArea-->
+                <br/><br/>
+                <!--prneArea-->
+                <ul class="prneArea">
+                    <li class="next">
+                        <a href="#" class="arrow">다음</a>
+                        <a href="#" class="tit">있는 경우 다음 공지사항 제목이 출력됩니다.</a>
+                    </li>
+                    <li class="prev">
+                        <a href="#" class="arrow">이전</a>
+                        <a href="#" class="tit">있는 경우 다음 공지사항 제목이 출력됩니다.</a>
+                    </li>
+                </ul>
+                <!--//prneArea-->
+                <br/><br/><br/><br/>
+                <!--table-->
+                <div class="table type01">
+                    <table>
+                        <caption class="hidden">테이블</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">문의일</th>
+                                <th scope="col">문의 기관</th>
+                                <th scope="col">문의자</th>
+                                <th scope="col">문의 유형</th>
+                                <th scope="col">문의 제목</th>
+                                <th scope="col">답변일</th>
+                                <th scope="col">답변자</th>
+                                <th scope="col">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>10</td>
+                            <td>2021-09-30</td>
+                            <td class="txt-left">세종특별자치시 000구</td>
+                            <td>김사랑</td>
+                            <td class="txt-left">기능 이용 관련</td>
+                            <td><p class="doc title">입력한 제목이 보입니다. 입력한 제목이 보입니다.입력한 제목이 보입니다.</p></td>
+                            <td>2021-09-30</td>
+                            <td>관리자명</td>
+                            <td>답변 대기</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>2021-09-30</td>
+                            <td class="txt-left">세종특별자치시 000구</td>
+                            <td>김사랑</td>
+                            <td class="txt-left">기능 이용 관련</td>
+                            <td><p class="doc title">입력한 제목이 보입니다. 가나다라마바사</p></td>
+                            <td>2021-09-30</td>
+                            <td>관리자명</td>
+                            <td>답변 대기</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>2021-09-30</td>
+                            <td class="txt-left">세종특별자치시 000구</td>
+                            <td>김사랑</td>
+                            <td class="txt-left">기능 이용 관련</td>
+                            <td><p class="doc title">입력한 제목이 보입니다. 가나다라마바사</p></td>
+                            <td>2021-09-30</td>
+                            <td>관리자명</td>
+                            <td>답변 대기</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--//table-->
+                <br/><br/><br/><br/>
+                <!--table-->
+                <div class="table type02">
+                    <table>
+                        <caption class="hidden">테이블</caption>
+                        <colgroup>
+                            <col style="width: 150px;">
+                            <col style="width: 450px;">
+                            <col style="width: 150px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">등록일/등록자</th>
+                            <td>2021-09-13 11:12/관리자명</td>
+                            <th scope="row">조회수</th>
+                            <td>345</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">공지 기간<span class="redDot">•</span></label></th>
+                            <td>
+                                <div class="calGroup">
+                                    <input type="text" class="cal grayType" id="" placeholder="2021-07-02">
+                                    <span class="hyphen">~</span>
+                                    <input type="text" class="cal grayType" id="" placeholder="2021-07-02">
+                                </div>
+                            </td>
+                            <th scope="row"><label for="">상단 고정<span class="redDot">•</span></label></th>
+                            <td>
+                                <div class="radioGroup">
+                                    <!--radio-->
+                                    <div class="radio">
+                                        <input type="radio" name="rad" id="rad01" checked>
+                                        <label for="rad01"><span>미고정</span></label>
+                                    </div>
+                                    <!--//radio-->
+                                    <!--radio-->
+                                    <div class="radio">
+                                        <input type="radio" name="rad" id="rad02">
+                                        <label for="rad02"><span>고정</span></label>
+                                    </div>
+                                    <!--//radio-->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">제목<span class="redDot">•</span></label></th>
+                            <td colspan="3">
+                                <input type="text" class="grayType wd900" title="제목 입력" placeholder="문의자가 입력한 문의 제목이 보입니다.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="">내용<span class="redDot">•</span></label></th>
+                            <td colspan="3">
+                                <div class="textarea">
+                                    <textarea name="" id="" class="wd900" title="내용 입력" cols="30" rows="10">등록한 내용이 출력됩니다.</textarea>
+                                    <p class="textCount"><span>0</span>/1,000자</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="line-height: 18px;"><label for="">첨부파일<br/><span style="font-size: 14px;">(최대 3MB)</span></label></th>
+                            <td colspan="3">
+                                <div class="fileArea">
+                                    <input type="file" id="fileSelect01" class="hidden">
+                                    <p class="fileName">파일을 선택해 주세요.</p>
+                                    <label for="fileSelect01">파일 선택</label>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn bdGray">파일 삭제</button>
+                                        <button type="button" class="btn gray">파일 변경</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--//table-->
+                <br/><br/>
+                <!--table-->
+                <div class="table type03">
+                    <table>
+                        <caption>공지사항 상세</caption>
+                        <colgroup>
+                            <col style="width: 100px">
+                            <col style="width: auto">
+                            <col style="width: 100px">
+                            <col style="width: 140px">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="col"><p class="star"><span class="hidden">별아이콘</span></p></th>
+                            <th scope="col" class="txt-left">공지사항 제목이 출력됩니다.</th>
+                            <th scope="col">2021-09-09</th>
+                            <th scope="col">조회 99</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="txtArea">
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.<br/>
+                                등록된 내용이 출력됩니다.
+                                <img src="../images/dummy/dummy_width1000.jpg" alt="더미이미지">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="fileBox clearFix">
+                                <div class="col">
+                                    <span class="icoFile">첨부파일</span>
+                                </div>
+                                <div class="col">
+                                    <p class="fileName">등록된 파일이 있는 경우 파일명이 출력됩니다.pdf</p>
+                                </div>
+                                <div class="col"><button type="button" class="btn bdGray">파일 열기</button></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--//table-->
+                <br/><br/>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+</div>
+
+</body>
+</html>

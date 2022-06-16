@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 입안 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 입안 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content">
+
+        <script>
+          // alert('작업중인페이지')
+          // lay_pop_open('#js__preview3');
+        </script>
+
+<link rel="stylesheet" href="../common/css/main.css">
+
+
+<div id="map-contextmenu2">
+  <button class="contextmenu-close">닫기</button>
+  <nav>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext1','',this)" class="unacitve"><i class="contexticon1">아이콘</i><span><span>토지정보</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext0','',this)"><i class="contexticon2">아이콘</i><span><span>토지이용계획확인서<em>1</em></span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext2','',this)"><i class="contexticon3">아이콘</i><span><span>건축물대장</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext3','',this)"><i class="contexticon4">아이콘</i><span><span>시설정보</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext4','',this)"><i class="contexticon5">아이콘</i><span><span>용도지역</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext5','',this)"><i class="contexticon5">아이콘</i><span><span>용도지구</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon5">아이콘</i><span><span>용도구역</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon6">아이콘</i><span><span>지구단위계획</span></span></a>
+    <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon7">아이콘</i><span><span>재해취약성</span></span></a>
+  </nav>
+</div>
+
+<div style="border:2px dotted red;height:300px;position: relative;" id="contextarea">
+  contextmenu 클릭영역
+</div>
+
+<script>
+jQuery(function(){
+  var contextElm = $('#map-contextmenu2');
+  var closeBtn = contextElm.find('.contextmenu-close');
+  var contextElmText = '#map-contextmenu2 a';
+  var degree = 360 / ($('#map-contextmenu2 a').length);
+  var tgap = 30;
+  var itemWidth; // 각 메뉴 width
+  var mapBody = $('#contextarea');
+  var height = 60;
+
+  //menu mouse over
+  $(contextElmText).on('mouseover', function(){
+    var w = $(this).find('span span').outerWidth();
+    itemWidth = itemWidth ? itemWidth : $(this).outerWidth();
+    $(this).css({
+      // width: w + itemWidth,
+      zIndex : 210
+    });
+
+    if($(this).hasClass('left-menu')){
+      $(this).find('> span').css({
+        left: w * -1
+      });
+    }else{
+      $(this).find('> span').css({
+        right: w * -1
+      });
+    }
+  });
+
+  $(contextElmText).on('mouseleave', function(){
+    $(this).css({
+      zIndex: 99
+    });
+
+    if($(this).hasClass('left-menu')){
+      $(this).find('> span').css({
+        left: 0
+      });
+    }else{
+      $(this).find('> span').css({
+        right: 0
+      });
+    }
+    
+  });
+
+  var menusetTime = [];
+  contexntMenuOpen = function(x, y, btn){
+
+    closeBtn.show();
+    if(btn === false) closeBtn.hide();
+
+    $('#map-contextmenu2').css({
+      left: x - 25,
+      top: y - 25
+    });
+
+    $('#map-contextmenu2').addClass('open');
+    setTimeout(function(){
+      $(contextElmText).show();
+    },100);
+    setTimeout(function(){
+      contexntMenuUnfold();
+    },150);
+  }
+
+  //메뉴 펼치기
+  function contexntMenuUnfold(){
+    var menu = $(contextElmText);
+    $('#map-contextmenu2').addClass('aniing');
+    menu.each(function(idx){
+      var objW = 0;
+      var link = $(this);
+
+      if(degree*idx > 180){
+        $(this).addClass('left-menu');
+      }
+
+      var y = height * Math.sin(((degree*idx)-90)*(Math.PI / 180)) + height;
+      var x = height * Math.cos(((degree*idx)-90)*(Math.PI / 180));
+
+      menusetTime[idx] = setTimeout(function(){
+                            link.css({
+                              top: y,
+                              left: x,
+                              transform: 'scale(1)'
+                            });
+                          }, tgap*idx);
+    });
+
+    setTimeout(function(){
+      $('#map-contextmenu2').removeClass('aniing');
+    }, tgap*($(contextElmText).length + 1));
+  }
+
+  // 닫기
+  function contexntMenuClose(){
+    contexntMenufold();
+    clearTimeout(foldmenu);
+    var foldmenu = setTimeout(function(){
+                      $(contextElmText).hide();
+                      $('#map-contextmenu2').removeClass('open').trigger('classChange');
+                    }, tgap * ($(contextElmText).length + 1) + height);
+  }
+
+  // 메뉴 접기
+  function contexntMenufold(){
+    var menu = $(contextElmText);
+    menu = $(menu.get().reverse());
+
+    for(var i = 0; i < menusetTime.length; i++){
+      clearTimeout(menusetTime[i]);
+    }
+    menu.each(function(idx){
+      var link = $(this);
+      setTimeout(function(){
+        link.css({
+          top: height,
+          left: 0,
+          transform: 'scale(0)'
+        });
+      }, tgap*idx);
+    });
+  }
+
+  //open
+  mapBody.on('contextmenu',function(e){
+    e.preventDefault();
+    if(e.target !== e.currentTarget) return false;
+    var x = e.offsetX;
+    var y = e.offsetY;
+
+    if(contextElm.hasClass('open')) {
+      contexntMenuClose();
+
+      contextElm.on('classChange',function(){
+        setTimeout(function(){
+          contexntMenuOpen(x,y);
+          contextElm.off();
+        },50);
+      });
+
+      return false;
+    }
+
+    if(!contextElm.hasClass('aniing')) {
+      contexntMenuOpen(x, y);
+    }
+    
+  });
+
+  //close
+  mapBody.on('mousedown', function(e){
+    if(e.target !== e.currentTarget) return false;
+    if((e.button == 0 || e.button == 1)){
+      if(!contextElm.hasClass('aniing')) contexntMenuClose();
+    }
+  });
+
+  contextElm.find('.contextmenu-close').click(function(){
+    contexntMenuClose();
+  });
+
+  // contexntMenuOpen(600, 150, false);
+});
+
+
+
+function contexntMenuOpen(x,y,btn){
+  jQuery(function(){
+    contexntMenuOpen(x,y,btn);
+  });
+}
+</script>
+
+@@for(var i = 0; i < 8; i++){
+<div id="js__moveModalContext${i}" class="laymodal">
+  <div class="laymodal-header">
+    <h2>팝업테스트${i}</h2>
+    <span>(파일명 : 실제 파일명 출력.pdf)</span>
+    <button type="button" class="laymodal-close" onclick="lay_pop_close_darge('#js__moveModalContext${i}')">닫기</button>
+  </div>
+  <div class="laymodal-content">
+    <div>
+      <div style="background:red;height:3000px;"></div>
+    </div>
+  </div>
+  <div class="laymodal-footer cs-btn-set">
+    <button type="button" class="cs-btn-line" onclick="lay_pop_close_darge('#js__moveModalContext${i}')">닫기</button>
+  </div>
+</div>
+}
+
+
+        <a href="#js__preview3" class="cs-btn" jq-action="modal">도면보기</a>
+        <a href="#js__preview4" class="cs-btn" jq-action="modal">도면보기</a>
+        <a href="#js__preview42" class="cs-btn" jq-action="modal">도면보기</a>
+
+        <div id="js__preview3" class="laymodal modal-blueprint">
+          <div class="laymodal-header">
+            <h2>도면 보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="blueprintClose(this)">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>부서 찾기 검색 결과</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col class="width100">
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">총 도면 수</th>
+                      <td>23</td>
+                      <th scope="row">도면</th>
+                      <td class="frm-insert-t4">
+                        <div>
+                          <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)">
+                        </div>
+                        <div class="__col_btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- <div class="cs-alert">도면명을 입력해 주세요.</div> -->
+            </section>
+
+            <section class="blueprint-preview">
+              <div class="blueprint-view">
+                <div class="__viewer">
+                  <div style="background:url('../common/images/sample/blueprint.jpg');height:100%"></div>
+                </div>
+                <div class="__btn">
+                  <button class="viewer-bnt-prev">이전</button>
+                  <button class="viewer-bnt-next">다음</button>
+                </div>
+                <div class="__controller">
+                  <strong>도면명 전체가 출력됩니다. 도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.</strong>
+                  <div>
+                    <button class="viewer-ctrl-zoomin">확대</button>
+                    <button class="viewer-ctrl-zoomout">축소</button>
+                    <button class="viewer-ctrl-reset">초기화</button>
+                  </div>
+                </div>
+              </div>
+              <div class="blueprint-list">
+                <button class="__item active">
+                  <em>1</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>
+                    도면 제목이 출력됩니다. 
+                    길면 n줄 처리
+                  </strong>
+                </button>
+                @@for(var i = 0; i < 10; i++){
+                <button class="__item">
+                  <em>${2 + i}</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>도면 제목이 출력됩니다. 
+                    길면 n줄 처리</strong>
+                </button>
+                }
+              </div>
+            </section>
+          </div>
+          <!-- <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="blueprintClose(this)">닫기</button>
+            <button type="button" class="cs-btn-line js__blueprintfull" onclick="blueprintFull(this)">전체 화면보기</button>
+            <button type="button" class="cs-btn">도면 다운로드</button>
+          </div> -->
+        </div>
+        
+        <script>
+          // lay_pop_open('#js__preview');
+        </script>
+        <button onclick="lay_pop_open('#js__preview')">원문보기</button>
+        <div id="js__preview" class="laymodal modal-preview">
+          <div class="laymodal-header">
+            <h2>원문보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <div class="laymodal-header-btns">
+              <a href="#" class="laymodal-down">PDF 다운로드</a>
+              <button type="button" class="laymodal-reduce" onclick="modalFull(this)">전체 화면보기</button>
+              <button type="button" class="laymodal-close" onclick="modalFullClose(this)">닫기</button>
+            </div>
+          </div>
+          <div class="laymodal-content">
+            <iframe src="/common/libjs/web/viewer.html?file=/sample_data/2020정보공개업무매뉴얼.pdf" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+
+        <div id="js__preview4" class="laymodal modal-blueprint" >
+          <div class="laymodal-header">
+            <h2>도면 보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="blueprintClose(this)">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>부서 찾기 검색 결과</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col class="width100">
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">총 도면 수</th>
+                      <td>23</td>
+                      <th scope="row">도면</th>
+                      <td class="frm-insert-t4">
+                        <div>
+                          <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)">
+                        </div>
+                        <div class="__col_btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- <div class="cs-alert">도면명을 입력해 주세요.</div> -->
+            </section>
+
+            <section class="blueprint-preview">
+              <div class="blueprint-view">
+                <div class="__viewer">
+                  <div style="background:url('../common/images/sample/blueprint.jpg');height:100%"></div>
+                </div>
+                <div class="__btn">
+                  <button class="viewer-bnt-prev">이전</button>
+                  <button class="viewer-bnt-next">다음</button>
+                </div>
+                <div class="__controller">
+                  <strong>도면명 전체가 출력됩니다. 도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.</strong>
+                  <div>
+                    <button class="viewer-ctrl-zoomin">확대</button>
+                    <button class="viewer-ctrl-zoomout">축소</button>
+                    <button class="viewer-ctrl-reset">초기화</button>
+                  </div>
+                </div>
+              </div>
+              <div class="blueprint-list">
+                <button class="__item active">
+                  <em>1</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>
+                    도면 제목이 출력됩니다. 
+                    길면 n줄 처리
+                  </strong>
+                </button>
+                @@for(var i = 0; i < 10; i++){
+                <button class="__item">
+                  <em>${2 + i}</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>도면 제목이 출력됩니다. 
+                    길면 n줄 처리</strong>
+                </button>
+                }
+              </div>
+            </section>
+            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="blueprintClose(this)">닫기</button>
+            <button type="button" class="cs-btn-line js__blueprintfull" onclick="blueprintFull(this)">전체 화면보기</button>
+            <button type="button" class="cs-btn">도면 다운로드</button>
+          </div>
+        </div>
+
+        
+        <div id="js__preview42" class="laymodal modal-blueprint">
+          <div class="laymodal-header">
+            <h2>도면 보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <div class="laymodal-header-btns">
+              <a href="#" class="laymodal-down">PDF 다운로드</a>
+              <button type="button" class="laymodal-reduce" onclick="modalFull(this, 'blueprint')">전체 화면보기</button>
+              <button type="button" class="laymodal-close" onclick="modalFullClose(this, 'blueprint')">닫기</button>
+            </div>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>부서 찾기 검색 결과</caption>
+                  <colgroup>
+                    <col class="width85">
+                    <col class="width100">
+                    <col class="width85">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">총 도면 수</th>
+                      <td>23</td>
+                      <th scope="row">도면</th>
+                      <td class="frm-insert-t4">
+                        <div>
+                          <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)">
+                        </div>
+                        <div class="__col_btn">
+                          <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- <div class="cs-alert">도면명을 입력해 주세요.</div> -->
+            </section>
+
+            <section class="blueprint-preview">
+              <div class="blueprint-view">
+                <div class="__viewer">
+                  <div style="background:url('../common/images/sample/blueprint.jpg');height:100%"></div>
+                </div>
+                <div class="__btn">
+                  <button class="viewer-bnt-prev">이전</button>
+                  <button class="viewer-bnt-next">다음</button>
+                </div>
+                <div class="__controller">
+                  <strong>도면명 전체가 출력됩니다. 도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.</strong>
+                  <div>
+                    <button class="viewer-ctrl-zoomin">확대</button>
+                    <button class="viewer-ctrl-zoomout">축소</button>
+                    <button class="viewer-ctrl-reset">초기화</button>
+                  </div>
+                </div>
+              </div>
+              <div class="blueprint-list">
+                <button class="__item active">
+                  <em>1</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>
+                    도면 제목이 출력됩니다. 
+                    길면 n줄 처리
+                  </strong>
+                </button>
+                @@for(var i = 0; i < 10; i++){
+                <button class="__item">
+                  <em>${2 + i}</em>
+                  <div>
+                    <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                  </div>
+                  <strong>도면 제목이 출력됩니다. 
+                    길면 n줄 처리</strong>
+                </button>
+                }
+              </div>
+            </section>
+            
+          </div>
+          <!-- <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="blueprintClose(this)">닫기</button>
+            <button type="button" class="cs-btn-line js__blueprintfull" onclick="blueprintFull(this)">전체 화면보기</button>
+            <button type="button" class="cs-btn">도면 다운로드</button>
+          </div> -->
+        </div>
+
+        <div>
+          호출<br>
+          lay_pop_open_darge('#js__moveModal2','{width:700, width:400, left:0, top:클릭한 아래로 10px, center:false}',this)<br>
+          width: 700, // 가로<br>
+          height: 400, // 높이<br>
+          left: 0, // 클릭한 버튼에서의 left 10px; , 버튼 좌 상단의 좌표기준<br>
+          top: btn.outerHeight() + 10, // 클릭한 버튼에서의 top 10px;<br>
+          center: false  // true 일때 가운데로 맞춤
+        </div>
+        <button onclick="lay_pop_open_darge('#js__moveModal','',this)">움직이는 팝업</button>
+        <button onclick="lay_pop_open_darge('#js__moveModal2','',this)">움직이는 팝업</button>
+        <button onclick="lay_pop_open_darge('#js__moveModal2',{center:true},this)">움직이는 팝업(센터정렬 내가 보는 화면 기준)</button>
+
+        <div id="js__moveModal" class="laymodal">
+          <div class="laymodal-header">
+            <h2>원문보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="lay_pop_close_darge('#js__moveModal')">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div>
+              <div style="background:red;height:3000px;"></div>
+            </div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="lay_pop_close_darge('#js__moveModal')">닫기</button>
+          </div>
+        </div>
+        <div id="js__moveModal2" class="laymodal">
+          <div class="laymodal-header">
+            <h2>원문보기</h2>
+            <span>(파일명 : 실제 파일명 출력.pdf)</span>
+            <button type="button" class="laymodal-close" onclick="lay_pop_close_darge('#js__moveModal2')">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <div>
+              <div style="background:red;height:3000px;"></div>
+            </div>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" onclick="lay_pop_close_darge('#js__moveModal2')">닫기</button>
+          </div>
+        </div>
+
+        <script>
+          // lay_pop_open('#js__moveModal')
+          /* 
+
+
+          그냥 별도의 함수로 제작하자 그게 나을듯함..
+          opt = {
+            
+          }
+          lay_pop_open_darge(this,this로부터의 x, this로부터의 y,)
+
+          드래그 옵션을추가한다 
+          
+          딤은 제거.....
+
+          transiton 제거.
+          
+          */
+          
+        </script>
+
+
+        <script>
+          jQuery(function(){
+            
+            // modaldrag('#js__moveModal');
+          });
+        </script>
+        
+
+        <div class="board-view-tb _tal js__tableFold" data-rows="4">
+          <table>
+            <caption>위촉 정보</caption>
+            <colgroup>
+              <col class="width120">
+              <col>
+              <col class="width120">
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row" rowspan="3">위원회 구분 </th>
+                <td colspan="3">시·도도시계획위원회</td>
+              </tr>
+              <tr>
+                <td colspan="3">
+                  <div class="cs-box-tip _type2">
+                    <strong>법률 TIP</strong>
+                    <ul>
+                      <li>
+                        국토계획법 시행령 110조(지방도시계획위원회의 업무) ①항
+                        <p>
+                          시·도도시계획위원회는 법 제113조제1항제4호에 따라 다음 각 호의 업무를 할 수 있다. 
+                        </p>
+                        <ul class="cs-list-number">
+                          <li>해당 시·도의 도시·군계획조례의 제정·개정과 관련하여 시·도지사가 자문하는 사항에 대한 조언</li>
+                          <li>제55조제3항제3호의2에 따른 개발행위허가에 대한 심의</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>경기도 2020년 도시계획위원회</td>
+                <th scope="row">운영 상태</th>
+                <td>운영 대기</td>
+              </tr>
+              <!-- 1215 :: 수정 -->
+              <tr>
+                <th scope="row">운영 기관 </th>
+                <td>경기도 하남시</td>
+                <th scope="row">운영 기간 </th>
+                <td>2020-01-01~2020-12-31</td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>심의 매뉴얼</th>
+                <td colspan="3">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong class="tcolor-gray2">등록된 매뉴얼이 없습니다. 위원들에게 노출될 심의 매뉴얼(가이드라인)을 등록해 주세요.</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default" jq-action="modal">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div id="contentaddAreay"></div>
+        <!-- <script>
+          jQuery(function(){
+            var textarea = '';
+            var container = $('#contentaddAreay');
+            textarea += '<div class="cs-counter-wrap">';
+            textarea += '<textarea cols="30" rows="3" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>';
+            textarea += '</div>';
+
+            $('#addddtest').on('click', function(){
+              container.append(textarea);
+              textCounter();
+            });
+            
+          });
+        </script> -->
+
+        <script>
+          var container = document.querySelector('#contentaddAreay');
+          var textarea = '';
+          textarea += '<div class="cs-counter-wrap">';
+          textarea += '<textarea cols="30" rows="3" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>';
+          textarea += '</div>';
+
+          function textareaAdd(){
+            // container.appendChild(textarea);
+            // container.appendChild(textarea);
+            // container.appendChild();
+            // container.innerHTML = 'a';
+
+            var textareaWrap = document.createElement('div');
+            textareaWrap.classList.add('cs-counter-wrap');
+            textareaWrap.innerHTML = '<textarea cols="30" rows="3" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>';
+            
+            container.appendChild(textareaWrap);
+            textCounter();
+
+            
+            // container.innerHTML('a');
+
+            // var p = document.createElement("p");
+            // container.appendChild(p);
+          }
+        </script>
+
+        <div class="cs-counter-wrap">
+          <textarea cols="30" rows="3" class="cs-input js__textCounter width100p" data-maxbyte="1000"></textarea>
+        </div>
+
+        <button id="addddtest" onclick="textareaAdd()">textarea 추가</button>
+
+        <!-- 조서보기 -->
+        <div id="modal__alert" class="laymodal width1200" style="display:block;">
+          <div class="laymodal-header">
+            <h2>조서 보기</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              <div class="modal-sec-title">고시 정보, 도면 정보</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>조서 정보</caption>
+                  <colgroup>
+                    <col class="width110">
+                    <col>
+                    <col class="width110">
+                    <col>
+                    <col class="width110">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">고시번호</th>
+                      <td>경기도 하남시 제2020-0111호</td>
+                      <th scope="row">고시 제목</th>
+                      <td>경기도 하남시 용도지역 OOO 고시</td>
+                      <th scope="row">고시 유형</th>
+                      <td>결정+승인+실시</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">도면번호</th>
+                      <td class="tac">11</td>
+                      <th scope="row">도면명</th>
+                      <td> 등록된 도면명이 보입니다. </td>
+                      <th scope="row">도형 상태</th>
+                      <td>현황</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">조서 정보</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>조서 정보</caption>
+                  <colgroup>
+                    <col class="width110">
+                    <col class="width270">
+                    <col class="width110">
+                    <col>
+                    <col>
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">구분</th>
+                      <td>용도지역</td>
+                      <th scope="row" rowspan="2">분류</th>
+                      <th scope="col">대분류</th>
+                      <th scope="col">중분류</th>
+                      <th scope="col">소분류</th>
+                    </tr>
+                    <tr>
+                      <th scope="row">조서 유형</th>
+                      <td>신설</td>
+                      <td>상업지역</td>
+                      <td>중심상업지역</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">구성비</th>
+                      <td rowspan="2">50%</td>
+                      <th scope="row" rowspan="2">면적(㎡)</th>
+                      <th scope="col">기정</th>
+                      <th scope="col">변경</th>
+                      <th scope="col">-</th>
+                    </tr>
+                    <tr>
+                      <td>XX</td>
+                      <td>XX</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">도로 기능</th>
+                      <td>주간선도로</td>
+                      <th scope="row" rowspan="2">규모</th>
+                      <th scope="col">번호</th>
+                      <th scope="col">등급</th>
+                      <th scope="col">류별</th>
+                    </tr>
+                    <tr>
+                      <th scope="row">사용 형태</th>
+                      <td>일반도로</td>
+                      <td>XX</td>
+                      <td>XX</td>
+                      <td>XX</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowspan="2">폭원(m)</th>
+                      <td rowspan="2">XX</td>
+                      <th scope="row" rowspan="2">연장(m)</th>
+                      <th>기정</th>
+                      <th>변경 후</th>
+                      <th>증감</th>
+                    </tr>
+                    <tr>
+                      <td>XX</td>
+                      <td>XX</td>
+                      <td>감소</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">거점</th>
+                      <td>XX</td>
+                      <th scope="row">종점</th>
+                      <td>XX</td>
+                      <th scope="row">주요 경과지</th>
+                      <td>XX</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">최초결정일</th>
+                      <td>XXXXXXXXX</td>
+                      <th scope="row">최초결정정보</th>
+                      <td>XXXXXXXXX</td>
+                      <th scope="row">집행 상태</th>
+                      <td><span class="color_red">부분집행</span></td>
+                    </tr>
+                    
+                    <tr>
+                      <th scope="row">비고</th>
+                      <td colspan="5"> 입력된 비고가 있는 경우 출력됩니다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">결정 조서 이력</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>결정 조서 이력</caption>
+                  <colgroup>
+                    <col class="width60">
+                    <col class="width120">
+                    <col>
+                    <col class="width90">
+                    <col class="width90">
+                    <col class="width120">
+                    <col class="width120">
+                    <col class="width90">
+                    <col class="width100">
+                    <col class="width100">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">고시일</th>
+                      <th scope="col">고시 제목</th>
+                      <th scope="col">조서 유형</th>
+                      <th scope="col">대분류</th>
+                      <th scope="col">중분류</th>
+                      <th scope="col">소분류</th>
+                      <th scope="col">기정 면적</th>
+                      <th scope="col">증감 면적</th>
+                      <th scope="col">변경후 면적</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2021.01.01</td>
+                      <td><a href="#none" class="alink">경기도 하남시 OOO 고시</a></td>
+                      <td>신설</td>
+                      <td>상업지역</td>
+                      <td>사업지역기타</td>
+                      <td>-</td>
+                      <td>26,000</td>
+                      <td>2,000</td>
+                      <td>28,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+              </ul>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">승인 조서 이력</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>승인 조서 이력</caption>
+                  <colgroup>
+                    <col class="width60">
+                    <col class="width120">
+                    <col>
+                    <col class="width90">
+                    <col class="width90">
+                    <col class="width120">
+                    <col class="width120">
+                    <col class="width90">
+                    <col class="width100">
+                    <col class="width100">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">고시일</th>
+                      <th scope="col">고시 제목</th>
+                      <th scope="col">조서 유형</th>
+                      <th scope="col">대분류</th>
+                      <th scope="col">중분류</th>
+                      <th scope="col">소분류</th>
+                      <th scope="col">기정 면적</th>
+                      <th scope="col">증감 면적</th>
+                      <th scope="col">변경후 면적</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <td colspan="10">해당 조서의 이전 이력이 없습니다.</td>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+              </ul>
+            </section>
+
+          </div>
+          <!-- <div class="laymodal-footer">
+            <button type="button" jq-action="closeModal">확인</button>
+          </div> -->
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

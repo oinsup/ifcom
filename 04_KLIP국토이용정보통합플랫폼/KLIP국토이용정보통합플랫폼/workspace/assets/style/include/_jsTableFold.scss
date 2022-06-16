@@ -1,0 +1,38 @@
+.js__tableFold{}
+.js__tableFold-wrap{position: relative;padding-bottom: 40px;}
+.js__tableFold-btn
+{
+  position: absolute;z-index:10;overflow:visible;bottom:-4px;
+  left: 50%;width:60px;margin-left: -30px;padding: 0;
+  box-sizing: border-box;background: none;border:0;
+  outline:none;-ms-outline:none;
+  
+  span
+  {
+    position: relative;
+    border:1px solid #dadde0;width: 35px;height: 35px;box-sizing: border-box;display: block;
+    box-shadow: 2px 2px 10px rgba(179, 179, 179, .1);margin:0 auto;border-radius:50%;background: #fff;
+
+    &::after,
+    &::before
+    {
+      content: '';position: absolute;width: 17px;height:1px;background: #181818;
+      left:50%;margin-left: -9px;top: calc(50% - 1px);
+      transition: all .3s;
+    }
+
+    &::before
+    {
+      transform: rotate(-90deg);
+    }
+  }
+
+  strong{display: block;font-size: 15px;font-weight: normal;text-align: center;margin-top: 5px;}
+
+  &.active span
+  {
+    &::before{
+      transform: rotate(0deg);
+    }
+  }
+}

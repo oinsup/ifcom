@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '용역 성과 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>용역 성과 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>용역 성과 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+
+        <section>
+          <h3 class="cont-hedding1">용역 성과 등록</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>용역 성과 등록</caption>
+              <colgroup>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <th scope="row">등록자</th>
+                  <th scope="row">소속 기관</th>
+                  <th scope="row">부서</th>
+                  <th scope="row">부서 연락처</th>
+                  <th scope="row">이메일</th>
+                  <th scope="row">상태</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2020-XX-XX</td>
+                  <td>홍길동</td>
+                  <td>경기도 하남시</td>
+                  <td>도시계획과</td>
+                  <td>031-790-6114(내선23)</td>
+                  <td>OOO@korea.kr</td>
+                  <td><span class="pcolor-red">승인 대기</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">용역사업 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>용역 성과 등록 개요</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">게약명</th>
+                  <td>입력된 계약명이 보입니다.</td>
+                  <th scope="row">수행업체명</th>
+                  <td>입력한 업체명이 보입니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">계약기간</th>
+                  <td> 2020-01-01~</td>
+                  <th scope="row">계약금액</th>
+                  <td>20,000,000원 <span class="tcolor-gray2 flr">(부가세 포함)</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">계약기관</th>
+                  <td>OOOO과</td>
+                  <th scope="row">부서/담당자</th>
+                  <td>OOOO과/홍길동 주무관</td>
+                </tr>
+                <tr>
+                  <th scope="row">증빙자료 </th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- 등록된 파일 없을 경우 -->
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>OOOOO 계약서.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">상위 계획</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>상위 계획</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">계획 구분</th>
+                  <th scope="col">고시 기관</th>
+                  <th scope="col">고시 번호</th>
+                  <th scope="col">고시 제목</th>
+                  <th scope="col">고시일</th>
+                  <th scope="col">담당 부서</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">광역도시계획</th>
+                  <td>경기도</td>
+                  <td>제2018-0111호</td>
+                  <td><a href="#" class="alink">경기도 광역도시계획</a></td>
+                  <td>2018-01-01</td>
+                  <td>OOO과</td>
+                </tr>
+                <tr>
+                  <th scope="row">도시·군기본계획</th>
+                  <td>경기도</td>
+                  <td>제2018-0111호</td>
+                  <td><a href="#" class="alink">경기도 광역도시계획</a></td>
+                  <td>2018-01-01</td>
+                  <td>OOO과</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <ul class="board-tab-nav2 js__tabNav" data-tabnav="plans">
+            <li class="active"><button data-idx="1">도시·군관리계획</button></li>
+            <li><button data-idx="2">이전 계획</button></li>
+          </ul>
+
+          <!-- 도시·군관리계획 -->
+          <div class="js__tabNav_plans1">
+            
+            <nav class="board-tab-nav js__tabNav" data-tabnav="plandata">
+              <ul>
+                <li class="active"><button data-idx="1">기본 정보, 입안 자료</button></li>
+                <li><button data-idx="2">입안 진행 결과</button></li>
+              </ul>
+            </nav>
+
+            <!-- 기본 정보, 입안 자료 -->
+            <div class="js__tabNav_plandata1">
+              <div class="board-view-tb _tal">
+                <table>
+                  <caption>기본 정보, 입안 자료</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">계획명</th>
+                      <td>입력한 계획명이 출력됩니다. </td>
+                      <th scope="row">계획 유형</th>
+                      <td>용도지역·용도지구</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">도시·군관리<br>계획도서</th>
+                      <td class="_p0" colspan="3">
+                        <div class="board-view-tb">
+                          <table>
+                            <caption>계획도서</caption>
+                            <colgroup>
+                              <col class="width240">
+                              <col>
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td>계획도서</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <!-- 등록된 파일 없을 경우 -->
+                                      <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">계획설명서</th>
+                      <td colspan="3" class="_p0">
+                        <div class="board-view-tb">
+                          <table>
+                            <caption>계획도서</caption>
+                            <colgroup>
+                              <col class="width120">
+                              <col class="width120">
+                              <col>
+                            </colgroup>
+                            <tbody>
+                              <tr>
+                                <td rowspan="4">기초조사결과</td>
+                                <td>기초조사</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <!-- 등록된 파일 없을 경우 -->
+                                      <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>환경성 검토</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>토지적성평가</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>재해취약성분석</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">재원조달방안 및 경관계획</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2">기타</td>
+                                <td>
+                                  <ul class="cs-list-file">
+                                    <li>
+                                      <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                                      <div class="cs-list-file__btns">
+                                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-- 0127 :: 테이블변경 -->
+                      <th>조서, 도면</th>
+                      <td class="_p0" colspan="3">
+                        <!-- 도면 table -->
+                        <!-- 0111 :: 삭제 data-cell-height="60" -->
+                        <div class="board-view-tb  js__floatingHead _floating _tac" data-minitem="10">
+                          <table>
+                            <caption>조서, 도면</caption>
+                            <colgroup>
+                              <col class="width60">
+                              <col>
+                              <col class="width110">
+                              <col class="width110">
+                              <col class="width110">
+                              <col class="width110">
+                              <col class="width95">
+                              <col class="width95">
+                              <col class="width95">
+                              <col class="width95">
+                              <col class="width95">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">구분</th>
+                                <th scope="col">조서 유형</th>
+                                <th scope="col">대분류</th>
+                                <th scope="col">중분류</th>
+                                <th scope="col">소분류</th>
+                                <th scope="col">기정 면적</th>
+                                <th scope="col">증감 면적</th>
+                                <th scope="col">변경후 면적</th>
+                                <th scope="col">조서</th>
+                                <th scope="col">도면</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              @@for(var i = 0; i < 11; i++){
+                              <tr>
+                                <td>1</td>
+                                <td>용도지구</td>
+                                <td>신설</td>
+                                <td>상업지역</td>
+                                <td>사업지역기타</td>
+                                <td>-</td>
+                                <td>26,000</td>
+                                <td>2,000</td>
+                                <td>28,000</td>
+                                <td><a href="#js__reportview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">조서 보기</a></td>
+                                <td><a href="#js__preview2" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">도면 보기</a></td>
+                              </tr>
+                              }
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--// 도면 table -->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="extratype-btn mt10">
+                <!-- 0127 :: 버튼변경 -->
+                <a href="#js__fileDownAlert" class="btn-down-excel _h40" jq-action="modal">조서 다운로드</a>
+                <a href="#js__fileLoadAlert" class="cs-btn2-gray cs-btn-default" jq-action="modal">최종 자료 불러오기</a>
+              </div>
+            </div>
+
+            <!-- 입안 진행 결과 -->
+            <div class="js__tabNav_plandata2">
+              <div class="board-view-tb _tal">
+                <table>
+                  <caption>입안 진행 결과</caption>
+                  <colgroup>
+                    <col class="width250">
+                    <col class="width95">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <thead>
+                      <tr>
+                        <th scope="col">입안 프로세스 구분</th>
+                        <th scope="col">진행 여부</th>
+                        <th scope="col">결과 파일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">관련 부서/행정부처 협의</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <!-- 등록된 파일 없을 경우 -->
+                              <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                              <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                              <div class="cs-list-file__btns">
+                                <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <!-- 0104 :: 텍스트 수정 :: 주민의견 > 주민 의견-->
+                        <th scope="row">주민 의견 청취</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                              <!-- <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                              <div class="cs-list-file__btns">
+                                <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                                <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                              </div> -->
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">의회의견 청취</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">시·군·구 도시계획위원회 심의</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">도 승인</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">도 관련 부서 협의</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">시·도 도시계획위원회 심의</th>
+                        <td class="tac">진행</td>
+                        <td>
+                          <ul class="cs-list-file">
+                            <li>
+                              <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!--// 도시·군관리계획 -->
+
+          <!-- 이전 계획 -->
+          <div class="js__tabNav_plans2">
+            <div class="board-view-tb">
+              <table>
+                <caption>이전 계획</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col class="width120">
+                  <col class="width130">
+                  <col>
+                  <col class="width100">
+                  <col class="width150">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계획 구분</th>
+                    <th scope="col">고시 기관</th>
+                    <th scope="col">고시 번호</th>
+                    <th scope="col">고시 제목</th>
+                    <th scope="col">고시일</th>
+                    <th scope="col">담당 부서</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">도시·군관리계획</th>
+                    <td>경기도하남시 </td>
+                    <td>제2020–5200호</td>
+                    <td class="tal"><a href="../notify/notification02.html" class="alink">입력된 고시 제목 출력</a></td>
+                    <td>2018-01-01</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+            </ul>
+          </div>
+          <!--// 이전 계획 -->
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">고시</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>상위 계획</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">고시 기관</th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">담당 부서</th>
+                  <td>OOOOO과</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 번호</th>
+                  <td>경기도 하남시 제 2020 - 1234호</td>
+                  <th scope="row">고시일</th>
+                  <td>2020-12-01</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 유형</th>
+                  <td colspan="3">결정+실시</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 제목</th>
+                  <td colspan="3"> 입력된 고시 제목이 보입니다. </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 내용</th>
+                  <td colspan="3"> 입력된 고시 내용이 보입니다. </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시문</th>
+                  <td>
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- 등록된 파일 없을 경우 -->
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                  <th scope="row">기타 자료</th>
+                  <td>
+                    <ul class="cs-list-file">
+                      <li>
+                        <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">승인 결재</th>
+                  <td> 담당자 확인 (2020-10-18 13:00)</td>
+                </tr>
+                <tr>
+                  <th scope="row">승인 결재</th>
+                  <td class="_p0" colspan="3">
+                    <div class="board-view-tb _tac">
+                      <table>
+                        <caption>승인 결재</caption>
+                        <colgroup>
+                          <col>
+                          <col class="width120">
+                          <col class="width120">
+                          <col class="width120">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">소속 기관/부서</th>
+                            <th scope="col">결재자</th>
+                            <th scope="col">결재 상태</th>
+                            <th scope="col">결재일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                            <td>홍길동 주무관</td>
+                            <td>상신</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                            <td>홍길동 주무관</td>
+                            <td>상신</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">‘상태 조회’ 버튼 클릭 시 결재 상태 조회가 가능합니다.</td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">기안문이 상신 되지 않았습니다.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="extratype-btn mt10">
+            <button class="cs-btn2-gray cs-btn-default">상태조회</button>
+          </div>
+          <!-- 0106-2 :: 텍스트 수정 -->
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>기안문의 재전송 또는 재기안은 <b class="underline">입안 관리 &gt; 전자결재 내역 관리</b> 메뉴에서 가능합니다.</li>
+            <li>‘고시 전송’을 한 경우에만 <b class="underline">토지e음 대민사이트</b>에 노출되며, 국토이용정보통합플랫폼의 <b class="underline">고시 정보 조회</b> 메뉴에도 노출됩니다. </li>
+            <li>‘고시 전송’ 후 토지이용규제정보시스템(LURIS)으로의 전송 이력은 <b class="underline">입안 관리 &gt; 도시·군관리계획 관리 &gt; 고시</b> 메뉴에서 확인 가능합니다.</li>
+          </ul>
+        </section>
+        
+        <section class="cs-btn-set">
+          <a href="ServiceResult01.html" class="cs-btn-line">목록</a>
+          <a href="#js__delete" jq-action="modal" class="cs-btn">용역 성과 삭제</a>
+          <a href="#" class="cs-btn-line">정보 수정</a>
+          <a href="#js__approval" jq-action="modal" class="cs-btn">승인 결재</a>
+          <a href="#js__docSend" jq-action="modal" class="cs-btn">고시 전송</a>
+        </section>
+      </div>
+
+      <!-- 용역 성과 삭제 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__delete',
+        'title': '업무 참조 자료 수정',
+        'cont': '삭제된 내용은 복구할 수 없습니다.<br>용역 성과 등록 내역을 삭제하시겠습니까?',
+        'btns': '<button class="cs-btn-line" jq-action="closeModal">취소</button> <button class="cs-btn" onclick="lay_pop_close(\'#js__delete\');lay_pop_open(\'#js__deleteComplete\')">삭제</button>'
+      })
+
+      <!-- 삭제완료 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__deleteComplete',
+        'title': '업무 참조 자료 수정',
+        'cont': '용역 성과 등록 내역이 삭제되었습니다.',
+        'btns': '<a href="ServiceResult01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 승인결제 -->
+      <div id="js__approval" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>용역 성과 고시 전송 승인</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              용역 성과 고시문의 승인 결재를 진행해 주세요.  
+            </div>
+            
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>승인 결재</caption>
+                <colgroup>
+                  <col class="width120">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">승인 결재</th>
+                    <td class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalstate1"><label for="approvalstate1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalstate2"><label for="approvalstate2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cs-alert">수정 정보 구분을 선택해 주세요.</div>
+          </section>
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__approval');lay_pop_open('#js__approvalComplete')">확인</button>
+        </div>
+      </div>
+
+      <!-- 승인결재 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__approvalComplete',
+        'title': '업무 참조 자료 수정',
+        'cont': '<span class="pcolor-red">담당자 확인</span>으로 승인이 완료되었습니다.<br>고시 전송을 해주세요.',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 고시 전송 -->
+      <div id="js__docSend" class="laymodal width700">
+        <div class="laymodal-header">
+          <!-- 0106-2 :: 텍스트수정 고시문 > 고시 -->
+          <h2>용역 성과 고시 전송</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <!-- 0106-2 :: 텍스트수정 고시문 > 고시 -->
+            <div class="modal-sec-title">
+              등록한 고시를 토지이용규제정보시스템(LURIS)로 전송 가능합니다.<br>
+              입력된 고시 내용이 정확한지 확인 후 전송해 주세요.
+            </div>
+            
+            <div class="tar mb10"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <!-- 0106-2 :: 텍스트수정 고시문 > 고시 -->
+                <caption>용역 성과 고시 전송</caption>
+                <colgroup>
+                  <col class="width95">
+                  <col>
+                  <col class="width95">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">고시 기관</th>
+                    <td>경기도 하남시</td>
+                    <th scope="row">시군구코드</th>
+                    <td>6410000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">고시 번호</th>
+                    <td>경기도 하남시 제 2020 - 1234호</td>
+                    <th scope="row">기관장명</th>
+                    <td>하남시장</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">담당자명</th>
+                    <td>홍길동</td>
+                    <th scope="row">연락처</th>
+                    <td>02-256-2251</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">고시 제목</th>
+                    <td colspan="3"> 입력된 고시 제목이 보입니다. </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">고시 내용</th>
+                    <td colspan="3">
+                      입력된 고시 내용이 보입니다. <br>
+                      입력된 고시 내용이 보입니다. <br>
+                      입력된 고시 내용이 보입니다. <br>
+                      입력된 고시 내용이 보입니다. 
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="cs-alert">수정 정보 구분을 선택해 주세요.</div>
+          </section>
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__docSend');lay_pop_open('#js__docSendComplete')">확인</button>
+        </div>
+      </div>
+
+      <!-- 고시전송 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__docSendComplete',
+        'title': '용역 성과 고시 전송',
+        'cont': '<!-- 0106-2 :: 텍스트수정 --><section>토지이용규제정보시스템(LURIS)로 고시가 전송 되었습니다.<br>전송 결과 확인 후 실패 시 재전송 해주세요.</section><section><b class="underline">토지e음 대민사이트</b>에서의 고시 노출은 해당 사이트의 노출 정책에 따라 반영됩니다.</section>',
+        'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+      })
+ 
+      @@include('../include/modals.html',{'items': 1})
+      @@include('../include/modals.html',{'items': 2})
+      @@include('../include/modals.html',{'items': 18})
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

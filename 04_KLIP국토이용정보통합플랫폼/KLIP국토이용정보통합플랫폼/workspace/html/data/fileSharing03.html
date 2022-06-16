@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>업무 참조 자료 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>업무 참조 자료 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <section>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>업무 참조 자료 등록</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <td>2020-12-XX</td>
+                  <th scope="row">조회수</th>
+                  <td>333</td>
+                </tr>
+                <tr>
+                  <th scope="row">등록 기관 </th>
+                  <td> 경기도 하남시청 </td>
+                  <th scope="row">소속 부서/등록자</th>
+                  <td> 도시정책과/홍길동</td>
+                </tr>
+                <tr>
+                  <th scope="row">공개 구분 </th>
+                  <td> 지정 공개</td>
+                  <th scope="row">공개 대상</th>
+                  <td> 메뉴 권한 그룹(그룸명 : <span class="pcolor-red">도시·군관리계획 입안 그룹</span>)</td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목</th>
+                  <td colspan="3"> 작성된 제목이 출력됩니다.</td>
+                </tr>
+                <tr>
+                  <th scope="row">내용 입력</th>
+                  <td colspan="3">
+                    작성된 내용이 출력됩니다.<br>
+                    작성된 내용이 출력됩니다<br>
+                    작성된 내용이 출력됩니다<br>
+                    작성된 내용이 출력됩니다
+                  </td>
+                </tr>
+                
+                <tr>
+                  <!-- 0111 :; 필수 입력 삭제 -->
+                  <th scope="row">자료 파일<br>(최대 10개)</th>
+                  <td colspan="3" class="_p0">
+                    <div class="cs-list-file-sum">
+                      <ul class="cs-list-file _type2">
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                        <li>
+                          <strong>제안자가 올린 파일명.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div class="cs-list-file-sum__btn">
+                        <button type="button" class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>본 게시물을 참조할 수 있는 사용자는 파일을 추가로 등록할 수 있습니다. 파일 추가 후 아래 수정 버튼을 꼭 클릭해 주세요</li>
+            <li>등록된 파일의 삭제 및 게시물 삭제는 ‘업무 참조 자료'를 등록한 등록자만 하실 수 있습니다. </li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing01.html" class="cs-btn-line">목록</a>
+          <a href="#js__alert" jq-action="modal" class="cs-btn">수정</a>
+        </section>
+
+        <section class="board-list">
+          <h3 class="cont-hedding1">파일 변경 이력</h3>
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>파일 변경 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col>
+                  <col class="width150">
+                  <col class="width150">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">변경일</th>
+                    <th scope="col">작업 구분</th>
+                    <th scope="col">파일명</th>
+                    <th scope="col">소속 부서</th>
+                    <th scope="col">작업자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>2020-10-17</td>
+                    <td>파일 삭제</td>
+                    <td class="tal">삭제한 파일명2.zip </td>
+                    <td>도시정책과</td>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2020-10-17</td>
+                    <td>파일 삭제</td>
+                    <td class="tal">삭제한 파일명2.zip </td>
+                    <td>도시정책과</td>
+                    <td>다른사람 1이름</td>
+                  </tr>
+                  <tr>
+                    <td colspan="6">파일 변경 이력이 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            @@include('../include/paging.html')
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing01.html" class="cs-btn-line">목록</a>
+        </section>
+
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>업무 참조 자료 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <span class="pcolor-red">“작성된 게시물 제목”</span><br>
+            업무 참조 자료가 수정되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="fileSharing01.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 1})
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

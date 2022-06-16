@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>도시·군관리계획 수립</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 수립</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <form action="">
+        <div class="content board-view">
+          <div class="process-header">
+            <ul class="process-step">
+              <!-- 
+                진행된 탭 일경 우 class = "active"
+                현재 진행중인 탭 class = "active locked"
+               -->
+              <li class="active locked"><span>1</span>  기본 정보 등록</li>
+              <li><span>2</span> 계획도서, 계획설명서 등록</li>
+              <li><span>3</span> 조서, 도면 확인</li>
+            </ul>
+          </div>
+  
+          <section>
+            <h3 class="cont-hedding1">상위 계획 선택</h3>
+            <div class="board-view-tb">
+              <table>
+                <caption>상위 계획</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width190">
+                  <col>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계획 구분</th>
+                    <th scope="col">고시 기관</th>
+                    <th scope="col">고시 번호</th>
+                    <th scope="col">고시 제목</th>
+                    <th scope="col">고시일</th>
+                    <th scope="col">담당 부서</th>
+                    <th scope="col">계획 연결</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">광역도시계획</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="#js__planfinder" class="cs-btn2-gray cs-btn-default" jq-action="modal">계획 선택</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시·군기본계획</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="#js__planfinder" class="cs-btn2-gray cs-btn-default" jq-action="modal">계획 선택</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>해당되는 상위 계획이 있으신 경우에만 선택하시면 됩니다. 계획 선택 후 찾으시는 상위 계획이 없는 경우 ‘광역도시계획’ 또는 ‘도시·군기본계획’을 먼저 등록해 주세요.</li>
+            </ul>
+          </section>
+  
+  
+          <section>
+            <h3 class="cont-hedding1">이전 계획 선택</h3>
+            <div class="board-view-tb">
+              <table>
+                <caption>이전 계획</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width190">
+                  <col>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계획 구분</th>
+                    <th scope="col">고시 기관</th>
+                    <th scope="col">고시 번호</th>
+                    <th scope="col">고시 제목</th>
+                    <th scope="col">고시일</th>
+                    <th scope="col">담당 부서</th>
+                    <th scope="col">계획 연결</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">도시·군관리계획</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="#js__planfinder" class="cs-btn2-gray cs-btn-default" jq-action="modal">계획 선택</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>변경 계획인 경우 이전 계획을 선택해 주세요.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h3 class="cont-hedding1">입안 제안 선택</h3>
+            <div class="board-view-tb">
+              <table>
+                <caption>입안 제안 선택</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col class="width250">
+                  <col>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계획 구분</th>
+                    <th scope="col">제안 분야</th>
+                    <th scope="col">제안 제목</th>
+                    <th scope="col">제안일</th>
+                    <th scope="col">대상/제안자</th>
+                    <th scope="col">제안 연결</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">도시·군관리계획</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="#js__planfinder" class="cs-btn2-gray cs-btn-default" jq-action="modal">제안 선택</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>도시·군관리계획 입안 제안 접수 내역으로 입안을 진행하실 수 있습니다. 제안 접수 후 ‘입안 반영 결정‘ 처리가 완료된 내역만 선택 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h3 class="cont-hedding1">의제 선택</h3>
+            <div class="board-view-tb">
+              <table>
+                <caption>의제 선택</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width190">
+                  <col>
+                  <col class="width130">
+                  <col class="width190">
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">계획 구분</th>
+                    <th scope="col">고시 기관</th>
+                    <th scope="col">고시 번호</th>
+                    <th scope="col">고시 제목</th>
+                    <th scope="col">고시일</th>
+                    <th scope="col">담당 부서</th>
+                    <th scope="col">계획 연결</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">도시·군관리계획</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td><a href="#js__planfinder" class="cs-btn2-gray cs-btn-default" jq-action="modal">의제 선택</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>의제에 의한 도면 변경 고시 등이 필요한 경우 선택해 주세요. 의제 선택 후 찾으시는 의제가 없는 경우 ‘의제’를 먼저 등록해 주세요.</li>
+            </ul>
+          </section>
+  
+          <!-- 기본 정보 입력 -->
+          <section>
+            <h3 class="cont-hedding1">도시·군관리계획 기본 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>도시·군관리계획 기본 정보 입력</caption>
+                <colgroup>
+                  <col class="width130">
+                  <col>
+                  <col class="width130">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row"><label for="selectAreay">입안권자 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-gride _mtb0">
+                        <div class="cs-gride-col6">
+                          <select class="cs-input width100p _disabled" id="selectAreay" title="지역선택">
+                            <option>경기도</option>
+                          </select>
+                        </div>
+                        <div class="cs-gride-col6">
+                          <select class="cs-input width100p _disabled" title="지역선택2">
+                            <option>하남시</option>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                    <th scope="row"><label for="resGroup">담당 부서 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="frm-insert-t6">
+                        000과
+                        <a href="#js__findgroup" jq-action="modal" class="cs-btn2-gray cs-btn-default flr">부서 찾기</a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="notititle">계획명 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" id="notititle" placeholder="계획명 입력">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="2">계획 유형 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" id="planType1" name="plantype" class="cs-radio"><label for="planType1"><span></span> 용도지역·용도지구</label>
+                      <input type="radio" id="planType2" name="plantype" class="cs-radio"><label for="planType2"><span></span> 도시·군계획시설</label>
+                      <input type="radio" id="planType3" name="plantype" class="cs-radio"><label for="planType3"><span></span> 지구단위계획</label>
+                      <input type="radio" id="planType4" name="plantype" class="cs-radio"><label for="planType4"><span></span> 도시관리</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      <div class="cs-box-tip _type2">
+                        <strong>법률 TIP</strong>
+                        <ul>
+                          <li>
+                            국토계획법 제2조(정의) ④항
+                            <p>
+                              "도시·군관리계획"이란 특별시·광역시·특별자치시·특별자치도·시 또는 군의 개발·정비 및 보전을 위하여 수립하는 
+                              토지 이용, 교통, 환경, 경관, 안전, 산업, 정보통신, 보건, 복지, 안보, 문화 등에 관한 다음 각 목의 계획을 말한다.
+                            </p>
+                            <ul class="cs-list-text">
+                              <li><span class="__text">가.</span> 용도지역·용도지구의 지정 또는 변경에 관한 계획</li>
+                              <li><span class="__text">나.</span> 개발제한구역, 도시자연공원구역, 시가화조정구역, 수산자원보호구역의 지정 또는 변경에 관한 계획</li>
+                              <li><span class="__text">다.</span> 기반시설의 설치·정비 또는 개량에 관한 계획</li>
+                              <li><span class="__text">라.</span> 도시개발사업이나 정비사업에 관한 계획</li>
+                              <li><span class="__text">마.</span> 지구단위계획구역의 지정 또는 변경에 관한 계획과 지구단위계획</li>
+                              <li><span class="__text">바.</span> 입지규제최소구역의 지정 또는 변경에 관한 계획과 입지규제최소구역계획  </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <div class="extratype-btn mt10">
+              <a href="#" class="cs-btn2-gray cs-btn-default">프로그램 실행</a>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>기본 정보를 입력하고 ‘임시저장’ 또는 ‘다음’을 클릭하면, ‘용도지역·용도지구 관리 업무 프로그램’에서 도면 등록이 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="#js__cancel" jq-action="modal" class="cs-btn-line">취소</a>
+  
+            <!-- 임시저장후 -->
+            <a href="#js__planDelete" jq-action="modal" class="cs-btn-line">계획 삭제</a>
+  
+            <a href="#js__tempSave" jq-action="modal" class="cs-btn">임시저장</a>
+            <a href="#js__next" jq-action="modal" class="cs-btn">다음</a>
+          </section>
+  
+        </div>
+      </form>
+
+      <!-- 취소 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancel',
+        'title': '도시·군관리계획 수립 취소',
+        'cont': '임시저장을 하지 않은 경우<br>입력하신 내용이 저장되지 않습니다.<br>도시·군관리계획 수립을 취소하시겠습니까?',
+        'btns': '<button class="cs-btn-line" type="button" jq-action="closeModal">취소</button> <button class="cs-btn" type="button" onclick="lay_pop_close(\'#js__cancel\');lay_pop_open(\'#js__cancelComplete\')">확인</button>'
+      })
+
+      <!-- 취소 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancelComplete',
+        'title': '도시·군관리계획 수립 취소',
+        'cont': '도시·군관리계획 수립이 취소되었습니다.',
+        'btns': '<a href="urbanPlan01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 임시저장 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__tempSave',
+        'title': '도시·군관리계획 수립',
+        'cont': '도시·군관리계획 기본 정보를<br>모두 입력한 후 임시저장이 가능합니다. <br><span class="pcolor-red">계획 유형</span>을 선택해 주세요.',
+        'btns': '<button class="cs-btn" type="button" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 다음 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__next',
+        'title': '도시·군관리계획 수립',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>다음 단계로 이동합니다.',
+        'btns': '<a href="urbanPlan03.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 계획삭제 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__planDelete',
+        'title': '도시·군관리계획 삭제',
+        'cont': '삭제된 내용은 복구할 수 없습니다.<br>도시·군관리계획을 삭제하시겠습니까?',
+        'btns': '<button class="cs-btn-line" jq-action="closeModal">취소</button> <button class="cs-btn" onclick="lay_pop_close(\'#js__planDelete\');lay_pop_open(\'#js__planDeleteComplete\')">삭제</button>'
+      })
+
+      <!-- 계획삭제 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__planDeleteComplete',
+        'title': '도시·군관리계획 삭제',
+        'cont': '도시·군관리계획이 삭제되었습니다.',
+        'btns': '<button class="cs-btn-line" jq-action="closeModal">확인</button>'
+      })
+
+      @@include('../include/modals.html',{'items': 3})
+      @@include('../include/modals.html',{'items': 5})
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

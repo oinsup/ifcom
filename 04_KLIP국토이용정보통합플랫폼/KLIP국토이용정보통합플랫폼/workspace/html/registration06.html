@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '입안 제안'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 0})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        입안 제안
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li><span>1</span> <b>사전협의 확인</b></li>
+              <li><span>2</span> <b>개인정보 수집 동의</b></li>
+              <li><span>3</span> <b>제안서 등록</b></li>
+              <li class="active"><span>4</span> <b>제안 완료</b></li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <div class="join-cont join-cont-step4">
+            <div class="lo-box join-complete">
+              <div class="__text1">
+                경기도 고양시 <b>OOOO</b>님의<br>
+                입안 제안이 완료되었습니다.<br>
+                (제안명 : <b>OOOO OOOO OOOO</b>)<br>
+              </div>
+              <div class="__text3">
+                담당자의 세부 검토 후 개별 연락 드리도록 하겠습니다.<br>
+                감사합니다
+              </div>
+            </div>
+            <div class="__btn-set cs-btn-set">
+              <a href="@@htmlRoot/registration01.html" class="cs-btn-line">확인</a>
+            </div>
+
+          </div>
+          <!--// join-cont -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

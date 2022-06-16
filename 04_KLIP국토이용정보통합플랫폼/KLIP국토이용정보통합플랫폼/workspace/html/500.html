@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '500'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 7})
+
+    <div class="lay-container">
+      <div class="content cont-error">
+        <div>
+          <p class="cont-error-txt1">
+            <i class="icon-error">
+              <span>500</span>
+            </i>
+            <strong><span class="pcolor-red">현재 서비스 상태가 원활하지 않습니다.</span></strong>
+            기술적인 문제로 인하여 일시적으로 요청하신 페이지를 불러올 수 없습니다.<br>
+            잠시 후 다시 이용부탁드리며, 서비스 이용에 불편을 드려 죄송합니다. 
+          </p>
+          <p class="cont-error-txt2">
+            계속해서 이용이 불가한 경우 <span class="pcolor-blue">국토이용정보통합플랫폼 운영팀(0X-XXX-XXXX)</span>에 연락주세요.
+          </p>
+  
+          <div class="cs-btn-set">
+            <a href="./login.html" class="cs-btn-line">로그인 페이지로 이동</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

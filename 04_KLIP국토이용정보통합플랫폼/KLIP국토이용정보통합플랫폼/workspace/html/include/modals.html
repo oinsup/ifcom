@@ -1,0 +1,2093 @@
+          @@if(items === 1){
+          <!-- 원문보기 -->
+          <!-- 0111 :: 마크업들 수정 -->
+          <div id="js__preview" class="laymodal modal-preview">
+            <div class="laymodal-header">
+              <h2>원문보기</h2>
+              <span>(파일명 : 실제 파일명 출력.pdf)</span>
+              <div class="laymodal-header-btns">
+                <a href="#" class="laymodal-down">PDF 다운로드</a>
+                <button type="button" class="laymodal-reduce" onclick="modalFull(this)">전체 화면보기</button>
+                <button type="button" class="laymodal-close" onclick="modalFullClose(this)">닫기</button>
+              </div>
+            </div>
+            <div class="laymodal-content">
+              <iframe src="/common/libjs/web/viewer.html?file=/sample_data/2020정보공개업무매뉴얼.pdf" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+          }
+
+          @@if(items === 2){
+          <!-- 도면보기 -->
+          <div id="js__preview2" class="laymodal modal-blueprint">
+            <div class="laymodal-header">
+              <h2>도면 보기</h2>
+              <span>(파일명 : 실제 파일명 출력.pdf)</span>
+              <!-- 0111 :: 버튼추가 -->
+              <div class="laymodal-header-btns">
+                <a href="#" class="laymodal-down">도면 다운로드</a>
+                <button type="button" class="laymodal-reduce" onclick="modalFull(this, 'blueprint')">전체 화면보기</button>
+                <button type="button" class="laymodal-close" onclick="modalFullClose(this, 'blueprint')">닫기</button>
+              </div>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>부서 찾기 검색 결과</caption>
+                    <colgroup>
+                      <col class="width85">
+                      <col class="width100">
+                      <col class="width85">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">총 도면 수</th>
+                        <td>23</td>
+                        <th scope="row">도면</th>
+                        <td class="frm-insert-t4">
+                          <div>
+                            <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)" title="총 도면 수">
+                          </div>
+                          <div class="__col_btn">
+                            <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                            <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- <div class="cs-alert">도면명을 입력해 주세요.</div> -->
+              </section>
+  
+              <section class="blueprint-preview">
+                <div class="blueprint-view">
+                  <div class="__viewer">
+                    <!-- 해당영역에 이미지 출력 검색결과 없을경우 아무것도 출력하지 않음-->
+                    <div style="background:url('../common/images/sample/blueprint.jpg');height:100%"></div>
+                  </div>
+                  <div class="__btn">
+                    <button class="viewer-bnt-prev">이전</button>
+                    <button class="viewer-bnt-next">다음</button>
+                  </div>
+                  <div class="__controller">
+                    <strong>도면명 전체가 출력됩니다. 도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.도면명 전체가 출력됩니다.</strong>
+                    <div>
+                      <button class="viewer-ctrl-zoomin">확대</button>
+                      <button class="viewer-ctrl-zoomout">축소</button>
+                      <button class="viewer-ctrl-reset">초기화</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="blueprint-list">
+                  <button class="__item active">
+                    <em>1</em>
+                    <div>
+                      <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                    </div>
+                    <strong>
+                      도면 제목이 출력됩니다. 
+                      길면 n줄 처리
+                    </strong>
+                  </button>
+                  @@for(var i = 0; i < 10; i++){
+                  <button class="__item">
+                    <em>${2 + i}</em>
+                    <div>
+                      <img src="../common/images/sample/blueprint_thumn.jpg" alt="">
+                    </div>
+                    <strong>도면 제목이 출력됩니다. 
+                      길면 n줄 처리</strong>
+                  </button>
+                  }
+                </div>
+              </section>
+              
+            </div>
+            <!-- 0111 :: button 삭제
+              <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" onclick="blueprintClose(this)">닫기</button>
+              <button type="button" class="cs-btn-line js__blueprintfull" onclick="blueprintFull(this)">전체 화면보기</button>
+              <button type="button" class="cs-btn">도면 다운로드</button>
+            </div> -->
+          </div>
+          }
+
+
+          @@if(items === 3){
+            <!-- 부서찾기 -->
+          <div id="js__findgroup" class="laymodal modal-section modal-container" tabindex="0">
+            <div class="laymodal-header">
+              <h2>부서 찾기</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>찾기</caption>
+                    <colgroup>
+                      <col class="width130">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">기관</th>
+                        <td>경기도 하남시</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">부서명 초성 선택</th>
+                        <td class="word-initial">
+                          <button class="active">ㄱ</button>
+                          <button disabled>ㄴ</button>
+                          <button>ㄷ</button>
+                          <button>ㄹ</button>
+                          <button>ㅁ</button>
+                          <button>ㅂ</button>
+                          <button>ㅅ</button>
+                          <button>ㅇ</button>
+                          <button>ㅈ</button>
+                          <button>ㅊ</button>
+                          <button>ㅋ</button>
+                          <button>ㅍ</button>
+                          <button>ㅌ</button>
+                          <button>ㅎ</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><label for="modalGroupName">부서명 검색</label></th>
+                        <td class="frm-insert-t4">
+                          <div>
+                            <input type="text" class="cs-input _h35 width100p" id="modalGroupName" placeholder="부서명 입력">
+                          </div>
+                          <div class="__col_btn">
+                            <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                            <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">부서명을 입력해 주세요.</div>
+              </section>
+    
+              <section>
+                <div class="modal-sec-title">아래 리스트에서 부서명을 선택해 주세요.</div>
+                <div class="board-view-tb _floating _noround js__floatingHead">
+                  <table>
+                    <caption>찾기 검색결과</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width120">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">하위 부서명</th>
+                        <th scope="col">전체 부서명</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          <input type="radio" name="searchNames" class="cs-radio" id="searcResult${i}" title="경기도 하남시 건설과"><label for="searcResult${i}"><span></span></label>
+                        </td>
+                        <td class="tal">건설과</td>
+                        <td class="tal">경기도 하남시 건설과</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">부서명을 선택해 주세요. </div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+
+          @@if(items === 4){
+            <!-- 사용자찾기 -->
+            <!-- common6 -->
+          <div id="js__userfinder" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <h2>사용자 찾기</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>사용자 찾기 검색 결과</caption>
+                    <colgroup>
+                      <col class="width85">
+                      <col class="width430">
+                      <col class="width85">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">초성 선택</th>
+                        <td class="word-initial">
+                          <button class="active">ㄱ</button>
+                          <button disabled>ㄴ</button>
+                          <button>ㄷ</button>
+                          <button>ㄹ</button>
+                          <button>ㅁ</button>
+                          <button>ㅂ</button>
+                          <button>ㅅ</button>
+                          <button>ㅇ</button>
+                          <button>ㅈ</button>
+                          <button>ㅊ</button>
+                          <button>ㅋ</button>
+                          <button>ㅍ</button>
+                          <button>ㅌ</button>
+                          <button>ㅎ</button>
+                        </td>
+                        <th scope="row">이름 검색</th>
+                        <td class="frm-insert-t4">
+                          <div>
+                            <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)" title="이름 검색">
+                          </div>
+                          <div class="__col_btn">
+                            <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                            <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="board-view-tb _floating _noround js__floatingHead">
+                  <table>
+                    <caption>부서 찾기 검색결과</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width80">
+                      <col class="width200">
+                      <col class="width200">
+                      <col class="width200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">기관명</th>
+                        <th scope="col">부서명</th>
+                        <th scope="col">담당 업무</th>
+                        <th scope="col">부서 연락처</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          <input type="radio" name="modalFindGroup" class="cs-radio" id="modalFindGroup${i}" title="건설과"><label for="modalFindGroup${i}"><span></span></label>
+                        </td>
+                        <td>홍길동</td>
+                        <td class="tal">충천북도 음성군청</td>
+                        <td class="tal">건설과</td>
+                        <td class="tal">담당업무</td>
+                        <td class="tal">031-790-6114</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">이름을 입력해 주세요.</div>
+                <div class="cs-alert">사용자를 선택해 주세요</div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+          
+          @@if(items === 41){
+            <!-- 위원 선택(위원, 부위원) -->
+          <div id="js__memberSelect" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <!-- 1217 :: 공통팝업 텍스트수정 -->
+              <h2>위원 선택</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>위원 세부검색</caption>
+                    <colgroup>
+                      <col class="width85">
+                      <col class="width430">
+                      <col class="width85">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">위촉 기관</th>
+                        <td colspan="3">경기도 하남시</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">초성 선택</th>
+                        <td class="word-initial">
+                          <button class="active">ㄱ</button>
+                          <button disabled>ㄴ</button>
+                          <button>ㄷ</button>
+                          <button>ㄹ</button>
+                          <button>ㅁ</button>
+                          <button>ㅂ</button>
+                          <button>ㅅ</button>
+                          <button>ㅇ</button>
+                          <button>ㅈ</button>
+                          <button>ㅊ</button>
+                          <button>ㅋ</button>
+                          <button>ㅍ</button>
+                          <button>ㅌ</button>
+                          <button>ㅎ</button>
+                        </td>
+                        <th scope="row">이름 검색</th>
+                        <td class="frm-insert-t4">
+                          <div>
+                            <input type="text" class="cs-input _h35 width100p" placeholder="2글자 이상 입력 (공백없이)" title="이름 검색">
+                          </div>
+                          <div class="__col_btn">
+                            <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                            <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="board-view-tb _floating _noround js__floatingHead">
+                  <table>
+                    <caption>위원 찾기 검색결과</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width80">
+                      <col class="width150">
+                      <col class="width200">
+                      <col class="width200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">위원 구분</th>
+                        <th scope="col">소속</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">직위</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          <input type="radio" name="modalFindmember" class="cs-radio" id="modalFindmember${i}" title="김길동"><label for="modalFindmember${i}"><span></span></label>
+                        </td>
+                        <td>홍길동</td>
+                        <td>전문가</td>
+                        <td class="tal">경기대학교</td>
+                        <td class="tal">OOOO학과</td>
+                        <td class="tal">전임교수</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">이름을 입력해 주세요.</div>
+                <div class="cs-alert">위원을 선택해 주세요.</div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+          @@if(items === 42){
+            <!-- 위원 선택(위원, 부위원 제외) -->
+            <!-- 1217 :: 공통팝업 텍스트수정 -->
+          <div id="js__memberSelect2" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <h2>위원 일괄 선택</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>위원 세부검색</caption>
+                    <colgroup>
+                      <col class="width85">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">위촉 기관</th>
+                        <td>경기도 하남시</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="board-view-tb _floating _noround js__floatingHead">
+                  <table>
+                    <caption>위원 찾기 검색결과</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width80">
+                      <col class="width150">
+                      <col class="width200">
+                      <col class="width200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">위원 구분</th>
+                        <th scope="col">소속</th>
+                        <th scope="col">부서</th>
+                        <th scope="col">직위</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="modalFindmembert2${i}" class="cs-checkbox" id="modalFindmembert2${i}" title="김길동"><label for="modalFindmembert2${i}"><span></span></label>
+                        </td>
+                        <td>홍길동</td>
+                        <td>전문가</td>
+                        <td class="tal">경기대학교</td>
+                        <td class="tal">OOOO학과</td>
+                        <td class="tal">전임교수</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">위원을 선택해 주세요.</div>
+                <div class="cs-alert">위원장, 부위원장을 제외한 위원은 최대 28명까지 가능합니다.</div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+
+          @@if(items === 5){
+            <!-- 상위 계획 선택 -->
+          <div id="js__planfinder" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <h2>상위 계획 선택</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>계획 구분 검색 결과</caption>
+                    <colgroup>
+                      <col class="width85">
+                      <col class="width290">
+                      <col class="width85">
+                      <col class="width130">
+                      <col class="width85">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">계획 구분</th>
+                        <td class="frm-opt-list">
+                          <input type="radio" class="cs-radio" id="modalPlanCate1"><label for="modalPlanCate1"><span></span> 광역도시계획</label>
+                          <input type="radio" class="cs-radio" id="modalPlanCate2"><label for="modalPlanCate2"><span></span> 도시·군기본계획</label>
+                        </td>
+                        <th scope="row"><label for="modalselectArea">고시 기관</label></th>
+                        <td>
+                          <select class="cs-input width100p" id="modalselectArea">
+                            <option value="">경기도</option>
+                          </select>
+                        </td>
+                        <th scope="row"><label for="modalPlanTitle">제목 검색</label></th>
+                        <td class="frm-insert-t4">
+                          <div>
+                            <input type="text" class="cs-input _h35 width100p" id="modalPlanTitle" placeholder="2글자 이상 입력">
+                          </div>
+                          <div class="__col_btn">
+                            <button type="button" class="cs-btn2-gray cs-btn-default _h35">검색</button>
+                            <button type="button" class="cs-btn2-gray-line cs-btn-default _h35">초기화</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="board-view-tb _floating _noround js__floatingHead">
+                  <table>
+                    <caption>상위 계획 검색 결과</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width120">
+                      <col class="width130">
+                      <col class="width500">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">고시 기관</th>
+                        <th scope="col">고시 번호</th>
+                        <th scope="col">고시 제목</th>
+                        <th scope="col">고시일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          <input type="radio" class="cs-radio" name="modalPlanUser" id="modalPlanUser${i}" title="홍길동"><label for="modalPlanUser${i}"><span></span></label>
+                        </td>
+                        <td>경기도</td>
+                        <td class="tal">제2020-0001호</td>
+                        <td class="tal">2020년 경기도 ㅇㅇㅇㅇ광역도시계획</td>
+                        <td class="tal">2020-01-01</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">검색어를 입력해 주세요.</div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+          @@if(items === 6){
+          <!-- KLIP(B/O)_Common03 -->
+          <div id="js__check2" class="laymodal" tabindex="0" style="width:700px;">
+            <div class="laymodal-header">
+              <h2>고시 번호 중복 확인</h2>
+            </div>
+            <div class="laymodal-content">
+              <div class="modal-sec-title">
+                <!-- 0105 :: 텍스트수정 -->
+                이미 국토이용정보통합플랫폼에 등록된 고시 번호입니다.<br>
+                해당 번호로는 등록할 수 없습니다. <br>
+                해당 고시 번호로 등록된 계획은 아래와 같습니다. 
+              </div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>고시번호정보</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">계획 구분</th>
+                      <td>광역도시계획</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">고시 번호</th>
+                      <td>경기도 제2020-123호</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">고시 기관</th>
+                      <td>경기도</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">고시 제목</th>
+                      <td>OOOOOOOOOOOOOOOO</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">등록자/소속</th>
+                      <td> 홍길동/경기도 하남시 OOO과</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+    
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+          @@if(items === 7){
+            <!-- 그룹선택 -->
+            <div id="js__groupSelect" class="laymodal modal-userfinder" tabindex="0">
+              <div class="laymodal-header">
+                <h2>그룹 선택</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <section>
+                  <div class="board-view-tb _noround _tal">
+                    <table>
+                      <caption>소속기관</caption>
+                      <colgroup>
+                        <col class="width130">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>소속 기관</th>
+                          <td>경기도 하남시</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+      
+                <section>
+                  <div class="modal-sec-title">
+                    아래 메뉴 권한 그룹 리스트에서 사용하실 그룹을 선택해 주세요.<br>
+                    <span>&lt;정보 조회&gt; 그룹의 기능은 모든 그룹의 공통 기능입니다.</span>
+                  </div>
+                  <div class="board-view-tb  _noround js__floatingHead _floating">
+                    <table>
+                      <caption>그룹 선택</caption>
+                      <colgroup>
+                        <col class="width70">
+                        <col class="width200">
+                        <col class="width150">
+                        <col>
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col" rowspan="2">선택</th>
+                          <th scope="col" rowspan="2">메뉴 권한 그룹명</th>
+                          <th scope="col">대메뉴</th>
+                          <th scope="col">중메뉴</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td rowspan="3">
+                            <input type="radio" name="modalgroupselect" class="cs-radio" id="modalgroupselect1" title="건설과"><label for="modalgroupselect1"><span></span></label>
+                          </td>
+                          <td class="tal" rowspan="3">정보 조회</td>
+                          <td class="tal">토지 정보 조회</td>
+                          <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                        </tr>
+                        <tr>
+                          <td class="tal">고시 정보 조회</td>
+                          <td class="tal">고시 조회, 조서 조회</td>
+                        </tr>
+                        <tr>
+                          <td class="tal">자료실</td>
+                          <td class="tal">정책 정보, 도시계획현황 통계 책자, 자료 게시판</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type="radio" name="modalgroupselect" class="cs-radio" id="modalgroupselect2" title="건설과"><label for="modalgroupselect2"><span></span></label>
+                          </td>
+                          <td class="tal">용도지역·용도지구 관리</td>
+                          <td class="tal">토지 정보 조회</td>
+                          <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                        </tr>
+                        @@for(var i = 0; i < 20; i++){
+                        <tr>
+                          <td>
+                            <input type="radio" name="modalgroupselect" class="cs-radio" id="modalgroupselect3" title="건설과"><label for="modalgroupselect3"><span></span></label>
+                          </td>
+                          <td class="tal">용도지역·용도지구 관리</td>
+                          <td class="tal">토지 정보 조회</td>
+                          <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                        </tr>
+                        }
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="cs-alert">메뉴 권한 그룹을 선택해 주세요. </div>
+                </section>
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+
+          <!-- 기관별 관리자 연락처 -->
+          @@if(items === 8){
+          <div id="js__managerFinder" class="laymodal modal-section modal-container" tabindex="0">
+            <div class="laymodal-header">
+              <h2>기관별 관리자 연락처</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="modal-sec-title">소속 기관을 선택해 주세요.</div>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>소속 기관 선택</caption>
+                    <colgroup>
+                      <col class="width130">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">기관 선택</th>
+                        <td>
+                          <div class="cs-gride">
+                            <select class="cs-input _h35 cs-gride-col6" title="광역시·도 선택">
+                              <option value="">광역시·도 선택</option>
+                            </select>
+                            <select class="cs-input _h35 cs-gride-col6" title="시·군·구 선택">
+                              <option value="">시·군·구 선택</option>
+                            </select>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">기관을 선택해 주세요.</div>
+              </section>
+              
+              <section>
+                <div class="modal-sec-title">기관 관리자 정보</div>
+                <div class="board-view-tb _noround">
+                  <table>
+                    <caption>찾기 검색결과</caption>
+                    <colgroup>
+                      <col class="width170">
+                      <col class="width170">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">기관명</th>
+                        <th scope="col">담당자명</th>
+                        <th scope="col">연락처</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>경기도 하남시</td>
+                        <td>홍길동</td>
+                        <td>031-790-6114</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">국토이용정보통합플랫폼 미사용 기관입니다. </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn">조회</button>
+
+
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+
+          @@if(items === 9){
+          <div id="js__groupCheck" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <h2>메뉴 권한 그룹 확인</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>소속기관</caption>
+                    <colgroup>
+                      <col class="width160">
+                      <col>
+                      <col class="width160">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>소속 기관</th>
+                        <td>경기도 하남시</td>
+                        <th>나의 메뉴 권한 그룹명</th>
+                        <td class="pcolor-red">도시·군관리계획 입안</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="modal-sec-title">
+                  &lt;정보 조회&gt; 그룹의 기능은 모든 그룹의 공통 기능입니다. 
+                </div>
+                <div class="board-view-tb  _noround js__floatingHead _floating">
+                  <table>
+                    <caption>그룹 선택</caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width200">
+                      <col class="width150">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">No</th>
+                        <th scope="col" rowspan="2">메뉴 권한 그룹명</th>
+                        <th scope="col">대메뉴</th>
+                        <th scope="col">중메뉴</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="3">1</td>
+                        <td class="tal" rowspan="3">정보 조회</td>
+                        <td class="tal">토지 정보 조회</td>
+                        <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                      </tr>
+                      <tr>
+                        <td class="tal">고시 정보 조회</td>
+                        <td class="tal">고시 조회, 조서 조회</td>
+                      </tr>
+                      <tr>
+                        <td class="tal">자료실</td>
+                        <td class="tal">정책 정보, 도시계획현황 통계 책자, 자료 게시판</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td class="tal">용도지역·용도지구 관리</td>
+                        <td class="tal">토지 정보 조회</td>
+                        <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                      </tr>
+                      @@for(var i = 0; i < 20; i++){
+                      <tr>
+                        <td>
+                          ${3 + i}
+                        </td>
+                        <td class="tal">용도지역·용도지구 관리</td>
+                        <td class="tal">토지 정보 조회</td>
+                        <td class="tal">필지 정보(이력) 조회, 용도지역·용도지구 조회, 지구단위계획 구역 조회, 도시·군계획시설 조회</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+          @@if(items === 10){
+          <div id="js__changeID" class="laymodal width700" tabindex="0">
+            <div class="laymodal-header">
+              <h2>아이디 변경</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="modal-sec-title">
+                  국토이용정보통합플랫폼의 사용자 아이디는 공직자통합메일의 아이디를 사용합니다.<br>
+                  사용자가 ‘사용 권한 신청’ 시 오기입한 경우에만 변경해 주세요. 
+                </div>
+                <div class="tar"><i class="icon-required">필수 입력</i>필수 입력</div>
+                <div class="board-view-tb _noround">
+                  <table>
+                    <caption>아이디 정보</caption>
+                    <colgroup>
+                      <col class="width150">
+                      <col class="width150">
+                      <col >
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>이름</th>
+                        <th>현재 아이디</th>
+                        <th>변경 아이디 <i class="icon-required">필수 입력</i></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>박경민</td>
+                        <td>test1234</td>
+                        <td class="tal">
+                          <div class="frm-insert-t1">
+                            <div>
+                              <input type="text" class="cs-input width100p _h35" title="변경 아이디">
+                            </div>
+                            <button class="__col_btn cs-btn2-gray cs-btn-default _h35" onclick="lay_pop_open('#js__changeIDChecke')">중복 확인</button>
+                          </div>
+                          <div class="mt10">
+                            <input type="checkbox" class="cs-checkbox" id="dropid" title="변경 아이디">
+                            <label for="dropid"><span></span> 탈퇴 아이디로 변경</label>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="board-list-infomation cs-list-dot _gray">
+                  <li>
+                    <span class="pcolor-red">소속 기관 사용자가 타 기관으로 발령된 경우 현재 아이디를 탈퇴 아이디로 변경해 주세요.</span><br>
+                    (단, 진행 중인 업무가 있는 경우 업무 승계 처리 후 진행해 주세요.)
+                  </li>
+                  <li>
+                    해당 사용자는 타 기관 사용자로 신규 가입 후 이용 가능합니다.
+                  </li>
+                </ul>
+
+                <div class="cs-alert">아이디를 입력해 주세요. (공직자통합메일 ID와 동일하게 입력)</div>
+                <div class="cs-alert">
+                  아이디는 영문 소문자, 숫자를 조합하여 4자리 이상 입력하셔야 합니다.<br>
+                  (공직자통합메일 ID와 동일하게 입력) 
+                </div>
+              </section>
+    
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" onClick="lay_pop_close();lay_pop_open('#js__changeIDComplete')">변경</button>
+            </div>
+          </div>
+
+          <div id="js__changeIDComplete" class="laymodal modal-alert width500" tabindex="0">
+            <div class="laymodal-header">
+              <h2>아이디 변경</h2>
+            </div>
+            <div class="laymodal-content tac">
+              아이디 변경이 완료되었습니다.<br>
+              사용자가 변경된 아이디로 접속할 수 있도록 <br>
+              ‘일회용 비밀번호 전송’을 해주세요.
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+          @@if(items === 102){
+          <div id="js__changeID2" class="laymodal width700" tabindex="0">
+            <div class="laymodal-header">
+              <h2>아이디 변경</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="modal-sec-title">
+                  국토이용정보통합플랫폼의 사용자 아이디는 공직자통합메일의 아이디를 사용합니다. <br>
+                  사용자의 권한 철회 및 탈퇴 후 재가입을 원할 경우에만 변경해 주세요. 
+                </div>
+                <div class="tar"><i class="icon-required">필수 입력</i>필수 입력</div>
+                <div class="board-view-tb _noround">
+                  <table>
+                    <caption>아이디 정보</caption>
+                    <colgroup>
+                      <col class="width150">
+                      <col class="width150">
+                      <col >
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>이름</th>
+                        <th>현재 아이디</th>
+                        <th>변경 아이디 <i class="icon-required">필수 입력</i></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>박경민</td>
+                        <td>test1234</td>
+                        <td class="tal">
+                          <div class="frm-insert-t1">
+                            <div>
+                              <input type="text" class="cs-input width100p _h35 _disabled" readonly title="변경 아이디" placeholder="‘자동 입력’을 클릭해 주세요.">
+                            </div>
+                            <button class="__col_btn cs-btn2-gray cs-btn-default _h35">자동 입력</button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="cs-alert">변경할 아이디를 입력해 주세요.</div>
+              </section>
+    
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+              <button type="button" class="cs-btn" onClick="lay_pop_close();lay_pop_open('#js__changeIDComplete2')">변경</button>
+            </div>
+          </div>
+
+          <div id="js__changeIDComplete2" class="laymodal modal-alert width500" tabindex="0">
+            <div class="laymodal-header">
+              <h2>아이디 변경</h2>
+            </div>
+            <div class="laymodal-content tac">
+              아이디 변경이 완료되었습니다. <br>
+              해당 사용자는 변경 전 아이디로 재가입이 가능합니다. 
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+
+          @@if(items === 11){
+            <!-- 일회용 비밀번호 전송 -->
+            <div id="js__sendPassword" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>일회용 비밀번호 전송</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content tac">
+                <div class="modal-sec-title">
+                  사용자가 요청한 경우에만 ‘일회용 비밀번호’를 전송해주세요.<br>
+                  아래 사용자에게 초기화된 ‘일회용 비밀번호’를 전송하시겠습니까?
+                </div>
+
+                <div class="board-view-tb _noround">
+                  <!-- 201201 :: 아이디추가 -->
+                  <table>
+                    <caption>아이디 정보</caption>
+                    <thead>
+                      <tr>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>휴대전화</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>test1234</td>
+                        <td>박경민</td>
+                        <td>010-2222-3333</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <!-- 201201 :: 텍스트수정 -->
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js__sendPassword');lay_pop_open('#js__sendPasswordComplete')">전송</button>
+              </div>
+            </div>
+
+            <div id="js__sendPasswordComplete" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>일회용 비밀번호 전송</h2>
+              </div>
+              <div class="laymodal-content tac">
+                ‘일회용 비밀번호 전송’이 완료 되었습니다. 
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+          @@if(items === 110){
+            <!-- 일회용 비밀번호 전송 -->
+            <div id="js__sendPassword" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>일회용 비밀번호 전송</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <div class="modal-sec-title">
+                  위원이 요청한 경우에만 일회용 비밀번호를 전송해 주세요. <br>
+                  아래 위원에게 초기화된 일회용 비밀번호를 전송하시겠습니까?
+                </div>
+
+                <div class="board-view-tb _noround">
+                  <table>
+                    <caption>아이디 정보</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">토지e음  아이디</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">휴대전화</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>test1234</td>
+                        <td>박경민</td>
+                        <td>010-2222-3333</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js__sendPassword');lay_pop_open('#js__sendPasswordComplete')">전송</button>
+              </div>
+            </div>
+
+            <div id="js__sendPasswordComplete" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>일회용 비밀번호 전송</h2>
+              </div>
+              <div class="laymodal-content tac">
+                ‘일회용 비밀번호 전송’이 완료 되었습니다. 
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+          @@if(items === 12){
+            <div id="js_userDelete" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 삭제</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <div class="modal-sec-title">
+                  <!-- 201201 :: 수정 -->
+                  <p>
+                    도시계획 업무와 무관한 사용자의 가입 또는<br>
+                    인가할 수 없는 정보로 가입된 사용자는 삭제하실 수 있습니다. 
+                  </p>
+                  <p>
+                    하기 사용자를 삭제하시겠습니까?
+                  </p>
+                </div>
+
+                <div class="board-view-tb _noround">
+                  <table>
+                    <caption>아이디 정보</caption>
+                    <!-- 201201 :: 추가 -->
+                    <colgroup>
+                      <col class="width140">
+                      <col class="width80">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>아이디</th>
+                        <th>이름</th>
+                        <th>소속 부서</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>aaaaaaaaa4</td>
+                        <td>박경민</td>
+                        <td>OOOO과</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js_userDelete');lay_pop_open('#js_userDeleteComplete')">삭제</button>
+              </div>
+            </div>
+
+            <div id="js_userDeleteComplete" class="laymodal width500" tabindex="0">
+              <div class="laymodal-header">
+                <!-- 201201 :: 수정 -->
+                <h2>사용자 삭제</h2>
+              </div>
+              <div class="laymodal-content tac">
+                사용자가 삭제되었습니다.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+          @@if(items === 13){
+            
+            <div id="js_stateChange" class="laymodal width700" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 상태 변경</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <section>
+                  신청한 사용자의 이름과 아이디가 공직자통합메일 계정과 동일한지 확인 및<br>
+                  신청한 메뉴 그룹이 실제 업무범위에 적합한지 확인하신 후 상태를 변경해 주세요.
+                </section>
+
+                <section>
+                  <div class="modal-sec-title">
+                    상태 변경 계정
+                  </div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>아이디 정보</caption>
+                      <thead>
+                        <tr>
+                          <th>아이디</th>
+                          <th>이름</th>
+                          <th>소속 부서</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>aaaaaaaaa4</td>
+                          <td>박경민</td>
+                          <td>OOOO과</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                </section>
+
+                <section>
+                  <div class="modal-sec-title">
+                    상태 변경 처리
+                  </div>
+                  
+                  <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+                  <div class="board-view-tb _noround _tal">
+                    <table>
+                      <caption>상태 변경 처리</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>현재 상태</th>
+                          <td class="pcolor-red">승인 대기</td>
+                        </tr>
+                        <tr>
+                          <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <input type="radio" class="cs-radio" id="stateGReen">
+                            <label for="stateGReen"><span></span> 정상(사용 승인)</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <input type="radio" class="cs-radio" id="stateGReen" checked>
+                            <label for="stateGReen"><span></span> 정상(접속 불가 해제)</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>상태 변경 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <div class="cs-gride">
+                              <li class="cs-gride-col6"><input type="radio" name="stateGReen11" class="cs-radio" id="stateGReen10"><label for="stateGReen10"><span></span> 정상(휴면 해제)</label></li>
+                              <li class="cs-gride-col6"><input type="radio" name="stateGReen11" class="cs-radio" id="stateGReen11"><label for="stateGReen11"><span></span> 권한 철회(보직 변경)</label></li>
+                              <li class="cs-gride-col6"><input type="radio" name="stateGReen11" class="cs-radio" id="stateGReen12"><label for="stateGReen12"><span></span> 탈퇴(기관 변경)</label></li>
+                              <li class="cs-gride-col6"><input type="radio" name="stateGReen11" class="cs-radio" id="stateGReen13"><label for="stateGReen13"><span></span> 탈퇴(퇴사)</label></li>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>증빙 서류</th>
+                          <td>
+                            <div class="cs-file-wrap">
+                              <input type="file" class="cs-file" id="file1" placeholder=" 공문을 수신하신 경우 등록해 주세요.(pdf)">
+                              <span class="js__filename"></span>
+                              <div class="cs-file-btns">
+                                <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>관리자 메모</th>  
+                          <td>
+                            <div class="cs-counter-wrap">
+                              <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" title="관리자 메모" placeholder="메모가 필요하신 경우 입력해 주세요."></textarea>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="board-list-infomation cs-list-dot _gray">
+                    <li>관리자 메모는 ‘기관 사용자’에게 노출되지 않습니다. (관리자만 확인 가능)</li>
+                  </ul>
+                  <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+                </section>
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js_stateChange');lay_pop_open('#js_stateChangeComlplete')">변경</button>
+              </div>
+            </div>
+
+            <div id="js_stateChangeComlplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 상태 변경</h2>
+              </div>
+              <div class="laymodal-content tac">
+                사용자의 상태가 <b class="pcolor-red">‘정상’</b>으로 변경되었습니다. 
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+          @@if(items === 14){
+            
+            <div id="js_userModify" class="laymodal width700" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 정보 수정</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <section>
+                  <div class="modal-sec-title">
+                    해당 사용자의 정보 수정 내용을 입력해 주세요.
+                  </div>
+                  
+                  <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+                  <div class="board-view-tb _noround _tal">
+                    <table>
+                      <caption>사용자 정보 수정</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>수정 정보  <i class="icon-required">필수 입력</i></th>
+                          <td class="frm-opt-list">
+                            <input type="radio" class="cs-radio" name="usermodify" id="usermodify1" checked>
+                            <label for="usermodify1"><span></span> 개인정보</label>
+                            <input type="radio" class="cs-radio" name="usermodify" id="usermodify2">
+                            <label for="usermodify2"><span></span> 소속정보</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>수정 내용 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="변경하신 내용을 입력해 주세요.&#13;&#10;(예. 휴대전화번호 변경, 메뉴 권한 그룹 변경)" title="수정 내용"></textarea>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="board-list-infomation cs-list-dot _gray">
+                    <li>관리자 메모는 ‘기관 사용자’에게 노출되지 않습니다. (관리자만 확인 가능)</li>
+                  </ul>
+                  <div class="cs-alert">수정 정보 구분을 선택해 주세요.</div>
+                </section>
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <!-- 201201 :: 텍스트수정 -->
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js_userModify');lay_pop_open('#js_userModifyComplete')">수정</button>
+              </div>
+            </div>
+
+            <div id="js_userModifyComplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 정보 수정</h2>
+              </div>
+              <div class="laymodal-content tac">
+                사용자 정보가 수정되었습니다.
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+
+          
+          @@if(items === 15){
+            <div id="js_authority" class="laymodal width1000" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 권한 승계</h2>
+                <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+              </div>
+              <div class="laymodal-content">
+                <section>
+                  보직 변경, 소속 기관 변경, 퇴사 등의 사유로 사용자의 진행중인 업무를 포함한 메뉴 권한을 후임자에게 승계 처리를 할 수 있습니다. <br>
+                  승계 처리 시 후임자의 ‘메뉴 권한 그룹’이 선임자의 그룹으로 변경되며, 승계는 1회만 가능합니다.<br>
+                  (승계 완료 시 후임자에게 권한 승계 안내 메시지가 발송됩니다.)
+                </section>
+                <section>
+                  <div class="modal-sec-title">선임자 정보</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>선임자 정보</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col class="width120">
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>아이디</th>
+                          <th>이름</th>
+                          <th>소속 부서</th>
+                          <th>메뉴 권한 그룹</th>
+                          <th>상태</th>
+                        </tr>
+                        <tr>
+                          <td>sflskfjj1234</td>
+                          <td>박경민</td>
+                          <td>OOOO과</td>
+                          <td>도시·군관리계획 입안</td>
+                          <td>정상</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+
+                <section>
+                  <div class="modal-sec-title">승계 업무 내역</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>선임자 정보</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>입안 제안 검토</th>
+                          <th>도시·군관리계획 입안</th>
+                          <th>실시계획작성/인가 </th>
+                          <th>도시·군계획시설 집행</th>
+                          <th>도시계획위원회 관리</th>
+                        </tr>
+                        <tr class="pcolor-red">
+                          <td>O</td>
+                          <td>O</td>
+                          <td>X</td>
+                          <td>X</td>
+                          <td>X</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+                
+                <section>
+                  <div class="modal-sec-title">후임자 선택(승인 대기, 권한 철회, 탈퇴 사용자 선택 불가)</div>
+                  <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+                  <div class="board-view-tb _noround _tal">
+                    <table>
+                      <caption>후임자 선택</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col>
+                        <col class="width140">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>부서 선택 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <select class="cs-input width100p" title="부서 선택">
+                              <option>부서 선택</option>
+                              <option>도시계획과</option>
+                            </select>
+                          </td>
+                          <th>사용자 선택 <i class="icon-required">필수 입력</i></th>
+                          <td>
+                            <div class="frm-insert-t1">
+                              <div>
+                                <select class="cs-input width100p" title="사용자 선택">
+                                  <option>이름 선택</option>
+                                  <option>도시계획과</option>
+                                </select>
+                              </div>
+                              <button class="cs-btn2-gray cs-btn-default __col_btn">상태 조회</button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="cs-alert">부서를 선택해 주세요.</div>
+                  <div class="cs-alert">사용자를 선택해 주세요.</div>
+                </section>
+
+                <section>
+                  <div class="modal-sec-title">후임자 정보</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>선임자 정보</caption>
+                      <colgroup>
+                        <col class="width140">
+                        <col class="width120">
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>아이디</th>
+                          <th>이름</th>
+                          <th>소속 부서</th>
+                          <th>메뉴 권한 그룹</th>
+                          <th>상태</th>
+                        </tr>
+                        <tr>
+                          <td>sflskfjj1234</td>
+                          <td>박경민</td>
+                          <td>OOOO과</td>
+                          <td>도시·군관리계획 입안</td>
+                          <td>정상</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="cs-alert">후임자를 선택해 주세요</div>
+                  <div class="cs-alert">후임자의 상태를 조회해 주세요. </div>
+                </section>
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+                <button type="button" class="cs-btn" onclick="lay_pop_close('#js_authority');lay_pop_open('#js_authorityComplete')">승계</button>
+              </div>
+            </div>
+
+            <div id="js_authorityComplete" class="laymodal modal-alert width500" tabindex="0">
+              <div class="laymodal-header">
+                <h2>사용자 권한 승계</h2>
+              </div>
+              <div class="laymodal-content tac">
+                <!-- 201201 :: 텍스트수정 -->
+                사용자 권한이 승계되고, <br>
+                후임자에게 권한 승계 완료 메시지가 발송되었습니다.<br>
+                권한 승계한 사용자(선임자)의 상태 변경을 주세요. 
+              </div>
+              <div class="laymodal-footer cs-btn-set">
+                <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+              </div>
+            </div>
+          }
+          @@if(items === 16){
+          <div id="js__groupView" class="laymodal modal-userfinder" tabindex="0">
+            <div class="laymodal-header">
+              <h2>메뉴 권한 그룹 사용자 확인</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>소속기관</caption>
+                    <colgroup>
+                      <col class="width160">
+                      <col>
+                      <col class="width160">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">소속 기관</th>
+                        <td>경기도 하남시</td>
+                        <th scope="row">나의 메뉴 권한 그룹명</th>
+                        <td class="pcolor-red">도시·군관리계획 입안 그룹</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+    
+              <section>
+                <div class="modal-sec-title">
+                  현재 사용자 (<b class="pcolor-red">20명</b>)
+                </div>
+                <div class="board-view-tb  _noround js__floatingHead _floating">
+                  <table>
+                    <caption>현재 사용자 </caption>
+                    <colgroup>
+                      <col class="width70">
+                      <col class="width200">
+                      <col class="width80">
+                      <col class="width200">
+                      <col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">부서명</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">직위</th>
+                        <th scope="col">담당 업무</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>도시계획과</td>
+                        <td>홍길동</td>
+                        <td>XXX</td>
+                        <td>XXX</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="board-list-infomation cs-list-dot _gray">
+                    <li>현재 시점의 사용자 리스트 입니다. </li>
+                    <li>자료 등록 후 해당 그룹의 사용자가 추가되면 추가된 사용자에게도 공개 됩니다. 단, 타 그룹으로 변경된 사용자는 참조되었던 자료를 볼 수 없습니다. </li>
+                </ul>
+              </section>
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">닫기</button>
+            </div>
+            
+          </div>
+          }
+          @@if(items === 17){
+          <!-- KLIP(B/O)_Common09 -->
+          <div id="js__onnara" class="laymodal width1000">
+            <div class="laymodal-header">
+              <h2>온-나라시스템 전자결재 기안문 작성</h2>
+              <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+            </div>
+            <div class="laymodal-content">
+              <section>
+                온-나라시스템으로 전송할 기안문을 작성해 주세요. <br>
+                작성된 기안문은 온-나라시스템의 <span class="pcolor-red underline">나의 기안함</span>로 전송되며, <span class="pcolor-red underline">나의 기안함</span>에서 결재자 지정 후 상신해 주세요. <br>
+                작성한 기안문은 전송 완료 후 ‘입안 관리 > 전자결재 내역 관리’에서 확인 가능합니다. <br>
+                (정상적으로 전송되었는지 여부 확인 후 전송 실패 시 재전송 해주세요.) 
+              </section>
+              <section>
+                <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+                <div class="board-view-tb _noround _tal">
+                  <table>
+                    <caption>기안문 작성</caption>
+                    <colgroup>
+                      <col class="width160">
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th scope="row">기안 제목 <i class="icon-required">필수 입력</i></th>
+                        <td>
+                          <div class="cs-counter-wrap">
+                            <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">기안 내용 <i class="icon-required">필수 입력</i></th>
+                        <td>
+                          <div class="cs-counter-wrap">
+                            <div class="cs-counter-wrap">
+                              <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="3000"></textarea>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">첨부 자료</th>
+                        <td class="_p0">
+                          <div class="board-view-tb _tac">
+                            <table>
+                              <colgroup>
+                                <col>
+                                <col class="width120">
+                                <col class="width100">
+                                <col class="width95">
+                              </colgroup>
+                              <caption>첨부 자료</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col">파일명</th>
+                                  <th scope="col">용량</th>
+                                  <th scope="col">첨부 방식</th>
+                                  <th scope="col">파일 관리</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="tal">앞단계에서 입력한 파일명 출력.pptx</td>
+                                  <td>5.0MB</td>
+                                  <td><span class="cs-text-box">대용량</span></td>
+                                  <td><button class="cs-btn2-gray cs-btn-default width100p">파일 삭제</button></td>
+                                </tr>
+                                <tr>
+                                  <td class="tal">앞단계에서 입력한 파일명 출력.pptx</td>
+                                  <td>15.0MB</td>
+                                  <td><span class="cs-text-box3">일반</span></td>
+                                  <td><button class="cs-btn2-gray cs-btn-default width100p">파일 삭제</button></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="4" class="tal">
+                                    <div class="cs-file-wrap">
+                                      <input type="file" class="cs-file" id="file1" placeholder="첨부될 자료 파일을 선택해 주세요.">
+                                      <span class="js__filename">첨부될 자료 파일을 선택해 주세요.</span>
+                                      <div class="cs-file-btns">
+                                        <label for="file1" class="cs-btn2-gray cs-btn-default width100p">파일 선택</label>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <ul class="board-list-infomation cs-list-dot _gray">
+                  <li>참조) 온-나라시스템 전자결재로 직접 첨부할 수 있는 자료의 용량은 10MB입니다. 초과되는 용량의 대용량 파일은 링크정보로 결재자에게 전송됩니다.</li>
+                </ul>
+              </section>
+
+              <div class="cs-alert">기안 제목을 입력해 주세요.</div>
+              <div class="cs-alert">기안 내용을 입력해 주세요.</div>
+
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" onclick="lay_pop_close('#js__onnara');lay_pop_open('#js__onnaraComplete')">전송</button>
+            </div>
+          </div>
+
+          <div id="js__onnaraComplete" class="laymodal modal-alert width500" tabindex="0">
+            <div class="laymodal-header">
+              <h2>온-나라시스템 기안문 전송</h2>
+            </div>
+            <div class="laymodal-content tac">
+              기안문이 전송되었습니다. 
+              전송 결과는 ‘입안 관리 &gt; 전자결재 내역 관리’에서 확인해 주세요. 
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+          }
+          @@if(items === 18){
+            <!-- KLIP(B/O)_Common08 -->
+            <!-- 조서보기 -->
+            <div id="js__reportview" class="laymodal width1200">
+              <div class="laymodal-header">
+                <h2>조서 보기</h2>
+                <div class="laymodal-header-btns">
+                  <button type="button" class="laymodal-reduce" onclick="modalFull(this)">전체 화면 보기</button>
+                  <button type="button" class="laymodal-close" onclick="modalFullClose(this)">닫기</button>
+                </div>
+              </div>
+              <div class="laymodal-content">
+                <section>
+                  <div class="modal-sec-title">고시 정보, 도면 정보</div>
+                  <div class="board-view-tb _noround _tal">
+                    <table>
+                      <caption>조서 정보</caption>
+                      <colgroup>
+                        <col class="width110">
+                        <col>
+                        <col class="width110">
+                        <col>
+                        <col class="width110">
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">고시번호</th>
+                          <td>경기도 하남시 제2020-0111호</td>
+                          <th scope="row">고시 제목</th>
+                          <td>경기도 하남시 용도지역 OOO 고시</td>
+                          <th scope="row">고시 유형</th>
+                          <td>결정+승인+실시</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">도면번호</th>
+                          <td class="tac">11</td>
+                          <th scope="row">도면명</th>
+                          <td> 등록된 도면명이 보입니다. </td>
+                          <th scope="row">도형 상태</th>
+                          <td>현황</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+    
+                <section>
+                  <div class="modal-sec-title">조서 정보</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>조서 정보</caption>
+                      <colgroup>
+                        <col class="width110">
+                        <col class="width270">
+                        <col class="width110">
+                        <col>
+                        <col>
+                        <col>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">구분</th>
+                          <td>용도지역</td>
+                          <th scope="row" rowspan="2">분류</th>
+                          <th scope="col">대분류</th>
+                          <th scope="col">중분류</th>
+                          <th scope="col">소분류</th>
+                        </tr>
+                        <tr>
+                          <th scope="row">조서 유형</th>
+                          <td>신설</td>
+                          <td>상업지역</td>
+                          <td>중심상업지역</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" rowspan="2">구성비</th>
+                          <td rowspan="2">50%</td>
+                          <th scope="row" rowspan="2">면적(㎡)</th>
+                          <th scope="col">기정</th>
+                          <th scope="col">변경</th>
+                          <th scope="col">-</th>
+                        </tr>
+                        <tr>
+                          <td>XX</td>
+                          <td>XX</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">도로 기능</th>
+                          <td>주간선도로</td>
+                          <th scope="row" rowspan="2">규모</th>
+                          <th scope="col">번호</th>
+                          <th scope="col">등급</th>
+                          <th scope="col">류별</th>
+                        </tr>
+                        <tr>
+                          <th scope="row">사용 형태</th>
+                          <td>일반도로</td>
+                          <td>XX</td>
+                          <td>XX</td>
+                          <td>XX</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" rowspan="2">폭원(m)</th>
+                          <td rowspan="2">XX</td>
+                          <th scope="row" rowspan="2">연장(m)</th>
+                          <th>기정</th>
+                          <th>변경 후</th>
+                          <th>증감</th>
+                        </tr>
+                        <tr>
+                          <td>XX</td>
+                          <td>XX</td>
+                          <td>감소</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">거점</th>
+                          <td>XX</td>
+                          <th scope="row">종점</th>
+                          <td>XX</td>
+                          <th scope="row">주요 경과지</th>
+                          <td>XX</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">최초결정일</th>
+                          <td>XXXXXXXXX</td>
+                          <th scope="row">최초결정정보</th>
+                          <td>XXXXXXXXX</td>
+                          <th scope="row">집행 상태</th>
+                          <td><span class="color_red">부분집행</span></td>
+                        </tr>
+                        
+                        <tr>
+                          <th scope="row">비고</th>
+                          <td colspan="5"> 입력된 비고가 있는 경우 출력됩니다.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+    
+                <section>
+                  <div class="modal-sec-title">결정 조서 이력</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>결정 조서 이력</caption>
+                      <colgroup>
+                        <col class="width60">
+                        <col class="width120">
+                        <col>
+                        <col class="width90">
+                        <col class="width90">
+                        <col class="width120">
+                        <col class="width120">
+                        <col class="width90">
+                        <col class="width100">
+                        <col class="width100">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">고시일</th>
+                          <th scope="col">고시 제목</th>
+                          <th scope="col">조서 유형</th>
+                          <th scope="col">대분류</th>
+                          <th scope="col">중분류</th>
+                          <th scope="col">소분류</th>
+                          <th scope="col">기정 면적</th>
+                          <th scope="col">증감 면적</th>
+                          <th scope="col">변경후 면적</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>2021.01.01</td>
+                          <td><a href="#none" class="alink">경기도 하남시 OOO 고시</a></td>
+                          <td>신설</td>
+                          <td>상업지역</td>
+                          <td>사업지역기타</td>
+                          <td>-</td>
+                          <td>26,000</td>
+                          <td>2,000</td>
+                          <td>28,000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="board-list-infomation cs-list-dot _gray">
+                    <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+                  </ul>
+                </section>
+    
+                <section>
+                  <div class="modal-sec-title">승인 조서 이력</div>
+                  <div class="board-view-tb _noround">
+                    <table>
+                      <caption>승인 조서 이력</caption>
+                      <colgroup>
+                        <col class="width60">
+                        <col class="width120">
+                        <col>
+                        <col class="width90">
+                        <col class="width90">
+                        <col class="width120">
+                        <col class="width120">
+                        <col class="width90">
+                        <col class="width100">
+                        <col class="width100">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">고시일</th>
+                          <th scope="col">고시 제목</th>
+                          <th scope="col">조서 유형</th>
+                          <th scope="col">대분류</th>
+                          <th scope="col">중분류</th>
+                          <th scope="col">소분류</th>
+                          <th scope="col">기정 면적</th>
+                          <th scope="col">증감 면적</th>
+                          <th scope="col">변경후 면적</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <td colspan="10">해당 조서의 이전 이력이 없습니다.</td>
+                      </tbody>
+                    </table>
+                  </div>
+                  <ul class="board-list-infomation cs-list-dot _gray">
+                    <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다.</li>
+                  </ul>
+                </section>
+              </div>
+              <div class="laymodal-footer">
+                <button type="button" jq-action="closeModal" class="cs-btn">닫기</button>
+              </div>
+            </div>
+          }

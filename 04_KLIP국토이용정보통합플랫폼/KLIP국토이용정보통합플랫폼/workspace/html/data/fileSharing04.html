@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '나의 등록 자료 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">자료 게시판</a></li>
+          <li>나의 등록 자료 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>나의 등록 자료 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <section>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>업무 참조 자료 수정</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">등록일</th>
+                  <td>2020-12-10</td>
+                  <th scope="row">조회수</th>
+                  <td>333</td>
+                </tr>
+                <tr>
+                  <th scope="row">등록 기관</th>
+                  <td>경기도 하남시청</td>
+                  <th scope="row">소속 부서/등록자</th>
+                  <td>도시정책과/홍길동</td>
+                </tr>
+                <tr>
+                  <th scope="row">공개 구분 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-gride">
+                      <div class="cs-gride-col5"><input type="radio" class="cs-radio" name="public" id="public1"><label for="public1"><span></span> 전체 공개(국토이용정보통합플랫폼 전체 사용자)</label></div>
+                      <div class="cs-gride-col7"><input type="radio" class="cs-radio" name="public" id="public2" checked><label for="public2"><span></span> 지정 공개(1명 또는 소속 기관의 본인이 속한 메뉴 권한 그룹 사용자)</label></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">대상 선택 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                  <div class="cs-gride">
+                    <div class="cs-gride-col5">
+                      <input type="radio" class="cs-radio" name="targetselect" id="targetselect1"><label for="targetselect1"><span></span> 지정 사용자(경기도/무슨무슨과 박경민)</label>
+                    </div>
+                    <div class="cs-gride-col7">
+                      <input type="radio" class="cs-radio" name="targetselect" id="targetselect2" checked><label for="targetselect2"><span></span> 메뉴 권한 그룹(그룸명 : <b class="pcolor-red">도시·군관리계획 입안 그룹</b>)</label>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">자료 제목 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <input type="text" class="cs-input width100p" placeholder="자료를 설명하는 제목 입력" title="자료 제목">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">내용 입력 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <textarea name="" rows="10" class="cs-input js__textCounter width100p" data-maxbyte="2000" placeholder="자료를 설명하는 내용 입력" title="내용 입력"></textarea>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">자료 파일 <i class="icon-required">필수 입력</i><br>(최대 10개)</th>
+                  <td colspan="3" class="_p0">
+                    <ul class="cs-list-file _type2">
+                      <li>
+                        <strong>제안자가 올린 파일명.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray-line cs-btn-default">파일 삭제</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>제안자가 올린 파일명.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray-line cs-btn-default">파일 삭제</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>제안자가 올린 파일명.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray-line cs-btn-default">파일 삭제</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                      <li>
+                        <strong>제안자가 올린 파일명.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray-line cs-btn-default">파일 삭제</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tar" colspan="3">
+                    <button class="cs-btn2-gray cs-btn-default">파일 선택</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>본 게시물을 참조할 수 있는 사용자들도 파일을 추가로 등록할 수 있습니다.</li>
+            <li>등록된 파일의 삭제 및 게시물 삭제는 ‘업무 참조 자료'를 등록한 등록자만 하실 수 있습니다.</li>
+          </ul>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing01.html" class="cs-btn-line">취소</a>
+          <a href="#js__delete" jq-action="modal" class="cs-btn">삭제</a>
+          <a href="#js__moidfy" jq-action="modal" class="cs-btn">수정</a>
+        </section>
+
+        <section class="board-list">
+          <h3 class="cont-hedding1">파일 변경 이력</h3>
+            <div class="board-list-text _fixed">
+              <table>
+                <caption>파일 변경 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width120">
+                  <col class="width90">
+                  <col>
+                  <col class="width150">
+                  <col class="width150">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">변경일</th>
+                    <th scope="col">작업 구분</th>
+                    <th scope="col">파일명</th>
+                    <th scope="col">소속 부서</th>
+                    <th scope="col">작업자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3</td>
+                    <td>2020-10-17</td>
+                    <td>파일 삭제</td>
+                    <td class="tal">삭제한 파일명2.zip </td>
+                    <td>도시정책과</td>
+                    <td>홍길동</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2020-10-17</td>
+                    <td>파일 삭제</td>
+                    <td class="tal">삭제한 파일명2.zip </td>
+                    <td>도시정책과</td>
+                    <td>다른사람 1이름</td>
+                  </tr>
+                  <tr>
+                    <td colspan="6">파일 변경 이력이 없습니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            @@include('../include/paging.html')
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="fileSharing01.html" class="cs-btn-line">목록</a>
+        </section>
+
+        <div id="js__alert" class="laymodal modal-alert width500">
+          <div class="laymodal-header">
+            <h2>업무 참조 자료 등록</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <span class="pcolor-red">지정 공개(지정 사용자)</span>로<br>
+            업무 참조 자료가 등록되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="fileSharing01.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        @@include('../include/modals.html',{'items': 16})
+        @@include('../include/modals.html',{'items': 4})
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__delete',
+          'title': '업무 참조 자료 삭제',
+          'cont': '삭제된 게시물은 복구할 수 없습니다.<br>삭제하시겠습니까?',
+          'btns': '<button type="button" class="cs-btn-line" jq-action="closeModal">취소</button><button type="button" onclick="lay_pop_close(\'#js__delete\');lay_pop_open(\'#js__deleteComplete\')" class="cs-btn">삭제</button>'
+        })
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__deleteComplete',
+          'title': '업무 참조 자료 삭제',
+          'cont': '업무 참조 자료가 삭제되었습니다.',
+          'btns': '<a href="fileSharing01.html" class="cs-btn">확인</a>'
+        })
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__moidfy',
+          'title': '업무 참조 자료 수정',
+          'cont': '<b class="pcolor-red">지정 공개(개별 사용자)로</b><br>업무 참조 자료가 수정되었습니다.',
+          'btns': '<a href="#" jq-action="closeModal" class="cs-btn">확인</a>'
+        })
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

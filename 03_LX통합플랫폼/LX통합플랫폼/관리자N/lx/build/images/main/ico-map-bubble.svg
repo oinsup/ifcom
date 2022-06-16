@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="58" viewBox="0 0 67 58">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.72" y1="0.867" x2="-0.042" y2="-0.089" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#41c2d0"/>
+      <stop offset="0.481" stop-color="#5ad9e6"/>
+      <stop offset="1" stop-color="#9eece3"/>
+    </linearGradient>
+  </defs>
+  <g id="ico-map-bubble" transform="translate(-767 -722)">
+    <path id="사각형_3810" data-name="사각형 3810" d="M15,0H41A15,15,0,0,1,56,15v0A15,15,0,0,1,41,30H0a0,0,0,0,1,0,0V15A15,15,0,0,1,15,0Z" transform="translate(767 722)" fill="url(#linear-gradient)"/>
+    <text id="Click" transform="translate(795 743)" fill="#0d289c" font-size="15" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="-0.05em"><tspan x="-15.236" y="0">Click</tspan></text>
+    <text id="지적통합_정보" data-name="지적통합
+정보" transform="translate(780 761)" fill="#006f7b" font-size="14" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em" opacity="0"><tspan x="0" y="0">지적통합</tspan><tspan y="0" font-family="SegoeUI, Segoe UI"></tspan><tspan x="0" y="16">정보</tspan></text>
+  </g>
+</svg>

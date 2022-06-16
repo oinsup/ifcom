@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="지원">지원</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea type03">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">CONTACT US</span></h1>
+                        <p class="descPage" data-aos="fade" data-aos-duration="2200" data-aos-delay="200">하단의 양식을 활용하여 EGIS에 문의하세요.<br />
+                            각 분야의 전문가들이 문제를 해결하고 가치를 창출할 수 있도록 지원해 드릴 것입니다.</p>
+                    </div>
+                    <!--//titArea-->
+                    <!--labelInputArea-->
+                    <div class="labelInputArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <!-- labelSelect -->
+                        <div class="labelSelect">
+                            <label for="txtSelect01">문의유형</label>
+                            <div class="flex">
+                                <select id="txtSelect01">
+                                    <option value="플랫폼">플랫폼</option>
+                                </select>
+                                <select id="txtSelect02">
+                                    <option value="디지털트윈플랫폼">디지털트윈플랫폼</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- //labelSelect -->
+                        <!--labelInput-->
+                        <div class="labelInput">
+                            <label for="txt01">회사명</label>
+                            <input id="txt01" type="text" placeholder="회사명을 입력해 주세요." />
+                        </div>
+                        <!--//labelInput-->
+                        <!--labelInput-->
+                        <div class="labelInput">
+                            <label for="txt02">부서</label>
+                            <input id="txt02" type="text" placeholder="부서명을 입력해 주세요." />
+                        </div>
+                        <!--//labelInput-->
+                        <!--labelInput-->
+                        <div class="labelInput">
+                            <label for="txt03">성함/직급</label>
+                            <input id="txt03" type="text" placeholder="성함과 직급을 입력해 주세요." />
+                        </div>
+                        <!--//labelInput-->
+                        <!--labelInput-->
+                        <div class="labelInput">
+                            <label for="txt04">이메일</label>
+                            <input id="txt04" type="text" placeholder="이메일 주소를 입력해 주세요." />
+                        </div>
+                        <!--//labelInput-->
+                        <!--labelInput-->
+                        <div class="labelInput">
+                            <label for="txt05">연락처</label>
+                            <input id="txt05" type="email" placeholder="연락처를 입력해 주세요." />
+                        </div>
+                        <!--//labelInput-->
+                        <!--labelInput-->
+                        <div class="labelInput f1">
+                            <label for="txt06">문의사항</label>
+                            <textarea id="txt06" placeholder="내용을 입력해 주세요."></textarea>
+                        </div>
+                        <!--//labelInput-->
+                    </div>
+                    <!--//labelInputArea-->
+                    <!--checkboxArea-->
+                    <div class="checkboxArea">
+                        <strong class="tit">개인정보 수집·이용 동의</strong>
+                        <!--checkbox-->
+                        <div class="checkbox">
+                            <input type="checkbox" id="chk01" />
+                            <label for="chk01">
+                                <span><span class="colorType blue">[필수]</span>&nbsp;&nbsp;문의하기를 위한 개인정보 수집·이용 안내를
+                                    확인하였으며, 내용에 동의합니다.</span></label>
+                        </div>
+                        <!--//checkbox-->
+                        <!--checkbox-->
+                        <div class="checkbox">
+                            <input type="checkbox" id="chk02" />
+                            <label for="chk02">
+                                <span>[선택]&nbsp;&nbsp;마케팅 정보 제공 관련 개인정보 수집·이용 안내를 확인하였으며, 내용에 동의합니다.</span></label>
+                        </div>
+                        <!--//checkbox-->
+                    </div>
+                    <!--//checkboxArea-->
+                    <div class="btnArea right">
+                        <button type="button" class="btnLink type02"><span>문의하기</span></button>
+                    </div>
+                </div>
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

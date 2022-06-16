@@ -1,0 +1,243 @@
+<!-- <div>
+  <button id="fnoto">노토</button>
+  <button id="fnanum">나눔</button>
+
+  <script>
+    jQuery(function($){
+      $('#fnoto').click(function(){
+        $('body').css('font-family','Noto Sans KR');
+      });
+      $('#fnanum').click(function(){
+        $('body').css('font-family','NanumGothic');
+      });
+    });
+  </script>
+</div> -->
+
+<header class="lay-hedaer">
+      <div class="lay-hedaer-top">
+        <div class="lay-wrap">
+          <h1 class="site-logo"><a href="@@webPath/index.html">KLIP 운영시스템</a></h1>
+          
+          <div class="lay-member-summary">
+            <!-- 사용자정보 -->
+            <div class="summary-col -member">
+              <a href="#">
+                <strong>김혜정</strong>
+                <span>부산광역시</span>
+              </a>
+              <!-- 세부정보 -->
+              <div class="summary-info -member-info">
+                <div class="__cont">
+                  <ul>
+                    <li>권한 : 기관 사용자</li>
+                    <li>그룹 : 그룹명출력</li>
+                  </ul>
+                </div>
+                <div class="__btns">
+                  <!-- 201126 : 링크추가 -->
+                  <a href="@@webPath/myinfo01.html" class="summary-info-btn">정보 수정</a>
+                </div>
+              </div>
+              <!--// 세부정보 -->
+            </div>
+
+            <!-- 나의 업무 -->
+            <div class="summary-col mywork">
+              <a href="#">
+                <span><i class="layicon-mywork"></i></span>
+                <strong>나의 업무</strong>
+              </a>
+            </div>
+    
+            <!-- 업무요청 -->
+            <div class="summary-col -member-work">
+              <a href="#">
+                <span><em class="layicon-alert">22</em></span>
+                <strong>승인 요청</strong>
+              </a>
+    
+              <!-- 세부정보 -->
+              <div class="summary-info -member-work-info">
+                <div class="cs-table-simple2">
+                  <table>
+                    <caption>업무요청정보</caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">사용 권한 승인</th>
+                        <th scope="col">접속 불가 해제</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong class="pcolor-blue">1</strong> 건</td>
+                        <td><strong class="pcolor-red">2</strong> 건</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!--// 세부정보 -->
+            </div>
+    
+            <!-- 세션남은시간 -->
+            <div class="summary-col -time">
+              <a href="#">
+                <span><i class="layicon-time"></i></span>
+                <strong>20:00</strong>
+              </a>
+              <!-- 세부정보 -->
+              <div class="summary-info -time-info" >
+                <div class="__header">
+                  세션남은 시간 <strong>05:00</strong>
+                  <button type="button" class="summary-info-btn">연장</button>
+                </div>
+                <div class="__cont">
+                  페이지 로딩 후 30분 동안 미사용 시<br>
+                  시스템 보안을 위해 자동 로그아웃 됩니다.
+                  <span>(페이지 이동 및 기능 이용 시 자동 연장)</span>
+                </div>
+              </div>
+              <!--// 세부정보 -->
+            </div>
+    
+            <!-- 로그아웃 -->
+            <div class="summary-col">
+              <a href="@@webPath/login.html">
+                <span><i class="layicon-logout"></i></span>
+                <strong>로그아웃</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gnb 나오는 메뉴가 가변임  -->
+
+      <div class="lay-gnb" id="laygnb">
+        <div class="lay-gnb-wrap">
+          <nav class="lay-gnb-content">
+            <ul>
+              <!-- 0106 :: 토지 정보 조회 삭제
+                <li class="active gnb-depth1">
+                <a href="#">토지 정보 조회</a>
+                <ul>
+                  <li><a href="#">필지 정보(이력) 조회</a></li>
+                  <li class="active"><a href="#">지구단위계획 구역 조회</a></li>
+                  <li><a href="#">도시·군계획시설 정보 조회</a></li>
+                  <li><a href="#">재해취약성분석</a></li>
+                  <li><a href="#">연계주제도</a></li>
+                  <li><a href="#">연혁도 조회</a></li>
+                </ul>
+              </li> -->
+              <li class="gnb-depth2">
+                <!-- 0127:: 메뉴수정 -->
+                <!-- <a href="@@webPath/notify/notification01.html">고시 조회</a> -->
+                <!-- 211227:: 메뉴수정 -->
+                <a href="#">정보 조회</a>
+                <ul>
+                  <!-- 0108 :: 삭제 <li><a href="#">조서 조회</a></li> -->
+                  <!-- 211227:: 메뉴수정 -->
+                  <!-- <li><a href="@@webPath/notify/notification01.html">고시 조회</a></li> -->
+                  <li><a href="#">고시</a></li>
+                  <li><a href="#">공고</a></li>
+                  <li><a href="@@webPath/infosearch/disasterVul02.html">기초조사 정보</a></li>
+                  <li><a href="@@webPath/data/landPlan01.html">정책 정보</a></li>
+                  <li><a href="@@webPath/data/urbanPlanReport01.html">도시계획현황</a></li>
+                </ul>
+              </li>
+              <li class="gnb-depth3">
+                <!-- 211227:: 메뉴수정 -->
+                <!-- <a href="@@webPath/plan_manage/proposal01.html">입안 관리</a> -->
+                <a href="@@webPath/plan_manage/proposal01.html">도시계획 관리</a>
+                <ul>
+                  <!-- 201209 :: 메뉴명 수정 -->
+                  <!-- <li><a href="@@webPath/plan_manage/proposal01.html">입안 제안 관리</a></li>
+                  <li><a href="@@webPath/plan_manage/urbanPlan01.html">도시·군관리계획 관리</a></li>
+                  <li><a href="@@webPath/plan_manage/metropolitanCityPlan01.html">광역도시/도시·군기본계획 관리</a></li>
+                  <li><a href="#">실시계획 관리</a></li>
+                  <li><a href="@@webPath/plan_manage/council01.html">도시계획위원회 심의 관리</a></li>
+                  <li><a href="@@webPath/plan_manage/councilWorkers01.html">도시계획위원회 구성 관리</a></li>
+                  <li><a href="@@webPath/plan_manage/on-Nara01.html">전자결재 내역 관리</a></li> -->
+                  <!-- 211227:: 메뉴수정 -->
+                  <li><a href="#">도시·군관리계획 입안 제안 관리</a></li>
+                  <li><a href="#">도시·군관리계획 관리</a></li>
+                  <li><a href="#">도시·군계획시설 관리</a></li>
+                  <li><a href="#">지구단위계획 관리</a></li>
+                  <li><a href="#">도시·군기본계획 관리</a></li>
+                  <li><a href="#">광역도시계획 관리</a></li>
+                  <li><a href="@@webPath/infosearch/disasterVul01.html">재해취약성 분석 결과</a></li>
+
+                  
+                </ul>
+              </li>
+              <li class="gnb-depth4">
+                <!-- 0127:: 메뉴수정 -->
+                <!-- 211227:: 메뉴수정 -->
+                <!-- <a href="#">지구단위계획 관리</a> -->
+                <a href="#">도시계획위원회 관리</a>
+                <ul>
+                  <!-- <li><a href="#">필지/시설 정보 갱신</a></li>
+                  <li><a href="#">지구단위 획지/규제 등록</a></li>
+                  <li><a href="#">도시·군계획시설 집행</a></li> -->
+                  <!-- 211227:: 메뉴수정 -->
+                  <li><a href="#">도시계획위원회 심의 관리</a></li>
+                  <li><a href="#">도시계획위원회 구성 관리</a></li>
+                </ul>
+              </li>
+              <li class="gnb-depth5">
+                <a href="#">통계 조회</a>
+                <ul>
+                  <!-- <li><a href="#">용도지역·지구 통계</a></li>
+                  <li><a href="#">지구단위계획 통계</a></li>
+                  <li><a href="#">도시·군계획시설 통계</a></li>
+                  <li><a href="#">재해취약성 통계</a></li>
+                  <li><a href="#">입안 계획 통계</a></li>
+                  <li><a href="#">고시 통계</a></li>
+                  <li><a href="#">사용자 이용 통계</a></li> -->
+                  <!-- 211227:: 메뉴수정 -->
+                  <li><a href="#">도시·군관리계획 통계</a></li>
+                  <li><a href="#">도시·군계획시설 통계</a></li>
+                  <li><a href="#">용도지역·용도지구 통계</a></li>
+                  <li><a href="#">지구단위계획 통계</a></li>
+                  <li><a href="#">재해취약성 통계</a></li>
+                  <li><a href="#">사용자 이용 통계</a></li>
+                </ul>
+              </li>
+              <li class="gnb-depth6">
+                <!-- 211227:: 메뉴수정 -->
+                <!-- <a href="@@webPath/data/landPlan01.html">자료실</a> -->
+                <a href="@@webPath/data/fileSharing01.html">게시판</a>
+                <ul>
+                  <!-- <li><a href="@@webPath/data/landPlan01.html">정책 정보</a></li>
+                  <li><a href="@@webPath/data/urbanPlanReport01.html">도시계획현황 통계 책자</a></li>
+                  <li><a href="@@webPath/data/fileSharing01.html">자료 게시판</a></li> -->
+                  <!-- 0108 :: 삭제
+                    <li><a href="#">전자파일 작성지침</a></li> -->
+                    <!-- 211227:: 메뉴수정 -->
+                    <li><a href="@@webPath/data/fileSharing01.html">자료 게시판</a></li>
+                    <li><a href="#">기초조사 게시판</a></li>
+                    <li><a href="#">공고 게시판</a></li>
+                    <li><a href="#">현황조사</a></li>
+                </ul>
+              </li>
+              <li class="gnb-depth7">
+                <a href="#">시스템 운영 관리</a>
+                <ul>
+                  <li><a href="@@webPath/system_manage/klipuser01.html">사용자  관리</a></li>
+                  <!-- 0108 :: 삭제
+                    <li><a href="#">토지e음 회원 관리</a></li> -->
+                  <li><a href="#">SMS 전송 관리</a></li>
+                  <li><a href="#">용도 분류체계 관리</a></li>
+                  <li><a href="#">사용 이력 확인</a></li>
+                  <li><a href="@@webPath/system_manage/addFile01.html">자료 관리</a></li>
+                  <li><a href="#">현황조사 관리</a></li>
+                  <li><a href="@@webPath/system_manage/infoManage05.html">정보연계 관리</a></li>
+                  <li><a href="#">공통 코드/메뉴 관리</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>

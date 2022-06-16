@@ -1,0 +1,16 @@
+@charset "utf-8";
+$fontUrl : '../fonts';
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url(#{$fontUrl}/NanumSquareR.woff) format('woff');
+      //  url(../fonts/NanumSquareR.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 600;
+  src: url(#{$fontUrl}/NanumSquareB.woff) format('woff');
+      //  url(../fonts/NanumSquareB.woff2) format('woff2');
+}

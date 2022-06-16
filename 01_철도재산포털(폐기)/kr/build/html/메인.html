@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/scroll/css/jquery.mCustomScrollbar.css" type="text/css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script src="../lib/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../lib/swiper/js/swiper.js"></script>
+    <script src="../js/ui.js"></script>
+    
+
+    <title>KR철도</title>
+</head>
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+    <a href="#lnb">지역메뉴 바로가기</a>
+</div>
+<div id="wrap" class="mainPage">
+    <header id="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a href="메인.html">
+                <!-- <img src="/images/ico/ico_logo.png" alt="철도재산포털"> -->
+            </a>
+        </h1>
+        <div class="rightArea">
+            <!--gnb-->
+            <div id="gnb" class="clearFix">
+                <ul>
+                    <li class="depth">
+                        <a href="">국유재산안내</a>
+                        <ul class="menu">
+                            <li><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">개발사업대상지</a>
+                        <ul class="menu">
+                            <li><a href="개발사업대상지-수도권.html">수도권</a></li>
+                            <li><a href="개발사업대상지-영남권.html">영남권</a></li>
+                            <li><a href="개발사업대상지-호남권.html">호남권</a></li>
+                            <li><a href="개발사업대상지-강원권.html">강원권</a></li>
+                            <li><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth dep03">
+                        <a href="">유휴부지 및 폐터널</a>
+                        <ul class="menu">
+                            <li><a href="철도유휴부지-유휴부지위치도.html">철도유휴부지</a></li>
+                            <li><a href="철도유휴부지-폐터널현황.html">폐터널현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">정보마당</a>
+                        <ul class="menu">
+                            <li><a href="정보마당-법령및자료실.html">법령 및 자료실</a></li>
+                            <li style="margin-right: 0px;"><a href="정보마당-담당자안내.html">담당자안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--//gnb-->
+            <!--util-->
+            <div class="util">
+                <ul class="clearFix">
+                    <li class="gis"><a href="#"><span class="hidden">GIS</span></a></li>
+                </ul>
+            </div>
+            <!--//util-->
+        </div>
+        <!--mobile-->
+        <div class="mobile">
+            <button type="button" class="btnMenu"><span class="hidden">메뉴</span></button>
+        </div>
+        <!--//mobile-->
+        <!--moGnb-->
+        <div class="moGnb">
+            <div class="head">
+                <h1><img src="../images/ico/ico_logo.png" alt="모바일 로고"></h1>
+                <button type="button" class="btnClose"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="cont">
+                <ul class="dep1">
+                    <li class="active">
+                        <p><a href="#">국유재산안내</a></p>
+                        <ul class="dep2" style="display: block;">
+                            <li class="active"><p><a href="국유재산안내-사용안내.html">사용안내</a></li>
+                            <li><p><a href="국유재산안내-매각안내.html">매각안내</a></li>
+                            <li><p><a href="국유재산안내-개발안내.html">개발안내</a></li>
+                            <li><p><a href="국유재산안내-사용및매각가능토지검색.html">사용 및 매각가능 토지검색</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <p><a href="#">개발사업대상지</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="">수도권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-수도권.html">월곶역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="">영남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-영남권.html">김천구미역</a></li>
+                                    <li><a href="#">舊경주역</a></li>
+                                    <li><a href="#">舊포항역</a></li>
+                                    <li><a href="#">舊안동역</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">호남권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-호남권.html">익산역 광역환승센터</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><a href="#">강원권</a></p>
+                                <ul class="dep3">
+                                    <li><a href="개발사업대상지-강원권.html">舊원주역</a></li>
+                                    <li><a href="#">춘천역세권</a></li>
+                                    <li><a href="#">장호정차장</a></li>
+                                    <li><a href="#">초곡정차장</a></li>
+                                    <li><a href="#">임호정차장</a></li>
+                                    <li><a href="#">인구정차장</a></li>
+                                    <li><a href="#">대포정차장</a></li>
+                                    <li><a href="#">양양정차장</a></li>
+                                    <li><a href="#">사천정차장</a></li>
+                                    <li><a href="#">낙산사정차장</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="개발사업대상지-개발사업절차및방법.html">개발사업 절차 및 방법</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">유휴부지 및 폐터널</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active">
+                                <p><a href="#">철도유휴부지</a></p>
+                                <ul class="dep3">
+                                    <li><a href="철도유휴부지-유휴부지위치도.html">철도 유휴부지 위치도</a></li>
+                                    <li><a href="#">철도유휴부지 선별 현황</a></li>
+                                    <li><a href="#">철도유휴부지 관리</a></li>
+                                    <li><a href="#">(지자체) 철도 유휴부지 활용사업</a></li>
+                                </ul>
+                            </li>
+                            <li><p><a href="철도유휴부지-폐터널현황.html">폐터널 현황</a></p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><a href="#">정보마당</a></p>
+                        <ul class="dep2" style="">
+                            <li class="active"><p><a href="정보마당-법령및자료실.html">법령 및 자료실</a></p></li>
+                            <li><p><a href="정보마당-담당자안내.html">담당자 안내</a></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--//moGnb-->
+    </div>
+</header>
+
+    <div id="container">
+        <div class="mainVisual">
+            <!--swiper-wrapper-->
+            <div class="swiper-wrapper">
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider01.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01">국민을 잇는 철도</p>
+                            <p class="txt02">세계를 여는 철도</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider02.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01">국가 철도사업을 이끄는</p>
+                            <p class="txt02">NO.1 Leader</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+                <!--swiper-slide-->
+                <div class="swiper-slide">
+                    <div class="article">
+                        <img src="../images/common/bg_slider03.png" alt="배너이미지">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <p class="txt01 wd310">빠르고 안전하고 쾌적한 철도로</p>
+                            <p class="txt02">국민과 함께</p>
+                            <p class="txt03">국가철도공단</p>
+                        </div>
+                        <!--//txtArea-->
+                    </div>
+                </div>
+                <!--//swiper-slide-->
+            </div>
+            <!--//swiper-wrapper-->
+            <!--btnScroll-->
+            <div class="btnScroll">
+                <button class="swiper-next"><span class="hidden">다음</span></button>
+                <button class="swiper-prev"><span class="hidden">이전</span></button>
+            </div>
+            <!--//btnScroll-->
+            <!--roll-controll-->
+            <div class="roll-controll">
+                <ul class="slideList">
+                    <li>
+                        <a href="#" class="circle circle01">
+                            <span>국유재산<br/>사용안내</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="circle circle02">
+                            <span>개발사업<br/>대상지</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="circle circle03">
+                            <span>폐터널<br/>현황</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <button type="button" class="main-roll-pause"></button>
+            </div>
+            <!--//roll-controll-->
+        </div>
+    </div>
+    <div id="footer">
+    <!--inner-->
+    <div class="inner clearFix">
+        <!--helpMenu-->
+        <ul class="helpMenu">
+            <li><a href="#">개인정보취급방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">웹접근성정책</a></li>
+            <li><a href="#">뷰어다운로드</a></li>
+        </ul>
+        <!--//helpMenu-->
+        <!--corpInfo-->
+        <div class="corpInfo">
+            <p>우)34618 대전광역시 동구 중앙로 242 국가철도공단  TEL: 1588-7270(통화료 사용자 부담) FAX: 042-607-4429</p>
+            <p>COPYRIGHTⓒ 2020 BY KOREA NATIONAL RAILWAY. ALL RIGHTS RESERVED</p>
+        </div>
+        <!--//corpInfo-->
+    </div>
+    <!--//inner-->
+</div>
+</div>
+
+</body>
+</html>

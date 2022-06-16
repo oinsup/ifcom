@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '기초조사 정보 시각화', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li><a href="#">기초조사 정보</a></li>
+          <li>기초조사 정보 시각화 지도</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>기초조사 정보 시각화 지도</h2>
+      </div>
+    </div>
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="">
+        <div class="content board-view">
+          <section>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>기초조사 정보 시각화</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      정보 분류
+                    </th>
+                    <td>
+                      기반시설 > 환경기초시설 > 대기오염
+                    </td>
+                    <th scope="row">
+                      항목명
+                    </th>
+                    <td>
+                      대기오염 측정소 정보
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="s01">조회 지역</th>
+                    <td>
+                      <div class="cs-input-tel">
+                        <select id="s01" class="cs-input" title="지역 선택" style="width:185px;">
+                          <option>서울특별시</option>
+                        </select>
+                        <select id="s02" class="cs-input" title="시·군·구 선택" style="width:185px;">
+                          <option>시·군·구 선택</option>
+                        </select>
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="s03">데이터 기준일/출처</th>
+                    <td>
+                      <div class="cs-input-tel type02">
+                        <select id="s03" class="cs-input" title="데이터 기준일 선택" style="width:125px;">
+                          <option>2021-11-11</option>
+                        </select>
+                        <span>/ 한국환경공단</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">조회 기준</th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" name="datecate" class="cs-radio" id="datecate1" checked><label for="datecate1"><span></span>측정소</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+  
+          <section class="cs-btn-set">
+            <!-- <div class="board-searchbox-btns cs-btn-set type02"> -->
+              <button type="button" class="cs-btn-line">초기화</button>
+              <button type="submit" class="cs-btn">조회</button>
+            <!-- </div> -->
+          </section>
+
+          <section>
+            <h3 class="cont-hedding1">대기오염 측정소 위치 지도</h3>
+            <script type="text/javascript">
+              $(document).ready(function(){  
+
+                $(".mapPopupArea .info .infoHead .btn").on('click', function(){
+                  $(this).closest(".info").removeClass("active");
+                });
+
+                $("#map .toolbar .expand").on('click', function(){
+                  if($(this).hasClass("active")) {
+                    $(this).removeClass("active").children("span").text("전체").closest("#map").removeClass("active")
+                    $("html").css({"overflow":"visible"})
+                  } else {
+                    $(this).addClass("active").children("span").text("닫기").closest("#map").addClass("active")
+                    $("html").css({"overflow":"hidden"})
+                  }
+                });//
+
+              });//doc
+            </script>
+            <!-- mapContainer -->
+            <div class="mapContainer">
+              <div id="map">
+                <!-- toolBar -->
+                <div class="toolbar">
+                  <ul>
+                    <li>
+                      <button type="button" class="btnTool tool01">
+                        <span>확대</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btnTool tool02">
+                        <span>축소</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btnTool tool03 expand">
+                        <span>전체</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="btnTool tool04">
+                        <span>저장</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <!-- toolBar -->
+
+                <!-- mapPopup -->
+                <div class="mapPopupArea">
+                  <div class="mapMark"></div>
+                  <!-- info -->
+                  <div class="info type01 active" style="left: 24px; top: 0;">
+                    <!-- infoHead -->
+                    <div class="infoHead">
+                      <h3 class="infoTitle">대기오염 측정소 정보</h3>
+                      <button type="button" class="btn"><span>닫기</span></button>
+                    </div>
+                    <!-- //infoHead -->
+                    <div class="infoBody">
+                      <ul>
+                        <li>
+                          <p class="col01">측정소명</p>
+                          <p class="col02">강남대로</p>
+                        </li>
+                        <li>
+                          <p class="col01">측정망</p>
+                          <p class="col02">도로변대기</p>
+                        </li>
+                        <li>
+                          <p class="col01">주소</p>
+                          <p class="col02">강서구 대저1동 780-71</p>
+                        </li>
+                        <li>
+                          <p class="col01">위치명</p>
+                          <p class="col02">서초구민회관앞 중앙차로</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- //info -->
+
+                  <!-- info -->
+                  <div class="info type02 active mark" style="left: 71%; top: 44%;">
+                    <!-- infoHead -->
+                    <div class="infoHead">
+                      <h3 class="infoTitle">대기오염 측정소 정보</h3>
+                      <button type="button" class="btn"><span>닫기</span></button>
+                    </div>
+                    <!-- //infoHead -->
+                    <div class="infoBody">
+                      <ul>
+                        <li>
+                          <p class="col01">측정소명</p>
+                          <p class="col02">강남대로</p>
+                        </li>
+                        <li>
+                          <p class="col01">측정망</p>
+                          <p class="col02">도로변대기</p>
+                        </li>
+                        <li>
+                          <p class="col01">주소</p>
+                          <p class="col02">강서구 대저1동 780-71</p>
+                        </li>
+                        <li>
+                          <p class="col01">위치명</p>
+                          <p class="col02">서초구민회관앞 중앙차로</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- //info -->
+                </div>
+                <!-- mapPopup -->
+                <div class="mapScale">
+                  <span>
+                    Map Scale
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- //mapContainer -->
+          </section>
+
+          <section>
+            <div class="board-list-wrap">
+              <h3 class="cont-hedding1">대기오염 측정소 목록</h3>
+              <div class="board-list-text _fixed">
+                <table>
+                  <caption>대기오염 측정소 목록</caption>
+                  <colgroup>
+                    <col class="width60">
+                    <col class="width110">
+                    <col class="width150">
+                    <col>
+                    <col class="width125">
+                    <col>
+                    <col class="width80">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">측정소 코드</th>
+                      <th scope="col">측정소명</th>
+                      <th scope="col">주소</th>
+                      <th scope="col">측정망</th>
+                      <th scope="col">측정 항목</th>
+                      <th scope="col">설치연도</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10</td>
+                      <td>111261</td>
+                      <td>강남구</td>
+                      <td class="tal txtEp">서울특별시 강남구 학동로 426</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1978</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>111264</td>
+                      <td>강남대로</td>
+                      <td class="tal txtEp">서울특별시 서초구 강남대로 201</td>
+                      <td>도로변대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>2009</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>111274</td>
+                      <td>강동구</td>
+                      <td class="tal txtEp">서울특별시 강동구 구천면로 42길 59</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1997</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>111143</td>
+                      <td>강변북로</td>
+                      <td class="tal txtEp">서울특별시 성동구 강변북로 257</td>
+                      <td>도로변대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>2009</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>111291</td>
+                      <td>강북구</td>
+                      <td class="tal txtEp">서울특별시 강북구 삼양로 139길 49</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1997</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>111212</td>
+                      <td>강서구</td>
+                      <td class="tal txtEp">서울특별시 강서구 강서로 45 다길 71</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1992</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>111213</td>
+                      <td>공항대로</td>
+                      <td class="tal txtEp">서울특별시 강서구 마곡동 727-1091</td>
+                      <td>도로변대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>2010</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>111251</td>
+                      <td>관악구</td>
+                      <td class="tal txtEp">서울특별시 관악구 신림동길 14</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1979</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>111141</td>
+                      <td>광진구</td>
+                      <td class="tal txtEp">서울특별시 광진구 광나루로 571</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1980</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>111221</td>
+                      <td>구로구</td>
+                      <td class="tal txtEp">서울특별시 구로구 가마산로 27길 45</td>
+                      <td>도시대기</td>
+                      <td class="tal txtEp">SO2/ CO/ O3/ NO2/ PM10/ PM2.5</td>
+                      <td>1980</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>SO2(아황산가스 평균농도), CO(일산화탄소 평균농도), O3(오존 평균농도), NO2(이산화질소 평균농도), PM10(미세먼지 평균농도), PM2.5(초미세먼지 평균농도)
+              </li>
+            </ul>
+            <div class="board-paging">
+              <a href="#" class="paging-first">처음</a>
+              <a href="#" class="paging-prev">이전</a>
+              <strong>1</strong>
+              <a href="#">2</a>
+              <a href="#" class="paging-next">다음</a>
+              <a href="#" class="paging-last">마지막</a>
+            </div>
+          </section>
+
+          <section class="cs-btn-set">
+            <a href="#" class="cs-btn-line">목록</a>
+            <a href="#js__dataDown" jq-action="modal" class="cs-btn">데이터 다운로드</a>
+          </section>
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+
+      <!-- 데이터 다운로드 -->
+      <div id="js__dataDown" class="laymodal width600">
+        <div class="laymodal-header">
+          <h2>데이터 다운로드</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section class="tac">
+            대기오염 측정소 정보 데이터 파일은<br />
+            광역시·도 또는 시·군·구 단위로만 다운로드가 가능합니다. <br />
+            (단, 시·군·구의 경우 데이터가 등록된 시·군·구만 다운로드 가능합니다.)<br />
+          </section>
+          <section>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>데이터 다운로드</caption>
+                <colgroup>
+                  <col stye="width: 180px">
+                  <col stye="width: 180px">
+                  <col stye="width: 180px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" class="tac">메타 정보</th>
+                    <th scope="col" class="tac">광역시·도 데이터</th>
+                    <th scope="col" class="tac">시·군·구 데이터</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tac">
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </td>
+                    <td class="tac">
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </td>
+                    <td class="tac">
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" jq-action="closeModal" class="cs-btn-line">닫기</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

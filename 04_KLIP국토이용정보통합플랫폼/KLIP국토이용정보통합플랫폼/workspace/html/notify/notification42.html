@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '공고 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li><a href="#">공고</a></li>
+          <li>공고</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>공고</h2>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+
+        <section>
+          <h3 class="cont-hedding1">공고</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>공고</caption>
+              <colgroup>
+                <col class="width130">
+                <col>
+                <col class="width130">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">공고 기관</th>
+                  <td>부산광역시</td>
+                  <th scope="row">담당 부서</th>
+                  <td>OOO과</td>
+                </tr>
+                <tr>
+                  <th scope="row">공고 번호</th>
+                  <td>부산광역시 공고 제2021-XXXX호</td>
+                  <th scope="row">공고일</th>
+                  <td>2021-12-30</td>
+                </tr>
+                <tr>
+                  <th scope="row">공고 제목</th>
+                  <td colspan="3">부산광역시 OOO 농지이용증진사업 시행계획 공고</td>
+                </tr>
+                <tr>
+                  <th scope="row">공고 내용</th>
+                  <td colspan="3">
+                    등록된 내용이 출력됩니다. 등록된 내용이 출력됩니다. 등록된 내용이 출력됩니다. 등록된 내용이 출력됩니다. 등록된 내용이 출력됩니다. 등록된 내용이 출력됩니다. 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">공고자</th>
+                  <td>부산광역시장</td>
+                  <th scope="row">문의처</th>
+                  <td>051-888-2582</td>
+                </tr>
+                
+                <tr>
+                  <th scope="row">열람 기간</th>
+                  <td>2021-12-30 ~ 2021-01-29</td>
+                  <th scope="row">열람 장소</th>
+                  <td>부산광역시 녹색환경정책실 산림녹지과</td>
+                </tr>
+                <tr>
+                  <th scope="row">공고문</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">원문 보기</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">첨부파일</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다. 계획 요약본, 의견제출양식 등 첨부가 필요한 경우 수정 가능합니다.</strong> -->
+                        <strong>등록된 파일명이 출력됩니다.pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                                
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section>
+          <h3 class="cont-hedding1">공고 등록자 정보</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>공고 등록자 정보</caption>
+              <colgroup>
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col>
+                <col class="width180">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>등록일</th>
+                  <th>등록자</th>
+                  <th>소속 기관</th>
+                  <th>부서</th>
+                  <th>부서 연락처</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2020-10-12</td>
+                  <td>홍길동</td>
+                  <td>부산광역시</td>
+                  <td>도시OOO과</td>
+                  <td>031-790-6114(내선23)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="notification41.html" class="cs-btn-line">목록</a>
+        </section>
+
+
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

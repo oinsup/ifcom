@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>도시·군관리계획 입안</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 입안</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+        @@include('../include/cont_urbanPlan05.html')
+        
+        <section>
+          <h3 class="cont-hedding1">입안 프로세스</h3>
+          <ul class="board-state _fullwidth">
+            <li class="active"><a href="urbanPlan05.html">주민 의견 청취</a></li>
+            <li class="active"><a href="urbanPlan06.html">관련 부서 협의</a></li>
+            <li class="active"><a href="urbanPlan07.html">지방의회 의견 청취</a></li>
+            <li class="active locked"><a href="urbanPlan08.html">시·군·구 위원회 심의</a></li>
+            <li>도 승인</li>
+            <li>결정</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width250">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">담당자 의견</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">위원회 심의 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 담당자 의견이 없습니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">위원회 심의 진행</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">시·도도시계획위원회 심의 대상으로 시·군·구도시계획위원회 심의는 진행하지 않습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">위원회 심의 완료 <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 담당자 의견이 없습니다.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">법률 Tip</h2>
+            <div class="cs-box-tip _single">
+              <!-- 0104 :: 법률 수정 -->
+              <strong>법률 TIP</strong>
+              <ul>
+                <li>
+                  국토계획법 제29조(도시·군관리계획의 결정권자) ①항 
+                  <p>
+                    도시·군관리계획은 시·도지사가 직접 또는 시장·군수의 신청에 따라 결정한다. 다만, 「지방자치법」 제175조에 따른 서울특별시와 광역시 및 특별자치시를 제외한 인구 50만 이상의 대도시(이하 "대도시"라 한다)의 경우에는 해당 시장(이하 "대도시 시장"이라 한다)이 직접 결정하고, 다음 각 호의 도시·군관리계획은 시장 또는 군수가 직접 결정한다.
+                  </p>
+                  <ul class="cs-list-number">
+                    <li>
+                      시장 또는 군수가 입안한 지구단위계획구역의 지정·변경과 지구단위계획의 수립·변경에 관한 도시·군관리계획
+                    </li>
+                    <li>
+                      제52조제1항제1호의2에 따라 지구단위계획으로 대체하는 용도지구 폐지에 관한 도시·군관리계획<br>
+                          [해당 시장(대도시 시장은 제외한다) 또는 군수가 도지사와 미리 협의한 경우에 한정한다]
+                    </li>
+                  </ul>
+                </li>
+  
+                <li>
+                  국토계획법 제113조(지방도시계획위원회) ②항 
+                  <p>
+                    도시·군관리계획과 관련된 다음 각 호의 심의를 하게 하거나 자문에 응하게 하기 위하여 시·군(광역시의 관할 구역에 있는 군을 포함한다. 
+                    이하 이 조에서 같다) 또는 구(자치구를 말한다. 이하 같다)에 각각 시·군·구도시계획위원회를 둔다.  
+                  </p>
+                  <ul class="cs-list-number">
+                    <li>시장 또는 군수가 결정하는 도시·군관리계획의 심의와 국토교통부장관이나 시·도지사의 권한에 속하는 사항 중 시·도도시계획위원회의 심의대상에 해당하는 사항이 시장·군수 또는 구청장에게 위임되거나 재위임된 경우 그 위임되거나 재위임된 사항의 심의</li>
+                    <li>도시·군관리계획과 관련하여 시장·군수 또는 구청장이 자문하는 사항에 대한 조언</li>
+                    <li>제59조에 따른 개발행위의 허가 등에 관한 심의</li>
+                    <li>그 밖에 대통령령으로 정하는 사항에 관한 심의 또는 조언</li>
+                  </ul>
+                </li>
+  
+              </ul>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">시·군·구도시계획위원회 심의 계획</h2>
+            <div class="data-extra-btn">
+              <a href="#js__reviewModify" class="cs-btn2-gray cs-btn-default" jq-action="modal">심의 계획 수정</a>
+            </div>
+            <div class="board-view-tb _tal js__tableFold" data-rows="4">
+              <table>
+                <caption>지방의회 의견 청취 계획</caption>
+                <colgroup>
+                  <col class="width160">
+                  <col>
+                  <col class="width160">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">위원회명</th>
+                    <td>선택한 위원회명 출력</td>
+                    <th scope="row">위원회 구분</th>
+                    <td>시·군·구도시계획위원회</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">안건명</th>
+                    <td colspan="3">입력한 안건명 출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">안건 내용</th>
+                    <td colspan="3"> 입력한 안건 내용 출력</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong> 등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 0106-02 :: 텍스트 수정 -->
+                    <th scope="row" rowspan="2">승인 결재</th>
+                    <td> 담당자 확인 (2020-10-18 13:00)</td>
+                  </tr>
+                  <!-- 0106-02 :: 추가 -->
+                  <tr>
+                    <td class="_p0" colspan="3">
+                      <div class="board-view-tb _tac">
+                        <table>
+                          <caption>승인 결재</caption>
+                          <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">소속 기관/부서</th>
+                              <th scope="col">결재자</th>
+                              <th scope="col">결재 상태</th>
+                              <th scope="col">결재일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td>홍길동 주무관</td>
+                              <td>상신</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td>홍길동 주무관</td>
+                              <td>승인(결재)</td>
+                              <td>2020-01-01</td>
+                            </tr>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td></td>
+                              <td>반려(전결)</td>
+                              <td>2020-01-01</td>
+                            </tr>
+                            <tr>
+                              <td colspan="4">기안문이 상신 되지 않았습니다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>결재자 정보는 온-나라시스템의 결과 값으로 제공됩니다. 기안문의 재전송 또는 재기안은 <span class="underline">입안 관리 &gt; 전자결재 내역 관리</span> 메뉴에서 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">시·군·구도시계획위원회 심의 결과</h2>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>시·군·구도시계획위원회 심의 결과</caption>
+                <colgroup>
+                  <col class="width160">
+                  <col>
+                  <col class="width160">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">심의 결과</th>
+                    <td>
+                      <span class="tcolor-gray2">결과 처리 전 입니다.</span>
+                      결과 입력된 경우 입력된 결과가 출력됩니다.
+                    </td>
+                    <th scope="row">심의 기간</th>
+                    <td>
+                      20XX-XX-XX~20XX-XX-XX
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">심의 결과서</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong class="tcolor-gray2">등록된 파일이 없습니다. 결과를 등록해 주세요.</strong>
+                          <!-- 첨부파일 있을 경우 -->
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+
+        <section class="cs-btn-set">
+          <a href="urbanPlan01.html" class="cs-btn-line">목록</a>
+          <a href="#js__review" jq-action="modal" class="cs-btn">위원회 심의 여부 처리</a>
+          <a href="#js__reviewState" jq-action="modal" class="cs-btn">위원회 심의 완료 처리</a>
+        </section>
+      </div>
+
+      <!-- content 팝업들 -->
+      @@include('../include/cont_urbanPlan05_modals.html')
+      <!--// content 팝업들 -->
+
+      <!-- 입안 프로세스 팝업들 -->
+      <!-- 위원회 심의 여부 처리 -->
+      <div id="js__review" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>시·군·구도시계획위원회 심의 여부 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">시·군·구도시계획위원회 심의 여부 및 심의 요청 계획을 등록해 주세요.</div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>시·군·구도시계획위원회 심의 여부 처리</caption>
+                <colgroup>
+                  <col class="width40">
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" colspan="2">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState1" onclick="toggleElm('listen','','none');lay_pop_width('#js__review',700)"><label for="opinionState1"><span></span> 위원회 심의 미진행</label>
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState2" onclick="toggleElm('listen','1','table-row');lay_pop_width('#js__review',1200)"><label for="opinionState2"><span></span> 위원회 심의 진행</label>
+                    </td>
+                  </tr>
+                  <!-- 위원회 심의 진행 -->
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th rowspan="4" class="tac" scope="row">심의<br><br> 계획</th>
+                    <th scope="row">위원회명 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <select class="cs-input width100p" title="위원회명">
+                        <option value="">위원회 선택</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">안건명 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="100" placeholder="안건명을 입력해 주세요." title="안건명">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">안건 내용 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="안건 내용을 입력해 주세요" title="안건 내용"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="계획내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능) ">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //위원회 심의 진행 -->
+                  <tr>
+                    <th scope="row" colspan="2">담당자 의견</th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="심의 미진행, 진행 사유를 입력해 주세요." title="담당자 의견"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState1"><label for="approvalState1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState2"><label for="approvalState2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__review');lay_pop_open('#js__reviewComplete')">변경</button>
+        </div>
+      </div>
+
+      <!--// 위원회 심의 여부 처리 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__reviewComplete',
+        'title': '시·군·구도시계획위원회 심의 여부 처리',
+        'cont': '<span class="pcolor-red">위원회 심의 진행</span> 상태로 변경되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 심의 계획 수정 -->
+      <div id="js__reviewModify" class="laymodal width1200">
+        <div class="laymodal-header">
+          <h2>시·군·구도시계획위원회 심의 계획 수정</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              시·군·구도시계획위원회 심의 계획을 수정할 수 있습니다. <br>
+              심의 계획을 수정하시는 경우 위원회 운영 담당자에게도 수정 여부를 공유해 주세요.<br>
+              재기안은 <span class="underline">입안 관리 &gt; 전자결재 내역 관리</span> 메뉴에서 가능합니다. 
+
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <!-- 0105 :: 테이블 수정 :: 심의 게획 삭제 담당자 의견 삭제 -->
+              <table>
+                <caption>시·군·구도시계획위원회 심의 여부 처리</caption>
+                <colgroup>
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">위원회명 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <select class="cs-input width100p" title="위원회명">
+                        <option value="">위원회 선택</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">안건명 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="100" placeholder="안건명을 입력해 주세요." title="안건명">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">안건 내용 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="안건 내용을 입력해 주세요" title="안건 내용"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file2" placeholder="등록된 계획안 파일명이 보입니다.pdf">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">안건명을 입력해 주세요.</div>
+
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__reviewModify');lay_pop_open('#js__reviewModifyComplete')">수정</button>
+        </div>
+      </div>
+
+      <!-- 심의 계획 수정 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__reviewModifyComplete',
+        'title': '시·군·구도시계획위원회 심의 계획 수정',
+        'cont': '시·군·구도시계획위원회 심의 계획이 수정되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 위원회 심의 완료 처리  -->
+      <div id="js__reviewState" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>시·군·구도시계획위원회 심의 완료 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              시·군·구도시계획위원회 심의가 완료된 경우 결과를 등록해 주세요. <br>
+              심의가 완료되었으나 심의 결과서가 등록되지 않은 경우<br>
+               위원회 운영담당자에게 심의 결과서 등록 요청을 해주세요.
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>지방의회 의견 청취 완료 처리</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="opinionstateresult" id="opinionstateresult"><label for="opinionstateresult"><span></span> 시·군·구도시계획위원회 심의 완료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">심의 결과 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="심의 결과 내용을 입력해 주세요." title="심의 결과"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">심의 결과서 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file3" placeholder="결과서를 선택해 주세요(.pdf만 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file3" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="resultapprovalstate" id="resultapprovalState1"><label for="resultapprovalState1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="resultapprovalstate" id="resultapprovalState2"><label for="resultapprovalState2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            <div class="cs-alert">심의 결과서 파일이 선택되지 않았습니다.</div>
+            <div class="cs-alert">결재 구분을 선택해 주세요.</div>
+          </section>
+        </div>
+
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__reviewState');lay_pop_open('#js__reviewStateComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 위원회 심의 완료 처리  확인-->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__reviewStateComplete',
+        'title': '시·군·구도시계획위원회 심의 완료 처리',
+        'cont': '<span class="pcolor-red">시·군·구도시계획위원회 심의 완료</span> 상태로 변경 되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+      <!--// 입안 프로세스 팝업들 -->
+
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

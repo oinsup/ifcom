@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>도시·군관리계획 입안</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>도시·군관리계획 입안</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+        @@include('../include/cont_urbanPlan05.html')
+        
+        <section>
+          <h3 class="cont-hedding1">입안 프로세스</h3>
+          <ul class="board-state _fullwidth">
+            <li class="active"><a href="urbanPlan05.html">주민 의견 청취</a></li>
+            <li class="active"><a href="urbanPlan06.html">관련 부서 협의</a></li>
+            <li class="active locked"><a href="urbanPlan07.html">지방의회 의견 청취</a></li>
+            <li>시·군·구 위원회 심의</li>
+            <li>도 승인</li>
+            <li>결정</li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width60">
+                  <col class="width250">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">담당자 의견</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">지방의회 의견 청취 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">지방의회 의견 청취 미진행</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">OOO사유로 주민 의견 청취를 진행하지 않습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">지방의회 의견 청취 진행</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">OOO사유로 주민 의견 청취를 진행하지 않습니다.</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td class="tal">지방의회 의견 청취 완료 <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">등록된 전달사항이 없습니다.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">법률 Tip</h2>
+            <div class="cs-box-tip _single">
+              <!-- 0104 :: 법률 수정 -->
+              <strong>법률 TIP</strong>
+              <ul>
+                <li>
+                  국토계획법 제28조(주민과 지방의회의 의견 청취) ⑤항 
+                  <p>
+                    국토교통부장관, 시·도지사, 시장 또는 군수는 도시·군관리계획을 입안하려면 대통령령으로 정하는 사항에 대하여 해당 지방의회의 의견을 들어야 한다.
+                  </p>
+                </li>
+                <li>
+                  국토계획법 제28조(주민과 지방의회의 의견 청취) ⑥항
+                  <p>
+                    국토교통부장관이나 도지사가 제5항에 따라 지방의회의 의견을 듣는 경우에는 제2항과 제3항을 준용한다. 이 경우 "주민"은 "지방의회"로 본다. 
+                  </p>
+                </li>
+                <li>
+                  국토계획법 제28조(주민과 지방의회의 의견 청취) ⑦항 
+                  <p>
+                    특별시장·광역시장·특별자치시장·특별자치도지사·시장 또는 군수가 제5항에 따라 지방의회의 의견을 들으려면 의견 제시 기한을 밝혀 도시·군관리계획안을 송부하여야 한다. 이 경우 해당 지방의회는 명시된 기한까지 특별시장·광역시장·특별자치시장·특별자치도지사·시장 또는 군수에게 의견을 제시하여야 한다. 
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">지방의회 의견 청취 계획</h2>
+            <div class="data-extra-btn">
+              <a href="#js__listenPlanModify" class="cs-btn2-gray cs-btn-default" jq-action="modal">청취 계획 수정</a>
+            </div>
+            <!-- 
+              data-rows="8" 처음에 보여줄 테이블 줄수
+              주민 의견 미진행인 경우 2 로 변경
+              2줄만 보여줌
+             -->
+            <div class="board-view-tb _tal js__tableFold" data-rows="3">
+              <table>
+                <caption>지방의회 의견 청취 계획</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">청취 방법</th>
+                    <td colspan="3">오프라인(방문)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">지방의회명</th>
+                    <td>입력된 지방의회명 출력</td>
+                    <th scope="row">의견 제시 기간</th>
+                    <td>2XXX-XX-XX~2XXX-XX-XX</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안</th>
+                    <td colspan="3">
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong> 등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <!-- 승인결재 -->
+                  <tr>
+                    <th rowspan="2" scope="row" class="vertical-top">승인 결재</th>
+                    <td colspan="3">담당자 확인 (2020-10-18 13:00)</td>
+                  </tr>
+                  <tr>
+                    <td class="_p0" colspan="3">
+                      <!-- 0106 :; 파랑색 배경 내용출력 부분 삭제 -->
+                      <div class="board-view-tb _tac">
+                        <table>
+                          <caption>승인 결재</caption>
+                          <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">소속 기관/부서</th>
+                              <th scope="col">결재자</th>
+                              <th scope="col">결재 상태</th>
+                              <th scope="col">결재일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td>홍길동 주무관</td>
+                              <td>상신</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td>홍길동 주무관</td>
+                              <td>승인(결재)</td>
+                              <td>2020-01-01</td>
+                            </tr>
+                            <tr>
+                              <td class="tal">XXXXXXXXXXXXXX/XXXX</td>
+                              <td></td>
+                              <td>반려(전결)</td>
+                              <td>2020-01-01</td>
+                            </tr>
+                            <tr>
+                              <td colspan="4">기안문이 상신 되지 않았습니다.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+  
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>결재자 정보는 온-나라시스템의 결과 값으로 제공됩니다. 기안문의 재전송 또는 재기안은 <span class="underline">입안 관리 &gt; 전자결재 내역 관리</span> 메뉴에서 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section>
+            <h2 class="cont-hedding2">지방의회 의견 청취 결과</h2>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>지방의회 의견 청취 결과</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">청취 결과</th>
+                    <td>
+                      <span class="tcolor-gray2">결과 처리 전 입니다.</span>
+                      결과 입력된 경우 입력된 결과가 출력됩니다.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">청취 결과서</th>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong class="tcolor-gray2">등록된 파일이 없습니다. 결과를 등록해 주세요.</strong>
+                          <!-- 첨부파일 있을 경우 -->
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <!-- <tr>
+                    <th scope="row">협의 결과서</th>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr> -->
+                  <!-- <tr>
+                    <th scope="row" rowspan="2" class="tac">2차</th>
+                    <th scope="row">협의 결과</th>
+                    <td>
+                      <span class="tcolor-gray2">결과 처리 전 입니다.</span>
+                      결과 입력된 경우 입력된 결과가 출력됩니다.
+                    </td>
+                  </tr> -->
+                  <!-- <tr>
+                    <th scope="row">협의 결과서</th>
+                    <td>
+                      <ul class="cs-list-file">
+                        <li>
+                          <strong class="tcolor-gray2">등록된 파일이 없습니다. 협의 결과서를 등록해 주세요.</strong>
+                          <strong>등록된 계획안 파일명이 보입니다.pdf</strong>
+                          <div class="cs-list-file__btns">
+                            <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로보기</a>
+                            <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+
+        <section class="cs-btn-set">
+          <a href="urbanPlan01.html" class="cs-btn-line">목록</a>
+          <a href="#js__personListen" jq-action="modal" class="cs-btn">의견 청취 여부 처리</a>
+          <a href="#js__personListenResult" jq-action="modal" class="cs-btn">의견 청취 완료 처리</a>
+          <a href="#js__personListenModify" jq-action="modal" class="cs-btn">청취  결과서 수정</a>
+        </section>
+      </div>
+
+      <!-- content 팝업들 -->
+      @@include('../include/cont_urbanPlan05_modals.html')
+      <!--// content 팝업들 -->
+
+      <!-- 입안 프로세스 팝업들 -->
+      <!-- 지방의회 의견 청취 여부 처리 -->
+      <div id="js__personListen" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>지방의회 의견 청취 여부 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">지방의회 의견 청취 방법 및 계획을 등록해 주세요.</div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>지방의회 의견 청취 여부 처리</caption>
+                <colgroup>
+                  <col class="width40">
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row" colspan="2">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState1" onclick="toggleElm('listen','','none');lay_pop_width('#js__personListen',700)"><label for="opinionState1"><span></span> 지방의회 의견 청취 미진행</label>
+                      <input type="radio" class="cs-radio" name="opinionstate" id="opinionState2" onclick="toggleElm('listen','1','table-row');lay_pop_width('#js__personListen',1200)"><label for="opinionState2"><span></span> 지방의회 의견 청취 진행 </label>
+                    </td>
+                  </tr>
+                  <!-- 주민의견 청취 진행 -->
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th rowspan="4" class="tac" scope="row">청취<br><br> 계획</th>
+                    <th scope="row">청취 방법 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="howlisten" id="howlisten1"><label for="howlisten1"><span></span> 오프라인(방문)</label>
+                    </td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">지방의회명 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3"><input type="text" class="cs-input" placeholder="지방의회명 입력" title="지방의회명"></td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">의견 제시 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-group="listen" data-idx="1" style="display:none">
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="계획내용 및 사유, 위치도면 등이 포함된 도시관리계획안 파일을 선택해 주세요.(pdf만 등록 가능) ">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- //주민의견 청취 진행 -->
+                  <tr>
+                    <th scope="row" colspan="2">담당자 의견</th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="지방의회 의견 청취 미진행, 진행 사유를 입력해 주세요." title="담당자 의견"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" colspan="2">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState1"><label for="approvalState1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="approvalstate" id="approvalState2"><label for="approvalState2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__personListen');lay_pop_open('#js__personListenComplete')">변경</button>
+        </div>
+      </div>
+
+      <!--// 지방의회 의견 청취 여부 처리 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__personListenComplete',
+        'title': '지방의회 의견 청취 여부 처리',
+        'cont': '<span class="pcolor-red">지방의회 의견 청취 미진행</span> 상태로 변경되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 지방의회 의견 청취 계획 수정 -->
+      <div id="js__listenPlanModify" class="laymodal width1200">
+        <div class="laymodal-header">
+          <h2>지방의회 의견 청취 계획 수정</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">
+              지방의회 의견 청취 계획을 수정할 수 있습니다.<br>
+              재기안은 <span class="underline">입안 관리 &gt; 전자결재 내역 관리</span> 메뉴에서 가능합니다.  
+            </div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <!-- 0105 :: 테이블수정 청취 계획 및 담당자 의견 삭제 -->
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>지방의회 의견 청취 계획 수정</caption>
+                <colgroup>
+                  <col class="width145">
+                  <col>
+                  <col class="width145">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr >
+                    <th scope="row">청취 방법 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <input type="radio" class="cs-radio" name="howlisten" id="modifyhowlisten1"><label for="modifyhowlisten1"><span></span> 오프라인(방문)</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">지방의회명 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3"><input type="text" class="cs-input width100p" placeholder="지방의회명 입력" title="지방의회명"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">의견 제시 기간 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-datepicker-set inlineblock">
+                        <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">도시관리계획안 <i class="icon-required">필수 입력</i></th>
+                    <td colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file2" placeholder=" 등록된 계획안 파일명이 보입니다.pdf">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__listenPlanModify');lay_pop_open('#js__listenPlanModifyComplete')">수정</button>
+        </div>
+      </div>
+
+      <!-- 지방의회 의견 청취 계획 수정 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__listenPlanModifyComplete',
+        'title': '지방의회 의견 청취 계획 수정',
+        'cont': '지방의회 의견 청취 계획이 수정되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 의견 청취  완료 처리  -->
+      <div id="js__personListenResult" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>지방의회 의견 청취 완료 처리</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">지방의회 의견 청취가 완료된 경우 결과서를 등록해 주세요.</div>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>지방의회 의견 청취 완료 처리</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="opinionstateresult" id="opinionstateresult"><label for="opinionstateresult"><span></span> 지방의회 의견 청취 완료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">청취 결과 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="청취 결과 내용을 입력해 주세요." title="청취 결과"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">청취 결과서</th>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file3" placeholder="결과서를 선택해 주세요(.pdf만 가능)">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <label for="file3" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                        </div>
+                      </div>                      
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">승인 결재 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" class="cs-radio" name="resultapprovalstate" id="resultapprovalState1"><label for="resultapprovalState1"><span></span> 담당자 확인(비결재)</label>
+                      <input type="radio" class="cs-radio" name="resultapprovalstate" id="resultapprovalState2"><label for="resultapprovalState2"><span></span> 온-나라 전자결재</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            <div class="cs-alert">청취 결과서 파일을 선택해 주세요.</div>
+            <div class="cs-alert">결재 구분을 선택해 주세요.</div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__personListenResult');lay_pop_open('#js__personListenResultComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 의견 청취  완료 처리 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__personListenResultComplete',
+        'title': '지방의회 의견 청취 완료 처리',
+        'cont': '<span class="pcolor-red">지방의회 의견 청취 완료</span> 상태로 변경 되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      <!-- 청취 결과서 수정 -->
+      <div id="js__personListenModify" class="laymodal width700">
+        <div class="laymodal-header">
+          <h2>지방의회 의견 청취 결과서 수정</h2>
+          <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+        </div>
+        <div class="laymodal-content">
+          <section>
+            <div class="modal-sec-title">등록하신 청취 결과서를 수정할 수 있습니다.</div>
+            <!-- 0106 :: 필수 입력 추가 -->
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _noround _tal">
+              <table>
+                <caption>지방의회 의견 청취 결과서 수정</caption>
+                <colgroup>
+                  <col class="width140">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <!-- 0106 :: 청취 결과 추가 -->
+                  <tr>
+                    <th scope="row">청취 결과 <i class="icon-required">필수 입력</i></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="청취 결과 내용을 입력해 주세요." title="청취 결과"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">청취 결과서</th>
+                    <td>
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="modifyfile1" placeholder="결과서 파일명 출력.pdf">
+                        <span class="js__filename"></span>
+                        <div class="cs-file-btns">
+                          <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                          <label for="modifyfile1" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                        </div>
+                      </div>                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+          <button type="button" class="cs-btn" onclick="lay_pop_close('#js__personListenModify');lay_pop_open('#js__personListenModifyComplete')">변경</button>
+        </div>
+      </div>
+
+      <!-- 청취 결과서 수정 확인 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__personListenModifyComplete',
+        'title': '지방의회 의견 청취 결과서 수정',
+        'cont': '청취 결과서가 수정되었습니다.',
+        'btns': '<button type="button" jq-action="closeModal" class="cs-btn">확인</button>'
+      })
+
+      
+
+      <!--// 입안 프로세스 팝업들 -->
+
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

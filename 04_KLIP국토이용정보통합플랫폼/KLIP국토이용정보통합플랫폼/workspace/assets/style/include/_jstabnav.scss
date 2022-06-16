@@ -1,0 +1,5 @@
+*[class*=js__tabNav_]
+{
+  display: none;
+  &.active{display: block;}
+}

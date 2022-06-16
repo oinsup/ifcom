@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '입안 제안서 검토', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li><a href="#">입안 제안 관리</a></li>
+          <li>입안 제안서 검토</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>입안 제안서 검토</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        @@include('../include/cont_proposal02.html')
+        
+        <section>
+          <h3 class="cont-hedding1">제안서 처리 프로세스</h3>
+          <!-- 1222 :: 현재깜박이던거 제거 -->
+          <ul class="board-state">
+            <li class="active"><a href="proposal02.html">담당자 지정 대기</a></li>
+            <li class="active"><a href="proposal03.html">담당자 검토</a></li>
+            <li class="active"><a href="proposal05.html">도시계획위원회 자문</a></li>
+            <li class="active locked"><a href="proposal06.html">입안 반영/반려</a></li>
+            <!-- 입안 반영일때 -->
+            <li class="active locked"><a href="proposal06.html">입안 반영</a></li> 
+            <!-- 입안 반려일때 -->
+            <li class="active locked"><a href="proposal06.html">입안 반려</a></li>
+          </ul>
+        </section>
+
+        <section class="proposal-process-cont">
+          <section>
+            <h2 class="cont-hedding2">업무 처리 이력</h2>
+            <div class="board-view-tb">
+              <table>
+                <caption>업무 처리 이력</caption>
+                <colgroup>
+                  <col class="width200">
+                  <col class="width110">
+                  <col class="width90">
+                  <col>
+                  <col class="width95">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">상태</th>
+                    <th scope="col">상태 변경일</th>
+                    <th scope="col">처리자명</th>
+                    <th scope="col">결정 사항</th>
+                    <th scope="col">결정 문서</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>입안 결정 대기</td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal"><span class="tcolor-gray2">위원회 자문 및 내부 협의 결과 입안반영하기로 결정함.</span></td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>입안 결정 대기 <span class="cs-text-box">현재</span></td>
+                    <td>2020-10-16</td>
+                    <td>홍길동</td>
+                    <td class="tal">
+                      안녕하세요. 도시계획담당 박경민입니다. 
+                      제안 주신 제안서는 OOO 사유로 최종 반려 결정되었습니다.<br>
+                      다시 한번 우리 시의 관리업무에 관심을 가져주셔서 감사드립니다.<br>
+                    </td>
+                    <td><a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default width100p">바로 보기</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="proposal01.html" class="cs-btn-line">목록</a>
+          <a href="#js__charge5" jq-action="modal" class="cs-btn">입안 결정 처리</a>
+          <a href="#js__modify" jq-action="modal" class="cs-btn">공문 수정</a>
+        </section>
+
+        <div id="js__charge5" class="laymodal width1000" tabindex="0">
+          <div class="laymodal-header">
+            <h2>입안 결정 처리</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              입안 제안에 대한 입안 여부를 결정해 주세요. 
+            </section>
+
+            <section>
+              <div class="modal-sec-title">제안 정보</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>제안 정보</caption>
+                  <colgroup>
+                    <col class="width100">
+                    <col class="width100">
+                    <col class="width140">
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">제안 대상</th>
+                      <th scope="col">제안자명</th>
+                      <th scope="col">사전협의 제안일 </th>
+                      <th scope="col">온라인 제안일</th>
+                      <th scope="col">제안 제목</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>주민<br>(사업자)</td>
+                      <td>박경민</td>
+                      <td>
+                        2020-09-15<br>
+                        <span class="pcolor-red">(D+45)</span>
+                      </td>
+                      <td>
+                        2020-10-15<br>
+                        <span class="pcolor-red">(D+45)</span>
+                      </td>
+                      <td class="tal">하남시 OO용도지구 제안</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            
+            <section>
+              <div class="modal-sec-title">상태 변경 처리</div>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>상태 변경 처리</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td class="frm-opt-list">
+                        <input type="radio" id="frmipt1" name="frmipt1" class="cs-radio"><label for="frmipt1"><span></span> 입안 반영 결정</label>
+                        <input type="radio" id="frmipt2" name="frmipt1" class="cs-radio"><label for="frmipt2"><span></span> 입안 반려</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">검토의견 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <div class="cs-counter-wrap">
+                          <textarea rows="4" class="cs-input js__textCounter width100p" data-maxbyte="300" placeholder="입안 결정, 입안 반려 사유를 입력해 주세요." title="검토의견"></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">결정 문서</th>
+                      <td>
+                        <div class="cs-file-wrap">
+                          <input type="file" class="cs-file" id="guidefile4" placeholder=" 제안자에게 공문으로 결과 통보를 하시는 경우 등록해 주세요.(.pdf만 가능)">
+                          <span class="js__filename"></span>
+                          <div class="cs-file-btns">
+                            <label for="guidefile4" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <ul class="board-list-infomation cs-list-dot _gray">
+                <li>입력하신 검토의견은 제안자에게 문자메시지로 전송되며,  <b class="underline">토지e음</b> 대민사이트에도 노출됩니다.</li>
+                <li>결정 문서를 등록하신 경우  <b class="underline">토지e음</b> 대민사이트에 노출됩니다.</li>
+              </ul>
+            </section>
+        
+            <div class="cs-alert">상태값을 선택해 주세요.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" jq-action="closeModal" onclick="lay_pop_close('#js__charge5');lay_pop_open('#js__charge5Complete')">변경</button>
+          </div>
+        </div>
+
+        <div id="js__charge5Complete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>입안 결정 처리</h2>
+          </div>
+          <div class="laymodal-content tac">
+            <b class="pcolor-red">입안 반영 결정</b> 처리되었습니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="./" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+
+
+        <!-- 공문수정 -->
+        <div id="js__modify" class="laymodal width700" tabindex="0">
+          <div class="laymodal-header">
+            <h2>공문 수정</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              입안 제안서 검토 결과를 공문으로 하시는 경우 등록해 주세요.<br>
+              등록하신 공문은  <b class="underline">토지e음</b> 대민사이트에도 노출됩니다.
+            </section>
+
+            <section>
+              <div class="modal-sec-title">제안 정보</div>
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>제안 정보</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <th scope="col">제안자명</th>
+                    <th scope="col">제안 제목</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>박경민</td>
+                      <td>하남시 OO용도지구 제안</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">입안 제안서 검토 결과 공문</div>
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>입안 제안서 검토 결과 공문</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <!-- 등록일때 -->
+                    <tr>
+                      <th scope="row">결정 문서</th>
+                      <td>
+                        <div class="cs-file-wrap">
+                          <input type="file" class="cs-file" id="file1" placeholder="결과 통보 공문을 선택해 주세요(.pdf만 가능)">
+                          <span class="js__filename"></span>
+                          <div class="cs-file-btns">
+                            <label for="file1" class="cs-btn2-gray cs-btn-default">
+                              파일 선택
+                            </label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- 수정일때 -->
+                    <tr>
+                      <th scope="row">결정 문서</th>
+                      <td>
+                        <div class="cs-file-wrap _type2">
+                          <input type="file" class="cs-file" id="file3" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+                          <span class="js__filename"></span>
+                          <div class="cs-file-btns">
+                            <span class="cs-btn2-gray-line cs-btn-default">파일 삭제</span>
+                            <label for="file3" class="cs-btn2-gray cs-btn-default">
+                              파일 변경
+                            </label>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+        
+            <div class="cs-alert">파일이 선택되지 않았습니다.</div>
+            
+            <!--// laymodal-content -->
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__modify');lay_pop_open('#js__modifyComplete')">수정</button>
+            <button type="button" class="cs-btn">등록</button>
+          </div>
+        </div>
+
+        <div id="js__modifyComplete" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>공문 수정</h2>
+          </div>
+          <div class="laymodal-content tac">
+            공문이 수정 되었습니다.
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="#" class="cs-btn">확인</a>
+          </div>
+        </div>
+        
+        
+
+        <!-- 파일보기 -->
+        @@include('../include/modals.html',{'items': 1})
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

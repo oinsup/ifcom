@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content" class="auto pb40">
+                <div class="inner">
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="교육">교육</a>
+                            </li>
+                            <li>
+                                <a href="#" title="교육센터">교육센터</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">EDUCATION</span> CENTER</h1>
+                        <p class="descPage" data-aos="fade" data-aos-duration="2200" data-aos-delay="200">EGIS의 교육 프로그램을 통해서<br class="mobile" />디지털트윈의 모든 기술을 자유롭게 학습하세요!</p>
+                    </div>
+                    <!--//titArea-->
+                    <!--education-->
+                    <div class="education" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                        <div class="img"><img src="../images/img/img-edu-01.png" alt="교육센터사진"></div>
+                        <div class="img"><img src="../images/img/img-edu-02.png" alt="교육센터사진"></div>
+                        <div class="img"><img src="../images/img/img-edu-03.png" alt="교육센터사진"></div>
+                        <div class="img"><img src="../images/img/img-edu-04.png" alt="교육센터사진"></div>
+                    </div>
+                    <!--//education-->
+                </div>
+            </div>
+            <!--//content-->
+            <div class="banner">
+                <!--conBox-->
+                <div class="conBox inner">
+                    <h3>당신이 찾는 <span class="colorType neon">디지털 세계</span>를<br> 지금 만나보세요!</h3>
+                    <button type="button" class="btnLink" onclick="window.open('https://www.dtwincloud.com/member/login.do')"><span>EGIS Market Place</span></button>
+                    <!--click-->
+                    <div class="click">
+                        <a href="#">SUPPORT <button class="arrow"><span class="hidden">바로가기</span></button></a>
+                        <a href="지원.html" target="_blank">Contact<br>Us <button class="arrow"><span class="hidden">바로가기</span></button></a>
+                    </div>
+                    <!--//click-->
+                </div>
+                <!--//conBox-->
+            </div>
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

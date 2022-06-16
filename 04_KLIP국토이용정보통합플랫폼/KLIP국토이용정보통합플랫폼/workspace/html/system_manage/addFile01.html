@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '정책 정보', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li>자료실 게시물 관리</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>자료실 게시물 관리</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cont-snb">
+        <a href="addFile01.html" class="active">정책 정보</a>
+        <a href="addFile11.html">도시계획현황 통계 책자</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li><span class="underline">자료실 &gt; 정책 정보</span> 메뉴에 노출되는 자료를 등록하고 관리할 수 있습니다.</li>
+          </ul>
+          <a href="addFile02.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">전체</a></li>
+              <li><a href="#">국토종합계획</a></li>
+              <li><a href="#">국토종합계획 실천계획</a></li>
+              <li><a href="#">국토의 계획 및 이용에 관한 연차보고서 </a></li>
+              <li><a href="#">도시업무편람 외</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">자료 제목</a>
+            <a href="#">조회수</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>정책 정보 리스트</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width150">
+                <col>
+                <col class="width130">
+                <col class="width90">
+                <col class="width80">
+                <col class="width80">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">자료 구분</th>
+                  <th scope="col">자료 제목</th>
+                  <th scope="col">적용 기간 or 지역</th>
+                  <th scope="col">노출 여부</th>
+                  <th scope="col">조회수</th>
+                  <th scope="col">등록자</th>
+                  <th scope="col">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 10; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>국토종합계획</td>
+                  <td class="tal"><a href="addFile03.html">제5차 국토종합계획</a></td>
+                  <td>2020~2040년</td>
+                  <td>노출</td>
+                  <td>150</td>
+                  <td>홍길동</td>
+                  <td>2020-11-${30 - i}</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="8">
+                    등록된 정책 정보가 없습니다.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>자료 제목을 클릭하시면 등록된 게시물의 정보 수정 페이지로 이동합니다.</li>
+        </ul>
+
+        <div class="board-paging">
+          <a href="#" class="paging-first">처음</a>
+          <a href="#" class="paging-prev">이전</a>
+          <a href="#">1</a>
+          <strong>2</strong>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#" class="paging-next">다음</a>
+          <a href="#" class="paging-last">마지막</a>
+        </div>
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+$image : '../images';
+
+//media
+$mediaMobile : 800px;
+$mediaTablet : 1200px;
+
+//color
+$color1 : #2a2a2a;
+
+//tcolor-gray
+$color2: #616161;
+
+//point Color
+$pcolor-blue : #003764;
+$pcolor-red : #bd3500;
+
+
+$flexible: false;
+
+$bgcolor-blue: #deebf7;
+
+
+@mixin listRest ($ul:'ul') {
+  #{$ul},li
+  {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+}
+
+@mixin clearBoth($selector) {
+  #{$selector}::after{content: '';display: block;clear: both;}
+}
+
+@mixin cutTextRot($rows, $height){
+  display:-webkit-box;
+  -webkit-box-orient: vertical;height:$height;
+  -webkit-line-clamp: $rows;text-overflow:ellipsis;overflow: hidden;
+}
+
+//화살표
+@mixin bracket($size,$borderWidth,$color){
+  content: '';
+  width: $size;height: $size;position: absolute;
+  border:$borderWidth solid $color;border-top: 0;border-left: 0;left: 50%;margin-left: -($size / 2 );top:calc(50% - #{$size});
+}

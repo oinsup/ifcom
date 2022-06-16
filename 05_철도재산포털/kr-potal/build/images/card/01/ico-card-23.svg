@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_104" data-name="사각형 104" width="55" height="49" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_295" data-name="그룹 295" transform="translate(-1150 -935)">
+    <circle id="타원_8" data-name="타원 8" cx="47.5" cy="47.5" r="47.5" transform="translate(1150 935)" fill="#f2f2f2"/>
+    <g id="그룹_116" data-name="그룹 116" transform="translate(1170 958)">
+      <path id="패스_210" data-name="패스 210" d="M43,2H38V1H17V2H12L1,25v4H54V25Z" fill="#fff"/>
+      <g id="그룹_111" data-name="그룹 111">
+        <g id="그룹_110" data-name="그룹 110" clip-path="url(#clip-path)">
+          <path id="패스_211" data-name="패스 211" d="M1,26V24L12,2h2" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <path id="패스_212" data-name="패스 212" d="M54,26V24L43,2H41" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <path id="패스_213" data-name="패스 213" d="M38,26l-3,3H20l-3-3H1V48H54V26Z" fill="#a3d4ff"/>
+      <g id="그룹_113" data-name="그룹 113">
+        <g id="그룹_112" data-name="그룹 112" clip-path="url(#clip-path)">
+          <path id="패스_214" data-name="패스 214" d="M38,26l-3,3H20l-3-3H1V48H54V26Z" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+      <path id="패스_215" data-name="패스 215" d="M8,24V19H47v5" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_216" data-name="패스 216" d="M11,17V13H44v4" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+      <path id="패스_217" data-name="패스 217" d="M14,11V7H41v4" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+      <g id="그룹_115" data-name="그룹 115">
+        <g id="그룹_114" data-name="그룹 114" clip-path="url(#clip-path)">
+          <path id="패스_218" data-name="패스 218" d="M17,5V1H38V5" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <path id="패스_219" data-name="패스 219" d="M31,41H24a2,2,0,0,1-2-2V35H33v4a2,2,0,0,1-2,2" fill="#fff"/>
+          <path id="패스_220" data-name="패스 220" d="M31,41H24a2,2,0,0,1-2-2V35H33v4A2,2,0,0,1,31,41Z" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

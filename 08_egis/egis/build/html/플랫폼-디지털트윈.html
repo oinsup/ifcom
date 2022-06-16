@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" type="text/css">
+    <link rel="stylesheet" href="../lib/jquery-ui.css">
+    <link rel="stylesheet" href="../css/common.css" type="text/css">
+    <link rel="stylesheet" href="../lib/aos/aos.css">
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+    <script type="text/javascript" src="../lib/aos/aos.js"></script>
+    <script src="../js/ui.js"></script>
+
+    <title>EGIS</title>
+</head>
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            <!--logo-->
+<h1 class="logo">
+    <a href="../html/main.html" title="EGIS"></a>
+</h1>
+<!--//logo-->
+<!--gnb-->
+<div id="gnb">
+    <ul class="dep1">
+        <li>
+            <a href="#" title="플랫폼">플랫폼</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a>
+                </li>
+                <li>
+                    <a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="솔루션">솔루션</a>
+            <ul class="dep2 type02">
+                <li>
+                    <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                </li>
+                <li>
+                    <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="제품군">제품군</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                </li>
+                <li>
+                    <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                </li>
+                <li>
+                    <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="교육">교육</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                </li>
+                <li>
+                    <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="../html/지원.html" title="지원">지원</a>
+        </li>
+        <li>
+            <a href="#" title="커뮤니티">커뮤니티</a>
+            <ul class="dep2">
+                <li>
+                    <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-News.html" title="News">News</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                </li>
+                <li>
+                    <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="회사소개">회사소개</a>
+            <ul class="dep2 type03">
+                <li>
+                    <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                </li>
+                <li>
+                    <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                </li>
+            </ul>
+        </li>
+        <li class="arrow">
+            <a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a>
+        </li>
+    </ul>
+    <div class="mobile">
+        <ul class="dep1">
+            <li>
+                <a href="#" title="플랫폼">플랫폼</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a>
+                    </li>
+                    <li>
+                        <a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="솔루션">솔루션</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                    </li>
+                    <li>
+                        <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="제품군">제품군</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                    </li>
+                    <li>
+                        <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                    </li>
+                    <li>
+                        <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="교육">교육</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                    </li>
+                    <li>
+                        <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="noDepth">
+                <a href="../html/지원.html" title="지원">지원</a>
+            </li>
+            <li>
+                <a href="#" title="커뮤니티">커뮤니티</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-News.html" title="News">News</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                    </li>
+                    <li>
+                        <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="회사소개">회사소개</a>
+                <ul class="dep2">
+                    <li>
+                        <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                    </li>
+                    <li>
+                        <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="noDepth arrow">
+                <a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--//gnb-->
+<!--lang-->
+<div class="lang">
+    <ul>
+        <li>
+            <a href="#" class="active" title="KR">KR</a>
+        </li>
+        <li>
+            <a href="#" title="EN">EN</a>
+        </li>
+        <li>
+            <a href="#" title="Admin">Admin</a>
+        </li>
+    </ul>
+</div>
+<!--//lang-->
+<button type="button" class="btnSitemap">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="hidden">사이트맵</span>
+</button>
+<!--sitemap-->
+<div class="sitemap web">
+    <!--inner-->
+    <div class="inner">
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/플랫폼-디지털트윈.html" title="PLATFORM">PLATFORM</a></div>
+                    <ul>
+                        <li><a href="../html/플랫폼-디지털트윈.html" title="디지털트윈플랫폼">디지털트윈플랫폼</a></li>
+                        <li><a href="../html/플랫폼-메타버스.html" title="메타버스플랫폼">메타버스플랫폼</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/지원.html" title="CONTACT US">CONTACT US</a></div>
+                    <ul>
+                        <li><a href="../html/지원.html" title="지원">지원</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/솔루션-재난안전.html" title="SOLUTION">SOLUTION</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/솔루션-재난안전.html" title="재난안전">재난안전</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-시설관리.html" title="시설관리">시설관리</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-통합관제.html" title="통합관제">통합관제</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-빅데이터인공지능.html" title="빅데이터 인공지능">빅데이터 인공지능</a>
+                        </li>
+                        <li>
+                            <a href="../html/솔루션-디지털트윈활용.html" title="디지털트윈 활용">디지털트윈 활용</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/커뮤니티-공지사항.html" title="COMMUNITY">COMMUNITY</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/커뮤니티-공지사항.html" title="공지사항">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-News.html" title="News">News</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-동영상.html" title="동영상">동영상</a>
+                        </li>
+                        <li>
+                            <a href="../html/커뮤니티-jobboard.html" title="Job board">Job board</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/제품군-xdpro.html" title="PRODUCT LINE">PRODUCT LINE</a></div>
+                    <ul class="dep2">
+                        <li>
+                            <a href="../html/제품군-xdpro.html" title="XD WORLD Server">XD PRO</a>
+                        </li>
+                        <li>
+                            <a href="../html/제품군-xdbuild.html" title="XD BUILD">XD BUILD</a>
+                        </li>
+                        <li>
+                            <a href="../html/제품군-xdcloud.html" title="XD CLOUD">XD CLOUD</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/회사소개-회사소개및비전.html" title="COMPANY">COMPANY</a></div>
+                    <ul>
+                        <li>
+                            <a href="../html/회사소개-회사소개및비전.html" title="회사소개 및 비전">About EGIS</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-연혁.html" title="연혁">연혁</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-역량.html" title="역량">역량</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-조직도.html" title="조직도">조직도</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-CI.html" title="CI">CI</a>
+                        </li>
+                        <li>
+                            <a href="../html/회사소개-찾아오시는길.html" title="찾아오시는길">찾아오시는길</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+        <!--column-->
+        <div class="column">
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="../html/교육-개발자지원사이트.html" title="EDUCATION">EDUCATION</a></div>
+                    <ul class="dep2">
+                        <li>
+                            <a href="../html/교육-개발자지원사이트.html" title="개발자 지원 사이트">개발자 지원 사이트</a>
+                        </li>
+                        <li>
+                            <a href="../html/교육-교육센터.html" title="교육센터">교육센터</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+            <!--menuArea-->
+            <div class="menuArea">
+                <!--menu-->
+                <div class="menu">
+                    <div class="title"><a href="#" title="MARKET PLACE">MARKET PLACE</a></div>
+                    <ul>
+                        <li><a href="https://dtwincloud.com/member/login.do" title="마켓플레이스">마켓플레이스</a></li>
+                    </ul>
+                </div>
+                <!--//menu-->
+            </div>
+            <!--//menuArea-->
+        </div>
+        <!--//column-->
+    </div>
+    <!--//inner-->
+
+</div>
+<!--//sitemap-->
+<span class="bg"></span>
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content" style="padding: 0;width: auto; height: 100%;">
+                <!--section-->
+                <section class="section sec01 sky full minHeight">
+
+                    <!--breadCrumb-->
+                    <div class="breadCrumb">
+                        <ul>
+                            <li>
+                                <a href="#" title="홈">홈</a>
+                            </li>
+                            <li>
+                                <a href="#" title="플랫폼">플랫폼</a>
+                            </li>
+                            <li>
+                                <a href="#" title="디지털트윈플랫폼">디지털트윈플랫폼</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--//breadCrumb-->
+                    <!--titArea-->
+                    <div class="titArea">
+                        <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">DIGITAL TWIN</span><br />PLATFORM</h1>
+                        <h2 class="subTitle type02" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">현실 세계와 똑같은 공간을 <br class="mobile" /> 가상 세계에<br class="web"/> 구현하여<br class="mobile"/>시뮬레이션 하고 분석하는 플랫폼</h2>
+                        <p class="descPage colorType gray" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">국토정보, 도로교통, 사회복지, 문화체육 등 공간정보를<br class="mobile" /> 데이터로 변환하여
+                            사회문제 해결이 직접적인 도움</p>
+                        <img class="introImg dTwin" src="../images/img/img-dtwin.png" alt="디지털트윈 이미지">
+                    </div>
+                    <!--//titArea-->
+
+                </section>
+                <!--//section-->
+                <!--section-->
+                <section class="section sec02">
+
+                    <!--dgTwin-->
+                    <div class="dgTwin">
+                        <!--txtArea-->
+                        <div class="txtArea">
+                            <div class="tit" data-aos="fade" data-aos-duration="1000">
+                                <p class="colorType blue">공간정보 서비스 마켓 플레이스</p>
+                                <strong>XDWORLD</strong>
+                            </div>
+                            <div class="subDesc" data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                                EGIS의 디지털 트윈 플랫폼은 최신 ICT기술을 접목하여 산업전반의 전문업체들과의 상생협력을 목표로 디지털트윈 제품군, 솔루션,
+                                플랫폼 및 마켓플레이스를 운영하여 사용자의 목적에 맞는 디지털트윈 공간정보를 생성하고 융 · 복합 할 수 있는 서비스를 제공합니다.
+                            </div>
+                        </div>
+                        <!--//txtArea-->
+                        <!--visual-->
+                        <div class="visual" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="../images/img/img-xdworld.png" alt="xdworld 이미지">
+                            <img class="mobile" src="../images/img/img-xdworld-mo2.png" alt="xdworld 이미지">
+                            <!--item-->
+                            <div class="item item01">
+                                <div class="circle" data-aos="fade-in"></div>
+                                <div class="txt">
+                                    <span data-aos="fade-in" data-aos-delay="300">플랫폼</span>
+                                    <p data-aos="fade-in" data-aos-delay="400">가상공간과 현실공간을 연결하는<br />
+                                        인터페이스, 디지털트윈 플랫폼<br />
+                                        및 메타버스 플랫폼
+                                    </p>
+                                </div>
+                            </div>
+                            <!--//item-->
+                            <!--item-->
+                            <div class="item item02">
+                                <div class="circle" data-aos="fade-in" data-aos-delay="500"></div>
+                                <div class="txt">
+                                    <span data-aos="fade-in" data-aos-delay="600">솔루션</span>
+                                    <p data-aos="fade-in" data-aos-delay="700">재난안전, 시설관리, 통합관제,<br />
+                                        빅데이터/인공지능, 디지털 트윈 활용<br />
+                                        5가지 분야의 체계적인 솔루션
+                                    </p>
+                                </div>
+                            </div>
+                            <!--//item-->
+                            <!--item-->
+                            <div class="item item03">
+                                <div class="circle" data-aos="fade-in"></div>
+                                <div class="txt">
+                                    <span data-aos="fade-in" data-aos-delay="300">제품군</span>
+                                    <p data-aos="fade-in" data-aos-delay="400">지상, 지하, 실·내외 등<br />
+                                        각 산업별 3차원 데이터 구축을 위한<br />
+                                        사용자 중심의 솔루션
+                                    </p>
+                                </div>
+                            </div>
+                            <!--//item-->
+                            <!--item-->
+                            <div class="item item04">
+                                <div class="circle" data-aos="fade-in" data-aos-delay="500"></div>
+                                <div class="txt">
+                                    <span data-aos="fade-in" data-aos-delay="300">마켓플레이스</span>
+                                    <p data-aos="fade-in" data-aos-delay="400">국내 최초 3차원 공간정보 기반<br />
+                                        클라우드 서비스 디지털 트윈 스토어
+                                    </p>
+                                </div>
+                            </div>
+                            <!--//item-->
+                            <img class="middle" src="../images/img/img-xdworld-mo.png" alt="xdworld 이미지">
+                        </div>
+                        <!--//visual-->
+                    </div>
+                    <!--//dgTwin-->
+                </section>
+                <!--//section-->
+                <!--section-->
+                <section class="section sec03 gray full">
+                    <!--conBox-->
+                    <div class="conBox inner">
+                        <div class="title">
+                            <h3 data-aos="fade-up">디지털트윈플랫폼의 적용분야</h3>
+                            <div class="descPage" data-aos="fade-up" data-aos-delay="200">EGIS는 산업 · 국가 · 공공기관 다방면의 솔루션 납품 및 서비스 구축 사업을 통하여 안정적인 사업을 영위합니다.
+                            </div>
+                        </div>
+                        <!--flatList-->
+                        <ul class="flatList" data-aos="fade-up">
+                            <li><span>디지털 트윈</span></li>
+                            <li><span>스마트시티, 도시열섬<br/>미세먼지, 도시재생</span></li>
+                            <li><span>스마트 건설<br/>BIM</span></li>
+                            <li><span>스마트 빌딩<br/>실내측위</span></li>
+                            <li><span>도시 경관<br/>가시권 분석</span></li>
+                            <li><span>IoT/AI 융합</span></li>
+                            <li><span>재난/재해/안전</span></li>
+                            <li><span>3D, 지하공간</span></li>
+                            <li><span>정밀도로지도<br/>(MMS)</span></li>
+                            <li><span>드론 관측<br/>통합관리</span></li>
+                            <li><span>공간정보<br/>품질관리</span></li>
+                            <li><span>토지/부동산<br/>건물/문화재</span></li>
+                        </ul>
+                        <!--//flatList-->
+                    </div>
+                    <!--//conBox-->
+
+                    <!--banner-->
+                    <div class="banner">
+                        <!--conBox-->
+                        <div class="conBox">
+                            <h3>당신이 찾는 <span class="colorType neon">디지털 세계</span>를<br /> 지금 만나보세요!</h3>
+                            <button type="button" class="btnLink" onclick="window.open('https://www.dtwincloud.com/member/login.do')"><span>EGIS Market Place</span></button>
+                            <!--click-->
+                            <div class="click">
+                                <a href="#">SUPPORT <button class="arrow"><span class="hidden">바로가기</span></button></a>
+                                <a href="지원.html" target="_blank">Contact<br />Us <button class="arrow"><span
+                                            class="hidden">바로가기</span></button></a>
+                            </div>
+                            <!--//click-->
+                        </div>
+                        <!--//conBox-->
+                    </div>
+                    <!--//banner-->
+                </section>
+                <!--//section-->
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        <footer id="footer" class="black">
+    <!-- inner -->
+    <div class="inner">
+        <p class="logoArea">
+            <img src="../images/common/footer-logo.png" alt="EGIS">
+        </p>
+        <p class="nameArea">EGIS</p>
+        <!-- infoContainer -->
+        <div class="infoContainer">
+            <!-- infoBox -->
+            <div class="infoBox">
+                <div class="row">
+                    <p>사업자등록번호</p>
+                    <span>503-81-49156</span>
+                </div>
+                <div class="row">
+                    <p>대표이사</p>
+                    <span>김성호</span>
+                </div>
+                <div class="row">
+                    <p>이메일</p>
+                    <a href="mailto:egis@egiskorea.com">egis@egiskorea.com</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+
+            <!-- infoBox -->
+            <div class="infoBox">
+                <span class="infoTit">대구</span>
+                <div class="tel">
+                    <address>대구광역시 수성구 알파시티1로 31길 2, 4층</address>
+                    <a href="tel:053.476.2395">Tell 053.476.2395</a>
+                    <a href="tel:053.474.2396">Fax 053.474.2396</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+            <!-- infoBox -->
+            <div class="infoBox">
+                <span class="infoTit">연구소</span>
+                <div class="tel">
+                    <address>서울특별시 구로구 디지털로26길 111 (구로동, 제이앤케이디지털타워) 1501호</address>
+                    <a href="tel:02.576.2395">Tell 02.576.2395</a>
+                    <a href="tel:02.576.2396">Fax 02.576.2396</a>
+                </div>
+            </div>
+            <!-- //infoBox -->
+
+        </div>
+        <!-- //infoContainer -->
+        <p class="copy">Copyright 2022 EGIS Inc. All Rights Reserved</p>
+    </div>
+    <!-- //inner -->
+</footer>
+        <!--//footer-->
+    </div>
+
+</body>
+
+</html>

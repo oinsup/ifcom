@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head.html',{'webTitle': '', 'webPath': '.'})
+  <!-- main css -->
+  <link rel="stylesheet" href="@@webRoot/common/css/main.css">
+  <script src="@@webRoot/common/js/main.js"></script>
+  
+</head>
+<body>
+  @@include('./include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('./include/header.html',{'webPath': '.'})
+
+    <div class="main-container">
+      <div class="main-visual">
+        <!-- 배경 -->
+        <div class="__bg" style="background-image:url('@@imageRoot/mainvisual.jpg')"></div>
+        
+        <div class="__text">
+          <strong>
+            <img src="@@imageRoot/vi_text.png" alt="시민이 행복한 동북아 해양수도 부산">
+          </strong>
+          <span>도시계획을 통해 주민을 위한 부산을 만들어 나갑니다.</span>
+        </div>
+
+        <div class="main-quickbar">
+          <div class="lay-wrap">
+            <div class="main-quickbar-left">
+              <button type="button" class="__btn-map _locked" id="js__mapSearch" data-type="map">
+                <i class="micon-search">
+                  <span></span>
+                </i>
+                <!-- 0107 :; 텍스트 수정 -->
+                <!-- 0129 :: 텍스트 수정 -->
+                필지 정보
+              </button>
+              <button type="button" class="__btn-link" data-type="work">
+                <i class="micon-work"></i>
+                <!-- 0107 :; 텍스트 수정 -->
+                <!-- 0129 :: 텍스트 수정 -->
+                나의 업무
+              </button>
+            </div>
+            
+            <!-- 퀵메뉴 -->
+            <div class="main-quickbar-menu">
+              <strong>QUICK MENU</strong>
+              <nav>
+                <a href="#">광역도시/도시·군기본계획 관리</a>
+                <a href="#">도시계획위원회 심의 관리</a>
+                <a href="#">도시계획위원회 구성 관리</a>
+                <a href="#">도시계획현황 통계 책자</a>
+              </nav>
+              <a href="#" class="quick-more">퀵메뉴 편집</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="main-map">
+        <div class="map-search">
+          <div class="map-search-frm">
+            <div class="__selector">
+              <input type="radio" class="cs-radio" value="number" name="addresstype" id="addressNumber" checked><label for="addressNumber"><span></span> 지번</label>
+              <input type="radio" class="cs-radio" value="road" name="addresstype" id="addressNumber2"><label for="addressNumber2"><span></span> 도로명</label>
+            </div>
+            <div class="__textbox">
+              <input type="text" class="__text" placeholder="찾는 위치의 주소를 입력하세요. (예. 신장동 38-1)" title="검색어">
+              <button type="button" class="__btn-textdel"><i class="icon-close"></i></button>
+            </div>
+            <button class="__btn-search">검색</button>
+          </div>
+  
+          <div class="map-search-cont">
+            <!-- case1 : 검색어 없이 검색눌렀을때 -->
+            <div class="js__search-notext" style="display:none;">
+              <div class="map-search-alert tac">
+                검색어를 입력하세요
+              </div>
+            </div>
+
+            <!-- case2 : 검색결과 없음 -->
+            <div class="js__search-nodata" style="display:none;">
+              <div class="map-search-alert tac">
+                검색하신 결과가 없습니다.
+              </div>
+            </div>
+
+            <!-- case3 : 검색결과 -->
+            <div class="js__search-result" style="display:none;">
+              <div class="map-search-alert">
+                주소를 클릭하면 해당 위치가 지도에 표시 됩니다.
+              </div>
+              <div class="map-search-result">
+                <!--
+                  0122 :: 수정
+                  context메뉴랑 같이사용
+                  onclick="contexntMenuOpen(500 + 6, 300 + 6, false)"
+                  contexntMenuOpen(left, top, 닫기버튼)
+                  left: x 좌표 px
+                  top: y 좌표 px
+                  닫기번튼: false 경우 가운데 닫기 버튼 출력하지 않음
+                 -->
+                <ul>
+                  @@for(var i = 0; i < 20; i++){
+                  <li><button type="button" onclick="contexntMenuOpen(500 + 16, 300 + 16, false)">경기도 하남시 신장동 524</button></li>
+                  }
+                </ul>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+
+        <div class="map-controller">
+          <button type="button" class="mapicon-zoom">
+            <strong>확대</strong>
+          </button>
+          <button type="button" class="mapicon-out">
+            <strong>축소</strong>
+          </button>
+          <button type="button" class="mapicon-distance">
+            <strong>거리</strong>
+          </button>
+          <button type="button" class="mapicon-area">
+            <strong>면적</strong>
+          </button>
+          <button type="button" class="mapicon-reset">
+            <strong>초기화</strong>
+          </button>
+          <!-- 설정추가 -->
+          <button type="button" class="mapicon-setting js__mapsetting">
+            <strong>설정</strong>
+          </button>
+        </div>
+
+        <!-- 지도설정 -->
+        <div class="map-setting">
+          <div class="map-setting__header">
+            지도설정 <button>x</button>
+          </div>
+          <div class="map-setting__search">
+            <input type="text" class="cs-input"><button class="cs-btn2-gray cs-btn-default">검색</button>
+          </div>
+          <div class="map-setting__lsit">
+            <ul class="map-setting__lsit-list">
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting1"> 
+                <label for="mapsetting1"><span></span></label>
+                <strong>용도지역</strong>
+
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label>
+                    <ul>
+                      <li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li>
+                      <li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li>
+                      <li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li>
+                      <li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label>
+                    <ul>
+                      <li>
+                        <input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" class="cs-checkbox" id="mapsetting11"> 
+                <label for="mapsetting11"><span></span></label>
+                <strong>용도지역</strong>
+                <div class="btn-list-unfold"><span></span></div>
+                <ul>
+                  <li>
+                    <input type="checkbox" class="cs-checkbox" id="mapsetting12"> <label for="mapsetting12"><span></span> 용도지역</label>
+                    <ul>
+                      <li>
+                        <img src="./common/images/UQT601.png" alt=""> asdfljlaksdjf
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <input type="checkbox" class="cs-checkbox" id="mapsetting13"> <label for="mapsetting13"><span></span> 용도지역</label>
+                    <ul>
+                      <li>
+                        <input type="checkbox" class="cs-checkbox" id="mapsetting14"> <label for="mapsetting14"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label>
+                        
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+              <li><input type="checkbox" class="cs-checkbox" id="mapsetting1"><label for="mapsetting1"><span></span></label><strong>용도지역</strong><div class="btn-list-unfold"><span></span></div><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting2"> <label for="mapsetting2"><span></span> 용도지역</label><ul><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><img src="./common/images/UQT601.png" alt=""> 가나다라마바사</li><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li><li><input type="checkbox" class="cs-checkbox" id="mapsetting3"> <label for="mapsetting3"><span></span> 용도지역</label><ul><li><input type="checkbox" class="cs-checkbox" id="mapsetting4"> <label for="mapsetting4"><span></span> <img src="./common/images/UQT601.png" alt=""> 용도지역</label></li></ul></li></ul></li>
+
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="map-maker" style="left:500px;top:300px;display:none;">
+          <img src="@@imageRoot/map_maker.png" alt="">
+          <div class="map-quick-link">
+            <!-- 0122 :: 삭제
+              <ul>
+              <li><a href="#">필지  정보(이력) 조회</a></li>
+              <li><a href="#">지구단위계획 정보 조회</a></li>
+              <li><a href="#">재해취약성분석</a></li>
+            </ul> -->
+            <!--  0121 :: 삭제
+            <div class="__infomation">
+              기능 선택 시 해당 기능<br>
+              상세 페이지로 이동합니다
+            </div>
+            -->
+          </div>
+        </div>
+
+        <!-- contextmneu 추가 -->
+        <!-- <div id="map-contextmenu">
+          <a href="#">메뉴1</a>
+          <a href="#">메뉴2</a>
+          <a href="#">메뉴3</a>
+          <a href="#">메뉴4</a>
+        </div> -->
+
+        <!-- contextmneu2 추가 -->
+        <div id="map-contextmenu2">
+          <button class="contextmenu-close">닫기</button>
+          <nav>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext1','',this)" class="unacitve"><i class="contexticon1">아이콘</i><span><span>토지정보</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext0','',this)"><i class="contexticon2">아이콘</i><span><span>토지이용계획확인서<em>1</em></span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext2','',this)"><i class="contexticon3">아이콘</i><span><span>건축물대장</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext3','',this)"><i class="contexticon4">아이콘</i><span><span>시설정보</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext4','',this)"><i class="contexticon5">아이콘</i><span><span>용도지역</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext5','',this)"><i class="contexticon5">아이콘</i><span><span>용도지구</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon5">아이콘</i><span><span>용도구역</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon6">아이콘</i><span><span>지구단위계획</span></span></a>
+            <a href="javascript:;" onclick="lay_pop_open_darge('#js__moveModalContext6','',this)"><i class="contexticon7">아이콘</i><span><span>재해취약성</span></span></a>
+          </nav>
+        </div>
+        
+        <!-- 지도 -->
+        <div class="main-map-cont" style="background-image:url('@@imageRoot/sample/map.jpg');background-position:center;background-repeat:no-repeat;transition:all .3s;z-index:900;position: relative;"></div>
+      </div>
+
+      <!-- 나의 업무 현황 내용 -->
+      <div class="workstatus">
+        <div class="lay-wrap">
+          <h2><span>홍길동<span>님</span></span> 입안 업무 진행 현황</h2>
+
+          <div class="wrokstatus-row">
+            <section class="workstatus-sec">
+              <h3>도시·군관리계획 입안</h3>
+              <div class="workstatus-status" data-max-total="10">
+                <!-- item -->
+                <div class="workstatus-status__item _color1">
+                  <div class="__cont">
+                    <strong>주민 의견 청취</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="3"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+                <!-- //item -->
+
+                <div class="workstatus-status__item _color2">
+                  <div class="__cont">
+                    <strong>관련 부서 협의</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="5"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+
+                <div class="workstatus-status__item _color4">
+                  <div class="__cont">
+                    <strong>지방의회 의견 청취</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="10"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+
+                <div class="workstatus-status__item _color5">
+                  <div class="__cont">
+                    <strong>시·군·구 도시계획위원회 심의</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="2"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+
+                <div class="workstatus-status__item _color6">
+                  <div class="__cont">
+                    <strong>도 승인/부서 협의</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="7"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+
+                <div class="workstatus-status__item _color5">
+                  <div class="__cont">
+                    <strong>고시 전송</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="0"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+              </div>
+
+              <div class="__btns">
+                <a href="@@htmlRoot/plan_manage/UrbanPlan01.html" class="btn-work">입안 진행</a>
+
+                <!-- 팝업 -->
+                <!-- <a href="#js__alert1" jq-action="modal" class="btn-work">입안 진행:alert</a> -->
+              </div>
+            </section>
+            <section class="workstatus-sec">
+              <h3>실시계획인가</h3>
+              <div class="workstatus-status" data-max-total="10">
+                <!-- item -->
+                <div class="workstatus-status__item _color1">
+                  <div class="__cont">
+                    <strong>주민 의견 청취</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="3"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+                <!-- //item -->
+
+                <div class="workstatus-status__item _color2">
+                  <div class="__cont">
+                    <strong>관련 부서 협의</strong>
+                    <div class="__bar">
+                      <span></span>
+                      <b class="__counter" data-total="2"></b>
+                    </div>
+                  </div>
+                  <div class="__dots"><div></div></div>
+                </div>
+
+              </div>
+
+              <div class="__btns">
+                <a href="#" class="btn-work">인가 처리</a>
+                <!-- <a href="#js__alert2" jq-action="modal" class="btn-work">인가 처리:alert</a> -->
+              </div>
+            </section>
+          </div>
+          <div class="wrokstatus-row">
+            <div class="workstatus-sec">
+              <h3>입안 제안서 처리</h3>
+
+              <div class="workstatus-table">
+                <table>
+                  <caption>입안 제안서 처리</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">담당자 검토 대기</th>
+                      <th scope="col">입안 결정 대기</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong class="pcolor-blue">1</strong> 건</td>
+                      <td><strong class="pcolor-red">2</strong> 건</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="__btns">
+                <a href="@@htmlRoot/plan_manage/proposal01.html" class="btn-work">결과 처리</a>
+                <!-- <a href="#js__alert3" jq-action="modal" class="btn-work">결과 처리:alert</a> -->
+              </div>
+
+            </div>
+
+            <div class="workstatus-sec">
+              <h3>도시계획위원회 심의</h3>
+
+              <div class="workstatus-table">
+                <table>
+                  <caption>도시계획위원회 심의</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">온라인 전자심의</th>
+                      <th scope="col">오프라인 심의 자료 검토</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong class="pcolor-blue">1</strong> 건</td>
+                      <td><strong class="pcolor-red">2</strong> 건</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="__btns">
+                <a href="./mywork/MainCouncil01.html" class="btn-work">심의 진행</a>
+                <a href="./mywork/MainCouncil01.html" class="btn-work">자료 검토</a>
+                <!-- <a href="#js__alert4" jq-action="modal" class="btn-work">alert</a> -->
+              </div>
+
+            </div>
+          </div>
+
+        </div><!--// lay-wrap -->
+
+        
+        @@include('./include/modal_alert.html',{
+          'id': 'js__alert1',
+          'title': '도시·군관리계획 입안',
+          'cont': '해당 메뉴 사용 권한이 없습니다.<br>‘메뉴 권한 그룹’ 변경이 필요한 경우 ‘기관 관리자‘에게 요청해 주세요.',
+          'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+        })
+
+        @@include('./include/modal_alert.html',{
+          'id': 'js__alert2',
+          'title': '실시 계획 인가',
+          'cont': '해당 메뉴 사용 권한이 없습니다. <br>‘메뉴 권한 그룹’ 변경이 필요한 경우 ‘기관 관리자‘에게 요청해 주세요.',
+          'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+        })
+
+        @@include('./include/modal_alert.html',{
+          'id': 'js__alert3',
+          'title': '입안 제안서 처리',
+          'cont': '해당 메뉴 사용 권한이 없습니다. <br>‘메뉴 권한 그룹’ 변경이 필요한 경우 ‘기관 관리자‘에게 요청해 주세요.',
+          'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+        })
+
+        @@include('./include/modal_alert.html',{
+          'id': 'js__alert4',
+          'title': '도시계획위원회 심의',
+          'cont': '본 메뉴는 도시계획위원회에 소속된 위원만 사용 가능합니다.',
+          'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+        })
+
+      </div><!--// workstatus  -->
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

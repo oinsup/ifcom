@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">나의 업무 현황</a></li>
+          <li>도시계획위원회 심의</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>심의 의견 제출</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>안건별 심의 자료 검토 후 의견을 입력해 주세요.</li>
+            <li>의견은 제출 후 수정이 불가하므로 내용이 정확하게 입력되었는지 확인 후 제출해 주세요.</li>
+          </ul>
+        </div>
+        
+        <section>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>심의 자료 확인</caption>
+              <colgroup>
+                <col class="width140">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">제 1호</th>
+                  <td>
+                    <div class="mb5">안건명 출력</div>
+                    <textarea name="" rows="4" class="cs-input js__textCounter width100p" data-maxbyte="1000" placeholder="의견 입력(한글 1,000자까지 가능)" title="의견 입력"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">제 2호</th>
+                  <td>
+                    <div class="mb5">안건명 출력</div>
+                    <div class="cs-counter-wrap">
+                      <textarea name="" rows="4" class="cs-input js__textCounter width100p" data-maxbyte="1000" placeholder="의견 입력(한글 1,000자까지 가능)" title="의견 입력"></textarea>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="MainCouncil03.html" class="cs-btn-line">취소</a>
+          <a href="#js__send" jq-action="modal" class="cs-btn">제출</a>
+          <a href="#js__sendAlert" jq-action="modal" class="cs-btn">제출 :: 의견누락팝업</a>
+          
+        </section>
+
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__send',
+          'title': '심의 의견 제출',
+          'cont': '심의 의견이 제출되었습니다.',
+          'btns': '<a href="MainCouncil03.html" class="cs-btn">확인</a>'
+        })
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__sendAlert',
+          'title': '심의 의견 제출',
+          'cont': '<span class="pcolor-red">제X호</span> 안건의 심의 의견을 입력해 주세요.',
+          'btns': '<button class="cs-btn" jq-action="closeModal">확인</button>'
+        })
+        
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_86" data-name="사각형 86" width="60" height="57.725" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_296" data-name="그룹 296" transform="translate(-1150 -935)">
+    <circle id="타원_8" data-name="타원 8" cx="47.5" cy="47.5" r="47.5" transform="translate(1150 935)" fill="#f2f2f2"/>
+    <g id="그룹_89" data-name="그룹 89" transform="translate(1169 954)">
+      <line id="선_131" data-name="선 131" x2="7" transform="translate(39 10.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="선_132" data-name="선 132" x2="2" transform="translate(48 10.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="선_133" data-name="선 133" x2="2" transform="translate(52 10.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+      <line id="선_134" data-name="선 134" x2="2" transform="translate(54 5.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+      <g id="그룹_90" data-name="그룹 90">
+        <g id="그룹_89-2" data-name="그룹 89" clip-path="url(#clip-path)">
+          <line id="선_135" data-name="선 135" x2="2" transform="translate(58 5.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+          <path id="패스_152" data-name="패스 152" d="M24,5.725h9.832a3.031,3.031,0,0,1,2.683-1.833,2.875,2.875,0,0,1,1.083.182A4.731,4.731,0,0,1,42.024,1a5.178,5.178,0,0,1,4.73,4.725H52" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+          <path id="패스_153" data-name="패스 153" d="M0,10.725H3.959A3.994,3.994,0,0,1,7.627,8.872a4.2,4.2,0,0,1,3.561-2.157,4.237,4.237,0,0,1,4.127,4.01H25" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_136" data-name="선 136" x2="2" transform="translate(27 10.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_137" data-name="선 137" x2="2" transform="translate(31 10.725)" fill="none" stroke="#bcc0c4" stroke-miterlimit="10" stroke-width="2"/>
+          <rect id="사각형_85" data-name="사각형 85" width="30" height="21" transform="translate(13 36.725)" fill="#a3d4ff"/>
+          <path id="패스_154" data-name="패스 154" d="M6,34.725v23h7v-21H43v21h7v-23l-22-18Z" fill="#fff"/>
+          <path id="패스_155" data-name="패스 155" d="M6,34.725v22h7v-20H43v20h7v-22" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <path id="패스_156" data-name="패스 156" d="M1,38.725l27-22,27,22" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_138" data-name="선 138" x2="24" transform="translate(16 41.725)" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_139" data-name="선 139" x2="24" transform="translate(16 46.725)" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_140" data-name="선 140" x2="24" transform="translate(16 51.725)" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+          <line id="선_141" data-name="선 141" x2="24" transform="translate(16 56.725)" fill="none" stroke="#2a5082" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

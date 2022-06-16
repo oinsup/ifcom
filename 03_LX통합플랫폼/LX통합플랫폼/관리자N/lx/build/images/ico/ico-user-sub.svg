@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <style>
+            .cls-1{fill:none}
+        </style>
+    </defs>
+    <g id="그룹_4553" data-name="그룹 4553" transform="translate(-17 -12.091)">
+        <path id="사각형_3816" data-name="사각형 3816" class="cls-1" transform="translate(17 12.091)" d="M0 0h26v26H0z"/>
+        <g id="그룹_4556" data-name="그룹 4556">
+            <path id="사각형_3816-2" data-name="사각형 3816" class="cls-1" transform="translate(17 12.091)" d="M0 0h26v26H0z"/>
+            <g id="사각형_3810" data-name="사각형 3810" style="stroke:#0b958c;stroke-width:3px;fill:none">
+                <path style="stroke:none" d="M0 0h12.341v12.341H0z" transform="rotate(-45 40.924 -13.133)"/>
+                <path class="cls-1" d="M1.5 1.5h9.341v9.341H1.5z" transform="rotate(-45 40.924 -13.133)"/>
+            </g>
+        </g>
+    </g>
+</svg>

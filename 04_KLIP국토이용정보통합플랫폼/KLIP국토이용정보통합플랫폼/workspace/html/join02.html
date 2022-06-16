@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '사용 권한 신청'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 2})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        사용 권한 신청
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li><span>1</span> <b>신청 체크</b></li>
+              <li class="active"><span>2</span> <b>개인정보 수집 동의</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>3. 개인정보 입력</li>
+              <li>4. 신청 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="@@htmlRoot/join03.html">
+            <div class="join-cont join-cont-step2">
+              <div class="agg-header">
+                <strong class="join-title">개인정보 수집 및 이용에 대한 동의(필수)</strong>
+                <input type="checkbox" id="agreement" class="cs-checkbox"><label for="agreement"><span></span> 동의</label>
+              </div>
+  
+              <div class="lo-box">
+                <p>
+                  &lt;국토이용정보통합플랫폼&gt;은 정보주체의 동의에 의해서만 개인정보를 수집·이용합니다.<br>
+                  단, 서비스 이용과정에서 발생하는 로그정보(“아이피 주소”, “로그인 일시”, “서비스 이용 기록” 등)는 자동으로 수집됩니다.
+                </p>
+
+                <ul class="pagg-list-number">
+                  <li>개인정보의 수집·이용 목적
+                    <ul class="pagg-list-hyphen">
+                      <li>국토이용정보통합플랫폼 사용자 관리, 도시계획 업무의 처리</li>
+                    </ul>
+                  </li>
+                  <li>개인정보 수집 항목
+                    <ul class="pagg-list-hyphen">
+                      <li>사용 권한 신청 필수정보 : 아이디, 비밀번호, 이름, 휴대전화번호, 부서전화번호, 이메일</li>
+                      <li>사용 권한 신청 선택정보 : 온-나라시스템 ID</li>
+                      <li>도시계획 업무 처리 필수정보 : 이름, 부서전화번호, 이메일</li>
+                      <li>도시계획 업무 처리 선택정보 : 온-나라시스템 ID(단, 전자결재 연계 업무 사용자는 필수 수집)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    개인정보의 보유 및 이용 기간
+                    <ul class="pagg-list-hyphen">
+                      <li>국토이용정보통합플랫폼 탈퇴 시까지</li>
+                    </ul>
+                  </li>
+                  <li>
+                    동의 거부 및 동의 거부 시 불이익 내용
+                    <ul class="pagg-list-hyphen">
+                      <li>위 개인정보 중 필수정보 항목에 대한 수집·이용 동의는 국토이용정보통합플랫폼 사용 권한 신청 및 도식계획 업무 처리에 
+                        필수적이므로 위 사항에 동의하셔야만 사용 권한 신청이 가능합니다.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+  
+              <div class="__btn-set cs-btn-set">
+                <a href="@@htmlRoot/login.html" class="cs-btn-line">신청 취소</a>
+                <button type="submit" class="cs-btn">다음</button>
+              </div>
+  
+            </div>
+          </form>
+          <!--// join-cont -->
+
+          
+          <button jq-target="#js__alert" jq-action="modal">경고창</button>
+          <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+            <div class="laymodal-header">
+              <h2>사용 권한 신청</h2>
+            </div>
+            <div class="laymodal-content tac">
+              개인정보 수집 및 이용에 대한 동의 후<br>
+              사용 권한 신청을 하실 수 있습니다. 
+            </div>
+            <div class="laymodal-footer cs-btn-set">
+              <button type="button" class="cs-btn" jq-action="closeModal">확인</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

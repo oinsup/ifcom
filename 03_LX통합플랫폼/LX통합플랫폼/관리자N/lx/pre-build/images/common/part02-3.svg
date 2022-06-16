@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.54" height="66.858" viewBox="0 0 32.54 66.858">
+  <g id="pallet" transform="translate(-160.525 -54.07)">
+    <rect id="사각형_4086" data-name="사각형 4086" width="8.939" height="8.939" transform="translate(165.625 67.681)" fill="#fff"/>
+    <path id="패스_8371" data-name="패스 8371" d="M1420.687,534.72h-30.7a.918.918,0,0,1-.918-.918V468.78a.918.918,0,0,1,.918-.918h30.7a.918.918,0,0,1,.918.918V533.8a.918.918,0,0,1-.918.918" transform="translate(-1228.54 -413.792)" fill="#fff"/>
+    <path id="패스_8372" data-name="패스 8372" d="M1421.605,475.4h-32.54V468.78a.918.918,0,0,1,.918-.918h30.7a.918.918,0,0,1,.918.918Z" transform="translate(-1228.54 -413.792)" fill="#65efe5"/>
+    <path id="패스_8373" data-name="패스 8373" d="M1436.654,589.106h-10.586V578.52h10.586Zm-8.939-1.647h7.292v-7.292h-7.292Z" transform="translate(-1261.267 -511.663)" fill="#34234d"/>
+    <path id="패스_8374" data-name="패스 8374" d="M1440.516,600.213a61.885,61.885,0,0,1,7.241-7.241,61.91,61.91,0,0,1-7.241,7.241" transform="translate(-1274.043 -524.441)" fill="#ff8376"/>
+    <rect id="사각형_4087" data-name="사각형 4087" width="8.94" height="8.939" transform="translate(178.602 67.681)" fill="#34234d"/>
+    <rect id="사각형_4088" data-name="사각형 4088" width="8.939" height="8.939" transform="translate(165.625 80.053)" fill="#f2cd5d"/>
+    <rect id="사각형_4089" data-name="사각형 4089" width="8.94" height="8.939" transform="translate(178.602 80.053)" fill="#6987d0"/>
+    <rect id="사각형_4090" data-name="사각형 4090" width="8.939" height="8.939" transform="translate(165.625 91.671)" fill="#c1defe"/>
+    <rect id="사각형_4091" data-name="사각형 4091" width="8.94" height="8.939" transform="translate(178.602 103.475)" fill="#ff5168"/>
+    <rect id="사각형_4092" data-name="사각형 4092" width="8.94" height="8.939" transform="translate(178.602 91.671)" fill="#dbcac2"/>
+    <rect id="사각형_4093" data-name="사각형 4093" width="8.939" height="8.939" transform="translate(165.625 103.854)" fill="#34234d"/>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="268" height="130.5" viewBox="0 0 268 130.5">
+  <g id="그룹_11117" data-name="그룹 11117" transform="translate(-13 -58.5)">
+    <text id="금액" transform="translate(49 74)" fill="#fff" font-size="12" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="-23.4" y="0">금액</tspan></text>
+    <text id="수량" transform="translate(49 112)" fill="#fff" font-size="12" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="-23.4" y="0">수량</tspan></text>
+    <text id="지구" transform="translate(49 160)" fill="#fff" font-size="12" font-family="MalgunGothic, Malgun Gothic" letter-spacing="-0.05em"><tspan x="-23.4" y="0">지구</tspan></text>
+    <text id="_단위:억_" data-name="(단위:억)" transform="translate(49 89)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em" opacity="0.7"><tspan x="-35.703" y="0">(</tspan><tspan y="0" font-family="MalgunGothic, Malgun Gothic">단위</tspan><tspan y="0">:</tspan><tspan y="0" font-family="MalgunGothic, Malgun Gothic">억</tspan><tspan y="0">)</tspan></text>
+    <text id="_단위:천_" data-name="(단위:천)" transform="translate(49 127)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em" opacity="0.7"><tspan x="-35.703" y="0">(</tspan><tspan y="0" font-family="MalgunGothic, Malgun Gothic">단위</tspan><tspan y="0">:</tspan><tspan y="0" font-family="MalgunGothic, Malgun Gothic">천</tspan><tspan y="0">)</tspan></text>
+    <g id="그룹_11115" data-name="그룹 11115" transform="translate(0 -4)">
+      <g id="그룹_11114" data-name="그룹 11114" opacity="0.05">
+        <line id="선_227" data-name="선 227" y2="112.997" transform="translate(267.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_226" data-name="선 226" y2="112.997" transform="translate(241.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_225" data-name="선 225" y2="112.997" transform="translate(215.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_224" data-name="선 224" y2="112.997" transform="translate(189.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_223" data-name="선 223" y2="112.997" transform="translate(163.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_222" data-name="선 222" y2="112.997" transform="translate(137.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_221" data-name="선 221" y2="112.997" transform="translate(111.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_220" data-name="선 220" y2="112.997" transform="translate(85.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_219" data-name="선 219" y2="112.997" transform="translate(59.5 62.5)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+      <rect id="사각형_10719" data-name="사각형 10719" width="12" height="10" transform="translate(60 68)" fill="#ff9a34"/>
+      <rect id="사각형_10722" data-name="사각형 10722" width="55" height="10" transform="translate(60 146)" fill="#ff9a34"/>
+      <rect id="사각형_10724" data-name="사각형 10724" width="12" height="10" transform="translate(60 107)" fill="#ff9a34"/>
+      <rect id="사각형_10720" data-name="사각형 10720" width="108" height="10" transform="translate(60 82)" fill="#5072ff"/>
+      <rect id="사각형_10721" data-name="사각형 10721" width="200" height="10" transform="translate(60 160)" fill="#5072ff"/>
+      <rect id="사각형_10723" data-name="사각형 10723" width="78" height="10" transform="translate(60 121)" fill="#5072ff"/>
+      <text id="_14.3" data-name="14.3" transform="translate(86 77)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-8.42" y="0">14.3</tspan></text>
+      <text id="_11.2" data-name="11.2" transform="translate(86 115)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-8.42" y="0">11.2</tspan></text>
+      <text id="_35" data-name="35" transform="translate(129 153)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-5.141" y="0">35</tspan></text>
+      <text id="_376" data-name="376" transform="translate(273 168)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">376</tspan></text>
+      <text id="_223.9" data-name="223.9" transform="translate(185 90)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-10.865" y="0">223.9</tspan></text>
+      <text id="_119.3" data-name="119.3" transform="translate(155 130)" fill="#fff" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-10.865" y="0">119.3</tspan></text>
+    </g>
+    <g id="그룹_11116" data-name="그룹 11116" transform="translate(0 -10)">
+      <text id="_0" data-name="0" transform="translate(59 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-2.695" y="0">0</tspan></text>
+      <text id="_50" data-name="50" transform="translate(86 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-5.141" y="0">50</tspan></text>
+      <text id="_100" data-name="100" transform="translate(111 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">100</tspan></text>
+      <text id="_150" data-name="150" transform="translate(137 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">150</tspan></text>
+      <text id="_200" data-name="200" transform="translate(163 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">200</tspan></text>
+      <text id="_250" data-name="250" transform="translate(189 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">250</tspan></text>
+      <text id="_300" data-name="300" transform="translate(215 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">300</tspan></text>
+      <text id="_350" data-name="350" transform="translate(241 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">350</tspan></text>
+      <text id="_400" data-name="400" transform="translate(267 196)" fill="#cecece" font-size="10" font-family="SegoeUI, Segoe UI" letter-spacing="-0.05em"><tspan x="-7.586" y="0">400</tspan></text>
+    </g>
+  </g>
+</svg>

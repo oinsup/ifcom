@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '사용 권한 신청'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 2})
+
+    <div class="lay-container">
+      <h2 class="cont-title">
+        사용 권한 신청
+      </h2>
+      <div class="content">
+        <div class="join-box">
+          <div class="join-header">
+            <ul class="join-process-complete">
+              <li class="active"><span>1</span> <b>신청 체크</b></li>
+            </ul>
+            <ul class="join-process-ready">
+              <li>2. 개인정보 수집 동의</li>
+              <li>3. 개인정보 입력</li>
+              <li>4. 신청 완료</li>
+            </ul>
+          </div>
+          <!-- //join-header -->
+
+          <form action="@@htmlRoot/join02.html">
+            <div class="join-cont join-cont-step1">
+              <strong class="join-title">개인정보 입력(필수)</strong>
+  
+              <div class="lo-box">
+                <div class="login-input-group">
+                  <div>
+                    <label for="userId">이름</label>
+                    <input type="text" id="userId" placeholder="이름 입력 (공백 없이)">
+                  </div>
+                  <div>
+                    <label for="userPw">휴대전화</label>
+                    <input type="password" id="userPw" placeholder="번호 입력 (-없이)">
+                  </div>
+                </div>
+              </div>
+  
+              <div class="cs-box-alert mt45">
+                <strong>유의사항</strong>
+                <div>
+                  <ul class="cs-list-dot tcolor-gray fz14">
+                    <li>
+                      2021년 시범 사업 기간에는 하기 5개 기관만 권한 신청이 가능합니다.<br>
+                      (광역시·도 : 충청북도, 시·군·구 : 경기도 하남시/충청북도 음성군/경상북도 안동시/경상남도 창녕군)
+                    </li>
+                    <li class="nowrap">사용 권한 신청 후 ‘승인 대기‘ 상태인 경우 상단의  ‘권한 승인 안내‘ 페이지를 참고하여 승인 요청해 주세요.</li>
+                    <li>입력하신 개인정보는 권한 신청 여부 조회용으로만 사용되며, 별도 저장되지 않습니다.</li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="__btn-set cs-btn-set">
+                <a href="@@htmlRoot/login.html" class="cs-btn-line">신청 취소</a>
+                <button type="submit" class="cs-btn" jq-action="modal" jq-target="#js__alert">다음</button>
+              </div>
+  
+            </div>
+          </form>
+          <!--// join-cont -->
+
+        </div>
+
+        <div id="js__alert" class="laymodal modal-alert width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용 권한 신청</h2>
+          </div>
+          <div class="laymodal-content tac">
+            사용 권한 신청이 가능합니다.<br>
+            ‘확인’ 클릭 시, 다음 단계로 이동합니다. 
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <a href="@@webRoot/join02.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+        
+
+        <!-- 사용권한 신청 :: 승인대기 -->
+        <button jq-action="modal" jq-target="#js__authority">사용 권한 신청(승인대기)</button>
+        <div id="js__authority" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용 권한 신청</h2>
+          </div>
+          <div class="laymodal-content">
+
+            <section>
+              <div class="modal-sec-title">
+                입력하신 정보로 이미 권한 신청이 완료되었습니다.<br>
+                아직 승인이 완료되지 않아 서비스 이용이 불가능합니다.
+              </div>
+  
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>사용권한 정보</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">소속 기관</th>
+                      <td>경기도 하남시</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">권한</th>
+                      <td>기관 사용자</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">계정 상태</th>
+                      <td class="pcolor-red">승인 대기</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="tac">
+                관리자에게 승인 요청해 주세요.<br>
+                소속 기관 관리자 연락처 확인 페이지로 이동하시겠습니까?
+              </div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button class="cs-btn-line" jq-action="closeModal">취소</button>
+            <a href="@@webRoot/join05.html" class="cs-btn">확인</a>
+          </div>
+        </div>
+
+
+
+        <button jq-action="modal" jq-target="#js__authority2">사용 권한 신청</button>
+        <!-- 사용권한 신청 :: 정상 -->
+        <div id="js__authority2" class="laymodal width500" tabindex="0">
+          <div class="laymodal-header">
+            <h2>사용 권한 신청</h2>
+          </div>
+          <div class="laymodal-content">
+
+            <section>
+              <div class="modal-sec-title">
+                입력하신 정보로 이미 권한이 부여된 계정이 있습니다.<br>
+                로그인 후 이용해 주세요.
+              </div>
+  
+              <div class="board-view-tb _noround _tal">
+                <table>
+                  <caption>사용권한 정보</caption>
+                  <colgroup>
+                    <col class="width130">
+                    <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">소속 기관</th>
+                      <td>경기도 하남시</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">권한</th>
+                      <td>기관 사용자</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">계정 상태</th>
+                      <td class="pcolor-red">정상</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="tac">
+                계정 정보가 기억나지 않는 경우<br>
+                아이디/비밀번호 찾기를 이용해 주세요.
+              </div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <a href="@@webRoot/login_findidpw.html" class="cs-btn-line">아이디/비밀번호 찾기</a>
+            <a href="@@webRoot/login.html" class="cs-btn">로그인</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

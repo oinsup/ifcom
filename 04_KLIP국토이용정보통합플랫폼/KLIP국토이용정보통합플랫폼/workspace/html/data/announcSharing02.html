@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '공고', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">게시판</a></li>
+          <li><a href="#">공고 게시판</a></li>
+          <li>공고 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>공고 등록</h2>
+      </div>
+    </div>
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="">
+        <div class="content board-view">
+          <section>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>공고 정보</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+
+                    <th scope="row">
+                      <label for="i01">공고 기관 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i01" class="cs-input" placeholder="'기관 찾기'시 자동 입력" title="공고 기관" style="width: calc(100% - 92px); padding-right: 7px;">
+                        <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">기관 찾기</button>
+                        
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="i02">담당 부서 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i02" class="cs-input" placeholder="'부서 찾기'시 자동 입력" title="담당 부서" style="width: calc(100% - 92px); padding-right: 7px;">
+                        <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">부서 찾기</button>
+                        
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    
+                    <th scope="row">
+                      <label for="i03">공고 번호 <i class="icon-required">필수 입력</i></label>
+                    </th>
+
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <span class="ea">제</span>
+                        <input type="text" id="i03" class="cs-input" placeholder="연도 입력" title="연도 입력" style="width: calc(50% - 82px); padding-right: 7px;">
+                        <span class="ea">-</span>
+                        <input type="text" id="i04" class="cs-input" placeholder="일련번호 입력" title="일련번호 입력" style="width: calc(50% - 82px); padding-right: 7px;">
+                        <span class="ea">호</span>
+                        <button class="cs-btn2-gray ml5" style="width: 75px; padding: 0px 5px;">중복 확인</button>
+                        
+                      </div>
+                    </td>
+
+
+                    <th scope="row">
+                      <label for="i05">공고일 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i05"class="cs-input-date js__datepicker js__date-from " title="신청날짜 (입력예시 : 2020-01-01)" value="@@today">
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <th scope="row">
+                      <label for="i06">공고 제목 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i06" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="공고 제목 입력" title="공고 제목">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="t01">공고 내용 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <textarea name="" id="t01" rows="5" class="cs-input js__textCounter width100p js__hastextCounter" data-maxbyte="3000" title="공고내용" placeholder="공고 내용 입력"></textarea><span class="textlengthCounter"><span class="textCount">0</span>/<span class="textMax">3,000</span>Bytes</span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">
+                      <label for="i07">공고자 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i07" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="공고자 입력" title="공고자">
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="s01">문의처 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-input-tel">
+                        <select id="s01" class="cs-input" title="지역번호 선택" style="width:123px;">
+                          <option>지역번호 선택</option>
+                          <option>02</option>
+                          <option>032</option>
+                        </select>
+                        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+                        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">
+                      <label for="i07">열람 기간 <i class="icon-required">필수 입력</i></label></th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i07"class="cs-input-date js__datepicker js__date-from " title="신청날짜 (입력예시 : 2020-01-01)" value="@@today">
+                        <div>~</div>
+                        <input type="text" id="i08"class="cs-input-date js__datepicker js__date-from " title="신청날짜 (입력예시 : 2020-01-01)" value="@@today">
+                      </div>
+                    </td>
+                    <th scope="row">
+                      <label for="i09">열람 장소 </label>
+                    </th>
+                    <td>
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i09" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="열람 장소 입력" title="열람 장소">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" rowspan="2">공고문 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="공고문 원문파일을 선택해 주세요. (.pdf만 가능)">
+                        <span class="js__filename tcolor-gray2">공고문 원문파일을 선택해 주세요. (.pdf만 가능)</span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">
+                            파일 선택
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap _type2">
+                        <input type="file" class="cs-file" id="file2" placeholder="등록된 파일명이 출력됩니다.pdf">
+                        
+                        <span class="js__filename">등록된 파일명이 출력됩니다.pdf</span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">
+                            파일 변경
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <th scope="row" rowspan="2">첨부파일 </th>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="기타 파일(계획 요약본, 지형도면, 의견제출양식 등)의 첨부가 필요한 경우 선택해 주세요.">
+                        <span class="js__filename tcolor-gray2">기타 파일(계획 요약본, 지형도면, 의견제출양식 등)의 첨부가 필요한 경우 선택해 주세요.</span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">
+                            파일 선택
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap _type2">
+                        <input type="file" class="cs-file" id="file2" placeholder="등록된 파일명이 출력됩니다.pdf">
+                        
+                        <span class="js__filename">등록된 파일명이 출력됩니다.pdf</span>
+                        <div class="cs-file-btns">
+                          <span class="cs-btn2-gray-line cs-btn-default">파일 삭제</span>
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">
+                            파일 변경
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>공고 기관/부서명, 공고자, 문의처는 등록하는 사용자의 소속 정보로 기본 출력됩니다. 다른 기관의 공고를 대리 등록하시는 경우 실제 공고 담당자의 정보로 수정하여 등록해 주세요.</li>
+              <li>입력하신 내용과 파일(공고문, 첨부파일)은 공고 전송 시 ‘토지e음’에도 동일하게 노출됩니다.</li>
+            </ul>
+          </section>
+
+          
+
+          <section class="cs-btn-set">
+            <a href="announcSharing01.html" class="cs-btn-line">취소</a>
+            <button jq-action="modal" jq-target="#js__complete" class="cs-btn">등록</button>
+          </section>
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+
+
+      <!-- modal : 등록완료 -->
+      <div id="js__complete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>공고 등록</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <span class="pcolor-red"></span> 공고가 등록되었습니다. <br>
+          정상적으로 등록되었는지 노출된 페이지를 확인하시겠습니까?
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <a href="announcSharing01.html" class="cs-btn-line">취소</a>
+          <a href="#" class="cs-btn">확인</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+    <section>
+      <h2 class="build-h2">INPUTS</h2>
+
+      <h3 class="build-h3">기본</h3>
+      <div>
+        <input type="text" class="cs-input" title="검새겅" placeholder="검색어">
+        <select class="cs-input">
+          <option value="">선택하세요</option>
+          <option value="">선택하세요</option>
+          <option value="">선택하세요</option>
+        </select>
+        
+        <input type="radio" id="inputs1" class="cs-radio">
+        <label for="inputs1"><span></span> 선택</label>
+
+        <input type="checkbox" id="inputs2" class="cs-checkbox">
+        <label for="inputs2"><span></span> 선택</label>
+
+        <br>
+        <textarea name="" id="" rows="5" class="cs-input"></textarea>
+        <br>
+
+        <input type="text" class="cs-input _h35" title="검새겅" placeholder="검색어">
+
+        <select class="cs-input _h35">
+          <option value="">선택하세요</option>
+          <option value="">선택하세요</option>
+          <option value="">선택하세요</option>
+        </select>
+      </div>
+      
+      <h3 class="build-h3">e-mail</h3>
+      <div style="width:400px;">
+        <div class="cs-input-email width100p">
+          <input type="text" id="uerMail" title="공직자통합메일 ID 입력" value="공직자통합메일 ID">
+          <span>@korea.kr</span>
+        </div>
+        <hr>
+        <div class="cs-input-email width100p _disabled">
+          <input type="text" id="uerMail" title="공직자통합메일 ID" value="공직자통합메일 ID" disabled>
+          <span>@korea.kr</span>
+        </div>
+        <hr>
+        <div class="cs-input-email2">
+          <input type="text" class="cs-input" title="이메일 아이디">
+          <div>@</div>
+          <input type="text" class="cs-input" title="이메일 뒤 주소">
+        </div>
+
+        <div class="cs-input-email3">
+          <input type="text" class="cs-input" title="이메일 아이디">
+          <div>@</div>
+          <input type="text" class="cs-input" title="이메일 뒤 주소">
+          <span class="cs-btn2-gray-line cs-btn-default">확인완료</span>
+          <select name="" id="" class="cs-input">
+            <option value="">도메인 선택</option>
+          </select>
+        </div>
+        
+        <div class="cs-input-email3">
+          <input type="text" class="cs-input" title="이메일 아이디">
+          <div>@</div>
+          <input type="text" class="cs-input" title="이메일 뒤 주소">
+          <button class="cs-btn2-gray cs-btn-default">확인완료</button>
+          <select name="" id="" class="cs-input">
+            <option value="">도메인 선택</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="cs-input-tel">
+        <select class="cs-input" title="지역번호 선택">
+          <option>지역번호 선택</option>
+          <option>02</option>
+          <option>032</option>
+        </select>
+        <input type="text" class="cs-input" placeholder="중간번호" title="중간번호">
+        <input type="text" class="cs-input" placeholder="뒷번호" title="뒷번호">
+        <input type="text" class="cs-input" placeholder="내선 번호" title="내선 번호">
+      </div>
+
+      <div class="cs-input-sms width100p block">
+        <input type="text" title="인증번호">
+        <div>남은 시간 <span>02:00</span> </div>
+      </div>
+
+      <div class="cs-input-smssender">
+        <input type="text" class="cs-input _disabled" id="iptopt4" title="등록번호" placeholder="‘생성’ 버튼 클릭 시 자동 입력" readonly="">
+        <button class="cs-btn2-gray cs-btn-default" onclick="smssender()">문자 재전송</button>
+      </div>
+
+
+      <!-- <div>
+        <input type="text" id="mytestDate">
+
+        <script>
+          jQuery(function($){
+            var date = $('#mytestDate');
+            date.datepicker();
+            date.datepicker("setDate", new Date());
+          });
+        </script>
+      </div> -->
+
+      <h3 class="build-h3">Date Picker</h3>
+
+      <!-- 
+              data-mindate : 최소 선택 날짜
+              data-maxdate : 최대 선택 날짜... 이걸 어디에다가 입력해줌??/ 막 스크립트따위 쓰고 싶진않은데
+              
+              컨퍼넌트로 불러올까?? 그냥 통으로 다 가져올까??;; 이건 고민좀 해보자.
+
+              //여러개를 가져 올 수 있도록 설정 아마 사용할 가능성 아주 높음
+
+              - 달력표시방법 설정
+                - data-type="default" 인풋박스 아래에 생성
+                - data-type="modal" : 달력한게 모달로 출력 start, end가 있을경우는 2개가 한 화면에 나오면 좋겠는데.. 이건차후에.
+            -->
+
+      <h3 class="build-h3">date SET</h3>
+      <section>
+        <h4>block</h4>
+        <div class="cs-datepicker-set" data-mindate="2020-10-10" data-maxdate="2020-11-11">
+          <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+          <div>~</div>
+          <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+        </div>
+        
+        <h4>inline</h4>
+        <div class="cs-datepicker-set inlineblock" data-mindate="2020-10-10" data-maxdate="2020-11-11">
+          <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+          <div>~</div>
+          <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+        </div>
+  
+        <textarea class="ui_codeChage _hauto" data-tabsize="8" value='
+          <div class="cs-datepicker-set">
+            <input type="text" class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" placeholder="시작일 선택">
+            <div>~</div>
+            <input type="text" class="cs-input-date js__datepicker js__date-to" title="종료날짜 (입력예시 : 2020-01-01)" placeholder="종료일 선택">
+          </div>
+        '></textarea>
+      </section>
+
+      <h3 class="build-h3">date single</h3>
+      <div>
+        <input type="text" class="cs-input-date js__datepicker">
+      </div>
+
+      <h3 class="build-h3">radio, checkbox</h3>
+      <div>
+        <input type="checkbox" id="checkbox" class="cs-checkbox"><label for="checkbox"><span></span> 체크박스</label>
+        <input type="radio" id="checkbox2" name="radio" class="cs-radio"><label for="checkbox2"><span></span> 체크박스</label>
+        <input type="radio" id="checkbox22" name="radio" class="cs-radio"><label for="checkbox22"><span></span> 체크박스</label>
+
+        <hr>
+        <h4>disabled</h4>
+        <br>
+        <input type="checkbox" id="checkbox" class="cs-checkbox" disabled checked><label for="checkbox"><span></span> 체크박스</label>
+        <input type="radio" id="checkbox2" name="radio" class="cs-radio _disabled"><label for="checkbox2"><span></span> 체크박스</label>
+        <input type="radio" id="checkbox22" name="radio" class="cs-radio _disabled"><label for="checkbox22"><span></span> 체크박스</label>
+      </div>
+
+      <h3 class="build-h3">file</h3>
+
+      <div class="build-code">
+        
+      </div>
+
+      <div>
+        <div class="cs-file-wrap">
+          <input type="file" class="cs-file" id="file1" placeholder="pdf 파일로만 등록 가능합니다.">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+          </div>
+        </div>
+  
+        <div class="cs-file-wrap mt10">
+          <input type="file" class="cs-file" id="guidefile2" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <label for="guidefile2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+          </div>
+        </div>
+  
+        <div class="cs-file-wrap _type2 mt10">
+          <input type="file" class="cs-file" id="guidefile3" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+            <label for="guidefile3" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+          </div>
+        </div>
+      </div>
+
+      <textarea class="ui_codeChage" data-tabsize="8" value='
+        <div class="cs-file-wrap">
+          <input type="file" class="cs-file" id="file1" placeholder="pdf 파일로만 등록 가능합니다.">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+          </div>
+        </div>
+
+
+        <div class="cs-file-wrap">
+          <input type="file" class="cs-file" id="guidefile2" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <label for="guidefile2" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+          </div>
+        </div>
+
+
+        <div class="cs-file-wrap _type2">
+          <input type="file" class="cs-file" id="guidefile3" placeholder="경기도시기본계획축적도pdf 경기도시기본계획축적도pdf 경기도시기본계획축적도pdf">
+          <span class="js__filename"></span>
+          <div class="cs-file-btns">
+            <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+            <label for="guidefile3" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+          </div>
+        </div>
+      '></textarea>
+
+
+
+
+      <!-- <h3 class="build-h3">selectbox</h3> -->
+      <div style="display: none;">
+        <div>
+          <form action="./">
+            <select class="js__cs-select" data-class="width400" id="selectBox" name="selectboxtest">
+              <option value="1">메뉴1</option>
+              <option value="2">메뉴2</option>
+              <option value="3" selected>메뉴3</option>
+              <option value="4">메뉴4</option>
+              <option value="5"><a href="#">이렇게될꺼같음</a></option>
+              <option value="5"><a href="#">이렇게될꺼같음</a></option>
+              <option value="5"><a href="#">이렇게될꺼같음</a></option>
+              <option value="5"><a href="#">이렇게될꺼같음</a></option>
+              <option value="5"><a href="#">이렇게될꺼같음</a></option>
+            </select>
+
+            <button>submit</button>
+          </form>
+        </div>
+
+        <!-- 셀렉트박스 -->
+        <div class="cs-select">
+          <button>이름</button>
+          <div>
+            <ul>
+              <li><button>메뉴1</button></li>
+              <li class="active"><button>메뉴2</button></li>
+              <li><button>메뉴3</button></li>
+              <li><button>메뉴4</button></li>
+              <li><button>메뉴5</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-select width200">
+          <button>이름</button>
+          <div>
+            <ul>
+              <li><button>메뉴1</button></li>
+              <li class="active"><button>메뉴2</button></li>
+              <li><button>메뉴 길어지면 2줄로 나오면 될꺼같음</button></li>
+              <li><button>메뉴4</button></li>
+              <li><button>메뉴5</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>

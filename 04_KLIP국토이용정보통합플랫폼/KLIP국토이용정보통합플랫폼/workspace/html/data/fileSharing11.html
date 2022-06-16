@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '자료 게시판', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">자료실</a></li>
+          <li>자료 게시판</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>자료 게시판</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <div class="cont-snb">
+        <a href="fileSharing01.html">업무 참조 자료</a>
+        <a href="fileSharing11.html" class="active">상위 계획 자료</a>
+        <a href="fileSharing21.html">비정형 자료</a>
+      </div>
+
+      <!-- content :: 내용 -->
+      <div class="content board-list">
+
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>도시계획 업무를 수행함에 있어 개인적으로 필요한 상위 계획 자료들을 저장해 둘 수 있습니다.</li>
+            <li>개인 자료 보관용으로 사용 가능하며, 타 사용자에게는 비공개됩니다.</li>
+          </ul>
+          <a href="fileSharing12.html" class="cs-btn-blue board-write-btn _wauto">등록</a>
+        </div>
+
+
+        <div class="board-list-wrap">
+          <nav class="board-tab-nav">
+            <ul>
+              <li class="active"><a href="#">광역도시계획</a></li>
+              <li><a href="#">도시·군기본계획</a></li>
+              <li><a href="#">기타 상위 계획</a></li>
+            </ul>
+          </nav>
+  
+          <div class="board-list-sort">
+            <!-- 
+              sort-desc : 내림차순
+              sort-asc : 올림차순
+             -->
+            <a href="#" class="active">등록일 <i class="sort-desc"></i></a>  
+            <!-- 올림차순 <a href="#" class="active">등록일 <i class="sort-asc"></i></a> -->
+            <a href="#">자료 제목</a>
+            <a href="#">자료 내용</a>
+          </div>
+  
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>광역도시계획 목록</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width130">
+                <col>
+                <col>
+                <col class="width80">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">자료 구분</th>
+                  <th scope="col">자료 제목</th>
+                  <th scope="col">자료 내용</th>
+                  <th scope="col">파일 수</th>
+                  <th scope="col">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>광역도시계획</td>
+                  <td class="tal"><a href="fileSharing13.html">등록한 자료 제목이 보입니다.</a></td>
+                  <td class="tal">입력한 내용 처음 조금만 보여주고 길면…</td>
+                  <td>0</td>
+                  <td>2020-01-01</td>
+                </tr>
+                <tr>
+                  <td colspan="6">등록된 상위 계획 자료가 없습니다. </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="board-list-infomation cs-list-dot _gray">
+          <li>자료 제목을 클릭하시면 등록된 내용 및 파일을 확인하실 수 있습니다.</li>
+        </ul>
+
+        @@include('../include/paging.html');
+
+
+        <!-- 지정 공개 -->
+        
+
+
+
+        
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

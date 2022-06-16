@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.227" height="55.841" viewBox="0 0 41.227 55.841">
+  <defs>
+    <filter id="패스_6786" x="0" y="0" width="41.227" height="55.841" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#000b3d"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_6786-2" x="0" y="0" width="41.227" height="55.841" filterUnits="userSpaceOnUse">
+      <feOffset dx="0.5" dy="0.5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.25" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.341" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ico-map-pin" transform="translate(6 4)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, -6, -4)" filter="url(#패스_6786)">
+        <path id="패스_6786-3" data-name="패스 6786" d="M1822.546,697a14.613,14.613,0,0,0-14.614,14.614,16.34,16.34,0,0,0,1.418,6.262c3.45,8.352,13.2,22.965,13.2,22.965s9.736-14.614,13.185-22.965a16.405,16.405,0,0,0,1.428-6.262A14.61,14.61,0,0,0,1822.546,697Zm0,20.094a5.48,5.48,0,1,1,5.48-5.48A5.476,5.476,0,0,1,1822.546,717.094Z" transform="translate(-1801.93 -693)" fill="#ea6552"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -6, -4)" filter="url(#패스_6786-2)">
+        <path id="패스_6786-4" data-name="패스 6786" d="M1822.546,697a14.613,14.613,0,0,0-14.614,14.614,16.34,16.34,0,0,0,1.418,6.262c3.45,8.352,13.2,22.965,13.2,22.965s9.736-14.614,13.185-22.965a16.405,16.405,0,0,0,1.428-6.262A14.61,14.61,0,0,0,1822.546,697Zm0,20.094a5.48,5.48,0,1,1,5.48-5.48A5.476,5.476,0,0,1,1822.546,717.094Z" transform="translate(-1801.93 -693)" fill="#fff"/>
+      </g>
+    </g>
+    <path id="패스_6787" data-name="패스 6787" d="M1819.239,715.613a7.307,7.307,0,1,1,7.307-7.307A7.313,7.313,0,0,1,1819.239,715.613Zm0-10.96a3.653,3.653,0,1,0,3.654,3.653A3.658,3.658,0,0,0,1819.239,704.653Z" transform="translate(-1804.626 -693.693)" fill="#ffb89c"/>
+  </g>
+</svg>

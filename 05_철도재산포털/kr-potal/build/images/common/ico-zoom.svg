@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57">
+  <g id="확대" transform="translate(-159 -1003)">
+    <circle id="타원_23" data-name="타원 23" cx="28.5" cy="28.5" r="28.5" transform="translate(159 1003)" fill="rgba(34,34,34,0.8)"/>
+    <path id="icon" d="M27.353,26.1l-6.706-6.742a9.771,9.771,0,1,0-1.288,1.288L26.1,27.353ZM5.147,13.141a7.994,7.994,0,1,1,7.994,7.994A7.994,7.994,0,0,1,5.147,13.141Z" transform="translate(173.146 1017.146)" fill="#fff" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('./include/head_login.html',{'siteName': '404'})
+</head>
+<body>
+  <div class="body">
+    <!-- header -->
+    @@include('./include/sitesump.html')
+    @@include('./include/header_login.html',{"headerType": 7})
+
+    <div class="lay-container">
+      <div class="content cont-error">
+        <div>
+          <p class="cont-error-txt1">
+            <i class="icon-error">
+              <span>404</span>
+            </i>
+            <strong>죄송합니다. <span class="pcolor-red">해당 페이지를 찾을 수 없습니다.</span></strong>
+            현재 접속하신 페이지는 존재하지 않거나 삭제되어 더 이상 이용하실 수 없습니다.
+          </p>
+          <p class="cont-error-txt2">
+            메인 페이지로 이동 후 원하시는 메뉴를 이용해 주세요.
+          </p>
+  
+          <div class="cs-btn-set">
+            <a href="./login.html" class="cs-btn-line">메인 페이지로 이동</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- footer -->
+    @@include('./include/footer_login.html')
+    <!-- //footer -->
+  </div>
+</body>
+</html>

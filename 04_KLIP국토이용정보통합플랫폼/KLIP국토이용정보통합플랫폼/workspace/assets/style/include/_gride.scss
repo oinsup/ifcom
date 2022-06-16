@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+table .cs-gride{margin-left: -5px;margin-right: -5px;margin-bottom: 0;margin-top: 0;}
+
+.cs-gride
+{
+  &::after{content: '';display: block;clear: both;}
+  margin:-5px;display: block;
+
+  *[class*=cs-gride-col]{float: left;margin: 5px;box-sizing: border-box;}
+
+  @for $i from 1 through 12{
+    $wdith : 100 / 12 * $i;
+    .cs-gride-col#{$i}{width:calc(#{$wdith}% - 10px);display: block;}
+  }
+
+  &.cs-gride-50px
+  {
+    margin:-25px;
+    *[class*=cs-gride-col]{margin: 25px;}
+
+    @for $i from 1 through 12{
+      $wdith : 100 / 12 * $i;
+      .cs-gride-col#{$i}{width:calc(#{$wdith}% - 50px);}
+    } 
+  }
+
+  //위아래 마진값 없앰
+  &._mtb0
+  {
+    *[class*=cs-gride-col]{margin-top: 0;margin-bottom: 0;}
+  }
+}
+
+
+.cs-gride-fixed
+{
+  .cs-gride-col{float: left;box-sizing: border-box;}
+  &::after{content: '';display: block;clear: both;}
+  *[class*=cs-gride-fixed]{float: left;box-sizing: border-box;}
+}
+
+
+@for $i from 1 through 100
+{
+  .cs-gride-fixed-#{$i*5} 
+  {
+    width:$i*5px;
+    & + .cs-gride-col{width:calc(100% - #{$i * 5px + 10px});margin-left: 10px;}
+  }
+}

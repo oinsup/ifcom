@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시계획위원회 심의 관리</li>
+          <li>심의회 정보 확인</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>심의회 정보 확인</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+        <div class="cs-box _alert-icon">
+          <ul class="cs-list-dot">
+            <li>본인이 운영 담당자로 있는 도시계획위원회의 ‘심의회’만 등록할 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <section>
+          <h3 class="cont-hedding1">심의회 개요</h3>
+          <!-- 1224 :: 내용삭제
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div> -->
+          <div class="board-view-tb _tal js__tableFold" data-rows="3">
+            <table>
+              <caption>심의회 개요</caption>
+              <colgroup>
+                <col class="width170">
+                <col>
+                <col class="width170">
+                <col>
+              </colgroup>
+              <tbody>
+                <!-- 1222 :: 텍스트수정 -->
+                <tr>
+                  <th scope="row">개최 기관</th>
+                  <td>경기도 하남시</td>
+                  <th scope="row">위원회 구분</th>
+                  <td>시·군·구도시계획위원회</td>
+                </tr>
+                <tr>
+                  <th scope="row">위원회 명</th>
+                  <td>경기도 하남시 2021년 도시계획위원회</td>
+                  <th scope="row">개최 구분/심의회 회차</th>
+                  <td> 정기/2020년도 4회</td>
+                </tr>
+                <tr>
+                  <th scope="row">진행 방식/개최일</th>
+                  <td> 오프라인/2020-10-01</td>
+                  <th scope="row">현재 상태</th>
+                  <td><span class="pcolor-red">심의 대기</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">운영 담당자</th>
+                  <td class="_p0" colspan="3">
+                    <div class="board-view-tb _tac">
+                      <table>
+                        <caption>운영 담당자</caption>
+                        <colgroup>
+                          <col class="width60">
+                          <col class="width200">
+                          <col>
+                          <col style="width:429px">
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">부서</th>
+                            <th scope="col">부서 연락처</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>김운영</td>
+                            <td>김운영</td>
+                            <td>031-1111-1111(내선123)</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>김운영</td>
+                            <td>김운영</td>
+                            <td>031-1111-1111(내선123)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">심의 안건</h3>
+          <!-- 1222 :: 안건추가 버튼삭제-->
+          <div class="board-view-tb">
+            <table>
+              <caption>심의 안건</caption>
+              <colgroup>
+                <col class="width100">
+                <col class="width95">
+                <col class="width95">
+                <col class="width180">
+                <col class="width220">
+                <col>
+                <col class="width80">
+                <col class="width110">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">안건 번호</th>
+                  <th scope="col">상정 구분</th>
+                  <th scope="col">상정 회차</th>
+                  <th scope="col">안건 유형</th>
+                  <th scope="col">안건명</th>
+                  <th scope="col">안건 내용</th>
+                  <th scope="col">요청자</th>
+                  <th scope="col">상정 요청일</th>
+                </tr>
+              </thead>
+              @@for(var i = 0; i < 5; i++){
+              <tr>
+                <th rowspan="2" scope="row">제 1 호</th>
+                <td>신규</td>
+                <td>1</td>
+                <td>입안 제안</td>
+                <td> 하남시 OO용도지구 OOO 제안</td>
+                <td class="tal"><a href="javascript:;" onclick="contentToggle(this,'content${i}')" class="js__conttoggle alink">안건 내용이 보입니다. <i class="cs-btn-toggle flr"></i></a></td>
+                <td>박요청</td>
+                <td>2020-XX-XX</td>
+              </tr>
+              <tr>
+                <td colspan="7" class="bgcolor-blue tal js__conttoggle-target" data-toggle="content${i}">내용확대</td>
+              </tr>
+              }
+            </table>
+          </div>
+        </section>
+
+        
+        <section>
+          <h3 class="cont-hedding1">심의 자료</h3>
+          <!-- 1222 :: js__tableFold , data-rows="4"추가 
+            자료 검토 기간, 검토 시 유의사항만 접힙
+            data-rows="전체 tr - 2"
+          -->
+          <div class="board-view-tb js__tableFold" data-rows="4">
+            <table>
+              <caption>심의 자료</caption>
+              <colgroup>
+                <col class="width150">
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">안건 번호</th>
+                  <th scope="col">심의 자료</th>
+                  <th scope="col">기타 심의 자료</th>
+                </tr>
+              </thead>
+              <tr>
+                <th scope="row">제 1 호</th>
+                <td class="tal">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong>OOO자료명이 출력됩니다.zip</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+                <td class="tal">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong> OO심의 추가 자료.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">제 1 호</th>
+                <td class="tal">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong>OOO자료명이 출력됩니다.zip</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+                <td class="tal">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong> OO심의 추가 자료.pdf</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#js__preview" jq-action="modal" class="cs-btn2-gray2 cs-btn-default">바로 보기</a>
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">제 3 호</th>
+                <td class="tal">
+                  <ul class="cs-list-file">
+                    <li>
+                      <strong>OOO자료명이 출력됩니다.zip</strong>
+                      <div class="cs-list-file__btns">
+                        <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+                <td class="tal">
+                  <span class="tcolor-gray2">등록된 기타 심의 자료가 없습니다. </span>
+                </td>
+              </tr>
+              
+              <tr>
+                <th scope="col" class="bgcolor-blue">자료 검토 기간</th>
+                <td colspan="2">
+                  <div class="frm-insert-t6">
+                    <div class="fll">2020-01-01 ~ 2020-01-02</div>
+                    <div class="tcolor-gray2 flr">참고) 토지e음 대민사이트에서 자료를 열람할 수 있는 기간입니다.</div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="col" class="bgcolor-blue">검토 시 유의사항</th>
+                <td colspan="2" class="tal">
+                  <span class="tcolor-gray2">등록된 유의사항이 없습니다.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">출석 위원</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>심의 위원</caption>
+              <colgroup>
+                <col class="width120">
+                <col class="width60">
+                <col class="width130">
+                <col class="width80">
+                <col>
+                <col class="width140">
+                <col class="width130">
+                <col class="width100">
+                <col class="width120">
+              </colgroup>
+              <thead>
+                <th scope="col">역할 구분</th>
+                <th scope="col">no </th>
+                <th scope="col">위원 구분</th>
+                <th scope="col"> 이름</th>
+                <th scope="col">소속</th>
+                <th scope="col">직위</th>
+                <th scope="col">휴대전화</th>
+                <th scope="col">자료 열람</th>
+                <th scope="col">출석 여부</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>참석</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>궐석</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>출석</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="tal">위원장</th>
+                  <td>1</td>
+                  <td>전문가</td>
+                  <td>OOO</td>
+                  <td class="tal"> 경기대학교</td>
+                  <td>전임교수</td>
+                  <td>010-XXXX-XXXX</td>
+                  <td>2020-01-01</td>
+                  <td>불참</td>
+                </tr>
+                <!-- 1217 :: 법률 삭제 -->
+                
+              </tbody>
+            </table>
+          </div>
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li class="pcolor-red">온라인 전자심의의 경우 출석 여부를 변경하실 필요 없습니다. 심의 기간 내 심의결과를 제출하지 않는 위원은 자동으로 ‘궐석(미출석)’ 처리됩니다.</li>
+            <li class="pcolor-red">오프라인 심의의 경우 위원에게 출석 가능 여부 확인 후 궐석(미출석)하는 위원은 출석 여부를 변경해 주세요. (심의 완료 처리전까지 수정 가능합니다.)</li>
+          </ul>
+        </section>
+        <section>
+          <h3 class="cont-hedding1">출석 위원 비율</h3>
+          <div class="board-required-info">2021년 02월 17일 09:07 기준</div>
+          <div class="board-view-tb">
+            <table>
+              <caption>출석 위원 비율</caption>
+              <thead>
+                <th scope="col">지방의회 의원</th>
+                <th scope="col">공무원(내부)</th>
+                <th scope="col">공무원(외부)</th>
+                <th scope="col">전문가</th>
+                <!-- 1222 :: 테스트수정 -->
+                <th scope="col">출석 위원</th>
+                <th scope="col">재적 위원</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1명 </td>
+                  <td>3명</td>
+                  <td>1명 </td>
+                  <td>
+                    19명<br>
+                    출석 위원의 <strong class="pcolor-red">50%</strong>
+                  </td>
+                  <td>
+                    24명 <br>
+                    <!-- 1222 :: 테스트수정 -->
+                    재적 위원의 <strong class="pcolor-red">80%</strong>
+                  </td>
+                  <td class="bgcolor-blue">30명</td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="tal">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 시행령 제111조(시·도도시계획위원회의 구성 및 운영) ⑥항
+                          <p>
+                            시·도도시계획위원회의 회의는 재적위원 과반수의 출석(출석위원의 과반수는 제3항제3호에 해당하는 위원이어야 한다)으로 개의하고, 
+                            출석위원 과반수의 찬성으로 의결한다. 
+                          </p>
+                        </li>
+                        <li>
+                          국토계획법 시행령 제112조(시·군·구도시계획위원회의 구성 및 운영) ④항
+                          <p>
+                            제111조제4항 내지 제8항의 규정은 시·군·구도시계획위원회에 관하여 이를 준용한다.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <!-- 1222 ::심의회삭제 버튼 추가 및 수정->정보수정으로 변경 -->
+          <a href="council01.html" class="cs-btn-line">목록</a>
+          <a href="#js__delete" jq-action="modal" class="cs-btn">심의회 삭제</a>
+          <a href="council04.html" class="cs-btn">정보 수정</a>
+          <a href="#js__stateChange" jq-action="modal" class="cs-btn">상태 변경</a>
+        </section>
+
+        
+        
+        @@include('../include/modals.html',{'items' : 1})
+
+        <!-- 1222 :: 상태변경, 심의회 삭제 팝업 추가 -->
+        <!-- 상태변경 -->
+        <div id="js__stateChange" class="laymodal width1000">
+          <div class="laymodal-header">
+            <h2>심의회 상태 변경</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              해당 심의회 정보 등록 및 위원 출석 여부 등록이 완료되었습니까?<br>
+              ‘심의 진행’으로 변경 시 안건별 결과 등록(확인)이 가능 상태로 변경됩니다.  
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                대상 심의회 정보
+              </div>
+              
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>대상 심의회 정보</caption>
+                  <colgroup>
+                    <col class="width200">
+                    <col>
+                    <col class="width180">
+                    <col class="width150">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">구분</th>
+                      <th scope="row">위원회명</th>
+                      <th scope="row">개최 구분/회차</th>
+                      <th scope="row">진행 방식</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>시·군·구도시계획위원회</td>
+                      <td>경기도 하남시 2020년 도시계획위원회</td>
+                      <td>정기/2020년도 4회</td>
+                      <td>정기/2020년도 4회</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                상태 변경 처리
+              </div>
+              <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+              <div class="board-view-tb _noround _tal">
+                <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+                <table>
+                  <caption>상태 변경 처리</caption>
+                  <colgroup>
+                    <col class="width140">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">현재 상태</th>
+                      <td><span class="pcolor-red">심의 대기</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row">상태 변경 <i class="icon-required">필수 입력</i></th>
+                      <td>
+                        <input type="radio" class="cs-radio" id="stateValue"><label for="stateValue"><span></span> 심의 진행</label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cs-alert">변경하실 상태를 선택해 주세요.</div>
+            </section>
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__stateChange');lay_pop_open('#js__stateChangeComplete')">변경</button>
+          </div>
+        </div>
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__stateChangeComplete',
+          'title': '심의회 상태 변경',
+          'cont': '<span class="pcolor-red">심의 진행</span>으로 변경되었습니다.',
+          'btns': '<a href="council05.html" class="cs-btn">확인</a>'
+        })
+
+        <!-- 심의회 삭제 -->
+        <div id="js__delete" class="laymodal width1000">
+          <div class="laymodal-header">
+            <h2>심의회 삭제</h2>
+            <button type="button" jq-action="closeModal" class="laymodal-close">닫기</button>
+          </div>
+          <div class="laymodal-content">
+            <section>
+              삭제 시 삭제하신 정보는 복구할 수 없습니다. <br>
+              하기 도시계획위원회 심의회 정보를 삭제하시겠습니까? 
+            </section>
+
+            <section>
+              <div class="modal-sec-title">
+                대상 심의회 정보
+              </div>
+              
+              <div class="board-view-tb _noround">
+                <table>
+                  <caption>대상 심의회 정보</caption>
+                  <colgroup>
+                    <col class="width200">
+                    <col>
+                    <col class="width180">
+                    <col class="width150">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="row">구분</th>
+                      <th scope="row">위원회명</th>
+                      <th scope="row">개최 구분/회차</th>
+                      <th scope="row">진행 방식</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>시·군·구도시계획위원회</td>
+                      <td>경기도 하남시 2020년 도시계획위원회</td>
+                      <td>정기/2020년도 4회</td>
+                      <td>온라인 전자심의</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            
+          </div>
+          <div class="laymodal-footer cs-btn-set">
+            <button type="button" class="cs-btn-line" jq-action="closeModal">취소</button>
+            <button type="button" class="cs-btn" onclick="lay_pop_close('#js__delete');lay_pop_open('#js__deleteComplete')">삭제</button>
+          </div>
+        </div>
+
+        @@include('../include/modal_alert.html',{
+          'id': 'js__deleteComplete',
+          'title': '심의회 삭제',
+          'cont': '<span class="pcolor-red">경기도 하남시 2020년 도시계획위원회</span>의<br> 심의회 정보가 삭제되었습니다.',
+          'btns': '<a href="Council01.html" class="cs-btn">확인</a>'
+        })
+
+        
+
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

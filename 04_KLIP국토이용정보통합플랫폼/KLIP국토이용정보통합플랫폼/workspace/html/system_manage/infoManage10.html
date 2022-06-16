@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '제공 정보 수정', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">시스템 운영 관리</a></li>
+          <li><a href="infoManage05.html">정보연계 관리</a></li>
+          <li>제공 정보 수정</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>제공 정보 수정</h2>
+      </div>
+    </div>
+    <div class="container">
+      <!-- content :: 내용 -->
+      <form action="">
+        <div class="content board-view">
+          <section>
+            <h3 class="cont-hedding1">제공 정보</h3>
+            <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>제공 정보 수정</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <label for="i01">제공 정보명 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i01" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="제공 정보명 입력" title="제공 정보명 입력">
+                      </div>
+                    </td>
+                    <!-- <th scope="row">
+                      <label for="i02">활용 기간 <i class="icon-required">필수 입력</i></label>
+                    </th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i02"class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" value="@@today">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" value="2099-12-31">
+                      </div>
+                    </td> -->
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="i02">제공 정보 설명 <i class="icon-required">필수 입력</i></label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i02" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="제공 정보에 대한 설명 입력" title="제공 정보 설명">
+                      </div>
+                      <p class="tcolor-gray2 " style="margin: 5px 0 0 5px;">참고) 연계 정보가 무엇을 의미하는지를 이해할 수 있는 수준에서 정의</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제공 방식 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list">
+                      <input type="radio" name="datecate" class="cs-radio" id="datecate1" checked><label for="datecate1"><span></span> API</label>
+                      <input type="radio" name="datecate" class="cs-radio" id="datecate2"><label for="datecate2"><span></span> 데이터파일</label>
+                    </td>
+                    <th scope="row">
+                      <label for="i03">제공 기간 <i class="icon-required">필수 입력</i></label>
+                    </th>
+                    <td>
+                      <div class="cs-datepicker-set">
+                        <input type="text" id="i03"class="cs-input-date js__datepicker js__date-from" title="시작날짜 (입력예시 : 2020-01-01)" value="@@today">
+                        <div>~</div>
+                        <input type="text" class="cs-input-date js__datepicker js__date-to" title="시작날짜 (입력예시 : 2020-01-01)" value="2099-12-31">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제공 상태 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list type02" colspan="3">
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-1" checked><label for="datecate01-1"><span></span>대기</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-2"><label for="datecate01-2"><span></span> 제공 중</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-3"><label for="datecate01-3"><span></span> 제공 중지</label>
+                      <input type="radio" name="datecate01" class="cs-radio" id="datecate01-4"><label for="datecate01-4"><span></span> 제공 종료</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <label for="i04">비고 </label></th>
+                    <td colspan="3">
+                      <div class="cs-counter-wrap">
+                        <input type="text" id="i04" class="cs-input js__textCounter width100p" data-maxbyte="50" placeholder="제공 상태를 중지 또는 종료로 변경하는 경우 사유 입력하거나 기타 유의 사항 등 입력" title="비고 입력">
+                      </div>
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>상태를 '제공 중지'또는 '제공 종료'로 변경하는 경우 비고란에 사유를 입력해 주세요.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="cont-hedding1">신청서 및 가이드</h3>
+            <div class="board-view-tb _tal">
+              <table>
+                <caption>신청서 및 가이드</caption>
+                <colgroup>
+                  <col class="width170">
+                  <col>
+                  <col class="width170">
+                  <col>
+                </colgroup>
+                <tbody>
+                  
+                  <tr>
+                    <th scope="row">신청서 양식 <i class="icon-required">필수 입력</i></th>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap">
+                        <input type="file" class="cs-file" id="file1" placeholder="파일을 선택한 경우 파일명이 출력 됩니다.hwp">
+                        <span class="js__filename">파일을 선택한 경우 파일명이 출력 됩니다.hwp</span>
+                        <div class="cs-file-btns">
+                          <label for="file1" class="cs-btn2-gray cs-btn-default">
+                            파일 변경
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">사용 가이드 <i class="icon-required">필수 입력</i><br />(.pdf) </th>
+                    <td class="frm-opt-list" colspan="3">
+                      <div class="cs-file-wrap _type2">
+                        <input type="file" class="cs-file" id="file2" placeholder="파일을 선택한 경우 파일명이 출력 됩니다.pdf">
+                        
+                        <span class="js__filename">파일을 선택한 경우 파일명이 출력 됩니다.pdf</span>
+                        <div class="cs-file-btns">
+                          <label for="file2" class="cs-btn2-gray cs-btn-default">
+                            파일 변경
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="board-list-infomation cs-list-dot _gray">
+              <li>파일은 개당 최대 5MB까지 등록 가능합니다.</li>
+            </ul>
+          </section>
+  
+          <section class="cs-btn-set">
+            <a href="infoManage05.html" class="cs-btn-line">취소</a>
+            <button jq-action="modal" jq-target="#js__complete" class="cs-btn">수정</button>
+          </section>
+        </div>
+      </form>
+      <!--// content :: 내용 -->
+
+
+      <!-- modal : 수정완료 -->
+      <div id="js__complete" class="laymodal modal-alert" tabindex="0" style="width:500px;">
+        <div class="laymodal-header">
+          <h2>제공 정보 수정</h2>
+        </div>
+        <div class="laymodal-content tac">
+          <span class="pcolor-red">‘’</span> 제공 정보가 수정되었습니다. <br>
+          정상적으로 등록되었는지 노출된 페이지를 확인하시겠습니까?
+        </div>
+        <div class="laymodal-footer cs-btn-set">
+          <a href="infoManage05.html" class="cs-btn-line">취소</a>
+          <a href="#" class="cs-btn">확인</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

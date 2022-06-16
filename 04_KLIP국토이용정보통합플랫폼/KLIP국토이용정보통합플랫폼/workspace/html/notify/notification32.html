@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 확인', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">정보 조회</a></li>
+          <li><a href="#">고시</a></li>
+          <li>고시</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>고시</h2>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- content :: 내용 -->
+      <div class="content board-view">
+
+        <!-- 22.01.14 추가 -->
+        <section>
+          <h3 class="cont-hedding1">다른 법률에 따른 고시 기본 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>다른 법률에 따른 고시 기본 정보</caption>
+              <colgroup>
+                <col class="width120">
+                <col>
+                <col class="width120">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">법령 구분</th>
+                  <td>다른 법률</td>
+                  <th scope="row">법률 분야</th>
+                  <td>선택된 분야명 출력</td>
+                </tr>
+                <tr>
+                  <th scope="row">법령명</th>
+                  <td colspan="3">선택된 대표 법령명이 출력됩니다.</td>
+                </tr>
+
+
+                <tr>
+                  <th scope="row" rowspan="2">의제</th>
+                  <td colspan="3">비대상 or 대상(유형 : 산업단지조성사업)</td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <div class="cs-box-tip _type2">
+                      <strong>법률 TIP</strong>
+                      <ul>
+                        <li>
+                          국토계획법 제42조(다른 법률에 따라 지정된 지역의 용도지역 지정 등의 의제) ①항
+                          <p>
+                            다음 각 호의 어느 하나의 구역 등으로 지정·고시된 지역은 이 법에 따른 도시지역으로 결정·고시된 것으로 본다.
+                          </p>
+                          <ul class="cs-list-number">
+                            <li>「항만법」 제2조제4호에 따른 항만구역으로서 도시지역에 연접한 공유수면</li>
+                            <li>「어촌·어항법」 제17조제1항에 따른 어항구역으로서 도시지역에 연접한 공유수면</li>
+                            <li>「산업입지 및 개발에 관한 법률」 제2조제8호가목부터 다목까지의 규정에 따른 국가산업단지, 일반산업단지 및 도시첨단산업단지</li>
+                            <li>「택지개발촉진법」 제3조에 따른 택지개발지구</li>
+                            <li>「전원개발촉진법」 제5조 및 같은 법 제11조에 따른 전원개발사업구역 및 예정구역(수력발전소 또는 송·변전설비만을 설치하기 위한 전원개발사업구역 및 예정구역은 제외한다. 이하 이 조에서 같다</li>
+                          </ul>
+                        </li>
+                        <li>
+                          국토계획법 제42조(다른 법률에 따라 지정된 지역의 용도지역 지정 등의 의제) ②항
+                          <p>
+                            관리지역에서 「농지법」에 따른 농업진흥지역으로 지정·고시된 지역은 이 법에 따른 농림지역으로, 관리지역의 산림 중 「산지관리법」에 따라 보전산지로 지정·고시된 지역은 그 고시에서 구분하는 바에 따라 이 법에 따른 농림지역 또는 자연환경보전지역으로 결정·고시된 것으로 본다.
+                          </p>
+                        </li>
+                        <li>
+                          국토계획법 부칙 제24조 (다른 법률과의 관계) ③항 
+                          <p>
+                            이 법 시행 당시 다른 법률에서 종전의 도시계획법에 의한 도시계획의 변경 또는 결정을 의제하고 있는 경우 당해 의제는 도시관리계획중 도시지역에 대하여 수립된 도시관리계획의 변경 또는 결정을 의제하는 것으로 본다.
+                          </p>
+                        </li>
+                        <li>
+                          국토계획법 부칙 제24조 (다른 법률과의 관계) ④항 
+                          <p>
+                            이 법 시행 당시 다른 법률에서 종전의 국토이용관리법에 의한 국토이용계획의 변경 또는 결정을 의제하고 있는 경우 당해 의제는 도시관리계획중 도시지역이 아닌 지역에 대하여 수립된 도시관리계획의 변경 또는 결정을 의제하는 것으로 본다.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>법률 분야와 법령명은 고시 등록 시 담당자가 선택한 법률 분야와 법령명으로 출력됩니다. (여러 법률에 의한 고시인 경우에도 대표 법률명으로 출력) </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">고시</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>고시</caption>
+              <colgroup>
+                <col class="width130">
+                <col>
+                <col class="width130">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">고시 기관</th>
+                  <td>경기도 안산시</td>
+                  <th scope="row">담당 부서</th>
+                  <td>도시디자인국 도시재생과</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 번호</th>
+                  <td>경기도 안산시 고시 제2021-1호</td>
+                  <th scope="row">고시일</th>
+                  <td>2022-01-04</td>
+                </tr>
+                <tr>
+                  <th scope="row">변경 구분</th>
+                  <td colspan="3">변경</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 제목</th>
+                  <td colspan="3">안산 팔곡일반산업단지 산업단지계획 변경(4차) 승인 및 지형도면 고시</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 내용 </th>
+                  <td colspan="3">
+                    안산시 고시 제2021-285호(2021.11.30.)로 산업단지계획 변경(3차) 승인 고시된 「안산 팔곡일반산업단지」에 대하여 「산업단지 인·허가 절차 간소화를 위한 특례법」제15조 규정에 따라 산업단지계획 변경(4차) 승인 고시하고 「토지이용규제 기본법」제8조 규정에 따라 지형도면 고시합니다. 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">열람 장소</th>
+                  <td>안산시청 제2별관 4층 공공개발과</td>
+                  <th scope="row">문의처</th>
+                  <td>051-888-2582</td>
+                </tr>
+                <tr>
+                  <th scope="row">고시문</th>
+                  <td colspan="3">
+                    <ul class="cs-list-file">
+                      <li>
+                        <strong>안산시 고시 제2022-1호(2021.1.4).pdf</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#js__preview" class="cs-btn2-gray2 cs-btn-default" jq-action="modal">원문 보기</a>
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">지형도면</th>
+                  <td>
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>지형도면 파일명이 출력됩니다.jpg</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                  <th scope="row">기타 자료</th>
+                  <td>
+                    <ul class="cs-list-file">
+                      <li>
+                        <!-- <strong class="tcolor-gray2">등록된 파일이 없습니다.</strong> -->
+                        <strong>기타 자료 파일명이 출력됩니다.zip</strong>
+                        <div class="cs-list-file__btns">
+                          <a href="#" class="cs-btn2-gray cs-btn-default">다운로드</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <section>
+          <h3 class="cont-hedding1">고시 등록자 정보</h3>
+          <div class="board-view-tb">
+            <table>
+              <caption>고시 등록자 정보</caption>
+              <colgroup>
+                <col class="width100">
+                <col class="width100">
+                <col class="width130">
+                <col>
+                <col class="width180">
+                <!-- <col> -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>등록일</th>
+                  <th>등록자</th>
+                  <th>소속 기관</th>
+                  <th>부서</th>
+                  <th>부서 연락처</th>
+                  <!-- <th>이메일</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2020-10-12</td>
+                  <td>홍길동</td>
+                  <td>부산광역시</td>
+                  <td>도시OOO과</td>
+                  <td>031-790-6114(내선23)</td>
+                  <!-- <td>OOO@korea.kr</td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- <section>
+          <h3 class="cont-hedding1">참조된 계획</h3>
+
+          <div class="board-list-sort mt-45">
+            <a href="#" class="active">고시일 <i class="sort-desc"></i></a>  
+            <a href="#">고시 번호</a>
+            <a href="#">고시 제목</a>
+          </div>
+          <div class="board-list-text _fixed">
+            <table>
+              <caption>관련 계획</caption>
+              <colgroup>
+                <col class="width60">
+                <col class="width130">
+                <col class="width120">
+                <col class="width130">
+                <col>
+                <col class="width100">
+                <col class="width95">
+                <col class="width95">
+                <col class="width100">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">계획 구분</th>
+                  <th scope="col">고시 기관</th>
+                  <th scope="col">고시 번호</th>
+                  <th scope="col">고시 제목</th>
+                  <th scope="col">고시일</th>
+                  <th scope="col">고시문</th>
+                  <th scope="col">도면</th>
+                  <th scope="col">참조일</th>
+                </tr>
+              </thead>
+              <tbody>
+                @@for(var i = 0; i < 3; i++){
+                <tr>
+                  <td>${30 - i}</td>
+                  <td>도시·군관리계획</td>
+                  <td>제주특별자치도 서귀포시</td>
+                  <td>제2020–5200호</td>
+                  <td class="tal"><a href="notification02.html" target="_blank" title="새창열림">입력된 고시 제목 출력</a></td>
+                  <td>2020-12-15</td>
+                  <td><a href="#js__preview" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">원문 보기</a></td>
+                  <td><a href="#js__preview2" class="cs-btn2-gray2 cs-btn-default width100p" jq-action="modal">도면 보기</a></td>
+                  <td>2020-10-15</td>
+                </tr>
+                }
+                <tr>
+                  <td colspan="9">참조된 도시·군관리계 정보가 없습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <ul class="board-list-infomation cs-list-dot _gray">
+            <li>고시 제목 클릭 시 브라우저 새창에서 해당 고시 상세 정보를 확인하실 수 있습니다. 입안 단계중인 계획은 출력되지 않습니다. </li>
+          </ul>
+
+          @@include('../include/paging.html')
+
+        </section> -->
+
+        <section class="cs-btn-set">
+          <a href="notification31.html" class="cs-btn-line">목록</a>
+        </section>
+
+
+
+        @@include('../include/modals.html',{'items': 1})
+        @@include('../include/modals.html',{'items': 2})
+
+      </div>
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

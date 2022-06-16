@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../include/head.html',{'webTitle': '고시 조회', 'webPath': '..'})
+</head>
+<body>
+  @@include('../include/sitesump.html')
+  <div class="body">
+    <!-- header -->
+    @@include('../include/header.html',{'webPath': '..'})
+
+    <div class="cont-header">
+      <div class="cont-location lay-wrap">
+        <ul>
+          <li><a href="../index.html">홈</a></li>
+          <li><a href="#">입안 관리</a></li>
+          <li>도시·군관리계획 관리</li>
+          <li>용역 성과 등록</li>
+        </ul>
+      </div>
+      
+      <div class="cont-header-title">
+        <h2>용역 성과 등록</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- content :: 내용 -->
+
+      <div class="content board-view">
+
+        <div class="process-header">
+          <ul class="process-step">
+            <!-- 
+              진행된 탭 일경 우 class = "active"
+              현재 진행중인 탭 class = "active locked"
+             -->
+            <li class="active"><span>1</span> 용역사업, 기본 정보 등록</li>
+            <li class="active"><span>2</span> 계획도서, 계획설명서 등록</li>
+            <li class="active"><span>3</span> 조서, 도면 확인</li>
+            <li class="active"><span>4</span> 입안 진행 결과 등록</li>
+            <!-- 0106-2 :: 텍스트수정 -->
+            <li class="active locked"><span>5</span> 고시 등록</li>
+          </ul>
+        </div>
+       
+        <section>
+          <h3 class="cont-hedding1">도시·군관리계획 기본 정보</h3>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>도시·군관리계획 기본 정보</caption>
+              <colgroup>
+                <col class="width180">
+                <col>
+                <col class="width180">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">계획명</th>
+                  <td>입력한 계획명이 출력됩니다. </td>
+                  <th scope="row">계획 유형</th>
+                  <td>용도지역·용도지구</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="cont-hedding1">고시문 등록</h3>
+          <div class="board-required-info"><i class="icon-required">필수 입력</i>필수 입력</div>
+          <div class="board-view-tb _tal">
+            <table>
+              <caption>고시문 등록</caption>
+              <colgroup>
+                <col class="width180">
+                <col>
+                <col class="width180">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">고시 기관 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-gride">
+                      <div class="cs-gride-col6">
+                        <select name="" class="cs-input width100p" title="지역선택">
+                          <option value="#">경기도</option>
+                        </select>
+                      </div>
+                      <div class="cs-gride-col6">
+                        <select name="" class="cs-input width100p" title="지역선택2">
+                          <option value="#">하남시</option>
+                        </select>
+                      </div>
+                    </div>
+                  </td>
+                  <th scope="row">담당 부서 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-insert-t6">
+                    OOOO과
+                    <a href="#js__findgroup" jq-action="modal" class="cs-btn2-gray cs-btn-default flr">부서 찾기</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 번호 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="frm-insert-t1">
+                      <div class="frm-insert-t3">
+                        <div>제</div>
+                        <input type="text" class="cs-input width100p" placeholder="연도 입력" title="연도 입력">
+                        <div>-</div>
+                        <input type="text" class="cs-input width100p" placeholder="일련번호 입력" title="일련번호 입력">
+                        <div>호</div>
+                      </div>
+                      <button class="cs-btn2-gray cs-btn-default __col_btn">중복 확인</button>
+                    </div>
+                  </td>
+                  <th scope="row">고시일 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <input type="text" class="cs-input-date js__datepicker hasDatepicker" title="고시일 선택" placeholder="고시일 선택">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 유형 <i class="icon-required">필수 입력</i></th>
+                  <td class="frm-opt-list" colspan="3">
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate1"><label for="docCate1"><span></span> 결정</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate2"><label for="docCate2"><span></span> 승인</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate3"><label for="docCate3"><span></span> 실시</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate4"><label for="docCate4"><span></span> 결정+승인</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate5"><label for="docCate5"><span></span> 결정+실시</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate6"><label for="docCate6"><span></span> 결정+승인+실시</label>
+                    <input type="radio" class="cs-radio" name="doccate" id="docCate7"><label for="docCate7"><span></span> 승인+실시</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 제목 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <input type="text" class="cs-input js__textCounter width100p" data-maxbyte="200" placeholder="고시 제목 입력" title="고시 제목">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">고시 내용 <i class="icon-required">필수 입력</i></th>
+                  <td colspan="3">
+                    <div class="cs-counter-wrap">
+                      <div class="cs-counter-wrap">
+                        <textarea rows="5" class="cs-input js__textCounter width100p" data-maxbyte="3000" placeholder="고시 내용 입력" title="고시 내용"></textarea>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" rowspan="2">고시문 <i class="icon-required">필수 입력</i></th>
+                  <td>
+                    <div class="cs-file-wrap _type2">
+                      <input type="file" class="cs-file" id="file1" placeholder="pdf 파일만 등록 가능합니다.">
+                      <span class="js__filename"></span>
+                      <div class="cs-file-btns">
+                        <label for="file1" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                      </div>
+                    </div>
+                  </td>
+                  <th scope="row" rowspan="2">기타 자료</th>
+                  <td>
+                    <div class="cs-file-wrap _type2">
+                      <input type="file" class="cs-file" id="file2" placeholder="파일 타입 관계없이 등록 가능합니다.">
+                      <span class="js__filename"></span>
+                      <div class="cs-file-btns">
+                        <label for="file2" class="cs-btn2-gray cs-btn-default">파일 선택</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="cs-file-wrap _type2">
+                      <input type="file" class="cs-file" id="file3" placeholder="경기도 하남시_OOO고시.pdf">
+                      <span class="js__filename"></span>
+                      <div class="cs-file-btns">
+                        <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                        <label for="file3" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cs-file-wrap _type2">
+                      <input type="file" class="cs-file" id="file4" placeholder=" 등록한 파일명이 보입니다.zip">
+                      <span class="js__filename"></span>
+                      <div class="cs-file-btns">
+                        <button type="button" class="cs-btn2-gray-line cs-btn-default">파일 삭제</button>
+                        <label for="file4" class="cs-btn2-gray cs-btn-default">파일 변경</label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="cs-btn-set">
+          <a href="#js__cancel" jq-action="modal" class="cs-btn-line">취소</a>
+          <a href="#js__tempSave" jq-action="modal" class="cs-btn">임시저장</a>
+          <a href="#js__prev" jq-action="modal" class="cs-btn-line">이전</a>
+          <a href="#js__complete" jq-action="modal" class="cs-btn">등록 완료</a>
+        </section>
+
+      </div>
+
+      <!-- 취소 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__cancel',
+        'title': '용역 성과 등록 취소',
+        'cont': '용역 성과 등록이 취소되었습니다. <br>추후 용역 성과 등록을 계속해서 진행하실 수 있습니다.',
+        'btns': '<a href="ServiceResult01.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 임시서장 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__tempSave',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용이 임시저장 되었습니다.',
+        'btns': '<button class="cs-btn" type="button" jq-action="closeModal">확인</button>'
+      })
+
+      <!-- 이전 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__prev',
+        'title': '용역 성과 등록',
+        'cont': '현재까지 입력하신 내용을 저장하고<br>이전 단계로 이동합니다.',
+        'btns': '<a href="ServiceResult05.html" class="cs-btn">확인</a>'
+      })
+
+      <!-- 완료 -->
+      @@include('../include/modal_alert.html',{
+        'id': 'js__complete',
+        'title': '용역 성과 등록',
+        'cont': '용역 성과 등록이 완료되었습니다.<br>용역 성과에 대한 승인 결재 후 고시문을 전송해 주세요.',
+        'btns': '<a href="ServiceResult07.html" class="cs-btn">확인</a>'
+      })
+
+ 
+      @@include('../include/modals.html',{'items': 3})
+      <!--// content :: 내용 -->
+
+    </div>
+
+    <!-- footer -->
+    @@include('../include/footer.html')
+    <!-- //footer -->
+
+    
+  </div>
+</body>
+</html>

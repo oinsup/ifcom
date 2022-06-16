@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html')
+
+<body>
+    <script>
+          AOS.init();
+    </script>
+    <div id="wrap">
+        <!--header-->
+        <header id="header" class="black">
+            @@include('include/header.html')
+        </header>
+        <!--//header-->
+        <!--container-->
+        <div id="container">
+            <!--content-->
+            <div id="content" class="auto" style="padding: 0!important;width: auto; height: 100%;">
+                <div class="sky pd">
+                    <div class="inner">
+                        <!--breadCrumb-->
+                        <div class="breadCrumb">
+                            <ul>
+                                <li>
+                                    <a href="#" title="홈">홈</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="교육">교육</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="메타버스플랫폼">메타버스플랫폼</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--//breadCrumb-->
+                        <!--titArea-->
+                        <div class="titArea">
+                            <h1 class="titPage" data-aos="fade" data-aos-duration="2200"><span class="colorType blue">METAVERSE</span><br />PLATFORM</h1>
+                        </div>
+                        <!--//titArea-->
+                    </div>
+                </div>
+                <!--develop-->
+                <div class="develop white">
+                    <div class="inner">
+                        <img src="../images/img/img-coming.png" alt="comming soon이미지" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                    </div>
+                </div>
+                <!--//develop-->
+                <!--banner-->
+                <div class="banner">
+                    <!--conBox-->
+                    <div class="conBox inner">
+                        <h3>당신이 찾는 <span class="colorType neon">디지털 세계</span>를<br /> 지금 만나보세요!</h3>
+                        <button type="button" class="btnLink" onclick="window.open('https://www.dtwincloud.com/member/login.do')"><span>EGIS Market Place</span></button>
+                        <!--click-->
+                        <div class="click">
+                            <a href="#">SUPPORT <button class="arrow"><span class="hidden">바로가기</span></button></a>
+                            <a href="지원.html" target="_blank">Contact<br />Us <button class="arrow"><span
+                                        class="hidden">바로가기</span></button></a>
+                        </div>
+                        <!--//click-->
+                    </div>
+                    <!--//conBox-->
+                </div>
+                <!--//banner-->
+            </div>
+            <!--//content-->
+            <button type="button" class="btnTop"><span>Top</span></button>
+        </div>
+        <!--//container-->
+        <!--footer-->
+        @@include('include/footer.html')
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

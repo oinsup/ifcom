@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+@@include('include/head.html')
+<body>
+<div id="accNav">
+    <a href="#header">주요메뉴 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+<div id="wrap">
+    @@include('include/headerlogin.html')
+    <div id="container">
+        <!--contents-->
+        <div id="contents">
+            <!--content-->
+            <div id="content" class="login">
+                <h2 class="hidden">로그인 페이지 본문 시작</h2>
+                <!-- inner -->
+                <div class="inner">
+                    <!--pageName-->
+                    <div class="pageName">
+                        <h3><span>로그인</span></h3>
+                    </div>
+                    <!--//pageName-->
+                    <!-- loginArea -->
+                    <div class="loginArea">
+                        <div class="login">
+                            <label for="i01">
+                                <input type="email" id="i01" placeholder="아이디 입력(공직자통합메일 ID와 동일)" autofocus>
+                            </label>
+                            <label for="i02">
+                                <input type="password" id="i02" placeholder="비밀번호 입력">
+                            </label>
+                            <div class="btnArea center">
+                                <button type="button" class="btn dkBlue middle">로그인</button>
+                            </div>
+                        </div>
+                        <div class="loginCont">
+                            <p>국토이용정보통합플랫폼 헬프데스크는 국토이용정보통합플랫폼 사용자만 이용 가능합니다.</p>
+                            <p>사용 권한 신청, 비밀번호 찾기는 국토이용정보통합플랫폼에서 가능합니다.</p>
+                        </div>
+                    </div>
+                    <!-- //loginArea -->
+                    
+                </div>
+                <!-- //inner -->
+            </div>
+            <!--//content-->
+        </div>
+        <!--//contents-->
+    </div>
+    @@include('include/footer.html')
+</div>
+
+</body>
+</html>
