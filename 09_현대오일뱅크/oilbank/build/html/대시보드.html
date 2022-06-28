@@ -467,7 +467,7 @@
                                 content:
                                 '<div class="gridBody type02">' +
                                     '<div class="order">' +
-                                        '<a href="#" class="search" title="주문조회">' +
+                                        '<a href="#" class="search">' +
                                             '<span class="circle"></span>' +
                                             '<span class="ico"></span>' +
                                             '<span class="txt">주문조회</span>' +
@@ -485,7 +485,7 @@
                                 content:
                                 '<div class="gridBody type02">' +
                                     '<div class="order">' +
-                                        '<a href="#" class="car" title="자동배차">' +
+                                        '<a href="#" class="car">' +
                                             '<span class="circle"></span>' +
                                             '<span class="ico"></span>' +
                                             '<span class="txt">자동배차</span>' +
@@ -503,7 +503,7 @@
                                 content:
                                 '<div class="gridBody type02">' +
                                     '<div class="order">' +
-                                        '<a href="#" class="slide" title="배차조정">' +
+                                        '<a href="#" class="slide" >' +
                                             '<span class="circle"></span>' +
                                             '<span class="ico"></span>' +
                                             '<span class="txt">배차조정</span>' +
@@ -676,29 +676,40 @@
                                 '</div>'
                                 ,
                             },
-                            // {
-                            //     w:4,
-                            //     h:4,
-                            //     minW:3,
-                            //     minH:3,
-                            //     content:
-                            //     '<div class="gridHead">' +
-                            //         '<h3 class="title type02">유종별 수송량' +
-                            //         '</h3>' +
-                            //         '<div class="selectArea type03">' +
-                            //             '<select name="" id="">' +
-                            //                 '<option value="">당월</option>' +
-                            //             '</select>' +
-                            //         '</div>' +
-                            //     '</div>' +
-                            //     '<div class="gridBody">' +
-                            //         '<div class="graph">' +
-                            //             '<div id="ib-containerOil01"></div>' +
-                            //             '<div id="ib-containerOil02"></div>' +
-                            //         '</div>' +
-                            //     '</div>'
-                            //     ,
-                            // },
+                            {
+                                w:4,
+                                h:4,
+                                minW:3,
+                                minH:3,
+                                content:
+                                '<div class="gridHead">' +
+                                    '<h3 class="title type02">유종별 수송량' +
+                                    '</h3>' +
+                                    '<div class="selectArea type03">' +
+                                        '<select name="" id="">' +
+                                            '<option value="">당월</option>' +
+                                        '</select>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="gridBody">' +
+                                    '<div class="graph">' +
+                                        '<div class="swiper01">' +
+                                            '<div class="swiper-wrapper">' +
+                                                '<div class="swiper-slide">' +
+                                                    '<div id="ib-containerOil01"></div>' +
+                                                '</div>' +
+                                                '<div class="swiper-slide">' +
+                                                    '<div id="ib-containerOil02"></div>' +
+                                                '</div>' +
+                                            '</div>' +
+                                            '<div class="swiper-button-prev"></div>' +
+                                            '<div class="swiper-button-next"></div>' +
+                                            '<div class="swiper-pagination"></div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>'
+                                ,
+                            },
                             {
                                 w:4,
                                 h:7,
@@ -729,10 +740,16 @@
                                     '</div>' +
                                 '</div>' +
                                 '<div class="gridFoot">' +
-                                    '<div class="btnArea column">' +
-                                        '<button type="button" class="btn grayLine">법인영역</button>' +
-                                        '<button type="button" class="btn grayLine">법인개발</button>' +
-                                        '<button type="button" class="btn grayLine">소매전략</button>' +
+                                    '<div class="btnArea column01">' +
+                                        '<ul>' +
+                                            '<li><button type="button" class="btn grayLine">법인영역팀</button></li>' +
+                                            '<li><button type="button" class="btn grayLine">법인개발팀</button></li>' +
+                                            '<li><button type="button" class="btn grayLine">소매전략팀</button></li>' +
+                                            '</ul>' +
+                                            '<ul>' +
+                                                '<li><button type="button" class="btn grayLine">특수제품</button></li>' +
+                                                '<li><button type="button" class="btn grayLine">LPG</button></li>' +
+                                                '</ul>' +
                                     '</div>' +
                                 '</div>'
                                 ,
@@ -811,7 +828,9 @@
                             },
                         ];
 
-                        var grid = GridStack.init({});
+                        var grid = GridStack.init({
+                            
+                        });
 
                         grid.load(items);
 
@@ -833,61 +852,52 @@
                             initialize: function() {
                                 var initData = {
                                     "chart": {
-                                        "plotBackgroundColor": null,
-                                        "plotBorderWidth": 0,
-                                        "plotShadow": false
+                                        "type": "pie"
                                     },
-                                    "colors": ["#017DD1", "#F8B250", "#00AC6C",  "#6947DF",],
-                                    "title": {
-                                        "text": '일반유',
-                                        "align": 'center',
-                                        "verticalAlign": 'middle',
-                                        "y": 85
-                                    },
+                                    "colors": ["#017DD1", "#F8B250", "#00AC6C", "#6947DF"],
                                     "tooltip": {
-                                        "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                            "pointFormat": "일반유 수송량 : {point.percentage:.0f}%",
+                                        "useHTML": true
                                     },
                                     "plotOptions": {
                                         "pie": {
                                             "dataLabels": {
                                                 "enabled": true,
-                                                "distance": -50,
-                                                "style": {
-                                                    "fontWeight": 'bold',
-                                                    "color": 'white',
-                                                }
-                                            },
-                                            "startAngle": -90,
-                                            "endAngle": 90,
-                                            "center": ['50%', '75%']
+                                                "distance": -70,
+                                            }
                                         }
                                     },
-                                    "series": this.data
                                 };
 
                                 createIBChart("ib-containerOil01", "myChartOil01", {
                                     width: "100%",
-                                    height: "50%"
+                                    height: "100%"
                                 });
-
                                 myChartOil01.setOptions(initData);
 
                                 this.doAction();
                             },
-                            data: [{
-                                "type": "pie",
-                                "name": "일반유 수송량",
-                                "innerSize": "50%",
-                                "data": [
-                                    ["현대글로비스", 84],
-                                    ["롯데글로벌로지스(주)", 6],
-                                    ["대한통운", 6],
-                                    ["농협물류(주)", 4],
-
-                                ]
-                            }],
+                            data: {
+                                "ibchart": {
+                                    "data": [{
+                                        "axisLabel": "현대글로비스",
+                                        "series": [84]
+                                    }, {
+                                        "axisLabel": "롯데글로벌로지스(주)",
+                                        "series": [6]
+                                    }, {
+                                        "axisLabel": "대한통운",
+                                        "series": [6]
+                                    },{
+                                        "axisLabel": "농협물류(주)",
+                                        "series": [4]
+                                    }]
+                                }
+                            },
                             doAction: function() {
-                                myChartOil01.draw();
+                                myChartOil01.loadSearchData(this.data, {
+                                    append: true
+                                });
                             }
                         };
                         ibOil01.initialize();
@@ -897,59 +907,46 @@
                             initialize: function() {
                                 var initData = {
                                     "chart": {
-                                        "plotBackgroundColor": null,
-                                        "plotBorderWidth": 0,
-                                        "plotShadow": false
+                                        "type": "pie"
                                     },
-                                    "colors": ["#017DD1", "#F8B250"],
-                                    "title": {
-                                        "text": 'LPG',
-                                        "align": 'center',
-                                        "verticalAlign": 'middle',
-                                        "y": 85
-                                    },
+                                    "colors": ["#017DD1", "#F8B250", "#00AC6C", "#6947DF"],
                                     "tooltip": {
-                                        "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                            "pointFormat": "LPG 수송량 : {point.percentage:.0f}%",
+                                        "useHTML": true
                                     },
                                     "plotOptions": {
                                         "pie": {
                                             "dataLabels": {
                                                 "enabled": true,
-                                                "distance": -50,
-                                                "style": {
-                                                    "fontWeight": 'bold',
-                                                    "color": 'white',
-                                                }
-                                            },
-                                            "startAngle": -90,
-                                            "endAngle": 90,
-                                            "center": ['50%', '75%']
+                                                "distance": -95,
+                                            }
                                         }
                                     },
-                                    "series": this.data
                                 };
 
                                 createIBChart("ib-containerOil02", "myChartOil02", {
                                     width: "100%",
-                                    height: "50%"
+                                    height: "100%"
                                 });
-
                                 myChartOil02.setOptions(initData);
 
                                 this.doAction();
                             },
-                            data: [{
-                                "type": "pie",
-                                "name": "LPG 수송량",
-                                "innerSize": "50%",
-                                "data": [
-                                    ["(주)성준로지스", 58],
-                                    ["세일로지스", 42],
-
-                                ]
-                            }],
+                            data: {
+                                "ibchart": {
+                                    "data": [{
+                                        "axisLabel": "성준로지스",
+                                        "series": [58]
+                                    }, {
+                                        "axisLabel": "세일로지스",
+                                        "series": [42]
+                                    }]
+                                }
+                            },
                             doAction: function() {
-                                myChartOil02.draw();
+                                myChartOil02.loadSearchData(this.data, {
+                                    append: true
+                                });
                             }
                         };
                         ibOil02.initialize();
@@ -1188,11 +1185,14 @@
                         };
                         ibWare01.initialize();
 
+                        $(window).load(function(){
+                            $(".swiper-button-prev").removeClass("swiper-button-disabled").attr("aria-disabled","false");
+                        })
                     </script>
 
                     <!-- controlArea -->
                     <article class="controlArea">
-                        <div class="btnArea column type02">
+                        <div class="btnArea column02 type02">
                             <button type="button" class="btn refresh">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="29.892" height="29.748" viewBox="0 0 29.892 29.748">
                                     <path id="rotate-left" d="M2.5,2V8h6M2.66,15.57a10,10,0,1,0,.57-8.38" transform="translate(31.424 10.317) rotate(120)" fill="none" stroke="#c7ccd3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -1242,64 +1242,61 @@
                                         initialize: function() {
                                             var initData = {
                                                 "chart": {
-                                                    "plotBackgroundColor": null,
-                                                    "plotBorderWidth": 0,
-                                                    "plotShadow": false
+                                                    "type": "pie"
                                                 },
                                                 "colors": ["#017DD1", "#F8B250", "#00AC6C", "#6947DF", "#019FD1", "#9099A7", "#adab6e"],
-                                                "title": {
-                                                    "text": '현대글로비스',
-                                                    "align": 'center',
-                                                    "verticalAlign": 'middle',
-                                                    "y": 140
-                                                },
                                                 "tooltip": {
-                                                    "pointFormat": '{series.name}: <b>{point.percentage:.1f}%</b>'
+                                                        "pointFormat": "일반유 수송량 : {point.percentage:.0f}%",
+                                                    "useHTML": true
                                                 },
                                                 "plotOptions": {
-                                                    "pie": {
-                                                        "dataLabels": {
-                                                            "enabled": true,
-                                                            "distance": -80,
-                                                            "style": {
-                                                                "fontWeight": 'bold',
-                                                                "color": 'white',
-                                                                "textShadow": '0px 1px 2px black'
-                                                            }
-                                                        },
-                                                        "startAngle": -90,
-                                                        "endAngle": 90,
-                                                        "center": ['50%', '75%']
+                                                "pie": {
+                                                    "dataLabels": {
+                                                    "enabled": true,
+                                                    "distance": -100,
                                                     }
-                                                },
-                                                "series": this.data
+                                                }
+                                                }
                                             };
 
                                             createIBChart("ib-containerOilpop01", "myChartOilpop01", {
                                                 width: "100%",
-                                                height: "100%"
+                                                height: "599px"
                                             });
-
                                             myChartOilpop01.setOptions(initData);
 
                                             this.doAction();
                                         },
-                                        data: [{
-                                            "type": "pie",
-                                            "name": "수송량",
-                                            "innerSize": "50%",
-                                            "data": [
-                                                ["도명특송", 25],
-                                                ["성준로지스", 22],
-                                                ["하나에너지", 19],
-                                                ["에이앤로지스", 14],
-                                                ["엘에스특수", 6],
-                                                ["태산이엔엘", 8],
-                                                ["강원물류", 5]
-                                            ]
-                                        }],
+                                        data: {
+                                            "ibchart": {
+                                                "data": [{
+                                                    "axisLabel": "도명특송",
+                                                    "series": [25]
+                                                }, {
+                                                    "axisLabel": "성준로지스",
+                                                    "series": [22]
+                                                }, {
+                                                    "axisLabel": "하나에너지",
+                                                    "series": [19]
+                                                },{
+                                                    "axisLabel": "에이앤로지스",
+                                                    "series": [14]
+                                                },{
+                                                    "axisLabel": "엘에스특수",
+                                                    "series": [6]
+                                                },{
+                                                    "axisLabel": "태산이엔엘",
+                                                    "series": [8]
+                                                },{
+                                                    "axisLabel": "강원물류",
+                                                    "series": [5]
+                                                }]
+                                            }
+                                        },
                                         doAction: function() {
-                                            myChartOilpop01.draw();
+                                            myChartOilpop01.loadSearchData(this.data, {
+                                                append: true
+                                            });
                                         }
                                     };
                                     ibOilpop01.initialize();

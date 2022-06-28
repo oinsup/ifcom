@@ -1,5 +1,5 @@
 @charset "utf-8";
-  
+
 @font-face {
   font-family: 'Noto Sans Light';
   font-style: normal;
@@ -15,7 +15,7 @@
   src: url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot);
   src: url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-DemiLight-Hestia.woff) format("woff");
 }
-  
+
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
@@ -307,7 +307,71 @@ li{list-style: none;}
       }
     }
   }
-  &.column {display: flex; flex-direction: column; 
+  &.column01 {display: flex; justify-content: space-between; align-items: flex-start;
+    ul {
+      display: flex; flex-direction: column; 
+      li {
+        .btn {
+          &.grayLine {
+            padding:8px 20px;
+            min-width: 120px;
+            border: 1px solid #DDDDDD;
+            background: #fff;
+            border-radius: 50px;
+            font-family: 'Noto Sans Medium'; font-size: 16px; color: #888888;
+            &:hover, &:focus {
+              color: #21324E; border: 1px solid #707070;
+            }
+            &:not(:first-child) {margin-top: 5px;}
+          }
+          &.refresh {
+            display: flex; justify-content: center; align-items: center;
+            width: 60px; height: 60px;
+            background: #9099A7;
+            border-radius: 50%;
+            box-shadow: 0px 2px 3px rgba(33,50,75,0.35);
+            transition: transform 0.3s;
+            svg {
+              path {
+                transition: 0.3s;
+              }
+            }
+            &:hover {
+              transform: rotate(-120deg);
+              svg {
+                path {
+                  stroke : #fff;
+                }
+              }
+            }
+          }
+          &.ckd {
+            display: flex; justify-content: center; align-items: center;
+            width: 60px; height: 60px;
+            background: #21324E;
+            border-radius: 50%;
+            box-shadow: 0px 2px 3px rgba(33,50,75,0.35);
+            transition: transform 0.3s;
+            svg {
+              path {
+                transition: 0.3s;
+              }
+            }
+            &:hover {
+              svg {
+                path {
+                  stroke : #fff;
+                }
+              }
+            }
+          }
+        }
+        &:not(:first-child) {margin-top: 5px;}
+      }
+      &:not(:first-child) {margin-left: 10px;}
+    }
+  }
+  &.column02 {display: flex; flex-direction: column; 
     .btn {
       &.grayLine {
         padding:10px 20px;
@@ -374,6 +438,9 @@ li{list-style: none;}
     width: 100%;
     height: 100%;
   }
+  &.type03 {
+    
+  }
 }
 
 .selectArea {
@@ -402,6 +469,31 @@ li{list-style: none;}
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
+}
+
+.swiper01{position: relative; width: 100%;  height: 100%; overflow: hidden;
+  .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{opacity: 1; pointer-events: painted; cursor: pointer}
+  .swiper-button-prev, .swiper-button-next{position: absolute; bottom: 0; top: inherit; display: block;}
+  .swiper-button-prev{width: 40px;height: 40px; left: 0; background: rgba($color: #222, $alpha: 0.9) url("../images/common/btn-prev.svg") no-repeat center;}
+  .swiper-button-next{width: 40px;height: 40px; left: 40px; background: rgba($color: #222, $alpha: 0.9) url("../images/common/btn-next.svg") no-repeat center;}
+  .swiper-pagination{
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    .swiper-pagination-bullet {
+      width: 20px; height: 5px; background: #666; border-radius: 5px;
+      transition: 0.3s; opacity: 0.5;
+    }
+    .swiper-pagination-bullet-active {
+      width: 60px; height: 5px;
+      opacity: 1;
+    }
+    .swiper-button-disabled{
+      display:none;   
+    }
+  }
+  
 }
 
 #lnb {  overflow: hidden;
@@ -1059,9 +1151,16 @@ li{list-style: none;}
     .highcharts-data-labels {
       .highcharts-label {
         text {
-          font-family: "Noto Sans Medium" !important; font-size: 12px !important; color: #fff !important;
+          font-family: "Noto Sans" !important; font-size: 14px !important; color: #fff !important;
           text-shadow: none !important;
         }
+      }
+    }
+  }
+  .highcharts-label {
+    &.highcharts-tooltip {
+      span {
+        font-family: "Noto Sans Medium" !important; font-size: 12px !important; 
       }
     }
   }
@@ -1103,9 +1202,16 @@ li{list-style: none;}
     .highcharts-data-labels {
       .highcharts-label {
         text {
-          font-family: "Noto Sans Medium" !important; font-size: 12px !important; color: #fff !important;
+          font-family: "Noto Sans" !important; font-size: 14px !important; color: #fff !important;
           text-shadow: none !important;
         }
+      }
+    }
+  }
+  .highcharts-label {
+    &.highcharts-tooltip {
+      span {
+        font-family: "Noto Sans Medium" !important; font-size: 12px !important; 
       }
     }
   }
@@ -1137,6 +1243,13 @@ li{list-style: none;}
           font-family: 'Noto Sans Medium' !important; font-size: 16px !important;
           color: #fff !important; text-shadow: none !important;
         }
+      }
+    }
+  }
+  .highcharts-label {
+    &.highcharts-tooltip {
+      span {
+        font-family: "Noto Sans Medium" !important; font-size: 12px !important; 
       }
     }
   }
@@ -1483,5 +1596,5 @@ li{list-style: none;}
     } 
   }
 }
-      
+
 @import "hover";

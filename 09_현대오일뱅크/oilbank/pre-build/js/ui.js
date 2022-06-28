@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+    // a, button태그 title 속성 비어있을때 작성된text로 title 생성
+    $('a, .btn').each(function(){
+        let Tag = $(this);
+        let attr = Tag.text();
+        if ($(this).is('[title]')) {
+        } else {
+            Tag.attr("title",attr);
+        }
+    })
+
     //dashboard lnb
     $("#lnb .dep01 > li > a").on('click', function(){
         if ($(this).hasClass("active")) {
@@ -28,12 +38,30 @@ $(document).ready(function(){
 
     //dashboard wide&default
     $("#content .drawer").on('click', function(){
+        swiper01.updateSize()
+
         if($(this).closest("#contents").hasClass("active")) {
             $(this).attr("title","선택 해제").closest("#contents").removeClass("active");
         } else {
             $(this).attr("title","선택 됨").closest("#contents").addClass("active");
         }
     })
+
+    var swiper01 = new Swiper('.swiper01', {
+        slidesPerView: 'auto',
+        observer: true,
+        observeParents: true,
+        touchRatio: 0,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+
 
     // map area
     $(".map map area").on('mouseenter', function(){
@@ -46,7 +74,6 @@ $(document).ready(function(){
         $(".location").addClass("show");
     })
 
-    // popup
     $(".seoul").on('click', function(){
         $(".location").addClass("show");
     })
@@ -62,7 +89,6 @@ $(document).ready(function(){
     $("#myChartCompany01").on('click', function(){
         $(".company01").addClass("show");
     })
-
 
     $(".popHead .btnArea .close").on('click', function(){
         $(this).closest(".popup").removeClass("show")
