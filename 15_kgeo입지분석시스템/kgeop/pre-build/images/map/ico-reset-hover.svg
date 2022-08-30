@@ -1,0 +1,16 @@
+<svg id="초기화" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <rect id="아이콘박스" width="30" height="30" rx="5" fill="#f6f6fe"/>
+  <path id="_2" data-name="2" d="M315.414,30.486A7.083,7.083,0,0,0,322.561,38a7.5,7.5,0,1,0,0-14.993,6.146,6.146,0,0,0-4.48,1.664" transform="translate(-306.936 -14.676)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="다각형_3" data-name="다각형 3" d="M3.608.776a1,1,0,0,1,1.458,0L7.093,2.935A1,1,0,0,1,6.364,4.62H2.311a1,1,0,0,1-.729-1.684Z" transform="matrix(-0.719, -0.695, 0.695, -0.719, 11.417, 16.027)" fill="#8587bc"/>
+  <g id="ov" transform="translate(-1848 -322)">
+    <rect id="아이콘박스-2" data-name="아이콘박스" width="30" height="30" rx="5" transform="translate(1848 322)" fill="url(#linear-gradient)"/>
+    <path id="_2-2" data-name="2" d="M315.414,30.486A7.083,7.083,0,0,0,322.561,38a7.5,7.5,0,1,0,0-14.993,6.146,6.146,0,0,0-4.48,1.664" transform="translate(1541.064 307.324)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="다각형_3-2" data-name="다각형 3" d="M3.608.776a1,1,0,0,1,1.458,0L7.093,2.935A1,1,0,0,1,6.364,4.62H2.311a1,1,0,0,1-.729-1.684Z" transform="matrix(-0.719, -0.695, 0.695, -0.719, 1859.417, 338.027)" fill="#fff"/>
+  </g>
+</svg>

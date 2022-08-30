@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_공유" data-name="icon / 공유" transform="translate(-362 -25)">
+    <rect id="area" width="20" height="20" transform="translate(362 25)" fill="none" opacity="0.5"/>
+    <path id="icon_share" data-name="icon / share" d="M17.256,14.974a2.476,2.476,0,0,0-1.667.655L9.526,12.1a2.353,2.353,0,0,0,0-1.191l6-3.5a2.546,2.546,0,1,0-.816-1.862,2.784,2.784,0,0,0,.077.6l-6,3.5a2.551,2.551,0,1,0,0,3.725L14.841,16.9a2.4,2.4,0,0,0-.068.553,2.483,2.483,0,1,0,2.483-2.483Z" transform="translate(359.5 24)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kgeo플랫폼">
+<meta name="description" content="kgeop플랫폼 입지 분석 시스템">
+
+<!-- 오픈그래프 이미지의 경우 최소한 600 x 315 px은 되어야 하며, 1200 x 630 px을 권장함 -->
+<meta property="og:image" content="">
+<meta property="og:title" content="kgeo플랫폼">
+<meta property="og:description" content="kgeo플랫폼 입지 분석 시스템">
+<meta property="og:url" content="">
+<!-- 다음의 태그는 필수는 아니지만, 포함하는 것을 추천함 -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../lib/fullPage.js-2.9.7/fullpage.css" />
+<link rel="stylesheet" href="../css/common.css">
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../lib/fullPage.js-2.9.7/jquery.fullpage.min.js"></script>
+<script src="../js/ui.js"></script>
+
+<title>K-Geo플랫폼 입지 분석 시스템</title>
+
+
+</head>
+
+<body style="overflow-y: hidden;">
+
+    <div id="wrap" class="map">
+        <!--header-->
+        <header id="header" class="mapHeader">
+            <!--accNav-->
+<!-- <div id="accNav">
+    <a href="#container">본문 바로가기</a>
+</div> -->
+<!--//accNav-->
+
+<!-- mapMenu -->
+<article class="mapMenu">
+
+    <!-- logoArea -->
+    <article class="logoArea map">
+        <h3>
+            <a href="#">
+                <img src="../../images/map/img-maplogo.png" alt="K-Geo플랫폼 입지 분석 시스템">
+            </a>
+        </h3>
+    </article>
+    <!-- //logoArea -->
+
+    <!-- haderMenu -->
+    <nav class="headerMenu">
+        <ul>
+            <li>
+                <button type="button" class="extraction btn tool">개발가능지 추출</button>
+            </li>
+            <li>
+                <button type="button" class="analysis btn tool">잠재력 분석</button>
+            </li>
+            <li>
+                <button type="button" class="status btn tool">분석 현황</button>
+            </li>
+        </ul>
+    </nav>
+    <!-- //haderMenu -->
+
+    <!-- menuSwitch -->
+    <article class="menuSwitch">
+        <button type="button" class="btn switch">
+            <span>메뉴</span>
+        </button>
+    </article>
+    <!-- //menuSwitch -->
+</article>
+<!-- //mapMenu -->
+        </header>
+        <!--header-->
+
+        <!-- #toc -->
+        <section id="toc">
+
+            <!-- toc 1depth -->
+            <article class="toc dep01 tocWidget active">
+                <!-- inner -->
+                <div class="inner">
+                    <!-- head -->
+                    <div class="head">
+                        <h3 class="title type05">프로젝트AA</h3>
+                        <!-- btnArea -->
+                        <div class="btnArea">
+                            <button type="button" class="btn tocList" title="리스트"></button>
+                            <button type="button" class="btn tocSave" title="저장히기"></button>
+                            <button type="button" class="btn tocShare" title="공유하기"></button>
+                        </div>
+                        <!-- //btnArea -->
+                    </div>
+                    <!-- //head -->
+                    <!-- cont -->
+                    <div class="cont cScroll">
+                        <!-- tocTool -->
+                        <article class="tocTool">
+                            <div class="btnArea">
+                                <button type="button" class="btn tocAdd" title="레이어 추가"></button>
+                                <button type="button" class="btn tocGropadd" title="그룹 추가"></button>
+                                <button type="button" class="btn tocSearch" title="레이어 검색"></button>
+                                <button type="button" class="btn tocUpload" title="파일 업로드"></button>
+                            </div>
+                            <div class="btnArea">
+                                <button type="button" class="btn toggle allView" title="레이어 on/off"></button>
+                            </div>
+                        </article>
+                        <!-- //tocTool -->
+
+                        <!-- listGroup -->
+                        <article class="listGroup">
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label active">
+                                    <div class="labelTitle">
+                                        <button type="button" class="btn title type05 elips">
+                                            기본지도
+                                        </button>
+                                        <button type="button" class="btn setting" title="설정"></button>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn toggle layerView" title="보기"></button>
+                                        <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 행정구역시군구_경계 행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적 연속지적 연속지적 연속지적 연속지적 연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label">
+                                    <div class="labelTitle">
+                                        <button type="button" class="btn title type05 elips">
+                                            기본지도
+                                        </button>
+                                        <button type="button" class="btn setting" title="설정"></button>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn toggle layerView" title="보기"></button>
+                                        <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 행정구역시군구_경계 행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적 연속지적 연속지적 연속지적 연속지적 연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+                        </article>
+                        <!-- //listGroup -->
+                    </div>
+                    <!-- //cont -->
+                </div>
+                <!-- //inner -->
+
+                <!-- tocSwitch -->
+                <article class="tocSwitch">
+                    <button type="button" class="btn label active">
+                        <span></span>
+                    </button>
+                </article>
+                <!-- tocSwitch -->
+            </article>
+            <!-- //toc 1depth -->
+
+            <!-- toc 2depth -->
+            <article class="toc dep02 type02 statusWidget active">
+                <!-- inner -->
+                <div class="inner">
+                    <!-- head -->
+                    <div class="head">
+                        <h3 class="title type05">분석 현황</h3>
+
+                    </div>
+                    <!-- //head -->
+                    <!-- cont -->
+                    <div class="cont cScroll">
+
+                        <!-- listGroup -->
+                        <article class="listGroup">
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label active">
+                                    <div class="labelTitle">
+                                        <span class="step">
+                                            step1
+                                        </span>
+                                        <button type="button" class="btn title type05 elips">
+                                            대상영역 선택
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <!-- stepFunc -->
+                                    <article class="stepFunc">
+                                        <ul>
+                                            <li>
+                                                <button type="button" class="btn layer search">
+                                                    <span>레이어 검색</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn layer write active">
+                                                    <span>영역 그리기</span>
+                                                </button>
+                                                <ul class="dep02">
+                                                    <li>
+                                                        <button type="button" class="btn dep02Octa">
+                                                            <span>다각형</span>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="btn dep02Circle">
+                                                            <span>원</span>
+                                                        </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="btn dep02Rect">
+                                                            <span>사각형</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="btn layer upload">
+                                                    <span>파일 업로드</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                    <!-- //stepFunc -->
+                                    <ul>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd01">
+                                                <label for="ckd01" class="elips">
+                                                    대전가능지 추출기준
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd02">
+                                                <label for="ckd02" class="elips">
+                                                    대전 필요영역
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd03" checked>
+                                                <label for="ckd03" class="elips">
+                                                    행정구역_읍면동(법정동)
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd04" checked>
+                                                <label for="ckd04" class="elips">
+                                                    행정구역_읍면동(법정동)
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd05" checked>
+                                                <label for="ckd05" class="elips">
+                                                    행정구역_읍면동(법정동)
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd06" checked>
+                                                <label for="ckd06" class="elips">
+                                                    행정구역_읍면동(법정동)
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                        <li class="type02">
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd07" checked>
+                                                <label for="ckd07" class="elips">
+                                                    행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동)
+                                                </label>
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label">
+                                    <div class="labelTitle">
+                                        <span class="step">
+                                            step2
+                                        </span>
+                                        <button type="button" class="btn title type05 elips">
+                                            개발가능지 분석
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <!-- loadArea -->
+                                    <article class="loadArea">
+                                        <div class="load">
+                                            <ul>
+                                                <li>
+                                                    <!-- btnArea -->
+                                                    <div class="btnArea type02">
+                                                        <button type="button" class="btn navyCircle onChange" style="min-width: 150px">일괄분석 실행</button>
+                                                    </div>
+                                                    <!-- //btnArea -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                    <!-- loadArea -->
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label">
+                                    <div class="labelTitle">
+                                        <span class="step">
+                                            step3
+                                        </span>
+                                        <button type="button" class="btn title type05 elips">
+                                            분석 결과 조회
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list type02">
+                                    <ul>
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전가능지 추출
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전 필요영역
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전 필요영역
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전 필요영역
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전가능지 추출
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                        <li class="type03">
+                                            <p class="name type01">
+                                                대전가능지 추출
+                                            </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle resultSearch" title="결과 조회"></button>
+                                                <button type="button" class="btn toggle resultPrint" title="결과 출력"></button>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+                        </article>
+                        <!-- //listGroup -->
+                    </div>
+                    <!-- //cont -->
+                </div>
+                <!-- //inner -->
+            </article>
+            <!-- //toc 2depth -->
+        </section>
+        <!-- // #toc -->
+
+        <!-- mapContainer -->
+        <section class="mapContainer">
+            <!-- mapArea -->
+            <article class="mapArea">
+
+                <!-- map -->
+                <article id="map" style="background: url('../images/map/img-map.jpg') no-repeat center;">
+
+                </article>
+                <!-- //map -->
+
+                <!-- rightArea -->
+<section class="rightArea">
+    <!-- location -->
+    <article class="location">
+        <ul class="dep01">
+            <li>
+                <a href="javascript:void(0)" class="active">충청북도</a>
+                <ul class="dep02 cScroll">
+                    <li>
+                        <a href="javascirpt:void(0)">서울특별시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">부산광역시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">대구광역시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">인천광역시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">광주광역시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">제주특별자치도</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">세종특별자치도</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">충주시</a>
+                <ul class="dep02 cScroll">
+                    <li>
+                        <a href="javascirpt:void(0)">경산시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">경주시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">고령군</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">구미시</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">안림동</a>
+                <ul class="dep02 cScroll">
+                    <li>
+                        <a href="javascirpt:void(0)">가은읍</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">공평동</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">농암면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                    <li>
+                        <a href="javascirpt:void(0)">동로면</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </article>
+    <!-- //location -->
+
+    <!-- userMenu -->
+    <article class="userMenu">
+        <div class="inputGroup horizontal">
+            <article class="selectArea typeSum">
+                <select name="" id="">
+                    <option value="">통합</option>
+                </select>
+            </article>
+            <article class="searchArea typeSum">
+                <label for="i01">
+                    <input type="text" id="i01" placeholder="검색어를 입력하세요.">
+                </label>
+                <div class="btnArea">
+                    <button type="button" class="btn search" title="검색">
+                        <svg width="14" height="14" viewBox="0 0 14 14">
+                            <path id="search" d="M17.162,15.971,13.987,12.8A5.9,5.9,0,1,0,12.8,13.987l3.174,3.174a.843.843,0,0,0,1.191-1.191Zm-12.1-6.7a4.21,4.21,0,1,1,4.21,4.21A4.21,4.21,0,0,1,5.059,9.269Z" transform="translate(-3.375 -3.375)" fill="#999"></path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <!-- outputArea -->
+        <div class="outputArea active">
+            <!-- outputHead -->
+            <div class="outputHead">
+                <h3 class="title type06">
+                    검색결과
+                    <em>56</em>건
+                </h3> 
+                <!-- btnArea -->
+                <div class="btnArea">
+                    <button type="button" class="btn close" title="닫기"></button>
+                </div>
+            </div>
+            <!-- outputHead -->
+
+            <!-- outputCont -->
+            <div class="outputCont">
+                <!-- box -->
+                <div class="box">
+                    <ul>
+                        <li class="street">
+                            <span>도로명</span>
+                            <p class="elips02">
+                                서울특별시 강남구 헌릉로590길 63(세곡동, 강남데시앙파크) 서울특별시 강남구 헌릉로590길 63(세곡동, 강남데시앙파크)
+                            </p>
+                        </li>
+                        <li class="ground">
+                            <span>지번</span>
+                            <p class="elips02">서울특별시 강남구 세곡동 525 강남데시앙파크서울특별시 강남구 세곡동 525 강남데시앙파크서울특별시 강남구 세곡동 525 강남데시앙파크</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box -->
+                <!-- box -->
+                <div class="box">
+                    <ul>
+                        <li class="street">
+                            <span>도로명</span>
+                            <p class="elips02">
+                                서울특별시 강북구 한천로129길 23(번동)
+                            </p>
+                        </li>
+                        <li class="ground">
+                            <span>지번</span>
+                            <p class="elips02">서울특별시 강북구 번동 413-9 삼진데시앙</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box -->
+                <div class="box">
+                    <ul>
+                        <li class="street">
+                            <span>도로명</span>
+                            <p class="elips02">
+                                서울특별시 강북구 한천로129길 23(번동)
+                            </p>
+                        </li>
+                        <li class="ground">
+                            <span>지번</span>
+                            <p class="elips02">서울특별시 강북구 번동 413-9 삼진데시앙</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box -->
+                <div class="box">
+                    <ul>
+                        <li class="street">
+                            <span>도로명</span>
+                            <p class="elips02">
+                                서울특별시 강북구 한천로129길 23(번동)
+                            </p>
+                        </li>
+                        <li class="ground">
+                            <span>지번</span>
+                            <p class="elips02">서울특별시 강북구 번동 413-9 삼진데시앙</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box -->
+                <div class="box">
+                    <ul>
+                        <li class="street">
+                            <span>도로명</span>
+                            <p class="elips02">
+                                서울특별시 강북구 한천로129길 23(번동)
+                            </p>
+                        </li>
+                        <li class="ground">
+                            <span>지번</span>
+                            <p class="elips02">서울특별시 강북구 번동 413-9 삼진데시앙</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //box -->
+            </div>
+            <!-- //outputCont -->
+
+            <!-- outputFoot -->
+            <div class="outputFoot">
+                <!-- pagination -->
+                <article class="pagination type02">
+                    
+                    <button type="button" class="btn prev layerInfo" title="이전"></button>
+
+                    <div class="pages">
+                        <p class="current">1</p>
+                        <span class="dash">/</span>
+                        <p class="all">20</p>
+                    </div>
+
+                    <button type="button" class="btn next layerInfo" title="다음"></button>
+
+                    
+                </article>
+                <!-- //pagination -->
+            </div>
+            <!-- //outputFoot -->
+
+        </div>
+        <!-- //outputArea -->
+    </article>
+    <!-- //userMenu -->
+</section>
+<!-- //rightArea -->
+
+                <!-- toolBar -->
+<section class="toolBar">
+    <!-- widget -->
+    <article class="widget widget01">
+        <ul>
+            <li>
+                <button type="button" class="btn toggle tool emap on">
+                    <span>
+                        바로e맵
+                    </span>
+                </button>
+                <ul class="dep01">
+                    <li>
+                        <button type="button" class="btn toggle02 tool basic">
+                            <span>지도</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool emap">
+                            <span>바로e맵</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool air">
+                            <span>항공사진</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool white">
+                            <span>백지도</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="btn toggle tool division on">
+                    <span>
+                        지도분할
+                    </span>
+                </button>
+                <ul class="dep01">
+                    <li>
+                        <button type="button" class="btn toggle02 tool allMap">
+                            <span>전체</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool twoMap">
+                            <span>2분할</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool threeMap">
+                            <span>3분할</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool fourMap">
+                            <span>4분할</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="btn tool info">
+                    <span>
+                        정보조회
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="btn tool property">
+                    <span>
+                        속성보기
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </article>
+    <!-- //widget -->
+
+    <!-- widget -->
+    <article class="widget widget01">
+        <ul>
+            <li>
+                <button type="button" class="btn tool reset">
+                    <span>
+                        초기화
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="btn toggle tool draw on">
+                    <span>
+                        그리기
+                    </span>
+                </button>
+                <ul class="dep01">
+                    <li>
+                        <button type="button" class="btn toggle02 tool text">
+                            <span>텍스트</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool octa">
+                            <span>다각형</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool line">
+                            <span>라인</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool point">
+                            <span>포인트</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool circle">
+                            <span>원</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool rect">
+                            <span>사각형</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool curve">
+                            <span>곡선</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool buffer">
+                            <span>버퍼</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="btn toggle tool measure on">
+                    <span>
+                        측정
+                    </span>
+                </button>
+                <ul class="dep01">
+                    <li>
+                        <button type="button" class="btn toggle02 tool area">
+                            <span>면적</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool distance">
+                            <span>거리</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="btn tool appli">
+                    <span>
+                        신청
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="btn toggle tool print on">
+                    <span>
+                        출력
+                    </span>
+                </button>
+                <ul class="dep01">
+                    <li>
+                        <button type="button" class="btn toggle02 tool save">
+                            <span>화면저장</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn toggle02 tool print">
+                            <span>출력</span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button type="button" class="btn tool indexmap">
+                    <span>
+                        인덱스맵
+                    </span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="btn tool help">
+                    <span>
+                        도움말
+                    </span>
+                </button>
+            </li>
+        </ul>
+    </article>
+    <!-- //widget -->
+
+    <!-- scale -->
+    <article class="scale">
+        <button type="button" class="btn scalePlus" title="스케일 확대"></button>
+        <div id="slider-vertical" style="height: 134px;">
+        </div>
+        <button type="button" class="btn scaleMinus" title="스케일 축소"></button>
+    </article>
+    <!-- //scale -->
+
+    <!-- statute -->
+    <article class="statute">
+        <!-- tableArea -->
+        <div class="tableArea">
+            <!-- table -->
+            <div class="table type02">
+                <table>
+                    <caption>법령정보 게시물로 레이어정보, 법령정보 등의 정보를 제공합니다.</caption>
+                    <colgroup>
+                        <col style="width: 180px;">
+                        <col style="width: auto;">
+                    </colgroup>
+                    <thead>
+                        <th scope="col">레이어정보</th>
+                        <th scope="col">법령정보</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="elips">산림보호/산림보호 산림제한 산림보호/산림보호 산림제한</td>
+                            <td>「산림보호법」</td>
+                        </tr>
+                        <tr>
+                            <td>산림보호/산림보호 산림제한</td>
+                            <td>「산림보호법」</td>
+                        </tr>
+                        <tr>
+                            <td>산림보호/산림보호 산림제한</td>
+                            <td>「산림보호법」</td>
+                        </tr>
+                        <tr>
+                            <td>산림보호/산림보호 산림제한</td>
+                            <td>「산림보호법」</td>
+                        </tr>
+                        <tr>
+                            <td>산림보호/산림보호 산림제한</td>
+                            <td>「산림보호법」</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table -->
+        </div>
+        <!-- //tableArea -->
+    </article>
+    <!-- statute -->
+</section>
+<!-- //toolBar -->
+                
+            </article>
+            <!-- //mapArea -->
+
+            <!-- popupArea -->
+            <section class="popupArea">
+
+                <!-- popup -->
+                <article class="popup type02 active">
+                    <div class="inner type02" style="width: 1250px; min-width: 1250px;">
+                        <!-- popHead -->
+                        <div class="popHead">
+                            <h3 class="title type02">현황 분석</h3>
+                            <!-- btnArea -->
+                            <div class="btnArea">
+                                <button type="button" class="btn popClose">
+                                    <span class="hidden">창 닫기</span>
+                                </button>
+                            </div>
+                            <!-- //btnArea -->
+                        </div>
+                        <!-- //popHead -->
+
+                        <!-- popBody -->
+                        <div class="popBody">
+
+                            <!-- tabNav -->
+                            <article class="tabNav type03">
+                                <!-- tabList -->
+                                <ul class="tabList">
+                                    <li>
+                                        <button type="button" class="btn blueTab summary active">
+                                            <span>
+                                                개요
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn blueTab regulation">
+                                            <span>
+                                                입지규제사항
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn blueTab status">
+                                            <span>
+                                                입지 현황
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn blueTab land">
+                                            <span>
+                                                필지 조서
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <!-- //tabList -->
+
+                                <!-- tabCont -->
+                                <article class="tabCont active">
+
+                                    <!-- tableArea -->
+                                    <section class="tableArea">
+                                        <!-- tableHead -->
+                                        <article class="tableHead">
+                                            <p>기본정보</p>
+                                        </article>
+                                        <!-- //tableHead -->
+
+                                        <!-- table -->
+                                        <div class="table type07">
+                                            <table>
+                                                <caption>
+                                                    현황분석 개요 기본정보 게시물로 위치, 면적, 편입공부면적, 편입면적, 입지여건, 토지이용현황 등의 정보를 제공합니다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width: 80px;">
+                                                    <col style="width: 140px">
+                                                    <col style="width: 158px;">
+                                                    <col style="width: 158px;">
+                                                    <col style="width: 158px;">
+                                                    <col style="width: 158px;">
+                                                    <col style="width: 158px;">
+                                                    <col style="width: auto;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row" colspan="2">위치</th>
+                                                        <td colspan="6">경기도 하남시</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row" rowspan="2">면적</th>
+                                                        <th scope="row" class="lineLeft">편입공부면적</th>
+                                                        <td colspan="3">556m²</td>
+                                                        <td colspan="3">15만평</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row" class="lineLeft">편입면적</th>
+                                                        <td colspan="3">556m²</td>
+                                                        <td colspan="3">15만평</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row" colspan="2">입지여건</th>
+                                                        <td colspan="6" class="elips">
+                                                            주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th scope="row" colspan="2" rowspan="2">토지이용현황</th>
+                                                        <th scope="col" class="taC">계</th>
+                                                        <th scope="col" class="taC">전</th>
+                                                        <th scope="col" class="taC">답</th>
+                                                        <th scope="col" class="taC">대</th>
+                                                        <th scope="col" class="taC">임</th>
+                                                        <th scope="col" class="taC">기타</th>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td class="taC">71</td>
+                                                        <td class="taC">7</td>
+                                                        <td class="taC">31</td>
+                                                        <td class="taC">1</td>
+                                                        <td class="taC">46</td>
+                                                        <td class="taC">7</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table -->
+
+                                    </section>
+                                    <!-- //tableArea -->
+
+                                    <!-- tableArea -->
+                                    <section class="tableArea" style="margin-top: 20px;">
+                                        <!-- tableHead -->
+                                        <article class="tableHead">
+                                            <p>법령정보</p>
+                                        </article>
+                                        <!-- //tableHead -->
+
+                                        <!-- table -->
+                                        <div class="table type02">
+                                            <table class="cScroll">
+                                                <caption>
+                                                    현황분석 개요 법령정보 게시물로 법령명, 소관부처, 공포번호, 시행일 등의 정보를 제공합니다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width: auto;">
+                                                    <col style="width: 200px">
+                                                    <col style="width: 150px;">
+                                                    <col style="width: 150px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">법령명</th>
+                                                        <th scope="col">소관부처</th>
+                                                        <th scope="col">공포번호</th>
+                                                        <th scope="col">시행일</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="accoLabel">
+                                                        <td>
+                                                            <a href="javascript:void(0)" class="elips label">
+                                                                10ㆍ27법난 피해자의 명예회복 등에 관한 법률
+                                                            </a>
+                                                        </td>
+                                                        <td>문화체육관광부</td>
+                                                        <td>18146</td>
+                                                        <td>2021.05.18</td>
+                                                    </tr>
+
+                                                    <tr class="accoCont">
+                                                        <td colspan="4">
+                                                            <div>
+                                                                <p class="desc taL">
+                                                                    정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26> 정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="accoLabel">
+                                                        <td>
+                                                            <a href="javascript:void(0)" class="elips label">
+                                                                10ㆍ27법난 피해자의 명예회복 등에 관한 법률
+                                                            </a>
+                                                        </td>
+                                                        <td>문화체육관광부</td>
+                                                        <td>18146</td>
+                                                        <td>2021.05.18</td>
+                                                    </tr>
+
+                                                    <tr class="accoCont">
+                                                        <td colspan="4">
+                                                            <div>
+                                                                <p class="desc taL">
+                                                                    정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26> 정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="accoLabel">
+                                                        <td>
+                                                            <a href="javascript:void(0)" class="elips label">
+                                                                10ㆍ27법난 피해자의 명예회복 등에 관한 법률
+                                                            </a>
+                                                        </td>
+                                                        <td>문화체육관광부</td>
+                                                        <td>18146</td>
+                                                        <td>2021.05.18</td>
+                                                    </tr>
+
+                                                    <tr class="accoCont">
+                                                        <td colspan="4">
+                                                            <div>
+                                                                <p class="desc taL">
+                                                                    정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26> 정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="accoLabel">
+                                                        <td>
+                                                            <a href="javascript:void(0)" class="elips label">
+                                                                10ㆍ27법난 피해자의 명예회복 등에 관한 법률
+                                                            </a>
+                                                        </td>
+                                                        <td>문화체육관광부</td>
+                                                        <td>18146</td>
+                                                        <td>2021.05.18</td>
+                                                    </tr>
+
+                                                    <tr class="accoCont">
+                                                        <td colspan="4">
+                                                            <div>
+                                                                <p class="desc taL">
+                                                                    정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26> 정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr class="accoLabel">
+                                                        <td>
+                                                            <a href="javascript:void(0)" class="elips label">
+                                                                10ㆍ27법난 피해자의 명예회복 등에 관한 법률
+                                                            </a>
+                                                        </td>
+                                                        <td>문화체육관광부</td>
+                                                        <td>18146</td>
+                                                        <td>2021.05.18</td>
+                                                    </tr>
+
+                                                    <tr class="accoCont">
+                                                        <td colspan="4">
+                                                            <div>
+                                                                <p class="desc taL">
+                                                                    정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26> 정당한 사유 없이 제13조제2항을 위반하여 구조ㆍ구급활동을 방해한 자는 5년 이하의 징역 또는 5천만원 이하의 벌금에 처한다. <개정 2017.12.26>
+                                                                </p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table -->
+
+                                        <!-- pagination -->
+                                        <article class="pagination">
+                                            <button type="button" class="btn first off" title="첫번째 페이지">
+                                                <span class="hidden">첫번째 페이지</span>
+                                                <svg width="13" height="12" viewBox="0 0 13 12">
+                                                    <g id="_" data-name="&lt;&lt;" transform="translate(-714.5 -1056)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1014.486 -305.118) rotate(90)" fill="#666" />
+                                                        <path id="Shape_1048-2" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1020.486 -305.118) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" class="btn prev off" title="이전 페이지">
+                                                <span class="hidden">이전 페이지</span>
+                                                <svg width="7" height="12" viewBox="0 0 7 12">
+                                                    <g id="_" data-name="&lt;" transform="translate(-714.5 -1056)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1014.486 -305.118) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <a href="#" class="active">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <a href="#">8</a>
+                                            <a href="#">9</a>
+                                            <a href="#">10</a>
+
+                                            <button type="button" class="btn next " title="다음 페이지">
+                                                <span class="hidden">다음 페이지</span>
+                                                <svg id="_" data-name="&gt;" width="7" height="12" viewBox="0 0 7 12">
+                                                    <path id="Shape_1048" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(7 0) rotate(90)" fill="#666" />
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" class="btn last " title="마지막 페이지">
+                                                <span class="hidden">마지막 페이지</span>
+                                                <svg width="13" height="12" viewBox="0 0 13 12">
+                                                    <g id="default" transform="translate(0 0)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(13) rotate(90)" fill="#666" />
+                                                        <path id="Shape_1048-2" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(7) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </article>
+                                        <!-- //pagination -->
+                                    </section>
+                                    <!-- //tableArea -->
+
+                                </article>
+                                <!-- //tabCont -->
+
+                                <!-- tabCont -->
+                                <article class="tabCont type02">
+
+                                    <!-- bodyLeft -->
+                                    <div class="bodyLeft type02">
+
+                                        <div class="listArea acco02">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)">용도지역</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">용도지구</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">기타토지이용규제사항</a>
+                                                    <!-- dep01 -->
+                                                    <ul class="dep dep01">
+                                                        <li>
+                                                            <a href="javascript:void(0)">보전산지</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">농업진흥지역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">군사기지 및 군사시설 보호구역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">문화재 보호 구역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">매장문화재</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">용도구역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">항공법상 제한지역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">특별대책지역</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">철도보호지구</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //dep01 -->
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <!-- //bodyLeft -->
+
+                                    <!-- bodyRight -->
+                                    <div class="bodyRight">
+                                        <!-- tableArea -->
+                                        <section class="tableArea">
+                                            <!-- tableHead -->
+                                            <article class="tableHead">
+                                                <p>용도지역</p>
+                                            </article>
+                                            <!-- //tableHead -->
+                                            <!-- table -->
+                                            <div class="table type02">
+                                                <table>
+                                                    <caption>입지규제사항 용도지역 게시물로 용도별, 면적(m²), 구성비(%) 등의 정보를 제공합니다.</caption>
+                                                    <colgroup>
+                                                        <col style="width: 303px;">
+                                                        <col style="width: 303px;">
+                                                        <col style="width: auto;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">용도별</th>
+                                                            <th scope="col">면적(m²)</th>
+                                                            <th scope="col">구성비(%)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>주거지역</td>
+                                                            <td class="taR">45,322.11</td>
+                                                            <td class="taR">2.45</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>자연녹지지역</td>
+                                                            <td class="taR">765,236.23</td>
+                                                            <td class="taR">97.87</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>편입공부면적</td>
+                                                            <td class="taR">888,888.22</td>
+                                                            <td class="taR"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>구적면적</td>
+                                                            <td class="taR">878,888.88</td>
+                                                            <td class="taR"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table -->
+                                            <article class="descBottom">
+                                                <ul>
+                                                    <li>
+                                                        <p>* 구성비는 구적 면적으로 계산됩니다.</p>
+                                                    </li>
+                                                </ul>
+                                            </article>
+
+                                            <!-- mapInfo -->
+                                            <article class="mapInfo type02">
+                                                <!-- imgArea -->
+                                                <div class="imgArea">
+                                                    <div class="inner">
+                                                        <img src="../images/img/img-map02.jpg" alt="맵 이미지">
+
+                                                        <!-- control -->
+                                                        <div class="control">
+                                                            <!-- btnArea -->
+                                                            <div class="btnArea edit">
+                                                                <button type="button" class="btn whiteSmall02">
+                                                                    <span>
+                                                                        불러오기
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button" class="btn toggle navySmall">
+                                                                    <span>
+                                                                        편집
+                                                                    </span>
+                                                                </button>
+
+                                                                <!-- btnArea -->
+                                                                <div class="btnArea save">
+                                                                    <button type="button" class="btn whiteSmall">라벨</button>
+                                                                    <button type="button" class="btn whiteSmall">그리기</button>
+                                                                    <button type="button" class="btn graySmall close">저장</button>
+                                                                </div>
+                                                                <!-- //btnArea -->
+
+                                                            </div>
+                                                            <!-- //btnArea -->
+
+                                                        </div>
+                                                        <!-- //control -->
+
+                                                        <!-- legendArea -->
+                                                        <div class="legendArea">
+                                                            <!-- legendHead -->
+                                                            <div class="legendHead">
+                                                                <h3 class="title type08">범례</h3>
+                                                            </div>
+                                                            <!-- legendHead -->
+                                                            <!-- legendCont -->
+                                                            <div class="legendCont cScroll">
+                                                                <ul>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            주거지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            자연노지지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- legendCont -->
+                                                        </div>
+                                                        <!-- //legendArea -->
+
+                                                        <!-- layerArea -->
+                                                        <div class="layerArea on">
+                                                            <button type="button" class="btn layerSwitch on"></button>
+                                                            <!-- table -->
+                                                            <div class="table type10">
+                                                                <table>
+                                                                    <caption>입지규제사항 레이어 게시물로 구분, 레이어명, on/off, 삭제 등의 정보를 제공합니다.</caption>
+                                                                    <colgroup>
+                                                                        <col style="width: 129px;">
+                                                                        <col style="width: 350px;">
+                                                                        <col style="width: 115px;">
+                                                                        <col style="width: 128px;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col" class="taL">구분</th>
+                                                                            <th scope="col">레이어명</th>
+                                                                            <th scope="col">On/Off</th>
+                                                                            <th scope="col">삭제</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="cScroll">
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨 지하철 연장라벨 지하철 연장라벨 지하철 연장라벨 </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- //layerArea -->
+                                                    </div>
+
+                                                </div>
+                                                <!-- //imgArea -->
+
+                                            </article>
+                                            <!-- //mapInfo -->
+
+                                        </section>
+                                        <!-- //tableArea -->
+                                    </div>
+                                    <!-- //bodyRight -->
+
+                                </article>
+                                <!-- //tabCont -->
+
+                                <!-- tabCont -->
+                                <article class="tabCont type02 ">
+                                    <!-- bodyLeft -->
+                                    <div class="bodyLeft type02">
+
+                                        <div class="listArea acco02">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)">자연환경</a>
+                                                    <!-- dep01 -->
+                                                    <ul class="dep dep01">
+                                                        <li>
+                                                            <a href="javascript:void(0)">지형 • 지세</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">생태 • 환경</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //dep01 -->
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)">인문환경</a>
+                                                    <!-- dep01 -->
+                                                    <ul class="dep dep01">
+                                                        <li>
+                                                            <a href="javascript:void(0)">주요시설 접근성</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">주변개발 현황</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">편입필지 현황</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">지가 현황</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">저장물 현황</a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //dep01 -->
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <!-- //bodyLeft -->
+
+                                    <!-- bodyRight -->
+                                    <div class="bodyRight">
+                                        <!-- tableArea -->
+                                        <section class="tableArea">
+                                            <!-- tableHead -->
+                                            <article class="tableHead">
+                                                <p>표고</p>
+                                            </article>
+                                            <!-- //tableHead -->
+                                            <!-- table -->
+                                            <div class="table type02">
+                                                <table>
+                                                    <caption>입지현황 표고 게시물로 구분, 표고분석, 면적, 구성비, 누계 등의 정보를 제공합니다.</caption>
+                                                    <colgroup>
+                                                        <col style="width: auto;">
+                                                        <col style="width: 227px;">
+                                                        <col style="width: 227px;">
+                                                        <col style="width: 227px;">
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" rowspan="2">구분</th>
+                                                            <th scope="col" colspan="3">표고 분석</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="col">면적</th>
+                                                            <th scope="col">구성비</th>
+                                                            <th scope="col">누계</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>33.93m ~ 40.19m</td>
+                                                            <td class="taR">133,700.00</td>
+                                                            <td class="taR">45.27</td>
+                                                            <td class="taR">45.32</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>40.19m ~ 46.44m</td>
+                                                            <td class="taR">310,925.00</td>
+                                                            <td class="taR">39.50</td>
+                                                            <td class="taR">82.61</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>46.44m ~ 52.69m</td>
+                                                            <td class="taR">216,300.00</td>
+                                                            <td class="taR">10.45</td>
+                                                            <td class="taR">100.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- //table -->
+                                            <article class="descBottom">
+                                                <ul>
+                                                    <li>
+                                                        <p>* 구성비는 구적 면적으로 계산됩니다.</p>
+                                                    </li>
+                                                </ul>
+                                            </article>
+
+                                            <!-- mapInfo -->
+                                            <article class="mapInfo type02">
+                                                <!-- imgArea -->
+                                                <div class="imgArea">
+                                                    <div class="inner">
+                                                        <img src="../images/img/img-map02.jpg" alt="맵 이미지">
+
+                                                        <!-- control -->
+                                                        <div class="control">
+                                                            <!-- btnArea -->
+                                                            <div class="btnArea edit">
+                                                                <button type="button" class="btn whiteSmall02">
+                                                                    <span>
+                                                                        불러오기
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button" class="btn toggle navySmall">
+                                                                    <span>
+                                                                        편집
+                                                                    </span>
+                                                                </button>
+
+                                                                <!-- btnArea -->
+                                                                <div class="btnArea save">
+                                                                    <button type="button" class="btn whiteSmall">라벨</button>
+                                                                    <button type="button" class="btn whiteSmall">그리기</button>
+                                                                    <button type="button" class="btn graySmall close">저장</button>
+                                                                </div>
+                                                                <!-- //btnArea -->
+
+                                                            </div>
+                                                            <!-- //btnArea -->
+
+
+                                                        </div>
+                                                        <!-- //control -->
+
+                                                        <!-- legendArea -->
+                                                        <div class="legendArea">
+                                                            <!-- legendHead -->
+                                                            <div class="legendHead">
+                                                                <h3 class="title type08">범례</h3>
+                                                            </div>
+                                                            <!-- legendHead -->
+                                                            <!-- legendCont -->
+                                                            <div class="legendCont cScroll">
+                                                                <ul>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            주거지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            자연노지지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역그외주거지역
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            기타주거
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <span></span>
+                                                                        <p class="elips02">
+                                                                            Rmt
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- legendCont -->
+                                                        </div>
+                                                        <!-- //legendArea -->
+
+                                                        <!-- layerArea -->
+                                                        <div class="layerArea">
+                                                            <button type="button" class="btn layerSwitch"></button>
+                                                            <!-- table -->
+                                                            <div class="table type10">
+                                                                <table>
+                                                                    <caption>입지규제사항 레이어 게시물로 구분, 레이어명, on/off, 삭제 등의 정보를 제공합니다.</caption>
+                                                                    <colgroup>
+                                                                        <col style="width: 129px;">
+                                                                        <col style="width: 350px;">
+                                                                        <col style="width: 115px;">
+                                                                        <col style="width: 128px;">
+                                                                    </colgroup>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col" class="taL">구분</th>
+                                                                            <th scope="col">레이어명</th>
+                                                                            <th scope="col">On/Off</th>
+                                                                            <th scope="col">삭제</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="cScroll">
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨 지하철 연장라벨 지하철 연장라벨 지하철 연장라벨 </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="taL">
+                                                                                라벨
+                                                                            </td>
+                                                                            <td class="elips taL">지하철 연장라벨</td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn toggle layerView" title="on/off"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="btnArea">
+                                                                                    <button type="button" class="btn popMinus" title="삭제"></button>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <!-- //layerArea -->
+                                                    </div>
+
+                                                </div>
+                                                <!-- //imgArea -->
+
+                                            </article>
+                                            <!-- //mapInfo -->
+                                    
+                                        </section>
+                                        <!-- //tableArea -->
+                                    </div>
+                                    <!-- //bodyRight -->
+                                </article>
+                                <!-- //tabCont -->
+
+                                <!-- tabCont -->
+                                <article class="tabCont ">
+                                    <!-- tableArea -->
+                                    <secition class="tableArea">
+
+                                        <!-- tableHead -->
+                                        <article class="tableHead">
+                                            <p>필지 조서</p>
+                                        </article>
+                                        <!-- //tableHead -->
+
+                                        <!-- table -->
+                                        <div class="table type04">
+                                            <table>
+                                                <caption>
+                                                    군집화 게시물로 최소거리, 최소 면적, 최소 홀 면적 등의 정보를 제공합니다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width: 100px;">
+                                                    <col style="width: 290px;">
+                                                    <col style="width: 100px;">
+                                                    <col style="width: 290px;">
+                                                    <col style="width: 100px;">
+                                                    <col style="width: auto;">
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>
+                                                            <label for="s01">지목</label>
+                                                        </th>
+                                                        <td>
+                                                            <!-- selectArea -->
+                                                            <div class="selectArea type03">
+                                                                <select name="s01" id="s01">
+                                                                    <option value="">선택</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- //selectArea -->
+                                                        </td>
+
+                                                        <th>
+                                                            <label for="s02">소유구분</label>
+                                                        </th>
+                                                        <td>
+                                                            <!-- selectArea -->
+                                                            <div class="selectArea type03">
+                                                                <select name="s02" id="s02">
+                                                                    <option value="">선택</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- //selectArea -->
+                                                        </td>
+
+                                                        <th>
+                                                            <label for="s03">용도지역</label>
+                                                        </th>
+                                                        <td>
+                                                            <!-- selectArea -->
+                                                            <div class="selectArea type03">
+                                                                <select name="s03" id="s03">
+                                                                    <option value="">선택</option>
+                                                                </select>
+                                                            </div>
+                                                            <!-- //selectArea -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>
+                                                            <label for="i02">지번</label>
+                                                        </th>
+                                                        <td>
+                                                            <!-- inputArea -->
+                                                            <div class="inputArea">
+                                                                <input type="text" id="i02">
+                                                            </div>
+                                                            <!-- inputArea -->
+                                                        </td>
+                                                        <th>
+                                                            <label for="i03">소재지</label>
+                                                        </th>
+                                                        <td colspan="3">
+                                                            <!-- inputArea -->
+                                                            <div class="inputArea">
+                                                                <input type="text" id="i03">
+                                                            </div>
+                                                            <!-- inputArea -->
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table -->
+
+                                        <!-- btnArea -->
+                                        <div class="btnArea type02">
+                                            <button type="button" class="btn navyCircle">검색</button>
+                                        </div>
+                                        <!-- //btnArea -->
+                                    </secition>
+                                    <!-- //tableArea -->
+
+                                    <!-- tableArea -->
+                                    <section class="tableArea" style="margin-top: 30px;">
+                                        <!-- tableHead -->
+                                        <article class="tableHead">
+                                            <!-- btnArea -->
+                                            <div class="btnArea">
+                                                <button type="button" class="btn whiteSmall type02">엑셀 다운로드</button>
+                                            </div>
+                                            <!-- //btnArea -->
+                                        </article>
+                                        <!-- //tableHead -->
+
+                                        <!-- table -->
+                                        <div class="table type02_1">
+                                            <table>
+                                                <caption>필지조서 검색결과 게시물이며 소재지, 지번, 지목, 공부면적(m²), 편입면적(m²), 공시지가(원), 토지이용상황, 소유구분, 용도지역, 이동, 삭제 등의 정보를 제공합니다.</caption>
+                                                <colgroup>
+                                                    <col style="width: auto;">
+                                                    <col style="width: 90px;">
+                                                    <col style="width: 90px;">
+                                                    <col style="width: 110px;">
+                                                    <col style="width: 110px;">
+                                                    <col style="width: 110px;">
+                                                    <col style="width: 110px;">
+                                                    <col style="width: 90px;">
+                                                    <col style="width: 107px;">
+                                                    <col style="width: 50px;">
+                                                    <col style="width: 50px;">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>소재지</th>
+                                                        <th>지번</th>
+                                                        <th>지목</th>
+                                                        <th>공부면적(m²)</th>
+                                                        <th>편입면적(m²)</th>
+                                                        <th>공시지가(원)</th>
+                                                        <th>토지이용상황</th>
+                                                        <th>소유구분</th>
+                                                        <th>용도지역</th>
+                                                        <th>이동</th>
+                                                        <th>삭제</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                                        <td>1201구</td>
+                                                        <td>답</td>
+                                                        <td>160.0</td>
+                                                        <td>145.7</td>
+                                                        <td>27,700</td>
+                                                        <td>해당정보없음</td>
+                                                        <td>국유지</td>
+                                                        <td>자연녹지지역</td>
+                                                        <td>
+                                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                                        </td>
+                                                        <td>
+                                                            <div class="btnArea">
+                                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- //table -->
+
+                                        <!-- pagination -->
+                                        <article class="pagination">
+                                            <button type="button" class="btn first off" title="첫번째 페이지">
+                                                <span class="hidden">첫번째 페이지</span>
+                                                <svg width="13" height="12" viewBox="0 0 13 12">
+                                                    <g id="_" data-name="&lt;&lt;" transform="translate(-714.5 -1056)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1014.486 -305.118) rotate(90)" fill="#666" />
+                                                        <path id="Shape_1048-2" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1020.486 -305.118) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" class="btn prev off" title="이전 페이지">
+                                                <span class="hidden">이전 페이지</span>
+                                                <svg width="7" height="12" viewBox="0 0 7 12">
+                                                    <g id="_" data-name="&lt;" transform="translate(-714.5 -1056)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(1014.486 -305.118) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <a href="#" class="active">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <a href="#">8</a>
+                                            <a href="#">9</a>
+                                            <a href="#">10</a>
+
+                                            <button type="button" class="btn next " title="다음 페이지">
+                                                <span class="hidden">다음 페이지</span>
+                                                <svg id="_" data-name="&gt;" width="7" height="12" viewBox="0 0 7 12">
+                                                    <path id="Shape_1048" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(7 0) rotate(90)" fill="#666" />
+                                                </svg>
+                                            </button>
+
+                                            <button type="button" class="btn last " title="마지막 페이지">
+                                                <span class="hidden">마지막 페이지</span>
+                                                <svg width="13" height="12" viewBox="0 0 13 12">
+                                                    <g id="default" transform="translate(0 0)">
+                                                        <path id="Shape_1048" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(13) rotate(90)" fill="#666" />
+                                                        <path id="Shape_1048-2" data-name="Shape 1048" d="M6,0a.748.748,0,0,0-.54.232L.224,5.649a.811.811,0,0,0,0,1.119.747.747,0,0,0,1.081,0L6,1.91l4.7,4.858a.746.746,0,0,0,1.081,0,.811.811,0,0,0,0-1.119L6.541.232A.749.749,0,0,0,6,0Z" transform="translate(7) rotate(90)" fill="#666" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </article>
+                                        <!-- //pagination -->
+                                    </section>
+                                    <!-- //tableArea -->
+
+
+                                </article>
+                                <!-- //tabCont -->
+
+
+                            </article>
+                            <!-- tabNav -->
+                        </div>
+                        <!-- //popBody -->
+                    </div>
+                    <!-- //inner -->
+                </article>
+                <!-- //popup -->
+
+                <!-- popup -->
+                <article class="popup active">
+                    <!-- inner -->
+                    <div class="inner" style="width: 1020px; min-width: 1020px;">
+                        <!-- popHead -->
+                        <div class="popHead">
+                            <h3 class="title type02">리포트 출력</h3>
+                            <!-- btnArea -->
+                            <div class="btnArea">
+                                <button type="button" class="btn popClose">
+                                    <span class="hidden">창 닫기</span>
+                                </button>
+                            </div>
+                            <!-- //btnArea -->
+                        </div>
+                        <!-- //popHead -->
+                        <!-- popBody -->
+                        <div class="popBody">
+
+                            <h1 class="title type04">보고서 설정</h1>
+                            <!-- treeArea -->
+                            <article class="treeArea">
+                                <!-- treeLayer -->
+                                <div class="treeLayer">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd08">
+                                                <label for="ckd08" class="elips">
+                                                    사업개요
+                                                </label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd09">
+                                                <label for="ckd09" class="elips">
+                                                    입지규제사항 검토
+                                                </label>
+                                            </p>
+                                            <ul class="dep01">
+                                                <li>
+                                                    <p class="name type01 checkbox">
+                                                        <input type="checkbox" id="ckd09_1">
+                                                        <label for="ckd09_1" class="elips">
+                                                            자연환경
+                                                        </label>
+                                                    </p>
+                                                    <ul class="dep02">
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_1_1">
+                                                                <label for="ckd09_1_1" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_1_2">
+                                                                <label for="ckd09_1_2" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_1_3">
+                                                                <label for="ckd09_1_3" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="dep01">
+                                                <li>
+                                                    <p class="name type01 checkbox">
+                                                        <input type="checkbox" id="ckd09_2">
+                                                        <label for="ckd09_2" class="elips">
+                                                            인문환경
+                                                        </label>
+                                                    </p>
+                                                    <ul class="dep02">
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_2_1">
+                                                                <label for="ckd09_2_1" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_2_2">
+                                                                <label for="ckd09_2_2" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd09_2_3">
+                                                                <label for="ckd09_2_3" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //treeLayer -->
+
+                                <!-- treeLayer -->
+                                <div class="treeLayer">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd10">
+                                                <label for="ckd10" class="elips">
+                                                    사업개요
+                                                </label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 checkbox">
+                                                <input type="checkbox" id="ckd11">
+                                                <label for="ckd11" class="elips">
+                                                    입지규제사항 검토
+                                                </label>
+                                            </p>
+                                            <ul class="dep01">
+                                                <li>
+                                                    <p class="name type01 checkbox">
+                                                        <input type="checkbox" id="ckd11_1">
+                                                        <label for="ckd11_1" class="elips">
+                                                            자연환경
+                                                        </label>
+                                                    </p>
+                                                    <ul class="dep02">
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_1_1">
+                                                                <label for="ckd11_1_1" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_1_2">
+                                                                <label for="ckd11_1_2" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_1_3">
+                                                                <label for="ckd11_1_3" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="dep01">
+                                                <li>
+                                                    <p class="name type01 checkbox">
+                                                        <input type="checkbox" id="ckd11_2">
+                                                        <label for="ckd11_2" class="elips">
+                                                            인문환경
+                                                        </label>
+                                                    </p>
+                                                    <ul class="dep02">
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_2_1">
+                                                                <label for="ckd11_2_1" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_2_2">
+                                                                <label for="ckd11_2_2" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="name type01 checkbox">
+                                                                <input type="checkbox" id="ckd11_2_3">
+                                                                <label for="ckd11_2_3" class="elips">
+                                                                    가나다라마바사
+                                                                </label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //treeLayer -->
+
+                            </article>
+                            <!-- //treeArea     -->
+
+                            <!-- btnArea -->
+                            <div class="btnArea">
+                                <button type="button" class="btn grayCircle">취소</button>
+                                <button type="button" class="btn navyCircle">생성</button>
+                            </div>
+                            <!-- //btnArea -->
+                        </div>
+                        <!-- //popBody -->
+                    </div>
+                    <!-- //inner -->
+                </article>
+                <!-- //popup -->
+            </section>
+            <!-- //popupArea -->
+
+        </section>
+        <!-- //mapContainer -->
+    </div>
+</body>
+
+</html>

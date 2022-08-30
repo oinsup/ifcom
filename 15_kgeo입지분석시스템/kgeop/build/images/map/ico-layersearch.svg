@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="Icon_feather-layers" data-name="Icon feather-layers" transform="translate(3.215 17)">
+    <g id="사각형_9200" data-name="사각형 9200" transform="translate(-3.215 -17)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="46" height="46" stroke="none"/>
+      <rect x="0.5" y="0.5" width="45" height="45" fill="none"/>
+    </g>
+    <path id="패스_63680" data-name="패스 63680" d="M18.266,3,3,10l15.266,7,15.266-7Z" transform="translate(-2.323 -1.957)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="패스_63681" data-name="패스 63681" d="M3,25.5l15.266,7,15.266-7" transform="translate(-2.323 -7.283)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="패스_63682" data-name="패스 63682" d="M3,18l15.266,7,15.266-7" transform="translate(-2.323 -4.872)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="search" d="M20.172,18.721,16.3,14.854A7.188,7.188,0,1,0,14.854,16.3l3.867,3.867a1.028,1.028,0,0,0,1.451-1.451ZM5.427,10.556a5.129,5.129,0,1,1,5.129,5.129A5.129,5.129,0,0,1,5.427,10.556Z" transform="translate(19.305 -16.326)" fill="#353990"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="Icon_feather-upload" data-name="Icon feather-upload" transform="translate(4.5 4.5)">
+    <g id="사각형_9198" data-name="사각형 9198" transform="translate(-4.5 -4.5)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="46" height="46" stroke="none"/>
+      <rect x="0.5" y="0.5" width="45" height="45" fill="none"/>
+    </g>
+    <path id="패스_63677" data-name="패스 63677" d="M32.5,22.5v6.222a3.111,3.111,0,0,1-3.111,3.111H7.611A3.111,3.111,0,0,1,4.5,28.722V22.5" transform="translate(0 0.667)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_63678" data-name="패스 63678" d="M26.056,12.278,18.278,4.5,10.5,12.278" transform="translate(0.222)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_63679" data-name="패스 63679" d="M18,4.5V23.167" transform="translate(0.5)" fill="none" stroke="#353990" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

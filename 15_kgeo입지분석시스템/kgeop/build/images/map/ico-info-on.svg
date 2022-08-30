@@ -1,0 +1,13 @@
+<svg id="_" data-name="&gt;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="on" transform="translate(-375 -180)">
+    <circle id="타원_1089" data-name="타원 1089" cx="13" cy="13" r="13" transform="translate(375 180)" fill="#353990"/>
+    <path id="_2" data-name="&gt;" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(92.014 1560.118) rotate(-90)" fill="#fff"/>
+  </g>
+  <g id="off" transform="translate(-375 -180)" opacity="0">
+    <g id="타원_1089-2" data-name="타원 1089" transform="translate(375 180)" fill="#fff" stroke="#d8dee3" stroke-width="1">
+      <circle cx="13" cy="13" r="13" stroke="none"/>
+      <circle cx="13" cy="13" r="12.5" fill="none"/>
+    </g>
+    <path id="_3" data-name="&gt;" d="M1367.118,299.986a.748.748,0,0,1-.54-.232l-5.236-5.418a.811.811,0,0,1,0-1.119.747.747,0,0,1,1.081,0l4.695,4.858,4.7-4.858a.746.746,0,0,1,1.081,0,.811.811,0,0,1,0,1.119l-5.235,5.418A.749.749,0,0,1,1367.118,299.986Z" transform="translate(92.014 1560.118) rotate(-90)" fill="#999"/>
+  </g>
+</svg>

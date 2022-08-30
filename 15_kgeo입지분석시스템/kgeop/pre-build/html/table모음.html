@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('include/head.html')
+</head>
+
+<body>
+
+    <div id="wrap" style="height: 100%;">
+        <!--header-->
+        <header id="header">
+            @@include('include/header.html')
+        </header>
+        <!--header-->
+
+        <!--container-->
+        <main id="container" style="height: 100%;">
+            <!-- contents -->
+            <div id="contents" style="height: 100%;">
+                <!-- menuArea -->
+                <div class="menuArea" style="height: 100%;">
+                    <!-- logoArea -->
+                    <article class="logoArea">
+                        <h3>
+                            <a href="#">
+                                <img src="../images/common/img-logo.png" alt="K-Geo플랫폼 입지 분석 시스템">
+                            </a>
+                        </h3>
+                    </article>
+                    <!-- //logoArea -->
+                    
+
+                    <!-- utilArea -->
+                    <article class="utilArea">
+                        <!-- btnArea -->
+                        <div class="btnArea">
+                            <button type="button" class="btn blueCircle">
+                                <span>
+                                    국토교통부 <em>이성준</em>님</button>
+                            </span>
+                            <button type="button" class="btn logout">로그아웃</button>
+                        </div>
+                        <!-- //btnArea -->
+                    </article>
+                    <!-- //utilArea -->
+                    
+                    <!-- lnb -->
+                    <nav id="lnb">
+                        <h2 class="hidden">주요메뉴</h2>
+                        <!-- dep01 -->
+                        <ul class="dep01">
+                            <li>
+                                <a href="#" class="active">
+                                    <svg width="26" height="26" viewBox="0 0 26 26">
+                                        <g id="icon_프로젝트" data-name="icon / 프로젝트" transform="translate(-398 -23.5)">
+                                            <g id="사각형_9202" data-name="사각형 9202" transform="translate(398 23.5)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+                                                <rect width="26" height="26" stroke="none" />
+                                                <rect x="0.5" y="0.5" width="25" height="25" fill="none" />
+                                            </g>
+                                            <path id="Icon_feather-folder" data-name="Icon feather-folder" d="M19,17.3a1.6,1.6,0,0,1-1.6,1.6H4.6A1.6,1.6,0,0,1,3,17.3V6.1A1.6,1.6,0,0,1,4.6,4.5h4l1.6,2.4h7.2A1.6,1.6,0,0,1,19,8.5Z" transform="translate(399.5 24)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        </g>
+                                    </svg>
+                    
+                                    <span>
+                                        프로젝트
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="">
+                                    <svg class="fill" width="26" height="26" viewBox="0 0 26 26">
+                                        <g id="icon_추출기준" data-name="icon / 추출기준" transform="translate(1 1)">
+                                            <g id="사각형_9204" data-name="사각형 9204" transform="translate(-1 -1)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+                                                <rect width="26" height="26" stroke="none" />
+                                                <rect x="0.5" y="0.5" width="25" height="25" fill="none" />
+                                            </g>
+                                            <path id="패스_15972" data-name="패스 15972" d="M5,5H7V8H17V5h2v5h2V5a2.006,2.006,0,0,0-2-2H14.82A2.988,2.988,0,0,0,9.18,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2h5V19H5Zm7-2a1,1,0,1,1-1,1A1,1,0,0,1,12,3Z" fill="#a2a4cf" />
+                                            <path id="패스_15973" data-name="패스 15973" d="M20.3,18.9a4.815,4.815,0,0,0,.7-2.4A4.5,4.5,0,1,0,16.5,21a4.815,4.815,0,0,0,2.4-.7L21.6,23,23,21.6Zm-3.8.1A2.5,2.5,0,1,1,19,16.5,2.476,2.476,0,0,1,16.5,19Z" fill="#a2a4cf" />
+                                        </g>
+                                    </svg>
+                    
+                                    <span>
+                                        추출기준
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="26" height="26" viewBox="0 0 26 26">
+                                        <g id="icon_평가모델" data-name="icon / 평가모델" transform="translate(0.65 0.5)">
+                                            <g id="사각형_9205" data-name="사각형 9205" transform="translate(-0.65 -0.5)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+                                                <rect width="26" height="26" stroke="none" />
+                                                <rect x="0.5" y="0.5" width="25" height="25" fill="none" />
+                                            </g>
+                                            <path id="패스_15974" data-name="패스 15974" d="M4.5,8.95,12.5,3l8,5.95V18.3A1.74,1.74,0,0,1,18.722,20H6.278A1.74,1.74,0,0,1,4.5,18.3Z" transform="translate(0 0)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="패스_15975" data-name="패스 15975" d="M13.5,26.5V18h5.333v8.5" transform="translate(-3.667 -6.5)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        </g>
+                                    </svg>
+                    
+                                    <span>
+                                        평가모델
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="26" height="26" viewBox="0 0 26 26">
+                                        <g id="icon_보고서" data-name="icon / 보고서" transform="translate(-2)">
+                                            <g id="사각형_9207" data-name="사각형 9207" transform="translate(2)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+                                                <rect width="26" height="26" stroke="none" />
+                                                <rect x="0.5" y="0.5" width="25" height="25" fill="none" />
+                                            </g>
+                                            <path id="패스_15967" data-name="패스 15967" d="M15.375,3h-7.5A1.941,1.941,0,0,0,6,5V21a1.941,1.941,0,0,0,1.875,2h11.25A1.941,1.941,0,0,0,21,21V9Z" transform="translate(0 0)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="패스_15968" data-name="패스 15968" d="M21,3V9.188h6.188" transform="translate(-6.188 0)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="패스_15969" data-name="패스 15969" d="M19,19.5H12" transform="translate(-2.5 -5.5)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="패스_15970" data-name="패스 15970" d="M19,25.5H12" transform="translate(-2.5 -7.5)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                            <path id="패스_15971" data-name="패스 15971" d="M14,13.5H12" transform="translate(-2.5 -3.5)" fill="none" stroke="#a2a4cf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                        </g>
+                                    </svg>
+                    
+                                    <span>
+                                        보고서
+                                    </span>
+                                </a>
+                            </li>
+                    
+                        </ul>
+                        <!-- //dep01 -->
+                    
+                    
+                    </nav>
+                    <!-- //lnb -->
+
+                    <article class="adminSet">
+                        <a href="#">
+                            <svg id="icon_관리자" data-name="icon / 관리자" width="22" height="22" viewBox="0 0 22 22">
+                                <path id="패스_15982" data-name="패스 15982" d="M0,0H22V22H0Z" fill="none" />
+                                <path id="path01" data-name="패스 15983" d="M17.375,11.842A6.358,6.358,0,0,0,17.429,11a5.192,5.192,0,0,0-.063-.842l1.813-1.415a.44.44,0,0,0,.107-.546L17.572,5.222a.435.435,0,0,0-.527-.2l-2.134.86a6.3,6.3,0,0,0-1.447-.842l-.321-2.275a.432.432,0,0,0-.429-.367H9.286a.423.423,0,0,0-.42.367L8.544,5.043A6.442,6.442,0,0,0,7.1,5.885l-2.134-.86a.426.426,0,0,0-.527.2L2.732,8.2a.408.408,0,0,0,.107.546l1.813,1.415a5,5,0,0,0-.018,1.684L2.821,13.257a.44.44,0,0,0-.107.546l1.714,2.974a.435.435,0,0,0,.527.2l2.134-.86a6.3,6.3,0,0,0,1.447.842l.321,2.275a.439.439,0,0,0,.429.367h3.429a.417.417,0,0,0,.42-.367l.321-2.275a6.12,6.12,0,0,0,1.447-.842l2.134.86a.426.426,0,0,0,.527-.2L19.277,13.8a.416.416,0,0,0-.107-.546ZM11,14.225A3.225,3.225,0,1,1,14.214,11,3.229,3.229,0,0,1,11,14.225Z" fill="none" stroke="#A2A4CF" stroke-width="2" />
+                            </svg>
+                            <span>
+                                관리자
+                            </span>
+                        </a>
+                    </article>
+                </div>
+                <!-- //menuArea -->
+                <!-- content -->
+                <div class="content" style="height: 100%;">
+                    <!-- inner -->
+                    <div class="inner">
+
+                        <h2 class="title type01" style="margin-top:50px;">type01</h2>
+                        <!-- table -->
+                        <div class="table type01">
+                            <table>
+                                <caption>프로젝트 게시물이며 사업유형, 지구 명, 면적, 호수 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 80px;">
+                                    <col style="width: 513px;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">사업유형</th>
+                                        <td class="elips">
+                                            일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지일반택지
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">지구명</th>
+                                        <td class="elips">만촌3지구</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">면적</th>
+                                        <td class="elips">13,194.0m²</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">호수</th>
+                                        <td class="elips">45,949</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type02</h2>
+                        <!-- table -->
+                        <div class="table type02">
+                            <table>
+                                <caption>개발가능지 게시물이며 추출기준, 레이어, 작성자, 등록일, 이동 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 300px;">
+                                    <col style="width: auto;">
+                                    <col style="width: 270px;">
+                                    <col style="width: 280px;">
+                                    <col style="width: 120px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">추출 기준</th>
+                                        <th scope="col">레이어</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">등록일</th>
+                                        <th scope="col">이동</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="underline" title="바로가기">
+                                                신혼부부 관련 기준
+                                            </a>
+                                        </td>
+                                        <td class="elips">경기도 용인시 개발가능지 경기도 용인시 개발가능지 경기도 용인시 개발가능지 경기도 용인시 개발가능지</td>
+                                        <td>여덟글자이름있나</td>
+                                        <td>2022.12.11 13:11:12</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="underline" title="바로가기">
+                                                신혼부부 관련 기준
+                                            </a>
+                                        </td>
+                                        <td class="elips">경기도 용인시 개발가능지</td>
+                                        <td>여덟글자이름있나</td>
+                                        <td>2022.12.11 13:11:12</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="underline" title="바로가기">
+                                                신혼부부 관련 기준
+                                            </a>
+                                        </td>
+                                        <td class="elips">경기도 용인시 개발가능지</td>
+                                        <td>여덟글자이름있나</td>
+                                        <td>2022.12.11 13:11:12</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="underline" title="바로가기">
+                                                신혼부부 관련 기준
+                                            </a>
+                                        </td>
+                                        <td class="elips">경기도 용인시 개발가능지</td>
+                                        <td>여덟글자이름있나</td>
+                                        <td>2022.12.11 13:11:12</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="underline" title="바로가기">
+                                                신혼부부 관련 기준
+                                            </a>
+                                        </td>
+                                        <td class="elips">경기도 용인시 개발가능지</td>
+                                        <td>여덟글자이름있나</td>
+                                        <td>2022.12.11 13:11:12</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type02_1</h2>
+                        <!-- table -->
+                        <div class="table type02_1">
+                            <table>
+                                <caption>필지조서 검색결과 게시물이며 소재지, 지번, 지목, 공부면적(m²), 편입면적(m²), 공시지가(원), 토지이용상황, 소유구분, 용도지역, 이동, 삭제 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: auto;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 90px;">
+                                    <col style="width: 70px;">
+                                    <col style="width: 87px;">
+                                    <col style="width: 50px;">
+                                    <col style="width: 50px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>소재지</th>
+                                        <th>지번</th>
+                                        <th>지목</th>
+                                        <th>공부면적(m²)</th>
+                                        <th>편입면적(m²)</th>
+                                        <th>공시지가(원)</th>
+                                        <th>토지이용상황</th>
+                                        <th>소유구분</th>
+                                        <th>용도지역</th>
+                                        <th>이동</th>
+                                        <th>삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="elips">경상남도 김해시 진례면 송정리 경상남도 김해시 진례면 송정리</td>
+                                        <td>1201구</td>
+                                        <td>답</td>
+                                        <td>160.0</td>
+                                        <td>145.7</td>
+                                        <td>27,700</td>
+                                        <td>해당정보없음</td>
+                                        <td>국유지</td>
+                                        <td>자연녹지지역</td>
+                                        <td>
+                                            <a href="#" class="tableLink" title="바로가기"></a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type03</h2>
+                        <!-- tableHead -->
+                        <div class="table type03">
+                            <table>
+                                <caption>추출 기준 정보 신혼부부 관련 기준 군집화 게시물이며 최소거리, 최소 면적, 최소 홀 면적 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 112px;">
+                                    <col style="width: 227px;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="n01">최소 거리</label>
+                                        </th>
+                                        <td>
+                                            <!-- textArea -->
+                                            <article class="textArea">
+                                                <input type="number" name="" id="n01">
+                                                <span class="unit">m</span>
+                                            </article>
+                                            <!-- //textArea -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="n02">최소 면적</label>
+                                        </th>
+                                        <td>
+                                            <!-- textArea -->
+                                            <article class="textArea">
+                                                <input type="number" name="" id="n02">
+                                                <span class="unit">m²</span>
+                                            </article>
+                                            <!-- //textArea -->
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <label for="n03">최소 홀 면적</label>
+                                        </th>
+                                        <td>
+                                            <!-- textArea -->
+                                            <article class="textArea">
+                                                <input type="number" name="" id="n03">
+                                                <span class="unit">m²</span>
+                                            </article>
+                                            <!-- //textArea -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type04</h2>
+                        <!-- table -->
+                        <div class="table type04">
+                            <table>
+                                <caption>
+                                    군집화 게시물로 최소거리, 최소 면적, 최소 홀 면적 등의 정보를 제공합니다.
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 100px;">
+                                    <col style="width: 213px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: 213px;">
+                                    <col style="width: 100px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            <label for="s01">지목</label>
+                                        </th>
+                                        <td>
+                                            <!-- selectArea -->
+                                            <div class="selectArea type03">
+                                                <select name="s01" id="s01">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                            <!-- //selectArea -->
+                                        </td>
+
+                                        <th>
+                                            <label for="s02">소유구분</label>
+                                        </th>
+                                        <td>
+                                            <!-- selectArea -->
+                                            <div class="selectArea type03">
+                                                <select name="s02" id="s02">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                            <!-- //selectArea -->
+                                        </td>
+
+                                        <th>
+                                            <label for="s03">용도지역</label>
+                                        </th>
+                                        <td>
+                                            <!-- selectArea -->
+                                            <div class="selectArea type03">
+                                                <select name="s03" id="s03">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                            <!-- //selectArea -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <label for="i02">지번</label>
+                                        </th>
+                                        <td>
+                                            <!-- inputArea -->
+                                            <div class="inputArea">
+                                                <input type="text" id="i02">
+                                            </div>
+                                            <!-- inputArea -->
+                                        </td>
+                                        <th>
+                                            <label for="i03">소재지</label>
+                                        </th>
+                                        <td colspan="3">
+                                            <!-- inputArea -->
+                                            <div class="inputArea">
+                                                <input type="text" id="i03">
+                                            </div>
+                                            <!-- inputArea -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type05</h2>
+                        <article class="utilBox">
+                            <!-- tableArea -->
+                            <div class="tableArea">
+                                <div class="table type05">
+                                    <table>
+                                        <caption>레이어 검색 기능 게시물로 명칭검색, 영역검색 등의 기능과 정보를 제공합니다.</caption>
+                                        <colgroup>
+                                            <col style="width: auto;">
+                                            <col style="width: 520px;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <!-- radioArea -->
+                                                    <div class="radioArea">
+                                                        <input type="radio" name="rd" id="rd01" checked="">
+                                                        <label for="rd01">
+                                                            <span class="circle"></span>
+                                                            명칭검색
+                                                        </label>
+                                                    </div>
+                                                    <!-- //radioArea -->
+                                                </th>
+                                                <td>
+                                                    <!-- searchArea -->
+                                                    <article class="searchArea type02">
+                                                        <label for="s01">
+                                                            <input type="text" id="s01" placeholder="검색어를 입력하세요.">
+                                                        </label>
+                                                        <!-- btnArea -->
+                                                        <div class="btnArea">
+                                                            <button type="button" class="btn search" title="검색">
+                                                                <svg width="14" height="14" viewBox="0 0 14 14">
+                                                                    <path id="search" d="M17.162,15.971,13.987,12.8A5.9,5.9,0,1,0,12.8,13.987l3.174,3.174a.843.843,0,0,0,1.191-1.191Zm-12.1-6.7a4.21,4.21,0,1,1,4.21,4.21A4.21,4.21,0,0,1,5.059,9.269Z" transform="translate(-3.375 -3.375)" fill="#666"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <!-- //btnArea -->
+                                                    </article>
+                                                    <!-- searchArea -->
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">
+                                                    <!-- radioArea -->
+                                                    <div class="radioArea">
+                                                        <input type="radio" name="rd" id="rd02">
+                                                        <label for="rd02">
+                                                            <span class="circle"></span>
+                                                            영역검색
+                                                        </label>
+                                                    </div>
+                                                    <!-- //radioArea -->
+                                                </th>
+                                                <td>
+                                                    <!-- selectArea -->
+                                                    <div class="selectArea type02 horizontal">
+                                                        <select name="" id="s02" disabled="">
+                                                            <option value="">행정구역</option>
+                                                        </select>
+                                                        <select name="" id="s03" disabled="">
+                                                            <option value="">선택</option>
+                                                        </select>
+                                                        <select name="" id="s04" disabled="">
+                                                            <option value="">선택</option>
+                                                        </select>
+                                                        <select name="" id="s05" disabled="">
+                                                            <option value="">선택</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- //selectArea -->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- //tableArea -->
+                        </article>
+                    
+                        <h2 class="title type01" style="margin-top:50px;">type06</h2>
+                        <!-- table -->
+                        <div class="table type06">
+                            <table class="cScroll">
+                                <caption>
+                                    기개발지 게시물로 구분, 레이어명, 법령정보, on/off, 추가 등의 정보를 제공합니다.
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 130px;">
+                                    <col style="width: auto;">
+                                    <col style="width: 180px;">
+                                    <col style="width: 60px;">
+                                    <col style="width: 60px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">레이어명</th>
+                                        <th scope="col">법령정보</th>
+                                        <th scope="col">ON/OFF</th>
+                                        <th scope="col">추가</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="accoLabel">
+                                        <td>산림보호구역</td>
+                                        <td>산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">
+                                                「산림보호법」 제7조
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popPlus" title="추가"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다. <개정 2012. 2. 22., 2014. 6. 3.>
+                                                        1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역
+                                                        2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>산림보호구역</td>
+                                        <td>산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">
+                                                「산림보호법」 제7조
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popPlus" title="추가"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다. <개정 2012. 2. 22., 2014. 6. 3.>
+                                                        1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역
+                                                        2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>산림보호구역</td>
+                                        <td>산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">
+                                                「산림보호법」 제7조
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popPlus" title="추가"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다. <개정 2012. 2. 22., 2014. 6. 3.>
+                                                        1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역
+                                                        2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type06_2</h2>
+                        <!-- table -->
+                        <div class="table type06_2">
+                            <table>
+                                <caption>추출기준 기개발지 게시물이며 NO, 구분, 레이어명, 법령정보, 삭제 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 48px;">
+                                    <col style="width: 250px;">
+                                    <col style="width: auto;">
+                                    <col style="width: 410px;">
+                                    <col style="width: 70px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">레이어명</th>
+                                        <th scope="col">법령정보</th>
+                                        <th scope="col">삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="accoLabel active">
+                                        <td>13</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont open">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>12</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>11</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>10</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>9</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>8</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>7</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>6</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>5</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoLabel">
+                                        <td>4</td>
+                                        <td>산림보호구역</td>
+                                        <td class="elips">산림보호/산림보호 산림제한구역</td>
+                                        <td>
+                                            <a href="javascript:void(0)" class="elips label">「산림보호법」 제7조</a>
+                                        </td>
+                                        <td>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn popMinus" title="삭제"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="accoCont">
+                                        <td colspan="5">
+                                            <div>
+                                                <p class="desc taL">
+                                                    제7조(산림보호구역의 지정) ① 산림청장 또는 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사ㆍ특별자치도지사(이하 “시ㆍ도지사”라 한다)는 특별히 산림을 보호할 필요가 있으면 다음 각 호의 구분에 따라 산림보호구역을 지정할 수 있다.  <개정 2012. 2. 22., 2014. 6. 3.> <br />
+                                                    1. 생활환경보호구역: 도시, 공단, 주요 병원 및 요양소의 주변 등 생활환경의 보호ㆍ유지와 보건위생을 위하여 필요하다고 인정되는 구역 <br />
+                                                    2. 경관보호구역: 명승지ㆍ유적지ㆍ관광지ㆍ공원ㆍ유원지 등의 주위, 그 진입도로의 주변 또는 도로ㆍ철도ㆍ해안의 주변으로서 경관 보호를 위하여 필요하다고 인정되는 구역 <br />
+                                                    3. 수원함양보호구역: 수원의 함양, 홍수의 방지나 상수원 수질관리를 위하여 필요하다고 인정되는 구역 <br />
+                                                    4. 재해방지보호구역: 토사 유출 및 낙석의 방지와 해풍ㆍ해일ㆍ모래 등으로 인한 피해의 방지를 위하여 필요하다고 인정되는 구역 <br />
+                                                    5. 산림유전자원보호구역: 산림에 있는 식물의 유전자와 종(種) 또는 산림생태계의 보전을 위하여 필요하다고 인정되는 구역. 다만, 「자연공원법」 제2조제2호에 따른 국립공원구역의 경우에는 같은 법 제4조제2항에 따른 공원관리청(이하 “공원관리청”이라 한다)과 협의하여야 한다.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type07</h2>
+                        <!-- table -->
+                        <div class="table type07">
+                            <table>
+                                <caption>
+                                    현황분석 개요 기본정보 게시물로 위치, 면적, 편입공부면적, 편입면적, 입지여건, 토지이용현황 등의 정보를 제공합니다.
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 80px;">
+                                    <col style="width: 140px">
+                                    <col style="width: 120px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: 120px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" colspan="2">위치</th>
+                                        <td colspan="6">경기도 하남시</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" rowspan="2">면적</th>
+                                        <th scope="row" class="lineLeft">편입공부면적</th>
+                                        <td colspan="3">556m²</td>
+                                        <td colspan="3">15만평</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" class="lineLeft">편입면적</th>
+                                        <td colspan="3">556m²</td>
+                                        <td colspan="3">15만평</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" colspan="2">입지여건</th>
+                                        <td colspan="6" class="elips">
+                                            주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료주요시설 접근성 기반 자료
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row" colspan="2" rowspan="2">토지이용현황</th>
+                                        <th scope="col" class="taC">계</th>
+                                        <th scope="col" class="taC">전</th>
+                                        <th scope="col" class="taC">답</th>
+                                        <th scope="col" class="taC">대</th>
+                                        <th scope="col" class="taC">임</th>
+                                        <th scope="col" class="taC">기타</th>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="taC">71</td>
+                                        <td class="taC">7</td>
+                                        <td class="taC">31</td>
+                                        <td class="taC">1</td>
+                                        <td class="taC">46</td>
+                                        <td class="taC">7</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type08</h2>
+                        <!-- table -->
+                        <div class="table type08 cScroll">
+                            <table>
+                                <caption>
+                                    개발불능지 조건 게시물로 지역, 표고(m), 기울기(°) 등의 정보를 제공 합니다.
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col style="width: 140px;">
+                                    <col style="width: auto">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">지역</th>
+                                        <th scope="col">표고(m)</th>
+                                        <th scope="col">기울기(°)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>용인시</td>
+                                        <td>10</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>용인시</td>
+                                        <td>10</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>용인시</td>
+                                        <td>10</td>
+                                        <td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>용인시</td>
+                                        <td>10</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">type09</h2>
+                        <!-- table -->
+                        <div class="table type09">
+                            <table>
+                                <caption>요약정보 대전가능지 추출 게시물로 속성명, 속성, 둘레 길이(m), 면적(m²), 시군구 코드, 시군구 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 130px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">속성명</th>
+                                        <th scope="col">속성</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">둘레 길이(m)</th>
+                                        <td>87,023.2</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">면적(m²)</th>
+                                        <td>7,723,712.12</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">시군구 코드</th>
+                                        <td>30230</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">시군구</th>
+                                        <td class="elips">대전광역시 대덕구</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- table -->
+
+                        <h2 class="title type01" style="margin-top:50px;">trActive</h2>
+                        <!-- table -->
+                        <div class="table type09 trActive">
+                            <table>
+                                <caption>레이어 분석 결과 게시물로 레이어, 순위, 잠재력 총점, 5분위 점수, 시군구, 면적(m²), 둘레(m), 주택보급현황, 지가경쟁력, 간선도로 접근성, 지하철역 접근성, 사업체수, 의료시설 접근성, 사업체수, 의료시설 접근성, 고속도로 접근성 등의 정보를 제공합니다.</caption>
+                                <colgroup>
+                                    <col style="width: 130px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">속성명</th>
+                                        <th scope="col">세종 개발</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="active">
+                                        <th scope="row" class="taL">순위</th>
+                                        <td>
+                                            <span class="tag level01">1위</spant>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">잠재력 총점</th>
+                                        <td>2,132</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">5분위 점수</th>
+                                        <td>4.541</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">시군구</th>
+                                        <td class="elips">세종특별시</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">면적(m²)</th>
+                                        <td class="elips">7,651,212.12</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">둘레(m)</th>
+                                        <td>231,653.51</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">주택보급현황</th>
+                                        <td>5점(88)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">지가경쟁력</th>
+                                        <td>5점(0.17)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">간선도로 접근성</th>
+                                        <td>5점(2km)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">지하철역 접근성</th>
+                                        <td>5점(1.4km)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">사업체수</th>
+                                        <td>5점(23)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">의료시설 접근성</th>
+                                        <td>4점(3.4km)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="taL">고속도로 접근성</th>
+                                        <td>5점(2.3km)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- table -->
+
+                    </div>
+                    <!-- inner -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //contents -->
+        </main>
+        <!--//container-->
+
+        <!--footer-->
+        <footer id="footer">
+            @@include('include/footer.html')
+        </footer>
+        <!--//footer-->
+    </div>
+</body>
+
+</html>

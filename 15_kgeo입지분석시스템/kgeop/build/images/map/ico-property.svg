@@ -1,0 +1,24 @@
+<svg id="속성보기" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <rect id="아이콘박스" width="30" height="30" rx="5" fill="#f6f6fe"/>
+  <g id="타원_1086" data-name="타원 1086" transform="translate(5 5)" fill="none" stroke="#8587bc" stroke-width="1.5">
+    <circle cx="10" cy="10" r="10" stroke="none"/>
+    <circle cx="10" cy="10" r="9.25" fill="none"/>
+  </g>
+  <circle id="타원_1085" data-name="타원 1085" cx="1" cy="1" r="1" transform="translate(14 9)" fill="#8587bc"/>
+  <rect id="사각형_9113" data-name="사각형 9113" width="2" height="8" rx="0.5" transform="translate(14 12)" fill="#8587bc"/>
+  <g id="ov" transform="translate(-1848 -322)" opacity="0">
+    <rect id="아이콘박스-2" data-name="아이콘박스" width="30" height="30" rx="5" transform="translate(1848 322)" fill="url(#linear-gradient)"/>
+    <g id="타원_1086-2" data-name="타원 1086" transform="translate(1853 327)" fill="none" stroke="#fff" stroke-width="1.5">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="9.25" fill="none"/>
+    </g>
+    <circle id="타원_1085-2" data-name="타원 1085" cx="1" cy="1" r="1" transform="translate(1862 331)" fill="#fff"/>
+    <rect id="사각형_9113-2" data-name="사각형 9113" width="2" height="8" rx="0.5" transform="translate(1862 334)" fill="#fff"/>
+  </g>
+</svg>

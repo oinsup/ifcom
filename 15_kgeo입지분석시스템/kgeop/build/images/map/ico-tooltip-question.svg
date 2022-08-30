@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15">
+  <g id="icon" transform="translate(-495 -951)">
+    <g id="타원_1107" data-name="타원 1107" transform="translate(495 952)" fill="#fff" stroke="#222" stroke-width="1">
+      <circle cx="7" cy="7" r="7" stroke="none"/>
+      <circle cx="7" cy="7" r="6.5" fill="none"/>
+    </g>
+    <text id="_" data-name="?" transform="translate(502 963)" fill="#222" font-size="10" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-weight="700" letter-spacing="-0.05em"><tspan x="-2.57" y="0">?</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('include/head.html') 
+</head>
+<body style="overflow-y: hidden;">
+
+    <div id="wrap" class="map">
+        <!--header-->
+        <header id="header" class="mapHeader">
+            @@include('include/mapheader.html')
+        </header>
+        <!--header-->
+
+        <!-- #toc -->
+        <section id="toc">
+            <!-- toc 1depth -->
+            <article class="toc dep01 tocWidget active">
+                <!-- inner -->
+                <div class="inner">
+                    <!-- head -->
+                    <div class="head">
+                        <h3 class="title type05">프로젝트AA</h3>
+                        <!-- btnArea -->
+                        <div class="btnArea">
+                            <button type="button" class="btn tocList" title="리스트"></button>
+                            <button type="button" class="btn tocSave" title="저장히기"></button>
+                            <button type="button" class="btn tocShare" title="공유하기"></button>
+                        </div>
+                        <!-- //btnArea -->
+                    </div>
+                    <!-- //head -->
+                    <!-- cont -->
+                    <div class="cont cScroll">
+                        <!-- tocTool -->
+                        <article class="tocTool">
+                            <div class="btnArea">
+                                <button type="button" class="btn tocAdd" title="레이어 추가"></button>
+                                <button type="button" class="btn tocGropadd" title="그룹 추가"></button>
+                                <button type="button" class="btn tocSearch" title="레이어 검색"></button>
+                                <button type="button" class="btn tocUpload" title="파일 업로드"></button>
+                            </div>
+                            <div class="btnArea">
+                                <button type="button" class="btn toggle allView" title="레이어 on/off"></button>
+                            </div>
+                        </article>
+                        <!-- //tocTool -->
+
+                        <!-- listGroup -->
+                        <article class="listGroup">
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label active">
+                                    <div class="labelTitle">
+                                        <button type="button" class="btn title type05 elips">
+                                            기본지도
+                                        </button>
+                                        <button type="button" class="btn setting" title="설정"></button>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn toggle layerView" title="보기"></button>
+                                        <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 행정구역시군구_경계 행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적 연속지적 연속지적 연속지적 연속지적 연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+
+                            <!-- groupBox -->
+                            <article class="groupBox">
+                                <!-- label -->
+                                <div class="label">
+                                    <div class="labelTitle">
+                                        <button type="button" class="btn title type05 elips">
+                                            기본지도
+                                        </button>
+                                        <button type="button" class="btn setting" title="설정"></button>
+                                    </div>
+                                    <div class="btnArea">
+                                        <button type="button" class="btn toggle layerView" title="보기"></button>
+                                        <button type="button" class="btn toggle layerDelete" title="지우기"></button>
+                                    </div>
+                                </div>
+                                <!-- //label -->
+                                <!-- list -->
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico rect"></i>행정구역시군구_경계 행정구역시군구_경계 행정구역시군구_경계 </p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico line"></i>행정구역_읍면동(법정동) 행정구역_읍면동(법정동) 행정구역_읍면동(법정동)</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="name type01 elips"><i class="ico dot"></i>연속지적 연속지적 연속지적 연속지적 연속지적 연속지적</p>
+                                            <div class="btnArea">
+                                                <button type="button" class="btn toggle layerView" title="보기"></button>
+                                                <button type="button" class="btn toggle layerBookmark" title="북마크"></button>
+                                                <button type="button" class="btn toggle layerInfo" title="상세정보"></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- list -->
+                            </article>
+                            <!-- groupBox -->
+                        </article>
+                        <!-- //listGroup -->
+                    </div>
+                    <!-- //cont -->
+                </div>
+                <!-- //inner -->
+
+                <!-- tocSwitch -->
+                <article class="tocSwitch">
+                    <button type="button" class="btn label active">
+                        <span></span>
+                    </button>
+                </article>
+                <!-- tocSwitch -->
+            
+            </article>
+            <!-- //toc 1depth -->
+
+            <!-- toc 2depth -->
+            <!-- <article class="toc dep02 ">
+                
+            </article> -->
+            <!-- //toc 2depth -->
+        </section>
+        <!-- // #toc -->
+
+        <!-- mapContainer -->
+        <section class="mapContainer">
+            <!-- mapArea -->
+            <article class="mapArea">
+
+                <!-- map -->
+                <article id="map" style="background: url('../images/map/img-map.jpg') no-repeat center;">
+
+                </article>
+                <!-- //map -->
+
+                @@include('include/rightarea.html')
+
+                @@include('include/toolbar.html')
+
+            </article>
+            <!-- //mapArea -->
+        </section>
+        <!-- //mapContainer -->
+    </div>
+</body>
+</html>

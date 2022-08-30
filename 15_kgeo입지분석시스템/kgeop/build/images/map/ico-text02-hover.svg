@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_3690" data-name="그룹 3690" transform="translate(-1809 -313)">
+    <rect id="아이콘박스" width="30" height="30" rx="5" transform="translate(1809 313)" fill="url(#linear-gradient)"/>
+    <text id="T" transform="translate(1824 336)" fill="#fff" font-size="19" font-family="NotoSansCJKkr-Medium, Noto Sans CJK KR" font-weight="500" letter-spacing="-0.05em"><tspan x="-5.795" y="0">T</tspan></text>
+  </g>
+</svg>

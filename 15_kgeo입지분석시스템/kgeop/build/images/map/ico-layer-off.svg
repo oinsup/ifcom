@@ -1,0 +1,21 @@
+<svg id="구성_요소_103_2" data-name="구성 요소 103 – 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51.875" height="14.488" viewBox="0 0 51.875 14.488">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.493" x2="0" y2="0.493" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#73af17" stop-opacity="0"/>
+      <stop offset="1" stop-color="#353990"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_526" data-name="그룹 526" transform="translate(-544 821.488) rotate(-90)">
+    <g id="그룹_528" data-name="그룹 528" transform="translate(807 544)">
+      <g id="그룹_527" data-name="그룹 527">
+        <g id="창열림버튼">
+          <path id="패스_790" data-name="패스 790" d="M0,0H9.961c2.5,0,4.528,2.61,4.528,5.829V35.555c0,3.863-2.432,6.994-5.433,6.994H0Z" transform="translate(0 4.663)" fill="#4c79ff"/>
+          <path id="패스_791" data-name="패스 791" d="M7235,5681.813s2.563,4.692,5.269,4.71-5.269,0-5.269,0Z" transform="translate(-7235 -5681.813)" fill="#4c79ff"/>
+          <path id="패스_792" data-name="패스 792" d="M7235,5686.531s2.563-4.692,5.269-4.709-5.269,0-5.269,0Z" transform="translate(-7235 -5634.656)" fill="#4c79ff"/>
+        </g>
+        <path id="다각형_10" data-name="다각형 10" d="M2.914,0,5.829,4.08H0Z" transform="translate(9.617 23.023) rotate(90)" fill="#fff"/>
+      </g>
+      <path id="패스_793" data-name="패스 793" d="M0,0,3,4V47.8l-3,4.08Z" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

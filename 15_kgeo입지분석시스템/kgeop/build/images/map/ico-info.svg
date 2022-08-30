@@ -1,0 +1,32 @@
+<svg id="정보조회" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <rect id="아이콘박스" width="30" height="30" rx="5" fill="#f6f6fe"/>
+  <g id="그룹_1040" data-name="그룹 1040" transform="translate(7.65 6.833)">
+    <path id="패스_3236" data-name="패스 3236" d="M311.768,58.809h-4.793V43.5h13.494v6.476" transform="translate(-306.975 -43.503)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="패스_3237" data-name="패스 3237" d="M0,0V2.738" transform="translate(5.642 9.843) rotate(90)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="패스_3238" data-name="패스 3238" d="M0,0V7.592" transform="translate(10.495 3.606) rotate(90)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+    <path id="패스_3239" data-name="패스 3239" d="M0,0V7.592" transform="translate(10.495 6.724) rotate(90)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+    <g id="그룹_1039" data-name="그룹 1039" transform="translate(7.423 9.081)">
+      <path id="_2" data-name="2" d="M321.945,27.988a5.237,5.237,0,0,0,.223-1.428,3.469,3.469,0,0,0-3.582-3.567,3.561,3.561,0,1,0,0,7.121,3.885,3.885,0,0,0,2.067-.535" transform="translate(-315.003 -22.992)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="_1" data-name="1" d="M328.8,37.068l-1.977-2.187" transform="translate(-321.104 -28.267)" fill="none" stroke="#8587bc" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+  <g id="ov" transform="translate(-1848 -322)" opacity="0">
+    <rect id="아이콘박스-2" data-name="아이콘박스" width="30" height="30" rx="5" transform="translate(1848 322)" fill="url(#linear-gradient)"/>
+    <g id="그룹_1040-2" data-name="그룹 1040" transform="translate(1855.65 328.833)">
+      <path id="패스_3236-2" data-name="패스 3236" d="M311.768,58.809h-4.793V43.5h13.494v6.476" transform="translate(-306.975 -43.503)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="패스_3237-2" data-name="패스 3237" d="M0,0V2.738" transform="translate(5.642 9.843) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="패스_3238-2" data-name="패스 3238" d="M0,0V7.592" transform="translate(10.495 3.606) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="패스_3239-2" data-name="패스 3239" d="M0,0V7.592" transform="translate(10.495 6.724) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      <g id="그룹_1039-2" data-name="그룹 1039" transform="translate(7.423 9.081)">
+        <path id="_2-2" data-name="2" d="M321.945,27.988a5.237,5.237,0,0,0,.223-1.428,3.469,3.469,0,0,0-3.582-3.567,3.561,3.561,0,1,0,0,7.121,3.885,3.885,0,0,0,2.067-.535" transform="translate(-315.003 -22.992)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+        <path id="_1-2" data-name="1" d="M328.8,37.068l-1.977-2.187" transform="translate(-321.104 -28.267)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

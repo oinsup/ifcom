@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_선" data-name="icon / 선" transform="translate(-23 -2)">
+    <rect id="사각형_9141" data-name="사각형 9141" width="20" height="20" transform="translate(23 2)" fill="#fff"/>
+    <g id="타원_507" data-name="타원 507" transform="translate(26 15)" fill="#fff" stroke="#ff8b0a" stroke-width="1.5">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.25" fill="none"/>
+    </g>
+    <g id="타원_506" data-name="타원 506" transform="translate(36 5)" fill="#fff" stroke="#ff8b0a" stroke-width="1.5">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.25" fill="none"/>
+    </g>
+    <line id="선_2" data-name="선 2" y1="8" x2="8" transform="translate(29 8)" fill="none" stroke="#ff8b0a" stroke-width="1.5"/>
+  </g>
+</svg>

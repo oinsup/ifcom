@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icon_원" data-name="icon / 원" transform="translate(-19 -7)">
+    <rect id="사각형_9222" data-name="사각형 9222" width="16" height="16" transform="translate(19 7)" fill="none"/>
+    <g id="패스_63692" data-name="패스 63692" transform="translate(21 9)" fill="none">
+      <path d="M6,0l6,4.584L9.708,12H2.292L0,4.584Z" stroke="none"/>
+      <path d="M 6 1.887608528137207 L 1.742044448852539 5.140395641326904 L 3.398255348205566 10.5 L 8.601744651794434 10.5 L 10.25795555114746 5.140395641326904 L 6 1.887608528137207 M 6 0 L 12 4.583590030670166 L 9.708200454711914 12 L 2.291799545288086 12 L 0 4.583590030670166 L 6 0 Z" stroke="none" fill="#353990"/>
+    </g>
+  </g>
+</svg>

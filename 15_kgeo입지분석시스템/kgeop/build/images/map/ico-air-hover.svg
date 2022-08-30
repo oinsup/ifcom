@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <g id="icon" transform="translate(-1809 -313)">
+    <rect id="아이콘박스" width="30" height="30" rx="5" transform="translate(1809 313)" fill="url(#linear-gradient)"/>
+    <g id="icon-2" data-name="icon" transform="translate(-36 23)">
+      <path id="패스_10428" data-name="패스 10428" d="M509.086,1234.536H519.5l.524-1.572a.678.678,0,0,1,.644-.464h1.547l-.584,4.6a.678.678,0,0,1-.669.567H516.1l1.512,5.636h-2.036l-3.548-5.636h-6.057a.475.475,0,0,1-.336-.811l1.526-1.526A2.714,2.714,0,0,1,509.086,1234.536Z" transform="translate(1345.884 -931.366)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+      <path id="패스_10429" data-name="패스 10429" d="M516.571,1231.607l1.357-5.107h-1.637a.71.71,0,0,0-.593.292l-3.2,4.816Z" transform="translate(1345.416 -928.438)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.4"/>
+    </g>
+  </g>
+</svg>

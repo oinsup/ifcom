@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="icon_menu_리스트형" data-name="icon / menu_리스트형" transform="translate(-3 -4)">
+    <rect id="area" width="20" height="20" transform="translate(3 4)" fill="none" opacity="0.5"/>
+    <path id="패스_15961" data-name="패스 15961" d="M6,6H8V8H6Z" transform="translate(0 2)" fill="#fff"/>
+    <path id="패스_15962" data-name="패스 15962" d="M6,15H8v2H6Z" transform="translate(0 -2)" fill="#fff"/>
+    <path id="패스_15963" data-name="패스 15963" d="M8,24H6v2H8Z" transform="translate(0 -6)" fill="#fff"/>
+    <path id="패스_15964" data-name="패스 15964" d="M15,6H25V8H15Z" transform="translate(-5 2)" fill="#fff"/>
+    <path id="패스_15965" data-name="패스 15965" d="M25,15H15v2H25Z" transform="translate(-5 -2)" fill="#fff"/>
+    <path id="패스_15966" data-name="패스 15966" d="M15,24H25v2H15Z" transform="translate(-5 -6)" fill="#fff"/>
+  </g>
+</svg>

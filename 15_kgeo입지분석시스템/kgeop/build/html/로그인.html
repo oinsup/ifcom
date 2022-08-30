@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kgeo플랫폼">
+<meta name="description" content="kgeop플랫폼 입지 분석 시스템">
+
+<!-- 오픈그래프 이미지의 경우 최소한 600 x 315 px은 되어야 하며, 1200 x 630 px을 권장함 -->
+<meta property="og:image" content="">
+<meta property="og:title" content="kgeo플랫폼">
+<meta property="og:description" content="kgeo플랫폼 입지 분석 시스템">
+<meta property="og:url" content="">
+<!-- 다음의 태그는 필수는 아니지만, 포함하는 것을 추천함 -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css">
+<link rel="stylesheet" href="../lib/jquery-ui.css">
+<link rel="stylesheet" href="../lib/fullPage.js-2.9.7/fullpage.css" />
+<link rel="stylesheet" href="../css/common.css">
+<script src="../lib/jquery-1.12.4.js"></script>
+<script src="../lib/jquery-ui.js"></script>
+<script src="../lib/swiper/js/swiper.js"></script>
+<script src="../lib/fullPage.js-2.9.7/jquery.fullpage.min.js"></script>
+<script src="../js/ui.js"></script>
+
+<title>K-Geo플랫폼 입지 분석 시스템</title>
+
+
+</head>
+
+<body>
+
+    <div id="wrap" class="local">
+
+        
+
+
+        <div class="localLogin">
+            <h1 class="localLogo"><img src="../images/common/img-logo-login.png" alt="K-Geo플랫폼"/></h1>
+            <div class="loginForm">
+                <div class="tabContWrap">
+                    <div class="tabNav">
+                        <ul class="tabList">
+                            <li class="active">ID/PW 로그인</li>
+                            <li>업무 로그인</li>
+                        </ul>
+                    </div>
+                    <div class="tabCont active">
+                        <div class="inner">
+                            <p class="tit">
+                                K-Geo 플랫폼 공공택지 서비스
+                                <strong>LOGIN</strong>
+                            </p>
+                            <div class="inputArea">
+                                <input type="text" placeholder="아이디"/>
+                                <input type="password" placeholder="비밀번호"/>
+                                <div class="btnArea">
+                                    <button type="button"><span>로그인</span></button>
+                                    <p class="checkbox">
+                                        <input type="checkbox" id="ckd01">
+                                        <label for="ckd01" title="아이디저장">
+                                            아이디 저장
+                                        </label>
+                                    </p>
+                                </div>
+                                <div class="secure">
+                                    <a href="#" title="보안프로그램 내려받기">보안프로그램 내려받기</a>
+                                    <span>※ 보안프로그램 설치 지연 시 안내</span>
+                                </div>
+                            </div>
+                            <div class="linkArea">
+                                <a href="#" title="아이디 찾기"><span>아이디 찾기</span></a>
+                                <a href="#" title="비밀번호 찾기"><span>비밀번호 찾기</span></a>
+                                <a href="#" title="회원가입"><span>회원가입</span></a>
+                                <a href="#" title="인증서 등록"><span>인증서 등록</span></a>
+                            </div>
+                            <div class="tipArea">
+                                <i class="tip"><span>비밀번호 5회 이상 로그인 실패시 </span>  더이상 로그인 할 수 없습니다.</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabCont">
+                        <div class="inner">
+                            <p class="tit">
+                                K-Geo 플랫폼 공공택지 서비스
+                                <strong>LOGIN</strong>
+                            </p>
+                            <div class="inputArea">
+                                <button type="button" style="margin:72px 0 82px"><span>업무 로그인</span></button>
+                                <div class="secure">
+                                    <a href="#" title="보안프로그램 내려받기">보안프로그램 내려받기</a>
+                                    <span>※ 보안프로그램 설치 지연 시 안내</span>
+                                </div>
+                            </div>
+                            <div class="linkArea">
+                                <a href="#" title="아이디 찾기"><span>아이디 찾기</span></a>
+                                <a href="#" title="비밀번호 찾기"><span>비밀번호 찾기</span></a>
+                                <a href="#" title="회원가입"><span>회원가입</span></a>
+                                <a href="#" title="인증서 등록"><span>인증서 등록</span></a>
+                            </div>
+                            <div class="tipArea">
+                                <i class="tip"><span>비밀번호 5회 이상 로그인 실패시 </span>  더이상 로그인 할 수 없습니다.</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shine"></div>
+        </div>
+    </div>
+    <script>
+
+        /* 탭 토글 */
+        $('.tabList li').on({
+            "click":function(){
+                var idx = $(this).index();
+                $(this).addClass('active').attr('title','선택됨').siblings('li').removeClass('active').attr('title','');
+                $(this).closest('.tabNav').siblings('.tabCont').removeClass('active').eq(idx).addClass('active');
+            }
+        });
+    
+        /* 로컬서비스 로그인 페이지 인터랙션*/
+        const localLogo = () => {
+            $('.localLogo').addClass('active')
+        }
+        const loginForm = () => {
+            $('.loginForm').addClass('active')
+        }
+        const shine = () => {
+            $('.shine').addClass('active')
+        }
+        const tip = () => {
+            $('.tipArea').addClass('active')
+        }
+        const localLogin = () => {
+            $('.localLogin').addClass('active')
+            setTimeout(localLogo,500)
+            setTimeout(loginForm,500)
+            setTimeout(shine,500)
+            setTimeout(tip,500)
+        }
+        setTimeout(localLogin,600)
+    </script>
+</body>
+
+</html>

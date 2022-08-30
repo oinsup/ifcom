@@ -1,0 +1,22 @@
+<svg id="지도분할" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b36eb"/>
+      <stop offset="1" stop-color="#9e54ff"/>
+    </linearGradient>
+  </defs>
+  <rect id="아이콘박스" width="30" height="30" rx="5" fill="url(#linear-gradient)"/>
+  <g id="사각형_4771" data-name="사각형 4771" transform="translate(7 7)" fill="none" stroke="#8587bc" stroke-width="1.5">
+    <rect width="16" height="16" rx="2" stroke="none"/>
+    <rect x="0.75" y="0.75" width="14.5" height="14.5" rx="1.25" fill="none"/>
+  </g>
+  <line id="선_1" data-name="선 1" y2="15.955" transform="translate(15.017 7)" fill="none" stroke="#8587bc" stroke-width="1.5"/>
+  <g id="ov" transform="translate(-1848 -322)">
+    <rect id="아이콘박스-2" data-name="아이콘박스" width="30" height="30" rx="5" transform="translate(1848 322)" fill="url(#linear-gradient)"/>
+    <g id="사각형_4771-2" data-name="사각형 4771" transform="translate(1855 329)" fill="none" stroke="#fff" stroke-width="1.5">
+      <rect width="16" height="16" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="14.5" height="14.5" rx="1.25" fill="none"/>
+    </g>
+    <line id="선_1-2" data-name="선 1" y2="15.955" transform="translate(1863.017 329)" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+</svg>

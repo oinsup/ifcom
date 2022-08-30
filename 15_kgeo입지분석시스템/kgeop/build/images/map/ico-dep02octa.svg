@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="icon" transform="translate(-409 -285)">
+    <rect id="area" width="40" height="40" transform="translate(409 285)" fill="none"/>
+    <g id="다각형_14" data-name="다각형 14" transform="translate(414 291)" fill="none">
+      <path d="M15,0,30,10.7,24.271,28H5.729L0,10.7Z" stroke="none"/>
+      <path d="M 15 1.84223747253418 L 1.771766662597656 11.27401161193848 L 6.812934875488281 26.5 L 23.18706512451172 26.5 L 28.22823333740234 11.27401161193848 L 15 1.84223747253418 M 15 0 L 30 10.69504928588867 L 24.27050971984863 28 L 5.729490280151367 28 L 0 10.69504928588867 L 15 0 Z" stroke="none" fill="#353990"/>
+    </g>
+  </g>
+</svg>
